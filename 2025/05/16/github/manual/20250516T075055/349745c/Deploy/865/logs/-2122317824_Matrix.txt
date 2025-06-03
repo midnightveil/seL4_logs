@@ -1,0 +1,8 @@
+2025-05-18T23:40:02.9608965Z ##[section]Starting: Prepare job the_matrix
+2025-05-18T23:40:02.9677328Z Evaluating strategy
+2025-05-18T23:40:02.9683642Z Creating job '__default'
+2025-05-18T23:40:02.9686620Z Evaluating timeout
+2025-05-18T23:40:02.9686709Z Evaluating cancel timeout
+2025-05-18T23:40:02.9686746Z Evaluating continue on error
+2025-05-18T23:40:02.9686778Z Evaluating target
+2025-05-18T23:40:02.9688661Z ##[section]Finishing: Prepare job the_matrix

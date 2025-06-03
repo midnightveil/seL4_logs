@@ -1,0 +1,53 @@
+2025-05-18T23:40:02.1610983Z ##[section]Starting: Prepare job sim
+2025-05-18T23:40:02.1684054Z Evaluating strategy
+2025-05-18T23:40:02.1695645Z Creating job 'armv7a_gcc'
+2025-05-18T23:40:02.1698491Z Evaluating timeout
+2025-05-18T23:40:02.1698558Z Evaluating cancel timeout
+2025-05-18T23:40:02.1698587Z Evaluating continue on error
+2025-05-18T23:40:02.1698621Z Evaluating target
+2025-05-18T23:40:02.1699087Z Creating job 'armv7a_clang'
+2025-05-18T23:40:02.1701725Z Evaluating timeout
+2025-05-18T23:40:02.1701765Z Evaluating cancel timeout
+2025-05-18T23:40:02.1701787Z Evaluating continue on error
+2025-05-18T23:40:02.1701812Z Evaluating target
+2025-05-18T23:40:02.1702097Z Creating job 'armv8a_gcc'
+2025-05-18T23:40:02.1705108Z Evaluating timeout
+2025-05-18T23:40:02.1705153Z Evaluating cancel timeout
+2025-05-18T23:40:02.1705176Z Evaluating continue on error
+2025-05-18T23:40:02.1705203Z Evaluating target
+2025-05-18T23:40:02.1705563Z Creating job 'armv8a_clang'
+2025-05-18T23:40:02.1708146Z Evaluating timeout
+2025-05-18T23:40:02.1708170Z Evaluating cancel timeout
+2025-05-18T23:40:02.1708206Z Evaluating continue on error
+2025-05-18T23:40:02.1708231Z Evaluating target
+2025-05-18T23:40:02.1708489Z Creating job 'nehalem_gcc'
+2025-05-18T23:40:02.1711168Z Evaluating timeout
+2025-05-18T23:40:02.1711192Z Evaluating cancel timeout
+2025-05-18T23:40:02.1711212Z Evaluating continue on error
+2025-05-18T23:40:02.1711235Z Evaluating target
+2025-05-18T23:40:02.1711504Z Creating job 'nehalem_clang'
+2025-05-18T23:40:02.1714089Z Evaluating timeout
+2025-05-18T23:40:02.1714134Z Evaluating cancel timeout
+2025-05-18T23:40:02.1714155Z Evaluating continue on error
+2025-05-18T23:40:02.1714178Z Evaluating target
+2025-05-18T23:40:02.1714447Z Creating job 'rv32imac_gcc'
+2025-05-18T23:40:02.1717025Z Evaluating timeout
+2025-05-18T23:40:02.1717054Z Evaluating cancel timeout
+2025-05-18T23:40:02.1717076Z Evaluating continue on error
+2025-05-18T23:40:02.1717100Z Evaluating target
+2025-05-18T23:40:02.1717368Z Creating job 'rv32imac_clang'
+2025-05-18T23:40:02.1719951Z Evaluating timeout
+2025-05-18T23:40:02.1719975Z Evaluating cancel timeout
+2025-05-18T23:40:02.1720014Z Evaluating continue on error
+2025-05-18T23:40:02.1720036Z Evaluating target
+2025-05-18T23:40:02.1720312Z Creating job 'rv64imac_gcc'
+2025-05-18T23:40:02.1722897Z Evaluating timeout
+2025-05-18T23:40:02.1722943Z Evaluating cancel timeout
+2025-05-18T23:40:02.1722965Z Evaluating continue on error
+2025-05-18T23:40:02.1722988Z Evaluating target
+2025-05-18T23:40:02.1723277Z Creating job 'rv64imac_clang'
+2025-05-18T23:40:02.1725870Z Evaluating timeout
+2025-05-18T23:40:02.1725893Z Evaluating cancel timeout
+2025-05-18T23:40:02.1725914Z Evaluating continue on error
+2025-05-18T23:40:02.1725936Z Evaluating target
+2025-05-18T23:40:02.1728865Z ##[section]Finishing: Prepare job sim

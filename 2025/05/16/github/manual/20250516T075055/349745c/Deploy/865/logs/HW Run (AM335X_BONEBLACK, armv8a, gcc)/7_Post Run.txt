@@ -1,0 +1,10 @@
+2025-05-18T23:50:42.5403243Z Post job cleanup.
+2025-05-18T23:50:42.6305005Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/post-steps.sh
+2025-05-18T23:50:42.6357758Z ##[group]Releasing mq lock
+2025-05-18T23:50:42.6426303Z Agent pid 3273
+2025-05-18T23:50:42.7904381Z mq.sh sem -cancel bboneblack -k seL4/seL4-Deploy-15063474103-hw-run-4
+2025-05-18T23:50:45.3961380Z mq.sh sem -signal bboneblack -k seL4/seL4-Deploy-15063474103-hw-run-4
+2025-05-18T23:50:48.0041202Z Attempting to unlock system bboneblack that you do not hold
+2025-05-18T23:50:48.0042305Z mq.sh sem -info bboneblack
+2025-05-18T23:50:51.2631276Z Lock for bboneblack currently free
+2025-05-18T23:50:51.2728928Z ##[endgroup]

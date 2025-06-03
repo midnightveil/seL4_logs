@@ -1,0 +1,45 @@
+﻿2025-05-26T08:00:31.9044598Z Current runner version: '2.324.0'
+2025-05-26T08:00:31.9069141Z ##[group]Runner Image Provisioner
+2025-05-26T08:00:31.9069932Z Hosted Compute Agent
+2025-05-26T08:00:31.9070458Z Version: 20250508.323
+2025-05-26T08:00:31.9071138Z Commit: 81b259f29879f73b4213d199e42d8c3465dae986
+2025-05-26T08:00:31.9071775Z Build Date: 2025-05-08T19:40:08Z
+2025-05-26T08:00:31.9072342Z ##[endgroup]
+2025-05-26T08:00:31.9072925Z ##[group]Operating System
+2025-05-26T08:00:31.9073477Z Ubuntu
+2025-05-26T08:00:31.9073911Z 24.04.2
+2025-05-26T08:00:31.9074427Z LTS
+2025-05-26T08:00:31.9074948Z ##[endgroup]
+2025-05-26T08:00:31.9075697Z ##[group]Runner Image
+2025-05-26T08:00:31.9076325Z Image: ubuntu-24.04
+2025-05-26T08:00:31.9076783Z Version: 20250511.1.0
+2025-05-26T08:00:31.9077759Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250511.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-05-26T08:00:31.9079278Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250511.1
+2025-05-26T08:00:31.9080256Z ##[endgroup]
+2025-05-26T08:00:31.9082759Z ##[group]GITHUB_TOKEN Permissions
+2025-05-26T08:00:31.9084909Z Actions: write
+2025-05-26T08:00:31.9085849Z Attestations: write
+2025-05-26T08:00:31.9086439Z Checks: write
+2025-05-26T08:00:31.9086929Z Contents: write
+2025-05-26T08:00:31.9087518Z Deployments: write
+2025-05-26T08:00:31.9088049Z Discussions: write
+2025-05-26T08:00:31.9088621Z Issues: write
+2025-05-26T08:00:31.9089088Z Metadata: read
+2025-05-26T08:00:31.9089663Z Models: read
+2025-05-26T08:00:31.9090148Z Packages: write
+2025-05-26T08:00:31.9090683Z Pages: write
+2025-05-26T08:00:31.9091250Z PullRequests: write
+2025-05-26T08:00:31.9091854Z RepositoryProjects: write
+2025-05-26T08:00:31.9092443Z SecurityEvents: write
+2025-05-26T08:00:31.9093136Z Statuses: write
+2025-05-26T08:00:31.9093673Z ##[endgroup]
+2025-05-26T08:00:31.9096366Z Secret source: Actions
+2025-05-26T08:00:31.9097429Z Prepare workflow directory
+2025-05-26T08:00:31.9436594Z Prepare all required actions
+2025-05-26T08:00:31.9473261Z Getting action download info
+2025-05-26T08:00:32.3777582Z Download action repository 'seL4/ci-actions@master' (SHA:dda28c57b388906c5d0f149aacfecaa833b518e0)
+2025-05-26T08:00:43.6192181Z ##[warning]Failed to download action 'https://api.github.com/repos/seL4/ci-actions/tarball/dda28c57b388906c5d0f149aacfecaa833b518e0'. Error: Response status code does not indicate success: 504 (Gateway Timeout). 
+2025-05-26T08:00:43.6209314Z ##[warning]Back off 21.134 seconds before retry.
+2025-05-26T08:01:15.9718978Z ##[warning]Failed to download action 'https://api.github.com/repos/seL4/ci-actions/tarball/dda28c57b388906c5d0f149aacfecaa833b518e0'. Error: Response status code does not indicate success: 504 (Gateway Timeout). 
+2025-05-26T08:01:15.9721674Z ##[warning]Back off 21.232 seconds before retry.
+2025-05-26T08:01:48.4260752Z ##[error]Response status code does not indicate success: 504 (Gateway Timeout).

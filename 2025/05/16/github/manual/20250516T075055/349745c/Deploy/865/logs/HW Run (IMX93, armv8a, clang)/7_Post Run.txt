@@ -1,0 +1,10 @@
+2025-05-19T05:11:19.8421462Z Post job cleanup.
+2025-05-19T05:11:19.9321027Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/post-steps.sh
+2025-05-19T05:11:19.9371180Z ##[group]Releasing mq lock
+2025-05-19T05:11:19.9440926Z Agent pid 8093
+2025-05-19T05:11:20.0897016Z mq.sh sem -cancel imx93a -k seL4/seL4-Deploy-15063474103-hw-run-1
+2025-05-19T05:11:22.5171748Z mq.sh sem -signal imx93a -k seL4/seL4-Deploy-15063474103-hw-run-1
+2025-05-19T05:11:24.9446688Z Attempting to unlock system imx93a that you do not hold
+2025-05-19T05:11:24.9447629Z mq.sh sem -info imx93a
+2025-05-19T05:11:27.9818741Z Lock for imx93a currently free
+2025-05-19T05:11:27.9916436Z ##[endgroup]

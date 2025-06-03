@@ -1,0 +1,439 @@
+﻿2025-06-01T10:57:14.6469720Z Current runner version: '2.324.0'
+2025-06-01T10:57:14.6493397Z ##[group]Runner Image Provisioner
+2025-06-01T10:57:14.6494335Z Hosted Compute Agent
+2025-06-01T10:57:14.6494977Z Version: 20250508.323
+2025-06-01T10:57:14.6495629Z Commit: 81b259f29879f73b4213d199e42d8c3465dae986
+2025-06-01T10:57:14.6496516Z Build Date: 2025-05-08T19:40:08Z
+2025-06-01T10:57:14.6497444Z ##[endgroup]
+2025-06-01T10:57:14.6498093Z ##[group]Operating System
+2025-06-01T10:57:14.6498712Z Ubuntu
+2025-06-01T10:57:14.6499223Z 24.04.2
+2025-06-01T10:57:14.6500128Z LTS
+2025-06-01T10:57:14.6500914Z ##[endgroup]
+2025-06-01T10:57:14.6501560Z ##[group]Runner Image
+2025-06-01T10:57:14.6502202Z Image: ubuntu-24.04
+2025-06-01T10:57:14.6502879Z Version: 20250511.1.0
+2025-06-01T10:57:14.6504064Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250511.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-06-01T10:57:14.6505763Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250511.1
+2025-06-01T10:57:14.6507050Z ##[endgroup]
+2025-06-01T10:57:14.6509750Z ##[group]GITHUB_TOKEN Permissions
+2025-06-01T10:57:14.6511809Z Actions: write
+2025-06-01T10:57:14.6512541Z Attestations: write
+2025-06-01T10:57:14.6513202Z Checks: write
+2025-06-01T10:57:14.6513840Z Contents: write
+2025-06-01T10:57:14.6514489Z Deployments: write
+2025-06-01T10:57:14.6515164Z Discussions: write
+2025-06-01T10:57:14.6515758Z Issues: write
+2025-06-01T10:57:14.6516366Z Metadata: read
+2025-06-01T10:57:14.6517150Z Models: read
+2025-06-01T10:57:14.6517752Z Packages: write
+2025-06-01T10:57:14.6518299Z Pages: write
+2025-06-01T10:57:14.6518961Z PullRequests: write
+2025-06-01T10:57:14.6519556Z RepositoryProjects: write
+2025-06-01T10:57:14.6520625Z SecurityEvents: write
+2025-06-01T10:57:14.6521371Z Statuses: write
+2025-06-01T10:57:14.6521985Z ##[endgroup]
+2025-06-01T10:57:14.6524496Z Secret source: Actions
+2025-06-01T10:57:14.6525369Z Prepare workflow directory
+2025-06-01T10:57:14.6847666Z Prepare all required actions
+2025-06-01T10:57:14.6885120Z Getting action download info
+2025-06-01T10:57:14.9822293Z ##[group]Download immutable action package 'actions/checkout@v4'
+2025-06-01T10:57:14.9823396Z Version: 4.2.2
+2025-06-01T10:57:14.9824505Z Digest: sha256:ccb2698953eaebd21c7bf6268a94f9c26518a7e38e27e0b83c1fe1ad049819b1
+2025-06-01T10:57:14.9825753Z Source commit SHA: 11bd71901bbe5b1630ceea73d27597364c9af683
+2025-06-01T10:57:14.9826522Z ##[endgroup]
+2025-06-01T10:57:15.0627229Z ##[group]Download immutable action package 'actions/download-artifact@v4'
+2025-06-01T10:57:15.0628251Z Version: 4.3.0
+2025-06-01T10:57:15.0629118Z Digest: sha256:552a5b9ad918f62ec0c2e8f42f3c694d4ebd1b4036b18c39b14168fcdfc0e4f2
+2025-06-01T10:57:15.0630132Z Source commit SHA: d3f86a106a0bac45b974a628896c90dbdf5c8093
+2025-06-01T10:57:15.0631022Z ##[endgroup]
+2025-06-01T10:57:15.2714061Z Download action repository 'seL4/ci-actions@master' (SHA:8e5e97f0c4911452a5925d47a5b0e4378f088909)
+2025-06-01T10:57:19.7616597Z Complete job name: HW Run (TQMA8XQP1GB, armv8a, clang)
+2025-06-01T10:57:19.8270607Z ##[group]Run actions/checkout@v4
+2025-06-01T10:57:19.8271275Z with:
+2025-06-01T10:57:19.8271558Z   repository: seL4/machine_queue
+2025-06-01T10:57:19.8271866Z   path: machine_queue
+2025-06-01T10:57:19.8272312Z   token: ***
+2025-06-01T10:57:19.8272582Z   ssh-strict: true
+2025-06-01T10:57:19.8272847Z   ssh-user: git
+2025-06-01T10:57:19.8273113Z   persist-credentials: true
+2025-06-01T10:57:19.8273396Z   clean: true
+2025-06-01T10:57:19.8273673Z   sparse-checkout-cone-mode: true
+2025-06-01T10:57:19.8273981Z   fetch-depth: 1
+2025-06-01T10:57:19.8274239Z   fetch-tags: false
+2025-06-01T10:57:19.8274510Z   show-progress: true
+2025-06-01T10:57:19.8274786Z   lfs: false
+2025-06-01T10:57:19.8275041Z   submodules: false
+2025-06-01T10:57:19.8275309Z   set-safe-directory: true
+2025-06-01T10:57:19.8275801Z ##[endgroup]
+2025-06-01T10:57:19.9344184Z Syncing repository: seL4/machine_queue
+2025-06-01T10:57:19.9345708Z ##[group]Getting Git version info
+2025-06-01T10:57:19.9346269Z Working directory is '/home/runner/work/seL4/seL4/machine_queue'
+2025-06-01T10:57:19.9347604Z [command]/usr/bin/git version
+2025-06-01T10:57:19.9423362Z git version 2.49.0
+2025-06-01T10:57:19.9449348Z ##[endgroup]
+2025-06-01T10:57:19.9462825Z Temporarily overriding HOME='/home/runner/work/_temp/d4c625e4-a0f3-4001-9cef-f11ba76b88da' before making global git config changes
+2025-06-01T10:57:19.9464185Z Adding repository directory to the temporary git global config as a safe directory
+2025-06-01T10:57:19.9468337Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/seL4/seL4/machine_queue
+2025-06-01T10:57:19.9507399Z ##[group]Initializing the repository
+2025-06-01T10:57:19.9512131Z [command]/usr/bin/git init /home/runner/work/seL4/seL4/machine_queue
+2025-06-01T10:57:19.9597403Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-06-01T10:57:19.9598420Z hint: is subject to change. To configure the initial branch name to use in all
+2025-06-01T10:57:19.9599048Z hint: of your new repositories, which will suppress this warning, call:
+2025-06-01T10:57:19.9599484Z hint:
+2025-06-01T10:57:19.9599829Z hint: 	git config --global init.defaultBranch <name>
+2025-06-01T10:57:19.9600208Z hint:
+2025-06-01T10:57:19.9600568Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-06-01T10:57:19.9601130Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-06-01T10:57:19.9601566Z hint:
+2025-06-01T10:57:19.9601824Z hint: 	git branch -m <name>
+2025-06-01T10:57:19.9604121Z Initialized empty Git repository in /home/runner/work/seL4/seL4/machine_queue/.git/
+2025-06-01T10:57:19.9613967Z [command]/usr/bin/git remote add origin https://github.com/seL4/machine_queue
+2025-06-01T10:57:19.9647523Z ##[endgroup]
+2025-06-01T10:57:19.9648046Z ##[group]Disabling automatic garbage collection
+2025-06-01T10:57:19.9652079Z [command]/usr/bin/git config --local gc.auto 0
+2025-06-01T10:57:19.9680146Z ##[endgroup]
+2025-06-01T10:57:19.9680923Z ##[group]Setting up auth
+2025-06-01T10:57:19.9687054Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-06-01T10:57:19.9715416Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-06-01T10:57:20.0047911Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-06-01T10:57:20.0076314Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-06-01T10:57:20.0294042Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-06-01T10:57:20.0329777Z ##[endgroup]
+2025-06-01T10:57:20.0330950Z ##[group]Determining the default branch
+2025-06-01T10:57:20.0334159Z Retrieving the default branch name
+2025-06-01T10:57:20.2346089Z Default branch 'master'
+2025-06-01T10:57:20.2347699Z ##[endgroup]
+2025-06-01T10:57:20.2353314Z ##[group]Fetching the repository
+2025-06-01T10:57:20.2354601Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/master:refs/remotes/origin/master
+2025-06-01T10:57:20.5797771Z From https://github.com/seL4/machine_queue
+2025-06-01T10:57:20.5798782Z  * [new branch]      master     -> origin/master
+2025-06-01T10:57:20.5829545Z ##[endgroup]
+2025-06-01T10:57:20.5830450Z ##[group]Determining the checkout info
+2025-06-01T10:57:20.5831415Z ##[endgroup]
+2025-06-01T10:57:20.5837502Z [command]/usr/bin/git sparse-checkout disable
+2025-06-01T10:57:20.5882803Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-06-01T10:57:20.5913110Z ##[group]Checking out the ref
+2025-06-01T10:57:20.5917147Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2025-06-01T10:57:20.6001694Z Reset branch 'master'
+2025-06-01T10:57:20.6004006Z branch 'master' set up to track 'origin/master'.
+2025-06-01T10:57:20.6009845Z ##[endgroup]
+2025-06-01T10:57:20.6047248Z [command]/usr/bin/git log -1 --format=%H
+2025-06-01T10:57:20.6071285Z c6ce810af73974afce20acb0e787207b454e42f5
+2025-06-01T10:57:20.6290116Z ##[group]Run actions/download-artifact@v4
+2025-06-01T10:57:20.6290491Z with:
+2025-06-01T10:57:20.6290739Z   name: images-armv8a-clang
+2025-06-01T10:57:20.6291035Z   merge-multiple: false
+2025-06-01T10:57:20.6291305Z   repository: seL4/seL4
+2025-06-01T10:57:20.6291579Z   run-id: 15373672507
+2025-06-01T10:57:20.6291870Z ##[endgroup]
+2025-06-01T10:57:20.8411448Z Downloading single artifact
+2025-06-01T10:57:20.9385677Z Preparing to download the following artifacts:
+2025-06-01T10:57:20.9386758Z - images-armv8a-clang (ID: 3236145647, Size: 196684905, Expected Digest: sha256:8cd00ae13e05de73b123f13a392aba437a13c9d0253b974f6a8a4cd7241640c0)
+2025-06-01T10:57:21.0181577Z Redirecting to blob download url: https://productionresultssa9.blob.core.windows.net/actions-results/541d659e-4c92-4d87-9aba-20c1dc5e83c8/workflow-job-run-8399b3ec-6263-557f-a144-1bca464f9c72/artifacts/45ddfe8bba391b0b2effbab876533394f829a540530108e69e7cd4792ff79156.zip
+2025-06-01T10:57:21.0183126Z Starting download of artifact to: /home/runner/work/seL4/seL4
+2025-06-01T10:57:21.1044645Z (node:2062) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2025-06-01T10:57:21.1046487Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-06-01T10:57:23.4274781Z SHA256 digest of downloaded artifact is 8cd00ae13e05de73b123f13a392aba437a13c9d0253b974f6a8a4cd7241640c0
+2025-06-01T10:57:23.4275984Z Artifact download completed successfully.
+2025-06-01T10:57:23.4276344Z Total of 1 artifact(s) downloaded
+2025-06-01T10:57:23.4281147Z Download artifact has finished successfully
+2025-06-01T10:57:23.4447270Z ##[group]Run seL4/ci-actions/sel4test-hw-run@master
+2025-06-01T10:57:23.4447653Z with:
+2025-06-01T10:57:23.4447867Z   platform: TQMA8XQP1GB
+2025-06-01T10:57:23.4448104Z   compiler: clang
+2025-06-01T10:57:23.4448318Z   index: $23
+2025-06-01T10:57:23.4448562Z   action_name: sel4test-hw-run
+2025-06-01T10:57:23.4448803Z env:
+2025-06-01T10:57:23.4450595Z   HW_SSH: ***
+
+2025-06-01T10:57:23.4450819Z ##[endgroup]
+2025-06-01T10:57:23.5414871Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/steps.sh
+2025-06-01T10:57:23.5466465Z ##[group]Setting up
+2025-06-01T10:57:23.5992726Z Agent pid 2091
+2025-06-01T10:57:23.6455832Z Cloning into 'seL4_libs'...
+2025-06-01T10:57:24.7682935Z Reading package lists...
+2025-06-01T10:57:24.9209990Z Building dependency tree...
+2025-06-01T10:57:24.9228617Z Reading state information...
+2025-06-01T10:57:25.0930194Z libffi-dev is already the newest version (3.4.6-1build1).
+2025-06-01T10:57:25.0930926Z libffi-dev set to manually installed.
+2025-06-01T10:57:25.0931445Z 0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+2025-06-01T10:57:27.8233730Z Collecting junitparser
+2025-06-01T10:57:27.8798727Z   Downloading junitparser-3.2.0-py2.py3-none-any.whl.metadata (9.0 kB)
+2025-06-01T10:57:27.9126064Z Collecting sel4-deps
+2025-06-01T10:57:27.9202542Z   Downloading sel4_deps-0.5.0-py3-none-any.whl.metadata (653 bytes)
+2025-06-01T10:57:27.9309147Z Requirement already satisfied: six in /usr/lib/python3/dist-packages (from sel4-deps) (1.16.0)
+2025-06-01T10:57:27.9525534Z Collecting future (from sel4-deps)
+2025-06-01T10:57:27.9593175Z   Downloading future-1.0.0-py3-none-any.whl.metadata (4.0 kB)
+2025-06-01T10:57:27.9651900Z Requirement already satisfied: jinja2 in /usr/lib/python3/dist-packages (from sel4-deps) (3.1.2)
+2025-06-01T10:57:28.1673271Z Collecting lxml (from sel4-deps)
+2025-06-01T10:57:28.1745004Z   Downloading lxml-5.4.0-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (3.5 kB)
+2025-06-01T10:57:28.1936685Z Collecting ply (from sel4-deps)
+2025-06-01T10:57:28.2004336Z   Downloading ply-3.11-py2.py3-none-any.whl.metadata (844 bytes)
+2025-06-01T10:57:28.2857497Z Collecting psutil (from sel4-deps)
+2025-06-01T10:57:28.2930713Z   Downloading psutil-7.0.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (22 kB)
+2025-06-01T10:57:28.3151986Z Collecting bs4 (from sel4-deps)
+2025-06-01T10:57:28.3223907Z   Downloading bs4-0.0.2-py2.py3-none-any.whl.metadata (411 bytes)
+2025-06-01T10:57:28.3436353Z Collecting pyelftools (from sel4-deps)
+2025-06-01T10:57:28.3502483Z   Downloading pyelftools-0.32-py3-none-any.whl.metadata (372 bytes)
+2025-06-01T10:57:28.3756729Z Collecting sh (from sel4-deps)
+2025-06-01T10:57:28.3835298Z   Downloading sh-2.2.2-py3-none-any.whl.metadata (3.7 kB)
+2025-06-01T10:57:28.3887466Z Requirement already satisfied: pexpect in /usr/lib/python3/dist-packages (from sel4-deps) (4.9.0)
+2025-06-01T10:57:28.3897386Z Requirement already satisfied: pyyaml>=5.1 in /usr/lib/python3/dist-packages (from sel4-deps) (6.0.1)
+2025-06-01T10:57:28.3906176Z Requirement already satisfied: jsonschema in /usr/lib/python3/dist-packages (from sel4-deps) (4.10.3)
+2025-06-01T10:57:28.4064594Z Collecting pyfdt (from sel4-deps)
+2025-06-01T10:57:28.4139772Z   Downloading pyfdt-0.3.tar.gz (9.1 kB)
+2025-06-01T10:57:28.4197222Z   Preparing metadata (setup.py): started
+2025-06-01T10:57:28.6153821Z   Preparing metadata (setup.py): finished with status 'done'
+2025-06-01T10:57:28.6370830Z Collecting cmake-format==0.4.5 (from sel4-deps)
+2025-06-01T10:57:28.6448164Z   Downloading cmake_format-0.4.5.tar.gz (51 kB)
+2025-06-01T10:57:28.6554708Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 51.1/51.1 kB 4.9 MB/s eta 0:00:00
+2025-06-01T10:57:28.6617101Z   Preparing metadata (setup.py): started
+2025-06-01T10:57:28.8225654Z   Preparing metadata (setup.py): finished with status 'done'
+2025-06-01T10:57:28.8428244Z Collecting guardonce (from sel4-deps)
+2025-06-01T10:57:28.8565732Z   Downloading guardonce-2.4.0-py2.py3-none-any.whl.metadata (3.4 kB)
+2025-06-01T10:57:28.8852089Z Collecting autopep8==2.3.1 (from sel4-deps)
+2025-06-01T10:57:28.8956520Z   Downloading autopep8-2.3.1-py2.py3-none-any.whl.metadata (16 kB)
+2025-06-01T10:57:28.9195016Z Collecting libarchive-c (from sel4-deps)
+2025-06-01T10:57:28.9266726Z   Downloading libarchive_c-5.3-py3-none-any.whl.metadata (5.8 kB)
+2025-06-01T10:57:28.9531441Z Collecting pycodestyle>=2.12.0 (from autopep8==2.3.1->sel4-deps)
+2025-06-01T10:57:28.9599243Z   Downloading pycodestyle-2.13.0-py2.py3-none-any.whl.metadata (4.5 kB)
+2025-06-01T10:57:28.9917533Z Collecting beautifulsoup4 (from bs4->sel4-deps)
+2025-06-01T10:57:28.9986661Z   Downloading beautifulsoup4-4.13.4-py3-none-any.whl.metadata (3.8 kB)
+2025-06-01T10:57:29.0198112Z Requirement already satisfied: attrs>=17.4.0 in /usr/lib/python3/dist-packages (from jsonschema->sel4-deps) (23.2.0)
+2025-06-01T10:57:29.0214306Z Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,>=0.14.0 in /usr/lib/python3/dist-packages (from jsonschema->sel4-deps) (0.20.0)
+2025-06-01T10:57:29.1101864Z Collecting soupsieve>1.2 (from beautifulsoup4->bs4->sel4-deps)
+2025-06-01T10:57:29.1172869Z   Downloading soupsieve-2.7-py3-none-any.whl.metadata (4.6 kB)
+2025-06-01T10:57:29.1221651Z Requirement already satisfied: typing-extensions>=4.0.0 in /usr/lib/python3/dist-packages (from beautifulsoup4->bs4->sel4-deps) (4.10.0)
+2025-06-01T10:57:29.1328604Z Downloading junitparser-3.2.0-py2.py3-none-any.whl (13 kB)
+2025-06-01T10:57:29.1444809Z Downloading sel4_deps-0.5.0-py3-none-any.whl (1.2 kB)
+2025-06-01T10:57:29.1554563Z Downloading autopep8-2.3.1-py2.py3-none-any.whl (45 kB)
+2025-06-01T10:57:29.1636631Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.7/45.7 kB 5.6 MB/s eta 0:00:00
+2025-06-01T10:57:29.1703358Z Downloading bs4-0.0.2-py2.py3-none-any.whl (1.2 kB)
+2025-06-01T10:57:29.1793790Z Downloading future-1.0.0-py3-none-any.whl (491 kB)
+2025-06-01T10:57:29.1954178Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 491.3/491.3 kB 33.6 MB/s eta 0:00:00
+2025-06-01T10:57:29.2027241Z Downloading guardonce-2.4.0-py2.py3-none-any.whl (15 kB)
+2025-06-01T10:57:29.2144613Z Downloading libarchive_c-5.3-py3-none-any.whl (17 kB)
+2025-06-01T10:57:29.2239838Z Downloading lxml-5.4.0-cp312-cp312-manylinux_2_28_x86_64.whl (5.0 MB)
+2025-06-01T10:57:29.2610381Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 140.1 MB/s eta 0:00:00
+2025-06-01T10:57:29.2677691Z Downloading ply-3.11-py2.py3-none-any.whl (49 kB)
+2025-06-01T10:57:29.2754000Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.6/49.6 kB 6.5 MB/s eta 0:00:00
+2025-06-01T10:57:29.2821176Z Downloading psutil-7.0.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (277 kB)
+2025-06-01T10:57:29.2891731Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 278.0/278.0 kB 50.3 MB/s eta 0:00:00
+2025-06-01T10:57:29.2958699Z Downloading pyelftools-0.32-py3-none-any.whl (188 kB)
+2025-06-01T10:57:29.3020173Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.5/188.5 kB 39.7 MB/s eta 0:00:00
+2025-06-01T10:57:29.3094548Z Downloading sh-2.2.2-py3-none-any.whl (38 kB)
+2025-06-01T10:57:29.3193205Z Downloading pycodestyle-2.13.0-py2.py3-none-any.whl (31 kB)
+2025-06-01T10:57:29.3295369Z Downloading beautifulsoup4-4.13.4-py3-none-any.whl (187 kB)
+2025-06-01T10:57:29.3350388Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 187.3/187.3 kB 45.2 MB/s eta 0:00:00
+2025-06-01T10:57:29.3415383Z Downloading soupsieve-2.7-py3-none-any.whl (36 kB)
+2025-06-01T10:57:29.3631151Z Building wheels for collected packages: cmake-format, pyfdt
+2025-06-01T10:57:29.3636069Z   Building wheel for cmake-format (setup.py): started
+2025-06-01T10:57:29.7678975Z   Building wheel for cmake-format (setup.py): finished with status 'done'
+2025-06-01T10:57:29.7682708Z   Created wheel for cmake-format: filename=cmake_format-0.4.5-py3-none-any.whl size=57091 sha256=a531be2a867e48190a11a7b1dad68028bd594995d09d5b5b17ad274124f25130
+2025-06-01T10:57:29.7684800Z   Stored in directory: /home/runner/.cache/pip/wheels/26/fb/b2/73a635046d239de7405e0f77cf67c3d31a3f0d5edcf8986d29
+2025-06-01T10:57:29.7711116Z   Building wheel for pyfdt (setup.py): started
+2025-06-01T10:57:30.0068565Z   Building wheel for pyfdt (setup.py): finished with status 'done'
+2025-06-01T10:57:30.0071657Z   Created wheel for pyfdt: filename=pyfdt-0.3-py3-none-any.whl size=10969 sha256=76863b0ebf4e0f6d9639fe7709da6a4c59e4d995fef3da8015a08a2029570142
+2025-06-01T10:57:30.0073114Z   Stored in directory: /home/runner/.cache/pip/wheels/d9/8e/2a/cff33f3accb8eaa34608e68786db1ec323a5f6bce8d724d90a
+2025-06-01T10:57:30.0086674Z Successfully built cmake-format pyfdt
+2025-06-01T10:57:30.3126255Z Installing collected packages: pyfdt, pyelftools, ply, libarchive-c, junitparser, guardonce, cmake-format, soupsieve, sh, pycodestyle, psutil, lxml, future, beautifulsoup4, autopep8, bs4, sel4-deps
+2025-06-01T10:57:31.3324478Z Successfully installed autopep8-2.3.1 beautifulsoup4-4.13.4 bs4-0.0.2 cmake-format-0.4.5 future-1.0.0 guardonce-2.4.0 junitparser-3.2.0 libarchive-c-5.3 lxml-5.4.0 ply-3.11 psutil-7.0.0 pycodestyle-2.13.0 pyelftools-0.32 pyfdt-0.3 sel4-deps-0.5.0 sh-2.2.2 soupsieve-2.7
+2025-06-01T10:57:31.4135564Z ##[endgroup]
+2025-06-01T10:57:31.5681564Z 
+2025-06-01T10:57:31.5684198Z ##[group]TQMA8XQP1GB_debug_clang_64
+2025-06-01T10:57:31.5685148Z [1m-----------[ start test TQMA8XQP1GB_debug_clang_64 ]-----------[0m
+2025-06-01T10:57:31.5685946Z [33m+++ tar xvzf ../TQMA8XQP1GB_debug_clang_64-images.tar.gz[0m
+2025-06-01T10:57:31.5712179Z images/
+2025-06-01T10:57:31.5712854Z images/sel4test-driver-image-arm-tqma8xqp1gb
+2025-06-01T10:57:31.5906814Z [33m+++ mq.sh sem -info tqma[0m
+2025-06-01T11:04:15.1716318Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-01T11:04:15.1717524Z [31;1m>>> command failed, aborting.[0m
+2025-06-01T11:04:15.1718299Z [33m+++ mq.sh sem -signal tqma -k seL4/seL4-Deploy-15373672507-hw-run-23[0m
+2025-06-01T11:11:00.6755729Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-01T11:11:00.6756709Z [1m-----------[ end test TQMA8XQP1GB_debug_clang_64 ]-----------[0m
+2025-06-01T11:11:00.6758028Z ##[endgroup]
+2025-06-01T11:11:00.6758485Z [31;1mTQMA8XQP1GB_debug_clang_64 FAILED[0m
+2025-06-01T11:11:00.6759125Z 
+2025-06-01T11:11:00.6759549Z ##[group]TQMA8XQP1GB_debug_MCS_clang_64
+2025-06-01T11:11:00.6760231Z [1m-----------[ start test TQMA8XQP1GB_debug_MCS_clang_64 ]-----------[0m
+2025-06-01T11:11:00.6767712Z [33m+++ tar xvzf ../TQMA8XQP1GB_debug_MCS_clang_64-images.tar.gz[0m
+2025-06-01T11:11:00.6794104Z images/
+2025-06-01T11:11:00.6794783Z images/sel4test-driver-image-arm-tqma8xqp1gb
+2025-06-01T11:11:00.6999858Z [33m+++ mq.sh sem -info tqma[0m
+2025-06-01T11:17:46.1795095Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-01T11:17:46.1795947Z [31;1m>>> command failed, aborting.[0m
+2025-06-01T11:17:46.1796487Z [33m+++ mq.sh sem -signal tqma -k seL4/seL4-Deploy-15373672507-hw-run-23[0m
+2025-06-01T11:24:31.6833560Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-01T11:24:31.6834835Z [1m-----------[ end test TQMA8XQP1GB_debug_MCS_clang_64 ]-----------[0m
+2025-06-01T11:24:31.6835902Z ##[endgroup]
+2025-06-01T11:24:31.6836384Z [31;1mTQMA8XQP1GB_debug_MCS_clang_64 FAILED[0m
+2025-06-01T11:24:31.6836739Z 
+2025-06-01T11:24:31.6837390Z ##[group]TQMA8XQP1GB_debug_SMP_clang_64
+2025-06-01T11:24:31.6837882Z [1m-----------[ start test TQMA8XQP1GB_debug_SMP_clang_64 ]-----------[0m
+2025-06-01T11:24:31.6843447Z [33m+++ tar xvzf ../TQMA8XQP1GB_debug_SMP_clang_64-images.tar.gz[0m
+2025-06-01T11:24:31.6872276Z images/
+2025-06-01T11:24:31.6875892Z images/sel4test-driver-image-arm-tqma8xqp1gb
+2025-06-01T11:24:31.7080887Z [33m+++ mq.sh sem -info tqma[0m
+2025-06-01T11:31:17.1876155Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-01T11:31:17.1877126Z [31;1m>>> command failed, aborting.[0m
+2025-06-01T11:31:17.1877616Z [33m+++ mq.sh sem -signal tqma -k seL4/seL4-Deploy-15373672507-hw-run-23[0m
+2025-06-01T11:38:02.6914734Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-01T11:38:02.6915715Z [1m-----------[ end test TQMA8XQP1GB_debug_SMP_clang_64 ]-----------[0m
+2025-06-01T11:38:02.6917089Z ##[endgroup]
+2025-06-01T11:38:02.6917662Z [31;1mTQMA8XQP1GB_debug_SMP_clang_64 FAILED[0m
+2025-06-01T11:38:02.6918023Z 
+2025-06-01T11:38:02.6918389Z ##[group]TQMA8XQP1GB_debug_SMP_MCS_clang_64
+2025-06-01T11:38:02.6918844Z [1m-----------[ start test TQMA8XQP1GB_debug_SMP_MCS_clang_64 ]-----------[0m
+2025-06-01T11:38:02.6926055Z [33m+++ tar xvzf ../TQMA8XQP1GB_debug_SMP_MCS_clang_64-images.tar.gz[0m
+2025-06-01T11:38:02.6953383Z images/
+2025-06-01T11:38:02.6953798Z images/sel4test-driver-image-arm-tqma8xqp1gb
+2025-06-01T11:38:02.7162936Z [33m+++ mq.sh sem -info tqma[0m
+2025-06-01T11:44:48.1955306Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-01T11:44:48.1956058Z [31;1m>>> command failed, aborting.[0m
+2025-06-01T11:44:48.1956544Z [33m+++ mq.sh sem -signal tqma -k seL4/seL4-Deploy-15373672507-hw-run-23[0m
+2025-06-01T11:51:33.6995475Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-01T11:51:33.6996565Z [1m-----------[ end test TQMA8XQP1GB_debug_SMP_MCS_clang_64 ]-----------[0m
+2025-06-01T11:51:33.6997571Z ##[endgroup]
+2025-06-01T11:51:33.6997926Z [31;1mTQMA8XQP1GB_debug_SMP_MCS_clang_64 FAILED[0m
+2025-06-01T11:51:33.6998170Z 
+2025-06-01T11:51:33.6998457Z ##[group]TQMA8XQP1GB_release_clang_64
+2025-06-01T11:51:33.6998866Z [1m-----------[ start test TQMA8XQP1GB_release_clang_64 ]-----------[0m
+2025-06-01T11:51:33.7006223Z [33m+++ tar xvzf ../TQMA8XQP1GB_release_clang_64-images.tar.gz[0m
+2025-06-01T11:51:33.7033918Z images/
+2025-06-01T11:51:33.7034640Z images/sel4test-driver-image-arm-tqma8xqp1gb
+2025-06-01T11:51:33.7115044Z [33m+++ mq.sh sem -info tqma[0m
+2025-06-01T11:58:19.2035099Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-01T11:58:19.2035970Z [31;1m>>> command failed, aborting.[0m
+2025-06-01T11:58:19.2036485Z [33m+++ mq.sh sem -signal tqma -k seL4/seL4-Deploy-15373672507-hw-run-23[0m
+2025-06-01T12:05:04.7073999Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-01T12:05:04.7076048Z [1m-----------[ end test TQMA8XQP1GB_release_clang_64 ]-----------[0m
+2025-06-01T12:05:04.7077176Z ##[endgroup]
+2025-06-01T12:05:04.7077498Z [31;1mTQMA8XQP1GB_release_clang_64 FAILED[0m
+2025-06-01T12:05:04.7078005Z 
+2025-06-01T12:05:04.7078300Z ##[group]TQMA8XQP1GB_release_MCS_clang_64
+2025-06-01T12:05:04.7078741Z [1m-----------[ start test TQMA8XQP1GB_release_MCS_clang_64 ]-----------[0m
+2025-06-01T12:05:04.7080406Z [33m+++ tar xvzf ../TQMA8XQP1GB_release_MCS_clang_64-images.tar.gz[0m
+2025-06-01T12:05:04.7108097Z images/
+2025-06-01T12:05:04.7108727Z images/sel4test-driver-image-arm-tqma8xqp1gb
+2025-06-01T12:05:04.7194453Z [33m+++ mq.sh sem -info tqma[0m
+2025-06-01T12:11:50.2115439Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-01T12:11:50.2116326Z [31;1m>>> command failed, aborting.[0m
+2025-06-01T12:11:50.2117168Z [33m+++ mq.sh sem -signal tqma -k seL4/seL4-Deploy-15373672507-hw-run-23[0m
+2025-06-01T12:18:35.7156461Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-01T12:18:35.7157913Z [1m-----------[ end test TQMA8XQP1GB_release_MCS_clang_64 ]-----------[0m
+2025-06-01T12:18:35.7159038Z ##[endgroup]
+2025-06-01T12:18:35.7159484Z [31;1mTQMA8XQP1GB_release_MCS_clang_64 FAILED[0m
+2025-06-01T12:18:35.7159861Z 
+2025-06-01T12:18:35.7162145Z ##[group]TQMA8XQP1GB_release_SMP_clang_64
+2025-06-01T12:18:35.7162929Z [1m-----------[ start test TQMA8XQP1GB_release_SMP_clang_64 ]-----------[0m
+2025-06-01T12:18:35.7164466Z [33m+++ tar xvzf ../TQMA8XQP1GB_release_SMP_clang_64-images.tar.gz[0m
+2025-06-01T12:18:35.7191796Z images/
+2025-06-01T12:18:35.7192275Z images/sel4test-driver-image-arm-tqma8xqp1gb
+2025-06-01T12:18:35.7270930Z [33m+++ mq.sh sem -info tqma[0m
+2025-06-01T12:25:21.2196709Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-01T12:25:21.2197686Z [31;1m>>> command failed, aborting.[0m
+2025-06-01T12:25:21.2198181Z [33m+++ mq.sh sem -signal tqma -k seL4/seL4-Deploy-15373672507-hw-run-23[0m
+2025-06-01T12:32:06.7235398Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-01T12:32:06.7236580Z [1m-----------[ end test TQMA8XQP1GB_release_SMP_clang_64 ]-----------[0m
+2025-06-01T12:32:06.7238139Z ##[endgroup]
+2025-06-01T12:32:06.7238677Z [31;1mTQMA8XQP1GB_release_SMP_clang_64 FAILED[0m
+2025-06-01T12:32:06.7239074Z 
+2025-06-01T12:32:06.7239544Z ##[group]TQMA8XQP1GB_release_SMP_MCS_clang_64
+2025-06-01T12:32:06.7240318Z [1m-----------[ start test TQMA8XQP1GB_release_SMP_MCS_clang_64 ]-----------[0m
+2025-06-01T12:32:06.7243272Z [33m+++ tar xvzf ../TQMA8XQP1GB_release_SMP_MCS_clang_64-images.tar.gz[0m
+2025-06-01T12:32:06.7270245Z images/
+2025-06-01T12:32:06.7270901Z images/sel4test-driver-image-arm-tqma8xqp1gb
+2025-06-01T12:32:06.7353710Z [33m+++ mq.sh sem -info tqma[0m
+2025-06-01T12:38:52.2275733Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-01T12:38:52.2276606Z [31;1m>>> command failed, aborting.[0m
+2025-06-01T12:38:52.2277546Z [33m+++ mq.sh sem -signal tqma -k seL4/seL4-Deploy-15373672507-hw-run-23[0m
+2025-06-01T12:45:37.7315846Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-01T12:45:37.7317390Z [1m-----------[ end test TQMA8XQP1GB_release_SMP_MCS_clang_64 ]-----------[0m
+2025-06-01T12:45:37.7320361Z ##[endgroup]
+2025-06-01T12:45:37.7320950Z [31;1mTQMA8XQP1GB_release_SMP_MCS_clang_64 FAILED[0m
+2025-06-01T12:45:37.7321338Z 
+2025-06-01T12:45:37.7321858Z ##[group]TQMA8XQP1GB_verification_clang_64
+2025-06-01T12:45:37.7322625Z [1m-----------[ start test TQMA8XQP1GB_verification_clang_64 ]-----------[0m
+2025-06-01T12:45:37.7323576Z [33m+++ tar xvzf ../TQMA8XQP1GB_verification_clang_64-images.tar.gz[0m
+2025-06-01T12:45:37.7351447Z images/
+2025-06-01T12:45:37.7351969Z images/sel4test-driver-image-arm-tqma8xqp1gb
+2025-06-01T12:45:37.7538351Z [33m+++ mq.sh sem -info tqma[0m
+2025-06-01T12:52:23.2355526Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-01T12:52:23.2356340Z [31;1m>>> command failed, aborting.[0m
+2025-06-01T12:52:23.2357124Z [33m+++ mq.sh sem -signal tqma -k seL4/seL4-Deploy-15373672507-hw-run-23[0m
+2025-06-01T12:59:08.7394205Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-01T12:59:08.7395369Z [1m-----------[ end test TQMA8XQP1GB_verification_clang_64 ]-----------[0m
+2025-06-01T12:59:08.7396447Z ##[endgroup]
+2025-06-01T12:59:08.7397489Z [31;1mTQMA8XQP1GB_verification_clang_64 FAILED[0m
+2025-06-01T12:59:08.7397723Z 
+2025-06-01T12:59:08.7398041Z ##[group]TQMA8XQP1GB_verification_MCS_clang_64
+2025-06-01T12:59:08.7398510Z [1m-----------[ start test TQMA8XQP1GB_verification_MCS_clang_64 ]-----------[0m
+2025-06-01T12:59:08.7404882Z [33m+++ tar xvzf ../TQMA8XQP1GB_verification_MCS_clang_64-images.tar.gz[0m
+2025-06-01T12:59:08.7431522Z images/
+2025-06-01T12:59:08.7432178Z images/sel4test-driver-image-arm-tqma8xqp1gb
+2025-06-01T12:59:08.7626158Z [33m+++ mq.sh sem -info tqma[0m
+2025-06-01T13:05:54.2434475Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-01T13:05:54.2435235Z [31;1m>>> command failed, aborting.[0m
+2025-06-01T13:05:54.2435746Z [33m+++ mq.sh sem -signal tqma -k seL4/seL4-Deploy-15373672507-hw-run-23[0m
+2025-06-01T13:12:39.7475540Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-01T13:12:39.7476622Z [1m-----------[ end test TQMA8XQP1GB_verification_MCS_clang_64 ]-----------[0m
+2025-06-01T13:12:39.7477927Z ##[endgroup]
+2025-06-01T13:12:39.7478467Z [31;1mTQMA8XQP1GB_verification_MCS_clang_64 FAILED[0m
+2025-06-01T13:12:39.7478845Z 
+2025-06-01T13:12:39.7480935Z ##[group]TQMA8XQP1GB_verification_SMP_clang_64
+2025-06-01T13:12:39.7481743Z [1m-----------[ start test TQMA8XQP1GB_verification_SMP_clang_64 ]-----------[0m
+2025-06-01T13:12:39.7487236Z [33m+++ tar xvzf ../TQMA8XQP1GB_verification_SMP_clang_64-images.tar.gz[0m
+2025-06-01T13:12:39.7514207Z images/
+2025-06-01T13:12:39.7514902Z images/sel4test-driver-image-arm-tqma8xqp1gb
+2025-06-01T13:12:39.7702666Z [33m+++ mq.sh sem -info tqma[0m
+2025-06-01T13:19:25.2515790Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-01T13:19:25.2517126Z [31;1m>>> command failed, aborting.[0m
+2025-06-01T13:19:25.2518555Z [33m+++ mq.sh sem -signal tqma -k seL4/seL4-Deploy-15373672507-hw-run-23[0m
+2025-06-01T13:26:10.7555289Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-01T13:26:10.7556472Z [1m-----------[ end test TQMA8XQP1GB_verification_SMP_clang_64 ]-----------[0m
+2025-06-01T13:26:10.7557490Z ##[endgroup]
+2025-06-01T13:26:10.7557849Z [31;1mTQMA8XQP1GB_verification_SMP_clang_64 FAILED[0m
+2025-06-01T13:26:10.7558102Z 
+2025-06-01T13:26:10.7558429Z ##[group]TQMA8XQP1GB_verification_SMP_MCS_clang_64
+2025-06-01T13:26:10.7558981Z [1m-----------[ start test TQMA8XQP1GB_verification_SMP_MCS_clang_64 ]-----------[0m
+2025-06-01T13:26:10.7564917Z [33m+++ tar xvzf ../TQMA8XQP1GB_verification_SMP_MCS_clang_64-images.tar.gz[0m
+2025-06-01T13:26:10.7592343Z images/
+2025-06-01T13:26:10.7592730Z images/sel4test-driver-image-arm-tqma8xqp1gb
+2025-06-01T13:26:10.7789581Z [33m+++ mq.sh sem -info tqma[0m
+2025-06-01T13:32:56.2595457Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-01T13:32:56.2596157Z [31;1m>>> command failed, aborting.[0m
+2025-06-01T13:32:56.2596732Z [33m+++ mq.sh sem -signal tqma -k seL4/seL4-Deploy-15373672507-hw-run-23[0m
+2025-06-01T13:39:41.7636741Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-01T13:39:41.7637900Z [1m-----------[ end test TQMA8XQP1GB_verification_SMP_MCS_clang_64 ]-----------[0m
+2025-06-01T13:39:41.7640467Z ##[endgroup]
+2025-06-01T13:39:41.7641016Z [31;1mTQMA8XQP1GB_verification_SMP_MCS_clang_64 FAILED[0m
+2025-06-01T13:39:41.7641398Z 
+2025-06-01T13:39:41.7641604Z Successful tests: [0m
+2025-06-01T13:39:41.7641836Z 
+2025-06-01T13:39:41.7644595Z [31;1mFAILED tests: TQMA8XQP1GB_debug_clang_64, TQMA8XQP1GB_debug_MCS_clang_64, TQMA8XQP1GB_debug_SMP_clang_64, TQMA8XQP1GB_debug_SMP_MCS_clang_64, TQMA8XQP1GB_release_clang_64, TQMA8XQP1GB_release_MCS_clang_64, TQMA8XQP1GB_release_SMP_clang_64, TQMA8XQP1GB_release_SMP_MCS_clang_64, TQMA8XQP1GB_verification_clang_64, TQMA8XQP1GB_verification_MCS_clang_64, TQMA8XQP1GB_verification_SMP_clang_64, TQMA8XQP1GB_verification_SMP_MCS_clang_64[0m
+2025-06-01T13:39:41.7778105Z ##[error]Action sel4test-hw-run failed.
+2025-06-01T13:39:41.7859278Z Post job cleanup.
+2025-06-01T13:39:41.8758318Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/post-steps.sh
+2025-06-01T13:39:41.8809181Z ##[group]Releasing mq lock
+2025-06-01T13:39:41.8878348Z Agent pid 4263
+2025-06-01T13:39:42.0353497Z mq.sh sem -cancel tqma -k seL4/seL4-Deploy-15373672507-hw-run-23
+2025-06-01T13:46:27.2675201Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-01T13:46:27.2676129Z mq.sh sem -signal tqma -k seL4/seL4-Deploy-15373672507-hw-run-23
+2025-06-01T13:53:12.7715025Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-01T13:53:12.7717332Z mq.sh sem -info tqma
+2025-06-01T13:59:58.2755362Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-01T13:59:58.2845480Z ##[endgroup]
+2025-06-01T13:59:58.2996227Z Post job cleanup.
+2025-06-01T13:59:58.3918827Z [command]/usr/bin/git version
+2025-06-01T13:59:58.3955511Z git version 2.49.0
+2025-06-01T13:59:58.3998009Z Temporarily overriding HOME='/home/runner/work/_temp/5143cb51-6f5e-41b4-9bd5-3dc79038d99c' before making global git config changes
+2025-06-01T13:59:58.3999213Z Adding repository directory to the temporary git global config as a safe directory
+2025-06-01T13:59:58.4003631Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/seL4/seL4/machine_queue
+2025-06-01T13:59:58.4040237Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-06-01T13:59:58.4072244Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-06-01T13:59:58.4297742Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-06-01T13:59:58.4318134Z http.https://github.com/.extraheader
+2025-06-01T13:59:58.4330691Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-06-01T13:59:58.4360520Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-06-01T13:59:58.4678065Z Cleaning up orphan processes

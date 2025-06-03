@@ -1,0 +1,254 @@
+﻿2025-05-26T08:00:30.9238198Z Current runner version: '2.324.0'
+2025-05-26T08:00:30.9263912Z ##[group]Runner Image Provisioner
+2025-05-26T08:00:30.9264925Z Hosted Compute Agent
+2025-05-26T08:00:30.9265466Z Version: 20250508.323
+2025-05-26T08:00:30.9266108Z Commit: 81b259f29879f73b4213d199e42d8c3465dae986
+2025-05-26T08:00:30.9266805Z Build Date: 2025-05-08T19:40:08Z
+2025-05-26T08:00:30.9267349Z ##[endgroup]
+2025-05-26T08:00:30.9267967Z ##[group]Operating System
+2025-05-26T08:00:30.9268508Z Ubuntu
+2025-05-26T08:00:30.9268983Z 24.04.2
+2025-05-26T08:00:30.9269391Z LTS
+2025-05-26T08:00:30.9270017Z ##[endgroup]
+2025-05-26T08:00:30.9270487Z ##[group]Runner Image
+2025-05-26T08:00:30.9271041Z Image: ubuntu-24.04
+2025-05-26T08:00:30.9271633Z Version: 20250511.1.0
+2025-05-26T08:00:30.9272578Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250511.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-05-26T08:00:30.9274250Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250511.1
+2025-05-26T08:00:30.9275431Z ##[endgroup]
+2025-05-26T08:00:30.9277951Z ##[group]GITHUB_TOKEN Permissions
+2025-05-26T08:00:30.9280076Z Actions: write
+2025-05-26T08:00:30.9280803Z Attestations: write
+2025-05-26T08:00:30.9281876Z Checks: write
+2025-05-26T08:00:30.9282746Z Contents: write
+2025-05-26T08:00:30.9283585Z Deployments: write
+2025-05-26T08:00:30.9284886Z Discussions: write
+2025-05-26T08:00:30.9285745Z Issues: write
+2025-05-26T08:00:30.9286534Z Metadata: read
+2025-05-26T08:00:30.9287512Z Models: read
+2025-05-26T08:00:30.9288460Z Packages: write
+2025-05-26T08:00:30.9289311Z Pages: write
+2025-05-26T08:00:30.9290329Z PullRequests: write
+2025-05-26T08:00:30.9291283Z RepositoryProjects: write
+2025-05-26T08:00:30.9292131Z SecurityEvents: write
+2025-05-26T08:00:30.9292950Z Statuses: write
+2025-05-26T08:00:30.9293458Z ##[endgroup]
+2025-05-26T08:00:30.9296109Z Secret source: Actions
+2025-05-26T08:00:30.9297407Z Prepare workflow directory
+2025-05-26T08:00:30.9640635Z Prepare all required actions
+2025-05-26T08:00:30.9677681Z Getting action download info
+2025-05-26T08:00:31.2627793Z Download action repository 'seL4/ci-actions@master' (SHA:dda28c57b388906c5d0f149aacfecaa833b518e0)
+2025-05-26T08:00:42.2962422Z ##[warning]Failed to download action 'https://api.github.com/repos/seL4/ci-actions/tarball/dda28c57b388906c5d0f149aacfecaa833b518e0'. Error: Response status code does not indicate success: 504 (Gateway Timeout). 
+2025-05-26T08:00:42.2979103Z ##[warning]Back off 24.626 seconds before retry.
+2025-05-26T08:01:14.5848420Z ##[group]Download immutable action package 'actions/upload-artifact@v4'
+2025-05-26T08:01:14.5849426Z Version: 4.6.2
+2025-05-26T08:01:14.5849992Z Digest: sha256:290722aa3281d5caf23d0acdc3dbeb3424786a1a01a9cc97e72f147225e37c38
+2025-05-26T08:01:14.5850500Z Source commit SHA: ea165f8d65b6e75b540449e92b4886f43607fa02
+2025-05-26T08:01:14.5850834Z ##[endgroup]
+2025-05-26T08:01:14.7454664Z Complete job name: HW Build (armv7a, gcc)
+2025-05-26T08:01:14.8000877Z ##[group]Pull down action image 'sel4/sel4test-hw:latest'
+2025-05-26T08:01:14.8274869Z ##[command]/usr/bin/docker pull sel4/sel4test-hw:latest
+2025-05-26T08:01:15.1333450Z latest: Pulling from sel4/sel4test-hw
+2025-05-26T08:01:15.1910269Z e1f16b66c2e8: Pulling fs layer
+2025-05-26T08:01:15.1911369Z 7b4f4f95f6cf: Pulling fs layer
+2025-05-26T08:01:15.1911918Z 95fe3dc9ff39: Pulling fs layer
+2025-05-26T08:01:15.1912440Z 4f4fb700ef54: Pulling fs layer
+2025-05-26T08:01:15.1912955Z 0d20a8c1dfe8: Pulling fs layer
+2025-05-26T08:01:15.1913430Z 0997441cee4c: Pulling fs layer
+2025-05-26T08:01:15.1913906Z 510e0bddd0d8: Pulling fs layer
+2025-05-26T08:01:15.1914376Z dd8aa8757874: Pulling fs layer
+2025-05-26T08:01:15.1915052Z 16e1a5185d64: Pulling fs layer
+2025-05-26T08:01:15.1915514Z 4a7069dc40da: Pulling fs layer
+2025-05-26T08:01:15.1915841Z 56d587593d8f: Pulling fs layer
+2025-05-26T08:01:15.1916173Z dc7a6d385b7b: Pulling fs layer
+2025-05-26T08:01:15.1916489Z 16e1a5185d64: Waiting
+2025-05-26T08:01:15.1916887Z 56d587593d8f: Waiting
+2025-05-26T08:01:15.1917177Z 4a7069dc40da: Waiting
+2025-05-26T08:01:15.1917816Z 4f4fb700ef54: Waiting
+2025-05-26T08:01:15.1918064Z 0d20a8c1dfe8: Waiting
+2025-05-26T08:01:15.1918325Z 0997441cee4c: Waiting
+2025-05-26T08:01:15.1918604Z dd8aa8757874: Waiting
+2025-05-26T08:01:15.1918888Z 510e0bddd0d8: Waiting
+2025-05-26T08:01:15.2409100Z 7b4f4f95f6cf: Verifying Checksum
+2025-05-26T08:01:15.2409724Z 7b4f4f95f6cf: Download complete
+2025-05-26T08:01:15.3042199Z 4f4fb700ef54: Verifying Checksum
+2025-05-26T08:01:15.3042881Z 4f4fb700ef54: Download complete
+2025-05-26T08:01:15.3514222Z e1f16b66c2e8: Verifying Checksum
+2025-05-26T08:01:15.3515886Z e1f16b66c2e8: Download complete
+2025-05-26T08:01:15.5511735Z 95fe3dc9ff39: Verifying Checksum
+2025-05-26T08:01:15.5512247Z 95fe3dc9ff39: Download complete
+2025-05-26T08:01:15.7248908Z 0997441cee4c: Verifying Checksum
+2025-05-26T08:01:15.7255320Z 0997441cee4c: Download complete
+2025-05-26T08:01:15.7805048Z dd8aa8757874: Download complete
+2025-05-26T08:01:15.7893174Z 510e0bddd0d8: Download complete
+2025-05-26T08:01:15.8399815Z 16e1a5185d64: Verifying Checksum
+2025-05-26T08:01:15.8409187Z 16e1a5185d64: Download complete
+2025-05-26T08:01:15.8409703Z 4a7069dc40da: Verifying Checksum
+2025-05-26T08:01:15.8410118Z 4a7069dc40da: Download complete
+2025-05-26T08:01:15.8901839Z 56d587593d8f: Verifying Checksum
+2025-05-26T08:01:15.8905272Z 56d587593d8f: Download complete
+2025-05-26T08:01:15.8954876Z dc7a6d385b7b: Verifying Checksum
+2025-05-26T08:01:15.8956223Z dc7a6d385b7b: Download complete
+2025-05-26T08:01:17.0139521Z e1f16b66c2e8: Pull complete
+2025-05-26T08:01:19.3446489Z 7b4f4f95f6cf: Pull complete
+2025-05-26T08:01:19.8729934Z 0d20a8c1dfe8: Verifying Checksum
+2025-05-26T08:01:19.8730500Z 0d20a8c1dfe8: Download complete
+2025-05-26T08:01:23.6934996Z 95fe3dc9ff39: Pull complete
+2025-05-26T08:01:23.7114274Z 4f4fb700ef54: Pull complete
+2025-05-26T08:01:48.1459468Z 0d20a8c1dfe8: Pull complete
+2025-05-26T08:01:48.7450209Z 0997441cee4c: Pull complete
+2025-05-26T08:01:49.1352655Z 510e0bddd0d8: Pull complete
+2025-05-26T08:01:49.1468779Z dd8aa8757874: Pull complete
+2025-05-26T08:01:49.1628478Z 16e1a5185d64: Pull complete
+2025-05-26T08:01:49.1820142Z 4a7069dc40da: Pull complete
+2025-05-26T08:01:49.1929578Z 56d587593d8f: Pull complete
+2025-05-26T08:01:49.2010992Z dc7a6d385b7b: Pull complete
+2025-05-26T08:01:49.2128837Z Digest: sha256:968c11960a95fde978f81777143945169bee771a7a11f67bfd4da5499a907f6e
+2025-05-26T08:01:49.2140761Z Status: Downloaded newer image for sel4/sel4test-hw:latest
+2025-05-26T08:01:49.2153298Z docker.io/sel4/sel4test-hw:latest
+2025-05-26T08:01:49.2175803Z ##[endgroup]
+2025-05-26T08:01:49.2411921Z ##[group]Run seL4/ci-actions/sel4test-hw@master
+2025-05-26T08:01:49.2412501Z with:
+2025-05-26T08:01:49.2418279Z   xml: <?xml version="1.0" encoding="UTF-8"?>%0A<manifest>%0A  <remote name="nanopb" fetch="https://github.com/nanopb"/>%0A  <remote name="opensbi" fetch="https://github.com/riscv"/>%0A  <remote name="seL4" fetch="."/>%0A  <remote name="sel4proj" fetch="../sel4proj"/>%0A  %0A  <default remote="seL4" revision="master"/>%0A  %0A  <project name="musllibc.git" path="projects/musllibc" revision="c9249738defe1ddd14f7d4b634dc5d945e7d00bb" dest-branch="sel4"/>%0A  <project name="nanopb" path="tools/nanopb" remote="nanopb" revision="1466e6f953835b191a7f5acf0c06c941d4cd33d9" dest-branch="refs/tags/0.4.3"/>%0A  <project name="opensbi" path="tools/opensbi" remote="opensbi" revision="234ed8e427f4d92903123199f6590d144e0d9351" dest-branch="refs/tags/v0.9"/>%0A  <project name="seL4.git" path="kernel" revision="b7d67a9389c4637033b086076b76ec02aafd67f6" dest-branch="master"/>%0A  <project name="seL4_libs.git" path="projects/seL4_libs" revision="2c86e187057ea040a2c53e16cb49bd3d56f632c4" dest-branch="master"/>%0A  <project name="seL4_tools.git" path="tools/seL4" revision="ffd872ad9e2c0a466f8250059f50762fc3ff401d" dest-branch="master">%0A    <linkfile src="cmake-tool/init-build.sh" dest="init-build.sh"/>%0A    <linkfile src="cmake-tool/griddle" dest="griddle"/>%0A  </project>%0A  <project name="sel4_projects_libs" path="projects/sel4_projects_libs" revision="46f6dc9c0c38a09b75531e547308cb3dcaec53cd" dest-branch="master"/>%0A  <project name="sel4runtime.git" path="projects/sel4runtime" revision="86489cf6efab9f314964e79468c036e9035394c7" dest-branch="master"/>%0A  <project name="sel4test.git" path="projects/sel4test" revision="dc92ceda5a898edb388cd966fcc63fc333ee913a" dest-branch="master">%0A    <linkfile src="easy-settings.cmake" dest="easy-settings.cmake"/>%0A  </project>%0A  <project name="util_libs.git" path="projects/util_libs" revision="9b8ea7dcf1d80b80b8b7a2a038e03ac10308f39b" dest-branch="master"/>%0A</manifest>%0A
+2025-05-26T08:01:49.2424302Z   march: armv7a
+2025-05-26T08:01:49.2424732Z   compiler: gcc
+2025-05-26T08:01:49.2424923Z   action_name: sel4test-hw
+2025-05-26T08:01:49.2425418Z ##[endgroup]
+2025-05-26T08:01:49.2548695Z ##[command]/usr/bin/docker run --name sel4sel4testhwlatest_70296f --label bb01d3 --workdir /github/workspace --rm -e "INPUT_XML" -e "INPUT_MARCH" -e "INPUT_COMPILER" -e "INPUT_ARCH" -e "INPUT_MODE" -e "INPUT_DEBUG" -e "INPUT_SHA" -e "INPUT_ACTION_NAME" -e "HOME" -e "GITHUB_JOB" -e "GITHUB_REF" -e "GITHUB_SHA" -e "GITHUB_REPOSITORY" -e "GITHUB_REPOSITORY_OWNER" -e "GITHUB_REPOSITORY_OWNER_ID" -e "GITHUB_RUN_ID" -e "GITHUB_RUN_NUMBER" -e "GITHUB_RETENTION_DAYS" -e "GITHUB_RUN_ATTEMPT" -e "GITHUB_ACTOR_ID" -e "GITHUB_ACTOR" -e "GITHUB_WORKFLOW" -e "GITHUB_HEAD_REF" -e "GITHUB_BASE_REF" -e "GITHUB_EVENT_NAME" -e "GITHUB_SERVER_URL" -e "GITHUB_API_URL" -e "GITHUB_GRAPHQL_URL" -e "GITHUB_REF_NAME" -e "GITHUB_REF_PROTECTED" -e "GITHUB_REF_TYPE" -e "GITHUB_WORKFLOW_REF" -e "GITHUB_WORKFLOW_SHA" -e "GITHUB_REPOSITORY_ID" -e "GITHUB_TRIGGERING_ACTOR" -e "GITHUB_WORKSPACE" -e "GITHUB_ACTION" -e "GITHUB_EVENT_PATH" -e "GITHUB_ACTION_REPOSITORY" -e "GITHUB_ACTION_REF" -e "GITHUB_PATH" -e "GITHUB_ENV" -e "GITHUB_STEP_SUMMARY" -e "GITHUB_STATE" -e "GITHUB_OUTPUT" -e "RUNNER_OS" -e "RUNNER_ARCH" -e "RUNNER_NAME" -e "RUNNER_ENVIRONMENT" -e "RUNNER_TOOL_CACHE" -e "RUNNER_TEMP" -e "RUNNER_WORKSPACE" -e "ACTIONS_RUNTIME_URL" -e "ACTIONS_RUNTIME_TOKEN" -e "ACTIONS_CACHE_URL" -e "ACTIONS_RESULTS_URL" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/seL4/seL4":"/github/workspace" sel4/sel4test-hw:latest
+2025-05-26T08:01:49.4524266Z ##[group]Setting up
+2025-05-26T08:01:49.4602255Z Starting repo checkout on branch master with manifest master.xml:
+2025-05-26T08:01:51.0157431Z 
+2025-05-26T08:01:51.0158703Z repo has been initialized in /github/workspace
+2025-05-26T08:01:51.0295354Z Using supplied manifest XML
+2025-05-26T08:01:51.3439336Z repo: reusing existing repo client checkout in /github/workspace
+2025-05-26T08:01:51.3439814Z 
+2025-05-26T08:01:51.3439998Z repo has been initialized in /github/workspace
+2025-05-26T08:01:52.8428050Z repo sync has finished successfully.
+2025-05-26T08:01:53.1190097Z Manifest summary:
+2025-05-26T08:01:53.1190498Z -----------------
+2025-05-26T08:01:53.1191159Z  sel4test-manifest: d330184d Updating default.xml                           (origin/master)
+2025-05-26T08:01:53.1191963Z               seL4: b7d67a93 Detect 'aarch64-elf-' toolchain                
+2025-05-26T08:01:53.1192625Z           musllibc: c9249738 tls: Add build checks for unsupported tls se.. 
+2025-05-26T08:01:53.1193194Z          seL4_libs: 2c86e187 libsel4platsupport: don't link nonexistent l.. 
+2025-05-26T08:01:53.1193655Z sel4_projects_libs: 46f6dc9c remove obsolete LICENSE_* files                
+2025-05-26T08:01:53.1194114Z        sel4runtime: 86489cf6 github: use central CI workflows               
+2025-05-26T08:01:53.1194770Z           sel4test: dc92ceda Bump minimum CMake version                     
+2025-05-26T08:01:53.1195165Z          util_libs: 9b8ea7dc ltimer.h: fix style                            
+2025-05-26T08:01:53.1195537Z             nanopb: 1466e6f9 Publishing nanopb-0.4.3                        
+2025-05-26T08:01:53.1196271Z            opensbi: 234ed8e4 include: Bump-up version to 0.9                
+2025-05-26T08:01:53.1196648Z         seL4_tools: ffd872ad Remove redundant license files                 
+2025-05-26T08:01:53.1234938Z ##[endgroup]
+2025-05-26T08:01:53.2922150Z 
+2025-05-26T08:01:53.2923421Z ##[group]SABRE_debug_gcc_32
+2025-05-26T08:01:53.2924333Z [1m-----------[ start test SABRE_debug_gcc_32 ]-----------[0m
+2025-05-26T08:01:53.2925345Z [33m+++ ../init-build.sh -DAARCH32=TRUE -DPLATFORM=sabre -DBAMBOO=TRUE[0m
+2025-05-26T08:01:53.3045825Z loading initial cache file /github/workspace/projects/sel4test/settings.cmake
+2025-05-26T08:01:53.3073704Z -- Set platform details from PLATFORM=sabre
+2025-05-26T08:01:53.3074719Z --   KernelPlatform: imx6
+2025-05-26T08:01:53.3075230Z --   KernelARMPlatform: sabre
+2025-05-26T08:01:53.3075775Z -- Setting from flags KernelSel4Arch: aarch32
+2025-05-26T08:01:53.3090990Z -- Found seL4: /github/workspace/kernel
+2025-05-26T08:01:53.3489597Z -- Found GCC with prefix arm-linux-gnueabi-
+2025-05-26T08:01:53.3962861Z -- The C compiler identification is GNU 10.2.1
+2025-05-26T08:01:53.4525557Z -- The CXX compiler identification is GNU 10.2.1
+2025-05-26T08:01:53.4623755Z -- The ASM compiler identification is GNU
+2025-05-26T08:01:53.4635483Z -- Found assembler: /usr/bin/arm-linux-gnueabi-gcc
+2025-05-26T08:01:53.4683669Z -- Detecting C compiler ABI info
+2025-05-26T08:01:53.5265722Z -- Detecting C compiler ABI info - done
+2025-05-26T08:01:53.5318675Z -- Check for working C compiler: /usr/bin/arm-linux-gnueabi-gcc - skipped
+2025-05-26T08:01:53.5321531Z -- Detecting C compile features
+2025-05-26T08:01:53.5325858Z -- Detecting C compile features - done
+2025-05-26T08:01:53.5364402Z -- Detecting CXX compiler ABI info
+2025-05-26T08:01:53.5960136Z -- Detecting CXX compiler ABI info - done
+2025-05-26T08:01:53.6017204Z -- Check for working CXX compiler: /usr/bin/arm-linux-gnueabi-g++ - skipped
+2025-05-26T08:01:53.6020954Z -- Detecting CXX compile features
+2025-05-26T08:01:53.6027344Z -- Detecting CXX compile features - done
+2025-05-26T08:01:53.6063977Z -- Found elfloader-tool: /github/workspace/tools/seL4/elfloader-tool
+2025-05-26T08:01:53.6461204Z -- /github/workspace/build/kernel/gen_headers/plat/machine/devices_gen.h is out of date. Regenerating from DTB...
+2025-05-26T08:01:53.9796167Z -- CPIO test cpio_reproducible_flag PASSED
+2025-05-26T08:01:54.0212571Z -- Found musllibc: /github/workspace/projects/musllibc
+2025-05-26T08:01:54.0222239Z -- Found util_libs: /github/workspace/projects/util_libs
+2025-05-26T08:01:54.0232532Z -- Found seL4_libs: /github/workspace/projects/seL4_libs
+2025-05-26T08:01:54.0241528Z -- Found sel4_projects_libs: /github/workspace/projects/sel4_projects_libs
+2025-05-26T08:01:54.0250959Z -- Found sel4runtime: /github/workspace/projects/sel4runtime
+2025-05-26T08:01:54.1146663Z -- Performing Test compiler_arch_test
+2025-05-26T08:01:54.1733974Z -- Performing Test compiler_arch_test - Success
+2025-05-26T08:01:54.2149746Z -- libmuslc architecture: 'arm' (from KernelSel4Arch 'aarch32')
+2025-05-26T08:01:54.2191688Z -- Detecting cached version of: musllibc
+2025-05-26T08:01:54.2225619Z -- Found Git: /usr/bin/git (found version "2.30.2")
+2025-05-26T08:01:54.2728942Z --   Not found cache entry for musllibc - will build from source
+2025-05-26T08:01:54.9272381Z -- Found Nanopb: /github/workspace/tools/nanopb
+2025-05-26T08:01:54.9347721Z -- Configuring done
+2025-05-26T08:01:55.0249334Z -- Generating done
+2025-05-26T08:01:55.0475099Z -- Build files have been written to: /github/workspace/build
+2025-05-26T08:01:55.0577654Z [33m+++ ninja[0m
+2025-05-26T08:01:55.1622983Z [1/316] Generating generated/invocations_all.json
+2025-05-26T08:01:55.1848318Z [2/316] Generate dummy headers for prune compilation
+2025-05-26T08:01:55.1970898Z [3/316] Generate invocation header gen_headers/arch/api/sel4_invocation.h
+2025-05-26T08:01:55.2058741Z [4/316] Creating C input file for preprocessor
+2025-05-26T08:01:55.2322784Z [5/316] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime_crt_obj.dir/crt/sel4_arch/aarch32/crti.S.obj
+2025-05-26T08:01:55.2476534Z [6/316] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime_crt_obj.dir/crt/sel4_arch/aarch32/crtn.S.obj
+2025-05-26T08:01:55.2635609Z [7/316] Concatenating C files
+2025-05-26T08:01:55.2735969Z [8/316] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime_crt_obj.dir/crt/sel4_arch/aarch32/crt0.S.obj
+2025-05-26T08:01:55.2782410Z [9/316] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime_crt_obj.dir/crt/sel4_arch/aarch32/sel4_crt0.S.obj
+2025-05-26T08:01:55.2852302Z [10/316] Generate syscall invocations
+2025-05-26T08:01:55.2987871Z [11/316] Creating C input file for preprocessor
+2025-05-26T08:01:55.3007552Z [12/316] Building C object libsel4/CMakeFiles/libsel4_sel4_arch_types_gen_pbf_temp_lib.dir/libsel4_sel4_arch_types_gen_pbf_temp.c.obj
+2025-05-26T08:01:55.3027090Z [13/316] Generate invocation header gen_headers/arch/api/invocation.h
+2025-05-26T08:01:55.3163436Z [14/316] Building C object libsel4/CMakeFiles/libsel4_shared_types_gen_pbf_temp_lib.dir/libsel4_shared_types_gen_pbf_temp.c.obj
+2025-05-26T08:01:55.3230329Z [15/316] Generating sel4_arch_include/aarch32/sel4/sel4_arch/types.pbf
+2025-05-26T08:01:55.3410861Z [16/316] Generate invocation header gen_headers/api/invocation.h
+2025-05-26T08:01:55.3423510Z [17/316] Generating include/sel4/shared_types.pbf
+2025-05-26T08:01:55.3569370Z [18/316] Creating C input file for preprocessor
+2025-05-26T08:01:55.3712098Z [19/316] Creating C input file for preprocessor
+2025-05-26T08:01:55.3850116Z [20/316] Building C object kernel/CMakeFiles/kernel_bf_gen_target_1_pbf_temp_lib.dir/kernel_bf_gen_target_1_pbf_temp.c.obj
+2025-05-26T08:01:55.4003591Z [21/316] Generating generated/arch/object/structures.bf.pbf
+2025-05-26T08:01:55.4021227Z [22/316] Generating ../../../lib/crt0.o, ../../../lib/crti.o, ../../../lib/crtn.o
+2025-05-26T08:01:55.4071892Z [23/316] Building C object apps/sel4test-driver/util_libs/libcpio/CMakeFiles/cpio.dir/src/cpio.c.obj
+2025-05-26T08:01:55.4517411Z [24/316] Building C object kernel/CMakeFiles/kernel_all_pp_prune_wrapper_temp_lib.dir/kernel_all_pp_prune_wrapper_temp.c.obj
+2025-05-26T08:01:55.4700743Z [25/316] Generating from /github/workspace/build/libsel4/sel4_arch_include/aarch32/sel4/sel4_arch/types.pbf
+2025-05-26T08:01:55.4813807Z [26/316] Generating kernel_all_pp_prune.c
+2025-05-26T08:01:55.4872272Z [27/316] Generating from /github/workspace/build/libsel4/include/sel4/shared_types.pbf
+2025-05-26T08:01:55.5684544Z [28/316] Generate syscall.h
+2025-05-26T08:01:55.5975998Z [29/316] Generate sel4_client.h
+2025-05-26T08:01:55.6496968Z [30/316] Linking C static library apps/sel4test-driver/util_libs/libcpio/libcpio.a
+2025-05-26T08:01:55.6914349Z [31/316] Generating from generated/arch/object/structures.bf.pbf
+2025-05-26T08:01:55.7018659Z [32/316] Generate invocation header sel4_arch_include/aarch32/sel4/sel4_arch/invocation.h
+2025-05-26T08:01:55.7021523Z [33/316] Generate invocation header include/sel4/invocation.h
+2025-05-26T08:01:55.7032981Z [34/316] Generate invocation header arch_include/arm/sel4/arch/invocation.h
+2025-05-26T08:01:55.7094838Z [35/316] Creating C input file for preprocessor
+2025-05-26T08:01:55.7267255Z [36/316] Building C object kernel/CMakeFiles/kernel_bf_gen_target_11_pbf_temp_lib.dir/kernel_bf_gen_target_11_pbf_temp.c.obj
+2025-05-26T08:01:55.7372236Z [37/316] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/crt/sel4_arch/aarch32/crt0.S.obj
+2025-05-26T08:01:55.7479152Z [38/316] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/crt/sel4_arch/aarch32/crti.S.obj
+2025-05-26T08:01:55.7513027Z [39/316] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/crt/sel4_arch/aarch32/crtn.S.obj
+2025-05-26T08:01:55.7517492Z [40/316] Generating generated/sel4/shared_types.bf.pbf
+2025-05-26T08:01:55.7669931Z [41/316] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/crt/sel4_arch/aarch32/sel4_crt0.S.obj
+2025-05-26T08:01:55.8743253Z [42/316] Generating from generated/sel4/shared_types.bf.pbf
+2025-05-26T08:01:55.8786444Z [43/316] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/start.c.obj
+2025-05-26T08:01:55.8978399Z [44/316] Creating C input file for preprocessor
+2025-05-26T08:01:55.9000784Z [45/316] Creating C input file for preprocessor
+2025-05-26T08:01:55.9039078Z [46/316] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/crt1.c.obj
+2025-05-26T08:01:55.9059130Z [47/316] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/start_root.c.obj
+2025-05-26T08:01:55.9236849Z [48/316] Building C object kernel/CMakeFiles/linker_ld_wrapper_temp_lib.dir/linker_ld_wrapper_temp.c.obj
+2025-05-26T08:01:55.9409943Z [49/316] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/env.c.obj
+2025-05-26T08:01:55.9411422Z [50/316] Generating linker.lds_pp
+2025-05-26T08:01:55.9605726Z [51/316] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/init.c.obj
+2025-05-26T08:01:55.9729021Z [52/316] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/memset.c.obj
+2025-05-26T08:01:55.9795470Z [53/316] Building C object kernel/CMakeFiles/kernel_i_wrapper_temp_lib.dir/kernel_all_copy.c.obj
+2025-05-26T08:01:56.0020130Z [54/316] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/vsyscall.c.obj
+2025-05-26T08:01:56.0021010Z [55/316] Generating kernel_all.i
+2025-05-26T08:01:56.0109799Z [56/316] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/sel4_arch/aarch32/__aeabi_read_tp.S.obj
+2025-05-26T08:01:56.0126355Z [57/316] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/memcpy.c.obj
+2025-05-26T08:01:56.0564953Z [58/316] Generating circular_includes_valid
+2025-05-26T08:01:56.0949386Z [59/316] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/sel4_arch/aarch32/__aeabi_read_tp_c.c.obj
+2025-05-26T08:01:56.0973070Z [60/316] Building ASM object kernel/CMakeFiles/kernel.elf.dir/src/arch/arm/armv/armv7-a/machine_asm.S.obj
+2025-05-26T08:01:56.1116505Z [61/316] Building ASM object kernel/CMakeFiles/kernel.elf.dir/src/arch/arm/32/traps.S.obj
+2025-05-26T08:01:56.1123619Z [62/316] Building C object libsel4/CMakeFiles/sel4.dir/src/sel4_bootinfo.c.obj
+2025-05-26T08:01:56.1135267Z [63/316] Building ASM object kernel/CMakeFiles/kernel.elf.dir/src/arch/arm/32/head.S.obj
+2025-05-26T08:01:56.1317879Z [64/316] Building ASM object kernel/CMakeFiles/kernel.elf.dir/src/arch/arm/32/hyp_traps.S.obj
+2025-05-26T08:01:56.1349922Z [65/316] Linking C static library libsel4/libsel4.a
+2025-05-26T08:01:56.1593938Z [66/316] Linking C static library apps/sel4test-driver/sel4runtime/libsel4runtime.a
+2025-05-26T08:02:05.8189143Z [67/316] Building C object kernel/CMakeFiles/kernel.elf.dir/kernel_all.c.obj
+2025-05-26T08:02:05.8810996Z [68/316] Linking C executable kernel/kernel.elf
+2025-05-26T08:02:12.1379302Z ##[error]The operation was canceled.
+2025-05-26T08:02:12.1469945Z Cleaning up orphan processes

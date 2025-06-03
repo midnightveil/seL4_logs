@@ -1,0 +1,10 @@
+2025-05-19T00:05:10.7948620Z Post job cleanup.
+2025-05-19T00:05:10.8849708Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/post-steps.sh
+2025-05-19T00:05:10.8901060Z ##[group]Releasing mq lock
+2025-05-19T00:05:10.8970168Z Agent pid 4351
+2025-05-19T00:05:11.0445873Z mq.sh sem -cancel tqma -k seL4/seL4-Deploy-15063474103-hw-run-18
+2025-05-19T00:05:13.7199023Z mq.sh sem -signal tqma -k seL4/seL4-Deploy-15063474103-hw-run-18
+2025-05-19T00:05:17.0634240Z Attempting to unlock system tqma with the wrong key!
+2025-05-19T00:05:17.0635083Z mq.sh sem -info tqma
+2025-05-19T00:05:21.0761771Z Lock for tqma held by sel4_ci since 2025-05-19 10:05:11.156828960 +1000, timeout 1800 with key 'seL4/seL4-Deploy-15063474103-hw-run-19'
+2025-05-19T00:05:21.0863173Z ##[endgroup]

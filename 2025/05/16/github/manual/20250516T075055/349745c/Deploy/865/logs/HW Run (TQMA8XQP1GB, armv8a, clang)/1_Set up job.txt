@@ -1,0 +1,51 @@
+2025-05-18T23:40:12.3513605Z Current runner version: '2.324.0'
+2025-05-18T23:40:12.3536941Z ##[group]Runner Image Provisioner
+2025-05-18T23:40:12.3537911Z Hosted Compute Agent
+2025-05-18T23:40:12.3538525Z Version: 20250508.323
+2025-05-18T23:40:12.3539369Z Commit: 81b259f29879f73b4213d199e42d8c3465dae986
+2025-05-18T23:40:12.3540160Z Build Date: 2025-05-08T19:40:08Z
+2025-05-18T23:40:12.3540942Z ##[endgroup]
+2025-05-18T23:40:12.3541541Z ##[group]Operating System
+2025-05-18T23:40:12.3542396Z Ubuntu
+2025-05-18T23:40:12.3542993Z 24.04.2
+2025-05-18T23:40:12.3543545Z LTS
+2025-05-18T23:40:12.3544205Z ##[endgroup]
+2025-05-18T23:40:12.3544781Z ##[group]Runner Image
+2025-05-18T23:40:12.3545524Z Image: ubuntu-24.04
+2025-05-18T23:40:12.3546152Z Version: 20250511.1.0
+2025-05-18T23:40:12.3547307Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250511.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-05-18T23:40:12.3548849Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250511.1
+2025-05-18T23:40:12.3550166Z ##[endgroup]
+2025-05-18T23:40:12.3552957Z ##[group]GITHUB_TOKEN Permissions
+2025-05-18T23:40:12.3554980Z Actions: write
+2025-05-18T23:40:12.3555605Z Attestations: write
+2025-05-18T23:40:12.3556387Z Checks: write
+2025-05-18T23:40:12.3556993Z Contents: write
+2025-05-18T23:40:12.3557698Z Deployments: write
+2025-05-18T23:40:12.3558287Z Discussions: write
+2025-05-18T23:40:12.3558931Z Issues: write
+2025-05-18T23:40:12.3559577Z Metadata: read
+2025-05-18T23:40:12.3560126Z Models: read
+2025-05-18T23:40:12.3560827Z Packages: write
+2025-05-18T23:40:12.3561410Z Pages: write
+2025-05-18T23:40:12.3562213Z PullRequests: write
+2025-05-18T23:40:12.3562906Z RepositoryProjects: write
+2025-05-18T23:40:12.3563610Z SecurityEvents: write
+2025-05-18T23:40:12.3564358Z Statuses: write
+2025-05-18T23:40:12.3564914Z ##[endgroup]
+2025-05-18T23:40:12.3567907Z Secret source: Actions
+2025-05-18T23:40:12.3568678Z Prepare workflow directory
+2025-05-18T23:40:12.3876430Z Prepare all required actions
+2025-05-18T23:40:12.3913070Z Getting action download info
+2025-05-18T23:40:12.5956260Z ##[group]Download immutable action package 'actions/checkout@v4'
+2025-05-18T23:40:12.5957371Z Version: 4.2.2
+2025-05-18T23:40:12.5958556Z Digest: sha256:ccb2698953eaebd21c7bf6268a94f9c26518a7e38e27e0b83c1fe1ad049819b1
+2025-05-18T23:40:12.5959819Z Source commit SHA: 11bd71901bbe5b1630ceea73d27597364c9af683
+2025-05-18T23:40:12.5960735Z ##[endgroup]
+2025-05-18T23:40:12.6713867Z ##[group]Download immutable action package 'actions/download-artifact@v4'
+2025-05-18T23:40:12.6714707Z Version: 4.3.0
+2025-05-18T23:40:12.6715439Z Digest: sha256:552a5b9ad918f62ec0c2e8f42f3c694d4ebd1b4036b18c39b14168fcdfc0e4f2
+2025-05-18T23:40:12.6716379Z Source commit SHA: d3f86a106a0bac45b974a628896c90dbdf5c8093
+2025-05-18T23:40:12.6717064Z ##[endgroup]
+2025-05-18T23:40:12.8766316Z Download action repository 'seL4/ci-actions@master' (SHA:68da2692f6330d8a8dd0fb94699b595aff44e449)
+2025-05-18T23:40:17.6655843Z Complete job name: HW Run (TQMA8XQP1GB, armv8a, clang)

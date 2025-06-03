@@ -1,0 +1,10 @@
+2025-05-18T23:46:42.0088694Z Post job cleanup.
+2025-05-18T23:46:42.0997021Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/post-steps.sh
+2025-05-18T23:46:42.1049655Z ##[group]Releasing mq lock
+2025-05-18T23:46:42.1124987Z Agent pid 3132
+2025-05-18T23:46:42.2603494Z mq.sh sem -cancel odroidc2 -k seL4/seL4-Deploy-15063474103-hw-run-17
+2025-05-18T23:46:44.8245577Z mq.sh sem -signal odroidc2 -k seL4/seL4-Deploy-15063474103-hw-run-17
+2025-05-18T23:46:47.3825212Z Attempting to unlock system odroidc2 that you do not hold
+2025-05-18T23:46:47.3826104Z mq.sh sem -info odroidc2
+2025-05-18T23:46:50.5775266Z Lock for odroidc2 currently free
+2025-05-18T23:46:50.5873590Z ##[endgroup]

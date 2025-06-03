@@ -1,0 +1,138 @@
+﻿2025-05-31T09:34:17.8935667Z Current runner version: '2.324.0'
+2025-05-31T09:34:17.8959657Z ##[group]Runner Image Provisioner
+2025-05-31T09:34:17.8960415Z Hosted Compute Agent
+2025-05-31T09:34:17.8961047Z Version: 20250508.323
+2025-05-31T09:34:17.8961627Z Commit: 81b259f29879f73b4213d199e42d8c3465dae986
+2025-05-31T09:34:17.8962567Z Build Date: 2025-05-08T19:40:08Z
+2025-05-31T09:34:17.8963265Z ##[endgroup]
+2025-05-31T09:34:17.8963742Z ##[group]Operating System
+2025-05-31T09:34:17.8964287Z Ubuntu
+2025-05-31T09:34:17.8964799Z 24.04.2
+2025-05-31T09:34:17.8965250Z LTS
+2025-05-31T09:34:17.8965654Z ##[endgroup]
+2025-05-31T09:34:17.8966188Z ##[group]Runner Image
+2025-05-31T09:34:17.8966754Z Image: ubuntu-24.04
+2025-05-31T09:34:17.8967223Z Version: 20250511.1.0
+2025-05-31T09:34:17.8968259Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250511.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-05-31T09:34:17.8969754Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250511.1
+2025-05-31T09:34:17.8970775Z ##[endgroup]
+2025-05-31T09:34:17.8973442Z ##[group]GITHUB_TOKEN Permissions
+2025-05-31T09:34:17.8975465Z Actions: write
+2025-05-31T09:34:17.8975998Z Attestations: write
+2025-05-31T09:34:17.8976464Z Checks: write
+2025-05-31T09:34:17.8977031Z Contents: write
+2025-05-31T09:34:17.8977567Z Deployments: write
+2025-05-31T09:34:17.8978036Z Discussions: write
+2025-05-31T09:34:17.8978577Z Issues: write
+2025-05-31T09:34:17.8979014Z Metadata: read
+2025-05-31T09:34:17.8979490Z Models: read
+2025-05-31T09:34:17.8979980Z Packages: write
+2025-05-31T09:34:17.8980648Z Pages: write
+2025-05-31T09:34:17.8981100Z PullRequests: write
+2025-05-31T09:34:17.8981664Z RepositoryProjects: write
+2025-05-31T09:34:17.8982596Z SecurityEvents: write
+2025-05-31T09:34:17.8983193Z Statuses: write
+2025-05-31T09:34:17.8983798Z ##[endgroup]
+2025-05-31T09:34:17.8986361Z Secret source: Actions
+2025-05-31T09:34:17.8987049Z Prepare workflow directory
+2025-05-31T09:34:17.9309531Z Prepare all required actions
+2025-05-31T09:34:17.9347084Z Getting action download info
+2025-05-31T09:34:18.1755214Z Download action repository 'seL4/ci-actions@master' (SHA:8e5e97f0c4911452a5925d47a5b0e4378f088909)
+2025-05-31T09:34:23.0984081Z Complete job name: Matrix
+2025-05-31T09:34:23.1583956Z ##[group]Run seL4/ci-actions/sel4test-hw-matrix@master
+2025-05-31T09:34:23.1584641Z with:
+2025-05-31T09:34:23.1584891Z   action_name: sel4test-hw-matrix
+2025-05-31T09:34:23.1585341Z ##[endgroup]
+2025-05-31T09:34:23.2633965Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-matrix/steps.sh
+2025-05-31T09:34:23.2685416Z ##[group]Setting up
+2025-05-31T09:34:27.0447577Z Reading package lists...
+2025-05-31T09:34:27.2328586Z Building dependency tree...
+2025-05-31T09:34:27.2383264Z Reading state information...
+2025-05-31T09:34:27.4305436Z libffi-dev is already the newest version (3.4.6-1build1).
+2025-05-31T09:34:27.4306136Z libffi-dev set to manually installed.
+2025-05-31T09:34:27.4306767Z 0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+2025-05-31T09:34:29.4682552Z Collecting junitparser
+2025-05-31T09:34:29.5031281Z   Downloading junitparser-3.2.0-py2.py3-none-any.whl.metadata (9.0 kB)
+2025-05-31T09:34:29.5339370Z Collecting sel4-deps
+2025-05-31T09:34:29.5376579Z   Downloading sel4_deps-0.5.0-py3-none-any.whl.metadata (653 bytes)
+2025-05-31T09:34:29.5527532Z Requirement already satisfied: six in /usr/lib/python3/dist-packages (from sel4-deps) (1.16.0)
+2025-05-31T09:34:29.5683423Z Collecting future (from sel4-deps)
+2025-05-31T09:34:29.5711361Z   Downloading future-1.0.0-py3-none-any.whl.metadata (4.0 kB)
+2025-05-31T09:34:29.5762296Z Requirement already satisfied: jinja2 in /usr/lib/python3/dist-packages (from sel4-deps) (3.1.2)
+2025-05-31T09:34:29.7741090Z Collecting lxml (from sel4-deps)
+2025-05-31T09:34:29.7771987Z   Downloading lxml-5.4.0-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (3.5 kB)
+2025-05-31T09:34:29.7914210Z Collecting ply (from sel4-deps)
+2025-05-31T09:34:29.7942229Z   Downloading ply-3.11-py2.py3-none-any.whl.metadata (844 bytes)
+2025-05-31T09:34:29.8755610Z Collecting psutil (from sel4-deps)
+2025-05-31T09:34:29.8784306Z   Downloading psutil-7.0.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (22 kB)
+2025-05-31T09:34:29.8945141Z Collecting bs4 (from sel4-deps)
+2025-05-31T09:34:29.8969777Z   Downloading bs4-0.0.2-py2.py3-none-any.whl.metadata (411 bytes)
+2025-05-31T09:34:29.9115394Z Collecting pyelftools (from sel4-deps)
+2025-05-31T09:34:29.9162330Z   Downloading pyelftools-0.32-py3-none-any.whl.metadata (372 bytes)
+2025-05-31T09:34:29.9376400Z Collecting sh (from sel4-deps)
+2025-05-31T09:34:29.9411966Z   Downloading sh-2.2.2-py3-none-any.whl.metadata (3.7 kB)
+2025-05-31T09:34:29.9460300Z Requirement already satisfied: pexpect in /usr/lib/python3/dist-packages (from sel4-deps) (4.9.0)
+2025-05-31T09:34:29.9470579Z Requirement already satisfied: pyyaml>=5.1 in /usr/lib/python3/dist-packages (from sel4-deps) (6.0.1)
+2025-05-31T09:34:29.9479136Z Requirement already satisfied: jsonschema in /usr/lib/python3/dist-packages (from sel4-deps) (4.10.3)
+2025-05-31T09:34:29.9594843Z Collecting pyfdt (from sel4-deps)
+2025-05-31T09:34:29.9627542Z   Downloading pyfdt-0.3.tar.gz (9.1 kB)
+2025-05-31T09:34:29.9681528Z   Preparing metadata (setup.py): started
+2025-05-31T09:34:30.1635000Z   Preparing metadata (setup.py): finished with status 'done'
+2025-05-31T09:34:30.1810862Z Collecting cmake-format==0.4.5 (from sel4-deps)
+2025-05-31T09:34:30.1849852Z   Downloading cmake_format-0.4.5.tar.gz (51 kB)
+2025-05-31T09:34:30.2026542Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 51.1/51.1 kB 11.9 MB/s eta 0:00:00
+2025-05-31T09:34:30.2027247Z   Preparing metadata (setup.py): started
+2025-05-31T09:34:30.3594389Z   Preparing metadata (setup.py): finished with status 'done'
+2025-05-31T09:34:30.3752009Z Collecting guardonce (from sel4-deps)
+2025-05-31T09:34:30.3792113Z   Downloading guardonce-2.4.0-py2.py3-none-any.whl.metadata (3.4 kB)
+2025-05-31T09:34:30.4015251Z Collecting autopep8==2.3.1 (from sel4-deps)
+2025-05-31T09:34:30.4045817Z   Downloading autopep8-2.3.1-py2.py3-none-any.whl.metadata (16 kB)
+2025-05-31T09:34:30.4229411Z Collecting libarchive-c (from sel4-deps)
+2025-05-31T09:34:30.4262172Z   Downloading libarchive_c-5.3-py3-none-any.whl.metadata (5.8 kB)
+2025-05-31T09:34:30.4475067Z Collecting pycodestyle>=2.12.0 (from autopep8==2.3.1->sel4-deps)
+2025-05-31T09:34:30.4499625Z   Downloading pycodestyle-2.13.0-py2.py3-none-any.whl.metadata (4.5 kB)
+2025-05-31T09:34:30.4755286Z Collecting beautifulsoup4 (from bs4->sel4-deps)
+2025-05-31T09:34:30.4780110Z   Downloading beautifulsoup4-4.13.4-py3-none-any.whl.metadata (3.8 kB)
+2025-05-31T09:34:30.4983409Z Requirement already satisfied: attrs>=17.4.0 in /usr/lib/python3/dist-packages (from jsonschema->sel4-deps) (23.2.0)
+2025-05-31T09:34:30.4999239Z Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,>=0.14.0 in /usr/lib/python3/dist-packages (from jsonschema->sel4-deps) (0.20.0)
+2025-05-31T09:34:30.5841537Z Collecting soupsieve>1.2 (from beautifulsoup4->bs4->sel4-deps)
+2025-05-31T09:34:30.5872625Z   Downloading soupsieve-2.7-py3-none-any.whl.metadata (4.6 kB)
+2025-05-31T09:34:30.5916668Z Requirement already satisfied: typing-extensions>=4.0.0 in /usr/lib/python3/dist-packages (from beautifulsoup4->bs4->sel4-deps) (4.10.0)
+2025-05-31T09:34:30.5983452Z Downloading junitparser-3.2.0-py2.py3-none-any.whl (13 kB)
+2025-05-31T09:34:30.6037780Z Downloading sel4_deps-0.5.0-py3-none-any.whl (1.2 kB)
+2025-05-31T09:34:30.6097531Z Downloading autopep8-2.3.1-py2.py3-none-any.whl (45 kB)
+2025-05-31T09:34:30.6138877Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.7/45.7 kB 16.3 MB/s eta 0:00:00
+2025-05-31T09:34:30.6165937Z Downloading bs4-0.0.2-py2.py3-none-any.whl (1.2 kB)
+2025-05-31T09:34:30.6216802Z Downloading future-1.0.0-py3-none-any.whl (491 kB)
+2025-05-31T09:34:30.6290620Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 491.3/491.3 kB 87.0 MB/s eta 0:00:00
+2025-05-31T09:34:30.6321384Z Downloading guardonce-2.4.0-py2.py3-none-any.whl (15 kB)
+2025-05-31T09:34:30.6377815Z Downloading libarchive_c-5.3-py3-none-any.whl (17 kB)
+2025-05-31T09:34:30.6498881Z Downloading lxml-5.4.0-cp312-cp312-manylinux_2_28_x86_64.whl (5.0 MB)
+2025-05-31T09:34:30.6810720Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 168.0 MB/s eta 0:00:00
+2025-05-31T09:34:30.6834513Z Downloading ply-3.11-py2.py3-none-any.whl (49 kB)
+2025-05-31T09:34:30.6875046Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.6/49.6 kB 16.0 MB/s eta 0:00:00
+2025-05-31T09:34:30.6902784Z Downloading psutil-7.0.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (277 kB)
+2025-05-31T09:34:30.6960511Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 278.0/278.0 kB 63.8 MB/s eta 0:00:00
+2025-05-31T09:34:30.6984140Z Downloading pyelftools-0.32-py3-none-any.whl (188 kB)
+2025-05-31T09:34:30.7031988Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.5/188.5 kB 56.7 MB/s eta 0:00:00
+2025-05-31T09:34:30.7055627Z Downloading sh-2.2.2-py3-none-any.whl (38 kB)
+2025-05-31T09:34:30.7106198Z Downloading pycodestyle-2.13.0-py2.py3-none-any.whl (31 kB)
+2025-05-31T09:34:30.7158860Z Downloading beautifulsoup4-4.13.4-py3-none-any.whl (187 kB)
+2025-05-31T09:34:30.7205735Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 187.3/187.3 kB 57.5 MB/s eta 0:00:00
+2025-05-31T09:34:30.7229545Z Downloading soupsieve-2.7-py3-none-any.whl (36 kB)
+2025-05-31T09:34:30.8464844Z Building wheels for collected packages: cmake-format, pyfdt
+2025-05-31T09:34:30.8469816Z   Building wheel for cmake-format (setup.py): started
+2025-05-31T09:34:31.1726681Z   Building wheel for cmake-format (setup.py): finished with status 'done'
+2025-05-31T09:34:31.1731161Z   Created wheel for cmake-format: filename=cmake_format-0.4.5-py3-none-any.whl size=57091 sha256=8e9eb56765069256eb0d986d88c8adac1bee048a2d8f5c169dc78222b0a4d947
+2025-05-31T09:34:31.1733734Z   Stored in directory: /home/runner/.cache/pip/wheels/26/fb/b2/73a635046d239de7405e0f77cf67c3d31a3f0d5edcf8986d29
+2025-05-31T09:34:31.1762855Z   Building wheel for pyfdt (setup.py): started
+2025-05-31T09:34:31.4139690Z   Building wheel for pyfdt (setup.py): finished with status 'done'
+2025-05-31T09:34:31.4142701Z   Created wheel for pyfdt: filename=pyfdt-0.3-py3-none-any.whl size=10969 sha256=7638fdef1b6db9ca2aa039fa19b086e3ce0e30552feda558bbaf299f27d8b882
+2025-05-31T09:34:31.4144490Z   Stored in directory: /home/runner/.cache/pip/wheels/d9/8e/2a/cff33f3accb8eaa34608e68786db1ec323a5f6bce8d724d90a
+2025-05-31T09:34:31.4158251Z Successfully built cmake-format pyfdt
+2025-05-31T09:34:31.7048612Z Installing collected packages: pyfdt, pyelftools, ply, libarchive-c, junitparser, guardonce, cmake-format, soupsieve, sh, pycodestyle, psutil, lxml, future, beautifulsoup4, autopep8, bs4, sel4-deps
+2025-05-31T09:34:32.7129994Z Successfully installed autopep8-2.3.1 beautifulsoup4-4.13.4 bs4-0.0.2 cmake-format-0.4.5 future-1.0.0 guardonce-2.4.0 junitparser-3.2.0 libarchive-c-5.3 lxml-5.4.0 ply-3.11 psutil-7.0.0 pycodestyle-2.13.0 pyelftools-0.32 pyfdt-0.3 sel4-deps-0.5.0 sh-2.2.2 soupsieve-2.7
+2025-05-31T09:34:32.7986798Z ##[endgroup]
+2025-05-31T09:34:32.9831522Z Evaluate and set job outputs
+2025-05-31T09:34:32.9880271Z Set output 'matrix'
+2025-05-31T09:34:32.9882065Z Cleaning up orphan processes

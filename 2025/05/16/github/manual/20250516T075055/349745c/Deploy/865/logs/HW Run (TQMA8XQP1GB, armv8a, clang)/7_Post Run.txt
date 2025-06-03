@@ -1,0 +1,10 @@
+2025-05-19T00:07:18.3037177Z Post job cleanup.
+2025-05-19T00:07:18.3950278Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/post-steps.sh
+2025-05-19T00:07:18.4001264Z ##[group]Releasing mq lock
+2025-05-19T00:07:18.4071989Z Agent pid 4390
+2025-05-19T00:07:18.5538413Z mq.sh sem -cancel tqma -k seL4/seL4-Deploy-15063474103-hw-run-19
+2025-05-19T00:07:21.1847058Z mq.sh sem -signal tqma -k seL4/seL4-Deploy-15063474103-hw-run-19
+2025-05-19T00:07:23.8173591Z Attempting to unlock system tqma that you do not hold
+2025-05-19T00:07:23.8174626Z mq.sh sem -info tqma
+2025-05-19T00:07:27.1073840Z Lock for tqma currently free
+2025-05-19T00:07:27.1164630Z ##[endgroup]

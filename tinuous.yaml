@@ -1,0 +1,15 @@
+repo: seL4/seL4
+vars:
+  path_prefix: '{year}//{month}//{day}/{ci}/{type}'
+  build_prefix: '{path_prefix}/{type_id}/{build_commit[:7]}'
+ci:
+  github:
+    paths:
+      logs: '{build_prefix}/{wf_name}/{number}/logs/'
+    workflows:
+      # mainline
+      - sel4test-deploy.yml
+      # mostly PRs - a lot of the olders will be empty as skipped
+      # - hw-tests.yml
+
+max-days-back: 30

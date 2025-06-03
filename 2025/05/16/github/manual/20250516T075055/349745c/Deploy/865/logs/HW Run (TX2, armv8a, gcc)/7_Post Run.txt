@@ -1,0 +1,10 @@
+2025-05-19T00:32:07.6390571Z Post job cleanup.
+2025-05-19T00:32:07.7323873Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/post-steps.sh
+2025-05-19T00:32:07.7378278Z ##[group]Releasing mq lock
+2025-05-19T00:32:07.7450417Z Agent pid 6256
+2025-05-19T00:32:07.9018560Z mq.sh sem -cancel tx2a -k seL4/seL4-Deploy-15063474103-hw-run-26
+2025-05-19T00:32:10.4623770Z mq.sh sem -signal tx2a -k seL4/seL4-Deploy-15063474103-hw-run-26
+2025-05-19T00:32:13.0249356Z Attempting to unlock system tx2a that you do not hold
+2025-05-19T00:32:13.0250290Z mq.sh sem -info tx2a
+2025-05-19T00:32:16.2330343Z Lock for tx2a currently free
+2025-05-19T00:32:16.2430368Z ##[endgroup]

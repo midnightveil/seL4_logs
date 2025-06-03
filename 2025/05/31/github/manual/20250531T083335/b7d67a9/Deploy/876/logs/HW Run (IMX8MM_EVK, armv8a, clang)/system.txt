@@ -1,0 +1,5 @@
+2025-05-31T09:34:35.1426912Z Requested labels: ubuntu-latest
+2025-05-31T09:34:35.1426912Z Job defined at: seL4/seL4/.github/workflows/sel4test-deploy.yml@refs/heads/master
+2025-05-31T09:34:35.1426912Z Waiting for a runner to pick up this job...
+2025-05-31T09:34:35.3457161Z Job is waiting for a hosted runner to come online.
+2025-05-31T09:34:35.3457226Z Job is about to start running on the hosted runner: GitHub Actions 1000007519

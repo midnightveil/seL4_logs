@@ -1,0 +1,640 @@
+﻿2025-05-26T08:00:31.9562062Z Current runner version: '2.324.0'
+2025-05-26T08:00:31.9587563Z ##[group]Runner Image Provisioner
+2025-05-26T08:00:31.9588422Z Hosted Compute Agent
+2025-05-26T08:00:31.9588949Z Version: 20250508.323
+2025-05-26T08:00:31.9589800Z Commit: 81b259f29879f73b4213d199e42d8c3465dae986
+2025-05-26T08:00:31.9590482Z Build Date: 2025-05-08T19:40:08Z
+2025-05-26T08:00:31.9591077Z ##[endgroup]
+2025-05-26T08:00:31.9591646Z ##[group]Operating System
+2025-05-26T08:00:31.9592241Z Ubuntu
+2025-05-26T08:00:31.9592684Z 24.04.2
+2025-05-26T08:00:31.9593184Z LTS
+2025-05-26T08:00:31.9593621Z ##[endgroup]
+2025-05-26T08:00:31.9594116Z ##[group]Runner Image
+2025-05-26T08:00:31.9594727Z Image: ubuntu-24.04
+2025-05-26T08:00:31.9595217Z Version: 20250511.1.0
+2025-05-26T08:00:31.9596214Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250511.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-05-26T08:00:31.9597763Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250511.1
+2025-05-26T08:00:31.9598739Z ##[endgroup]
+2025-05-26T08:00:31.9601415Z ##[group]GITHUB_TOKEN Permissions
+2025-05-26T08:00:31.9603605Z Actions: write
+2025-05-26T08:00:31.9604170Z Attestations: write
+2025-05-26T08:00:31.9604792Z Checks: write
+2025-05-26T08:00:31.9605252Z Contents: write
+2025-05-26T08:00:31.9605742Z Deployments: write
+2025-05-26T08:00:31.9606288Z Discussions: write
+2025-05-26T08:00:31.9606824Z Issues: write
+2025-05-26T08:00:31.9607269Z Metadata: read
+2025-05-26T08:00:31.9607819Z Models: read
+2025-05-26T08:00:31.9608288Z Packages: write
+2025-05-26T08:00:31.9608793Z Pages: write
+2025-05-26T08:00:31.9609793Z PullRequests: write
+2025-05-26T08:00:31.9610393Z RepositoryProjects: write
+2025-05-26T08:00:31.9610975Z SecurityEvents: write
+2025-05-26T08:00:31.9611626Z Statuses: write
+2025-05-26T08:00:31.9612162Z ##[endgroup]
+2025-05-26T08:00:31.9614454Z Secret source: Actions
+2025-05-26T08:00:31.9615516Z Prepare workflow directory
+2025-05-26T08:00:31.9988801Z Prepare all required actions
+2025-05-26T08:00:32.0041385Z Getting action download info
+2025-05-26T08:00:32.4121538Z Download action repository 'seL4/ci-actions@master' (SHA:dda28c57b388906c5d0f149aacfecaa833b518e0)
+2025-05-26T08:00:45.3411982Z ##[group]Download immutable action package 'actions/upload-artifact@v4'
+2025-05-26T08:00:45.3412840Z Version: 4.6.2
+2025-05-26T08:00:45.3413608Z Digest: sha256:290722aa3281d5caf23d0acdc3dbeb3424786a1a01a9cc97e72f147225e37c38
+2025-05-26T08:00:45.3414288Z Source commit SHA: ea165f8d65b6e75b540449e92b4886f43607fa02
+2025-05-26T08:00:45.3414625Z ##[endgroup]
+2025-05-26T08:00:45.4955510Z Complete job name: HW Build (nehalem, clang)
+2025-05-26T08:00:45.5495841Z ##[group]Pull down action image 'sel4/sel4test-hw:latest'
+2025-05-26T08:00:45.5716214Z ##[command]/usr/bin/docker pull sel4/sel4test-hw:latest
+2025-05-26T08:00:46.5247192Z latest: Pulling from sel4/sel4test-hw
+2025-05-26T08:00:46.7478122Z e1f16b66c2e8: Pulling fs layer
+2025-05-26T08:00:46.7480524Z 7b4f4f95f6cf: Pulling fs layer
+2025-05-26T08:00:46.7481010Z 95fe3dc9ff39: Pulling fs layer
+2025-05-26T08:00:46.7481573Z 4f4fb700ef54: Pulling fs layer
+2025-05-26T08:00:46.7481999Z 0d20a8c1dfe8: Pulling fs layer
+2025-05-26T08:00:46.7482425Z 0997441cee4c: Pulling fs layer
+2025-05-26T08:00:46.7482695Z 510e0bddd0d8: Pulling fs layer
+2025-05-26T08:00:46.7482947Z dd8aa8757874: Pulling fs layer
+2025-05-26T08:00:46.7483200Z 16e1a5185d64: Pulling fs layer
+2025-05-26T08:00:46.7483482Z 4a7069dc40da: Pulling fs layer
+2025-05-26T08:00:46.7483746Z 56d587593d8f: Pulling fs layer
+2025-05-26T08:00:46.7484034Z dc7a6d385b7b: Pulling fs layer
+2025-05-26T08:00:46.7484296Z 16e1a5185d64: Waiting
+2025-05-26T08:00:46.7484574Z 4a7069dc40da: Waiting
+2025-05-26T08:00:46.7484794Z 4f4fb700ef54: Waiting
+2025-05-26T08:00:46.7485015Z 0d20a8c1dfe8: Waiting
+2025-05-26T08:00:46.7485228Z 0997441cee4c: Waiting
+2025-05-26T08:00:46.7485469Z 510e0bddd0d8: Waiting
+2025-05-26T08:00:46.7485690Z dd8aa8757874: Waiting
+2025-05-26T08:00:46.7485905Z 56d587593d8f: Waiting
+2025-05-26T08:00:46.7486139Z dc7a6d385b7b: Waiting
+2025-05-26T08:00:47.0772060Z 7b4f4f95f6cf: Verifying Checksum
+2025-05-26T08:00:47.0772750Z 7b4f4f95f6cf: Download complete
+2025-05-26T08:00:47.2992242Z e1f16b66c2e8: Verifying Checksum
+2025-05-26T08:00:47.2993480Z e1f16b66c2e8: Download complete
+2025-05-26T08:00:47.3669416Z 4f4fb700ef54: Download complete
+2025-05-26T08:00:47.5830513Z 95fe3dc9ff39: Verifying Checksum
+2025-05-26T08:00:47.5831497Z 95fe3dc9ff39: Download complete
+2025-05-26T08:00:48.0571188Z 510e0bddd0d8: Verifying Checksum
+2025-05-26T08:00:48.0590426Z 510e0bddd0d8: Download complete
+2025-05-26T08:00:48.1774329Z 0997441cee4c: Verifying Checksum
+2025-05-26T08:00:48.1774851Z 0997441cee4c: Download complete
+2025-05-26T08:00:48.3598445Z dd8aa8757874: Verifying Checksum
+2025-05-26T08:00:48.3599438Z dd8aa8757874: Download complete
+2025-05-26T08:00:48.4557679Z 16e1a5185d64: Verifying Checksum
+2025-05-26T08:00:48.4561166Z 16e1a5185d64: Download complete
+2025-05-26T08:00:48.6425832Z 4a7069dc40da: Verifying Checksum
+2025-05-26T08:00:48.6426310Z 4a7069dc40da: Download complete
+2025-05-26T08:00:48.6695251Z e1f16b66c2e8: Pull complete
+2025-05-26T08:00:48.7410010Z 56d587593d8f: Verifying Checksum
+2025-05-26T08:00:48.7410425Z 56d587593d8f: Download complete
+2025-05-26T08:00:48.9262880Z dc7a6d385b7b: Verifying Checksum
+2025-05-26T08:00:48.9263237Z dc7a6d385b7b: Download complete
+2025-05-26T08:00:50.2647259Z 7b4f4f95f6cf: Pull complete
+2025-05-26T08:00:55.2720783Z 0d20a8c1dfe8: Verifying Checksum
+2025-05-26T08:00:55.2721104Z 0d20a8c1dfe8: Download complete
+2025-05-26T08:00:55.9246949Z 95fe3dc9ff39: Pull complete
+2025-05-26T08:00:55.9340403Z 4f4fb700ef54: Pull complete
+2025-05-26T08:01:20.2013718Z 0d20a8c1dfe8: Pull complete
+2025-05-26T08:01:20.7957343Z 0997441cee4c: Pull complete
+2025-05-26T08:01:21.1795217Z 510e0bddd0d8: Pull complete
+2025-05-26T08:01:21.1875788Z dd8aa8757874: Pull complete
+2025-05-26T08:01:21.1999406Z 16e1a5185d64: Pull complete
+2025-05-26T08:01:21.2203652Z 4a7069dc40da: Pull complete
+2025-05-26T08:01:21.2314959Z 56d587593d8f: Pull complete
+2025-05-26T08:01:21.2399711Z dc7a6d385b7b: Pull complete
+2025-05-26T08:01:21.2534504Z Digest: sha256:968c11960a95fde978f81777143945169bee771a7a11f67bfd4da5499a907f6e
+2025-05-26T08:01:21.2544640Z Status: Downloaded newer image for sel4/sel4test-hw:latest
+2025-05-26T08:01:21.2555833Z docker.io/sel4/sel4test-hw:latest
+2025-05-26T08:01:21.2582067Z ##[endgroup]
+2025-05-26T08:01:21.2808221Z ##[group]Run seL4/ci-actions/sel4test-hw@master
+2025-05-26T08:01:21.2808785Z with:
+2025-05-26T08:01:21.2814568Z   xml: <?xml version="1.0" encoding="UTF-8"?>%0A<manifest>%0A  <remote name="nanopb" fetch="https://github.com/nanopb"/>%0A  <remote name="opensbi" fetch="https://github.com/riscv"/>%0A  <remote name="seL4" fetch="."/>%0A  <remote name="sel4proj" fetch="../sel4proj"/>%0A  %0A  <default remote="seL4" revision="master"/>%0A  %0A  <project name="musllibc.git" path="projects/musllibc" revision="c9249738defe1ddd14f7d4b634dc5d945e7d00bb" dest-branch="sel4"/>%0A  <project name="nanopb" path="tools/nanopb" remote="nanopb" revision="1466e6f953835b191a7f5acf0c06c941d4cd33d9" dest-branch="refs/tags/0.4.3"/>%0A  <project name="opensbi" path="tools/opensbi" remote="opensbi" revision="234ed8e427f4d92903123199f6590d144e0d9351" dest-branch="refs/tags/v0.9"/>%0A  <project name="seL4.git" path="kernel" revision="b7d67a9389c4637033b086076b76ec02aafd67f6" dest-branch="master"/>%0A  <project name="seL4_libs.git" path="projects/seL4_libs" revision="2c86e187057ea040a2c53e16cb49bd3d56f632c4" dest-branch="master"/>%0A  <project name="seL4_tools.git" path="tools/seL4" revision="ffd872ad9e2c0a466f8250059f50762fc3ff401d" dest-branch="master">%0A    <linkfile src="cmake-tool/init-build.sh" dest="init-build.sh"/>%0A    <linkfile src="cmake-tool/griddle" dest="griddle"/>%0A  </project>%0A  <project name="sel4_projects_libs" path="projects/sel4_projects_libs" revision="46f6dc9c0c38a09b75531e547308cb3dcaec53cd" dest-branch="master"/>%0A  <project name="sel4runtime.git" path="projects/sel4runtime" revision="86489cf6efab9f314964e79468c036e9035394c7" dest-branch="master"/>%0A  <project name="sel4test.git" path="projects/sel4test" revision="dc92ceda5a898edb388cd966fcc63fc333ee913a" dest-branch="master">%0A    <linkfile src="easy-settings.cmake" dest="easy-settings.cmake"/>%0A  </project>%0A  <project name="util_libs.git" path="projects/util_libs" revision="9b8ea7dcf1d80b80b8b7a2a038e03ac10308f39b" dest-branch="master"/>%0A</manifest>%0A
+2025-05-26T08:01:21.2820924Z   march: nehalem
+2025-05-26T08:01:21.2821101Z   compiler: clang
+2025-05-26T08:01:21.2821287Z   action_name: sel4test-hw
+2025-05-26T08:01:21.2821786Z ##[endgroup]
+2025-05-26T08:01:21.2944441Z ##[command]/usr/bin/docker run --name sel4sel4testhwlatest_b08308 --label 1aefa9 --workdir /github/workspace --rm -e "INPUT_XML" -e "INPUT_MARCH" -e "INPUT_COMPILER" -e "INPUT_ARCH" -e "INPUT_MODE" -e "INPUT_DEBUG" -e "INPUT_SHA" -e "INPUT_ACTION_NAME" -e "HOME" -e "GITHUB_JOB" -e "GITHUB_REF" -e "GITHUB_SHA" -e "GITHUB_REPOSITORY" -e "GITHUB_REPOSITORY_OWNER" -e "GITHUB_REPOSITORY_OWNER_ID" -e "GITHUB_RUN_ID" -e "GITHUB_RUN_NUMBER" -e "GITHUB_RETENTION_DAYS" -e "GITHUB_RUN_ATTEMPT" -e "GITHUB_ACTOR_ID" -e "GITHUB_ACTOR" -e "GITHUB_WORKFLOW" -e "GITHUB_HEAD_REF" -e "GITHUB_BASE_REF" -e "GITHUB_EVENT_NAME" -e "GITHUB_SERVER_URL" -e "GITHUB_API_URL" -e "GITHUB_GRAPHQL_URL" -e "GITHUB_REF_NAME" -e "GITHUB_REF_PROTECTED" -e "GITHUB_REF_TYPE" -e "GITHUB_WORKFLOW_REF" -e "GITHUB_WORKFLOW_SHA" -e "GITHUB_REPOSITORY_ID" -e "GITHUB_TRIGGERING_ACTOR" -e "GITHUB_WORKSPACE" -e "GITHUB_ACTION" -e "GITHUB_EVENT_PATH" -e "GITHUB_ACTION_REPOSITORY" -e "GITHUB_ACTION_REF" -e "GITHUB_PATH" -e "GITHUB_ENV" -e "GITHUB_STEP_SUMMARY" -e "GITHUB_STATE" -e "GITHUB_OUTPUT" -e "RUNNER_OS" -e "RUNNER_ARCH" -e "RUNNER_NAME" -e "RUNNER_ENVIRONMENT" -e "RUNNER_TOOL_CACHE" -e "RUNNER_TEMP" -e "RUNNER_WORKSPACE" -e "ACTIONS_RUNTIME_URL" -e "ACTIONS_RUNTIME_TOKEN" -e "ACTIONS_CACHE_URL" -e "ACTIONS_RESULTS_URL" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/seL4/seL4":"/github/workspace" sel4/sel4test-hw:latest
+2025-05-26T08:01:21.4537505Z ##[group]Setting up
+2025-05-26T08:01:21.4614340Z Starting repo checkout on branch master with manifest master.xml:
+2025-05-26T08:01:23.9422973Z 
+2025-05-26T08:01:23.9423451Z repo has been initialized in /github/workspace
+2025-05-26T08:01:23.9560675Z Using supplied manifest XML
+2025-05-26T08:01:24.5572149Z repo: reusing existing repo client checkout in /github/workspace
+2025-05-26T08:01:24.5572453Z 
+2025-05-26T08:01:24.5572566Z repo has been initialized in /github/workspace
+2025-05-26T08:01:27.2125883Z repo sync has finished successfully.
+2025-05-26T08:01:27.4840769Z Manifest summary:
+2025-05-26T08:01:27.4841118Z -----------------
+2025-05-26T08:01:27.4841550Z  sel4test-manifest: d330184d Updating default.xml                           (origin/master)
+2025-05-26T08:01:27.4842054Z               seL4: b7d67a93 Detect 'aarch64-elf-' toolchain                
+2025-05-26T08:01:27.4842479Z           musllibc: c9249738 tls: Add build checks for unsupported tls se.. 
+2025-05-26T08:01:27.4842892Z          seL4_libs: 2c86e187 libsel4platsupport: don't link nonexistent l.. 
+2025-05-26T08:01:27.4843317Z sel4_projects_libs: 46f6dc9c remove obsolete LICENSE_* files                
+2025-05-26T08:01:27.4843728Z        sel4runtime: 86489cf6 github: use central CI workflows               
+2025-05-26T08:01:27.4844116Z           sel4test: dc92ceda Bump minimum CMake version                     
+2025-05-26T08:01:27.4844478Z          util_libs: 9b8ea7dc ltimer.h: fix style                            
+2025-05-26T08:01:27.4844847Z             nanopb: 1466e6f9 Publishing nanopb-0.4.3                        
+2025-05-26T08:01:27.4845216Z            opensbi: 234ed8e4 include: Bump-up version to 0.9                
+2025-05-26T08:01:27.4845588Z         seL4_tools: ffd872ad Remove redundant license files                 
+2025-05-26T08:01:27.4874300Z ##[endgroup]
+2025-05-26T08:01:27.6513857Z 
+2025-05-26T08:01:27.6515005Z ##[group]PC99_debug_clang_32
+2025-05-26T08:01:27.6515751Z [1m-----------[ start test PC99_debug_clang_32 ]-----------[0m
+2025-05-26T08:01:27.6516532Z [33m+++ ../init-build.sh -DPLATFORM=ia32 -DBAMBOO=TRUE -DTRIPLE=x86_64-linux-gnu[0m
+2025-05-26T08:01:27.6631841Z loading initial cache file /github/workspace/projects/sel4test/settings.cmake
+2025-05-26T08:01:27.6646276Z -- Set platform details from PLATFORM=ia32
+2025-05-26T08:01:27.6646873Z --   KernelPlatform: pc99
+2025-05-26T08:01:27.6647260Z --   KernelSel4Arch: ia32
+2025-05-26T08:01:27.6657974Z -- Found seL4: /github/workspace/kernel
+2025-05-26T08:01:27.7614958Z -- The C compiler identification is Clang 11.0.1
+2025-05-26T08:01:27.8473221Z -- The CXX compiler identification is Clang 11.0.1
+2025-05-26T08:01:27.8495653Z -- The ASM compiler identification is Clang
+2025-05-26T08:01:27.8506145Z -- Found assembler: /usr/bin/clang
+2025-05-26T08:01:27.8560261Z -- Detecting C compiler ABI info
+2025-05-26T08:01:27.9366711Z -- Detecting C compiler ABI info - done
+2025-05-26T08:01:27.9416274Z -- Check for working C compiler: /usr/bin/clang - skipped
+2025-05-26T08:01:27.9420194Z -- Detecting C compile features
+2025-05-26T08:01:27.9423998Z -- Detecting C compile features - done
+2025-05-26T08:01:27.9465095Z -- Detecting CXX compiler ABI info
+2025-05-26T08:01:28.0265258Z -- Detecting CXX compiler ABI info - done
+2025-05-26T08:01:28.0320770Z -- Check for working CXX compiler: /usr/bin/clang++ - skipped
+2025-05-26T08:01:28.0324767Z -- Detecting CXX compile features
+2025-05-26T08:01:28.0330553Z -- Detecting CXX compile features - done
+2025-05-26T08:01:28.0370500Z -- Found elfloader-tool: /github/workspace/tools/seL4/elfloader-tool
+2025-05-26T08:01:28.1630628Z -- Found musllibc: /github/workspace/projects/musllibc
+2025-05-26T08:01:28.1640513Z -- Found util_libs: /github/workspace/projects/util_libs
+2025-05-26T08:01:28.1650076Z -- Found seL4_libs: /github/workspace/projects/seL4_libs
+2025-05-26T08:01:28.1659836Z -- Found sel4_projects_libs: /github/workspace/projects/sel4_projects_libs
+2025-05-26T08:01:28.1669650Z -- Found sel4runtime: /github/workspace/projects/sel4runtime
+2025-05-26T08:01:28.2646665Z -- libmuslc architecture: 'i386' (from KernelSel4Arch 'ia32')
+2025-05-26T08:01:28.2688767Z -- Detecting cached version of: musllibc
+2025-05-26T08:01:28.2723294Z -- Found Git: /usr/bin/git (found version "2.30.2")
+2025-05-26T08:01:28.3210757Z --   Not found cache entry for musllibc - will build from source
+2025-05-26T08:01:28.9669842Z -- Found Nanopb: /github/workspace/tools/nanopb
+2025-05-26T08:01:28.9736845Z -- CPIO test cpio_reproducible_flag PASSED
+2025-05-26T08:01:28.9783642Z -- Configuring done
+2025-05-26T08:01:29.0643445Z -- Generating done
+2025-05-26T08:01:29.0858166Z -- Build files have been written to: /github/workspace/build
+2025-05-26T08:01:29.0971982Z [33m+++ ninja[0m
+2025-05-26T08:01:29.2010972Z [1/267] Generating generated/invocations_all.json
+2025-05-26T08:01:29.2204016Z [2/267] Generate dummy headers for prune compilation
+2025-05-26T08:01:29.2233009Z [3/267] Concatenating C files
+2025-05-26T08:01:29.2612523Z [4/267] Generate syscall invocations
+2025-05-26T08:01:29.3185575Z [5/267] Generate invocation header gen_headers/arch/api/sel4_invocation.h
+2025-05-26T08:01:29.3496622Z [6/267] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime_crt_obj.dir/crt/sel4_arch/ia32/crtn.S.obj
+2025-05-26T08:01:29.3658554Z [7/267] Generate invocation header gen_headers/api/invocation.h
+2025-05-26T08:01:29.3685079Z [8/267] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime_crt_obj.dir/crt/sel4_arch/ia32/crti.S.obj
+2025-05-26T08:01:29.3716058Z [9/267] Generate invocation header gen_headers/arch/api/invocation.h
+2025-05-26T08:01:29.3924050Z [10/267] Creating C input file for preprocessor
+2025-05-26T08:01:29.3930857Z [11/267] Creating C input file for preprocessor
+2025-05-26T08:01:29.3943602Z [12/267] Creating C input file for preprocessor
+2025-05-26T08:01:29.4174218Z [13/267] Creating C input file for preprocessor
+2025-05-26T08:01:29.4204444Z [14/267] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime_crt_obj.dir/crt/sel4_arch/ia32/crt0.S.obj
+2025-05-26T08:01:29.4380711Z [15/267] Building C object libsel4/CMakeFiles/libsel4_sel4_arch_types_gen_pbf_temp_lib.dir/libsel4_sel4_arch_types_gen_pbf_temp.c.obj
+2025-05-26T08:01:29.4504531Z [16/267] Building C object kernel/CMakeFiles/kernel_bf_gen_target_1_pbf_temp_lib.dir/kernel_bf_gen_target_1_pbf_temp.c.obj
+2025-05-26T08:01:29.4568352Z [17/267] Generating sel4_arch_include/ia32/sel4/sel4_arch/types.pbf
+2025-05-26T08:01:29.4702275Z [18/267] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime_crt_obj.dir/crt/sel4_arch/ia32/sel4_crt0.S.obj
+2025-05-26T08:01:29.4769301Z [19/267] Generating generated/plat_mode/machine/hardware.bf.pbf
+2025-05-26T08:01:29.4848290Z [20/267] Building C object libsel4/CMakeFiles/libsel4_shared_types_gen_pbf_temp_lib.dir/libsel4_shared_types_gen_pbf_temp.c.obj
+2025-05-26T08:01:29.4997424Z [21/267] Generating include/sel4/shared_types.pbf
+2025-05-26T08:01:29.5452898Z [22/267] Building C object kernel/CMakeFiles/kernel_all_pp_prune_wrapper_temp_lib.dir/kernel_all_pp_prune_wrapper_temp.c.obj
+2025-05-26T08:01:29.5603849Z [23/267] Generating from /github/workspace/build/libsel4/sel4_arch_include/ia32/sel4/sel4_arch/types.pbf
+2025-05-26T08:01:29.5741678Z [24/267] Generating kernel_all_pp_prune.c
+2025-05-26T08:01:29.5840463Z [25/267] Generating ../../../lib/crt0.o, ../../../lib/crti.o, ../../../lib/crtn.o
+2025-05-26T08:01:29.6236150Z [26/267] Building C object apps/sel4test-driver/util_libs/libcpio/CMakeFiles/cpio.dir/src/cpio.c.obj
+2025-05-26T08:01:29.6258382Z [27/267] Generating from /github/workspace/build/libsel4/include/sel4/shared_types.pbf
+2025-05-26T08:01:29.7986914Z [28/267] Generating from generated/plat_mode/machine/hardware.bf.pbf
+2025-05-26T08:01:29.8063498Z [29/267] Generate syscall.h
+2025-05-26T08:01:29.8209616Z [30/267] Generate sel4_client.h
+2025-05-26T08:01:29.8233346Z [31/267] Creating C input file for preprocessor
+2025-05-26T08:01:29.8448325Z [32/267] Linking C static library apps/sel4test-driver/util_libs/libcpio/libcpio.a
+2025-05-26T08:01:29.8541338Z [33/267] Building C object kernel/CMakeFiles/kernel_bf_gen_target_11_pbf_temp_lib.dir/kernel_bf_gen_target_11_pbf_temp.c.obj
+2025-05-26T08:01:29.8666066Z [34/267] Generate invocation header include/sel4/invocation.h
+2025-05-26T08:01:29.8713619Z [35/267] Generate invocation header arch_include/x86/sel4/arch/invocation.h
+2025-05-26T08:01:29.8738840Z [36/267] Generating generated/arch/object/structures.bf.pbf
+2025-05-26T08:01:29.9437468Z [37/267] Generate invocation header sel4_arch_include/ia32/sel4/sel4_arch/invocation.h
+2025-05-26T08:01:29.9870653Z [38/267] Generating from generated/arch/object/structures.bf.pbf
+2025-05-26T08:01:30.0243093Z [39/267] Creating C input file for preprocessor
+2025-05-26T08:01:30.0568212Z [40/267] Building C object kernel/CMakeFiles/kernel_bf_gen_target_111_pbf_temp_lib.dir/kernel_bf_gen_target_111_pbf_temp.c.obj
+2025-05-26T08:01:30.0707964Z [41/267] Generating generated/sel4/shared_types.bf.pbf
+2025-05-26T08:01:30.0812982Z [42/267] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/crt/sel4_arch/ia32/crti.S.obj
+2025-05-26T08:01:30.0866260Z [43/267] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/crt/sel4_arch/ia32/crt0.S.obj
+2025-05-26T08:01:30.0994227Z [44/267] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/crt/sel4_arch/ia32/crtn.S.obj
+2025-05-26T08:01:30.1237040Z [45/267] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/crt/sel4_arch/ia32/sel4_crt0.S.obj
+2025-05-26T08:01:30.1995196Z [46/267] Generating from generated/sel4/shared_types.bf.pbf
+2025-05-26T08:01:30.2164418Z [47/267] Creating C input file for preprocessor
+2025-05-26T08:01:30.2498621Z [48/267] Creating C input file for preprocessor
+2025-05-26T08:01:30.2998771Z [49/267] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/crt1.c.obj
+2025-05-26T08:01:30.3630618Z [50/267] Building C object kernel/CMakeFiles/linker_ld_wrapper_temp_lib.dir/linker_ld_wrapper_temp.c.obj
+2025-05-26T08:01:30.3639004Z [51/267] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/env.c.obj
+2025-05-26T08:01:30.3676238Z [52/267] Building C object kernel/CMakeFiles/kernel_i_wrapper_temp_lib.dir/kernel_all_copy.c.obj
+2025-05-26T08:01:30.3744071Z [53/267] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/start_root.c.obj
+2025-05-26T08:01:30.3951761Z [54/267] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/start.c.obj
+2025-05-26T08:01:30.3990610Z [55/267] Generating linker.lds_pp
+2025-05-26T08:01:30.4030277Z [56/267] Generating kernel_all.i
+2025-05-26T08:01:30.4577719Z [57/267] Generating circular_includes_valid
+2025-05-26T08:01:30.4646201Z [58/267] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/vsyscall.c.obj
+2025-05-26T08:01:30.4753757Z [59/267] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/memset.c.obj
+2025-05-26T08:01:30.5008975Z [60/267] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/init.c.obj
+2025-05-26T08:01:30.5268174Z [61/267] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/memcpy.c.obj
+2025-05-26T08:01:30.5923904Z [62/267] Building ASM object kernel/CMakeFiles/kernel.elf.dir/src/arch/x86/32/machine_asm.S.obj
+2025-05-26T08:01:30.6015917Z [63/267] Building ASM object kernel/CMakeFiles/kernel.elf.dir/src/arch/x86/multiboot.S.obj
+2025-05-26T08:01:30.6386526Z [64/267] Building ASM object kernel/CMakeFiles/kernel.elf.dir/src/arch/x86/32/head.S.obj
+2025-05-26T08:01:30.6593128Z [65/267] Building ASM object kernel/CMakeFiles/kernel.elf.dir/src/arch/x86/32/traps.S.obj
+2025-05-26T08:01:30.7409901Z [66/267] Building C object libsel4/CMakeFiles/sel4.dir/src/sel4_bootinfo.c.obj
+2025-05-26T08:01:30.7685340Z [67/267] Linking C static library libsel4/libsel4.a
+2025-05-26T08:01:30.7978654Z [68/267] Linking C static library apps/sel4test-driver/sel4runtime/libsel4runtime.a
+2025-05-26T08:01:37.7930230Z [69/267] Building C object kernel/CMakeFiles/kernel.elf.dir/kernel_all.c.obj
+2025-05-26T08:01:37.8629491Z [70/267] Linking C executable kernel/kernel.elf
+2025-05-26T08:01:52.3448284Z [71/267] Invoking muslc build system
+2025-05-26T08:01:52.3448798Z checking for C compiler... /usr/bin/clang
+2025-05-26T08:01:52.3449445Z checking whether C compiler works... yes
+2025-05-26T08:01:52.3450053Z checking whether compiler accepts -Werror=unknown-warning-option... yes
+2025-05-26T08:01:52.3450895Z checking whether compiler accepts -Werror=unused-command-line-argument... yes
+2025-05-26T08:01:52.3451776Z checking whether compiler accepts -Werror=ignored-optimization-argument... yes
+2025-05-26T08:01:52.3452629Z checking whether linker accepts -Werror=unknown-warning-option... yes
+2025-05-26T08:01:52.3453469Z checking whether linker accepts -Werror=unused-command-line-argument... yes
+2025-05-26T08:01:52.3454107Z checking for C compiler family... clang
+2025-05-26T08:01:52.3454582Z checking for toolchain wrapper to build... clang
+2025-05-26T08:01:52.3455050Z checking target system type... i386
+2025-05-26T08:01:52.3455531Z checking whether compiler accepts -std=c99... yes
+2025-05-26T08:01:52.3456030Z checking whether compiler accepts -nostdinc... yes
+2025-05-26T08:01:52.3456565Z checking whether compiler accepts -ffreestanding... yes
+2025-05-26T08:01:52.3457175Z checking whether compiler accepts -fexcess-precision=standard... no
+2025-05-26T08:01:52.3457760Z checking whether compiler accepts -ffloat-store... no
+2025-05-26T08:01:52.3458302Z checking whether compiler accepts -frounding-math... yes
+2025-05-26T08:01:52.3458863Z checking whether compiler accepts -fno-strict-aliasing... yes
+2025-05-26T08:01:52.3459761Z checking whether compiler needs attribute((may_alias)) suppression... no
+2025-05-26T08:01:52.3460803Z checking whether compiler accepts -Wa,--noexecstack... yes
+2025-05-26T08:01:52.3461462Z checking whether compiler accepts -fno-stack-protector... yes
+2025-05-26T08:01:52.3462214Z checking whether compiler accepts -fno-tree-loop-distribute-patterns... no
+2025-05-26T08:01:52.3463077Z checking whether we should preprocess assembly to add debugging information... no
+2025-05-26T08:01:52.3463785Z checking for optimization settings... using defaults
+2025-05-26T08:01:52.3464296Z checking whether compiler accepts -O2... yes
+2025-05-26T08:01:52.3464868Z checking whether compiler accepts -fno-align-jumps... no
+2025-05-26T08:01:52.3465773Z checking whether compiler accepts -fno-align-functions... yes
+2025-05-26T08:01:52.3466441Z checking whether compiler accepts -fno-align-loops... no
+2025-05-26T08:01:52.3467094Z checking whether compiler accepts -fno-align-labels... no
+2025-05-26T08:01:52.3467724Z checking whether compiler accepts -fira-region=one... no
+2025-05-26T08:01:52.3468363Z checking whether compiler accepts -fira-hoist-pressure... no
+2025-05-26T08:01:52.3469300Z checking whether compiler accepts -freorder-blocks-algorithm=simple... no
+2025-05-26T08:01:52.3470059Z checking whether compiler accepts -fno-reorder-blocks... no
+2025-05-26T08:01:52.3470744Z checking whether compiler accepts -fno-prefetch-loop-arrays... no
+2025-05-26T08:01:52.3471411Z checking whether compiler accepts -fno-tree-ch... no
+2025-05-26T08:01:52.3471995Z components to be optimized for speed: internal malloc string
+2025-05-26T08:01:52.3472576Z checking whether compiler accepts -pipe... yes
+2025-05-26T08:01:52.3473145Z checking whether compiler accepts -fomit-frame-pointer... yes
+2025-05-26T08:01:52.3473793Z checking whether compiler accepts -fno-unwind-tables... yes
+2025-05-26T08:01:52.3474506Z checking whether compiler accepts -fno-asynchronous-unwind-tables... yes
+2025-05-26T08:01:52.3475221Z checking whether compiler accepts -ffunction-sections... yes
+2025-05-26T08:01:52.3475836Z checking whether compiler accepts -fdata-sections... yes
+2025-05-26T08:01:52.3476416Z checking whether linker accepts -mtune=generic... yes
+2025-05-26T08:01:52.3476937Z checking whether compiler accepts -w... yes
+2025-05-26T08:01:52.3477515Z checking whether compiler accepts -Wno-pointer-to-int-cast... yes
+2025-05-26T08:01:52.3478608Z checking whether compiler accepts -Werror=implicit-function-declaration... yes
+2025-05-26T08:01:52.3479575Z checking whether compiler accepts -Werror=implicit-int... yes
+2025-05-26T08:01:52.3480242Z checking whether compiler accepts -Werror=pointer-sign... yes
+2025-05-26T08:01:52.3480899Z checking whether compiler accepts -Werror=pointer-arith... yes
+2025-05-26T08:01:52.3481586Z checking whether compiler accepts -Werror=int-conversion... yes
+2025-05-26T08:01:52.3482345Z checking whether compiler accepts -Werror=incompatible-pointer-types... yes
+2025-05-26T08:01:52.3483160Z checking whether compiler accepts -Werror=discarded-qualifiers... no
+2025-05-26T08:01:52.3483950Z checking whether compiler accepts -Werror=discarded-array-qualifiers... no
+2025-05-26T08:01:52.3484709Z checking whether compiler accepts -Qunused-arguments... yes
+2025-05-26T08:01:52.3485287Z checking whether compiler accepts -Waddress... yes
+2025-05-26T08:01:52.3485853Z checking whether compiler accepts -Warray-bounds... yes
+2025-05-26T08:01:52.3486460Z checking whether compiler accepts -Wchar-subscripts... yes
+2025-05-26T08:01:52.3487149Z checking whether compiler accepts -Wduplicate-decl-specifier... yes
+2025-05-26T08:01:52.3487785Z checking whether compiler accepts -Winit-self... yes
+2025-05-26T08:01:52.3488358Z checking whether compiler accepts -Wreturn-type... yes
+2025-05-26T08:01:52.3489006Z checking whether compiler accepts -Wsequence-point... yes
+2025-05-26T08:01:52.3490248Z checking whether compiler accepts -Wstrict-aliasing... yes
+2025-05-26T08:01:52.3490897Z checking whether compiler accepts -Wunused-function... yes
+2025-05-26T08:01:52.3491508Z checking whether compiler accepts -Wunused-label... yes
+2025-05-26T08:01:52.3492131Z checking whether compiler accepts -Wunused-variable... yes
+2025-05-26T08:01:52.3492997Z checking preprocessor condition __PIC__... false
+2025-05-26T08:01:52.3493736Z checking whether linker accepts -Wl,--sort-section,alignment... yes
+2025-05-26T08:01:52.3494412Z checking whether linker accepts -Wl,--sort-common... yes
+2025-05-26T08:01:52.3495007Z checking whether linker accepts -Wl,--gc-sections... yes
+2025-05-26T08:01:52.3495629Z checking whether linker accepts -Wl,--hash-style=both... yes
+2025-05-26T08:01:52.3496251Z checking whether linker accepts -Wl,--no-undefined... yes
+2025-05-26T08:01:52.3496884Z checking whether linker accepts -Wl,--exclude-libs=ALL... yes
+2025-05-26T08:01:52.3497607Z checking whether linker accepts -Wl,--dynamic-list=src/dynamic.list... yes
+2025-05-26T08:01:52.3498252Z checking whether linker accepts -lgcc... yes
+2025-05-26T08:01:52.3498746Z checking whether linker accepts -lgcc_eh... yes
+2025-05-26T08:01:52.3499436Z using compiler runtime libraries: -lgcc -lgcc_eh
+2025-05-26T08:01:52.3500060Z checking whether compiler can use ebx in PIC asm constraints... yes
+2025-05-26T08:01:52.3500836Z checking whether compiler's long double definition matches float.h... yes
+2025-05-26T08:01:52.3501538Z checking preprocessor condition __FAST_MATH__... false
+2025-05-26T08:01:52.3502084Z creating config.mak... done
+2025-05-26T08:01:52.4477035Z [72/267] Building C object apps/sel4test-driver/util_libs/libutils/CMakeFiles/utils.dir/src/xml.c.obj
+2025-05-26T08:01:52.4558513Z [73/267] Building C object apps/sel4test-driver/util_libs/libutils/CMakeFiles/utils.dir/src/debug.c.obj
+2025-05-26T08:01:52.4700435Z [74/267] Building C object apps/sel4test-driver/util_libs/libutils/CMakeFiles/utils.dir/src/arch/x86/stack.c.obj
+2025-05-26T08:01:52.4932083Z [75/267] Building C object apps/sel4test-driver/util_libs/libutils/CMakeFiles/utils.dir/src/list.c.obj
+2025-05-26T08:01:52.5015783Z [76/267] Building C object apps/sel4test-driver/util_libs/libutils/CMakeFiles/utils.dir/src/cbor64.c.obj
+2025-05-26T08:01:52.5495690Z [77/267] Building C object apps/sel4test-driver/util_libs/libutils/CMakeFiles/utils.dir/src/zf_log.c.obj
+2025-05-26T08:01:52.5542708Z [78/267] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/plat/pc99/acpi/walker.c.obj
+2025-05-26T08:01:52.5956155Z [79/267] Linking C static library apps/sel4test-driver/util_libs/libutils/libutils.a
+2025-05-26T08:01:52.6433235Z [80/267] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/io.c.obj
+2025-05-26T08:01:52.6554501Z [81/267] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/fdt.c.obj
+2025-05-26T08:01:52.6756995Z [82/267] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/plat/pc99/acpi/acpi.c.obj
+2025-05-26T08:01:52.6934664Z [83/267] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/local_time_manager.c.obj
+2025-05-26T08:01:52.7035516Z [84/267] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/plat/pc99/acpi/browser.c.obj
+2025-05-26T08:01:52.7332725Z [85/267] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/plat/pc99/acpi/printer.c.obj
+2025-05-26T08:01:52.8132175Z [86/267] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/plat/pc99/acpi/regions.c.obj
+2025-05-26T08:01:52.8270842Z [87/267] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/plat/pc99/chardev.c.obj
+2025-05-26T08:01:52.8507739Z [88/267] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/plat/pc99/ega.c.obj
+2025-05-26T08:01:52.9402541Z [89/267] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/plat/pc99/keyboard_vkey.c.obj
+2025-05-26T08:01:52.9585373Z [90/267] Building C object apps/sel4test-driver/seL4_libs/libsel4muslcsys/CMakeFiles/sel4muslcsys.dir/src/sys_morecore.c.obj
+2025-05-26T08:01:52.9833775Z [91/267] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/plat/pc99/hpet.c.obj
+2025-05-26T08:01:53.0074128Z [92/267] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/plat/pc99/keyboard_chardev.c.obj
+2025-05-26T08:01:53.0726564Z [93/267] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/plat/pc99/pit.c.obj
+2025-05-26T08:01:53.0754514Z [94/267] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/plat/pc99/keyboard_ps2.c.obj
+2025-05-26T08:01:53.0995513Z [95/267] Building C object apps/sel4test-driver/seL4_libs/libsel4muslcsys/CMakeFiles/sel4muslcsys.dir/src/sys_io.c.obj
+2025-05-26T08:01:53.1321523Z [96/267] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/plat/pc99/serial.c.obj
+2025-05-26T08:01:53.1752375Z [97/267] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/plat/pc99/rtc.c.obj
+2025-05-26T08:01:53.2324166Z [98/267] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/plat/pc99/ltimer.c.obj
+2025-05-26T08:01:53.2428614Z [99/267] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/tqueue.c.obj
+2025-05-26T08:01:53.2524655Z [100/267] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/serial.c.obj
+2025-05-26T08:01:53.3129344Z [101/267] Building C object apps/sel4test-driver/util_libs/libelf/CMakeFiles/elf.dir/src/elf32.c.obj
+2025-05-26T08:01:53.3164627Z [102/267] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/arch/x86/tsc.c.obj
+2025-05-26T08:01:53.3272934Z [103/267] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/arch/x86/delay.c.obj
+2025-05-26T08:01:53.3597065Z [104/267] Building C object apps/sel4test-driver/util_libs/libelf/CMakeFiles/elf.dir/src/elf.c.obj
+2025-05-26T08:01:53.3991493Z [105/267] Building C object apps/sel4test-driver/util_libs/libfdt/CMakeFiles/fdt.dir/fdt.c.obj
+2025-05-26T08:01:53.4012889Z [106/267] Building C object apps/sel4test-driver/util_libs/libelf/CMakeFiles/elf.dir/src/elf64.c.obj
+2025-05-26T08:01:53.4371022Z [107/267] Building C object apps/sel4test-driver/util_libs/libfdt/CMakeFiles/fdt.dir/fdt_empty_tree.c.obj
+2025-05-26T08:01:53.4415195Z [108/267] Building C object apps/sel4test-driver/util_libs/libfdt/CMakeFiles/fdt.dir/fdt_overlay.c.obj
+2025-05-26T08:01:53.4445987Z [109/267] Building C object apps/sel4test-driver/util_libs/libfdt/CMakeFiles/fdt.dir/fdt_addresses.c.obj
+2025-05-26T08:01:53.4515577Z [110/267] Linking C static library apps/sel4test-driver/util_libs/libelf/libelf.a
+2025-05-26T08:01:53.5342208Z [111/267] Building C object apps/sel4test-driver/util_libs/libfdt/CMakeFiles/fdt.dir/fdt_ro.c.obj
+2025-05-26T08:01:53.5668333Z [112/267] Building C object apps/sel4test-driver/util_libs/libfdt/CMakeFiles/fdt.dir/fdt_strerror.c.obj
+2025-05-26T08:01:53.5763271Z [113/267] Building C object apps/sel4test-driver/util_libs/libfdt/CMakeFiles/fdt.dir/fdt_wip.c.obj
+2025-05-26T08:01:53.5772534Z [114/267] Building C object apps/sel4test-driver/util_libs/libfdt/CMakeFiles/fdt.dir/fdtget.c.obj
+2025-05-26T08:01:53.5815640Z [115/267] Building C object apps/sel4test-driver/util_libs/libfdt/CMakeFiles/fdt.dir/fdt_rw.c.obj
+2025-05-26T08:01:53.6135067Z [116/267] Building C object apps/sel4test-driver/util_libs/libfdt/CMakeFiles/fdt.dir/fdt_sw.c.obj
+2025-05-26T08:01:53.6426149Z [117/267] Linking C static library apps/sel4test-driver/util_libs/libfdt/libfdt.a
+2025-05-26T08:01:53.6622452Z [118/267] Building C object apps/sel4test-driver/seL4_libs/libsel4debug/CMakeFiles/sel4debug.dir/src/alloc.c.obj
+2025-05-26T08:01:53.6783986Z [119/267] Linking C static library apps/sel4test-driver/util_libs/libplatsupport/libplatsupport.a
+2025-05-26T08:01:53.7145609Z [120/267] Building C object apps/sel4test-driver/seL4_libs/libsel4debug/CMakeFiles/sel4debug.dir/src/identity.c.obj
+2025-05-26T08:01:53.8027708Z [121/267] Building C object apps/sel4test-driver/seL4_libs/libsel4debug/CMakeFiles/sel4debug.dir/src/bootinfo.c.obj
+2025-05-26T08:01:53.8659314Z [122/267] Building C object apps/sel4test-driver/seL4_libs/libsel4debug/CMakeFiles/sel4debug.dir/src/sel4_arch/ia32/stack_trace.c.obj
+2025-05-26T08:01:53.8706313Z [123/267] Building C object apps/sel4test-driver/seL4_libs/libsel4debug/CMakeFiles/sel4debug.dir/src/printf.c.obj
+2025-05-26T08:01:53.8815295Z [124/267] Building C object apps/sel4test-driver/seL4_libs/libsel4debug/CMakeFiles/sel4debug.dir/src/backtrace.c.obj
+2025-05-26T08:01:53.9039577Z [125/267] Building C object apps/sel4test-driver/seL4_libs/libsel4debug/CMakeFiles/sel4debug.dir/src/caps.c.obj
+2025-05-26T08:01:53.9134037Z [126/267] Building C object apps/sel4test-driver/seL4_libs/libsel4debug/CMakeFiles/sel4debug.dir/src/register_dump.c.obj
+2025-05-26T08:01:53.9452323Z [127/267] Building ASM object apps/sel4test-driver/seL4_libs/libsel4debug/CMakeFiles/sel4debug.dir/src/sel4_arch/ia32/trampoline.S.obj
+2025-05-26T08:01:53.9658712Z [128/267] Building C object apps/sel4test-driver/seL4_libs/libsel4debug/CMakeFiles/sel4debug.dir/src/stack.c.obj
+2025-05-26T08:01:54.0545352Z [129/267] Building C object apps/sel4test-driver/seL4_libs/libsel4debug/CMakeFiles/sel4debug.dir/src/sel4_arch/ia32/user_exception.c.obj
+2025-05-26T08:01:54.0963929Z [130/267] Building C object apps/sel4test-driver/seL4_libs/libsel4debug/CMakeFiles/sel4debug.dir/src/sel4_arch/ia32/unknown_syscall.c.obj
+2025-05-26T08:01:54.1822456Z [131/267] Building C object apps/sel4test-driver/seL4_libs/libsel4debug/CMakeFiles/sel4debug.dir/src/trace.c.obj
+2025-05-26T08:01:54.2557719Z [132/267] Linking C static library apps/sel4test-driver/seL4_libs/libsel4debug/libsel4debug.a
+2025-05-26T08:01:54.2657139Z [133/267] Building C object apps/sel4test-driver/seL4_libs/libsel4vka/CMakeFiles/sel4vka.dir/src/debug-vka.c.obj
+2025-05-26T08:01:54.3444676Z [134/267] Building C object apps/sel4test-driver/seL4_libs/libsel4allocman/CMakeFiles/sel4allocman.dir/src/allocman.c.obj
+2025-05-26T08:01:54.5432456Z [135/267] Building C object apps/sel4test-driver/seL4_libs/libsel4allocman/CMakeFiles/sel4allocman.dir/src/cspace/single_level.c.obj
+2025-05-26T08:01:54.5606746Z [136/267] Building C object apps/sel4test-driver/seL4_libs/libsel4allocman/CMakeFiles/sel4allocman.dir/src/cspace/two_level.c.obj
+2025-05-26T08:01:54.5739620Z [137/267] Building C object apps/sel4test-driver/seL4_libs/libsel4allocman/CMakeFiles/sel4allocman.dir/src/bootstrap.c.obj
+2025-05-26T08:01:54.5933161Z [138/267] Building C object apps/sel4test-driver/seL4_libs/libsel4allocman/CMakeFiles/sel4allocman.dir/src/cspace/simple1level.c.obj
+2025-05-26T08:01:54.6807899Z [139/267] Building C object apps/sel4test-driver/seL4_libs/libsel4allocman/CMakeFiles/sel4allocman.dir/src/mspace/k_r_malloc.c.obj
+2025-05-26T08:01:54.7218933Z [140/267] Building C object apps/sel4test-driver/seL4_libs/libsel4allocman/CMakeFiles/sel4allocman.dir/src/mspace/fixed_pool.c.obj
+2025-05-26T08:01:54.7305241Z [141/267] Building C object apps/sel4test-driver/seL4_libs/libsel4allocman/CMakeFiles/sel4allocman.dir/src/mspace/dual_pool.c.obj
+2025-05-26T08:01:54.9341017Z [142/267] Building C object apps/sel4test-driver/seL4_libs/libsel4allocman/CMakeFiles/sel4allocman.dir/src/mspace/malloc.c.obj
+2025-05-26T08:01:54.9363176Z [143/267] Building C object apps/sel4test-driver/seL4_libs/libsel4allocman/CMakeFiles/sel4allocman.dir/src/mspace/virtual_pool.c.obj
+2025-05-26T08:01:55.0388823Z [144/267] Building C object apps/sel4test-driver/seL4_libs/libsel4allocman/CMakeFiles/sel4allocman.dir/src/mspace/vspace_pool.c.obj
+2025-05-26T08:01:55.1687257Z [145/267] Building C object apps/sel4test-driver/seL4_libs/libsel4allocman/CMakeFiles/sel4allocman.dir/src/utspace/twinkle.c.obj
+2025-05-26T08:01:55.1902756Z [146/267] Building C object apps/sel4test-driver/seL4_libs/libsel4allocman/CMakeFiles/sel4allocman.dir/src/vka.c.obj
+2025-05-26T08:01:55.2439856Z [147/267] Building C object apps/sel4test-driver/seL4_libs/libsel4allocman/CMakeFiles/sel4allocman.dir/src/utspace/split.c.obj
+2025-05-26T08:01:55.2832362Z [148/267] Building C object apps/sel4test-driver/seL4_libs/libsel4utils/CMakeFiles/sel4utils.dir/src/elf.c.obj
+2025-05-26T08:01:55.3257719Z [149/267] Building C object apps/sel4test-driver/seL4_libs/libsel4vka/CMakeFiles/sel4vka.dir/src/null-vka.c.obj
+2025-05-26T08:01:55.3543573Z [150/267] Linking C static library apps/sel4test-driver/seL4_libs/libsel4vka/libsel4vka.a
+2025-05-26T08:01:55.4415160Z [151/267] Building C object apps/sel4test-driver/seL4_libs/libsel4utils/CMakeFiles/sel4utils.dir/src/iommu_dma.c.obj
+2025-05-26T08:01:55.6363903Z [152/267] Building C object apps/sel4test-driver/seL4_libs/libsel4utils/CMakeFiles/sel4utils.dir/src/profile.c.obj
+2025-05-26T08:01:55.6694584Z [153/267] Building C object apps/sel4test-driver/seL4_libs/libsel4utils/CMakeFiles/sel4utils.dir/src/page_dma.c.obj
+2025-05-26T08:01:55.7358250Z [154/267] Building C object apps/sel4test-driver/seL4_libs/libsel4utils/CMakeFiles/sel4utils.dir/src/mapping.c.obj
+2025-05-26T08:01:55.7424664Z [155/267] Building C object apps/sel4test-driver/seL4_libs/libsel4utils/CMakeFiles/sel4utils.dir/src/irq_server/irq_server.c.obj
+2025-05-26T08:01:55.7893371Z [156/267] Building C object apps/sel4test-driver/seL4_libs/libsel4utils/CMakeFiles/sel4utils.dir/src/sel4_arch/ia32/arch.c.obj
+2025-05-26T08:01:55.8107984Z [157/267] Building C object apps/sel4test-driver/seL4_libs/libsel4utils/CMakeFiles/sel4utils.dir/src/process.c.obj
+2025-05-26T08:01:55.9758291Z [158/267] Building C object apps/sel4test-driver/seL4_libs/libsel4utils/CMakeFiles/sel4utils.dir/src/slab.c.obj
+2025-05-26T08:01:55.9805361Z [159/267] Building C object apps/sel4test-driver/seL4_libs/libsel4vspace/CMakeFiles/sel4vspace.dir/src/arch/x86/mapping.c.obj
+2025-05-26T08:01:56.0742180Z [160/267] Building C object apps/sel4test-driver/seL4_libs/libsel4utils/CMakeFiles/sel4utils.dir/src/strerror.c.obj
+2025-05-26T08:01:56.1167883Z [161/267] Building C object apps/sel4test-driver/seL4_libs/libsel4utils/CMakeFiles/sel4utils.dir/src/time_server/client.c.obj
+2025-05-26T08:01:56.1343989Z [162/267] Building C object apps/sel4test-driver/seL4_libs/libsel4utils/CMakeFiles/sel4utils.dir/src/stack.c.obj
+2025-05-26T08:01:56.1993536Z [163/267] Building C object apps/sel4test-driver/seL4_libs/libsel4utils/CMakeFiles/sel4utils.dir/src/thread.c.obj
+2025-05-26T08:01:56.3505704Z [164/267] Building C object apps/sel4test-driver/seL4_libs/libsel4vspace/CMakeFiles/sel4vspace.dir/src/sel4_arch/ia32/mapping.c.obj
+2025-05-26T08:01:56.3672868Z [165/267] Building C object apps/sel4test-driver/seL4_libs/libsel4utils/CMakeFiles/sel4utils.dir/src/vspace/bootstrap.c.obj
+2025-05-26T08:01:56.5157852Z [166/267] Building C object apps/sel4test-driver/seL4_libs/libsel4platsupport/CMakeFiles/sel4platsupport.dir/src/arch/x86/io_port_ops.c.obj
+2025-05-26T08:01:56.5742482Z [167/267] Building C object apps/sel4test-driver/seL4_libs/libsel4platsupport/CMakeFiles/sel4platsupport.dir/src/bootinfo.c.obj
+2025-05-26T08:01:56.6056181Z [168/267] Building C object apps/sel4test-driver/seL4_libs/libsel4utils/CMakeFiles/sel4utils.dir/src/vspace/vspace.c.obj
+2025-05-26T08:01:56.6070819Z [169/267] Building C object apps/sel4test-driver/seL4_libs/libsel4vspace/CMakeFiles/sel4vspace.dir/src/vspace.c.obj
+2025-05-26T08:01:56.6655541Z [170/267] Linking C static library apps/sel4test-driver/seL4_libs/libsel4vspace/libsel4vspace.a
+2025-05-26T08:01:56.6766395Z [171/267] Building C object apps/sel4test-driver/seL4_libs/libsel4platsupport/CMakeFiles/sel4platsupport.dir/src/common.c.obj
+2025-05-26T08:01:56.6968978Z [172/267] Building C object apps/sel4test-driver/seL4_libs/libsel4platsupport/CMakeFiles/sel4platsupport.dir/src/arch/x86/pmem.c.obj
+2025-05-26T08:01:56.8067516Z [173/267] Building ASM object apps/sel4test-driver/seL4_libs/libsel4platsupport/CMakeFiles/sel4platsupport.dir/src/sel4_arch/ia32/crt0.S.obj
+2025-05-26T08:01:56.9033665Z [174/267] Building C object apps/sel4test-driver/seL4_libs/libsel4platsupport/CMakeFiles/sel4platsupport.dir/src/plat/pc99/device.c.obj
+2025-05-26T08:01:56.9677084Z [175/267] Building C object apps/sel4test-driver/seL4_libs/libsel4platsupport/CMakeFiles/sel4platsupport.dir/src/serial.c.obj
+2025-05-26T08:01:57.0552164Z [176/267] Building C object apps/sel4test-driver/seL4_libs/libsel4platsupport/CMakeFiles/sel4platsupport.dir/src/device.c.obj
+2025-05-26T08:01:57.0997705Z [177/267] Building C object apps/sel4test-driver/seL4_libs/libsel4platsupport/CMakeFiles/sel4platsupport.dir/src/io.c.obj
+2025-05-26T08:01:57.1570095Z [178/267] Building C object apps/sel4test-driver/seL4_libs/libsel4platsupport/CMakeFiles/sel4platsupport.dir/src/irq.c.obj
+2025-05-26T08:01:57.2432570Z [179/267] Building C object apps/sel4test-driver/seL4_libs/libsel4platsupport/CMakeFiles/sel4platsupport.dir/src/timer.c.obj
+2025-05-26T08:01:57.2830605Z [180/267] Building C object apps/sel4test-driver/seL4_libs/libsel4serialserver/CMakeFiles/sel4serialserver.dir/src/clientapi.c.obj
+2025-05-26T08:01:57.4464956Z [181/267] Building C object apps/sel4test-driver/seL4_libs/libsel4simple/CMakeFiles/sel4simple.dir/src/simple.c.obj
+2025-05-26T08:01:57.4733976Z [182/267] Linking C static library apps/sel4test-driver/seL4_libs/libsel4simple/libsel4simple.a
+2025-05-26T08:01:57.5266145Z [183/267] Building C object apps/sel4test-driver/seL4_libs/libsel4simple-default/CMakeFiles/sel4simple-default.dir/src/arch/x86/default.c.obj
+2025-05-26T08:01:57.5295964Z [184/267] Building C object apps/sel4test-driver/seL4_libs/libsel4simple-default/CMakeFiles/sel4simple-default.dir/src/libsel4simple-default.c.obj
+2025-05-26T08:01:57.5772798Z [185/267] Linking C static library apps/sel4test-driver/seL4_libs/libsel4simple-default/libsel4simple-default.a
+2025-05-26T08:01:57.5838257Z [186/267] Building C object apps/sel4test-driver/seL4_libs/libsel4serialserver/CMakeFiles/sel4serialserver.dir/src/parentapi.c.obj
+2025-05-26T08:01:57.6318613Z [187/267] Building C object apps/sel4test-driver/seL4_libs/libsel4muslcsys/CMakeFiles/sel4muslcsys.dir/src/sys_thread.c.obj
+2025-05-26T08:01:57.6406554Z [188/267] Building C object apps/sel4test-driver/seL4_libs/libsel4serialserver/CMakeFiles/sel4serialserver.dir/src/server.c.obj
+2025-05-26T08:01:57.6417241Z [189/267] Linking C static library apps/sel4test-driver/seL4_libs/libsel4platsupport/libsel4platsupport.a
+2025-05-26T08:01:57.7175423Z [190/267] Linking C static library apps/sel4test-driver/seL4_libs/libsel4utils/libsel4utils.a
+2025-05-26T08:01:57.7317358Z [191/267] Building C object apps/sel4test-driver/seL4_libs/libsel4sync/CMakeFiles/sel4sync.dir/src/recursive_mutex.c.obj
+2025-05-26T08:01:57.7802008Z [192/267] Linking C static library apps/sel4test-driver/seL4_libs/libsel4serialserver/libsel4serialserver.a
+2025-05-26T08:01:57.7956253Z [193/267] Linking C static library apps/sel4test-driver/seL4_libs/libsel4allocman/libsel4allocman.a
+2025-05-26T08:01:57.8010986Z [194/267] Building C object apps/sel4test-driver/seL4_libs/libsel4muslcsys/CMakeFiles/sel4muslcsys.dir/src/sys_exit.c.obj
+2025-05-26T08:01:57.8190860Z [195/267] Building C object apps/sel4test-driver/seL4_libs/libsel4muslcsys/CMakeFiles/sel4muslcsys.dir/src/sys_yield.c.obj
+2025-05-26T08:01:57.8281498Z [196/267] Linking C static library apps/sel4test-driver/seL4_libs/libsel4sync/libsel4sync.a
+2025-05-26T08:01:57.8858423Z [197/267] Building C object apps/sel4test-driver/sel4_projects_libs/libsel4nanopb/CMakeFiles/nanopb.dir/github/workspace/tools/nanopb/pb_common.c.obj
+2025-05-26T08:01:57.9042909Z [198/267] Building C object apps/sel4test-driver/sel4_projects_libs/libsel4nanopb/CMakeFiles/sel4nanopb.dir/src/common.c.obj
+2025-05-26T08:01:57.9176928Z [199/267] Building C object apps/sel4test-driver/seL4_libs/libsel4muslcsys/CMakeFiles/sel4muslcsys.dir/src/vsyscall.c.obj
+2025-05-26T08:01:57.9391270Z [200/267] Building C object apps/sel4test-driver/sel4_projects_libs/libsel4nanopb/CMakeFiles/nanopb.dir/github/workspace/tools/nanopb/pb_encode.c.obj
+2025-05-26T08:01:57.9430664Z [201/267] Linking C static library apps/sel4test-driver/seL4_libs/libsel4muslcsys/libsel4muslcsys.a
+2025-05-26T08:01:57.9557364Z [202/267] Building C object apps/sel4test-driver/sel4_projects_libs/libsel4nanopb/CMakeFiles/nanopb.dir/github/workspace/tools/nanopb/pb_decode.c.obj
+2025-05-26T08:01:57.9839532Z [203/267] Linking C static library apps/sel4test-driver/sel4_projects_libs/libsel4nanopb/libnanopb.a
+2025-05-26T08:01:58.0004247Z [204/267] Linking C static library apps/sel4test-driver/sel4_projects_libs/libsel4nanopb/libsel4nanopb.a
+2025-05-26T08:01:58.1518193Z [205/267] Running C++ protocol buffer compiler using nanopb plugin on /github/workspace/projects/sel4_projects_libs/libsel4rpc/rpc.proto
+2025-05-26T08:01:58.2570812Z [206/267] Building C object apps/sel4test-driver/sel4_projects_libs/libsel4rpc/CMakeFiles/sel4rpc.dir/rpc.pb.c.obj
+2025-05-26T08:01:58.4602872Z [207/267] Building C object apps/sel4test-driver/sel4_projects_libs/libsel4rpc/CMakeFiles/sel4rpc.dir/src/server.c.obj
+2025-05-26T08:01:58.4740158Z [208/267] Building C object apps/sel4test-driver/seL4_libs/libsel4test/CMakeFiles/sel4test.dir/src/testutil.c.obj
+2025-05-26T08:01:58.6274122Z [209/267] Building C object apps/sel4test-driver/sel4_projects_libs/libsel4rpc/CMakeFiles/sel4rpc.dir/src/client.c.obj
+2025-05-26T08:01:58.6476571Z [210/267] Building C object apps/sel4test-driver/libsel4testsupport/CMakeFiles/sel4testsupport.dir/src/testreporter.c.obj
+2025-05-26T08:01:58.6634809Z [211/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/arch/x86/tests/alignment.c.obj
+2025-05-26T08:01:58.6918695Z [212/267] Linking C static library apps/sel4test-driver/sel4_projects_libs/libsel4rpc/libsel4rpc.a
+2025-05-26T08:01:58.7377377Z [213/267] Linking C static library apps/sel4test-driver/seL4_libs/libsel4test/libsel4test.a
+2025-05-26T08:01:58.7936831Z [214/267] Linking C static library apps/sel4test-driver/libsel4testsupport/libsel4testsupport.a
+2025-05-26T08:01:58.8834854Z [215/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/cnodeops.c.obj
+2025-05-26T08:01:58.9460700Z [216/267] Building ASM object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/arch/x86/tests/alignment_asm.S.obj
+2025-05-26T08:01:59.0295628Z [217/267] Building C object apps/sel4test-driver/seL4_libs/libsel4serialserver/CMakeFiles/sel4serialserver_tests.dir/src/test.c.obj
+2025-05-26T08:01:59.0734097Z [218/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/arch/x86/arch.c.obj
+2025-05-26T08:01:59.0868701Z [219/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/cspace.c.obj
+2025-05-26T08:01:59.0924414Z [220/267] Linking C static library apps/sel4test-driver/seL4_libs/libsel4serialserver/libsel4serialserver_tests.a
+2025-05-26T08:01:59.1659350Z [221/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/helpers.c.obj
+2025-05-26T08:01:59.1780175Z [222/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/benchmark_api.c.obj
+2025-05-26T08:01:59.3931425Z [223/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/main.c.obj
+2025-05-26T08:01:59.4764742Z [224/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/arch/x86/tests/ept.c.obj
+2025-05-26T08:01:59.7247156Z [225/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/binding.c.obj
+2025-05-26T08:01:59.7838361Z [226/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/breakpoints.c.obj
+2025-05-26T08:01:59.8153015Z [227/267] Building CXX object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/domains.cxx.obj
+2025-05-26T08:01:59.8478520Z [228/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/cache.c.obj
+2025-05-26T08:01:59.8995419Z [229/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/endpoints.c.obj
+2025-05-26T08:01:59.9813400Z [230/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/frames.c.obj
+2025-05-26T08:02:00.2631401Z [231/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/ioports.c.obj
+2025-05-26T08:02:00.2777148Z [232/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/inc_untyped.c.obj
+2025-05-26T08:02:00.3907544Z [233/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/fpu.c.obj
+2025-05-26T08:02:00.4005305Z [234/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/faults.c.obj
+2025-05-26T08:02:00.4918096Z [235/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/iopt.c.obj
+2025-05-26T08:02:00.5500891Z [236/267] Building ASM object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/regressions.S.obj
+2025-05-26T08:02:00.7283027Z [237/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/interrupt.c.obj
+2025-05-26T08:02:00.8329731Z [238/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/ipc_rights.c.obj
+2025-05-26T08:02:00.8597740Z [239/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/ipc.c.obj
+2025-05-26T08:02:00.8970190Z [240/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/preempt.c.obj
+2025-05-26T08:02:01.0463687Z [241/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/multicore.c.obj
+2025-05-26T08:02:01.1290240Z [242/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/pagetables.c.obj
+2025-05-26T08:02:01.1728623Z [243/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/nbwait.c.obj
+2025-05-26T08:02:01.2992084Z [244/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/regressions.c.obj
+2025-05-26T08:02:01.3910772Z [245/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/vcpu.c.obj
+2025-05-26T08:02:01.7783714Z [246/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/vspace.c.obj
+2025-05-26T08:02:01.8000469Z [247/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/schedcontext.c.obj
+2025-05-26T08:02:01.8100897Z [248/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/serial_server.c.obj
+2025-05-26T08:02:01.8657520Z [249/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/smc.c.obj
+2025-05-26T08:02:01.9253132Z [250/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/sync.c.obj
+2025-05-26T08:02:01.9877158Z [251/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/scheduler.c.obj
+2025-05-26T08:02:02.1255619Z [252/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/tls.c.obj
+2025-05-26T08:02:02.1532817Z [253/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/threads.c.obj
+2025-05-26T08:02:02.1617682Z [254/267] Building C object apps/sel4test-driver/sel4test-tests/CMakeFiles/sel4test-tests.dir/src/tests/trivial.c.obj
+2025-05-26T08:02:02.2308033Z [255/267] Linking CXX executable apps/sel4test-driver/sel4test-tests/sel4test-tests
+2025-05-26T08:02:02.2309517Z clang: warning: argument unused during compilation: '-nostdinc++' [-Wunused-command-line-argument]
+2025-05-26T08:02:02.3161776Z [256/267] Generate CPIO archive archive.o
+2025-05-26T08:02:02.6735156Z [257/267] Building C object apps/sel4test-driver/CMakeFiles/sel4test-driver.dir/src/timer.c.obj
+2025-05-26T08:02:02.7421706Z [258/267] Building C object apps/sel4test-driver/CMakeFiles/sel4test-driver.dir/src/testtypes.c.obj
+2025-05-26T08:02:02.9101540Z [259/267] Building C object apps/sel4test-driver/CMakeFiles/sel4test-driver.dir/src/tests/interrupt.c.obj
+2025-05-26T08:02:02.9151994Z [260/267] Building C object apps/sel4test-driver/CMakeFiles/sel4test-driver.dir/src/tests/smmu.c.obj
+2025-05-26T08:02:02.9314634Z [261/267] Building C object apps/sel4test-driver/CMakeFiles/sel4test-driver.dir/src/plat/pc99/plat.c.obj
+2025-05-26T08:02:02.9922628Z [262/267] Building C object apps/sel4test-driver/CMakeFiles/sel4test-driver.dir/src/main.c.obj
+2025-05-26T08:02:03.0334691Z [263/267] Building C object apps/sel4test-driver/CMakeFiles/sel4test-driver.dir/src/tests/syscall.c.obj
+2025-05-26T08:02:03.0487600Z [264/267] Building C object apps/sel4test-driver/CMakeFiles/sel4test-driver.dir/src/tests/timer.c.obj
+2025-05-26T08:02:03.1193703Z [265/267] Linking C executable apps/sel4test-driver/sel4test-driver
+2025-05-26T08:02:03.1222178Z [266/267] Generating ../../images/kernel-ia32-pc99
+2025-05-26T08:02:03.1244955Z [267/267] Generating ../../images/sel4test-driver-image-ia32-pc99
+2025-05-26T08:02:03.1251270Z [33m+++ tar czf ../PC99_debug_clang_32-images.tar.gz images/[0m
+2025-05-26T08:02:03.3594180Z [33m+++ cp kernel/kernel.elf ../PC99_debug_clang_32-kernel.elf[0m
+2025-05-26T08:02:03.3624564Z [1m-----------[ end test PC99_debug_clang_32 ]-----------[0m
+2025-05-26T08:02:03.3625309Z ##[endgroup]
+2025-05-26T08:02:03.3625546Z [32mPC99_debug_clang_32 succeeded[0m
+2025-05-26T08:02:03.3625710Z 
+2025-05-26T08:02:03.3625957Z ##[group]PC99_debug_clang_64
+2025-05-26T08:02:03.3626267Z [1m-----------[ start test PC99_debug_clang_64 ]-----------[0m
+2025-05-26T08:02:03.5198731Z [33m+++ ../init-build.sh -DPLATFORM=x86_64 -DBAMBOO=TRUE -DTRIPLE=x86_64-linux-gnu[0m
+2025-05-26T08:02:03.5307825Z loading initial cache file /github/workspace/projects/sel4test/settings.cmake
+2025-05-26T08:02:03.5320518Z -- Set platform details from PLATFORM=x86_64
+2025-05-26T08:02:03.5321093Z --   KernelPlatform: pc99
+2025-05-26T08:02:03.5321325Z --   KernelSel4Arch: x86_64
+2025-05-26T08:02:03.5331020Z -- Found seL4: /github/workspace/kernel
+2025-05-26T08:02:03.6261463Z -- The C compiler identification is Clang 11.0.1
+2025-05-26T08:02:03.7123704Z -- The CXX compiler identification is Clang 11.0.1
+2025-05-26T08:02:03.7145372Z -- The ASM compiler identification is Clang
+2025-05-26T08:02:03.7154393Z -- Found assembler: /usr/bin/clang
+2025-05-26T08:02:03.7204192Z -- Detecting C compiler ABI info
+2025-05-26T08:02:03.8009648Z -- Detecting C compiler ABI info - done
+2025-05-26T08:02:03.8057775Z -- Check for working C compiler: /usr/bin/clang - skipped
+2025-05-26T08:02:03.8061035Z -- Detecting C compile features
+2025-05-26T08:02:03.8082632Z -- Detecting C compile features - done
+2025-05-26T08:02:03.8105767Z -- Detecting CXX compiler ABI info
+2025-05-26T08:02:03.8907116Z -- Detecting CXX compiler ABI info - done
+2025-05-26T08:02:03.8962906Z -- Check for working CXX compiler: /usr/bin/clang++ - skipped
+2025-05-26T08:02:03.8966369Z -- Detecting CXX compile features
+2025-05-26T08:02:03.8972495Z -- Detecting CXX compile features - done
+2025-05-26T08:02:03.9010225Z -- Found elfloader-tool: /github/workspace/tools/seL4/elfloader-tool
+2025-05-26T08:02:04.0287000Z -- Found musllibc: /github/workspace/projects/musllibc
+2025-05-26T08:02:04.0289558Z -- Found util_libs: /github/workspace/projects/util_libs
+2025-05-26T08:02:04.0290160Z -- Found seL4_libs: /github/workspace/projects/seL4_libs
+2025-05-26T08:02:04.0298905Z -- Found sel4_projects_libs: /github/workspace/projects/sel4_projects_libs
+2025-05-26T08:02:04.0308969Z -- Found sel4runtime: /github/workspace/projects/sel4runtime
+2025-05-26T08:02:04.1281259Z -- libmuslc architecture: 'x86_64' (from KernelSel4Arch 'x86_64')
+2025-05-26T08:02:04.1323271Z -- Detecting cached version of: musllibc
+2025-05-26T08:02:04.1357253Z -- Found Git: /usr/bin/git (found version "2.30.2")
+2025-05-26T08:02:04.1801840Z --   Not found cache entry for musllibc - will build from source
+2025-05-26T08:02:04.8366693Z -- Found Nanopb: /github/workspace/tools/nanopb
+2025-05-26T08:02:04.8434086Z -- CPIO test cpio_reproducible_flag PASSED
+2025-05-26T08:02:04.8479971Z -- Configuring done
+2025-05-26T08:02:04.9346639Z -- Generating done
+2025-05-26T08:02:04.9564365Z -- Build files have been written to: /github/workspace/build
+2025-05-26T08:02:04.9667161Z [33m+++ ninja[0m
+2025-05-26T08:02:04.9944506Z [1/263] Generate dummy headers for prune compilation
+2025-05-26T08:02:05.0865259Z [2/263] Concatenating C files
+2025-05-26T08:02:05.1220486Z [3/263] Generate syscall invocations
+2025-05-26T08:02:05.1386285Z [4/263] Generating generated/invocations_all.json
+2025-05-26T08:02:05.2094809Z [5/263] Generate invocation header gen_headers/arch/api/sel4_invocation.h
+2025-05-26T08:02:05.2112380Z [6/263] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime_crt_obj.dir/crt/sel4_arch/x86_64/crti.S.obj
+2025-05-26T08:02:05.2120486Z [7/263] Generate invocation header gen_headers/arch/api/invocation.h
+2025-05-26T08:02:05.2266014Z [8/263] Generate invocation header gen_headers/api/invocation.h
+2025-05-26T08:02:05.2324890Z [9/263] Creating C input file for preprocessor
+2025-05-26T08:02:05.2345176Z [10/263] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime_crt_obj.dir/crt/sel4_arch/x86_64/crtn.S.obj
+2025-05-26T08:02:05.2524308Z [11/263] Creating C input file for preprocessor
+2025-05-26T08:02:05.2596472Z [12/263] Creating C input file for preprocessor
+2025-05-26T08:02:05.2622019Z [13/263] Building C object libsel4/CMakeFiles/libsel4_sel4_arch_types_gen_pbf_temp_lib.dir/libsel4_sel4_arch_types_gen_pbf_temp.c.obj
+2025-05-26T08:02:05.2755419Z [14/263] Creating C input file for preprocessor
+2025-05-26T08:02:05.2951466Z [15/263] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime_crt_obj.dir/crt/sel4_arch/x86_64/crt0.S.obj
+2025-05-26T08:02:05.3065856Z [16/263] Building C object kernel/CMakeFiles/kernel_bf_gen_target_1_pbf_temp_lib.dir/kernel_bf_gen_target_1_pbf_temp.c.obj
+2025-05-26T08:02:05.3084147Z [17/263] Building C object libsel4/CMakeFiles/libsel4_shared_types_gen_pbf_temp_lib.dir/libsel4_shared_types_gen_pbf_temp.c.obj
+2025-05-26T08:02:05.3221175Z [18/263] Generating sel4_arch_include/x86_64/sel4/sel4_arch/types.pbf
+2025-05-26T08:02:05.3301984Z [19/263] Generating include/sel4/shared_types.pbf
+2025-05-26T08:02:05.3305660Z [20/263] Generating generated/plat_mode/machine/hardware.bf.pbf
+2025-05-26T08:02:05.3633204Z [21/263] Building C object kernel/CMakeFiles/kernel_all_pp_prune_wrapper_temp_lib.dir/kernel_all_pp_prune_wrapper_temp.c.obj
+2025-05-26T08:02:05.3790909Z [22/263] Generating kernel_all_pp_prune.c
+2025-05-26T08:02:05.3967119Z [23/263] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime_crt_obj.dir/crt/sel4_arch/x86_64/sel4_crt0.S.obj
+2025-05-26T08:02:05.4332006Z [24/263] Generating from /github/workspace/build/libsel4/include/sel4/shared_types.pbf
+2025-05-26T08:02:05.4349916Z [25/263] Generating from /github/workspace/build/libsel4/sel4_arch_include/x86_64/sel4/sel4_arch/types.pbf
+2025-05-26T08:02:05.5111567Z [26/263] Generating ../../../lib/crt0.o, ../../../lib/crti.o, ../../../lib/crtn.o
+2025-05-26T08:02:05.5208616Z [27/263] Generating from generated/plat_mode/machine/hardware.bf.pbf
+2025-05-26T08:02:05.5345416Z [28/263] Creating C input file for preprocessor
+2025-05-26T08:02:05.5479649Z [29/263] Generate sel4_client.h
+2025-05-26T08:02:05.5682239Z [30/263] Building C object kernel/CMakeFiles/kernel_bf_gen_target_11_pbf_temp_lib.dir/kernel_bf_gen_target_11_pbf_temp.c.obj
+2025-05-26T08:02:05.5955794Z [31/263] Generating generated/arch/object/structures.bf.pbf
+2025-05-26T08:02:05.6277305Z [32/263] Generate syscall.h
+2025-05-26T08:02:05.6455591Z [33/263] Generate invocation header include/sel4/invocation.h
+2025-05-26T08:02:05.7001742Z [34/263] Generate invocation header arch_include/x86/sel4/arch/invocation.h
+2025-05-26T08:02:05.7177258Z [35/263] Generate invocation header sel4_arch_include/x86_64/sel4/sel4_arch/invocation.h
+2025-05-26T08:02:05.7459399Z [36/263] Building C object apps/sel4test-driver/util_libs/libcpio/CMakeFiles/cpio.dir/src/cpio.c.obj
+2025-05-26T08:02:05.7798996Z [37/263] Generating from generated/arch/object/structures.bf.pbf
+2025-05-26T08:02:05.8054687Z [38/263] Creating C input file for preprocessor
+2025-05-26T08:02:05.8477198Z [39/263] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/crt/sel4_arch/x86_64/sel4_crt0.S.obj
+2025-05-26T08:02:05.8495534Z [40/263] Building C object kernel/CMakeFiles/kernel_bf_gen_target_111_pbf_temp_lib.dir/kernel_bf_gen_target_111_pbf_temp.c.obj
+2025-05-26T08:02:05.8560792Z [41/263] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/crt/sel4_arch/x86_64/crtn.S.obj
+2025-05-26T08:02:05.8654151Z [42/263] Generating generated/sel4/shared_types.bf.pbf
+2025-05-26T08:02:05.8682078Z [43/263] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/crt/sel4_arch/x86_64/crt0.S.obj
+2025-05-26T08:02:05.9120704Z [44/263] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/crt/sel4_arch/x86_64/crti.S.obj
+2025-05-26T08:02:05.9876167Z [45/263] Generating from generated/sel4/shared_types.bf.pbf
+2025-05-26T08:02:06.0012521Z [46/263] Creating C input file for preprocessor
+2025-05-26T08:02:06.0168047Z [47/263] Creating C input file for preprocessor
+2025-05-26T08:02:06.1156124Z [48/263] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/start.c.obj
+2025-05-26T08:02:06.1286334Z [49/263] Building C object kernel/CMakeFiles/kernel_i_wrapper_temp_lib.dir/kernel_all_copy.c.obj
+2025-05-26T08:02:06.1687553Z [50/263] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/start_root.c.obj
+2025-05-26T08:02:06.1697453Z [51/263] Generating kernel_all.i
+2025-05-26T08:02:06.1704555Z [52/263] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/crt1.c.obj
+2025-05-26T08:02:06.1790336Z [53/263] Building C object kernel/CMakeFiles/linker_ld_wrapper_temp_lib.dir/linker_ld_wrapper_temp.c.obj
+2025-05-26T08:02:06.1830137Z [54/263] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/env.c.obj
+2025-05-26T08:02:06.1929412Z [55/263] Generating linker.lds_pp
+2025-05-26T08:02:06.2540592Z [56/263] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/memcpy.c.obj
+2025-05-26T08:02:06.2562521Z [57/263] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/init.c.obj
+2025-05-26T08:02:06.2754021Z [58/263] Generating circular_includes_valid
+2025-05-26T08:02:06.2782398Z [59/263] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/vsyscall.c.obj
+2025-05-26T08:02:06.2857240Z [60/263] Linking C static library apps/sel4test-driver/util_libs/libcpio/libcpio.a
+2025-05-26T08:02:06.2955567Z [61/263] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/memset.c.obj
+2025-05-26T08:02:06.4049636Z [62/263] Building ASM object kernel/CMakeFiles/kernel.elf.dir/src/arch/x86/64/head.S.obj
+2025-05-26T08:02:06.4325058Z [63/263] Building ASM object kernel/CMakeFiles/kernel.elf.dir/src/arch/x86/multiboot.S.obj
+2025-05-26T08:02:06.4340137Z [64/263] Building ASM object kernel/CMakeFiles/kernel.elf.dir/src/arch/x86/64/machine_asm.S.obj
+2025-05-26T08:02:06.4546038Z [65/263] Building C object libsel4/CMakeFiles/sel4.dir/src/sel4_bootinfo.c.obj
+2025-05-26T08:02:06.4800939Z [66/263] Linking C static library libsel4/libsel4.a
+2025-05-26T08:02:06.5091556Z [67/263] Linking C static library apps/sel4test-driver/sel4runtime/libsel4runtime.a
+2025-05-26T08:02:06.5099429Z [68/263] Building ASM object kernel/CMakeFiles/kernel.elf.dir/src/arch/x86/64/traps.S.obj
+2025-05-26T08:02:12.3167724Z ##[error]The operation was canceled.
+2025-05-26T08:02:12.3303435Z Cleaning up orphan processes

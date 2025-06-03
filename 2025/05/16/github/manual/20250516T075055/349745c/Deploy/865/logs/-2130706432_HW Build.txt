@@ -1,0 +1,43 @@
+2025-05-18T23:40:02.1852402Z ##[section]Starting: Prepare job hw-build
+2025-05-18T23:40:02.1921708Z Evaluating strategy
+2025-05-18T23:40:02.1933733Z Creating job 'armv7a_gcc'
+2025-05-18T23:40:02.1936686Z Evaluating timeout
+2025-05-18T23:40:02.1936753Z Evaluating cancel timeout
+2025-05-18T23:40:02.1936785Z Evaluating continue on error
+2025-05-18T23:40:02.1936819Z Evaluating target
+2025-05-18T23:40:02.1937311Z Creating job 'armv7a_clang'
+2025-05-18T23:40:02.1939932Z Evaluating timeout
+2025-05-18T23:40:02.1939958Z Evaluating cancel timeout
+2025-05-18T23:40:02.1939979Z Evaluating continue on error
+2025-05-18T23:40:02.1940004Z Evaluating target
+2025-05-18T23:40:02.1940326Z Creating job 'armv8a_gcc'
+2025-05-18T23:40:02.1943273Z Evaluating timeout
+2025-05-18T23:40:02.1943327Z Evaluating cancel timeout
+2025-05-18T23:40:02.1943350Z Evaluating continue on error
+2025-05-18T23:40:02.1943379Z Evaluating target
+2025-05-18T23:40:02.1943862Z Creating job 'armv8a_clang'
+2025-05-18T23:40:02.1946553Z Evaluating timeout
+2025-05-18T23:40:02.1946580Z Evaluating cancel timeout
+2025-05-18T23:40:02.1946601Z Evaluating continue on error
+2025-05-18T23:40:02.1946627Z Evaluating target
+2025-05-18T23:40:02.1946929Z Creating job 'nehalem_gcc'
+2025-05-18T23:40:02.1949572Z Evaluating timeout
+2025-05-18T23:40:02.1949597Z Evaluating cancel timeout
+2025-05-18T23:40:02.1949617Z Evaluating continue on error
+2025-05-18T23:40:02.1949640Z Evaluating target
+2025-05-18T23:40:02.1949967Z Creating job 'nehalem_clang'
+2025-05-18T23:40:02.1953421Z Evaluating timeout
+2025-05-18T23:40:02.1953507Z Evaluating cancel timeout
+2025-05-18T23:40:02.1953547Z Evaluating continue on error
+2025-05-18T23:40:02.1953595Z Evaluating target
+2025-05-18T23:40:02.1954278Z Creating job 'rv64imac_gcc'
+2025-05-18T23:40:02.1957363Z Evaluating timeout
+2025-05-18T23:40:02.1957400Z Evaluating cancel timeout
+2025-05-18T23:40:02.1957423Z Evaluating continue on error
+2025-05-18T23:40:02.1957449Z Evaluating target
+2025-05-18T23:40:02.1957855Z Creating job 'rv64imac_clang'
+2025-05-18T23:40:02.1960583Z Evaluating timeout
+2025-05-18T23:40:02.1960608Z Evaluating cancel timeout
+2025-05-18T23:40:02.1960644Z Evaluating continue on error
+2025-05-18T23:40:02.1960668Z Evaluating target
+2025-05-18T23:40:02.1964242Z ##[section]Finishing: Prepare job hw-build

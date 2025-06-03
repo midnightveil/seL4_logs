@@ -1,0 +1,669 @@
+2025-05-18T23:40:03.4046014Z ##[section]Starting: Prepare job hw-run
+2025-05-18T23:40:03.4347503Z Evaluating strategy
+2025-05-18T23:40:03.4353597Z Evaluating: fromJson(needs.the_matrix.outputs.matrix)
+2025-05-18T23:40:03.4353716Z ##[debug]Evaluating fromJson:
+2025-05-18T23:40:03.4353759Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4353781Z ##[debug]....Evaluating Index:
+2025-05-18T23:40:03.4353801Z ##[debug]......Evaluating Index:
+2025-05-18T23:40:03.4353840Z ##[debug]........Evaluating needs:
+2025-05-18T23:40:03.4353887Z ##[debug]........=> Object
+2025-05-18T23:40:03.4353918Z ##[debug]........Evaluating String:
+2025-05-18T23:40:03.4353946Z ##[debug]........=> 'the_matrix'
+2025-05-18T23:40:03.4353992Z ##[debug]......=> Object
+2025-05-18T23:40:03.4354007Z ##[debug]......Evaluating String:
+2025-05-18T23:40:03.4354027Z ##[debug]......=> 'outputs'
+2025-05-18T23:40:03.4354041Z ##[debug]....=> Object
+2025-05-18T23:40:03.4354053Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4354072Z ##[debug]....=> 'matrix'
+2025-05-18T23:40:03.4354173Z ##[debug]..=> '{"include": [{"platform": "IMX93", "march": "armv8a", "compiler": "gcc"}, {"platform": "IMX93", "march": "armv8a", "compiler": "clang"}, {"platform": "ZYNQMP106", "march": "armv8a", "compiler": "gcc"}, {"platform": "ZYNQMP106", "march": "armv8a", "compiler": "clang"}, {"platform": "AM335X_BONEBLACK", "march": "armv8a", "compiler": "gcc"}, {"platform": "AM335X_BONEBLACK", "march": "armv8a", "compiler": "clang"}, {"platform": "OMAP3", "march": "armv7a", "compiler": "gcc"}, {"platform": "OMAP3", "march": "armv7a", "compiler": "clang"}, {"platform": "ZYNQMP", "march": "armv8a", "compiler": "gcc"}, {"platform": "ZYNQMP", "march": "armv8a", "compiler": "clang"}, {"platform": "ODROID_XU4", "march": "armv7a", "compiler": "gcc"}, {"platform": "ODROID_XU4", "march": "armv7a", "compiler": "clang"}, {"platform": "IMX8MQ_EVK", "march": "armv8a", "compiler": "gcc"}, {"platform": "IMX8MQ_EVK", "march": "armv8a", "compiler": "clang"}, {"platform": "IMX8MM_EVK", "march": "armv8a", "compiler": "gcc"}, {"platform": "IMX8MM_EVK", "march": "armv8a", "compiler": "clang"}, {"platform": "ODROID_C2", "march": "armv8a", "compiler": "gcc"}, {"platform": "ODROID_C2", "march": "armv8a", "compiler": "clang"}, {"platform": "TQMA8XQP1GB", "march": "armv8a", "compiler": "gcc"}, {"platform": "TQMA8XQP1GB", "march": "armv8a", "compiler": "clang"}, {"platform": "SABRE", "march": "armv7a", "compiler": "gcc"}, {"platform": "SABRE", "march": "armv7a", "compiler": "clang"}, {"platform": "TK1", "march": "armv7a", "compiler": "gcc"}, {"platform": "TK1", "march": "armv7a", "compiler": "clang"}, {"platform": "HIFIVE", "march": "rv64imac", "compiler": "gcc"}, {"platform": "HIFIVE", "march": "rv64imac", "compiler": "clang"}, {"platform": "TX2", "march": "armv8a", "compiler": "gcc"}, {"platform": "TX2", "march": "armv8a", "compiler": "clang"}, {"platform": "PC99", "march": "nehalem", "compiler": "gcc", "mode": 32}, {"platform": "PC99", "march": "nehalem", "compiler": "clang", "mode": 32}, {"platform": "PC99", "march": "nehalem", "compiler": "gcc", "mode": 64}, {"platform": "PC99", "march": "nehalem", "compiler": "clang", "mode": 64}, {"platform": "TX1", "march": "armv8a", "compiler": "gcc"}, {"platform": "TX1", "march": "armv8a", "compiler": "clang"}, {"platform": "ODROID_C4", "march": "armv8a", "compiler": "gcc"}, {"platform": "ODROID_C4", "march": "armv8a", "compiler": "clang"}]}'
+2025-05-18T23:40:03.4356443Z ##[debug]=> Object
+2025-05-18T23:40:03.4356468Z Result: Object
+2025-05-18T23:40:03.4379067Z Creating job 'IMX93_armv8a_gcc'
+2025-05-18T23:40:03.4384920Z Evaluating timeout
+2025-05-18T23:40:03.4385064Z Evaluating cancel timeout
+2025-05-18T23:40:03.4385145Z Evaluating continue on error
+2025-05-18T23:40:03.4385192Z Evaluating target
+2025-05-18T23:40:03.4385902Z Evaluating group permit
+2025-05-18T23:40:03.4386939Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4387029Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4387071Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4387110Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4387189Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4387214Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4387299Z ##[debug]....=> Object
+2025-05-18T23:40:03.4387331Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4387356Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4387443Z ##[debug]..=> 0
+2025-05-18T23:40:03.4387473Z ##[debug]=> 'hw-run-0'
+2025-05-18T23:40:03.4387498Z Result: 'hw-run-0'
+2025-05-18T23:40:03.4388365Z Creating job 'IMX93_armv8a_clang'
+2025-05-18T23:40:03.4392492Z Evaluating timeout
+2025-05-18T23:40:03.4392537Z Evaluating cancel timeout
+2025-05-18T23:40:03.4392579Z Evaluating continue on error
+2025-05-18T23:40:03.4392612Z Evaluating target
+2025-05-18T23:40:03.4392943Z Evaluating group permit
+2025-05-18T23:40:03.4393296Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4393341Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4393363Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4393386Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4393420Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4393440Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4393484Z ##[debug]....=> Object
+2025-05-18T23:40:03.4393502Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4393521Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4393577Z ##[debug]..=> 1
+2025-05-18T23:40:03.4393597Z ##[debug]=> 'hw-run-1'
+2025-05-18T23:40:03.4393616Z Result: 'hw-run-1'
+2025-05-18T23:40:03.4393984Z Creating job 'ZYNQMP106_armv8a_gcc'
+2025-05-18T23:40:03.4397541Z Evaluating timeout
+2025-05-18T23:40:03.4397570Z Evaluating cancel timeout
+2025-05-18T23:40:03.4397606Z Evaluating continue on error
+2025-05-18T23:40:03.4397630Z Evaluating target
+2025-05-18T23:40:03.4397874Z Evaluating group permit
+2025-05-18T23:40:03.4398163Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4398206Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4398226Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4398248Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4398273Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4398293Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4398337Z ##[debug]....=> Object
+2025-05-18T23:40:03.4398353Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4398373Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4398408Z ##[debug]..=> 2
+2025-05-18T23:40:03.4398428Z ##[debug]=> 'hw-run-2'
+2025-05-18T23:40:03.4398446Z Result: 'hw-run-2'
+2025-05-18T23:40:03.4398789Z Creating job 'ZYNQMP106_armv8a_clang'
+2025-05-18T23:40:03.4402282Z Evaluating timeout
+2025-05-18T23:40:03.4402313Z Evaluating cancel timeout
+2025-05-18T23:40:03.4402350Z Evaluating continue on error
+2025-05-18T23:40:03.4402375Z Evaluating target
+2025-05-18T23:40:03.4402634Z Evaluating group permit
+2025-05-18T23:40:03.4402913Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4402957Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4402977Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4402999Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4403025Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4403043Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4403069Z ##[debug]....=> Object
+2025-05-18T23:40:03.4403084Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4403117Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4403151Z ##[debug]..=> 3
+2025-05-18T23:40:03.4403171Z ##[debug]=> 'hw-run-3'
+2025-05-18T23:40:03.4403189Z Result: 'hw-run-3'
+2025-05-18T23:40:03.4403533Z Creating job 'AM335X_BONEBLACK_armv8a_g'
+2025-05-18T23:40:03.4407064Z Evaluating timeout
+2025-05-18T23:40:03.4407096Z Evaluating cancel timeout
+2025-05-18T23:40:03.4407134Z Evaluating continue on error
+2025-05-18T23:40:03.4407159Z Evaluating target
+2025-05-18T23:40:03.4407400Z Evaluating group permit
+2025-05-18T23:40:03.4407675Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4407716Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4407736Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4407757Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4407782Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4407800Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4407843Z ##[debug]....=> Object
+2025-05-18T23:40:03.4407860Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4407878Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4407912Z ##[debug]..=> 4
+2025-05-18T23:40:03.4407932Z ##[debug]=> 'hw-run-4'
+2025-05-18T23:40:03.4407948Z Result: 'hw-run-4'
+2025-05-18T23:40:03.4408293Z Creating job 'AM335X_BONEBLACK_armv8a_c'
+2025-05-18T23:40:03.4411830Z Evaluating timeout
+2025-05-18T23:40:03.4411859Z Evaluating cancel timeout
+2025-05-18T23:40:03.4411896Z Evaluating continue on error
+2025-05-18T23:40:03.4411921Z Evaluating target
+2025-05-18T23:40:03.4412164Z Evaluating group permit
+2025-05-18T23:40:03.4412453Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4412496Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4412517Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4412538Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4412564Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4412583Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4412624Z ##[debug]....=> Object
+2025-05-18T23:40:03.4412640Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4412658Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4412693Z ##[debug]..=> 5
+2025-05-18T23:40:03.4412712Z ##[debug]=> 'hw-run-5'
+2025-05-18T23:40:03.4412730Z Result: 'hw-run-5'
+2025-05-18T23:40:03.4413072Z Creating job 'OMAP3_armv7a_gcc'
+2025-05-18T23:40:03.4416604Z Evaluating timeout
+2025-05-18T23:40:03.4416634Z Evaluating cancel timeout
+2025-05-18T23:40:03.4416671Z Evaluating continue on error
+2025-05-18T23:40:03.4416696Z Evaluating target
+2025-05-18T23:40:03.4416931Z Evaluating group permit
+2025-05-18T23:40:03.4417215Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4417256Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4417276Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4417298Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4417323Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4417343Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4417386Z ##[debug]....=> Object
+2025-05-18T23:40:03.4417406Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4417425Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4417456Z ##[debug]..=> 6
+2025-05-18T23:40:03.4417475Z ##[debug]=> 'hw-run-6'
+2025-05-18T23:40:03.4417492Z Result: 'hw-run-6'
+2025-05-18T23:40:03.4417846Z Creating job 'OMAP3_armv7a_clang'
+2025-05-18T23:40:03.4421418Z Evaluating timeout
+2025-05-18T23:40:03.4421450Z Evaluating cancel timeout
+2025-05-18T23:40:03.4421473Z Evaluating continue on error
+2025-05-18T23:40:03.4421498Z Evaluating target
+2025-05-18T23:40:03.4421759Z Evaluating group permit
+2025-05-18T23:40:03.4422040Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4422081Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4422101Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4422121Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4422148Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4422179Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4422206Z ##[debug]....=> Object
+2025-05-18T23:40:03.4422473Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4422494Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4422560Z ##[debug]..=> 7
+2025-05-18T23:40:03.4422581Z ##[debug]=> 'hw-run-7'
+2025-05-18T23:40:03.4422600Z Result: 'hw-run-7'
+2025-05-18T23:40:03.4422989Z Creating job 'ZYNQMP_armv8a_gcc'
+2025-05-18T23:40:03.4426628Z Evaluating timeout
+2025-05-18T23:40:03.4426656Z Evaluating cancel timeout
+2025-05-18T23:40:03.4426680Z Evaluating continue on error
+2025-05-18T23:40:03.4426706Z Evaluating target
+2025-05-18T23:40:03.4426980Z Evaluating group permit
+2025-05-18T23:40:03.4427258Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4427300Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4427323Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4427344Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4427370Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4427388Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4427413Z ##[debug]....=> Object
+2025-05-18T23:40:03.4427429Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4427466Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4427513Z ##[debug]..=> 8
+2025-05-18T23:40:03.4427534Z ##[debug]=> 'hw-run-8'
+2025-05-18T23:40:03.4427550Z Result: 'hw-run-8'
+2025-05-18T23:40:03.4427899Z Creating job 'ZYNQMP_armv8a_clang'
+2025-05-18T23:40:03.4431421Z Evaluating timeout
+2025-05-18T23:40:03.4431457Z Evaluating cancel timeout
+2025-05-18T23:40:03.4431492Z Evaluating continue on error
+2025-05-18T23:40:03.4431517Z Evaluating target
+2025-05-18T23:40:03.4431753Z Evaluating group permit
+2025-05-18T23:40:03.4432029Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4432071Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4432092Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4432114Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4432139Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4432157Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4432209Z ##[debug]....=> Object
+2025-05-18T23:40:03.4432226Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4432246Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4432282Z ##[debug]..=> 9
+2025-05-18T23:40:03.4432325Z ##[debug]=> 'hw-run-9'
+2025-05-18T23:40:03.4432342Z Result: 'hw-run-9'
+2025-05-18T23:40:03.4432684Z Creating job 'ODROID_XU4_armv7a_gcc'
+2025-05-18T23:40:03.4436212Z Evaluating timeout
+2025-05-18T23:40:03.4436254Z Evaluating cancel timeout
+2025-05-18T23:40:03.4436277Z Evaluating continue on error
+2025-05-18T23:40:03.4436301Z Evaluating target
+2025-05-18T23:40:03.4436547Z Evaluating group permit
+2025-05-18T23:40:03.4436825Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4436866Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4436886Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4436907Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4436946Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4436964Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4436989Z ##[debug]....=> Object
+2025-05-18T23:40:03.4437003Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4437021Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4437055Z ##[debug]..=> 10
+2025-05-18T23:40:03.4437075Z ##[debug]=> 'hw-run-10'
+2025-05-18T23:40:03.4437093Z Result: 'hw-run-10'
+2025-05-18T23:40:03.4437434Z Creating job 'ODROID_XU4_armv7a_clang'
+2025-05-18T23:40:03.4440906Z Evaluating timeout
+2025-05-18T23:40:03.4440935Z Evaluating cancel timeout
+2025-05-18T23:40:03.4440972Z Evaluating continue on error
+2025-05-18T23:40:03.4440998Z Evaluating target
+2025-05-18T23:40:03.4441233Z Evaluating group permit
+2025-05-18T23:40:03.4441496Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4441537Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4441557Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4441578Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4441603Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4441622Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4441663Z ##[debug]....=> Object
+2025-05-18T23:40:03.4441677Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4441696Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4441730Z ##[debug]..=> 11
+2025-05-18T23:40:03.4441750Z ##[debug]=> 'hw-run-11'
+2025-05-18T23:40:03.4441768Z Result: 'hw-run-11'
+2025-05-18T23:40:03.4442115Z Creating job 'IMX8MQ_EVK_armv8a_gcc'
+2025-05-18T23:40:03.4445616Z Evaluating timeout
+2025-05-18T23:40:03.4445645Z Evaluating cancel timeout
+2025-05-18T23:40:03.4445682Z Evaluating continue on error
+2025-05-18T23:40:03.4445705Z Evaluating target
+2025-05-18T23:40:03.4445938Z Evaluating group permit
+2025-05-18T23:40:03.4446201Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4446243Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4446263Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4446284Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4446310Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4446329Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4446371Z ##[debug]....=> Object
+2025-05-18T23:40:03.4446387Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4446406Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4446441Z ##[debug]..=> 12
+2025-05-18T23:40:03.4446460Z ##[debug]=> 'hw-run-12'
+2025-05-18T23:40:03.4446477Z Result: 'hw-run-12'
+2025-05-18T23:40:03.4446822Z Creating job 'IMX8MQ_EVK_armv8a_clang'
+2025-05-18T23:40:03.4450271Z Evaluating timeout
+2025-05-18T23:40:03.4450301Z Evaluating cancel timeout
+2025-05-18T23:40:03.4450342Z Evaluating continue on error
+2025-05-18T23:40:03.4450367Z Evaluating target
+2025-05-18T23:40:03.4450595Z Evaluating group permit
+2025-05-18T23:40:03.4450856Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4450899Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4450919Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4450940Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4450968Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4450987Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4451027Z ##[debug]....=> Object
+2025-05-18T23:40:03.4451046Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4451066Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4451100Z ##[debug]..=> 13
+2025-05-18T23:40:03.4451119Z ##[debug]=> 'hw-run-13'
+2025-05-18T23:40:03.4451136Z Result: 'hw-run-13'
+2025-05-18T23:40:03.4451467Z Creating job 'IMX8MM_EVK_armv8a_gcc'
+2025-05-18T23:40:03.4454947Z Evaluating timeout
+2025-05-18T23:40:03.4454977Z Evaluating cancel timeout
+2025-05-18T23:40:03.4455017Z Evaluating continue on error
+2025-05-18T23:40:03.4455041Z Evaluating target
+2025-05-18T23:40:03.4455274Z Evaluating group permit
+2025-05-18T23:40:03.4455540Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4455582Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4455603Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4455625Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4455650Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4455668Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4455711Z ##[debug]....=> Object
+2025-05-18T23:40:03.4455727Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4455746Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4455781Z ##[debug]..=> 14
+2025-05-18T23:40:03.4455801Z ##[debug]=> 'hw-run-14'
+2025-05-18T23:40:03.4455817Z Result: 'hw-run-14'
+2025-05-18T23:40:03.4456162Z Creating job 'IMX8MM_EVK_armv8a_clang'
+2025-05-18T23:40:03.4459735Z Evaluating timeout
+2025-05-18T23:40:03.4459789Z Evaluating cancel timeout
+2025-05-18T23:40:03.4459844Z Evaluating continue on error
+2025-05-18T23:40:03.4459884Z Evaluating target
+2025-05-18T23:40:03.4460257Z Evaluating group permit
+2025-05-18T23:40:03.4460776Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4460848Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4460880Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4460911Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4460957Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4460984Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4461038Z ##[debug]....=> Object
+2025-05-18T23:40:03.4461065Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4461091Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4461166Z ##[debug]..=> 15
+2025-05-18T23:40:03.4461197Z ##[debug]=> 'hw-run-15'
+2025-05-18T23:40:03.4461222Z Result: 'hw-run-15'
+2025-05-18T23:40:03.4461785Z Creating job 'ODROID_C2_armv8a_gcc'
+2025-05-18T23:40:03.4466674Z Evaluating timeout
+2025-05-18T23:40:03.4466753Z Evaluating cancel timeout
+2025-05-18T23:40:03.4466795Z Evaluating continue on error
+2025-05-18T23:40:03.4466823Z Evaluating target
+2025-05-18T23:40:03.4467170Z Evaluating group permit
+2025-05-18T23:40:03.4467574Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4467621Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4467646Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4467672Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4467709Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4467729Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4467774Z ##[debug]....=> Object
+2025-05-18T23:40:03.4467794Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4467813Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4467915Z ##[debug]..=> 16
+2025-05-18T23:40:03.4467940Z ##[debug]=> 'hw-run-16'
+2025-05-18T23:40:03.4467959Z Result: 'hw-run-16'
+2025-05-18T23:40:03.4468386Z Creating job 'ODROID_C2_armv8a_clang'
+2025-05-18T23:40:03.4471985Z Evaluating timeout
+2025-05-18T23:40:03.4472016Z Evaluating cancel timeout
+2025-05-18T23:40:03.4472056Z Evaluating continue on error
+2025-05-18T23:40:03.4472082Z Evaluating target
+2025-05-18T23:40:03.4472317Z Evaluating group permit
+2025-05-18T23:40:03.4472594Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4472636Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4472655Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4472677Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4472704Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4472724Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4472765Z ##[debug]....=> Object
+2025-05-18T23:40:03.4472802Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4472820Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4472857Z ##[debug]..=> 17
+2025-05-18T23:40:03.4472878Z ##[debug]=> 'hw-run-17'
+2025-05-18T23:40:03.4472896Z Result: 'hw-run-17'
+2025-05-18T23:40:03.4473250Z Creating job 'TQMA8XQP1GB_armv8a_gcc'
+2025-05-18T23:40:03.4476787Z Evaluating timeout
+2025-05-18T23:40:03.4476815Z Evaluating cancel timeout
+2025-05-18T23:40:03.4476851Z Evaluating continue on error
+2025-05-18T23:40:03.4476876Z Evaluating target
+2025-05-18T23:40:03.4477112Z Evaluating group permit
+2025-05-18T23:40:03.4477389Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4477432Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4477453Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4477474Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4477499Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4477518Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4477560Z ##[debug]....=> Object
+2025-05-18T23:40:03.4477575Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4477593Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4477628Z ##[debug]..=> 18
+2025-05-18T23:40:03.4477647Z ##[debug]=> 'hw-run-18'
+2025-05-18T23:40:03.4477666Z Result: 'hw-run-18'
+2025-05-18T23:40:03.4478019Z Creating job 'TQMA8XQP1GB_armv8a_clang'
+2025-05-18T23:40:03.4481541Z Evaluating timeout
+2025-05-18T23:40:03.4481572Z Evaluating cancel timeout
+2025-05-18T23:40:03.4481609Z Evaluating continue on error
+2025-05-18T23:40:03.4481634Z Evaluating target
+2025-05-18T23:40:03.4481876Z Evaluating group permit
+2025-05-18T23:40:03.4482153Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4482195Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4482215Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4482236Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4482261Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4482279Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4482321Z ##[debug]....=> Object
+2025-05-18T23:40:03.4482336Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4482354Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4482389Z ##[debug]..=> 19
+2025-05-18T23:40:03.4482409Z ##[debug]=> 'hw-run-19'
+2025-05-18T23:40:03.4482426Z Result: 'hw-run-19'
+2025-05-18T23:40:03.4482766Z Creating job 'SABRE_armv7a_gcc'
+2025-05-18T23:40:03.4486473Z Evaluating timeout
+2025-05-18T23:40:03.4486509Z Evaluating cancel timeout
+2025-05-18T23:40:03.4486547Z Evaluating continue on error
+2025-05-18T23:40:03.4486573Z Evaluating target
+2025-05-18T23:40:03.4486828Z Evaluating group permit
+2025-05-18T23:40:03.4487136Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4487182Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4487203Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4487227Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4487251Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4487270Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4487309Z ##[debug]....=> Object
+2025-05-18T23:40:03.4487326Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4487344Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4487385Z ##[debug]..=> 20
+2025-05-18T23:40:03.4487406Z ##[debug]=> 'hw-run-20'
+2025-05-18T23:40:03.4487425Z Result: 'hw-run-20'
+2025-05-18T23:40:03.4487774Z Creating job 'SABRE_armv7a_clang'
+2025-05-18T23:40:03.4491290Z Evaluating timeout
+2025-05-18T23:40:03.4491319Z Evaluating cancel timeout
+2025-05-18T23:40:03.4491357Z Evaluating continue on error
+2025-05-18T23:40:03.4491383Z Evaluating target
+2025-05-18T23:40:03.4491618Z Evaluating group permit
+2025-05-18T23:40:03.4491886Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4491928Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4491949Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4491969Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4491996Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4492015Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4492059Z ##[debug]....=> Object
+2025-05-18T23:40:03.4492075Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4492094Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4492129Z ##[debug]..=> 21
+2025-05-18T23:40:03.4492150Z ##[debug]=> 'hw-run-21'
+2025-05-18T23:40:03.4492167Z Result: 'hw-run-21'
+2025-05-18T23:40:03.4492513Z Creating job 'TK1_armv7a_gcc'
+2025-05-18T23:40:03.4496037Z Evaluating timeout
+2025-05-18T23:40:03.4496068Z Evaluating cancel timeout
+2025-05-18T23:40:03.4496106Z Evaluating continue on error
+2025-05-18T23:40:03.4496131Z Evaluating target
+2025-05-18T23:40:03.4496359Z Evaluating group permit
+2025-05-18T23:40:03.4496637Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4496679Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4496701Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4496725Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4496751Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4496771Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4496813Z ##[debug]....=> Object
+2025-05-18T23:40:03.4496829Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4496849Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4496884Z ##[debug]..=> 22
+2025-05-18T23:40:03.4496904Z ##[debug]=> 'hw-run-22'
+2025-05-18T23:40:03.4496921Z Result: 'hw-run-22'
+2025-05-18T23:40:03.4497256Z Creating job 'TK1_armv7a_clang'
+2025-05-18T23:40:03.4500759Z Evaluating timeout
+2025-05-18T23:40:03.4500788Z Evaluating cancel timeout
+2025-05-18T23:40:03.4500825Z Evaluating continue on error
+2025-05-18T23:40:03.4500850Z Evaluating target
+2025-05-18T23:40:03.4501086Z Evaluating group permit
+2025-05-18T23:40:03.4501359Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4501400Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4501420Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4501444Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4501468Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4501488Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4501531Z ##[debug]....=> Object
+2025-05-18T23:40:03.4501546Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4501565Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4501598Z ##[debug]..=> 23
+2025-05-18T23:40:03.4501618Z ##[debug]=> 'hw-run-23'
+2025-05-18T23:40:03.4501636Z Result: 'hw-run-23'
+2025-05-18T23:40:03.4501976Z Creating job 'HIFIVE_rv64imac_gcc'
+2025-05-18T23:40:03.4506682Z Evaluating timeout
+2025-05-18T23:40:03.4506783Z Evaluating cancel timeout
+2025-05-18T23:40:03.4506864Z Evaluating continue on error
+2025-05-18T23:40:03.4506921Z Evaluating target
+2025-05-18T23:40:03.4507583Z Evaluating group permit
+2025-05-18T23:40:03.4508010Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4508059Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4508084Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4508110Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4508148Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4508167Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4508215Z ##[debug]....=> Object
+2025-05-18T23:40:03.4508233Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4508253Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4508308Z ##[debug]..=> 24
+2025-05-18T23:40:03.4508331Z ##[debug]=> 'hw-run-24'
+2025-05-18T23:40:03.4508350Z Result: 'hw-run-24'
+2025-05-18T23:40:03.4508779Z Creating job 'HIFIVE_rv64imac_clang'
+2025-05-18T23:40:03.4512484Z Evaluating timeout
+2025-05-18T23:40:03.4512518Z Evaluating cancel timeout
+2025-05-18T23:40:03.4512557Z Evaluating continue on error
+2025-05-18T23:40:03.4512582Z Evaluating target
+2025-05-18T23:40:03.4512826Z Evaluating group permit
+2025-05-18T23:40:03.4513108Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4513150Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4513171Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4513193Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4513218Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4513262Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4513287Z ##[debug]....=> Object
+2025-05-18T23:40:03.4513301Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4513320Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4513355Z ##[debug]..=> 25
+2025-05-18T23:40:03.4513375Z ##[debug]=> 'hw-run-25'
+2025-05-18T23:40:03.4513393Z Result: 'hw-run-25'
+2025-05-18T23:40:03.4513746Z Creating job 'TX2_armv8a_gcc'
+2025-05-18T23:40:03.4518531Z Evaluating timeout
+2025-05-18T23:40:03.4518595Z Evaluating cancel timeout
+2025-05-18T23:40:03.4518634Z Evaluating continue on error
+2025-05-18T23:40:03.4518663Z Evaluating target
+2025-05-18T23:40:03.4518988Z Evaluating group permit
+2025-05-18T23:40:03.4519365Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4519408Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4519435Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4519459Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4519496Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4519520Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4519565Z ##[debug]....=> Object
+2025-05-18T23:40:03.4519584Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4519604Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4519654Z ##[debug]..=> 26
+2025-05-18T23:40:03.4519676Z ##[debug]=> 'hw-run-26'
+2025-05-18T23:40:03.4519694Z Result: 'hw-run-26'
+2025-05-18T23:40:03.4520082Z Creating job 'TX2_armv8a_clang'
+2025-05-18T23:40:03.4524026Z Evaluating timeout
+2025-05-18T23:40:03.4524085Z Evaluating cancel timeout
+2025-05-18T23:40:03.4524144Z Evaluating continue on error
+2025-05-18T23:40:03.4524192Z Evaluating target
+2025-05-18T23:40:03.4524515Z Evaluating group permit
+2025-05-18T23:40:03.4524864Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4524908Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4524931Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4524955Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4524989Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4525008Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4525049Z ##[debug]....=> Object
+2025-05-18T23:40:03.4525068Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4525087Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4525134Z ##[debug]..=> 27
+2025-05-18T23:40:03.4525158Z ##[debug]=> 'hw-run-27'
+2025-05-18T23:40:03.4525176Z Result: 'hw-run-27'
+2025-05-18T23:40:03.4525560Z Creating job 'PC99_nehalem_gcc_32'
+2025-05-18T23:40:03.4530209Z Evaluating timeout
+2025-05-18T23:40:03.4530260Z Evaluating cancel timeout
+2025-05-18T23:40:03.4530285Z Evaluating continue on error
+2025-05-18T23:40:03.4530311Z Evaluating target
+2025-05-18T23:40:03.4530608Z Evaluating group permit
+2025-05-18T23:40:03.4530942Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4530985Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4531025Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4531048Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4531087Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4531106Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4531133Z ##[debug]....=> Object
+2025-05-18T23:40:03.4531149Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4531169Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4531215Z ##[debug]..=> 28
+2025-05-18T23:40:03.4531235Z ##[debug]=> 'hw-run-28'
+2025-05-18T23:40:03.4531254Z Result: 'hw-run-28'
+2025-05-18T23:40:03.4531658Z Creating job 'PC99_nehalem_clang_32'
+2025-05-18T23:40:03.4535291Z Evaluating timeout
+2025-05-18T23:40:03.4535320Z Evaluating cancel timeout
+2025-05-18T23:40:03.4535344Z Evaluating continue on error
+2025-05-18T23:40:03.4535369Z Evaluating target
+2025-05-18T23:40:03.4535608Z Evaluating group permit
+2025-05-18T23:40:03.4535882Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4535924Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4535958Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4535980Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4536005Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4536025Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4536056Z ##[debug]....=> Object
+2025-05-18T23:40:03.4536072Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4536092Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4536126Z ##[debug]..=> 29
+2025-05-18T23:40:03.4536146Z ##[debug]=> 'hw-run-29'
+2025-05-18T23:40:03.4536162Z Result: 'hw-run-29'
+2025-05-18T23:40:03.4536510Z Creating job 'PC99_nehalem_gcc_64'
+2025-05-18T23:40:03.4540055Z Evaluating timeout
+2025-05-18T23:40:03.4540084Z Evaluating cancel timeout
+2025-05-18T23:40:03.4540105Z Evaluating continue on error
+2025-05-18T23:40:03.4540129Z Evaluating target
+2025-05-18T23:40:03.4540357Z Evaluating group permit
+2025-05-18T23:40:03.4540637Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4540679Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4540699Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4540721Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4540746Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4540766Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4540791Z ##[debug]....=> Object
+2025-05-18T23:40:03.4540806Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4540825Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4540858Z ##[debug]..=> 30
+2025-05-18T23:40:03.4540875Z ##[debug]=> 'hw-run-30'
+2025-05-18T23:40:03.4540907Z Result: 'hw-run-30'
+2025-05-18T23:40:03.4541237Z Creating job 'PC99_nehalem_clang_64'
+2025-05-18T23:40:03.4545051Z Evaluating timeout
+2025-05-18T23:40:03.4545096Z Evaluating cancel timeout
+2025-05-18T23:40:03.4545125Z Evaluating continue on error
+2025-05-18T23:40:03.4545151Z Evaluating target
+2025-05-18T23:40:03.4545424Z Evaluating group permit
+2025-05-18T23:40:03.4545733Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4545776Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4545814Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4545840Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4545868Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4545892Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4545918Z ##[debug]....=> Object
+2025-05-18T23:40:03.4545934Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4545958Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4545998Z ##[debug]..=> 31
+2025-05-18T23:40:03.4546019Z ##[debug]=> 'hw-run-31'
+2025-05-18T23:40:03.4546038Z Result: 'hw-run-31'
+2025-05-18T23:40:03.4546393Z Creating job 'TX1_armv8a_gcc'
+2025-05-18T23:40:03.4549893Z Evaluating timeout
+2025-05-18T23:40:03.4549924Z Evaluating cancel timeout
+2025-05-18T23:40:03.4549963Z Evaluating continue on error
+2025-05-18T23:40:03.4549988Z Evaluating target
+2025-05-18T23:40:03.4550225Z Evaluating group permit
+2025-05-18T23:40:03.4550500Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4550541Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4550561Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4550583Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4550608Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4550628Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4550674Z ##[debug]....=> Object
+2025-05-18T23:40:03.4550691Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4550711Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4550744Z ##[debug]..=> 32
+2025-05-18T23:40:03.4550764Z ##[debug]=> 'hw-run-32'
+2025-05-18T23:40:03.4550781Z Result: 'hw-run-32'
+2025-05-18T23:40:03.4551138Z Creating job 'TX1_armv8a_clang'
+2025-05-18T23:40:03.4554653Z Evaluating timeout
+2025-05-18T23:40:03.4554685Z Evaluating cancel timeout
+2025-05-18T23:40:03.4554722Z Evaluating continue on error
+2025-05-18T23:40:03.4554748Z Evaluating target
+2025-05-18T23:40:03.4554989Z Evaluating group permit
+2025-05-18T23:40:03.4555255Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4555296Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4555316Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4555364Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4555389Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4555407Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4555433Z ##[debug]....=> Object
+2025-05-18T23:40:03.4555448Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4555467Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4555501Z ##[debug]..=> 33
+2025-05-18T23:40:03.4555520Z ##[debug]=> 'hw-run-33'
+2025-05-18T23:40:03.4555536Z Result: 'hw-run-33'
+2025-05-18T23:40:03.4555873Z Creating job 'ODROID_C4_armv8a_gcc'
+2025-05-18T23:40:03.4559391Z Evaluating timeout
+2025-05-18T23:40:03.4559434Z Evaluating cancel timeout
+2025-05-18T23:40:03.4559457Z Evaluating continue on error
+2025-05-18T23:40:03.4559481Z Evaluating target
+2025-05-18T23:40:03.4559706Z Evaluating group permit
+2025-05-18T23:40:03.4559982Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4560025Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4560044Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4560065Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4560106Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4560125Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4560150Z ##[debug]....=> Object
+2025-05-18T23:40:03.4560166Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4560186Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4560220Z ##[debug]..=> 34
+2025-05-18T23:40:03.4560241Z ##[debug]=> 'hw-run-34'
+2025-05-18T23:40:03.4560260Z Result: 'hw-run-34'
+2025-05-18T23:40:03.4560598Z Creating job 'ODROID_C4_armv8a_clang'
+2025-05-18T23:40:03.4564055Z Evaluating timeout
+2025-05-18T23:40:03.4564086Z Evaluating cancel timeout
+2025-05-18T23:40:03.4564122Z Evaluating continue on error
+2025-05-18T23:40:03.4564146Z Evaluating target
+2025-05-18T23:40:03.4564372Z Evaluating group permit
+2025-05-18T23:40:03.4564631Z Evaluating: format('hw-run-{0}', strategy.job-index)
+2025-05-18T23:40:03.4564672Z ##[debug]Evaluating format:
+2025-05-18T23:40:03.4564692Z ##[debug]..Evaluating String:
+2025-05-18T23:40:03.4564713Z ##[debug]..=> 'hw-run-{0}'
+2025-05-18T23:40:03.4564738Z ##[debug]..Evaluating Index:
+2025-05-18T23:40:03.4564757Z ##[debug]....Evaluating strategy:
+2025-05-18T23:40:03.4564806Z ##[debug]....=> Object
+2025-05-18T23:40:03.4564821Z ##[debug]....Evaluating String:
+2025-05-18T23:40:03.4564840Z ##[debug]....=> 'job-index'
+2025-05-18T23:40:03.4564882Z ##[debug]..=> 35
+2025-05-18T23:40:03.4564901Z ##[debug]=> 'hw-run-35'
+2025-05-18T23:40:03.4564919Z Result: 'hw-run-35'
+2025-05-18T23:40:03.4572246Z ##[section]Finishing: Prepare job hw-run

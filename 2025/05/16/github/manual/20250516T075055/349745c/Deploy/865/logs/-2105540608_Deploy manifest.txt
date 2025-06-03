@@ -1,0 +1,5 @@
+2025-05-19T05:11:31.0514048Z ##[section]Starting: Prepare job deploy
+2025-05-19T05:11:31.0948072Z Evaluating strategy
+2025-05-19T05:11:31.0954191Z Creating job '__default'
+2025-05-19T05:11:31.0959367Z Skip evaluating job properties
+2025-05-19T05:11:31.0960746Z ##[section]Finishing: Prepare job deploy

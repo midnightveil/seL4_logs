@@ -1,0 +1,90 @@
+﻿2025-05-26T08:00:30.8846256Z Current runner version: '2.324.0'
+2025-05-26T08:00:30.8871624Z ##[group]Runner Image Provisioner
+2025-05-26T08:00:30.8872401Z Hosted Compute Agent
+2025-05-26T08:00:30.8873006Z Version: 20250508.323
+2025-05-26T08:00:30.8873612Z Commit: 81b259f29879f73b4213d199e42d8c3465dae986
+2025-05-26T08:00:30.8874592Z Build Date: 2025-05-08T19:40:08Z
+2025-05-26T08:00:30.8875244Z ##[endgroup]
+2025-05-26T08:00:30.8875798Z ##[group]Operating System
+2025-05-26T08:00:30.8876366Z Ubuntu
+2025-05-26T08:00:30.8876802Z 24.04.2
+2025-05-26T08:00:30.8877335Z LTS
+2025-05-26T08:00:30.8877753Z ##[endgroup]
+2025-05-26T08:00:30.8878219Z ##[group]Runner Image
+2025-05-26T08:00:30.8878831Z Image: ubuntu-24.04
+2025-05-26T08:00:30.8879327Z Version: 20250511.1.0
+2025-05-26T08:00:30.8880270Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250511.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-05-26T08:00:30.8881822Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250511.1
+2025-05-26T08:00:30.8882746Z ##[endgroup]
+2025-05-26T08:00:30.8885429Z ##[group]GITHUB_TOKEN Permissions
+2025-05-26T08:00:30.8887399Z Actions: write
+2025-05-26T08:00:30.8888051Z Attestations: write
+2025-05-26T08:00:30.8888532Z Checks: write
+2025-05-26T08:00:30.8889017Z Contents: write
+2025-05-26T08:00:30.8889549Z Deployments: write
+2025-05-26T08:00:30.8890068Z Discussions: write
+2025-05-26T08:00:30.8890557Z Issues: write
+2025-05-26T08:00:30.8891031Z Metadata: read
+2025-05-26T08:00:30.8891531Z Models: read
+2025-05-26T08:00:30.8891971Z Packages: write
+2025-05-26T08:00:30.8892537Z Pages: write
+2025-05-26T08:00:30.8892997Z PullRequests: write
+2025-05-26T08:00:30.8893517Z RepositoryProjects: write
+2025-05-26T08:00:30.8894477Z SecurityEvents: write
+2025-05-26T08:00:30.8895267Z Statuses: write
+2025-05-26T08:00:30.8895771Z ##[endgroup]
+2025-05-26T08:00:30.8897721Z Secret source: Actions
+2025-05-26T08:00:30.8898521Z Prepare workflow directory
+2025-05-26T08:00:30.9229846Z Prepare all required actions
+2025-05-26T08:00:30.9267417Z Getting action download info
+2025-05-26T08:00:31.3568327Z Download action repository 'seL4/ci-actions@master' (SHA:dda28c57b388906c5d0f149aacfecaa833b518e0)
+2025-05-26T08:00:42.4345444Z ##[warning]Failed to download action 'https://api.github.com/repos/seL4/ci-actions/tarball/dda28c57b388906c5d0f149aacfecaa833b518e0'. Error: Response status code does not indicate success: 504 (Gateway Timeout). 
+2025-05-26T08:00:42.4363949Z ##[warning]Back off 19.841 seconds before retry.
+2025-05-26T08:01:13.3461172Z ##[warning]Failed to download action 'https://api.github.com/repos/seL4/ci-actions/tarball/dda28c57b388906c5d0f149aacfecaa833b518e0'. Error: Response status code does not indicate success: 504 (Gateway Timeout). 
+2025-05-26T08:01:13.3464146Z ##[warning]Back off 18.433 seconds before retry.
+2025-05-26T08:01:43.6288109Z Complete job name: Simulation (rv64imac, gcc)
+2025-05-26T08:01:43.6770192Z ##[group]Pull down action image 'sel4/sel4test-sim:latest'
+2025-05-26T08:01:43.7220460Z ##[command]/usr/bin/docker pull sel4/sel4test-sim:latest
+2025-05-26T08:01:44.2180521Z latest: Pulling from sel4/sel4test-sim
+2025-05-26T08:01:44.3379241Z e1f16b66c2e8: Pulling fs layer
+2025-05-26T08:01:44.3379793Z 7b4f4f95f6cf: Pulling fs layer
+2025-05-26T08:01:44.3380197Z 95fe3dc9ff39: Pulling fs layer
+2025-05-26T08:01:44.3380584Z 4f4fb700ef54: Pulling fs layer
+2025-05-26T08:01:44.3380987Z 0d20a8c1dfe8: Pulling fs layer
+2025-05-26T08:01:44.3381399Z 0997441cee4c: Pulling fs layer
+2025-05-26T08:01:44.3381760Z 34f9c851953c: Pulling fs layer
+2025-05-26T08:01:44.3381994Z 05901e60b03e: Pulling fs layer
+2025-05-26T08:01:44.3382211Z 907c2c3feab2: Pulling fs layer
+2025-05-26T08:01:44.3382443Z 4a7069dc40da: Pulling fs layer
+2025-05-26T08:01:44.3382711Z 8f9f9917ae4c: Pulling fs layer
+2025-05-26T08:01:44.3382954Z dc7a6d385b7b: Pulling fs layer
+2025-05-26T08:01:44.3383160Z 4f4fb700ef54: Waiting
+2025-05-26T08:01:44.3383438Z 0d20a8c1dfe8: Waiting
+2025-05-26T08:01:44.3383616Z 0997441cee4c: Waiting
+2025-05-26T08:01:44.3384058Z 34f9c851953c: Waiting
+2025-05-26T08:01:44.3384586Z 05901e60b03e: Waiting
+2025-05-26T08:01:44.3384760Z 907c2c3feab2: Waiting
+2025-05-26T08:01:44.3384927Z 4a7069dc40da: Waiting
+2025-05-26T08:01:44.3385102Z 8f9f9917ae4c: Waiting
+2025-05-26T08:01:44.3385283Z dc7a6d385b7b: Waiting
+2025-05-26T08:01:44.4594509Z 7b4f4f95f6cf: Verifying Checksum
+2025-05-26T08:01:44.4596214Z 7b4f4f95f6cf: Download complete
+2025-05-26T08:01:44.6006178Z e1f16b66c2e8: Verifying Checksum
+2025-05-26T08:01:44.6008242Z e1f16b66c2e8: Download complete
+2025-05-26T08:01:44.6039846Z 4f4fb700ef54: Verifying Checksum
+2025-05-26T08:01:44.6044676Z 4f4fb700ef54: Download complete
+2025-05-26T08:01:45.0183454Z 95fe3dc9ff39: Verifying Checksum
+2025-05-26T08:01:45.0184949Z 95fe3dc9ff39: Download complete
+2025-05-26T08:01:45.0490655Z 0997441cee4c: Verifying Checksum
+2025-05-26T08:01:45.0491824Z 0997441cee4c: Download complete
+2025-05-26T08:01:45.1432817Z 05901e60b03e: Verifying Checksum
+2025-05-26T08:01:45.1433361Z 05901e60b03e: Download complete
+2025-05-26T08:01:45.2540773Z 34f9c851953c: Download complete
+2025-05-26T08:01:45.2672333Z 907c2c3feab2: Download complete
+2025-05-26T08:01:45.3511194Z 4a7069dc40da: Download complete
+2025-05-26T08:01:45.3748435Z 8f9f9917ae4c: Verifying Checksum
+2025-05-26T08:01:45.3750399Z 8f9f9917ae4c: Download complete
+2025-05-26T08:01:45.4519402Z dc7a6d385b7b: Verifying Checksum
+2025-05-26T08:01:45.4520407Z dc7a6d385b7b: Download complete
+2025-05-26T08:01:45.4887024Z ##[error]The operation was canceled.
+2025-05-26T08:01:45.4999695Z Cleaning up orphan processes
