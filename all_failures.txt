@@ -1,3 +1,58 @@
+TX1_release_gcc_64
+	path: 2025/05/23/github/push/master/5e6f7c2/Deploy/868/logs/23_HW Run (TX1, armv8a, gcc).txt
+	system: tx1a
+	kind: boot failure
+	variant: undetected (booted linux)
+IMX8MM_EVK_verification_SMP_MCS_gcc_64
+	path: 2025/05/23/github/push/master/5e6f7c2/Deploy/868/logs/53_HW Run (IMX8MM_EVK, armv8a, gcc).txt
+	system: imx8mm
+	kind: boot failure
+	variant: undetected (uboot console)
+ZYNQMP106_debug_hyp_clang_64
+	path: 2025/05/23/github/push/master/5e6f7c2/Deploy/868/logs/27_HW Run (ZYNQMP106, armv8a, clang).txt
+	system: zcu106
+	kind: boot failure
+	variant: undetected (zynqmp console)
+IMX93_verification_SMP_MCS_clang_64
+	path: 2025/05/16/github/manual/20250516T075055/349745c/Deploy/865/logs/1_HW Run (IMX93, armv8a, clang).txt
+	system: imx93a
+	kind: conserver failure
+IMX93_verification_SMP_MCS_clang_64
+	path: 2025/05/16/github/manual/20250516T075055/349745c/Deploy/865/logs/HW Run (IMX93, armv8a, clang)/4_Run.txt
+	system: imx93a
+	kind: conserver failure
+IMX93_verification_SMP_clang_64
+	path: 2025/05/16/github/manual/20250516T075055/349745c/Deploy/865/logs/1_HW Run (IMX93, armv8a, clang).txt
+	system: imx93a
+	kind: conserver failure
+IMX93_verification_SMP_clang_64
+	path: 2025/05/16/github/manual/20250516T075055/349745c/Deploy/865/logs/HW Run (IMX93, armv8a, clang)/4_Run.txt
+	system: imx93a
+	kind: conserver failure
+IMX93_verification_SMP_hyp_MCS_clang_64
+	path: 2025/05/16/github/manual/20250516T075055/349745c/Deploy/865/logs/1_HW Run (IMX93, armv8a, clang).txt
+	system: imx93a
+	kind: conserver failure
+IMX93_verification_SMP_hyp_MCS_clang_64
+	path: 2025/05/16/github/manual/20250516T075055/349745c/Deploy/865/logs/HW Run (IMX93, armv8a, clang)/4_Run.txt
+	system: imx93a
+	kind: conserver failure
+IMX93_verification_SMP_hyp_clang_64
+	path: 2025/05/16/github/manual/20250516T075055/349745c/Deploy/865/logs/1_HW Run (IMX93, armv8a, clang).txt
+	system: imx93a
+	kind: conserver failure
+IMX93_verification_SMP_hyp_clang_64
+	path: 2025/05/16/github/manual/20250516T075055/349745c/Deploy/865/logs/HW Run (IMX93, armv8a, clang)/4_Run.txt
+	system: imx93a
+	kind: conserver failure
+IMX93_verification_SMP_hyp_gcc_64
+	path: 2025/05/16/github/manual/20250516T075055/349745c/Deploy/865/logs/0_HW Run (IMX93, armv8a, gcc).txt
+	system: imx93a
+	kind: conserver failure
+IMX93_verification_SMP_hyp_gcc_64
+	path: 2025/05/16/github/manual/20250516T075055/349745c/Deploy/865/logs/HW Run (IMX93, armv8a, gcc)/4_Run.txt
+	system: imx93a
+	kind: conserver failure
 IMX93_debug_SMP_MCS_clang_64
 	path: 2025/05/23/github/push/master/5e6f7c2/Deploy/868/logs/29_HW Run (IMX93, armv8a, clang).txt
 	system: imx93a
@@ -388,3 +443,143 @@ TX2_verification_hyp_MCS_gcc_64
 	system: tx2a
 	kind: output timeout
 	variant: during tests
+IMX93_debug_clang_64
+	path: 2025/05/21/github/manual/20250521T100622/349745c/Deploy/866/logs/43_HW Run (IMX93, armv8a, clang).txt
+	system: imx93a
+	kind: ssh failure
+IMX93_release_SMP_hyp_MCS_clang_64
+	path: 2025/05/23/github/push/master/5e6f7c2/Deploy/868/logs/29_HW Run (IMX93, armv8a, clang).txt
+	system: imx93a
+	kind: ssh failure
+IMX93_release_SMP_hyp_MCS_gcc_64
+	path: 2025/05/23/github/push/master/5e6f7c2/Deploy/868/logs/25_HW Run (IMX93, armv8a, gcc).txt
+	system: imx93a
+	kind: ssh failure
+IMX93_release_SMP_hyp_clang_64
+	path: 2025/05/23/github/push/master/5e6f7c2/Deploy/868/logs/29_HW Run (IMX93, armv8a, clang).txt
+	system: imx93a
+	kind: ssh failure
+IMX93_release_SMP_hyp_gcc_64
+	path: 2025/05/23/github/push/master/5e6f7c2/Deploy/868/logs/25_HW Run (IMX93, armv8a, gcc).txt
+	system: imx93a
+	kind: ssh failure
+IMX93_verification_MCS_clang_64
+	path: 2025/05/23/github/push/master/5e6f7c2/Deploy/868/logs/29_HW Run (IMX93, armv8a, clang).txt
+	system: imx93a
+	kind: ssh failure
+IMX93_verification_MCS_gcc_64
+	path: 2025/05/23/github/push/master/5e6f7c2/Deploy/868/logs/25_HW Run (IMX93, armv8a, gcc).txt
+	system: imx93a
+	kind: ssh failure
+IMX93_verification_SMP_MCS_clang_64
+	path: 2025/05/23/github/push/master/5e6f7c2/Deploy/868/logs/29_HW Run (IMX93, armv8a, clang).txt
+	system: imx93a
+	kind: ssh failure
+IMX93_verification_SMP_MCS_gcc_64
+	path: 2025/05/23/github/push/master/5e6f7c2/Deploy/868/logs/25_HW Run (IMX93, armv8a, gcc).txt
+	system: imx93a
+	kind: ssh failure
+IMX93_verification_SMP_clang_64
+	path: 2025/05/23/github/push/master/5e6f7c2/Deploy/868/logs/29_HW Run (IMX93, armv8a, clang).txt
+	system: imx93a
+	kind: ssh failure
+IMX93_verification_SMP_gcc_64
+	path: 2025/05/23/github/push/master/5e6f7c2/Deploy/868/logs/25_HW Run (IMX93, armv8a, gcc).txt
+	system: imx93a
+	kind: ssh failure
+IMX93_verification_SMP_hyp_MCS_clang_64
+	path: 2025/05/23/github/push/master/5e6f7c2/Deploy/868/logs/29_HW Run (IMX93, armv8a, clang).txt
+	system: imx93a
+	kind: ssh failure
+IMX93_verification_SMP_hyp_MCS_gcc_64
+	path: 2025/05/23/github/push/master/5e6f7c2/Deploy/868/logs/25_HW Run (IMX93, armv8a, gcc).txt
+	system: imx93a
+	kind: ssh failure
+IMX93_verification_SMP_hyp_clang_64
+	path: 2025/05/23/github/push/master/5e6f7c2/Deploy/868/logs/29_HW Run (IMX93, armv8a, clang).txt
+	system: imx93a
+	kind: ssh failure
+IMX93_verification_SMP_hyp_gcc_64
+	path: 2025/05/23/github/push/master/5e6f7c2/Deploy/868/logs/25_HW Run (IMX93, armv8a, gcc).txt
+	system: imx93a
+	kind: ssh failure
+IMX93_verification_clang_64
+	path: 2025/05/23/github/push/master/5e6f7c2/Deploy/868/logs/29_HW Run (IMX93, armv8a, clang).txt
+	system: imx93a
+	kind: ssh failure
+IMX93_verification_gcc_64
+	path: 2025/05/23/github/push/master/5e6f7c2/Deploy/868/logs/25_HW Run (IMX93, armv8a, gcc).txt
+	system: imx93a
+	kind: ssh failure
+IMX93_verification_hyp_MCS_clang_64
+	path: 2025/05/23/github/push/master/5e6f7c2/Deploy/868/logs/29_HW Run (IMX93, armv8a, clang).txt
+	system: imx93a
+	kind: ssh failure
+IMX93_verification_hyp_MCS_gcc_64
+	path: 2025/05/23/github/push/master/5e6f7c2/Deploy/868/logs/25_HW Run (IMX93, armv8a, gcc).txt
+	system: imx93a
+	kind: ssh failure
+IMX93_verification_hyp_clang_64
+	path: 2025/05/23/github/push/master/5e6f7c2/Deploy/868/logs/29_HW Run (IMX93, armv8a, clang).txt
+	system: imx93a
+	kind: ssh failure
+IMX93_verification_hyp_gcc_64
+	path: 2025/05/23/github/push/master/5e6f7c2/Deploy/868/logs/25_HW Run (IMX93, armv8a, gcc).txt
+	system: imx93a
+	kind: ssh failure
+ODROID_C4_debug_gcc_64
+	path: 2025/05/23/github/push/master/5e6f7c2/Deploy/868/logs/24_HW Run (ODROID_C4, armv8a, gcc).txt
+	system: odroidc4_1
+	kind: ssh failure
+ODROID_XU4_debug_clang_32
+	path: 2025/05/22/github/push/master/be8e649/Deploy/867/logs/29_HW Run (ODROID_XU4, armv7a, clang).txt
+	system: odroidxu4_2
+	kind: ssh failure
+TQMA8XQP1GB_debug_MCS_clang_64
+	path: 2025/06/01/github/manual/20250601T095536/b7d67a9/Deploy/877/logs/33_HW Run (TQMA8XQP1GB, armv8a, clang).txt
+	system: tqma
+	kind: ssh failure
+TQMA8XQP1GB_debug_SMP_MCS_clang_64
+	path: 2025/06/01/github/manual/20250601T095536/b7d67a9/Deploy/877/logs/33_HW Run (TQMA8XQP1GB, armv8a, clang).txt
+	system: tqma
+	kind: ssh failure
+TQMA8XQP1GB_debug_SMP_clang_64
+	path: 2025/06/01/github/manual/20250601T095536/b7d67a9/Deploy/877/logs/33_HW Run (TQMA8XQP1GB, armv8a, clang).txt
+	system: tqma
+	kind: ssh failure
+TQMA8XQP1GB_debug_clang_64
+	path: 2025/06/01/github/manual/20250601T095536/b7d67a9/Deploy/877/logs/33_HW Run (TQMA8XQP1GB, armv8a, clang).txt
+	system: tqma
+	kind: ssh failure
+TQMA8XQP1GB_release_MCS_clang_64
+	path: 2025/06/01/github/manual/20250601T095536/b7d67a9/Deploy/877/logs/33_HW Run (TQMA8XQP1GB, armv8a, clang).txt
+	system: tqma
+	kind: ssh failure
+TQMA8XQP1GB_release_SMP_MCS_clang_64
+	path: 2025/06/01/github/manual/20250601T095536/b7d67a9/Deploy/877/logs/33_HW Run (TQMA8XQP1GB, armv8a, clang).txt
+	system: tqma
+	kind: ssh failure
+TQMA8XQP1GB_release_SMP_clang_64
+	path: 2025/06/01/github/manual/20250601T095536/b7d67a9/Deploy/877/logs/33_HW Run (TQMA8XQP1GB, armv8a, clang).txt
+	system: tqma
+	kind: ssh failure
+TQMA8XQP1GB_release_clang_64
+	path: 2025/06/01/github/manual/20250601T095536/b7d67a9/Deploy/877/logs/33_HW Run (TQMA8XQP1GB, armv8a, clang).txt
+	system: tqma
+	kind: ssh failure
+TQMA8XQP1GB_verification_MCS_clang_64
+	path: 2025/06/01/github/manual/20250601T095536/b7d67a9/Deploy/877/logs/33_HW Run (TQMA8XQP1GB, armv8a, clang).txt
+	system: tqma
+	kind: ssh failure
+TQMA8XQP1GB_verification_SMP_MCS_clang_64
+	path: 2025/06/01/github/manual/20250601T095536/b7d67a9/Deploy/877/logs/33_HW Run (TQMA8XQP1GB, armv8a, clang).txt
+	system: tqma
+	kind: ssh failure
+TQMA8XQP1GB_verification_SMP_clang_64
+	path: 2025/06/01/github/manual/20250601T095536/b7d67a9/Deploy/877/logs/33_HW Run (TQMA8XQP1GB, armv8a, clang).txt
+	system: tqma
+	kind: ssh failure
+TQMA8XQP1GB_verification_clang_64
+	path: 2025/06/01/github/manual/20250601T095536/b7d67a9/Deploy/877/logs/33_HW Run (TQMA8XQP1GB, armv8a, clang).txt
+	system: tqma
+	kind: ssh failure

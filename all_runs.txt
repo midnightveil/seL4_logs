@@ -125,7 +125,7 @@ IMX8MM_EVK_verification_MCS_gcc_64
 IMX8MM_EVK_verification_SMP_MCS_clang_64
 	system: imx8mm, count=8
 IMX8MM_EVK_verification_SMP_MCS_gcc_64
-	system: imx8mm, count=8, failures=1
+	system: imx8mm, count=8
 IMX8MM_EVK_verification_SMP_clang_64
 	system: imx8mm, count=8
 IMX8MM_EVK_verification_SMP_gcc_64
@@ -207,7 +207,7 @@ IMX93_debug_SMP_hyp_clang_64
 IMX93_debug_SMP_hyp_gcc_64
 	system: imx93a, count=8, failures=3
 IMX93_debug_clang_64
-	system: imx93a, count=9, failures=1
+	system: imx93a, count=9
 IMX93_debug_gcc_64
 	system: imx93a, count=8
 IMX93_debug_hyp_MCS_clang_64
@@ -231,13 +231,13 @@ IMX93_release_SMP_clang_64
 IMX93_release_SMP_gcc_64
 	system: imx93a, count=8, failures=3
 IMX93_release_SMP_hyp_MCS_clang_64
-	system: imx93a, count=9, failures=4
+	system: imx93a, count=9, failures=3
 IMX93_release_SMP_hyp_MCS_gcc_64
-	system: imx93a, count=8, failures=3
+	system: imx93a, count=8, failures=2
 IMX93_release_SMP_hyp_clang_64
-	system: imx93a, count=9, failures=4
+	system: imx93a, count=9, failures=3
 IMX93_release_SMP_hyp_gcc_64
-	system: imx93a, count=8, failures=3
+	system: imx93a, count=8, failures=2
 IMX93_release_clang_64
 	system: imx93a, count=9
 IMX93_release_gcc_64
@@ -251,37 +251,37 @@ IMX93_release_hyp_clang_64
 IMX93_release_hyp_gcc_64
 	system: imx93a, count=8
 IMX93_verification_MCS_clang_64
-	system: imx93a, count=9, failures=1
+	system: imx93a, count=9
 IMX93_verification_MCS_gcc_64
-	system: imx93a, count=8, failures=1
+	system: imx93a, count=8
 IMX93_verification_SMP_MCS_clang_64
-	system: imx93a, count=9, failures=4
+	system: imx93a, count=9, failures=1
 IMX93_verification_SMP_MCS_gcc_64
-	system: imx93a, count=8, failures=3
+	system: imx93a, count=8, failures=2
 IMX93_verification_SMP_clang_64
-	system: imx93a, count=9, failures=4
+	system: imx93a, count=9, failures=1
 IMX93_verification_SMP_gcc_64
-	system: imx93a, count=8, failures=3
+	system: imx93a, count=8, failures=2
 IMX93_verification_SMP_hyp_MCS_clang_64
-	system: imx93a, count=9, failures=4
+	system: imx93a, count=9, failures=1
 IMX93_verification_SMP_hyp_MCS_gcc_64
-	system: imx93a, count=8, failures=3
+	system: imx93a, count=8, failures=2
 IMX93_verification_SMP_hyp_clang_64
-	system: imx93a, count=9, failures=4
+	system: imx93a, count=9, failures=1
 IMX93_verification_SMP_hyp_gcc_64
-	system: imx93a, count=8, failures=3
+	system: imx93a, count=8
 IMX93_verification_clang_64
-	system: imx93a, count=9, failures=1
+	system: imx93a, count=9
 IMX93_verification_gcc_64
-	system: imx93a, count=8, failures=1
+	system: imx93a, count=8
 IMX93_verification_hyp_MCS_clang_64
-	system: imx93a, count=9, failures=1
+	system: imx93a, count=9
 IMX93_verification_hyp_MCS_gcc_64
-	system: imx93a, count=8, failures=1
+	system: imx93a, count=8
 IMX93_verification_hyp_clang_64
-	system: imx93a, count=9, failures=1
+	system: imx93a, count=9
 IMX93_verification_hyp_gcc_64
-	system: imx93a, count=8, failures=1
+	system: imx93a, count=8
 ODROID_C2_debug_MCS_clang_64
 	system: odroidc2, count=11
 ODROID_C2_debug_MCS_gcc_64
@@ -321,7 +321,7 @@ ODROID_C4_debug_SMP_hyp_gcc_64
 ODROID_C4_debug_clang_64
 	system: odroidc4_2, count=9
 ODROID_C4_debug_gcc_64
-	system: odroidc4_1, count=9, failures=1
+	system: odroidc4_1, count=9
 ODROID_C4_debug_hyp_MCS_clang_64
 	system: odroidc4_2, count=9
 ODROID_C4_debug_hyp_MCS_gcc_64
@@ -391,7 +391,7 @@ ODROID_XU4_debug_MCS_clang_32
 ODROID_XU4_debug_MCS_gcc_32
 	system: odroidxu4_2, count=9
 ODROID_XU4_debug_clang_32
-	system: odroidxu4_2, count=9, failures=1
+	system: odroidxu4_2, count=9
 ODROID_XU4_debug_gcc_32
 	system: odroidxu4_2, count=9
 ODROID_XU4_debug_hyp_MCS_gcc_32
@@ -751,51 +751,51 @@ TK1_verification_hyp_clang_32
 TK1_verification_hyp_gcc_32
 	system: jetson1, count=8
 TQMA8XQP1GB_debug_MCS_clang_64
-	system: tqma, count=10, failures=1
+	system: tqma, count=10
 TQMA8XQP1GB_debug_MCS_gcc_64
 	system: tqma, count=10
 TQMA8XQP1GB_debug_SMP_MCS_clang_64
-	system: tqma, count=10, failures=1
+	system: tqma, count=10
 TQMA8XQP1GB_debug_SMP_MCS_gcc_64
 	system: tqma, count=10
 TQMA8XQP1GB_debug_SMP_clang_64
-	system: tqma, count=10, failures=1
+	system: tqma, count=10
 TQMA8XQP1GB_debug_SMP_gcc_64
 	system: tqma, count=10
 TQMA8XQP1GB_debug_clang_64
-	system: tqma, count=10, failures=1
+	system: tqma, count=10
 TQMA8XQP1GB_debug_gcc_64
 	system: tqma, count=10
 TQMA8XQP1GB_release_MCS_clang_64
-	system: tqma, count=10, failures=1
+	system: tqma, count=10
 TQMA8XQP1GB_release_MCS_gcc_64
 	system: tqma, count=10
 TQMA8XQP1GB_release_SMP_MCS_clang_64
-	system: tqma, count=10, failures=1
+	system: tqma, count=10
 TQMA8XQP1GB_release_SMP_MCS_gcc_64
 	system: tqma, count=10
 TQMA8XQP1GB_release_SMP_clang_64
-	system: tqma, count=10, failures=1
+	system: tqma, count=10
 TQMA8XQP1GB_release_SMP_gcc_64
 	system: tqma, count=10
 TQMA8XQP1GB_release_clang_64
-	system: tqma, count=10, failures=1
+	system: tqma, count=10
 TQMA8XQP1GB_release_gcc_64
 	system: tqma, count=10
 TQMA8XQP1GB_verification_MCS_clang_64
-	system: tqma, count=10, failures=1
+	system: tqma, count=10
 TQMA8XQP1GB_verification_MCS_gcc_64
 	system: tqma, count=10
 TQMA8XQP1GB_verification_SMP_MCS_clang_64
-	system: tqma, count=10, failures=1
+	system: tqma, count=10
 TQMA8XQP1GB_verification_SMP_MCS_gcc_64
 	system: tqma, count=10
 TQMA8XQP1GB_verification_SMP_clang_64
-	system: tqma, count=10, failures=1
+	system: tqma, count=10
 TQMA8XQP1GB_verification_SMP_gcc_64
 	system: tqma, count=10
 TQMA8XQP1GB_verification_clang_64
-	system: tqma, count=10, failures=1
+	system: tqma, count=10
 TQMA8XQP1GB_verification_gcc_64
 	system: tqma, count=10
 TX1_debug_MCS_clang_64
@@ -853,7 +853,7 @@ TX1_release_SMP_hyp_gcc_64
 TX1_release_clang_64
 	system: tx1a, count=8
 TX1_release_gcc_64
-	system: tx1a, count=8, failures=1
+	system: tx1a, count=8
 TX1_release_hyp_MCS_clang_64
 	system: tx1a, count=8
 TX1_release_hyp_MCS_gcc_64
@@ -1027,7 +1027,7 @@ ZYNQMP106_debug_hyp_MCS_clang_64
 ZYNQMP106_debug_hyp_MCS_gcc_64
 	system: zcu106, count=8
 ZYNQMP106_debug_hyp_clang_64
-	system: zcu106, count=8, failures=1
+	system: zcu106, count=8
 ZYNQMP106_debug_hyp_gcc_64
 	system: zcu106, count=8
 ZYNQMP106_release_MCS_clang_32

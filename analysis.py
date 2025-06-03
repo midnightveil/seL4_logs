@@ -84,11 +84,11 @@ for root, dirs, files in os.walk("2025"):
 
                         if "[-- Console server shutting down --]" in group:
                             assert kind is None, f"previous: {kind} in {test} {fpath}"
-                            kind = "console server rebooted"
+                            kind = "conserver failure"
 
                         if "console: Unable to connect to 10.13.1.202:3109" in group:
                             assert kind is None, f"previous: {kind} in {test} {fpath}"
-                            kind = "console server dead"
+                            kind = "conserver failure"
 
                         if "[[Timeout]]" in group:
                             if kind == "boot failure":
@@ -155,8 +155,23 @@ all_runs = sorted(all_runs, key=lambda c: (c["test"], c["mq_system"]))
 
 failure_counts = defaultdict(int)
 
+with open("all_failures.txt", "w") as f:
+    for case in failures:
+        print(case["test"], file=f)
+        print("\tpath:", case["path"], file=f)
+        print("\tsystem:", case["mq_system"], file=f)
+        print("\tkind:", case['kind'], file=f)
+        if case["variant"]:
+            print("\tvariant:", case["variant"], file=f)
+
+# all including spurious
+print("Output to all_failures.txt")
+
 with open("failures.txt", "w") as f:
     for case in failures:
+        if case["kind"] in ["boot failure", "ssh failure", "conserver failure"]:
+            continue
+
         print(case["test"], file=f)
         print("\tpath:", case["path"], file=f)
         print("\tsystem:", case["mq_system"], file=f)
