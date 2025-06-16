@@ -1,0 +1,109 @@
+﻿2025-06-13T05:01:20.6443846Z Current runner version: '2.325.0'
+2025-06-13T05:01:20.6469796Z ##[group]Runner Image Provisioner
+2025-06-13T05:01:20.6470747Z Hosted Compute Agent
+2025-06-13T05:01:20.6471267Z Version: 20250529.345
+2025-06-13T05:01:20.6471851Z Commit: 22237e57af968c281070ffa8ed912c1b754f9a23
+2025-06-13T05:01:20.6472597Z Build Date: 2025-05-29T20:18:30Z
+2025-06-13T05:01:20.6473198Z ##[endgroup]
+2025-06-13T05:01:20.6473717Z ##[group]Operating System
+2025-06-13T05:01:20.6474348Z Ubuntu
+2025-06-13T05:01:20.6474834Z 24.04.2
+2025-06-13T05:01:20.6475264Z LTS
+2025-06-13T05:01:20.6475757Z ##[endgroup]
+2025-06-13T05:01:20.6476215Z ##[group]Runner Image
+2025-06-13T05:01:20.6476790Z Image: ubuntu-24.04
+2025-06-13T05:01:20.6477493Z Version: 20250602.3.0
+2025-06-13T05:01:20.6478530Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250602.3/images/ubuntu/Ubuntu2404-Readme.md
+2025-06-13T05:01:20.6480016Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250602.3
+2025-06-13T05:01:20.6481059Z ##[endgroup]
+2025-06-13T05:01:20.6483582Z ##[group]GITHUB_TOKEN Permissions
+2025-06-13T05:01:20.6485857Z Actions: write
+2025-06-13T05:01:20.6486421Z Attestations: write
+2025-06-13T05:01:20.6487216Z Checks: write
+2025-06-13T05:01:20.6487889Z Contents: write
+2025-06-13T05:01:20.6488408Z Deployments: write
+2025-06-13T05:01:20.6488966Z Discussions: write
+2025-06-13T05:01:20.6489518Z Issues: write
+2025-06-13T05:01:20.6489971Z Metadata: read
+2025-06-13T05:01:20.6490490Z Models: read
+2025-06-13T05:01:20.6490957Z Packages: write
+2025-06-13T05:01:20.6491466Z Pages: write
+2025-06-13T05:01:20.6491900Z PullRequests: write
+2025-06-13T05:01:20.6492533Z RepositoryProjects: write
+2025-06-13T05:01:20.6493056Z SecurityEvents: write
+2025-06-13T05:01:20.6493671Z Statuses: write
+2025-06-13T05:01:20.6494241Z ##[endgroup]
+2025-06-13T05:01:20.6496305Z Secret source: Actions
+2025-06-13T05:01:20.6497651Z Prepare workflow directory
+2025-06-13T05:01:20.6824116Z Prepare all required actions
+2025-06-13T05:01:20.6862036Z Getting action download info
+2025-06-13T05:01:20.9351584Z Download action repository 'seL4/ci-actions@master' (SHA:6a0001994b4a8e22b5627369d991587e67840501)
+2025-06-13T05:01:22.7714229Z Complete job name: Freeze Code
+2025-06-13T05:01:22.8401155Z ##[group]Run seL4/ci-actions/repo-checkout@master
+2025-06-13T05:01:22.8402597Z with:
+2025-06-13T05:01:22.8403337Z   manifest_repo: sel4test-manifest
+2025-06-13T05:01:22.8404303Z   manifest: master.xml
+2025-06-13T05:01:22.8405121Z   action_name: repo-checkout
+2025-06-13T05:01:22.8406148Z ##[endgroup]
+2025-06-13T05:01:22.9477134Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../repo-checkout/steps.sh
+2025-06-13T05:01:22.9525501Z ##[group]Setting up
+2025-06-13T05:01:22.9579653Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2025-06-13T05:01:22.9581556Z                                  Dload  Upload   Total   Spent    Left  Speed
+2025-06-13T05:01:22.9582496Z 
+2025-06-13T05:01:23.0048493Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-06-13T05:01:23.0051151Z 100 44952  100 44952    0     0   927k      0 --:--:-- --:--:-- --:--:--  934k
+2025-06-13T05:01:23.9755286Z Defaulting to user installation because normal site-packages is not writeable
+2025-06-13T05:01:24.5517673Z Collecting PyGithub
+2025-06-13T05:01:24.5974153Z   Downloading PyGithub-2.6.1-py3-none-any.whl.metadata (3.9 kB)
+2025-06-13T05:01:24.6343679Z Collecting pynacl>=1.4.0 (from PyGithub)
+2025-06-13T05:01:24.6414981Z   Downloading PyNaCl-1.5.0-cp36-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl.metadata (8.6 kB)
+2025-06-13T05:01:24.6470806Z Requirement already satisfied: requests>=2.14.0 in /usr/lib/python3/dist-packages (from PyGithub) (2.31.0)
+2025-06-13T05:01:24.6485877Z Requirement already satisfied: pyjwt>=2.4.0 in /usr/lib/python3/dist-packages (from pyjwt[crypto]>=2.4.0->PyGithub) (2.7.0)
+2025-06-13T05:01:24.6501014Z Requirement already satisfied: typing-extensions>=4.0.0 in /usr/lib/python3/dist-packages (from PyGithub) (4.10.0)
+2025-06-13T05:01:24.6512759Z Requirement already satisfied: urllib3>=1.26.0 in /usr/lib/python3/dist-packages (from PyGithub) (2.0.7)
+2025-06-13T05:01:24.6751168Z Collecting Deprecated (from PyGithub)
+2025-06-13T05:01:24.6821120Z   Downloading Deprecated-1.2.18-py2.py3-none-any.whl.metadata (5.7 kB)
+2025-06-13T05:01:24.7045207Z Requirement already satisfied: cryptography>=3.4.0 in /usr/lib/python3/dist-packages (from pyjwt[crypto]>=2.4.0->PyGithub) (41.0.7)
+2025-06-13T05:01:24.8191532Z Collecting cffi>=1.4.1 (from pynacl>=1.4.0->PyGithub)
+2025-06-13T05:01:24.8263716Z   Downloading cffi-1.17.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.5 kB)
+2025-06-13T05:01:24.9380918Z Collecting wrapt<2,>=1.10 (from Deprecated->PyGithub)
+2025-06-13T05:01:24.9454362Z   Downloading wrapt-1.17.2-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.4 kB)
+2025-06-13T05:01:24.9669549Z Collecting pycparser (from cffi>=1.4.1->pynacl>=1.4.0->PyGithub)
+2025-06-13T05:01:24.9739180Z   Downloading pycparser-2.22-py3-none-any.whl.metadata (943 bytes)
+2025-06-13T05:01:24.9984775Z Downloading PyGithub-2.6.1-py3-none-any.whl (410 kB)
+2025-06-13T05:01:25.0224687Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 410.5/410.5 kB 19.0 MB/s eta 0:00:00
+2025-06-13T05:01:25.0298504Z Downloading PyNaCl-1.5.0-cp36-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl (856 kB)
+2025-06-13T05:01:25.0410282Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 856.7/856.7 kB 92.1 MB/s eta 0:00:00
+2025-06-13T05:01:25.0478338Z Downloading Deprecated-1.2.18-py2.py3-none-any.whl (10.0 kB)
+2025-06-13T05:01:25.0573252Z Downloading cffi-1.17.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (479 kB)
+2025-06-13T05:01:25.0641935Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 479.4/479.4 kB 94.6 MB/s eta 0:00:00
+2025-06-13T05:01:25.0715116Z Downloading wrapt-1.17.2-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (89 kB)
+2025-06-13T05:01:25.0754041Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 89.2/89.2 kB 35.1 MB/s eta 0:00:00
+2025-06-13T05:01:25.0823229Z Downloading pycparser-2.22-py3-none-any.whl (117 kB)
+2025-06-13T05:01:25.0864855Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 117.6/117.6 kB 42.4 MB/s eta 0:00:00
+2025-06-13T05:01:25.3891728Z Installing collected packages: wrapt, pycparser, Deprecated, cffi, pynacl, PyGithub
+2025-06-13T05:01:25.8715434Z Successfully installed Deprecated-1.2.18 PyGithub-2.6.1 cffi-1.17.1 pycparser-2.22 pynacl-1.5.0 wrapt-1.17.2
+2025-06-13T05:01:25.9425049Z ##[endgroup]
+2025-06-13T05:01:25.9425592Z ##[group]Repo checkout
+2025-06-13T05:01:25.9546485Z Starting repo checkout on branch master with manifest master.xml:
+2025-06-13T05:01:27.5433460Z 
+2025-06-13T05:01:27.5434021Z repo has been initialized in /home/runner/work/seL4/seL4
+2025-06-13T05:01:29.1032209Z repo sync has finished successfully.
+2025-06-13T05:01:29.3634268Z Fetching 2417e0fc69b5c536966f4132dcde1be75d06328d from github.com/seL4/seL4.git
+2025-06-13T05:01:29.8435205Z Manifest summary:
+2025-06-13T05:01:29.8435586Z -----------------
+2025-06-13T05:01:29.8436180Z  sel4test-manifest: fb80a030 Updating default.xml                           (origin/HEAD)
+2025-06-13T05:01:29.8437204Z               seL4: 2417e0fc mcs: refactor doReplyTransfer and setMRs_fault (seL4/HEAD)
+2025-06-13T05:01:29.8437974Z           musllibc: c9249738 tls: Add build checks for unsupported tls se.. (seL4/sel4)
+2025-06-13T05:01:29.8438740Z          seL4_libs: 959d4c38 use LibPlatSupportHaveTimer instead of inverse (seL4/HEAD)
+2025-06-13T05:01:29.8439615Z sel4_projects_libs: 46f6dc9c remove obsolete LICENSE_* files                (seL4/HEAD)
+2025-06-13T05:01:29.8440419Z        sel4runtime: 86489cf6 github: use central CI workflows               (seL4/HEAD)
+2025-06-13T05:01:29.8441153Z           sel4test: 1957e33a Fix style error                                (seL4/HEAD)
+2025-06-13T05:01:29.8441899Z          util_libs: f8ac3702 ltimer: indicate no support for more platforms (seL4/HEAD)
+2025-06-13T05:01:29.8443168Z             nanopb: 1466e6f9 Publishing nanopb-0.4.3                        (tags/0.4.3)
+2025-06-13T05:01:29.8443970Z            opensbi: 234ed8e4 include: Bump-up version to 0.9                (tags/v0.9^0)
+2025-06-13T05:01:29.8444747Z         seL4_tools: be89b58e elfloader: cast linker symbol to avoid warning (seL4/HEAD)
+2025-06-13T05:01:29.8486489Z ##[endgroup]
+2025-06-13T05:01:30.0899971Z Evaluate and set job outputs
+2025-06-13T05:01:30.0939490Z Set output 'xml'
+2025-06-13T05:01:30.0941141Z Cleaning up orphan processes

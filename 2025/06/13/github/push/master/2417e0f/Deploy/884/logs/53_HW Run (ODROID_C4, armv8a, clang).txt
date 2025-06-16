@@ -1,0 +1,276 @@
+﻿2025-06-13T06:01:58.7028908Z Current runner version: '2.325.0'
+2025-06-13T06:01:58.7053714Z ##[group]Runner Image Provisioner
+2025-06-13T06:01:58.7054695Z Hosted Compute Agent
+2025-06-13T06:01:58.7055343Z Version: 20250529.345
+2025-06-13T06:01:58.7055967Z Commit: 22237e57af968c281070ffa8ed912c1b754f9a23
+2025-06-13T06:01:58.7056784Z Build Date: 2025-05-29T20:18:30Z
+2025-06-13T06:01:58.7057437Z ##[endgroup]
+2025-06-13T06:01:58.7058033Z ##[group]Operating System
+2025-06-13T06:01:58.7058654Z Ubuntu
+2025-06-13T06:01:58.7059196Z 24.04.2
+2025-06-13T06:01:58.7059782Z LTS
+2025-06-13T06:01:58.7060331Z ##[endgroup]
+2025-06-13T06:01:58.7060911Z ##[group]Runner Image
+2025-06-13T06:01:58.7061535Z Image: ubuntu-24.04
+2025-06-13T06:01:58.7062106Z Version: 20250602.3.0
+2025-06-13T06:01:58.7063582Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250602.3/images/ubuntu/Ubuntu2404-Readme.md
+2025-06-13T06:01:58.7065235Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250602.3
+2025-06-13T06:01:58.7066353Z ##[endgroup]
+2025-06-13T06:01:58.7068957Z ##[group]GITHUB_TOKEN Permissions
+2025-06-13T06:01:58.7071126Z Actions: write
+2025-06-13T06:01:58.7071730Z Attestations: write
+2025-06-13T06:01:58.7072434Z Checks: write
+2025-06-13T06:01:58.7073137Z Contents: write
+2025-06-13T06:01:58.7073820Z Deployments: write
+2025-06-13T06:01:58.7074430Z Discussions: write
+2025-06-13T06:01:58.7074972Z Issues: write
+2025-06-13T06:01:58.7075575Z Metadata: read
+2025-06-13T06:01:58.7076117Z Models: read
+2025-06-13T06:01:58.7077085Z Packages: write
+2025-06-13T06:01:58.7077718Z Pages: write
+2025-06-13T06:01:58.7078259Z PullRequests: write
+2025-06-13T06:01:58.7078925Z RepositoryProjects: write
+2025-06-13T06:01:58.7079579Z SecurityEvents: write
+2025-06-13T06:01:58.7080320Z Statuses: write
+2025-06-13T06:01:58.7080956Z ##[endgroup]
+2025-06-13T06:01:58.7083522Z Secret source: Actions
+2025-06-13T06:01:58.7084658Z Prepare workflow directory
+2025-06-13T06:01:58.7424384Z Prepare all required actions
+2025-06-13T06:01:58.7482387Z Getting action download info
+2025-06-13T06:01:59.2121277Z ##[group]Download immutable action package 'actions/checkout@v4'
+2025-06-13T06:01:59.2122713Z Version: 4.2.2
+2025-06-13T06:01:59.2124017Z Digest: sha256:ccb2698953eaebd21c7bf6268a94f9c26518a7e38e27e0b83c1fe1ad049819b1
+2025-06-13T06:01:59.2125362Z Source commit SHA: 11bd71901bbe5b1630ceea73d27597364c9af683
+2025-06-13T06:01:59.2126177Z ##[endgroup]
+2025-06-13T06:01:59.3033144Z ##[group]Download immutable action package 'actions/download-artifact@v4'
+2025-06-13T06:01:59.3034247Z Version: 4.3.0
+2025-06-13T06:01:59.3035049Z Digest: sha256:552a5b9ad918f62ec0c2e8f42f3c694d4ebd1b4036b18c39b14168fcdfc0e4f2
+2025-06-13T06:01:59.3036115Z Source commit SHA: d3f86a106a0bac45b974a628896c90dbdf5c8093
+2025-06-13T06:01:59.3036885Z ##[endgroup]
+2025-06-13T06:01:59.5880539Z Download action repository 'seL4/ci-actions@master' (SHA:6a0001994b4a8e22b5627369d991587e67840501)
+2025-06-13T06:02:03.4286127Z Complete job name: HW Run (ODROID_C4, armv8a, clang)
+2025-06-13T06:02:03.4951050Z ##[group]Run actions/checkout@v4
+2025-06-13T06:02:03.4951746Z with:
+2025-06-13T06:02:03.4952027Z   repository: seL4/machine_queue
+2025-06-13T06:02:03.4952339Z   path: machine_queue
+2025-06-13T06:02:03.4952798Z   token: ***
+2025-06-13T06:02:03.4953231Z   ssh-strict: true
+2025-06-13T06:02:03.4953498Z   ssh-user: git
+2025-06-13T06:02:03.4953767Z   persist-credentials: true
+2025-06-13T06:02:03.4954048Z   clean: true
+2025-06-13T06:02:03.4954313Z   sparse-checkout-cone-mode: true
+2025-06-13T06:02:03.4954621Z   fetch-depth: 1
+2025-06-13T06:02:03.4954885Z   fetch-tags: false
+2025-06-13T06:02:03.4955141Z   show-progress: true
+2025-06-13T06:02:03.4955411Z   lfs: false
+2025-06-13T06:02:03.4955664Z   submodules: false
+2025-06-13T06:02:03.4955929Z   set-safe-directory: true
+2025-06-13T06:02:03.4956458Z ##[endgroup]
+2025-06-13T06:02:03.6017166Z Syncing repository: seL4/machine_queue
+2025-06-13T06:02:03.6018909Z ##[group]Getting Git version info
+2025-06-13T06:02:03.6019623Z Working directory is '/home/runner/work/seL4/seL4/machine_queue'
+2025-06-13T06:02:03.6020771Z [command]/usr/bin/git version
+2025-06-13T06:02:03.6048079Z git version 2.49.0
+2025-06-13T06:02:03.6073615Z ##[endgroup]
+2025-06-13T06:02:03.6086758Z Temporarily overriding HOME='/home/runner/work/_temp/882de475-d528-4a45-9933-ffb36b3bd3e6' before making global git config changes
+2025-06-13T06:02:03.6088126Z Adding repository directory to the temporary git global config as a safe directory
+2025-06-13T06:02:03.6099290Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/seL4/seL4/machine_queue
+2025-06-13T06:02:03.6130386Z ##[group]Initializing the repository
+2025-06-13T06:02:03.6135256Z [command]/usr/bin/git init /home/runner/work/seL4/seL4/machine_queue
+2025-06-13T06:02:03.6200402Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-06-13T06:02:03.6201504Z hint: is subject to change. To configure the initial branch name to use in all
+2025-06-13T06:02:03.6202396Z hint: of your new repositories, which will suppress this warning, call:
+2025-06-13T06:02:03.6203801Z hint:
+2025-06-13T06:02:03.6204403Z hint: 	git config --global init.defaultBranch <name>
+2025-06-13T06:02:03.6205066Z hint:
+2025-06-13T06:02:03.6205675Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-06-13T06:02:03.6206622Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-06-13T06:02:03.6207388Z hint:
+2025-06-13T06:02:03.6207750Z hint: 	git branch -m <name>
+2025-06-13T06:02:03.6208297Z Initialized empty Git repository in /home/runner/work/seL4/seL4/machine_queue/.git/
+2025-06-13T06:02:03.6216509Z [command]/usr/bin/git remote add origin https://github.com/seL4/machine_queue
+2025-06-13T06:02:03.6247615Z ##[endgroup]
+2025-06-13T06:02:03.6248136Z ##[group]Disabling automatic garbage collection
+2025-06-13T06:02:03.6251975Z [command]/usr/bin/git config --local gc.auto 0
+2025-06-13T06:02:03.6279804Z ##[endgroup]
+2025-06-13T06:02:03.6280303Z ##[group]Setting up auth
+2025-06-13T06:02:03.6286081Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-06-13T06:02:03.6314742Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-06-13T06:02:03.6574881Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-06-13T06:02:03.6602872Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-06-13T06:02:03.6832875Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-06-13T06:02:03.6873558Z ##[endgroup]
+2025-06-13T06:02:03.6874449Z ##[group]Determining the default branch
+2025-06-13T06:02:03.6878805Z Retrieving the default branch name
+2025-06-13T06:02:04.0120959Z Default branch 'master'
+2025-06-13T06:02:04.0122365Z ##[endgroup]
+2025-06-13T06:02:04.0123617Z ##[group]Fetching the repository
+2025-06-13T06:02:04.0129176Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/master:refs/remotes/origin/master
+2025-06-13T06:02:04.6256816Z From https://github.com/seL4/machine_queue
+2025-06-13T06:02:04.6258549Z  * [new branch]      master     -> origin/master
+2025-06-13T06:02:04.6285018Z ##[endgroup]
+2025-06-13T06:02:04.6285917Z ##[group]Determining the checkout info
+2025-06-13T06:02:04.6286967Z ##[endgroup]
+2025-06-13T06:02:04.6292053Z [command]/usr/bin/git sparse-checkout disable
+2025-06-13T06:02:04.6330545Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-06-13T06:02:04.6359319Z ##[group]Checking out the ref
+2025-06-13T06:02:04.6363753Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2025-06-13T06:02:04.6438554Z Reset branch 'master'
+2025-06-13T06:02:04.6440932Z branch 'master' set up to track 'origin/master'.
+2025-06-13T06:02:04.6446603Z ##[endgroup]
+2025-06-13T06:02:04.6481106Z [command]/usr/bin/git log -1 --format=%H
+2025-06-13T06:02:04.6503860Z 9c388cd54d6131052ae729dbfbd6885f99ccce70
+2025-06-13T06:02:04.6723437Z ##[group]Run actions/download-artifact@v4
+2025-06-13T06:02:04.6723823Z with:
+2025-06-13T06:02:04.6724071Z   name: images-armv8a-clang
+2025-06-13T06:02:04.6724366Z   merge-multiple: false
+2025-06-13T06:02:04.6724644Z   repository: seL4/seL4
+2025-06-13T06:02:04.6724913Z   run-id: 15626826387
+2025-06-13T06:02:04.6725166Z ##[endgroup]
+2025-06-13T06:02:04.8651054Z Downloading single artifact
+2025-06-13T06:02:05.1493238Z Preparing to download the following artifacts:
+2025-06-13T06:02:05.1494489Z - images-armv8a-clang (ID: 3320149316, Size: 196699304, Expected Digest: sha256:5a0e444a966a2eaf905e18cdcd6f1c4a22a88ed719a71fc6bb750a17267ec8e2)
+2025-06-13T06:02:05.3553462Z Redirecting to blob download url: https://productionresultssa16.blob.core.windows.net/actions-results/f10cf2b7-b999-4c40-a38e-9b45a0743c53/workflow-job-run-2b68d13f-9abb-5057-ac71-7e69947a9e71/artifacts/45ddfe8bba391b0b2effbab876533394f829a540530108e69e7cd4792ff79156.zip
+2025-06-13T06:02:05.3554965Z Starting download of artifact to: /home/runner/work/seL4/seL4
+2025-06-13T06:02:05.7027662Z (node:2063) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2025-06-13T06:02:05.7029355Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-06-13T06:02:12.8712352Z SHA256 digest of downloaded artifact is 5a0e444a966a2eaf905e18cdcd6f1c4a22a88ed719a71fc6bb750a17267ec8e2
+2025-06-13T06:02:12.8713563Z Artifact download completed successfully.
+2025-06-13T06:02:12.8713989Z Total of 1 artifact(s) downloaded
+2025-06-13T06:02:12.8721996Z Download artifact has finished successfully
+2025-06-13T06:02:12.8874706Z ##[group]Run seL4/ci-actions/sel4test-hw-run@master
+2025-06-13T06:02:12.8875086Z with:
+2025-06-13T06:02:12.8875310Z   platform: ODROID_C4
+2025-06-13T06:02:12.8875542Z   compiler: clang
+2025-06-13T06:02:12.8875769Z   index: $33
+2025-06-13T06:02:12.8875989Z   action_name: sel4test-hw-run
+2025-06-13T06:02:12.8876228Z env:
+2025-06-13T06:02:12.8877958Z   HW_SSH: ***
+
+2025-06-13T06:02:12.8904940Z ##[endgroup]
+2025-06-13T06:02:12.9827672Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/steps.sh
+2025-06-13T06:02:12.9880198Z ##[group]Setting up
+2025-06-13T06:02:13.0368778Z Agent pid 2093
+2025-06-13T06:02:13.0705214Z Cloning into 'seL4_libs'...
+2025-06-13T06:02:17.0072338Z Reading package lists...
+2025-06-13T06:02:17.1906471Z Building dependency tree...
+2025-06-13T06:02:17.1954011Z Reading state information...
+2025-06-13T06:02:17.3904234Z libffi-dev is already the newest version (3.4.6-1build1).
+2025-06-13T06:02:17.3905088Z libffi-dev set to manually installed.
+2025-06-13T06:02:17.3905626Z 0 upgraded, 0 newly installed, 0 to remove and 15 not upgraded.
+2025-06-13T06:02:19.2668572Z Collecting junitparser
+2025-06-13T06:02:19.3547138Z   Downloading junitparser-3.2.0-py2.py3-none-any.whl.metadata (9.0 kB)
+2025-06-13T06:02:19.3841109Z Collecting sel4-deps
+2025-06-13T06:02:19.3884695Z   Downloading sel4_deps-0.5.0-py3-none-any.whl.metadata (653 bytes)
+2025-06-13T06:02:19.3988412Z Requirement already satisfied: six in /usr/lib/python3/dist-packages (from sel4-deps) (1.16.0)
+2025-06-13T06:02:19.4136973Z Collecting future (from sel4-deps)
+2025-06-13T06:02:19.4177111Z   Downloading future-1.0.0-py3-none-any.whl.metadata (4.0 kB)
+2025-06-13T06:02:19.4226632Z Requirement already satisfied: jinja2 in /usr/lib/python3/dist-packages (from sel4-deps) (3.1.2)
+2025-06-13T06:02:19.6237723Z Collecting lxml (from sel4-deps)
+2025-06-13T06:02:19.6273414Z   Downloading lxml-5.4.0-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (3.5 kB)
+2025-06-13T06:02:19.6428701Z Collecting ply (from sel4-deps)
+2025-06-13T06:02:19.6463701Z   Downloading ply-3.11-py2.py3-none-any.whl.metadata (844 bytes)
+2025-06-13T06:02:19.7262796Z Collecting psutil (from sel4-deps)
+2025-06-13T06:02:19.7301171Z   Downloading psutil-7.0.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (22 kB)
+2025-06-13T06:02:19.7516120Z Collecting bs4 (from sel4-deps)
+2025-06-13T06:02:19.7546949Z   Downloading bs4-0.0.2-py2.py3-none-any.whl.metadata (411 bytes)
+2025-06-13T06:02:19.7708865Z Collecting pyelftools (from sel4-deps)
+2025-06-13T06:02:19.7743627Z   Downloading pyelftools-0.32-py3-none-any.whl.metadata (372 bytes)
+2025-06-13T06:02:19.7955715Z Collecting sh (from sel4-deps)
+2025-06-13T06:02:19.8035527Z   Downloading sh-2.2.2-py3-none-any.whl.metadata (3.7 kB)
+2025-06-13T06:02:19.8075089Z Requirement already satisfied: pexpect in /usr/lib/python3/dist-packages (from sel4-deps) (4.9.0)
+2025-06-13T06:02:19.8085255Z Requirement already satisfied: pyyaml>=5.1 in /usr/lib/python3/dist-packages (from sel4-deps) (6.0.1)
+2025-06-13T06:02:19.8094149Z Requirement already satisfied: jsonschema in /usr/lib/python3/dist-packages (from sel4-deps) (4.10.3)
+2025-06-13T06:02:19.8210753Z Collecting pyfdt (from sel4-deps)
+2025-06-13T06:02:19.8254841Z   Downloading pyfdt-0.3.tar.gz (9.1 kB)
+2025-06-13T06:02:19.8307104Z   Preparing metadata (setup.py): started
+2025-06-13T06:02:20.0865282Z   Preparing metadata (setup.py): finished with status 'done'
+2025-06-13T06:02:20.1034402Z Collecting cmake-format==0.4.5 (from sel4-deps)
+2025-06-13T06:02:20.1092292Z   Downloading cmake_format-0.4.5.tar.gz (51 kB)
+2025-06-13T06:02:20.1173492Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 51.1/51.1 kB 7.1 MB/s eta 0:00:00
+2025-06-13T06:02:20.1242918Z   Preparing metadata (setup.py): started
+2025-06-13T06:02:20.2912182Z   Preparing metadata (setup.py): finished with status 'done'
+2025-06-13T06:02:20.3062281Z Collecting guardonce (from sel4-deps)
+2025-06-13T06:02:20.3177443Z   Downloading guardonce-2.4.0-py2.py3-none-any.whl.metadata (3.4 kB)
+2025-06-13T06:02:20.3411530Z Collecting autopep8==2.3.1 (from sel4-deps)
+2025-06-13T06:02:20.3455516Z   Downloading autopep8-2.3.1-py2.py3-none-any.whl.metadata (16 kB)
+2025-06-13T06:02:20.3645629Z Collecting libarchive-c (from sel4-deps)
+2025-06-13T06:02:20.3689445Z   Downloading libarchive_c-5.3-py3-none-any.whl.metadata (5.8 kB)
+2025-06-13T06:02:20.3923279Z Collecting pycodestyle>=2.12.0 (from autopep8==2.3.1->sel4-deps)
+2025-06-13T06:02:20.3953782Z   Downloading pycodestyle-2.13.0-py2.py3-none-any.whl.metadata (4.5 kB)
+2025-06-13T06:02:20.4221702Z Collecting beautifulsoup4 (from bs4->sel4-deps)
+2025-06-13T06:02:20.4254240Z   Downloading beautifulsoup4-4.13.4-py3-none-any.whl.metadata (3.8 kB)
+2025-06-13T06:02:20.4464230Z Requirement already satisfied: attrs>=17.4.0 in /usr/lib/python3/dist-packages (from jsonschema->sel4-deps) (23.2.0)
+2025-06-13T06:02:20.4479910Z Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,>=0.14.0 in /usr/lib/python3/dist-packages (from jsonschema->sel4-deps) (0.20.0)
+2025-06-13T06:02:20.5373991Z Collecting soupsieve>1.2 (from beautifulsoup4->bs4->sel4-deps)
+2025-06-13T06:02:20.5406810Z   Downloading soupsieve-2.7-py3-none-any.whl.metadata (4.6 kB)
+2025-06-13T06:02:20.5449747Z Requirement already satisfied: typing-extensions>=4.0.0 in /usr/lib/python3/dist-packages (from beautifulsoup4->bs4->sel4-deps) (4.10.0)
+2025-06-13T06:02:20.5524678Z Downloading junitparser-3.2.0-py2.py3-none-any.whl (13 kB)
+2025-06-13T06:02:20.5585171Z Downloading sel4_deps-0.5.0-py3-none-any.whl (1.2 kB)
+2025-06-13T06:02:20.5651259Z Downloading autopep8-2.3.1-py2.py3-none-any.whl (45 kB)
+2025-06-13T06:02:20.5702793Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.7/45.7 kB 10.9 MB/s eta 0:00:00
+2025-06-13T06:02:20.5740461Z Downloading bs4-0.0.2-py2.py3-none-any.whl (1.2 kB)
+2025-06-13T06:02:20.5788521Z Downloading future-1.0.0-py3-none-any.whl (491 kB)
+2025-06-13T06:02:20.6061823Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 491.3/491.3 kB 18.9 MB/s eta 0:00:00
+2025-06-13T06:02:20.6106166Z Downloading guardonce-2.4.0-py2.py3-none-any.whl (15 kB)
+2025-06-13T06:02:20.6167169Z Downloading libarchive_c-5.3-py3-none-any.whl (17 kB)
+2025-06-13T06:02:20.6220108Z Downloading lxml-5.4.0-cp312-cp312-manylinux_2_28_x86_64.whl (5.0 MB)
+2025-06-13T06:02:20.8017393Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 28.0 MB/s eta 0:00:00
+2025-06-13T06:02:20.8050276Z Downloading ply-3.11-py2.py3-none-any.whl (49 kB)
+2025-06-13T06:02:20.8110457Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.6/49.6 kB 9.2 MB/s eta 0:00:00
+2025-06-13T06:02:20.8143475Z Downloading psutil-7.0.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (277 kB)
+2025-06-13T06:02:20.8240379Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 278.0/278.0 kB 33.6 MB/s eta 0:00:00
+2025-06-13T06:02:20.8281877Z Downloading pyelftools-0.32-py3-none-any.whl (188 kB)
+2025-06-13T06:02:20.8365704Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.5/188.5 kB 27.6 MB/s eta 0:00:00
+2025-06-13T06:02:20.8409257Z Downloading sh-2.2.2-py3-none-any.whl (38 kB)
+2025-06-13T06:02:20.8462564Z Downloading pycodestyle-2.13.0-py2.py3-none-any.whl (31 kB)
+2025-06-13T06:02:20.8514680Z Downloading beautifulsoup4-4.13.4-py3-none-any.whl (187 kB)
+2025-06-13T06:02:20.8599177Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 187.3/187.3 kB 26.9 MB/s eta 0:00:00
+2025-06-13T06:02:20.8629817Z Downloading soupsieve-2.7-py3-none-any.whl (36 kB)
+2025-06-13T06:02:20.8838027Z Building wheels for collected packages: cmake-format, pyfdt
+2025-06-13T06:02:20.8842711Z   Building wheel for cmake-format (setup.py): started
+2025-06-13T06:02:21.2410373Z   Building wheel for cmake-format (setup.py): finished with status 'done'
+2025-06-13T06:02:21.2414747Z   Created wheel for cmake-format: filename=cmake_format-0.4.5-py3-none-any.whl size=57091 sha256=840e2f55c97772268076d7dd9935ab02a16d0a3ae807dda8c8d9453ff850b2ae
+2025-06-13T06:02:21.2416815Z   Stored in directory: /home/runner/.cache/pip/wheels/26/fb/b2/73a635046d239de7405e0f77cf67c3d31a3f0d5edcf8986d29
+2025-06-13T06:02:21.2443893Z   Building wheel for pyfdt (setup.py): started
+2025-06-13T06:02:21.4858690Z   Building wheel for pyfdt (setup.py): finished with status 'done'
+2025-06-13T06:02:21.4862431Z   Created wheel for pyfdt: filename=pyfdt-0.3-py3-none-any.whl size=10969 sha256=633560d762fee4868ee7b983b4c38b5238e1b1d1484c930902e9729b860948a1
+2025-06-13T06:02:21.4864636Z   Stored in directory: /home/runner/.cache/pip/wheels/d9/8e/2a/cff33f3accb8eaa34608e68786db1ec323a5f6bce8d724d90a
+2025-06-13T06:02:21.4879133Z Successfully built cmake-format pyfdt
+2025-06-13T06:02:21.7662272Z Installing collected packages: pyfdt, pyelftools, ply, libarchive-c, junitparser, guardonce, cmake-format, soupsieve, sh, pycodestyle, psutil, lxml, future, beautifulsoup4, autopep8, bs4, sel4-deps
+2025-06-13T06:02:22.7634998Z Successfully installed autopep8-2.3.1 beautifulsoup4-4.13.4 bs4-0.0.2 cmake-format-0.4.5 future-1.0.0 guardonce-2.4.0 junitparser-3.2.0 libarchive-c-5.3 lxml-5.4.0 ply-3.11 psutil-7.0.0 pycodestyle-2.13.0 pyelftools-0.32 pyfdt-0.3 sel4-deps-0.5.0 sh-2.2.2 soupsieve-2.7
+2025-06-13T06:02:22.8596219Z ##[endgroup]
+2025-06-13T06:02:23.0158704Z 
+2025-06-13T06:02:23.0159868Z ##[group]ODROID_C4_debug_clang_64
+2025-06-13T06:02:23.0160632Z [1m-----------[ start test ODROID_C4_debug_clang_64 ]-----------[0m
+2025-06-13T06:02:23.0161231Z [33m+++ tar xvzf ../ODROID_C4_debug_clang_64-images.tar.gz[0m
+2025-06-13T06:02:23.0190847Z images/
+2025-06-13T06:02:23.0191211Z images/sel4test-driver-image-arm-odroidc4
+2025-06-13T06:02:23.0383950Z [33m+++ mq.sh sem -info odroidc4_2[0m
+2025-06-13T06:02:29.4052374Z Lock for odroidc4_2 held by zhewen since 2025-06-13 14:38:29.069510461 +1000, timeout
+2025-06-13T06:02:29.4053910Z [33m+++ time mq.sh sem -wait odroidc4_2 -k seL4/seL4-Deploy-15626826387-hw-run-33 -T 1800[0m
+2025-06-13T12:01:57.9995570Z ##[error]The operation was canceled.
+2025-06-13T12:01:58.0048867Z Post job cleanup.
+2025-06-13T12:01:58.1010837Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/post-steps.sh
+2025-06-13T12:01:58.1065391Z ##[group]Releasing mq lock
+2025-06-13T12:01:58.1135331Z Agent pid 4893
+2025-06-13T12:01:58.2654474Z mq.sh sem -cancel odroidc4_2 -k seL4/seL4-Deploy-15626826387-hw-run-33
+2025-06-13T12:02:00.2691394Z mq.sh sem -signal odroidc4_2 -k seL4/seL4-Deploy-15626826387-hw-run-33
+2025-06-13T12:02:02.2702772Z Attempting to unlock system odroidc4_2 that you do not hold
+2025-06-13T12:02:02.2703776Z mq.sh sem -info odroidc4_2
+2025-06-13T12:02:05.2710868Z Lock for odroidc4_2 held by zhewen since 2025-06-13 14:38:29.069510461 +1000, timeout 
+2025-06-13T12:02:05.2815205Z ##[endgroup]
+2025-06-13T12:02:05.2941397Z Post job cleanup.
+2025-06-13T12:02:05.3886013Z [command]/usr/bin/git version
+2025-06-13T12:02:05.3922123Z git version 2.49.0
+2025-06-13T12:02:05.3966247Z Temporarily overriding HOME='/home/runner/work/_temp/85d4cd42-5a25-46f5-80c9-fbfe6eb7ec2c' before making global git config changes
+2025-06-13T12:02:05.3967603Z Adding repository directory to the temporary git global config as a safe directory
+2025-06-13T12:02:05.3980074Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/seL4/seL4/machine_queue
+2025-06-13T12:02:05.4014963Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-06-13T12:02:05.4047516Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-06-13T12:02:05.4271672Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-06-13T12:02:05.4293890Z http.https://github.com/.extraheader
+2025-06-13T12:02:05.4306276Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-06-13T12:02:05.4336303Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-06-13T12:02:05.4661660Z Cleaning up orphan processes
+2025-06-13T12:02:05.4868452Z Terminate orphan process: pid (2164) (ssh)

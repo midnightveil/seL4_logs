@@ -1,0 +1,439 @@
+﻿2025-06-13T06:01:57.9657674Z Current runner version: '2.325.0'
+2025-06-13T06:01:57.9683039Z ##[group]Runner Image Provisioner
+2025-06-13T06:01:57.9683981Z Hosted Compute Agent
+2025-06-13T06:01:57.9684604Z Version: 20250529.345
+2025-06-13T06:01:57.9685263Z Commit: 22237e57af968c281070ffa8ed912c1b754f9a23
+2025-06-13T06:01:57.9686081Z Build Date: 2025-05-29T20:18:30Z
+2025-06-13T06:01:57.9686761Z ##[endgroup]
+2025-06-13T06:01:57.9687489Z ##[group]Operating System
+2025-06-13T06:01:57.9688352Z Ubuntu
+2025-06-13T06:01:57.9688905Z 24.04.2
+2025-06-13T06:01:57.9689513Z LTS
+2025-06-13T06:01:57.9690073Z ##[endgroup]
+2025-06-13T06:01:57.9690676Z ##[group]Runner Image
+2025-06-13T06:01:57.9691360Z Image: ubuntu-24.04
+2025-06-13T06:01:57.9691943Z Version: 20250602.3.0
+2025-06-13T06:01:57.9693110Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250602.3/images/ubuntu/Ubuntu2404-Readme.md
+2025-06-13T06:01:57.9694787Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250602.3
+2025-06-13T06:01:57.9696044Z ##[endgroup]
+2025-06-13T06:01:57.9698971Z ##[group]GITHUB_TOKEN Permissions
+2025-06-13T06:01:57.9701258Z Actions: write
+2025-06-13T06:01:57.9702009Z Attestations: write
+2025-06-13T06:01:57.9702604Z Checks: write
+2025-06-13T06:01:57.9703146Z Contents: write
+2025-06-13T06:01:57.9703787Z Deployments: write
+2025-06-13T06:01:57.9704395Z Discussions: write
+2025-06-13T06:01:57.9705342Z Issues: write
+2025-06-13T06:01:57.9705979Z Metadata: read
+2025-06-13T06:01:57.9706591Z Models: read
+2025-06-13T06:01:57.9707151Z Packages: write
+2025-06-13T06:01:57.9707888Z Pages: write
+2025-06-13T06:01:57.9708514Z PullRequests: write
+2025-06-13T06:01:57.9709114Z RepositoryProjects: write
+2025-06-13T06:01:57.9709734Z SecurityEvents: write
+2025-06-13T06:01:57.9710529Z Statuses: write
+2025-06-13T06:01:57.9711121Z ##[endgroup]
+2025-06-13T06:01:57.9713612Z Secret source: Actions
+2025-06-13T06:01:57.9714633Z Prepare workflow directory
+2025-06-13T06:01:58.0032364Z Prepare all required actions
+2025-06-13T06:01:58.0070162Z Getting action download info
+2025-06-13T06:01:58.3122556Z ##[group]Download immutable action package 'actions/checkout@v4'
+2025-06-13T06:01:58.3123801Z Version: 4.2.2
+2025-06-13T06:01:58.3124935Z Digest: sha256:ccb2698953eaebd21c7bf6268a94f9c26518a7e38e27e0b83c1fe1ad049819b1
+2025-06-13T06:01:58.3126193Z Source commit SHA: 11bd71901bbe5b1630ceea73d27597364c9af683
+2025-06-13T06:01:58.3127073Z ##[endgroup]
+2025-06-13T06:01:58.3974048Z ##[group]Download immutable action package 'actions/download-artifact@v4'
+2025-06-13T06:01:58.3974979Z Version: 4.3.0
+2025-06-13T06:01:58.3975816Z Digest: sha256:552a5b9ad918f62ec0c2e8f42f3c694d4ebd1b4036b18c39b14168fcdfc0e4f2
+2025-06-13T06:01:58.3976916Z Source commit SHA: d3f86a106a0bac45b974a628896c90dbdf5c8093
+2025-06-13T06:01:58.3977678Z ##[endgroup]
+2025-06-13T06:01:58.6226911Z Download action repository 'seL4/ci-actions@master' (SHA:6a0001994b4a8e22b5627369d991587e67840501)
+2025-06-13T06:02:03.3899240Z Complete job name: HW Run (ODROID_XU4, armv7a, gcc)
+2025-06-13T06:02:03.4538829Z ##[group]Run actions/checkout@v4
+2025-06-13T06:02:03.4539509Z with:
+2025-06-13T06:02:03.4539776Z   repository: seL4/machine_queue
+2025-06-13T06:02:03.4540095Z   path: machine_queue
+2025-06-13T06:02:03.4540533Z   token: ***
+2025-06-13T06:02:03.4540793Z   ssh-strict: true
+2025-06-13T06:02:03.4541066Z   ssh-user: git
+2025-06-13T06:02:03.4541333Z   persist-credentials: true
+2025-06-13T06:02:03.4541622Z   clean: true
+2025-06-13T06:02:03.4541898Z   sparse-checkout-cone-mode: true
+2025-06-13T06:02:03.4542204Z   fetch-depth: 1
+2025-06-13T06:02:03.4542463Z   fetch-tags: false
+2025-06-13T06:02:03.4542724Z   show-progress: true
+2025-06-13T06:02:03.4542991Z   lfs: false
+2025-06-13T06:02:03.4543250Z   submodules: false
+2025-06-13T06:02:03.4543521Z   set-safe-directory: true
+2025-06-13T06:02:03.4544005Z ##[endgroup]
+2025-06-13T06:02:03.5616256Z Syncing repository: seL4/machine_queue
+2025-06-13T06:02:03.5617668Z ##[group]Getting Git version info
+2025-06-13T06:02:03.5618563Z Working directory is '/home/runner/work/seL4/seL4/machine_queue'
+2025-06-13T06:02:03.5619561Z [command]/usr/bin/git version
+2025-06-13T06:02:03.5671848Z git version 2.49.0
+2025-06-13T06:02:03.5698275Z ##[endgroup]
+2025-06-13T06:02:03.5713174Z Temporarily overriding HOME='/home/runner/work/_temp/a267522e-4edf-41f2-93d7-fe415d1b415d' before making global git config changes
+2025-06-13T06:02:03.5714633Z Adding repository directory to the temporary git global config as a safe directory
+2025-06-13T06:02:03.5727152Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/seL4/seL4/machine_queue
+2025-06-13T06:02:03.5760145Z ##[group]Initializing the repository
+2025-06-13T06:02:03.5765479Z [command]/usr/bin/git init /home/runner/work/seL4/seL4/machine_queue
+2025-06-13T06:02:03.5832422Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-06-13T06:02:03.5833558Z hint: is subject to change. To configure the initial branch name to use in all
+2025-06-13T06:02:03.5834582Z hint: of your new repositories, which will suppress this warning, call:
+2025-06-13T06:02:03.5835343Z hint:
+2025-06-13T06:02:03.5835870Z hint: 	git config --global init.defaultBranch <name>
+2025-06-13T06:02:03.5836465Z hint:
+2025-06-13T06:02:03.5837043Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-06-13T06:02:03.5838075Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-06-13T06:02:03.5838543Z hint:
+2025-06-13T06:02:03.5838811Z hint: 	git branch -m <name>
+2025-06-13T06:02:03.5839294Z Initialized empty Git repository in /home/runner/work/seL4/seL4/machine_queue/.git/
+2025-06-13T06:02:03.5846417Z [command]/usr/bin/git remote add origin https://github.com/seL4/machine_queue
+2025-06-13T06:02:03.5876978Z ##[endgroup]
+2025-06-13T06:02:03.5877956Z ##[group]Disabling automatic garbage collection
+2025-06-13T06:02:03.5881392Z [command]/usr/bin/git config --local gc.auto 0
+2025-06-13T06:02:03.5908853Z ##[endgroup]
+2025-06-13T06:02:03.5909608Z ##[group]Setting up auth
+2025-06-13T06:02:03.5914587Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-06-13T06:02:03.5942403Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-06-13T06:02:03.6212316Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-06-13T06:02:03.6240939Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-06-13T06:02:03.6457425Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-06-13T06:02:03.6492728Z ##[endgroup]
+2025-06-13T06:02:03.6493442Z ##[group]Determining the default branch
+2025-06-13T06:02:03.6496178Z Retrieving the default branch name
+2025-06-13T06:02:03.8639848Z Default branch 'master'
+2025-06-13T06:02:03.8641228Z ##[endgroup]
+2025-06-13T06:02:03.8641828Z ##[group]Fetching the repository
+2025-06-13T06:02:03.8647528Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/master:refs/remotes/origin/master
+2025-06-13T06:02:04.1705161Z From https://github.com/seL4/machine_queue
+2025-06-13T06:02:04.1705899Z  * [new branch]      master     -> origin/master
+2025-06-13T06:02:04.1732389Z ##[endgroup]
+2025-06-13T06:02:04.1732908Z ##[group]Determining the checkout info
+2025-06-13T06:02:04.1734277Z ##[endgroup]
+2025-06-13T06:02:04.1739505Z [command]/usr/bin/git sparse-checkout disable
+2025-06-13T06:02:04.1782202Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-06-13T06:02:04.1809563Z ##[group]Checking out the ref
+2025-06-13T06:02:04.1813202Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2025-06-13T06:02:04.1886578Z Reset branch 'master'
+2025-06-13T06:02:04.1889217Z branch 'master' set up to track 'origin/master'.
+2025-06-13T06:02:04.1894714Z ##[endgroup]
+2025-06-13T06:02:04.1929089Z [command]/usr/bin/git log -1 --format=%H
+2025-06-13T06:02:04.1951572Z 9c388cd54d6131052ae729dbfbd6885f99ccce70
+2025-06-13T06:02:04.2169426Z ##[group]Run actions/download-artifact@v4
+2025-06-13T06:02:04.2169801Z with:
+2025-06-13T06:02:04.2170056Z   name: images-armv7a-gcc
+2025-06-13T06:02:04.2170349Z   merge-multiple: false
+2025-06-13T06:02:04.2170627Z   repository: seL4/seL4
+2025-06-13T06:02:04.2170893Z   run-id: 15626826387
+2025-06-13T06:02:04.2171154Z ##[endgroup]
+2025-06-13T06:02:04.4090271Z Downloading single artifact
+2025-06-13T06:02:04.5178012Z Preparing to download the following artifacts:
+2025-06-13T06:02:04.5179313Z - images-armv7a-gcc (ID: 3319979801, Size: 51321666, Expected Digest: sha256:6eb13da6cbb381f851ac61883e1602a5e04535fbb7e8da4c52c45e950df57e2e)
+2025-06-13T06:02:04.5741991Z Redirecting to blob download url: https://productionresultssa16.blob.core.windows.net/actions-results/f10cf2b7-b999-4c40-a38e-9b45a0743c53/workflow-job-run-aff2424f-71a6-52b6-8d8f-52b55aacdd8a/artifacts/96d8adc8e35687959cb102aa6f7e61b0b6d645aee8fe803c5cd45b63557369fb.zip
+2025-06-13T06:02:04.5743430Z Starting download of artifact to: /home/runner/work/seL4/seL4
+2025-06-13T06:02:04.6565109Z (node:2054) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2025-06-13T06:02:04.6566912Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-06-13T06:02:05.3800588Z SHA256 digest of downloaded artifact is 6eb13da6cbb381f851ac61883e1602a5e04535fbb7e8da4c52c45e950df57e2e
+2025-06-13T06:02:05.3801719Z Artifact download completed successfully.
+2025-06-13T06:02:05.3802353Z Total of 1 artifact(s) downloaded
+2025-06-13T06:02:05.3802946Z Download artifact has finished successfully
+2025-06-13T06:02:05.3991658Z ##[group]Run seL4/ci-actions/sel4test-hw-run@master
+2025-06-13T06:02:05.3992046Z with:
+2025-06-13T06:02:05.3992257Z   platform: ODROID_XU4
+2025-06-13T06:02:05.3992487Z   compiler: gcc
+2025-06-13T06:02:05.3992699Z   index: $26
+2025-06-13T06:02:05.3992910Z   action_name: sel4test-hw-run
+2025-06-13T06:02:05.3993153Z env:
+2025-06-13T06:02:05.3994924Z   HW_SSH: ***
+
+2025-06-13T06:02:05.3995147Z ##[endgroup]
+2025-06-13T06:02:05.4993006Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/steps.sh
+2025-06-13T06:02:05.5051049Z ##[group]Setting up
+2025-06-13T06:02:05.5235066Z Agent pid 2083
+2025-06-13T06:02:05.5424923Z Cloning into 'seL4_libs'...
+2025-06-13T06:02:06.5866048Z Reading package lists...
+2025-06-13T06:02:06.7586973Z Building dependency tree...
+2025-06-13T06:02:06.7636922Z Reading state information...
+2025-06-13T06:02:06.9285474Z libffi-dev is already the newest version (3.4.6-1build1).
+2025-06-13T06:02:06.9286702Z libffi-dev set to manually installed.
+2025-06-13T06:02:06.9288127Z 0 upgraded, 0 newly installed, 0 to remove and 15 not upgraded.
+2025-06-13T06:02:08.9107122Z Collecting junitparser
+2025-06-13T06:02:08.9542383Z   Downloading junitparser-3.2.0-py2.py3-none-any.whl.metadata (9.0 kB)
+2025-06-13T06:02:08.9875335Z Collecting sel4-deps
+2025-06-13T06:02:08.9950644Z   Downloading sel4_deps-0.5.0-py3-none-any.whl.metadata (653 bytes)
+2025-06-13T06:02:09.0058110Z Requirement already satisfied: six in /usr/lib/python3/dist-packages (from sel4-deps) (1.16.0)
+2025-06-13T06:02:09.0267413Z Collecting future (from sel4-deps)
+2025-06-13T06:02:09.0335763Z   Downloading future-1.0.0-py3-none-any.whl.metadata (4.0 kB)
+2025-06-13T06:02:09.0378592Z Requirement already satisfied: jinja2 in /usr/lib/python3/dist-packages (from sel4-deps) (3.1.2)
+2025-06-13T06:02:09.2367352Z Collecting lxml (from sel4-deps)
+2025-06-13T06:02:09.2440375Z   Downloading lxml-5.4.0-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (3.5 kB)
+2025-06-13T06:02:09.2633242Z Collecting ply (from sel4-deps)
+2025-06-13T06:02:09.2700842Z   Downloading ply-3.11-py2.py3-none-any.whl.metadata (844 bytes)
+2025-06-13T06:02:09.3528426Z Collecting psutil (from sel4-deps)
+2025-06-13T06:02:09.3605404Z   Downloading psutil-7.0.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (22 kB)
+2025-06-13T06:02:09.3824141Z Collecting bs4 (from sel4-deps)
+2025-06-13T06:02:09.3897158Z   Downloading bs4-0.0.2-py2.py3-none-any.whl.metadata (411 bytes)
+2025-06-13T06:02:09.4086227Z Collecting pyelftools (from sel4-deps)
+2025-06-13T06:02:09.4176105Z   Downloading pyelftools-0.32-py3-none-any.whl.metadata (372 bytes)
+2025-06-13T06:02:09.4421905Z Collecting sh (from sel4-deps)
+2025-06-13T06:02:09.4500342Z   Downloading sh-2.2.2-py3-none-any.whl.metadata (3.7 kB)
+2025-06-13T06:02:09.4542321Z Requirement already satisfied: pexpect in /usr/lib/python3/dist-packages (from sel4-deps) (4.9.0)
+2025-06-13T06:02:09.4551879Z Requirement already satisfied: pyyaml>=5.1 in /usr/lib/python3/dist-packages (from sel4-deps) (6.0.1)
+2025-06-13T06:02:09.4560176Z Requirement already satisfied: jsonschema in /usr/lib/python3/dist-packages (from sel4-deps) (4.10.3)
+2025-06-13T06:02:09.4723633Z Collecting pyfdt (from sel4-deps)
+2025-06-13T06:02:09.4802045Z   Downloading pyfdt-0.3.tar.gz (9.1 kB)
+2025-06-13T06:02:09.4855913Z   Preparing metadata (setup.py): started
+2025-06-13T06:02:09.7020558Z   Preparing metadata (setup.py): finished with status 'done'
+2025-06-13T06:02:09.7236800Z Collecting cmake-format==0.4.5 (from sel4-deps)
+2025-06-13T06:02:09.7312486Z   Downloading cmake_format-0.4.5.tar.gz (51 kB)
+2025-06-13T06:02:09.7399689Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 51.1/51.1 kB 6.4 MB/s eta 0:00:00
+2025-06-13T06:02:09.7462126Z   Preparing metadata (setup.py): started
+2025-06-13T06:02:09.9070420Z   Preparing metadata (setup.py): finished with status 'done'
+2025-06-13T06:02:09.9263659Z Collecting guardonce (from sel4-deps)
+2025-06-13T06:02:09.9343208Z   Downloading guardonce-2.4.0-py2.py3-none-any.whl.metadata (3.4 kB)
+2025-06-13T06:02:09.9608076Z Collecting autopep8==2.3.1 (from sel4-deps)
+2025-06-13T06:02:09.9686742Z   Downloading autopep8-2.3.1-py2.py3-none-any.whl.metadata (16 kB)
+2025-06-13T06:02:09.9912375Z Collecting libarchive-c (from sel4-deps)
+2025-06-13T06:02:09.9998322Z   Downloading libarchive_c-5.3-py3-none-any.whl.metadata (5.8 kB)
+2025-06-13T06:02:10.0256627Z Collecting pycodestyle>=2.12.0 (from autopep8==2.3.1->sel4-deps)
+2025-06-13T06:02:10.0323732Z   Downloading pycodestyle-2.13.0-py2.py3-none-any.whl.metadata (4.5 kB)
+2025-06-13T06:02:10.0641622Z Collecting beautifulsoup4 (from bs4->sel4-deps)
+2025-06-13T06:02:10.0710059Z   Downloading beautifulsoup4-4.13.4-py3-none-any.whl.metadata (3.8 kB)
+2025-06-13T06:02:10.0912593Z Requirement already satisfied: attrs>=17.4.0 in /usr/lib/python3/dist-packages (from jsonschema->sel4-deps) (23.2.0)
+2025-06-13T06:02:10.0928225Z Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,>=0.14.0 in /usr/lib/python3/dist-packages (from jsonschema->sel4-deps) (0.20.0)
+2025-06-13T06:02:10.1839796Z Collecting soupsieve>1.2 (from beautifulsoup4->bs4->sel4-deps)
+2025-06-13T06:02:10.1908707Z   Downloading soupsieve-2.7-py3-none-any.whl.metadata (4.6 kB)
+2025-06-13T06:02:10.1953370Z Requirement already satisfied: typing-extensions>=4.0.0 in /usr/lib/python3/dist-packages (from beautifulsoup4->bs4->sel4-deps) (4.10.0)
+2025-06-13T06:02:10.2100421Z Downloading junitparser-3.2.0-py2.py3-none-any.whl (13 kB)
+2025-06-13T06:02:10.2205687Z Downloading sel4_deps-0.5.0-py3-none-any.whl (1.2 kB)
+2025-06-13T06:02:10.2304905Z Downloading autopep8-2.3.1-py2.py3-none-any.whl (45 kB)
+2025-06-13T06:02:10.2349669Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.7/45.7 kB 13.7 MB/s eta 0:00:00
+2025-06-13T06:02:10.2418274Z Downloading bs4-0.0.2-py2.py3-none-any.whl (1.2 kB)
+2025-06-13T06:02:10.2505388Z Downloading future-1.0.0-py3-none-any.whl (491 kB)
+2025-06-13T06:02:10.2672090Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 491.3/491.3 kB 32.1 MB/s eta 0:00:00
+2025-06-13T06:02:10.2754747Z Downloading guardonce-2.4.0-py2.py3-none-any.whl (15 kB)
+2025-06-13T06:02:10.2855017Z Downloading libarchive_c-5.3-py3-none-any.whl (17 kB)
+2025-06-13T06:02:10.2945178Z Downloading lxml-5.4.0-cp312-cp312-manylinux_2_28_x86_64.whl (5.0 MB)
+2025-06-13T06:02:10.3285318Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 154.0 MB/s eta 0:00:00
+2025-06-13T06:02:10.3354411Z Downloading ply-3.11-py2.py3-none-any.whl (49 kB)
+2025-06-13T06:02:10.3395258Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.6/49.6 kB 16.4 MB/s eta 0:00:00
+2025-06-13T06:02:10.3463818Z Downloading psutil-7.0.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (277 kB)
+2025-06-13T06:02:10.3515446Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 278.0/278.0 kB 76.9 MB/s eta 0:00:00
+2025-06-13T06:02:10.3584557Z Downloading pyelftools-0.32-py3-none-any.whl (188 kB)
+2025-06-13T06:02:10.3633407Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.5/188.5 kB 57.1 MB/s eta 0:00:00
+2025-06-13T06:02:10.3701029Z Downloading sh-2.2.2-py3-none-any.whl (38 kB)
+2025-06-13T06:02:10.3792403Z Downloading pycodestyle-2.13.0-py2.py3-none-any.whl (31 kB)
+2025-06-13T06:02:10.3880342Z Downloading beautifulsoup4-4.13.4-py3-none-any.whl (187 kB)
+2025-06-13T06:02:10.3932342Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 187.3/187.3 kB 48.6 MB/s eta 0:00:00
+2025-06-13T06:02:10.4000712Z Downloading soupsieve-2.7-py3-none-any.whl (36 kB)
+2025-06-13T06:02:10.4252881Z Building wheels for collected packages: cmake-format, pyfdt
+2025-06-13T06:02:10.4258137Z   Building wheel for cmake-format (setup.py): started
+2025-06-13T06:02:10.7320672Z   Building wheel for cmake-format (setup.py): finished with status 'done'
+2025-06-13T06:02:10.7324110Z   Created wheel for cmake-format: filename=cmake_format-0.4.5-py3-none-any.whl size=57091 sha256=6543d4a4a9e1d6a0242bbfb2682415ca4e97215fac2f9cd8b79c9143816e7ac9
+2025-06-13T06:02:10.7326143Z   Stored in directory: /home/runner/.cache/pip/wheels/26/fb/b2/73a635046d239de7405e0f77cf67c3d31a3f0d5edcf8986d29
+2025-06-13T06:02:10.7353657Z   Building wheel for pyfdt (setup.py): started
+2025-06-13T06:02:10.9668195Z   Building wheel for pyfdt (setup.py): finished with status 'done'
+2025-06-13T06:02:10.9671034Z   Created wheel for pyfdt: filename=pyfdt-0.3-py3-none-any.whl size=10969 sha256=7339230754b579d0ab6ca626e3bd67074fbca9b77a05265a385c12b8cdbd644b
+2025-06-13T06:02:10.9672754Z   Stored in directory: /home/runner/.cache/pip/wheels/d9/8e/2a/cff33f3accb8eaa34608e68786db1ec323a5f6bce8d724d90a
+2025-06-13T06:02:10.9687031Z Successfully built cmake-format pyfdt
+2025-06-13T06:02:11.2483639Z Installing collected packages: pyfdt, pyelftools, ply, libarchive-c, junitparser, guardonce, cmake-format, soupsieve, sh, pycodestyle, psutil, lxml, future, beautifulsoup4, autopep8, bs4, sel4-deps
+2025-06-13T06:02:12.2228526Z Successfully installed autopep8-2.3.1 beautifulsoup4-4.13.4 bs4-0.0.2 cmake-format-0.4.5 future-1.0.0 guardonce-2.4.0 junitparser-3.2.0 libarchive-c-5.3 lxml-5.4.0 ply-3.11 psutil-7.0.0 pycodestyle-2.13.0 pyelftools-0.32 pyfdt-0.3 sel4-deps-0.5.0 sh-2.2.2 soupsieve-2.7
+2025-06-13T06:02:12.3122688Z ##[endgroup]
+2025-06-13T06:02:12.4644777Z 
+2025-06-13T06:02:12.4646660Z ##[group]ODROID_XU4_debug_gcc_32
+2025-06-13T06:02:12.4647646Z [1m-----------[ start test ODROID_XU4_debug_gcc_32 ]-----------[0m
+2025-06-13T06:02:12.4648650Z [33m+++ tar xvzf ../ODROID_XU4_debug_gcc_32-images.tar.gz[0m
+2025-06-13T06:02:12.4674629Z images/
+2025-06-13T06:02:12.4675459Z images/sel4test-driver-image-arm-exynos5
+2025-06-13T06:02:12.4881465Z [33m+++ mq.sh sem -info odroidxu4_2[0m
+2025-06-13T06:08:59.0526642Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-13T06:08:59.0527598Z [31;1m>>> command failed, aborting.[0m
+2025-06-13T06:08:59.0528396Z [33m+++ mq.sh sem -signal odroidxu4_2 -k seL4/seL4-Deploy-15626826387-hw-run-26[0m
+2025-06-13T06:15:44.5565454Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-13T06:15:44.5568411Z [1m-----------[ end test ODROID_XU4_debug_gcc_32 ]-----------[0m
+2025-06-13T06:15:44.5569423Z ##[endgroup]
+2025-06-13T06:15:44.5569838Z [31;1mODROID_XU4_debug_gcc_32 FAILED[0m
+2025-06-13T06:15:44.5570452Z 
+2025-06-13T06:15:44.5570859Z ##[group]ODROID_XU4_debug_MCS_gcc_32
+2025-06-13T06:15:44.5571505Z [1m-----------[ start test ODROID_XU4_debug_MCS_gcc_32 ]-----------[0m
+2025-06-13T06:15:44.5579032Z [33m+++ tar xvzf ../ODROID_XU4_debug_MCS_gcc_32-images.tar.gz[0m
+2025-06-13T06:15:44.5604760Z images/
+2025-06-13T06:15:44.5605406Z images/sel4test-driver-image-arm-exynos5
+2025-06-13T06:15:44.5825601Z [33m+++ mq.sh sem -info odroidxu4_2[0m
+2025-06-13T06:22:30.0606310Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-13T06:22:30.0607383Z [31;1m>>> command failed, aborting.[0m
+2025-06-13T06:22:30.0608617Z [33m+++ mq.sh sem -signal odroidxu4_2 -k seL4/seL4-Deploy-15626826387-hw-run-26[0m
+2025-06-13T06:29:15.5646468Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-13T06:29:15.5647647Z [1m-----------[ end test ODROID_XU4_debug_MCS_gcc_32 ]-----------[0m
+2025-06-13T06:29:15.5649122Z ##[endgroup]
+2025-06-13T06:29:15.5649746Z [31;1mODROID_XU4_debug_MCS_gcc_32 FAILED[0m
+2025-06-13T06:29:15.5650234Z 
+2025-06-13T06:29:15.5650796Z ##[group]ODROID_XU4_debug_hyp_gcc_32
+2025-06-13T06:29:15.5651747Z [1m-----------[ start test ODROID_XU4_debug_hyp_gcc_32 ]-----------[0m
+2025-06-13T06:29:15.5659527Z [33m+++ tar xvzf ../ODROID_XU4_debug_hyp_gcc_32-images.tar.gz[0m
+2025-06-13T06:29:15.5686273Z images/
+2025-06-13T06:29:15.5686928Z images/sel4test-driver-image-arm-exynos5
+2025-06-13T06:29:15.5899472Z [33m+++ mq.sh sem -info odroidxu4_2[0m
+2025-06-13T06:36:01.0687566Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-13T06:36:01.0688492Z [31;1m>>> command failed, aborting.[0m
+2025-06-13T06:36:01.0689117Z [33m+++ mq.sh sem -signal odroidxu4_2 -k seL4/seL4-Deploy-15626826387-hw-run-26[0m
+2025-06-13T06:42:46.5725223Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-13T06:42:46.5726308Z [1m-----------[ end test ODROID_XU4_debug_hyp_gcc_32 ]-----------[0m
+2025-06-13T06:42:46.5727608Z ##[endgroup]
+2025-06-13T06:42:46.5728297Z [31;1mODROID_XU4_debug_hyp_gcc_32 FAILED[0m
+2025-06-13T06:42:46.5728613Z 
+2025-06-13T06:42:46.5729043Z ##[group]ODROID_XU4_debug_hyp_MCS_gcc_32
+2025-06-13T06:42:46.5729722Z [1m-----------[ start test ODROID_XU4_debug_hyp_MCS_gcc_32 ]-----------[0m
+2025-06-13T06:42:46.5736432Z [33m+++ tar xvzf ../ODROID_XU4_debug_hyp_MCS_gcc_32-images.tar.gz[0m
+2025-06-13T06:42:46.5762973Z images/
+2025-06-13T06:42:46.5763655Z images/sel4test-driver-image-arm-exynos5
+2025-06-13T06:42:46.6005501Z [33m+++ mq.sh sem -info odroidxu4_2[0m
+2025-06-13T06:49:32.0766178Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-13T06:49:32.0766957Z [31;1m>>> command failed, aborting.[0m
+2025-06-13T06:49:32.0767508Z [33m+++ mq.sh sem -signal odroidxu4_2 -k seL4/seL4-Deploy-15626826387-hw-run-26[0m
+2025-06-13T06:56:17.5806699Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-13T06:56:17.5809545Z [1m-----------[ end test ODROID_XU4_debug_hyp_MCS_gcc_32 ]-----------[0m
+2025-06-13T06:56:17.5810624Z ##[endgroup]
+2025-06-13T06:56:17.5811110Z [31;1mODROID_XU4_debug_hyp_MCS_gcc_32 FAILED[0m
+2025-06-13T06:56:17.5811457Z 
+2025-06-13T06:56:17.5813038Z ##[group]ODROID_XU4_release_gcc_32
+2025-06-13T06:56:17.5813696Z [1m-----------[ start test ODROID_XU4_release_gcc_32 ]-----------[0m
+2025-06-13T06:56:17.5819197Z [33m+++ tar xvzf ../ODROID_XU4_release_gcc_32-images.tar.gz[0m
+2025-06-13T06:56:17.5846061Z images/
+2025-06-13T06:56:17.5846714Z images/sel4test-driver-image-arm-exynos5
+2025-06-13T06:56:17.5930105Z [33m+++ mq.sh sem -info odroidxu4_2[0m
+2025-06-13T07:03:03.0849048Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-13T07:03:03.0849863Z [31;1m>>> command failed, aborting.[0m
+2025-06-13T07:03:03.0850650Z [33m+++ mq.sh sem -signal odroidxu4_2 -k seL4/seL4-Deploy-15626826387-hw-run-26[0m
+2025-06-13T07:09:48.5886747Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-13T07:09:48.5887503Z [1m-----------[ end test ODROID_XU4_release_gcc_32 ]-----------[0m
+2025-06-13T07:09:48.5888447Z ##[endgroup]
+2025-06-13T07:09:48.5888757Z [31;1mODROID_XU4_release_gcc_32 FAILED[0m
+2025-06-13T07:09:48.5889271Z 
+2025-06-13T07:09:48.5889546Z ##[group]ODROID_XU4_release_MCS_gcc_32
+2025-06-13T07:09:48.5889958Z [1m-----------[ start test ODROID_XU4_release_MCS_gcc_32 ]-----------[0m
+2025-06-13T07:09:48.5892648Z [33m+++ tar xvzf ../ODROID_XU4_release_MCS_gcc_32-images.tar.gz[0m
+2025-06-13T07:09:48.5919513Z images/
+2025-06-13T07:09:48.5920178Z images/sel4test-driver-image-arm-exynos5
+2025-06-13T07:09:48.6011319Z [33m+++ mq.sh sem -info odroidxu4_2[0m
+2025-06-13T07:16:34.0926043Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-13T07:16:34.0926673Z [31;1m>>> command failed, aborting.[0m
+2025-06-13T07:16:34.0927174Z [33m+++ mq.sh sem -signal odroidxu4_2 -k seL4/seL4-Deploy-15626826387-hw-run-26[0m
+2025-06-13T07:23:19.5965564Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-13T07:23:19.5966599Z [1m-----------[ end test ODROID_XU4_release_MCS_gcc_32 ]-----------[0m
+2025-06-13T07:23:19.5967313Z ##[endgroup]
+2025-06-13T07:23:19.5967677Z [31;1mODROID_XU4_release_MCS_gcc_32 FAILED[0m
+2025-06-13T07:23:19.5968135Z 
+2025-06-13T07:23:19.5969973Z ##[group]ODROID_XU4_release_hyp_gcc_32
+2025-06-13T07:23:19.5970639Z [1m-----------[ start test ODROID_XU4_release_hyp_gcc_32 ]-----------[0m
+2025-06-13T07:23:19.5972552Z [33m+++ tar xvzf ../ODROID_XU4_release_hyp_gcc_32-images.tar.gz[0m
+2025-06-13T07:23:19.5998864Z images/
+2025-06-13T07:23:19.5999299Z images/sel4test-driver-image-arm-exynos5
+2025-06-13T07:23:19.6084067Z [33m+++ mq.sh sem -info odroidxu4_2[0m
+2025-06-13T07:30:05.1007044Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-13T07:30:05.1008149Z [31;1m>>> command failed, aborting.[0m
+2025-06-13T07:30:05.1008830Z [33m+++ mq.sh sem -signal odroidxu4_2 -k seL4/seL4-Deploy-15626826387-hw-run-26[0m
+2025-06-13T07:36:50.6047204Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-13T07:36:50.6048448Z [1m-----------[ end test ODROID_XU4_release_hyp_gcc_32 ]-----------[0m
+2025-06-13T07:36:50.6049516Z ##[endgroup]
+2025-06-13T07:36:50.6050313Z [31;1mODROID_XU4_release_hyp_gcc_32 FAILED[0m
+2025-06-13T07:36:50.6050667Z 
+2025-06-13T07:36:50.6053179Z ##[group]ODROID_XU4_release_hyp_MCS_gcc_32
+2025-06-13T07:36:50.6054008Z [1m-----------[ start test ODROID_XU4_release_hyp_MCS_gcc_32 ]-----------[0m
+2025-06-13T07:36:50.6054961Z [33m+++ tar xvzf ../ODROID_XU4_release_hyp_MCS_gcc_32-images.tar.gz[0m
+2025-06-13T07:36:50.6082405Z images/
+2025-06-13T07:36:50.6083007Z images/sel4test-driver-image-arm-exynos5
+2025-06-13T07:36:50.6175551Z [33m+++ mq.sh sem -info odroidxu4_2[0m
+2025-06-13T07:43:36.1093295Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-13T07:43:36.1094136Z [31;1m>>> command failed, aborting.[0m
+2025-06-13T07:43:36.1094876Z [33m+++ mq.sh sem -signal odroidxu4_2 -k seL4/seL4-Deploy-15626826387-hw-run-26[0m
+2025-06-13T07:50:21.6125690Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-13T07:50:21.6126787Z [1m-----------[ end test ODROID_XU4_release_hyp_MCS_gcc_32 ]-----------[0m
+2025-06-13T07:50:21.6127570Z ##[endgroup]
+2025-06-13T07:50:21.6128169Z [31;1mODROID_XU4_release_hyp_MCS_gcc_32 FAILED[0m
+2025-06-13T07:50:21.6128420Z 
+2025-06-13T07:50:21.6130466Z ##[group]ODROID_XU4_verification_gcc_32
+2025-06-13T07:50:21.6131147Z [1m-----------[ start test ODROID_XU4_verification_gcc_32 ]-----------[0m
+2025-06-13T07:50:21.6132734Z [33m+++ tar xvzf ../ODROID_XU4_verification_gcc_32-images.tar.gz[0m
+2025-06-13T07:50:21.6160638Z images/
+2025-06-13T07:50:21.6160998Z images/sel4test-driver-image-arm-exynos5
+2025-06-13T07:50:21.6360195Z [33m+++ mq.sh sem -info odroidxu4_2[0m
+2025-06-13T07:57:07.1166604Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-13T07:57:07.1167486Z [31;1m>>> command failed, aborting.[0m
+2025-06-13T07:57:07.1168454Z [33m+++ mq.sh sem -signal odroidxu4_2 -k seL4/seL4-Deploy-15626826387-hw-run-26[0m
+2025-06-13T08:03:52.6206096Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-13T08:03:52.6207402Z [1m-----------[ end test ODROID_XU4_verification_gcc_32 ]-----------[0m
+2025-06-13T08:03:52.6208657Z ##[endgroup]
+2025-06-13T08:03:52.6209138Z [31;1mODROID_XU4_verification_gcc_32 FAILED[0m
+2025-06-13T08:03:52.6209837Z 
+2025-06-13T08:03:52.6210283Z ##[group]ODROID_XU4_verification_MCS_gcc_32
+2025-06-13T08:03:52.6210997Z [1m-----------[ start test ODROID_XU4_verification_MCS_gcc_32 ]-----------[0m
+2025-06-13T08:03:52.6217936Z [33m+++ tar xvzf ../ODROID_XU4_verification_MCS_gcc_32-images.tar.gz[0m
+2025-06-13T08:03:52.6244024Z images/
+2025-06-13T08:03:52.6244637Z images/sel4test-driver-image-arm-exynos5
+2025-06-13T08:03:52.6452145Z [33m+++ mq.sh sem -info odroidxu4_2[0m
+2025-06-13T08:10:38.1245763Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-13T08:10:38.1246668Z [31;1m>>> command failed, aborting.[0m
+2025-06-13T08:10:38.1247212Z [33m+++ mq.sh sem -signal odroidxu4_2 -k seL4/seL4-Deploy-15626826387-hw-run-26[0m
+2025-06-13T08:17:23.6285946Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-13T08:17:23.6286833Z [1m-----------[ end test ODROID_XU4_verification_MCS_gcc_32 ]-----------[0m
+2025-06-13T08:17:23.6287634Z ##[endgroup]
+2025-06-13T08:17:23.6288335Z [31;1mODROID_XU4_verification_MCS_gcc_32 FAILED[0m
+2025-06-13T08:17:23.6288671Z 
+2025-06-13T08:17:23.6290601Z ##[group]ODROID_XU4_verification_hyp_gcc_32
+2025-06-13T08:17:23.6291401Z [1m-----------[ start test ODROID_XU4_verification_hyp_gcc_32 ]-----------[0m
+2025-06-13T08:17:23.6297341Z [33m+++ tar xvzf ../ODROID_XU4_verification_hyp_gcc_32-images.tar.gz[0m
+2025-06-13T08:17:23.6324586Z images/
+2025-06-13T08:17:23.6325238Z images/sel4test-driver-image-arm-exynos5
+2025-06-13T08:17:23.6525523Z [33m+++ mq.sh sem -info odroidxu4_2[0m
+2025-06-13T08:24:09.1326607Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-13T08:24:09.1327475Z [31;1m>>> command failed, aborting.[0m
+2025-06-13T08:24:09.1328454Z [33m+++ mq.sh sem -signal odroidxu4_2 -k seL4/seL4-Deploy-15626826387-hw-run-26[0m
+2025-06-13T08:30:54.6366572Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-13T08:30:54.6368068Z [1m-----------[ end test ODROID_XU4_verification_hyp_gcc_32 ]-----------[0m
+2025-06-13T08:30:54.6370523Z ##[endgroup]
+2025-06-13T08:30:54.6371027Z [31;1mODROID_XU4_verification_hyp_gcc_32 FAILED[0m
+2025-06-13T08:30:54.6371396Z 
+2025-06-13T08:30:54.6371902Z ##[group]ODROID_XU4_verification_hyp_MCS_gcc_32
+2025-06-13T08:30:54.6372700Z [1m-----------[ start test ODROID_XU4_verification_hyp_MCS_gcc_32 ]-----------[0m
+2025-06-13T08:30:54.6377361Z [33m+++ tar xvzf ../ODROID_XU4_verification_hyp_MCS_gcc_32-images.tar.gz[0m
+2025-06-13T08:30:54.6404455Z images/
+2025-06-13T08:30:54.6405302Z images/sel4test-driver-image-arm-exynos5
+2025-06-13T08:30:54.6615394Z [33m+++ mq.sh sem -info odroidxu4_2[0m
+2025-06-13T08:37:40.1407094Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-13T08:37:40.1408212Z [31;1m>>> command failed, aborting.[0m
+2025-06-13T08:37:40.1408857Z [33m+++ mq.sh sem -signal odroidxu4_2 -k seL4/seL4-Deploy-15626826387-hw-run-26[0m
+2025-06-13T08:44:25.6446553Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-13T08:44:25.6447623Z [1m-----------[ end test ODROID_XU4_verification_hyp_MCS_gcc_32 ]-----------[0m
+2025-06-13T08:44:25.6448839Z ##[endgroup]
+2025-06-13T08:44:25.6449431Z [31;1mODROID_XU4_verification_hyp_MCS_gcc_32 FAILED[0m
+2025-06-13T08:44:25.6449789Z 
+2025-06-13T08:44:25.6449976Z Successful tests: [0m
+2025-06-13T08:44:25.6450191Z 
+2025-06-13T08:44:25.6452356Z [31;1mFAILED tests: ODROID_XU4_debug_gcc_32, ODROID_XU4_debug_MCS_gcc_32, ODROID_XU4_debug_hyp_gcc_32, ODROID_XU4_debug_hyp_MCS_gcc_32, ODROID_XU4_release_gcc_32, ODROID_XU4_release_MCS_gcc_32, ODROID_XU4_release_hyp_gcc_32, ODROID_XU4_release_hyp_MCS_gcc_32, ODROID_XU4_verification_gcc_32, ODROID_XU4_verification_MCS_gcc_32, ODROID_XU4_verification_hyp_gcc_32, ODROID_XU4_verification_hyp_MCS_gcc_32[0m
+2025-06-13T08:44:25.6586382Z ##[error]Action sel4test-hw-run failed.
+2025-06-13T08:44:25.6666984Z Post job cleanup.
+2025-06-13T08:44:25.7652479Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/post-steps.sh
+2025-06-13T08:44:25.7713300Z ##[group]Releasing mq lock
+2025-06-13T08:44:25.7786584Z Agent pid 3716
+2025-06-13T08:44:25.9371618Z mq.sh sem -cancel odroidxu4_2 -k seL4/seL4-Deploy-15626826387-hw-run-26
+2025-06-13T08:51:11.1486493Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-13T08:51:11.1487327Z mq.sh sem -signal odroidxu4_2 -k seL4/seL4-Deploy-15626826387-hw-run-26
+2025-06-13T08:57:56.6525509Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-13T08:57:56.6528146Z mq.sh sem -info odroidxu4_2
+2025-06-13T09:04:42.1565658Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-13T09:04:42.1659494Z ##[endgroup]
+2025-06-13T09:04:42.1783967Z Post job cleanup.
+2025-06-13T09:04:42.2888487Z [command]/usr/bin/git version
+2025-06-13T09:04:42.2926759Z git version 2.49.0
+2025-06-13T09:04:42.2971146Z Temporarily overriding HOME='/home/runner/work/_temp/3ae4767c-f90e-4bd6-a9d0-9f6d74b01259' before making global git config changes
+2025-06-13T09:04:42.2972263Z Adding repository directory to the temporary git global config as a safe directory
+2025-06-13T09:04:42.2976866Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/seL4/seL4/machine_queue
+2025-06-13T09:04:42.3016058Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-06-13T09:04:42.3051250Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-06-13T09:04:42.3285403Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-06-13T09:04:42.3309241Z http.https://github.com/.extraheader
+2025-06-13T09:04:42.3322697Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-06-13T09:04:42.3355398Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-06-13T09:04:42.3693320Z Cleaning up orphan processes

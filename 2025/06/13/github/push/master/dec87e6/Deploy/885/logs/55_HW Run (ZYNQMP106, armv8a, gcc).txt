@@ -1,0 +1,691 @@
+﻿2025-06-15T00:30:13.1640198Z Current runner version: '2.325.0'
+2025-06-15T00:30:13.1674236Z ##[group]Runner Image Provisioner
+2025-06-15T00:30:13.1675270Z Hosted Compute Agent
+2025-06-15T00:30:13.1675872Z Version: 20250529.345
+2025-06-15T00:30:13.1676563Z Commit: 22237e57af968c281070ffa8ed912c1b754f9a23
+2025-06-15T00:30:13.1677314Z Build Date: 2025-05-29T20:18:30Z
+2025-06-15T00:30:13.1677967Z ##[endgroup]
+2025-06-15T00:30:13.1678613Z ##[group]Operating System
+2025-06-15T00:30:13.1679218Z Ubuntu
+2025-06-15T00:30:13.1679798Z 24.04.2
+2025-06-15T00:30:13.1680320Z LTS
+2025-06-15T00:30:13.1680855Z ##[endgroup]
+2025-06-15T00:30:13.1681453Z ##[group]Runner Image
+2025-06-15T00:30:13.1682098Z Image: ubuntu-24.04
+2025-06-15T00:30:13.1682701Z Version: 20250602.3.0
+2025-06-15T00:30:13.1684007Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250602.3/images/ubuntu/Ubuntu2404-Readme.md
+2025-06-15T00:30:13.1685791Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250602.3
+2025-06-15T00:30:13.1686882Z ##[endgroup]
+2025-06-15T00:30:13.1689438Z ##[group]GITHUB_TOKEN Permissions
+2025-06-15T00:30:13.1691697Z Actions: write
+2025-06-15T00:30:13.1692446Z Attestations: write
+2025-06-15T00:30:13.1693044Z Checks: write
+2025-06-15T00:30:13.1693767Z Contents: write
+2025-06-15T00:30:13.1694447Z Deployments: write
+2025-06-15T00:30:13.1695060Z Discussions: write
+2025-06-15T00:30:13.1695653Z Issues: write
+2025-06-15T00:30:13.1696256Z Metadata: read
+2025-06-15T00:30:13.1696863Z Models: read
+2025-06-15T00:30:13.1697827Z Packages: write
+2025-06-15T00:30:13.1698407Z Pages: write
+2025-06-15T00:30:13.1698998Z PullRequests: write
+2025-06-15T00:30:13.1699618Z RepositoryProjects: write
+2025-06-15T00:30:13.1700297Z SecurityEvents: write
+2025-06-15T00:30:13.1701043Z Statuses: write
+2025-06-15T00:30:13.1701611Z ##[endgroup]
+2025-06-15T00:30:13.1704370Z Secret source: Actions
+2025-06-15T00:30:13.1705460Z Prepare workflow directory
+2025-06-15T00:30:13.2115056Z Prepare all required actions
+2025-06-15T00:30:13.2172120Z Getting action download info
+2025-06-15T00:30:13.5030422Z ##[group]Download immutable action package 'actions/checkout@v4'
+2025-06-15T00:30:13.5031605Z Version: 4.2.2
+2025-06-15T00:30:13.5032653Z Digest: sha256:ccb2698953eaebd21c7bf6268a94f9c26518a7e38e27e0b83c1fe1ad049819b1
+2025-06-15T00:30:13.5034016Z Source commit SHA: 11bd71901bbe5b1630ceea73d27597364c9af683
+2025-06-15T00:30:13.5034928Z ##[endgroup]
+2025-06-15T00:30:13.5789561Z ##[group]Download immutable action package 'actions/download-artifact@v4'
+2025-06-15T00:30:13.5790491Z Version: 4.3.0
+2025-06-15T00:30:13.5791277Z Digest: sha256:552a5b9ad918f62ec0c2e8f42f3c694d4ebd1b4036b18c39b14168fcdfc0e4f2
+2025-06-15T00:30:13.5792355Z Source commit SHA: d3f86a106a0bac45b974a628896c90dbdf5c8093
+2025-06-15T00:30:13.5793103Z ##[endgroup]
+2025-06-15T00:30:13.8078873Z Download action repository 'seL4/ci-actions@master' (SHA:6a0001994b4a8e22b5627369d991587e67840501)
+2025-06-15T00:30:15.6559886Z Complete job name: HW Run (ZYNQMP106, armv8a, gcc)
+2025-06-15T00:30:15.7218929Z ##[group]Run actions/checkout@v4
+2025-06-15T00:30:15.7219604Z with:
+2025-06-15T00:30:15.7219883Z   repository: seL4/machine_queue
+2025-06-15T00:30:15.7220202Z   path: machine_queue
+2025-06-15T00:30:15.7220643Z   token: ***
+2025-06-15T00:30:15.7220901Z   ssh-strict: true
+2025-06-15T00:30:15.7221156Z   ssh-user: git
+2025-06-15T00:30:15.7221420Z   persist-credentials: true
+2025-06-15T00:30:15.7221713Z   clean: true
+2025-06-15T00:30:15.7221986Z   sparse-checkout-cone-mode: true
+2025-06-15T00:30:15.7222294Z   fetch-depth: 1
+2025-06-15T00:30:15.7222560Z   fetch-tags: false
+2025-06-15T00:30:15.7222825Z   show-progress: true
+2025-06-15T00:30:15.7223090Z   lfs: false
+2025-06-15T00:30:15.7223337Z   submodules: false
+2025-06-15T00:30:15.7223862Z   set-safe-directory: true
+2025-06-15T00:30:15.7224566Z ##[endgroup]
+2025-06-15T00:30:15.8287695Z Syncing repository: seL4/machine_queue
+2025-06-15T00:30:15.8289236Z ##[group]Getting Git version info
+2025-06-15T00:30:15.8289813Z Working directory is '/home/runner/work/seL4/seL4/machine_queue'
+2025-06-15T00:30:15.8290780Z [command]/usr/bin/git version
+2025-06-15T00:30:15.8313225Z git version 2.49.0
+2025-06-15T00:30:15.8339739Z ##[endgroup]
+2025-06-15T00:30:15.8354873Z Temporarily overriding HOME='/home/runner/work/_temp/9eae3fb1-7d27-470c-9b39-29ee6215f3f3' before making global git config changes
+2025-06-15T00:30:15.8356349Z Adding repository directory to the temporary git global config as a safe directory
+2025-06-15T00:30:15.8368421Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/seL4/seL4/machine_queue
+2025-06-15T00:30:15.8399639Z ##[group]Initializing the repository
+2025-06-15T00:30:15.8405131Z [command]/usr/bin/git init /home/runner/work/seL4/seL4/machine_queue
+2025-06-15T00:30:15.8461801Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-06-15T00:30:15.8463012Z hint: is subject to change. To configure the initial branch name to use in all
+2025-06-15T00:30:15.8463796Z hint: of your new repositories, which will suppress this warning, call:
+2025-06-15T00:30:15.8464306Z hint:
+2025-06-15T00:30:15.8464677Z hint: 	git config --global init.defaultBranch <name>
+2025-06-15T00:30:15.8465340Z hint:
+2025-06-15T00:30:15.8465993Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-06-15T00:30:15.8466928Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-06-15T00:30:15.8467692Z hint:
+2025-06-15T00:30:15.8468186Z hint: 	git branch -m <name>
+2025-06-15T00:30:15.8469073Z Initialized empty Git repository in /home/runner/work/seL4/seL4/machine_queue/.git/
+2025-06-15T00:30:15.8477792Z [command]/usr/bin/git remote add origin https://github.com/seL4/machine_queue
+2025-06-15T00:30:15.8508332Z ##[endgroup]
+2025-06-15T00:30:15.8509192Z ##[group]Disabling automatic garbage collection
+2025-06-15T00:30:15.8513760Z [command]/usr/bin/git config --local gc.auto 0
+2025-06-15T00:30:15.8541294Z ##[endgroup]
+2025-06-15T00:30:15.8542162Z ##[group]Setting up auth
+2025-06-15T00:30:15.8548104Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-06-15T00:30:15.8577331Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-06-15T00:30:15.8826688Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-06-15T00:30:15.8855477Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-06-15T00:30:15.9072055Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-06-15T00:30:15.9104769Z ##[endgroup]
+2025-06-15T00:30:15.9105306Z ##[group]Determining the default branch
+2025-06-15T00:30:15.9108241Z Retrieving the default branch name
+2025-06-15T00:30:16.1230655Z Default branch 'master'
+2025-06-15T00:30:16.1234158Z ##[endgroup]
+2025-06-15T00:30:16.1235396Z ##[group]Fetching the repository
+2025-06-15T00:30:16.1238955Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/master:refs/remotes/origin/master
+2025-06-15T00:30:16.4711597Z From https://github.com/seL4/machine_queue
+2025-06-15T00:30:16.4712668Z  * [new branch]      master     -> origin/master
+2025-06-15T00:30:16.4739488Z ##[endgroup]
+2025-06-15T00:30:16.4740422Z ##[group]Determining the checkout info
+2025-06-15T00:30:16.4741470Z ##[endgroup]
+2025-06-15T00:30:16.4747118Z [command]/usr/bin/git sparse-checkout disable
+2025-06-15T00:30:16.4786554Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-06-15T00:30:16.4814742Z ##[group]Checking out the ref
+2025-06-15T00:30:16.4819274Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2025-06-15T00:30:16.4893342Z Reset branch 'master'
+2025-06-15T00:30:16.4896240Z branch 'master' set up to track 'origin/master'.
+2025-06-15T00:30:16.4901919Z ##[endgroup]
+2025-06-15T00:30:16.4936639Z [command]/usr/bin/git log -1 --format=%H
+2025-06-15T00:30:16.4958723Z 9c388cd54d6131052ae729dbfbd6885f99ccce70
+2025-06-15T00:30:16.5175977Z ##[group]Run actions/download-artifact@v4
+2025-06-15T00:30:16.5176346Z with:
+2025-06-15T00:30:16.5176595Z   name: images-armv8a-gcc
+2025-06-15T00:30:16.5176887Z   merge-multiple: false
+2025-06-15T00:30:16.5177157Z   repository: seL4/seL4
+2025-06-15T00:30:16.5177414Z   run-id: 15632425724
+2025-06-15T00:30:16.5177666Z ##[endgroup]
+2025-06-15T00:30:16.7156858Z Downloading single artifact
+2025-06-15T00:30:16.8263457Z Preparing to download the following artifacts:
+2025-06-15T00:30:16.8264983Z - images-armv8a-gcc (ID: 3321977567, Size: 208707826, Expected Digest: sha256:1b7ead4d2f50034b98a5cba0f620a52067e3d9dbd362a51530c3aa9d441030dc)
+2025-06-15T00:30:16.8948482Z Redirecting to blob download url: https://productionresultssa14.blob.core.windows.net/actions-results/89934fd9-eb4f-4c6d-96bb-efe193e825b5/workflow-job-run-12abfb04-cf56-59bc-8440-0813ea97eccc/artifacts/9d6734ff85e12b0e1ea3a76f0247b01d5c70274338d22b7699ef91eff54aaf18.zip
+2025-06-15T00:30:16.8950878Z Starting download of artifact to: /home/runner/work/seL4/seL4
+2025-06-15T00:30:16.9967813Z (node:2060) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2025-06-15T00:30:16.9969676Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-06-15T00:30:19.1532608Z SHA256 digest of downloaded artifact is 1b7ead4d2f50034b98a5cba0f620a52067e3d9dbd362a51530c3aa9d441030dc
+2025-06-15T00:30:19.1533833Z Artifact download completed successfully.
+2025-06-15T00:30:19.1534355Z Total of 1 artifact(s) downloaded
+2025-06-15T00:30:19.1540717Z Download artifact has finished successfully
+2025-06-15T00:30:19.1717060Z ##[group]Run seL4/ci-actions/sel4test-hw-run@master
+2025-06-15T00:30:19.1717428Z with:
+2025-06-15T00:30:19.1717629Z   platform: ZYNQMP106
+2025-06-15T00:30:19.1717852Z   compiler: gcc
+2025-06-15T00:30:19.1718082Z   index: $16
+2025-06-15T00:30:19.1718309Z   action_name: sel4test-hw-run
+2025-06-15T00:30:19.1718547Z env:
+2025-06-15T00:30:19.1720320Z   HW_SSH: ***
+
+2025-06-15T00:30:19.1720543Z ##[endgroup]
+2025-06-15T00:30:19.2711426Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/steps.sh
+2025-06-15T00:30:19.2768071Z ##[group]Setting up
+2025-06-15T00:30:19.3168012Z Agent pid 2089
+2025-06-15T00:30:19.3620434Z Cloning into 'seL4_libs'...
+2025-06-15T00:30:30.0279893Z Reading package lists...
+2025-06-15T00:30:30.1832347Z Building dependency tree...
+2025-06-15T00:30:30.2024260Z Reading state information...
+2025-06-15T00:30:30.3896945Z libffi-dev is already the newest version (3.4.6-1build1).
+2025-06-15T00:30:30.3897668Z libffi-dev set to manually installed.
+2025-06-15T00:30:30.3898074Z 0 upgraded, 0 newly installed, 0 to remove and 15 not upgraded.
+2025-06-15T00:30:33.6771005Z Collecting junitparser
+2025-06-15T00:30:33.7248810Z   Downloading junitparser-3.2.0-py2.py3-none-any.whl.metadata (9.0 kB)
+2025-06-15T00:30:33.7584061Z Collecting sel4-deps
+2025-06-15T00:30:33.7667490Z   Downloading sel4_deps-0.5.0-py3-none-any.whl.metadata (653 bytes)
+2025-06-15T00:30:33.7780848Z Requirement already satisfied: six in /usr/lib/python3/dist-packages (from sel4-deps) (1.16.0)
+2025-06-15T00:30:33.7974528Z Collecting future (from sel4-deps)
+2025-06-15T00:30:33.8044750Z   Downloading future-1.0.0-py3-none-any.whl.metadata (4.0 kB)
+2025-06-15T00:30:33.8084719Z Requirement already satisfied: jinja2 in /usr/lib/python3/dist-packages (from sel4-deps) (3.1.2)
+2025-06-15T00:30:34.0083156Z Collecting lxml (from sel4-deps)
+2025-06-15T00:30:34.0157118Z   Downloading lxml-5.4.0-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (3.5 kB)
+2025-06-15T00:30:34.0342129Z Collecting ply (from sel4-deps)
+2025-06-15T00:30:34.0450847Z   Downloading ply-3.11-py2.py3-none-any.whl.metadata (844 bytes)
+2025-06-15T00:30:34.1313178Z Collecting psutil (from sel4-deps)
+2025-06-15T00:30:34.1389773Z   Downloading psutil-7.0.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (22 kB)
+2025-06-15T00:30:34.1605856Z Collecting bs4 (from sel4-deps)
+2025-06-15T00:30:34.1683514Z   Downloading bs4-0.0.2-py2.py3-none-any.whl.metadata (411 bytes)
+2025-06-15T00:30:34.1867816Z Collecting pyelftools (from sel4-deps)
+2025-06-15T00:30:34.1936445Z   Downloading pyelftools-0.32-py3-none-any.whl.metadata (372 bytes)
+2025-06-15T00:30:34.2180782Z Collecting sh (from sel4-deps)
+2025-06-15T00:30:34.2255203Z   Downloading sh-2.2.2-py3-none-any.whl.metadata (3.7 kB)
+2025-06-15T00:30:34.2295567Z Requirement already satisfied: pexpect in /usr/lib/python3/dist-packages (from sel4-deps) (4.9.0)
+2025-06-15T00:30:34.2305548Z Requirement already satisfied: pyyaml>=5.1 in /usr/lib/python3/dist-packages (from sel4-deps) (6.0.1)
+2025-06-15T00:30:34.2314056Z Requirement already satisfied: jsonschema in /usr/lib/python3/dist-packages (from sel4-deps) (4.10.3)
+2025-06-15T00:30:34.2476432Z Collecting pyfdt (from sel4-deps)
+2025-06-15T00:30:34.2562051Z   Downloading pyfdt-0.3.tar.gz (9.1 kB)
+2025-06-15T00:30:34.2614236Z   Preparing metadata (setup.py): started
+2025-06-15T00:30:34.4715339Z   Preparing metadata (setup.py): finished with status 'done'
+2025-06-15T00:30:34.4953290Z Collecting cmake-format==0.4.5 (from sel4-deps)
+2025-06-15T00:30:34.5030014Z   Downloading cmake_format-0.4.5.tar.gz (51 kB)
+2025-06-15T00:30:34.5122943Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 51.1/51.1 kB 6.4 MB/s eta 0:00:00
+2025-06-15T00:30:34.5185777Z   Preparing metadata (setup.py): started
+2025-06-15T00:30:34.6808654Z   Preparing metadata (setup.py): finished with status 'done'
+2025-06-15T00:30:34.6994344Z Collecting guardonce (from sel4-deps)
+2025-06-15T00:30:34.7077866Z   Downloading guardonce-2.4.0-py2.py3-none-any.whl.metadata (3.4 kB)
+2025-06-15T00:30:34.7340189Z Collecting autopep8==2.3.1 (from sel4-deps)
+2025-06-15T00:30:34.7420212Z   Downloading autopep8-2.3.1-py2.py3-none-any.whl.metadata (16 kB)
+2025-06-15T00:30:34.7641714Z Collecting libarchive-c (from sel4-deps)
+2025-06-15T00:30:34.7723296Z   Downloading libarchive_c-5.3-py3-none-any.whl.metadata (5.8 kB)
+2025-06-15T00:30:34.7977781Z Collecting pycodestyle>=2.12.0 (from autopep8==2.3.1->sel4-deps)
+2025-06-15T00:30:34.8049357Z   Downloading pycodestyle-2.13.0-py2.py3-none-any.whl.metadata (4.5 kB)
+2025-06-15T00:30:34.8377361Z Collecting beautifulsoup4 (from bs4->sel4-deps)
+2025-06-15T00:30:34.8450264Z   Downloading beautifulsoup4-4.13.4-py3-none-any.whl.metadata (3.8 kB)
+2025-06-15T00:30:34.8654845Z Requirement already satisfied: attrs>=17.4.0 in /usr/lib/python3/dist-packages (from jsonschema->sel4-deps) (23.2.0)
+2025-06-15T00:30:34.8670424Z Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,>=0.14.0 in /usr/lib/python3/dist-packages (from jsonschema->sel4-deps) (0.20.0)
+2025-06-15T00:30:34.9576126Z Collecting soupsieve>1.2 (from beautifulsoup4->bs4->sel4-deps)
+2025-06-15T00:30:34.9644140Z   Downloading soupsieve-2.7-py3-none-any.whl.metadata (4.6 kB)
+2025-06-15T00:30:34.9684261Z Requirement already satisfied: typing-extensions>=4.0.0 in /usr/lib/python3/dist-packages (from beautifulsoup4->bs4->sel4-deps) (4.10.0)
+2025-06-15T00:30:34.9799349Z Downloading junitparser-3.2.0-py2.py3-none-any.whl (13 kB)
+2025-06-15T00:30:34.9902503Z Downloading sel4_deps-0.5.0-py3-none-any.whl (1.2 kB)
+2025-06-15T00:30:34.9995544Z Downloading autopep8-2.3.1-py2.py3-none-any.whl (45 kB)
+2025-06-15T00:30:35.0034799Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.7/45.7 kB 17.4 MB/s eta 0:00:00
+2025-06-15T00:30:35.0104546Z Downloading bs4-0.0.2-py2.py3-none-any.whl (1.2 kB)
+2025-06-15T00:30:35.0192248Z Downloading future-1.0.0-py3-none-any.whl (491 kB)
+2025-06-15T00:30:35.0351703Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 491.3/491.3 kB 33.8 MB/s eta 0:00:00
+2025-06-15T00:30:35.0430662Z Downloading guardonce-2.4.0-py2.py3-none-any.whl (15 kB)
+2025-06-15T00:30:35.0533195Z Downloading libarchive_c-5.3-py3-none-any.whl (17 kB)
+2025-06-15T00:30:35.0623184Z Downloading lxml-5.4.0-cp312-cp312-manylinux_2_28_x86_64.whl (5.0 MB)
+2025-06-15T00:30:35.0945074Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 163.3 MB/s eta 0:00:00
+2025-06-15T00:30:35.1014295Z Downloading ply-3.11-py2.py3-none-any.whl (49 kB)
+2025-06-15T00:30:35.1051979Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.6/49.6 kB 18.8 MB/s eta 0:00:00
+2025-06-15T00:30:35.1119777Z Downloading psutil-7.0.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (277 kB)
+2025-06-15T00:30:35.1168533Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 278.0/278.0 kB 81.5 MB/s eta 0:00:00
+2025-06-15T00:30:35.1235886Z Downloading pyelftools-0.32-py3-none-any.whl (188 kB)
+2025-06-15T00:30:35.1279434Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.5/188.5 kB 64.9 MB/s eta 0:00:00
+2025-06-15T00:30:35.1361530Z Downloading sh-2.2.2-py3-none-any.whl (38 kB)
+2025-06-15T00:30:35.1450000Z Downloading pycodestyle-2.13.0-py2.py3-none-any.whl (31 kB)
+2025-06-15T00:30:35.1536874Z Downloading beautifulsoup4-4.13.4-py3-none-any.whl (187 kB)
+2025-06-15T00:30:35.1589513Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 187.3/187.3 kB 48.2 MB/s eta 0:00:00
+2025-06-15T00:30:35.1655924Z Downloading soupsieve-2.7-py3-none-any.whl (36 kB)
+2025-06-15T00:30:35.1941981Z Building wheels for collected packages: cmake-format, pyfdt
+2025-06-15T00:30:35.1947406Z   Building wheel for cmake-format (setup.py): started
+2025-06-15T00:30:35.5400186Z   Building wheel for cmake-format (setup.py): finished with status 'done'
+2025-06-15T00:30:35.5403071Z   Created wheel for cmake-format: filename=cmake_format-0.4.5-py3-none-any.whl size=57091 sha256=ae8a914312089a86ab5347498c2435b48ddf830e5b5922505b1abc2b4419e59d
+2025-06-15T00:30:35.5405327Z   Stored in directory: /home/runner/.cache/pip/wheels/26/fb/b2/73a635046d239de7405e0f77cf67c3d31a3f0d5edcf8986d29
+2025-06-15T00:30:35.5431613Z   Building wheel for pyfdt (setup.py): started
+2025-06-15T00:30:35.7771192Z   Building wheel for pyfdt (setup.py): finished with status 'done'
+2025-06-15T00:30:35.7774794Z   Created wheel for pyfdt: filename=pyfdt-0.3-py3-none-any.whl size=10969 sha256=27fae1eec1efac0be25b1330b153776a9fcb24e02cb57c63f47811ea0a2527cc
+2025-06-15T00:30:35.7777337Z   Stored in directory: /home/runner/.cache/pip/wheels/d9/8e/2a/cff33f3accb8eaa34608e68786db1ec323a5f6bce8d724d90a
+2025-06-15T00:30:35.7791453Z Successfully built cmake-format pyfdt
+2025-06-15T00:30:36.0511203Z Installing collected packages: pyfdt, pyelftools, ply, libarchive-c, junitparser, guardonce, cmake-format, soupsieve, sh, pycodestyle, psutil, lxml, future, beautifulsoup4, autopep8, bs4, sel4-deps
+2025-06-15T00:30:37.0165855Z Successfully installed autopep8-2.3.1 beautifulsoup4-4.13.4 bs4-0.0.2 cmake-format-0.4.5 future-1.0.0 guardonce-2.4.0 junitparser-3.2.0 libarchive-c-5.3 lxml-5.4.0 ply-3.11 psutil-7.0.0 pycodestyle-2.13.0 pyelftools-0.32 pyfdt-0.3 sel4-deps-0.5.0 sh-2.2.2 soupsieve-2.7
+2025-06-15T00:30:37.1101172Z ##[endgroup]
+2025-06-15T00:30:37.2628512Z 
+2025-06-15T00:30:37.2630027Z ##[group]ZYNQMP106_debug_gcc_32
+2025-06-15T00:30:37.2631312Z [1m-----------[ start test ZYNQMP106_debug_gcc_32 ]-----------[0m
+2025-06-15T00:30:37.2631992Z [33m+++ tar xvzf ../ZYNQMP106_debug_gcc_32-images.tar.gz[0m
+2025-06-15T00:30:37.2658356Z images/
+2025-06-15T00:30:37.2658782Z images/sel4test-driver-image-arm-zynqmp
+2025-06-15T00:30:37.2857914Z [33m+++ mq.sh sem -info zcu106[0m
+2025-06-15T00:35:06.0542356Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T00:35:06.0543262Z [31;1m>>> command failed, aborting.[0m
+2025-06-15T00:35:06.0546443Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16[0m
+2025-06-15T00:39:36.3901572Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T00:39:36.3902692Z [1m-----------[ end test ZYNQMP106_debug_gcc_32 ]-----------[0m
+2025-06-15T00:39:36.3903784Z ##[endgroup]
+2025-06-15T00:39:36.3904254Z [31;1mZYNQMP106_debug_gcc_32 FAILED[0m
+2025-06-15T00:39:36.3904942Z 
+2025-06-15T00:39:36.3905404Z ##[group]ZYNQMP106_debug_gcc_64
+2025-06-15T00:39:36.3906089Z [1m-----------[ start test ZYNQMP106_debug_gcc_64 ]-----------[0m
+2025-06-15T00:39:36.3913449Z [33m+++ tar xvzf ../ZYNQMP106_debug_gcc_64-images.tar.gz[0m
+2025-06-15T00:39:36.3941869Z images/
+2025-06-15T00:39:36.3942971Z images/sel4test-driver-image-arm-zynqmp
+2025-06-15T00:39:36.4164567Z [33m+++ mq.sh sem -info zcu106[0m
+2025-06-15T00:44:06.7263886Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T00:44:06.7267347Z [31;1m>>> command failed, aborting.[0m
+2025-06-15T00:44:06.7268118Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16[0m
+2025-06-15T00:48:37.0622250Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T00:48:37.0623392Z [1m-----------[ end test ZYNQMP106_debug_gcc_64 ]-----------[0m
+2025-06-15T00:48:37.0624446Z ##[endgroup]
+2025-06-15T00:48:37.0624754Z [31;1mZYNQMP106_debug_gcc_64 FAILED[0m
+2025-06-15T00:48:37.0624947Z 
+2025-06-15T00:48:37.0626998Z ##[group]ZYNQMP106_debug_MCS_gcc_32
+2025-06-15T00:48:37.0627640Z [1m-----------[ start test ZYNQMP106_debug_MCS_gcc_32 ]-----------[0m
+2025-06-15T00:48:37.0632212Z [33m+++ tar xvzf ../ZYNQMP106_debug_MCS_gcc_32-images.tar.gz[0m
+2025-06-15T00:48:37.0659825Z images/
+2025-06-15T00:48:37.0660208Z images/sel4test-driver-image-arm-zynqmp
+2025-06-15T00:48:37.0887921Z [33m+++ mq.sh sem -info zcu106[0m
+2025-06-15T00:53:07.3981152Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T00:53:07.3981954Z [31;1m>>> command failed, aborting.[0m
+2025-06-15T00:53:07.3982466Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16[0m
+2025-06-15T00:57:37.7340862Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T00:57:37.7341885Z [1m-----------[ end test ZYNQMP106_debug_MCS_gcc_32 ]-----------[0m
+2025-06-15T00:57:37.7344699Z ##[endgroup]
+2025-06-15T00:57:37.7345538Z [31;1mZYNQMP106_debug_MCS_gcc_32 FAILED[0m
+2025-06-15T00:57:37.7345854Z 
+2025-06-15T00:57:37.7346289Z ##[group]ZYNQMP106_debug_MCS_gcc_64
+2025-06-15T00:57:37.7346954Z [1m-----------[ start test ZYNQMP106_debug_MCS_gcc_64 ]-----------[0m
+2025-06-15T00:57:37.7353184Z [33m+++ tar xvzf ../ZYNQMP106_debug_MCS_gcc_64-images.tar.gz[0m
+2025-06-15T00:57:37.7379433Z images/
+2025-06-15T00:57:37.7380075Z images/sel4test-driver-image-arm-zynqmp
+2025-06-15T00:57:37.7596535Z [33m+++ mq.sh sem -info zcu106[0m
+2025-06-15T01:02:08.0700908Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T01:02:08.0703293Z [31;1m>>> command failed, aborting.[0m
+2025-06-15T01:02:08.0704287Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16[0m
+2025-06-15T01:06:38.4060325Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T01:06:38.4061742Z [1m-----------[ end test ZYNQMP106_debug_MCS_gcc_64 ]-----------[0m
+2025-06-15T01:06:38.4064663Z ##[endgroup]
+2025-06-15T01:06:38.4066209Z [31;1mZYNQMP106_debug_MCS_gcc_64 FAILED[0m
+2025-06-15T01:06:38.4066589Z 
+2025-06-15T01:06:38.4067054Z ##[group]ZYNQMP106_debug_hyp_gcc_64
+2025-06-15T01:06:38.4067769Z [1m-----------[ start test ZYNQMP106_debug_hyp_gcc_64 ]-----------[0m
+2025-06-15T01:06:38.4073889Z [33m+++ tar xvzf ../ZYNQMP106_debug_hyp_gcc_64-images.tar.gz[0m
+2025-06-15T01:06:38.4100945Z images/
+2025-06-15T01:06:38.4324620Z images/sel4test-driver-image-arm-zynqmp
+2025-06-15T01:06:38.4325084Z [33m+++ mq.sh sem -info zcu106[0m
+2025-06-15T01:11:08.7422561Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T01:11:08.7423315Z [31;1m>>> command failed, aborting.[0m
+2025-06-15T01:11:08.7423986Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16[0m
+2025-06-15T01:15:39.0781717Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T01:15:39.0783259Z [1m-----------[ end test ZYNQMP106_debug_hyp_gcc_64 ]-----------[0m
+2025-06-15T01:15:39.0784402Z ##[endgroup]
+2025-06-15T01:15:39.0784740Z [31;1mZYNQMP106_debug_hyp_gcc_64 FAILED[0m
+2025-06-15T01:15:39.0784973Z 
+2025-06-15T01:15:39.0785320Z ##[group]ZYNQMP106_debug_hyp_MCS_gcc_64
+2025-06-15T01:15:39.0785808Z [1m-----------[ start test ZYNQMP106_debug_hyp_MCS_gcc_64 ]-----------[0m
+2025-06-15T01:15:39.0792579Z [33m+++ tar xvzf ../ZYNQMP106_debug_hyp_MCS_gcc_64-images.tar.gz[0m
+2025-06-15T01:15:39.0819783Z images/
+2025-06-15T01:15:39.0820422Z images/sel4test-driver-image-arm-zynqmp
+2025-06-15T01:15:39.1040359Z [33m+++ mq.sh sem -info zcu106[0m
+2025-06-15T01:20:09.4141291Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T01:20:09.4142202Z [31;1m>>> command failed, aborting.[0m
+2025-06-15T01:20:09.4142919Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16[0m
+2025-06-15T01:24:39.7500302Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T01:24:39.7501454Z [1m-----------[ end test ZYNQMP106_debug_hyp_MCS_gcc_64 ]-----------[0m
+2025-06-15T01:24:39.7502428Z ##[endgroup]
+2025-06-15T01:24:39.7502760Z [31;1mZYNQMP106_debug_hyp_MCS_gcc_64 FAILED[0m
+2025-06-15T01:24:39.7502996Z 
+2025-06-15T01:24:39.7505116Z ##[group]ZYNQMP106_debug_SMP_gcc_64
+2025-06-15T01:24:39.7505759Z [1m-----------[ start test ZYNQMP106_debug_SMP_gcc_64 ]-----------[0m
+2025-06-15T01:24:39.7510658Z [33m+++ tar xvzf ../ZYNQMP106_debug_SMP_gcc_64-images.tar.gz[0m
+2025-06-15T01:24:39.7537690Z images/
+2025-06-15T01:24:39.7538075Z images/sel4test-driver-image-arm-zynqmp
+2025-06-15T01:24:39.7762536Z [33m+++ mq.sh sem -info zcu106[0m
+2025-06-15T01:29:10.0860066Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T01:29:10.0861752Z [31;1m>>> command failed, aborting.[0m
+2025-06-15T01:29:10.0862663Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16[0m
+2025-06-15T01:33:40.4221082Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T01:33:40.4222037Z [1m-----------[ end test ZYNQMP106_debug_SMP_gcc_64 ]-----------[0m
+2025-06-15T01:33:40.4223017Z ##[endgroup]
+2025-06-15T01:33:40.4223474Z [31;1mZYNQMP106_debug_SMP_gcc_64 FAILED[0m
+2025-06-15T01:33:40.4224036Z 
+2025-06-15T01:33:40.4224846Z ##[group]ZYNQMP106_debug_SMP_MCS_gcc_64
+2025-06-15T01:33:40.4225549Z [1m-----------[ start test ZYNQMP106_debug_SMP_MCS_gcc_64 ]-----------[0m
+2025-06-15T01:33:40.4232322Z [33m+++ tar xvzf ../ZYNQMP106_debug_SMP_MCS_gcc_64-images.tar.gz[0m
+2025-06-15T01:33:40.4258605Z images/
+2025-06-15T01:33:40.4259249Z images/sel4test-driver-image-arm-zynqmp
+2025-06-15T01:33:40.4477891Z [33m+++ mq.sh sem -info zcu106[0m
+2025-06-15T01:38:10.7581803Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T01:38:10.7582480Z [31;1m>>> command failed, aborting.[0m
+2025-06-15T01:38:10.7583024Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16[0m
+2025-06-15T01:42:41.0941918Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T01:42:41.0942937Z [1m-----------[ end test ZYNQMP106_debug_SMP_MCS_gcc_64 ]-----------[0m
+2025-06-15T01:42:41.0945616Z ##[endgroup]
+2025-06-15T01:42:41.0946098Z [31;1mZYNQMP106_debug_SMP_MCS_gcc_64 FAILED[0m
+2025-06-15T01:42:41.0946423Z 
+2025-06-15T01:42:41.0946933Z ##[group]ZYNQMP106_debug_SMP_hyp_gcc_64
+2025-06-15T01:42:41.0947659Z [1m-----------[ start test ZYNQMP106_debug_SMP_hyp_gcc_64 ]-----------[0m
+2025-06-15T01:42:41.0952804Z [33m+++ tar xvzf ../ZYNQMP106_debug_SMP_hyp_gcc_64-images.tar.gz[0m
+2025-06-15T01:42:41.0979100Z images/
+2025-06-15T01:42:41.0979494Z images/sel4test-driver-image-arm-zynqmp
+2025-06-15T01:42:41.1207486Z [33m+++ mq.sh sem -info zcu106[0m
+2025-06-15T01:47:11.4301911Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T01:47:11.4302870Z [31;1m>>> command failed, aborting.[0m
+2025-06-15T01:47:11.4303929Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16[0m
+2025-06-15T01:51:41.7661351Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T01:51:41.7662662Z [1m-----------[ end test ZYNQMP106_debug_SMP_hyp_gcc_64 ]-----------[0m
+2025-06-15T01:51:41.7663544Z ##[endgroup]
+2025-06-15T01:51:41.7664078Z [31;1mZYNQMP106_debug_SMP_hyp_gcc_64 FAILED[0m
+2025-06-15T01:51:41.7664305Z 
+2025-06-15T01:51:41.7666317Z ##[group]ZYNQMP106_debug_SMP_hyp_MCS_gcc_64
+2025-06-15T01:51:41.7667040Z [1m-----------[ start test ZYNQMP106_debug_SMP_hyp_MCS_gcc_64 ]-----------[0m
+2025-06-15T01:51:41.7675008Z [33m+++ tar xvzf ../ZYNQMP106_debug_SMP_hyp_MCS_gcc_64-images.tar.gz[0m
+2025-06-15T01:51:41.7702245Z images/
+2025-06-15T01:51:41.7702584Z images/sel4test-driver-image-arm-zynqmp
+2025-06-15T01:51:41.7924397Z [33m+++ mq.sh sem -info zcu106[0m
+2025-06-15T01:56:12.1020190Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T01:56:12.1021204Z [31;1m>>> command failed, aborting.[0m
+2025-06-15T01:56:12.1022033Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16[0m
+2025-06-15T02:00:42.4382471Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T02:00:42.4383486Z [1m-----------[ end test ZYNQMP106_debug_SMP_hyp_MCS_gcc_64 ]-----------[0m
+2025-06-15T02:00:42.4384699Z ##[endgroup]
+2025-06-15T02:00:42.4385229Z [31;1mZYNQMP106_debug_SMP_hyp_MCS_gcc_64 FAILED[0m
+2025-06-15T02:00:42.4385599Z 
+2025-06-15T02:00:42.4386067Z ##[group]ZYNQMP106_release_gcc_32
+2025-06-15T02:00:42.4386704Z [1m-----------[ start test ZYNQMP106_release_gcc_32 ]-----------[0m
+2025-06-15T02:00:42.4394275Z [33m+++ tar xvzf ../ZYNQMP106_release_gcc_32-images.tar.gz[0m
+2025-06-15T02:00:42.4421332Z images/
+2025-06-15T02:00:42.4421691Z images/sel4test-driver-image-arm-zynqmp
+2025-06-15T02:00:42.4502504Z [33m+++ mq.sh sem -info zcu106[0m
+2025-06-15T02:05:12.7741833Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T02:05:12.7742701Z [31;1m>>> command failed, aborting.[0m
+2025-06-15T02:05:12.7743212Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16[0m
+2025-06-15T02:09:43.1102299Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T02:09:43.1103244Z [1m-----------[ end test ZYNQMP106_release_gcc_32 ]-----------[0m
+2025-06-15T02:09:43.1104356Z ##[endgroup]
+2025-06-15T02:09:43.1104655Z [31;1mZYNQMP106_release_gcc_32 FAILED[0m
+2025-06-15T02:09:43.1104850Z 
+2025-06-15T02:09:43.1105117Z ##[group]ZYNQMP106_release_gcc_64
+2025-06-15T02:09:43.1105820Z [1m-----------[ start test ZYNQMP106_release_gcc_64 ]-----------[0m
+2025-06-15T02:09:43.1108657Z [33m+++ tar xvzf ../ZYNQMP106_release_gcc_64-images.tar.gz[0m
+2025-06-15T02:09:43.1136397Z images/
+2025-06-15T02:09:43.1136781Z images/sel4test-driver-image-arm-zynqmp
+2025-06-15T02:09:43.1221656Z [33m+++ mq.sh sem -info zcu106[0m
+2025-06-15T02:14:13.4463257Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T02:14:13.4464632Z [31;1m>>> command failed, aborting.[0m
+2025-06-15T02:14:13.4465574Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16[0m
+2025-06-15T02:18:43.7821864Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T02:18:43.7822806Z [1m-----------[ end test ZYNQMP106_release_gcc_64 ]-----------[0m
+2025-06-15T02:18:43.7823530Z ##[endgroup]
+2025-06-15T02:18:43.7824112Z [31;1mZYNQMP106_release_gcc_64 FAILED[0m
+2025-06-15T02:18:43.7824340Z 
+2025-06-15T02:18:43.7824650Z ##[group]ZYNQMP106_release_MCS_gcc_32
+2025-06-15T02:18:43.7825150Z [1m-----------[ start test ZYNQMP106_release_MCS_gcc_32 ]-----------[0m
+2025-06-15T02:18:43.7828818Z [33m+++ tar xvzf ../ZYNQMP106_release_MCS_gcc_32-images.tar.gz[0m
+2025-06-15T02:18:43.7854971Z images/
+2025-06-15T02:18:43.7855626Z images/sel4test-driver-image-arm-zynqmp
+2025-06-15T02:18:43.7943236Z [33m+++ mq.sh sem -info zcu106[0m
+2025-06-15T02:23:14.1181636Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T02:23:14.1182522Z [31;1m>>> command failed, aborting.[0m
+2025-06-15T02:23:14.1183234Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16[0m
+2025-06-15T02:27:44.4542160Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T02:27:44.4543858Z [1m-----------[ end test ZYNQMP106_release_MCS_gcc_32 ]-----------[0m
+2025-06-15T02:27:44.4546482Z ##[endgroup]
+2025-06-15T02:27:44.4546982Z [31;1mZYNQMP106_release_MCS_gcc_32 FAILED[0m
+2025-06-15T02:27:44.4547308Z 
+2025-06-15T02:27:44.4547814Z ##[group]ZYNQMP106_release_MCS_gcc_64
+2025-06-15T02:27:44.4548542Z [1m-----------[ start test ZYNQMP106_release_MCS_gcc_64 ]-----------[0m
+2025-06-15T02:27:44.4550878Z [33m+++ tar xvzf ../ZYNQMP106_release_MCS_gcc_64-images.tar.gz[0m
+2025-06-15T02:27:44.4576871Z images/
+2025-06-15T02:27:44.4577530Z images/sel4test-driver-image-arm-zynqmp
+2025-06-15T02:27:44.4669254Z [33m+++ mq.sh sem -info zcu106[0m
+2025-06-15T02:32:14.7901220Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T02:32:14.7902227Z [31;1m>>> command failed, aborting.[0m
+2025-06-15T02:32:14.7903007Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16[0m
+2025-06-15T02:36:45.1263548Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T02:36:45.1265723Z [1m-----------[ end test ZYNQMP106_release_MCS_gcc_64 ]-----------[0m
+2025-06-15T02:36:45.1268247Z ##[endgroup]
+2025-06-15T02:36:45.1268729Z [31;1mZYNQMP106_release_MCS_gcc_64 FAILED[0m
+2025-06-15T02:36:45.1269065Z 
+2025-06-15T02:36:45.1269487Z ##[group]ZYNQMP106_release_hyp_gcc_64
+2025-06-15T02:36:45.1270178Z [1m-----------[ start test ZYNQMP106_release_hyp_gcc_64 ]-----------[0m
+2025-06-15T02:36:45.1270945Z [33m+++ tar xvzf ../ZYNQMP106_release_hyp_gcc_64-images.tar.gz[0m
+2025-06-15T02:36:45.1300652Z images/
+2025-06-15T02:36:45.1301285Z images/sel4test-driver-image-arm-zynqmp
+2025-06-15T02:36:45.1392084Z [33m+++ mq.sh sem -info zcu106[0m
+2025-06-15T02:41:15.4620596Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T02:41:15.4621488Z [31;1m>>> command failed, aborting.[0m
+2025-06-15T02:41:15.4622267Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16[0m
+2025-06-15T02:45:45.7981722Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T02:45:45.7982838Z [1m-----------[ end test ZYNQMP106_release_hyp_gcc_64 ]-----------[0m
+2025-06-15T02:45:45.7984330Z ##[endgroup]
+2025-06-15T02:45:45.7984688Z [31;1mZYNQMP106_release_hyp_gcc_64 FAILED[0m
+2025-06-15T02:45:45.7984902Z 
+2025-06-15T02:45:45.7985199Z ##[group]ZYNQMP106_release_hyp_MCS_gcc_64
+2025-06-15T02:45:45.7985961Z [1m-----------[ start test ZYNQMP106_release_hyp_MCS_gcc_64 ]-----------[0m
+2025-06-15T02:45:45.7988404Z [33m+++ tar xvzf ../ZYNQMP106_release_hyp_MCS_gcc_64-images.tar.gz[0m
+2025-06-15T02:45:45.8014506Z images/
+2025-06-15T02:45:45.8016625Z images/sel4test-driver-image-arm-zynqmp
+2025-06-15T02:45:45.8113317Z [33m+++ mq.sh sem -info zcu106[0m
+2025-06-15T02:50:16.1341602Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T02:50:16.1342405Z [31;1m>>> command failed, aborting.[0m
+2025-06-15T02:50:16.1342890Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16[0m
+2025-06-15T02:54:46.4701008Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T02:54:46.4702143Z [1m-----------[ end test ZYNQMP106_release_hyp_MCS_gcc_64 ]-----------[0m
+2025-06-15T02:54:46.4702753Z ##[endgroup]
+2025-06-15T02:54:46.4703047Z [31;1mZYNQMP106_release_hyp_MCS_gcc_64 FAILED[0m
+2025-06-15T02:54:46.4703264Z 
+2025-06-15T02:54:46.4703513Z ##[group]ZYNQMP106_release_SMP_gcc_64
+2025-06-15T02:54:46.4704102Z [1m-----------[ start test ZYNQMP106_release_SMP_gcc_64 ]-----------[0m
+2025-06-15T02:54:46.4707695Z [33m+++ tar xvzf ../ZYNQMP106_release_SMP_gcc_64-images.tar.gz[0m
+2025-06-15T02:54:46.4734698Z images/
+2025-06-15T02:54:46.4735308Z images/sel4test-driver-image-arm-zynqmp
+2025-06-15T02:54:46.4821294Z [33m+++ mq.sh sem -info zcu106[0m
+2025-06-15T02:59:16.8063248Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T02:59:16.8065311Z [31;1m>>> command failed, aborting.[0m
+2025-06-15T02:59:16.8066051Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16[0m
+2025-06-15T03:03:47.1421444Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T03:03:47.1422432Z [1m-----------[ end test ZYNQMP106_release_SMP_gcc_64 ]-----------[0m
+2025-06-15T03:03:47.1425055Z ##[endgroup]
+2025-06-15T03:03:47.1425404Z [31;1mZYNQMP106_release_SMP_gcc_64 FAILED[0m
+2025-06-15T03:03:47.1425635Z 
+2025-06-15T03:03:47.1425928Z ##[group]ZYNQMP106_release_SMP_MCS_gcc_64
+2025-06-15T03:03:47.1426433Z [1m-----------[ start test ZYNQMP106_release_SMP_MCS_gcc_64 ]-----------[0m
+2025-06-15T03:03:47.1428094Z [33m+++ tar xvzf ../ZYNQMP106_release_SMP_MCS_gcc_64-images.tar.gz[0m
+2025-06-15T03:03:47.1454932Z images/
+2025-06-15T03:03:47.1455658Z images/sel4test-driver-image-arm-zynqmp
+2025-06-15T03:03:47.1548551Z [33m+++ mq.sh sem -info zcu106[0m
+2025-06-15T03:08:17.4782122Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T03:08:17.4783006Z [31;1m>>> command failed, aborting.[0m
+2025-06-15T03:08:17.4783912Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16[0m
+2025-06-15T03:12:47.8142107Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T03:12:47.8143207Z [1m-----------[ end test ZYNQMP106_release_SMP_MCS_gcc_64 ]-----------[0m
+2025-06-15T03:12:47.8144257Z ##[endgroup]
+2025-06-15T03:12:47.8144581Z [31;1mZYNQMP106_release_SMP_MCS_gcc_64 FAILED[0m
+2025-06-15T03:12:47.8144810Z 
+2025-06-15T03:12:47.8145082Z ##[group]ZYNQMP106_release_SMP_hyp_gcc_64
+2025-06-15T03:12:47.8145559Z [1m-----------[ start test ZYNQMP106_release_SMP_hyp_gcc_64 ]-----------[0m
+2025-06-15T03:12:47.8148997Z [33m+++ tar xvzf ../ZYNQMP106_release_SMP_hyp_gcc_64-images.tar.gz[0m
+2025-06-15T03:12:47.8175335Z images/
+2025-06-15T03:12:47.8175890Z images/sel4test-driver-image-arm-zynqmp
+2025-06-15T03:12:47.8263319Z [33m+++ mq.sh sem -info zcu106[0m
+2025-06-15T03:17:18.1503518Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T03:17:18.1504712Z [31;1m>>> command failed, aborting.[0m
+2025-06-15T03:17:18.1505373Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16[0m
+2025-06-15T03:21:48.4863183Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T03:21:48.4864738Z [1m-----------[ end test ZYNQMP106_release_SMP_hyp_gcc_64 ]-----------[0m
+2025-06-15T03:21:48.4865505Z ##[endgroup]
+2025-06-15T03:21:48.4865807Z [31;1mZYNQMP106_release_SMP_hyp_gcc_64 FAILED[0m
+2025-06-15T03:21:48.4866037Z 
+2025-06-15T03:21:48.4866306Z ##[group]ZYNQMP106_release_SMP_hyp_MCS_gcc_64
+2025-06-15T03:21:48.4868851Z [1m-----------[ start test ZYNQMP106_release_SMP_hyp_MCS_gcc_64 ]-----------[0m
+2025-06-15T03:21:48.4869896Z [33m+++ tar xvzf ../ZYNQMP106_release_SMP_hyp_MCS_gcc_64-images.tar.gz[0m
+2025-06-15T03:21:48.4896655Z images/
+2025-06-15T03:21:48.4898012Z images/sel4test-driver-image-arm-zynqmp
+2025-06-15T03:21:48.4993219Z [33m+++ mq.sh sem -info zcu106[0m
+2025-06-15T03:26:18.8221580Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T03:26:18.8222441Z [31;1m>>> command failed, aborting.[0m
+2025-06-15T03:26:18.8222996Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16[0m
+2025-06-15T03:30:49.1581575Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T03:30:49.1582506Z [1m-----------[ end test ZYNQMP106_release_SMP_hyp_MCS_gcc_64 ]-----------[0m
+2025-06-15T03:30:49.1583178Z ##[endgroup]
+2025-06-15T03:30:49.1583504Z [31;1mZYNQMP106_release_SMP_hyp_MCS_gcc_64 FAILED[0m
+2025-06-15T03:30:49.1584020Z 
+2025-06-15T03:30:49.1584303Z ##[group]ZYNQMP106_verification_gcc_32
+2025-06-15T03:30:49.1584784Z [1m-----------[ start test ZYNQMP106_verification_gcc_32 ]-----------[0m
+2025-06-15T03:30:49.1588470Z [33m+++ tar xvzf ../ZYNQMP106_verification_gcc_32-images.tar.gz[0m
+2025-06-15T03:30:49.1614627Z images/
+2025-06-15T03:30:49.1615888Z images/sel4test-driver-image-arm-zynqmp
+2025-06-15T03:30:49.1826223Z [33m+++ mq.sh sem -info zcu106[0m
+2025-06-15T03:35:19.4941408Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T03:35:19.4942087Z [31;1m>>> command failed, aborting.[0m
+2025-06-15T03:35:19.4942635Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16[0m
+2025-06-15T03:39:49.8302579Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T03:39:49.8303851Z [1m-----------[ end test ZYNQMP106_verification_gcc_32 ]-----------[0m
+2025-06-15T03:39:49.8304639Z ##[endgroup]
+2025-06-15T03:39:49.8304952Z [31;1mZYNQMP106_verification_gcc_32 FAILED[0m
+2025-06-15T03:39:49.8305168Z 
+2025-06-15T03:39:49.8305431Z ##[group]ZYNQMP106_verification_gcc_64
+2025-06-15T03:39:49.8305883Z [1m-----------[ start test ZYNQMP106_verification_gcc_64 ]-----------[0m
+2025-06-15T03:39:49.8312407Z [33m+++ tar xvzf ../ZYNQMP106_verification_gcc_64-images.tar.gz[0m
+2025-06-15T03:39:49.8338861Z images/
+2025-06-15T03:39:49.8339266Z images/sel4test-driver-image-arm-zynqmp
+2025-06-15T03:39:49.8537990Z [33m+++ mq.sh sem -info zcu106[0m
+2025-06-15T03:44:20.1661854Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T03:44:20.1662802Z [31;1m>>> command failed, aborting.[0m
+2025-06-15T03:44:20.1663768Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16[0m
+2025-06-15T03:48:50.5022154Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T03:48:50.5023193Z [1m-----------[ end test ZYNQMP106_verification_gcc_64 ]-----------[0m
+2025-06-15T03:48:50.5024187Z ##[endgroup]
+2025-06-15T03:48:50.5024485Z [31;1mZYNQMP106_verification_gcc_64 FAILED[0m
+2025-06-15T03:48:50.5024696Z 
+2025-06-15T03:48:50.5024953Z ##[group]ZYNQMP106_verification_MCS_gcc_32
+2025-06-15T03:48:50.5025408Z [1m-----------[ start test ZYNQMP106_verification_MCS_gcc_32 ]-----------[0m
+2025-06-15T03:48:50.5032837Z [33m+++ tar xvzf ../ZYNQMP106_verification_MCS_gcc_32-images.tar.gz[0m
+2025-06-15T03:48:50.5060070Z images/
+2025-06-15T03:48:50.5060464Z images/sel4test-driver-image-arm-zynqmp
+2025-06-15T03:48:50.5262915Z [33m+++ mq.sh sem -info zcu106[0m
+2025-06-15T03:53:20.8381259Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T03:53:20.8382041Z [31;1m>>> command failed, aborting.[0m
+2025-06-15T03:53:20.8382601Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16[0m
+2025-06-15T03:57:51.1742098Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T03:57:51.1743186Z [1m-----------[ end test ZYNQMP106_verification_MCS_gcc_32 ]-----------[0m
+2025-06-15T03:57:51.1744127Z ##[endgroup]
+2025-06-15T03:57:51.1744488Z [31;1mZYNQMP106_verification_MCS_gcc_32 FAILED[0m
+2025-06-15T03:57:51.1744746Z 
+2025-06-15T03:57:51.1745052Z ##[group]ZYNQMP106_verification_MCS_gcc_64
+2025-06-15T03:57:51.1745875Z [1m-----------[ start test ZYNQMP106_verification_MCS_gcc_64 ]-----------[0m
+2025-06-15T03:57:51.1754062Z [33m+++ tar xvzf ../ZYNQMP106_verification_MCS_gcc_64-images.tar.gz[0m
+2025-06-15T03:57:51.1780536Z images/
+2025-06-15T03:57:51.1781106Z images/sel4test-driver-image-arm-zynqmp
+2025-06-15T03:57:51.1990127Z [33m+++ mq.sh sem -info zcu106[0m
+2025-06-15T04:02:21.5101725Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T04:02:21.5102517Z [31;1m>>> command failed, aborting.[0m
+2025-06-15T04:02:21.5103029Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16[0m
+2025-06-15T04:06:51.8461330Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T04:06:51.8462690Z [1m-----------[ end test ZYNQMP106_verification_MCS_gcc_64 ]-----------[0m
+2025-06-15T04:06:51.8463843Z ##[endgroup]
+2025-06-15T04:06:51.8464284Z [31;1mZYNQMP106_verification_MCS_gcc_64 FAILED[0m
+2025-06-15T04:06:51.8464511Z 
+2025-06-15T04:06:51.8464786Z ##[group]ZYNQMP106_verification_hyp_gcc_64
+2025-06-15T04:06:51.8465258Z [1m-----------[ start test ZYNQMP106_verification_hyp_gcc_64 ]-----------[0m
+2025-06-15T04:06:51.8474252Z [33m+++ tar xvzf ../ZYNQMP106_verification_hyp_gcc_64-images.tar.gz[0m
+2025-06-15T04:06:51.8500881Z images/
+2025-06-15T04:06:51.8501437Z images/sel4test-driver-image-arm-zynqmp
+2025-06-15T04:06:51.8717677Z [33m+++ mq.sh sem -info zcu106[0m
+2025-06-15T04:11:22.1822433Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T04:11:22.1823335Z [31;1m>>> command failed, aborting.[0m
+2025-06-15T04:11:22.1824236Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16[0m
+2025-06-15T04:15:52.5181605Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T04:15:52.5182643Z [1m-----------[ end test ZYNQMP106_verification_hyp_gcc_64 ]-----------[0m
+2025-06-15T04:15:52.5183789Z ##[endgroup]
+2025-06-15T04:15:52.5184276Z [31;1mZYNQMP106_verification_hyp_gcc_64 FAILED[0m
+2025-06-15T04:15:52.5184617Z 
+2025-06-15T04:15:52.5185041Z ##[group]ZYNQMP106_verification_hyp_MCS_gcc_64
+2025-06-15T04:15:52.5185811Z [1m-----------[ start test ZYNQMP106_verification_hyp_MCS_gcc_64 ]-----------[0m
+2025-06-15T04:15:52.5192699Z [33m+++ tar xvzf ../ZYNQMP106_verification_hyp_MCS_gcc_64-images.tar.gz[0m
+2025-06-15T04:15:52.5218802Z images/
+2025-06-15T04:15:52.5219536Z images/sel4test-driver-image-arm-zynqmp
+2025-06-15T04:15:52.5430591Z [33m+++ mq.sh sem -info zcu106[0m
+2025-06-15T04:20:22.8541393Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T04:20:22.8542268Z [31;1m>>> command failed, aborting.[0m
+2025-06-15T04:20:22.8542979Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16[0m
+2025-06-15T04:24:53.1901617Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T04:24:53.1902688Z [1m-----------[ end test ZYNQMP106_verification_hyp_MCS_gcc_64 ]-----------[0m
+2025-06-15T04:24:53.1903931Z ##[endgroup]
+2025-06-15T04:24:53.1904415Z [31;1mZYNQMP106_verification_hyp_MCS_gcc_64 FAILED[0m
+2025-06-15T04:24:53.1904782Z 
+2025-06-15T04:24:53.1905196Z ##[group]ZYNQMP106_verification_SMP_gcc_64
+2025-06-15T04:24:53.1905941Z [1m-----------[ start test ZYNQMP106_verification_SMP_gcc_64 ]-----------[0m
+2025-06-15T04:24:53.1914474Z [33m+++ tar xvzf ../ZYNQMP106_verification_SMP_gcc_64-images.tar.gz[0m
+2025-06-15T04:24:53.1940857Z images/
+2025-06-15T04:24:53.1941474Z images/sel4test-driver-image-arm-zynqmp
+2025-06-15T04:24:53.2139997Z [33m+++ mq.sh sem -info zcu106[0m
+2025-06-15T04:29:23.5263229Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T04:29:23.5264542Z [31;1m>>> command failed, aborting.[0m
+2025-06-15T04:29:23.5265318Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16[0m
+2025-06-15T04:33:53.8622481Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T04:33:53.8623874Z [1m-----------[ end test ZYNQMP106_verification_SMP_gcc_64 ]-----------[0m
+2025-06-15T04:33:53.8624855Z ##[endgroup]
+2025-06-15T04:33:53.8625383Z [31;1mZYNQMP106_verification_SMP_gcc_64 FAILED[0m
+2025-06-15T04:33:53.8625621Z 
+2025-06-15T04:33:53.8625926Z ##[group]ZYNQMP106_verification_SMP_MCS_gcc_64
+2025-06-15T04:33:53.8626755Z [1m-----------[ start test ZYNQMP106_verification_SMP_MCS_gcc_64 ]-----------[0m
+2025-06-15T04:33:53.8633746Z [33m+++ tar xvzf ../ZYNQMP106_verification_SMP_MCS_gcc_64-images.tar.gz[0m
+2025-06-15T04:33:53.8660371Z images/
+2025-06-15T04:33:53.8661108Z images/sel4test-driver-image-arm-zynqmp
+2025-06-15T04:33:53.8871348Z [33m+++ mq.sh sem -info zcu106[0m
+2025-06-15T04:38:24.1982053Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T04:38:24.1983121Z [31;1m>>> command failed, aborting.[0m
+2025-06-15T04:38:24.1984196Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16[0m
+2025-06-15T04:42:54.5341369Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T04:42:54.5342489Z [1m-----------[ end test ZYNQMP106_verification_SMP_MCS_gcc_64 ]-----------[0m
+2025-06-15T04:42:54.5343463Z ##[endgroup]
+2025-06-15T04:42:54.5344181Z [31;1mZYNQMP106_verification_SMP_MCS_gcc_64 FAILED[0m
+2025-06-15T04:42:54.5344564Z 
+2025-06-15T04:42:54.5345047Z ##[group]ZYNQMP106_verification_SMP_hyp_gcc_64
+2025-06-15T04:42:54.5345577Z [1m-----------[ start test ZYNQMP106_verification_SMP_hyp_gcc_64 ]-----------[0m
+2025-06-15T04:42:54.5352507Z [33m+++ tar xvzf ../ZYNQMP106_verification_SMP_hyp_gcc_64-images.tar.gz[0m
+2025-06-15T04:42:54.5379664Z images/
+2025-06-15T04:42:54.5380039Z images/sel4test-driver-image-arm-zynqmp
+2025-06-15T04:42:54.5585115Z [33m+++ mq.sh sem -info zcu106[0m
+2025-06-15T04:47:24.8701663Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T04:47:24.8702438Z [31;1m>>> command failed, aborting.[0m
+2025-06-15T04:47:24.8702945Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16[0m
+2025-06-15T04:51:55.2062089Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T04:51:55.2063370Z [1m-----------[ end test ZYNQMP106_verification_SMP_hyp_gcc_64 ]-----------[0m
+2025-06-15T04:51:55.2064318Z ##[endgroup]
+2025-06-15T04:51:55.2064662Z [31;1mZYNQMP106_verification_SMP_hyp_gcc_64 FAILED[0m
+2025-06-15T04:51:55.2064904Z 
+2025-06-15T04:51:55.2065221Z ##[group]ZYNQMP106_verification_SMP_hyp_MCS_gcc_64
+2025-06-15T04:51:55.2065739Z [1m-----------[ start test ZYNQMP106_verification_SMP_hyp_MCS_gcc_64 ]-----------[0m
+2025-06-15T04:51:55.2074255Z [33m+++ tar xvzf ../ZYNQMP106_verification_SMP_hyp_MCS_gcc_64-images.tar.gz[0m
+2025-06-15T04:51:55.2100553Z images/
+2025-06-15T04:51:55.2101275Z images/sel4test-driver-image-arm-zynqmp
+2025-06-15T04:51:55.2333959Z [33m+++ mq.sh sem -info zcu106[0m
+2025-06-15T04:56:25.5421262Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T04:56:25.5421971Z [31;1m>>> command failed, aborting.[0m
+2025-06-15T04:56:25.5422459Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16[0m
+2025-06-15T05:00:55.8781352Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T05:00:55.8782268Z [1m-----------[ end test ZYNQMP106_verification_SMP_hyp_MCS_gcc_64 ]-----------[0m
+2025-06-15T05:00:55.8783006Z ##[endgroup]
+2025-06-15T05:00:55.8783385Z [31;1mZYNQMP106_verification_SMP_hyp_MCS_gcc_64 FAILED[0m
+2025-06-15T05:00:55.8783865Z 
+2025-06-15T05:00:55.8784021Z Successful tests: [0m
+2025-06-15T05:00:55.8784184Z 
+2025-06-15T05:00:55.8788661Z [31;1mFAILED tests: ZYNQMP106_debug_gcc_32, ZYNQMP106_debug_gcc_64, ZYNQMP106_debug_MCS_gcc_32, ZYNQMP106_debug_MCS_gcc_64, ZYNQMP106_debug_hyp_gcc_64, ZYNQMP106_debug_hyp_MCS_gcc_64, ZYNQMP106_debug_SMP_gcc_64, ZYNQMP106_debug_SMP_MCS_gcc_64, ZYNQMP106_debug_SMP_hyp_gcc_64, ZYNQMP106_debug_SMP_hyp_MCS_gcc_64, ZYNQMP106_release_gcc_32, ZYNQMP106_release_gcc_64, ZYNQMP106_release_MCS_gcc_32, ZYNQMP106_release_MCS_gcc_64, ZYNQMP106_release_hyp_gcc_64, ZYNQMP106_release_hyp_MCS_gcc_64, ZYNQMP106_release_SMP_gcc_64, ZYNQMP106_release_SMP_MCS_gcc_64, ZYNQMP106_release_SMP_hyp_gcc_64, ZYNQMP106_release_SMP_hyp_MCS_gcc_64, ZYNQMP106_verification_gcc_32, ZYNQMP106_verification_gcc_64, ZYNQMP106_verification_MCS_gcc_32, ZYNQMP106_verification_MCS_gcc_64, ZYNQMP106_verification_hyp_gcc_64, ZYNQMP106_verification_hyp_MCS_gcc_64, ZYNQMP106_verification_SMP_gcc_64, ZYNQMP106_verification_SMP_MCS_gcc_64, ZYNQMP106_verification_SMP_hyp_gcc_64, ZYNQMP106_verification_SMP_hyp_MCS_gcc_64[0m
+2025-06-15T05:00:55.8923345Z ##[error]Action sel4test-hw-run failed.
+2025-06-15T05:00:55.9002548Z Post job cleanup.
+2025-06-15T05:00:55.9954590Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/post-steps.sh
+2025-06-15T05:00:56.0003955Z ##[group]Releasing mq lock
+2025-06-15T05:00:56.0074088Z Agent pid 5339
+2025-06-15T05:00:56.1569391Z mq.sh sem -cancel zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16
+2025-06-15T05:05:26.2140814Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T05:05:26.2142247Z mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-15632425724-hw-run-16
+2025-06-15T05:09:56.5501496Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T05:09:56.5505989Z mq.sh sem -info zcu106
+2025-06-15T05:14:26.8862960Z Unable to ssh to tftp.keg.cse.unsw.edu.au
+2025-06-15T05:14:26.8950773Z ##[endgroup]
+2025-06-15T05:14:26.9070446Z Post job cleanup.
+2025-06-15T05:14:26.9991791Z [command]/usr/bin/git version
+2025-06-15T05:14:27.0027429Z git version 2.49.0
+2025-06-15T05:14:27.0070627Z Temporarily overriding HOME='/home/runner/work/_temp/6bdeaa56-42c2-45b1-8019-26d85172c99b' before making global git config changes
+2025-06-15T05:14:27.0071956Z Adding repository directory to the temporary git global config as a safe directory
+2025-06-15T05:14:27.0077062Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/seL4/seL4/machine_queue
+2025-06-15T05:14:27.0111907Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-06-15T05:14:27.0144635Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-06-15T05:14:27.0366737Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-06-15T05:14:27.0387278Z http.https://github.com/.extraheader
+2025-06-15T05:14:27.0400785Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-06-15T05:14:27.0431018Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-06-15T05:14:27.0761037Z Cleaning up orphan processes
