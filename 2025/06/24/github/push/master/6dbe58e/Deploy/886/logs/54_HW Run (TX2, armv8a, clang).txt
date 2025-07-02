@@ -1,0 +1,904 @@
+﻿2025-07-01T05:27:04.2725729Z Current runner version: '2.325.0'
+2025-07-01T05:27:04.2751358Z ##[group]Runner Image Provisioner
+2025-07-01T05:27:04.2752692Z Hosted Compute Agent
+2025-07-01T05:27:04.2753585Z Version: 20250620.352
+2025-07-01T05:27:04.2754350Z Commit: f262f3aba23b10ea191b2a62bdee1ca4c3d344da
+2025-07-01T05:27:04.2755091Z Build Date: 2025-06-20T19:27:17Z
+2025-07-01T05:27:04.2755877Z ##[endgroup]
+2025-07-01T05:27:04.2756446Z ##[group]Operating System
+2025-07-01T05:27:04.2757227Z Ubuntu
+2025-07-01T05:27:04.2757825Z 24.04.2
+2025-07-01T05:27:04.2758334Z LTS
+2025-07-01T05:27:04.2758931Z ##[endgroup]
+2025-07-01T05:27:04.2759564Z ##[group]Runner Image
+2025-07-01T05:27:04.2760150Z Image: ubuntu-24.04
+2025-07-01T05:27:04.2760882Z Version: 20250622.1.0
+2025-07-01T05:27:04.2762016Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250622.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-07-01T05:27:04.2763731Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250622.1
+2025-07-01T05:27:04.2764779Z ##[endgroup]
+2025-07-01T05:27:04.2767693Z ##[group]GITHUB_TOKEN Permissions
+2025-07-01T05:27:04.2770143Z Actions: write
+2025-07-01T05:27:04.2770807Z Attestations: write
+2025-07-01T05:27:04.2771561Z Checks: write
+2025-07-01T05:27:04.2772330Z Contents: write
+2025-07-01T05:27:04.2772903Z Deployments: write
+2025-07-01T05:27:04.2773483Z Discussions: write
+2025-07-01T05:27:04.2774390Z Issues: write
+2025-07-01T05:27:04.2774940Z Metadata: read
+2025-07-01T05:27:04.2775966Z Models: read
+2025-07-01T05:27:04.2776523Z Packages: write
+2025-07-01T05:27:04.2777334Z Pages: write
+2025-07-01T05:27:04.2778125Z PullRequests: write
+2025-07-01T05:27:04.2778789Z RepositoryProjects: write
+2025-07-01T05:27:04.2779478Z SecurityEvents: write
+2025-07-01T05:27:04.2780176Z Statuses: write
+2025-07-01T05:27:04.2780708Z ##[endgroup]
+2025-07-01T05:27:04.2782841Z Secret source: Actions
+2025-07-01T05:27:04.2783855Z Prepare workflow directory
+2025-07-01T05:27:04.3110854Z Prepare all required actions
+2025-07-01T05:27:04.3149059Z Getting action download info
+2025-07-01T05:27:04.6202089Z ##[group]Download immutable action package 'actions/checkout@v4'
+2025-07-01T05:27:04.6203332Z Version: 4.2.2
+2025-07-01T05:27:04.6204386Z Digest: sha256:ccb2698953eaebd21c7bf6268a94f9c26518a7e38e27e0b83c1fe1ad049819b1
+2025-07-01T05:27:04.6205669Z Source commit SHA: 11bd71901bbe5b1630ceea73d27597364c9af683
+2025-07-01T05:27:04.6206540Z ##[endgroup]
+2025-07-01T05:27:04.7086898Z ##[group]Download immutable action package 'actions/download-artifact@v4'
+2025-07-01T05:27:04.7087981Z Version: 4.3.0
+2025-07-01T05:27:04.7088796Z Digest: sha256:552a5b9ad918f62ec0c2e8f42f3c694d4ebd1b4036b18c39b14168fcdfc0e4f2
+2025-07-01T05:27:04.7089877Z Source commit SHA: d3f86a106a0bac45b974a628896c90dbdf5c8093
+2025-07-01T05:27:04.7090696Z ##[endgroup]
+2025-07-01T05:27:04.8756144Z Download action repository 'seL4/ci-actions@master' (SHA:6770f77eab8909429ba78e2a5ac98b5983a38f92)
+2025-07-01T05:27:09.6979166Z Complete job name: HW Run (TX2, armv8a, clang)
+2025-07-01T05:27:09.7642123Z ##[group]Run actions/checkout@v4
+2025-07-01T05:27:09.7642824Z with:
+2025-07-01T05:27:09.7643107Z   repository: seL4/machine_queue
+2025-07-01T05:27:09.7643422Z   path: machine_queue
+2025-07-01T05:27:09.7643887Z   token: ***
+2025-07-01T05:27:09.7644158Z   ssh-strict: true
+2025-07-01T05:27:09.7644428Z   ssh-user: git
+2025-07-01T05:27:09.7644699Z   persist-credentials: true
+2025-07-01T05:27:09.7644987Z   clean: true
+2025-07-01T05:27:09.7645256Z   sparse-checkout-cone-mode: true
+2025-07-01T05:27:09.7645563Z   fetch-depth: 1
+2025-07-01T05:27:09.7645831Z   fetch-tags: false
+2025-07-01T05:27:09.7646105Z   show-progress: true
+2025-07-01T05:27:09.7646379Z   lfs: false
+2025-07-01T05:27:09.7646970Z   submodules: false
+2025-07-01T05:27:09.7647306Z   set-safe-directory: true
+2025-07-01T05:27:09.7647912Z ##[endgroup]
+2025-07-01T05:27:09.8727552Z Syncing repository: seL4/machine_queue
+2025-07-01T05:27:09.8729128Z ##[group]Getting Git version info
+2025-07-01T05:27:09.8729815Z Working directory is '/home/runner/work/seL4/seL4/machine_queue'
+2025-07-01T05:27:09.8730852Z [command]/usr/bin/git version
+2025-07-01T05:27:09.8776089Z git version 2.49.0
+2025-07-01T05:27:09.8802300Z ##[endgroup]
+2025-07-01T05:27:09.8822840Z Temporarily overriding HOME='/home/runner/work/_temp/5303d92b-72dd-42e2-aeea-a891b67ff62d' before making global git config changes
+2025-07-01T05:27:09.8824340Z Adding repository directory to the temporary git global config as a safe directory
+2025-07-01T05:27:09.8828524Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/seL4/seL4/machine_queue
+2025-07-01T05:27:09.8861999Z ##[group]Initializing the repository
+2025-07-01T05:27:09.8866526Z [command]/usr/bin/git init /home/runner/work/seL4/seL4/machine_queue
+2025-07-01T05:27:09.8953843Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-07-01T05:27:09.8955113Z hint: is subject to change. To configure the initial branch name to use in all
+2025-07-01T05:27:09.8956118Z hint: of your new repositories, which will suppress this warning, call:
+2025-07-01T05:27:09.8957105Z hint:
+2025-07-01T05:27:09.8957700Z hint: 	git config --global init.defaultBranch <name>
+2025-07-01T05:27:09.8958379Z hint:
+2025-07-01T05:27:09.8959010Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-07-01T05:27:09.8959963Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-07-01T05:27:09.8960729Z hint:
+2025-07-01T05:27:09.8961201Z hint: 	git branch -m <name>
+2025-07-01T05:27:09.8961728Z Initialized empty Git repository in /home/runner/work/seL4/seL4/machine_queue/.git/
+2025-07-01T05:27:09.8970730Z [command]/usr/bin/git remote add origin https://github.com/seL4/machine_queue
+2025-07-01T05:27:09.9001395Z ##[endgroup]
+2025-07-01T05:27:09.9002210Z ##[group]Disabling automatic garbage collection
+2025-07-01T05:27:09.9005475Z [command]/usr/bin/git config --local gc.auto 0
+2025-07-01T05:27:09.9032941Z ##[endgroup]
+2025-07-01T05:27:09.9033440Z ##[group]Setting up auth
+2025-07-01T05:27:09.9039275Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-07-01T05:27:09.9067266Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-07-01T05:27:09.9337832Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-07-01T05:27:09.9365654Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-07-01T05:27:09.9581418Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-07-01T05:27:09.9615700Z ##[endgroup]
+2025-07-01T05:27:09.9616889Z ##[group]Determining the default branch
+2025-07-01T05:27:09.9620429Z Retrieving the default branch name
+2025-07-01T05:27:10.1596246Z Default branch 'master'
+2025-07-01T05:27:10.1599354Z ##[endgroup]
+2025-07-01T05:27:10.1600367Z ##[group]Fetching the repository
+2025-07-01T05:27:10.1605593Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/master:refs/remotes/origin/master
+2025-07-01T05:27:10.4566241Z From https://github.com/seL4/machine_queue
+2025-07-01T05:27:10.4567388Z  * [new branch]      master     -> origin/master
+2025-07-01T05:27:10.4594498Z ##[endgroup]
+2025-07-01T05:27:10.4595032Z ##[group]Determining the checkout info
+2025-07-01T05:27:10.4596197Z ##[endgroup]
+2025-07-01T05:27:10.4602179Z [command]/usr/bin/git sparse-checkout disable
+2025-07-01T05:27:10.4644106Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-07-01T05:27:10.4672175Z ##[group]Checking out the ref
+2025-07-01T05:27:10.4676216Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2025-07-01T05:27:10.4752386Z Reset branch 'master'
+2025-07-01T05:27:10.4755145Z branch 'master' set up to track 'origin/master'.
+2025-07-01T05:27:10.4761201Z ##[endgroup]
+2025-07-01T05:27:10.4794767Z [command]/usr/bin/git log -1 --format=%H
+2025-07-01T05:27:10.4816404Z 9c388cd54d6131052ae729dbfbd6885f99ccce70
+2025-07-01T05:27:10.5032461Z ##[group]Run actions/download-artifact@v4
+2025-07-01T05:27:10.5033064Z with:
+2025-07-01T05:27:10.5033451Z   name: images-armv8a-clang
+2025-07-01T05:27:10.5033765Z   merge-multiple: false
+2025-07-01T05:27:10.5034047Z   repository: seL4/seL4
+2025-07-01T05:27:10.5034313Z   run-id: 15846631725
+2025-07-01T05:27:10.5034579Z ##[endgroup]
+2025-07-01T05:27:10.6948701Z Downloading single artifact
+2025-07-01T05:27:10.7931124Z Preparing to download the following artifacts:
+2025-07-01T05:27:10.7932475Z - images-armv8a-clang (ID: 3391005054, Size: 196700831, Expected Digest: sha256:8973128b7165f26932bdbc8a3af03f196898f3796a063dbfbe4693ae619cf3b4)
+2025-07-01T05:27:10.8598284Z Redirecting to blob download url: https://productionresultssa9.blob.core.windows.net/actions-results/625301e5-9e42-4cad-a47b-4a3df3c93f20/workflow-job-run-f39f853a-e3a7-5840-b078-175e5143971e/artifacts/45ddfe8bba391b0b2effbab876533394f829a540530108e69e7cd4792ff79156.zip
+2025-07-01T05:27:10.8600736Z Starting download of artifact to: /home/runner/work/seL4/seL4
+2025-07-01T05:27:10.9440911Z (node:2060) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2025-07-01T05:27:10.9442789Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-07-01T05:27:13.1292844Z SHA256 digest of downloaded artifact is 8973128b7165f26932bdbc8a3af03f196898f3796a063dbfbe4693ae619cf3b4
+2025-07-01T05:27:13.1293823Z Artifact download completed successfully.
+2025-07-01T05:27:13.1294174Z Total of 1 artifact(s) downloaded
+2025-07-01T05:27:13.1299506Z Download artifact has finished successfully
+2025-07-01T05:27:13.1459790Z ##[group]Run seL4/ci-actions/sel4test-hw-run@master
+2025-07-01T05:27:13.1460158Z with:
+2025-07-01T05:27:13.1460375Z   platform: TX2
+2025-07-01T05:27:13.1460594Z   compiler: clang
+2025-07-01T05:27:13.1460817Z   index: $35
+2025-07-01T05:27:13.1461059Z   action_name: sel4test-hw-run
+2025-07-01T05:27:13.1461312Z env:
+2025-07-01T05:27:13.1463137Z   HW_SSH: ***
+
+2025-07-01T05:27:13.1463366Z ##[endgroup]
+2025-07-01T05:27:13.2413794Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/steps.sh
+2025-07-01T05:27:13.2466778Z ##[group]Setting up
+2025-07-01T05:27:13.2706300Z Agent pid 2089
+2025-07-01T05:27:13.2882732Z Cloning into 'seL4_libs'...
+2025-07-01T05:27:15.3149999Z Reading package lists...
+2025-07-01T05:27:15.4675708Z Building dependency tree...
+2025-07-01T05:27:15.4684228Z Reading state information...
+2025-07-01T05:27:15.6401243Z libffi-dev is already the newest version (3.4.6-1build1).
+2025-07-01T05:27:15.6401735Z libffi-dev set to manually installed.
+2025-07-01T05:27:15.6402187Z 0 upgraded, 0 newly installed, 0 to remove and 21 not upgraded.
+2025-07-01T05:27:17.1360306Z Collecting junitparser==3.*
+2025-07-01T05:27:17.1685292Z   Downloading junitparser-3.2.0-py2.py3-none-any.whl.metadata (9.0 kB)
+2025-07-01T05:27:17.2002068Z Collecting sel4-deps
+2025-07-01T05:27:17.2037548Z   Downloading sel4_deps-0.5.0-py3-none-any.whl.metadata (653 bytes)
+2025-07-01T05:27:17.2150823Z Requirement already satisfied: six in /usr/lib/python3/dist-packages (from sel4-deps) (1.16.0)
+2025-07-01T05:27:17.2301716Z Collecting future (from sel4-deps)
+2025-07-01T05:27:17.2330465Z   Downloading future-1.0.0-py3-none-any.whl.metadata (4.0 kB)
+2025-07-01T05:27:17.2387654Z Requirement already satisfied: jinja2 in /usr/lib/python3/dist-packages (from sel4-deps) (3.1.2)
+2025-07-01T05:27:17.4379360Z Collecting lxml (from sel4-deps)
+2025-07-01T05:27:17.4412075Z   Downloading lxml-6.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+2025-07-01T05:27:17.4571538Z Collecting ply (from sel4-deps)
+2025-07-01T05:27:17.4601761Z   Downloading ply-3.11-py2.py3-none-any.whl.metadata (844 bytes)
+2025-07-01T05:27:17.5425174Z Collecting psutil (from sel4-deps)
+2025-07-01T05:27:17.5463140Z   Downloading psutil-7.0.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (22 kB)
+2025-07-01T05:27:17.5648133Z Collecting bs4 (from sel4-deps)
+2025-07-01T05:27:17.5683608Z   Downloading bs4-0.0.2-py2.py3-none-any.whl.metadata (411 bytes)
+2025-07-01T05:27:17.5861492Z Collecting pyelftools (from sel4-deps)
+2025-07-01T05:27:17.5893460Z   Downloading pyelftools-0.32-py3-none-any.whl.metadata (372 bytes)
+2025-07-01T05:27:17.6123220Z Collecting sh (from sel4-deps)
+2025-07-01T05:27:17.6170726Z   Downloading sh-2.2.2-py3-none-any.whl.metadata (3.7 kB)
+2025-07-01T05:27:17.6229539Z Requirement already satisfied: pexpect in /usr/lib/python3/dist-packages (from sel4-deps) (4.9.0)
+2025-07-01T05:27:17.6239605Z Requirement already satisfied: pyyaml>=5.1 in /usr/lib/python3/dist-packages (from sel4-deps) (6.0.1)
+2025-07-01T05:27:17.6248586Z Requirement already satisfied: jsonschema in /usr/lib/python3/dist-packages (from sel4-deps) (4.10.3)
+2025-07-01T05:27:17.6368738Z Collecting pyfdt (from sel4-deps)
+2025-07-01T05:27:17.6432312Z   Downloading pyfdt-0.3.tar.gz (9.1 kB)
+2025-07-01T05:27:17.6486320Z   Preparing metadata (setup.py): started
+2025-07-01T05:27:17.8813874Z   Preparing metadata (setup.py): finished with status 'done'
+2025-07-01T05:27:17.9004724Z Collecting cmake-format==0.4.5 (from sel4-deps)
+2025-07-01T05:27:17.9053720Z   Downloading cmake_format-0.4.5.tar.gz (51 kB)
+2025-07-01T05:27:17.9103801Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 51.1/51.1 kB 15.4 MB/s eta 0:00:00
+2025-07-01T05:27:17.9166375Z   Preparing metadata (setup.py): started
+2025-07-01T05:27:18.0783171Z   Preparing metadata (setup.py): finished with status 'done'
+2025-07-01T05:27:18.0937171Z Collecting guardonce (from sel4-deps)
+2025-07-01T05:27:18.0980504Z   Downloading guardonce-2.4.0-py2.py3-none-any.whl.metadata (3.4 kB)
+2025-07-01T05:27:18.1202804Z Collecting autopep8==2.3.1 (from sel4-deps)
+2025-07-01T05:27:18.1249613Z   Downloading autopep8-2.3.1-py2.py3-none-any.whl.metadata (16 kB)
+2025-07-01T05:27:18.1431328Z Collecting libarchive-c (from sel4-deps)
+2025-07-01T05:27:18.1515507Z   Downloading libarchive_c-5.3-py3-none-any.whl.metadata (5.8 kB)
+2025-07-01T05:27:18.1732260Z Collecting pycodestyle>=2.12.0 (from autopep8==2.3.1->sel4-deps)
+2025-07-01T05:27:18.1762078Z   Downloading pycodestyle-2.14.0-py2.py3-none-any.whl.metadata (4.5 kB)
+2025-07-01T05:27:18.2059234Z Collecting beautifulsoup4 (from bs4->sel4-deps)
+2025-07-01T05:27:18.2088575Z   Downloading beautifulsoup4-4.13.4-py3-none-any.whl.metadata (3.8 kB)
+2025-07-01T05:27:18.2289893Z Requirement already satisfied: attrs>=17.4.0 in /usr/lib/python3/dist-packages (from jsonschema->sel4-deps) (23.2.0)
+2025-07-01T05:27:18.2305110Z Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,>=0.14.0 in /usr/lib/python3/dist-packages (from jsonschema->sel4-deps) (0.20.0)
+2025-07-01T05:27:18.3183089Z Collecting soupsieve>1.2 (from beautifulsoup4->bs4->sel4-deps)
+2025-07-01T05:27:18.3211577Z   Downloading soupsieve-2.7-py3-none-any.whl.metadata (4.6 kB)
+2025-07-01T05:27:18.3251330Z Requirement already satisfied: typing-extensions>=4.0.0 in /usr/lib/python3/dist-packages (from beautifulsoup4->bs4->sel4-deps) (4.10.0)
+2025-07-01T05:27:18.3323786Z Downloading junitparser-3.2.0-py2.py3-none-any.whl (13 kB)
+2025-07-01T05:27:18.3395498Z Downloading sel4_deps-0.5.0-py3-none-any.whl (1.2 kB)
+2025-07-01T05:27:18.3463651Z Downloading autopep8-2.3.1-py2.py3-none-any.whl (45 kB)
+2025-07-01T05:27:18.3512822Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.7/45.7 kB 12.2 MB/s eta 0:00:00
+2025-07-01T05:27:18.3542540Z Downloading bs4-0.0.2-py2.py3-none-any.whl (1.2 kB)
+2025-07-01T05:27:18.3611223Z Downloading future-1.0.0-py3-none-any.whl (491 kB)
+2025-07-01T05:27:18.3688279Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 491.3/491.3 kB 81.1 MB/s eta 0:00:00
+2025-07-01T05:27:18.3733617Z Downloading guardonce-2.4.0-py2.py3-none-any.whl (15 kB)
+2025-07-01T05:27:18.3801885Z Downloading libarchive_c-5.3-py3-none-any.whl (17 kB)
+2025-07-01T05:27:18.3895609Z Downloading lxml-6.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (5.3 MB)
+2025-07-01T05:27:18.4252417Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 156.0 MB/s eta 0:00:00
+2025-07-01T05:27:18.4283270Z Downloading ply-3.11-py2.py3-none-any.whl (49 kB)
+2025-07-01T05:27:18.4324324Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.6/49.6 kB 16.1 MB/s eta 0:00:00
+2025-07-01T05:27:18.4355163Z Downloading psutil-7.0.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (277 kB)
+2025-07-01T05:27:18.4410998Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 278.0/278.0 kB 69.5 MB/s eta 0:00:00
+2025-07-01T05:27:18.4440080Z Downloading pyelftools-0.32-py3-none-any.whl (188 kB)
+2025-07-01T05:27:18.4491176Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.5/188.5 kB 50.8 MB/s eta 0:00:00
+2025-07-01T05:27:18.4520874Z Downloading sh-2.2.2-py3-none-any.whl (38 kB)
+2025-07-01T05:27:18.4584383Z Downloading pycodestyle-2.14.0-py2.py3-none-any.whl (31 kB)
+2025-07-01T05:27:18.4642306Z Downloading beautifulsoup4-4.13.4-py3-none-any.whl (187 kB)
+2025-07-01T05:27:18.4690259Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 187.3/187.3 kB 55.4 MB/s eta 0:00:00
+2025-07-01T05:27:18.4723569Z Downloading soupsieve-2.7-py3-none-any.whl (36 kB)
+2025-07-01T05:27:18.4953367Z Building wheels for collected packages: cmake-format, pyfdt
+2025-07-01T05:27:18.4958581Z   Building wheel for cmake-format (setup.py): started
+2025-07-01T05:27:18.8156023Z   Building wheel for cmake-format (setup.py): finished with status 'done'
+2025-07-01T05:27:18.8159490Z   Created wheel for cmake-format: filename=cmake_format-0.4.5-py3-none-any.whl size=57091 sha256=a72cfd39f9ee0785687bcf59fbc627d114f0506c88629e8f072c3a2612ee3de1
+2025-07-01T05:27:18.8161429Z   Stored in directory: /home/runner/.cache/pip/wheels/26/fb/b2/73a635046d239de7405e0f77cf67c3d31a3f0d5edcf8986d29
+2025-07-01T05:27:18.8187695Z   Building wheel for pyfdt (setup.py): started
+2025-07-01T05:27:19.0503395Z   Building wheel for pyfdt (setup.py): finished with status 'done'
+2025-07-01T05:27:19.0506180Z   Created wheel for pyfdt: filename=pyfdt-0.3-py3-none-any.whl size=10969 sha256=22d4fa701d881595b7660ed1a5b6f7e2b2724681266c5664065db9166baf60aa
+2025-07-01T05:27:19.0508245Z   Stored in directory: /home/runner/.cache/pip/wheels/d9/8e/2a/cff33f3accb8eaa34608e68786db1ec323a5f6bce8d724d90a
+2025-07-01T05:27:19.0521904Z Successfully built cmake-format pyfdt
+2025-07-01T05:27:19.3306509Z Installing collected packages: pyfdt, pyelftools, ply, libarchive-c, junitparser, guardonce, cmake-format, soupsieve, sh, pycodestyle, psutil, lxml, future, beautifulsoup4, autopep8, bs4, sel4-deps
+2025-07-01T05:27:20.3501892Z Successfully installed autopep8-2.3.1 beautifulsoup4-4.13.4 bs4-0.0.2 cmake-format-0.4.5 future-1.0.0 guardonce-2.4.0 junitparser-3.2.0 libarchive-c-5.3 lxml-6.0.0 ply-3.11 psutil-7.0.0 pycodestyle-2.14.0 pyelftools-0.32 pyfdt-0.3 sel4-deps-0.5.0 sh-2.2.2 soupsieve-2.7
+2025-07-01T05:27:20.4363276Z ##[endgroup]
+2025-07-01T05:27:20.5888766Z 
+2025-07-01T05:27:20.5890843Z ##[group]TX2_debug_clang_64
+2025-07-01T05:27:20.5891724Z [1m-----------[ start test TX2_debug_clang_64 ]-----------[0m
+2025-07-01T05:27:20.5892291Z [33m+++ tar xvzf ../TX2_debug_clang_64-images.tar.gz[0m
+2025-07-01T05:27:20.5922171Z images/
+2025-07-01T05:27:20.5922859Z images/sel4test-driver-image-arm-tx2
+2025-07-01T05:27:20.6131314Z [33m+++ mq.sh sem -info tx2b[0m
+2025-07-01T05:27:28.8167764Z Lock for tx2b held by sel4_ci since 2025-07-01 15:16:00.775799291 +1000, timeout 1800 with key 'seL4/seL4-HW-15960497578-hw-run-29'
+2025-07-01T05:27:28.8169182Z [33m+++ time mq.sh sem -wait tx2b -k seL4/seL4-Deploy-15846631725-hw-run-35 -T 1800[0m
+2025-07-01T05:32:53.2439180Z 0.02user 0.02system 5:24.42elapsed 0%CPU (0avgtext+0avgdata 8204maxresident)k
+2025-07-01T05:32:53.2440082Z 0inputs+0outputs (0major+5481minor)pagefaults 0swaps
+2025-07-01T05:32:53.2441288Z [33m+++ time mq.sh run -c </testsuite> -s tx2b -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-Deploy-15846631725-hw-run-35 -f images/sel4test-driver-image-arm-tx2[0m
+2025-07-01T05:32:55.8909950Z Lock acquired, we are allowed to run
+2025-07-01T05:33:02.1850164Z pxelinux=False
+2025-07-01T05:33:02.1853356Z copied '/tmp/tmp.YHqx2Wb57d' -> '/tftpboot/tx2b/seL4-image'
+2025-07-01T05:33:02.3866384Z removed '/tmp/tmp.YHqx2Wb57d'
+2025-07-01T05:33:02.3867238Z co
+2025-07-01T05:33:02.3867441Z ^Eco
+2025-07-01T05:33:02.5882900Z [Enter `^Ec?' for help]
+2025-07-01T05:33:03.1196297Z [connecting...up]
+2025-07-01T05:33:03.1197018Z Rebooting tx2b and loading image: /tmp/tmp.YHqx2Wb57d
+2025-07-01T05:33:33.3126492Z 
+2025-07-01T05:33:33.3129171Z [[Boot timeout]]
+2025-07-01T05:33:33.3129559Z None
+2025-07-01T05:33:33.3129885Z 2 tries remaining..
+2025-07-01T05:33:33.3130205Z Rebooting tx2b and loading image: /tmp/tmp.YHqx2Wb57d
+2025-07-01T05:34:03.6342293Z 
+2025-07-01T05:34:03.6342697Z [[Boot timeout]]
+2025-07-01T05:34:03.6343018Z None
+2025-07-01T05:34:03.6343435Z 1 tries remaining..
+2025-07-01T05:34:03.6344009Z Rebooting tx2b and loading image: /tmp/tmp.YHqx2Wb57d
+2025-07-01T05:34:34.0113336Z 
+2025-07-01T05:34:34.0115962Z [[Boot timeout]]
+2025-07-01T05:34:34.0116448Z None
+2025-07-01T05:34:34.0117127Z 0 tries remaining..
+2025-07-01T05:49:34.0851161Z 
+2025-07-01T05:49:34.0851630Z [[Timeout]]
+2025-07-01T05:49:34.0851952Z None
+2025-07-01T05:49:34.2865818Z 
+2025-07-01T05:49:34.2866286Z console_run returned -1
+2025-07-01T05:49:34.2866861Z Shutting down tx2b
+2025-07-01T05:49:34.5649448Z 
+2025-07-01T05:49:37.6718486Z Command exited with non-zero status 255
+2025-07-01T05:49:37.6719170Z 0.03user 0.03system 16:44.42elapsed 0%CPU (0avgtext+0avgdata 8188maxresident)k
+2025-07-01T05:49:37.6719862Z 272inputs+8outputs (2major+7202minor)pagefaults 0swaps
+2025-07-01T05:49:37.6721087Z [31;1m>>> command failed, aborting.[0m
+2025-07-01T05:49:37.6722349Z [33m+++ mq.sh sem -signal tx2b -k seL4/seL4-Deploy-15846631725-hw-run-35[0m
+2025-07-01T05:49:41.7701691Z [1m-----------[ end test TX2_debug_clang_64 ]-----------[0m
+2025-07-01T05:49:41.7702603Z ##[endgroup]
+2025-07-01T05:49:41.7702901Z [31;1mTX2_debug_clang_64 FAILED[0m
+2025-07-01T05:49:41.7703106Z 
+2025-07-01T05:49:41.7703395Z ##[group]TX2_debug_MCS_clang_64
+2025-07-01T05:49:41.7703792Z [1m-----------[ start test TX2_debug_MCS_clang_64 ]-----------[0m
+2025-07-01T05:49:41.7709620Z [33m+++ tar xvzf ../TX2_debug_MCS_clang_64-images.tar.gz[0m
+2025-07-01T05:49:41.7736221Z images/
+2025-07-01T05:49:41.7737035Z images/sel4test-driver-image-arm-tx2
+2025-07-01T05:49:41.7953111Z [33m+++ mq.sh sem -info tx2b[0m
+2025-07-01T05:49:45.7642929Z Lock for tx2b held by sel4_ci since 2025-07-01 15:49:43.963547036 +1000, timeout 1800 with key 'seL4/seL4-HW-15960497578-hw-run-29'
+2025-07-01T05:49:45.7644253Z [33m+++ time mq.sh sem -wait tx2b -k seL4/seL4-Deploy-15846631725-hw-run-35 -T 1800[0m
+2025-07-01T06:23:26.3635889Z 0.03user 0.02system 33:40.59elapsed 0%CPU (0avgtext+0avgdata 8140maxresident)k
+2025-07-01T06:23:26.3636750Z 0inputs+0outputs (0major+5511minor)pagefaults 0swaps
+2025-07-01T06:23:26.3638116Z [33m+++ time mq.sh run -c </testsuite> -s tx2b -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-Deploy-15846631725-hw-run-35 -f images/sel4test-driver-image-arm-tx2[0m
+2025-07-01T06:23:29.1211679Z Lock acquired, we are allowed to run
+2025-07-01T06:23:35.8918504Z pxelinux=False
+2025-07-01T06:23:35.8918992Z copied '/tmp/tmp.LbVdqRdig5' -> '/tftpboot/tx2b/seL4-image'
+2025-07-01T06:23:36.1022796Z removed '/tmp/tmp.LbVdqRdig5'
+2025-07-01T06:23:36.1023369Z co
+2025-07-01T06:23:36.1023621Z ^Eco
+2025-07-01T06:23:36.1023851Z [Enter `^Ec?' for help]
+2025-07-01T06:23:36.8270572Z [connecting...up]
+2025-07-01T06:23:36.8271047Z Rebooting tx2b and loading image: /tmp/tmp.LbVdqRdig5
+2025-07-01T06:24:06.9756243Z 
+2025-07-01T06:24:06.9757021Z [[Boot timeout]]
+2025-07-01T06:24:06.9757358Z None
+2025-07-01T06:24:06.9757619Z 2 tries remaining..
+2025-07-01T06:24:06.9758066Z Rebooting tx2b and loading image: /tmp/tmp.LbVdqRdig5
+2025-07-01T06:24:37.5145101Z 
+2025-07-01T06:24:37.5145509Z [[Boot timeout]]
+2025-07-01T06:24:37.5145822Z None
+2025-07-01T06:24:37.5146070Z 1 tries remaining..
+2025-07-01T06:24:37.5146429Z Rebooting tx2b and loading image: /tmp/tmp.LbVdqRdig5
+2025-07-01T06:25:07.7582832Z 
+2025-07-01T06:25:07.7583282Z [[Boot timeout]]
+2025-07-01T06:25:07.7583613Z None
+2025-07-01T06:25:07.7583876Z 0 tries remaining..
+2025-07-01T06:40:07.7808345Z 
+2025-07-01T06:40:07.7808827Z [[Timeout]]
+2025-07-01T06:40:07.7809114Z None
+2025-07-01T06:40:07.9825947Z 
+2025-07-01T06:40:07.9826466Z console_run returned -1
+2025-07-01T06:40:07.9827015Z Shutting down tx2b
+2025-07-01T06:40:08.2657500Z 
+2025-07-01T06:40:11.3697583Z Command exited with non-zero status 255
+2025-07-01T06:40:11.3700632Z 0.03user 0.03system 16:45.00elapsed 0%CPU (0avgtext+0avgdata 8256maxresident)k
+2025-07-01T06:40:11.3701450Z 0inputs+8outputs (1major+7181minor)pagefaults 0swaps
+2025-07-01T06:40:11.3702232Z [31;1m>>> command failed, aborting.[0m
+2025-07-01T06:40:11.3702771Z [33m+++ mq.sh sem -signal tx2b -k seL4/seL4-Deploy-15846631725-hw-run-35[0m
+2025-07-01T06:40:15.3343380Z [1m-----------[ end test TX2_debug_MCS_clang_64 ]-----------[0m
+2025-07-01T06:40:15.3344439Z ##[endgroup]
+2025-07-01T06:40:15.3344910Z [31;1mTX2_debug_MCS_clang_64 FAILED[0m
+2025-07-01T06:40:15.3345191Z 
+2025-07-01T06:40:15.3345495Z ##[group]TX2_debug_hyp_clang_64
+2025-07-01T06:40:15.3345886Z [1m-----------[ start test TX2_debug_hyp_clang_64 ]-----------[0m
+2025-07-01T06:40:15.3354425Z [33m+++ tar xvzf ../TX2_debug_hyp_clang_64-images.tar.gz[0m
+2025-07-01T06:40:15.3381973Z images/
+2025-07-01T06:40:15.3382551Z images/sel4test-driver-image-arm-tx2
+2025-07-01T06:40:15.3589597Z [33m+++ mq.sh sem -info tx2b[0m
+2025-07-01T06:40:18.6750725Z Lock for tx2b currently free
+2025-07-01T06:40:18.6751827Z [33m+++ time mq.sh sem -wait tx2b -k seL4/seL4-Deploy-15846631725-hw-run-35 -T 1800[0m
+2025-07-01T06:57:11.1741004Z 0.02user 0.02system 16:52.49elapsed 0%CPU (0avgtext+0avgdata 8196maxresident)k
+2025-07-01T06:57:11.1742205Z 0inputs+0outputs (0major+5490minor)pagefaults 0swaps
+2025-07-01T06:57:11.1743773Z [33m+++ time mq.sh run -c </testsuite> -s tx2b -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-Deploy-15846631725-hw-run-35 -f images/sel4test-driver-image-arm-tx2[0m
+2025-07-01T06:57:13.8267216Z Lock acquired, we are allowed to run
+2025-07-01T06:57:20.3718070Z pxelinux=False
+2025-07-01T06:57:20.3718626Z copied '/tmp/tmp.ptgPcldeWN' -> '/tftpboot/tx2b/seL4-image'
+2025-07-01T06:57:20.5743305Z removed '/tmp/tmp.ptgPcldeWN'
+2025-07-01T06:57:20.5744041Z co
+2025-07-01T06:57:20.5744362Z ^Eco
+2025-07-01T06:57:20.5744683Z [Enter `^Ec?' for help]
+2025-07-01T06:57:21.2141561Z [connecting...up]
+2025-07-01T06:57:21.2142113Z Rebooting tx2b and loading image: /tmp/tmp.ptgPcldeWN
+2025-07-01T06:57:51.5139231Z 
+2025-07-01T06:57:51.5139606Z [[Boot timeout]]
+2025-07-01T06:57:51.5139947Z None
+2025-07-01T06:57:51.5140221Z 2 tries remaining..
+2025-07-01T06:57:51.5140698Z Rebooting tx2b and loading image: /tmp/tmp.ptgPcldeWN
+2025-07-01T06:58:21.7216418Z 
+2025-07-01T06:58:21.7217099Z [[Boot timeout]]
+2025-07-01T06:58:21.7217467Z None
+2025-07-01T06:58:21.7217755Z 1 tries remaining..
+2025-07-01T06:58:21.7218150Z Rebooting tx2b and loading image: /tmp/tmp.ptgPcldeWN
+2025-07-01T06:58:52.0228813Z 
+2025-07-01T06:58:52.0229230Z [[Boot timeout]]
+2025-07-01T06:58:52.0229492Z None
+2025-07-01T06:58:52.0229695Z 0 tries remaining..
+2025-07-01T07:13:52.0355327Z 
+2025-07-01T07:13:52.0355828Z [[Timeout]]
+2025-07-01T07:13:52.0356129Z None
+2025-07-01T07:13:52.2371405Z 
+2025-07-01T07:13:52.2371954Z console_run returned -1
+2025-07-01T07:13:52.2372309Z Shutting down tx2b
+2025-07-01T07:13:52.4417701Z 
+2025-07-01T07:13:55.5609348Z Command exited with non-zero status 255
+2025-07-01T07:13:55.5610094Z 0.02user 0.04system 16:44.38elapsed 0%CPU (0avgtext+0avgdata 8216maxresident)k
+2025-07-01T07:13:55.5610861Z 0inputs+8outputs (1major+7189minor)pagefaults 0swaps
+2025-07-01T07:13:55.5611724Z [31;1m>>> command failed, aborting.[0m
+2025-07-01T07:13:55.5612251Z [33m+++ mq.sh sem -signal tx2b -k seL4/seL4-Deploy-15846631725-hw-run-35[0m
+2025-07-01T07:13:59.6421810Z [1m-----------[ end test TX2_debug_hyp_clang_64 ]-----------[0m
+2025-07-01T07:13:59.6422843Z ##[endgroup]
+2025-07-01T07:13:59.6423280Z [31;1mTX2_debug_hyp_clang_64 FAILED[0m
+2025-07-01T07:13:59.6423600Z 
+2025-07-01T07:13:59.6424034Z ##[group]TX2_debug_hyp_MCS_clang_64
+2025-07-01T07:13:59.6424689Z [1m-----------[ start test TX2_debug_hyp_MCS_clang_64 ]-----------[0m
+2025-07-01T07:13:59.6430193Z [33m+++ tar xvzf ../TX2_debug_hyp_MCS_clang_64-images.tar.gz[0m
+2025-07-01T07:13:59.6457736Z images/
+2025-07-01T07:13:59.6458296Z images/sel4test-driver-image-arm-tx2
+2025-07-01T07:13:59.6675487Z [33m+++ mq.sh sem -info tx2b[0m
+2025-07-01T07:14:02.9875430Z Lock for tx2b currently free
+2025-07-01T07:14:02.9876190Z [33m+++ time mq.sh sem -wait tx2b -k seL4/seL4-Deploy-15846631725-hw-run-35 -T 1800[0m
+2025-07-01T07:30:55.4797813Z 0.02user 0.03system 16:52.49elapsed 0%CPU (0avgtext+0avgdata 8200maxresident)k
+2025-07-01T07:30:55.4798640Z 0inputs+0outputs (0major+5509minor)pagefaults 0swaps
+2025-07-01T07:30:55.4800110Z [33m+++ time mq.sh run -c </testsuite> -s tx2b -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-Deploy-15846631725-hw-run-35 -f images/sel4test-driver-image-arm-tx2[0m
+2025-07-01T07:30:58.1289535Z Lock acquired, we are allowed to run
+2025-07-01T07:31:04.2575343Z pxelinux=False
+2025-07-01T07:31:04.2575860Z copied '/tmp/tmp.s4YJuCmk03' -> '/tftpboot/tx2b/seL4-image'
+2025-07-01T07:31:04.4592029Z removed '/tmp/tmp.s4YJuCmk03'
+2025-07-01T07:31:04.4592742Z co
+2025-07-01T07:31:04.4592988Z ^Eco
+2025-07-01T07:31:04.6606772Z [Enter `^Ec?' for help]
+2025-07-01T07:31:05.1764314Z [connecting...up]
+2025-07-01T07:31:05.1764815Z Rebooting tx2b and loading image: /tmp/tmp.s4YJuCmk03
+2025-07-01T07:31:35.5072385Z 
+2025-07-01T07:31:35.5072991Z [[Boot timeout]]
+2025-07-01T07:31:35.5073512Z None
+2025-07-01T07:31:35.5073814Z 2 tries remaining..
+2025-07-01T07:31:35.5074605Z Rebooting tx2b and loading image: /tmp/tmp.s4YJuCmk03
+2025-07-01T07:32:05.7273845Z 
+2025-07-01T07:32:05.7274365Z [[Boot timeout]]
+2025-07-01T07:32:05.7274798Z None
+2025-07-01T07:32:05.7275065Z 1 tries remaining..
+2025-07-01T07:32:05.7275510Z Rebooting tx2b and loading image: /tmp/tmp.s4YJuCmk03
+2025-07-01T07:32:36.0685374Z 
+2025-07-01T07:32:36.0686017Z [[Boot timeout]]
+2025-07-01T07:32:36.0686340Z None
+2025-07-01T07:32:36.0686856Z 0 tries remaining..
+2025-07-01T07:47:36.2972353Z 
+2025-07-01T07:47:36.2972842Z [[Timeout]]
+2025-07-01T07:47:36.2973069Z None
+2025-07-01T07:47:36.2973182Z 
+2025-07-01T07:47:36.2973279Z console_run returned -1
+2025-07-01T07:47:36.2973538Z Shutting down tx2b
+2025-07-01T07:47:36.6410985Z 
+2025-07-01T07:47:39.7548057Z Command exited with non-zero status 255
+2025-07-01T07:47:39.7549008Z 0.03user 0.03system 16:44.27elapsed 0%CPU (0avgtext+0avgdata 8256maxresident)k
+2025-07-01T07:47:39.7549765Z 0inputs+8outputs (0major+7195minor)pagefaults 0swaps
+2025-07-01T07:47:39.7551468Z [31;1m>>> command failed, aborting.[0m
+2025-07-01T07:47:39.7552232Z [33m+++ mq.sh sem -signal tx2b -k seL4/seL4-Deploy-15846631725-hw-run-35[0m
+2025-07-01T07:47:43.7322932Z [1m-----------[ end test TX2_debug_hyp_MCS_clang_64 ]-----------[0m
+2025-07-01T07:47:43.7323682Z ##[endgroup]
+2025-07-01T07:47:43.7323982Z [31;1mTX2_debug_hyp_MCS_clang_64 FAILED[0m
+2025-07-01T07:47:43.7324185Z 
+2025-07-01T07:47:43.7324470Z ##[group]TX2_debug_SMP_clang_64
+2025-07-01T07:47:43.7324856Z [1m-----------[ start test TX2_debug_SMP_clang_64 ]-----------[0m
+2025-07-01T07:47:43.7332260Z [33m+++ tar xvzf ../TX2_debug_SMP_clang_64-images.tar.gz[0m
+2025-07-01T07:47:43.7359627Z images/
+2025-07-01T07:47:43.7359975Z images/sel4test-driver-image-arm-tx2
+2025-07-01T07:47:43.7566298Z [33m+++ mq.sh sem -info tx2b[0m
+2025-07-01T07:47:47.0842463Z Lock for tx2b currently free
+2025-07-01T07:47:47.0843530Z [33m+++ time mq.sh sem -wait tx2b -k seL4/seL4-Deploy-15846631725-hw-run-35 -T 1800[0m
+2025-07-01T08:04:39.5518930Z 0.02user 0.02system 16:52.46elapsed 0%CPU (0avgtext+0avgdata 8108maxresident)k
+2025-07-01T08:04:39.5520340Z 0inputs+0outputs (0major+5503minor)pagefaults 0swaps
+2025-07-01T08:04:39.5521824Z [33m+++ time mq.sh run -c </testsuite> -s tx2b -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-Deploy-15846631725-hw-run-35 -f images/sel4test-driver-image-arm-tx2[0m
+2025-07-01T08:04:42.2020858Z Lock acquired, we are allowed to run
+2025-07-01T08:04:48.7453538Z pxelinux=False
+2025-07-01T08:04:48.7454111Z copied '/tmp/tmp.3IKjCtbOos' -> '/tftpboot/tx2b/seL4-image'
+2025-07-01T08:04:48.9469116Z removed '/tmp/tmp.3IKjCtbOos'
+2025-07-01T08:04:48.9469708Z co
+2025-07-01T08:04:48.9469948Z ^Eco
+2025-07-01T08:04:49.1481608Z [Enter `^Ec?' for help]
+2025-07-01T08:04:49.7296038Z [connecting...up]
+2025-07-01T08:04:49.7296540Z Rebooting tx2b and loading image: /tmp/tmp.3IKjCtbOos
+2025-07-01T08:05:19.9403091Z 
+2025-07-01T08:05:19.9403702Z [[Boot timeout]]
+2025-07-01T08:05:19.9404076Z None
+2025-07-01T08:05:19.9404407Z 2 tries remaining..
+2025-07-01T08:05:19.9404856Z Rebooting tx2b and loading image: /tmp/tmp.3IKjCtbOos
+2025-07-01T08:05:50.4900050Z 
+2025-07-01T08:05:50.4900755Z [[Boot timeout]]
+2025-07-01T08:05:50.4901120Z None
+2025-07-01T08:05:50.4901404Z 1 tries remaining..
+2025-07-01T08:05:50.4901834Z Rebooting tx2b and loading image: /tmp/tmp.3IKjCtbOos
+2025-07-01T08:06:20.7677762Z 
+2025-07-01T08:06:20.7678207Z [[Boot timeout]]
+2025-07-01T08:06:20.7678514Z None
+2025-07-01T08:06:20.7678764Z 0 tries remaining..
+2025-07-01T08:21:20.8057852Z 
+2025-07-01T08:21:20.8058476Z [[Timeout]]
+2025-07-01T08:21:20.8058943Z None
+2025-07-01T08:21:21.0076282Z 
+2025-07-01T08:21:21.0077045Z console_run returned -1
+2025-07-01T08:21:21.0077411Z Shutting down tx2b
+2025-07-01T08:21:21.3406437Z 
+2025-07-01T08:21:24.4550829Z Command exited with non-zero status 255
+2025-07-01T08:21:24.4551507Z 0.03user 0.04system 16:44.90elapsed 0%CPU (0avgtext+0avgdata 8148maxresident)k
+2025-07-01T08:21:24.4552194Z 0inputs+8outputs (1major+7202minor)pagefaults 0swaps
+2025-07-01T08:21:24.4555592Z [31;1m>>> command failed, aborting.[0m
+2025-07-01T08:21:24.4556304Z [33m+++ mq.sh sem -signal tx2b -k seL4/seL4-Deploy-15846631725-hw-run-35[0m
+2025-07-01T08:21:28.4306168Z [1m-----------[ end test TX2_debug_SMP_clang_64 ]-----------[0m
+2025-07-01T08:21:28.4307422Z ##[endgroup]
+2025-07-01T08:21:28.4307881Z [31;1mTX2_debug_SMP_clang_64 FAILED[0m
+2025-07-01T08:21:28.4308192Z 
+2025-07-01T08:21:28.4308613Z ##[group]TX2_debug_SMP_MCS_clang_64
+2025-07-01T08:21:28.4309258Z [1m-----------[ start test TX2_debug_SMP_MCS_clang_64 ]-----------[0m
+2025-07-01T08:21:28.4316954Z [33m+++ tar xvzf ../TX2_debug_SMP_MCS_clang_64-images.tar.gz[0m
+2025-07-01T08:21:28.4343189Z images/
+2025-07-01T08:21:28.4343777Z images/sel4test-driver-image-arm-tx2
+2025-07-01T08:21:28.4562191Z [33m+++ mq.sh sem -info tx2b[0m
+2025-07-01T08:21:31.7740536Z Lock for tx2b currently free
+2025-07-01T08:21:31.7741611Z [33m+++ time mq.sh sem -wait tx2b -k seL4/seL4-Deploy-15846631725-hw-run-35 -T 1800[0m
+2025-07-01T08:21:35.0811327Z 0.01user 0.02system 0:03.30elapsed 1%CPU (0avgtext+0avgdata 8240maxresident)k
+2025-07-01T08:21:35.0811877Z 0inputs+0outputs (0major+4239minor)pagefaults 0swaps
+2025-07-01T08:21:35.0813456Z [33m+++ time mq.sh run -c </testsuite> -s tx2b -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-Deploy-15846631725-hw-run-35 -f images/sel4test-driver-image-arm-tx2[0m
+2025-07-01T08:21:37.7310055Z Lock acquired, we are allowed to run
+2025-07-01T08:21:43.8706944Z pxelinux=False
+2025-07-01T08:21:43.8707422Z copied '/tmp/tmp.9a8qern0Y5' -> '/tftpboot/tx2b/seL4-image'
+2025-07-01T08:21:44.0721793Z removed '/tmp/tmp.9a8qern0Y5'
+2025-07-01T08:21:44.0722439Z co
+2025-07-01T08:21:44.0722683Z ^Eco
+2025-07-01T08:21:44.0722958Z [Enter `^Ec?' for help]
+2025-07-01T08:21:44.6993410Z [connecting...up]
+2025-07-01T08:21:44.6994094Z Rebooting tx2b and loading image: /tmp/tmp.9a8qern0Y5
+2025-07-01T08:22:14.8674899Z 
+2025-07-01T08:22:14.8675395Z [[Boot timeout]]
+2025-07-01T08:22:14.8675658Z None
+2025-07-01T08:22:14.8675903Z 2 tries remaining..
+2025-07-01T08:22:14.8676198Z Rebooting tx2b and loading image: /tmp/tmp.9a8qern0Y5
+2025-07-01T08:22:45.2602787Z 
+2025-07-01T08:22:45.2603221Z [[Boot timeout]]
+2025-07-01T08:22:45.2603723Z None
+2025-07-01T08:22:45.2604101Z 1 tries remaining..
+2025-07-01T08:22:45.2604501Z Rebooting tx2b and loading image: /tmp/tmp.9a8qern0Y5
+2025-07-01T08:23:15.7005549Z 
+2025-07-01T08:23:15.7005959Z [[Boot timeout]]
+2025-07-01T08:23:15.7006269Z None
+2025-07-01T08:23:15.7006505Z 0 tries remaining..
+2025-07-01T08:38:15.7432974Z 
+2025-07-01T08:38:15.7433507Z [[Timeout]]
+2025-07-01T08:38:15.7433842Z None
+2025-07-01T08:38:15.9449244Z 
+2025-07-01T08:38:15.9449628Z console_run returned -1
+2025-07-01T08:38:15.9450042Z Shutting down tx2b
+2025-07-01T08:38:16.2689592Z 
+2025-07-01T08:38:19.3834984Z Command exited with non-zero status 255
+2025-07-01T08:38:19.3837119Z 0.03user 0.03system 16:44.30elapsed 0%CPU (0avgtext+0avgdata 8140maxresident)k
+2025-07-01T08:38:19.3837829Z 0inputs+8outputs (0major+7183minor)pagefaults 0swaps
+2025-07-01T08:38:19.3838745Z [31;1m>>> command failed, aborting.[0m
+2025-07-01T08:38:19.3839361Z [33m+++ mq.sh sem -signal tx2b -k seL4/seL4-Deploy-15846631725-hw-run-35[0m
+2025-07-01T08:38:23.3612509Z [1m-----------[ end test TX2_debug_SMP_MCS_clang_64 ]-----------[0m
+2025-07-01T08:38:23.3613490Z ##[endgroup]
+2025-07-01T08:38:23.3613813Z [31;1mTX2_debug_SMP_MCS_clang_64 FAILED[0m
+2025-07-01T08:38:23.3614051Z 
+2025-07-01T08:38:23.3615984Z ##[group]TX2_debug_SMP_hyp_clang_64
+2025-07-01T08:38:23.3616828Z [1m-----------[ start test TX2_debug_SMP_hyp_clang_64 ]-----------[0m
+2025-07-01T08:38:23.3621768Z [33m+++ tar xvzf ../TX2_debug_SMP_hyp_clang_64-images.tar.gz[0m
+2025-07-01T08:38:23.3649041Z images/
+2025-07-01T08:38:23.3649447Z images/sel4test-driver-image-arm-tx2
+2025-07-01T08:38:23.3859257Z [33m+++ mq.sh sem -info tx2b[0m
+2025-07-01T08:38:27.3531307Z Lock for tx2b held by sel4_ci since 2025-07-01 18:38:24.135883929 +1000, timeout 1800 with key 'seL4/seL4-HW-15960497578-hw-run-29'
+2025-07-01T08:38:27.3533186Z [33m+++ time mq.sh sem -wait tx2b -k seL4/seL4-Deploy-15846631725-hw-run-35 -T 1800[0m
+2025-07-01T08:55:11.8608728Z 0.02user 0.02system 16:44.50elapsed 0%CPU (0avgtext+0avgdata 8160maxresident)k
+2025-07-01T08:55:11.8609542Z 0inputs+0outputs (0major+5491minor)pagefaults 0swaps
+2025-07-01T08:55:11.8611119Z [33m+++ time mq.sh run -c </testsuite> -s tx2b -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-Deploy-15846631725-hw-run-35 -f images/sel4test-driver-image-arm-tx2[0m
+2025-07-01T08:55:14.5179121Z Lock acquired, we are allowed to run
+2025-07-01T08:55:20.6491163Z pxelinux=False
+2025-07-01T08:55:20.6491864Z copied '/tmp/tmp.6Mjww3x3V6' -> '/tftpboot/tx2b/seL4-image'
+2025-07-01T08:55:20.8508689Z removed '/tmp/tmp.6Mjww3x3V6'
+2025-07-01T08:55:20.8509313Z co
+2025-07-01T08:55:20.8509513Z ^Eco
+2025-07-01T08:55:21.0529713Z [Enter `^Ec?' for help]
+2025-07-01T08:55:21.5351750Z [connecting...up]
+2025-07-01T08:55:21.5352287Z Rebooting tx2b and loading image: /tmp/tmp.6Mjww3x3V6
+2025-07-01T08:55:51.6904533Z 
+2025-07-01T08:55:51.6904971Z [[Boot timeout]]
+2025-07-01T08:55:51.6905289Z None
+2025-07-01T08:55:51.6905558Z 2 tries remaining..
+2025-07-01T08:55:51.6905946Z Rebooting tx2b and loading image: /tmp/tmp.6Mjww3x3V6
+2025-07-01T08:56:21.9980408Z 
+2025-07-01T08:56:21.9981025Z [[Boot timeout]]
+2025-07-01T08:56:21.9981430Z None
+2025-07-01T08:56:21.9981637Z 1 tries remaining..
+2025-07-01T08:56:21.9981939Z Rebooting tx2b and loading image: /tmp/tmp.6Mjww3x3V6
+2025-07-01T08:56:52.5152326Z 
+2025-07-01T08:56:52.5152776Z [[Boot timeout]]
+2025-07-01T08:56:52.5153099Z None
+2025-07-01T08:56:52.5153455Z 0 tries remaining..
+2025-07-01T09:11:52.5139330Z 
+2025-07-01T09:11:52.5139958Z [[Timeout]]
+2025-07-01T09:11:52.5140253Z None
+2025-07-01T09:11:52.7152082Z 
+2025-07-01T09:11:52.7152482Z console_run returned -1
+2025-07-01T09:11:52.7152905Z Shutting down tx2b
+2025-07-01T09:11:53.0011696Z 
+2025-07-01T09:11:56.1183280Z Command exited with non-zero status 255
+2025-07-01T09:11:56.1184223Z 0.02user 0.04system 16:44.25elapsed 0%CPU (0avgtext+0avgdata 8216maxresident)k
+2025-07-01T09:11:56.1184732Z 0inputs+8outputs (1major+7206minor)pagefaults 0swaps
+2025-07-01T09:11:56.1186371Z [31;1m>>> command failed, aborting.[0m
+2025-07-01T09:11:56.1187121Z [33m+++ mq.sh sem -signal tx2b -k seL4/seL4-Deploy-15846631725-hw-run-35[0m
+2025-07-01T09:12:00.0889237Z [1m-----------[ end test TX2_debug_SMP_hyp_clang_64 ]-----------[0m
+2025-07-01T09:12:00.0889959Z ##[endgroup]
+2025-07-01T09:12:00.0890257Z [31;1mTX2_debug_SMP_hyp_clang_64 FAILED[0m
+2025-07-01T09:12:00.0890474Z 
+2025-07-01T09:12:00.0892393Z ##[group]TX2_debug_SMP_hyp_MCS_clang_64
+2025-07-01T09:12:00.0893119Z [1m-----------[ start test TX2_debug_SMP_hyp_MCS_clang_64 ]-----------[0m
+2025-07-01T09:12:00.0899719Z [33m+++ tar xvzf ../TX2_debug_SMP_hyp_MCS_clang_64-images.tar.gz[0m
+2025-07-01T09:12:00.0926859Z images/
+2025-07-01T09:12:00.0927550Z images/sel4test-driver-image-arm-tx2
+2025-07-01T09:12:00.1166541Z [33m+++ mq.sh sem -info tx2b[0m
+2025-07-01T09:12:03.4346155Z Lock for tx2b currently free
+2025-07-01T09:12:03.4347448Z [33m+++ time mq.sh sem -wait tx2b -k seL4/seL4-Deploy-15846631725-hw-run-35 -T 1800[0m
+2025-07-01T09:12:06.7512274Z 0.02user 0.01system 0:03.31elapsed 1%CPU (0avgtext+0avgdata 8184maxresident)k
+2025-07-01T09:12:06.7515503Z 0inputs+0outputs (1major+4238minor)pagefaults 0swaps
+2025-07-01T09:12:06.7517297Z [33m+++ time mq.sh run -c </testsuite> -s tx2b -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-Deploy-15846631725-hw-run-35 -f images/sel4test-driver-image-arm-tx2[0m
+2025-07-01T09:12:09.4074122Z Lock acquired, we are allowed to run
+2025-07-01T09:12:15.5430793Z pxelinux=False
+2025-07-01T09:12:15.5431267Z copied '/tmp/tmp.E7tvZXqwzp' -> '/tftpboot/tx2b/seL4-image'
+2025-07-01T09:12:15.7445617Z removed '/tmp/tmp.E7tvZXqwzp'
+2025-07-01T09:12:15.7446271Z co
+2025-07-01T09:12:15.7446518Z ^Eco
+2025-07-01T09:12:15.9463683Z [Enter `^Ec?' for help]
+2025-07-01T09:12:16.4138826Z [connecting...up]
+2025-07-01T09:12:16.4139994Z Rebooting tx2b and loading image: /tmp/tmp.E7tvZXqwzp
+2025-07-01T09:12:46.6395167Z 
+2025-07-01T09:12:46.6395577Z [[Boot timeout]]
+2025-07-01T09:12:46.6395877Z None
+2025-07-01T09:12:46.6396084Z 2 tries remaining..
+2025-07-01T09:12:46.6396396Z Rebooting tx2b and loading image: /tmp/tmp.E7tvZXqwzp
+2025-07-01T09:13:17.0034535Z 
+2025-07-01T09:13:17.0034927Z [[Boot timeout]]
+2025-07-01T09:13:17.0035257Z None
+2025-07-01T09:13:17.0035515Z 1 tries remaining..
+2025-07-01T09:13:17.0035894Z Rebooting tx2b and loading image: /tmp/tmp.E7tvZXqwzp
+2025-07-01T09:13:47.5142055Z 
+2025-07-01T09:13:47.5142558Z [[Boot timeout]]
+2025-07-01T09:13:47.5142823Z None
+2025-07-01T09:13:47.5143023Z 0 tries remaining..
+2025-07-01T09:28:47.5143853Z 
+2025-07-01T09:28:47.5144383Z [[Timeout]]
+2025-07-01T09:28:47.5144835Z None
+2025-07-01T09:28:47.7158122Z 
+2025-07-01T09:28:47.7164223Z console_run returned -1
+2025-07-01T09:28:47.7164830Z Shutting down tx2b
+2025-07-01T09:28:48.1682290Z 
+2025-07-01T09:28:51.2795052Z Command exited with non-zero status 255
+2025-07-01T09:28:51.2797522Z 0.03user 0.04system 16:44.52elapsed 0%CPU (0avgtext+0avgdata 8212maxresident)k
+2025-07-01T09:28:51.2798090Z 0inputs+8outputs (1major+7222minor)pagefaults 0swaps
+2025-07-01T09:28:51.2798681Z [31;1m>>> command failed, aborting.[0m
+2025-07-01T09:28:51.2799234Z [33m+++ mq.sh sem -signal tx2b -k seL4/seL4-Deploy-15846631725-hw-run-35[0m
+2025-07-01T09:28:55.2387866Z [1m-----------[ end test TX2_debug_SMP_hyp_MCS_clang_64 ]-----------[0m
+2025-07-01T09:28:55.2388971Z ##[endgroup]
+2025-07-01T09:28:55.2389447Z [31;1mTX2_debug_SMP_hyp_MCS_clang_64 FAILED[0m
+2025-07-01T09:28:55.2389803Z 
+2025-07-01T09:28:55.2392031Z ##[group]TX2_release_clang_64
+2025-07-01T09:28:55.2392664Z [1m-----------[ start test TX2_release_clang_64 ]-----------[0m
+2025-07-01T09:28:55.2397864Z [33m+++ tar xvzf ../TX2_release_clang_64-images.tar.gz[0m
+2025-07-01T09:28:55.2424471Z images/
+2025-07-01T09:28:55.2425065Z images/sel4test-driver-image-arm-tx2
+2025-07-01T09:28:55.2509285Z [33m+++ mq.sh sem -info tx2b[0m
+2025-07-01T09:28:59.2199091Z Lock for tx2b held by sel4_ci since 2025-07-01 19:28:55.311620310 +1000, timeout 1800 with key 'seL4/seL4-HW-15960497578-hw-run-29'
+2025-07-01T09:28:59.2200781Z [33m+++ time mq.sh sem -wait tx2b -k seL4/seL4-Deploy-15846631725-hw-run-35 -T 1800[0m
+2025-07-01T09:45:43.7193242Z 0.03user 0.02system 16:44.49elapsed 0%CPU (0avgtext+0avgdata 8180maxresident)k
+2025-07-01T09:45:43.7194008Z 0inputs+0outputs (1major+5518minor)pagefaults 0swaps
+2025-07-01T09:45:43.7195461Z [33m+++ time mq.sh run -c </testsuite> -s tx2b -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-Deploy-15846631725-hw-run-35 -f images/sel4test-driver-image-arm-tx2[0m
+2025-07-01T09:45:46.3648587Z Lock acquired, we are allowed to run
+2025-07-01T09:45:51.9005269Z pxelinux=False
+2025-07-01T09:45:51.9005662Z copied '/tmp/tmp.gTIi4OAVen' -> '/tftpboot/tx2b/seL4-image'
+2025-07-01T09:45:52.1019954Z removed '/tmp/tmp.gTIi4OAVen'
+2025-07-01T09:45:52.1020502Z co
+2025-07-01T09:45:52.1020731Z ^Eco
+2025-07-01T09:45:52.3036184Z [Enter `^Ec?' for help]
+2025-07-01T09:45:52.8334512Z [connecting...up]
+2025-07-01T09:45:52.8334936Z Rebooting tx2b and loading image: /tmp/tmp.gTIi4OAVen
+2025-07-01T09:46:23.1120123Z 
+2025-07-01T09:46:23.1120541Z [[Boot timeout]]
+2025-07-01T09:46:23.1120859Z None
+2025-07-01T09:46:23.1121106Z 2 tries remaining..
+2025-07-01T09:46:23.1121471Z Rebooting tx2b and loading image: /tmp/tmp.gTIi4OAVen
+2025-07-01T09:46:53.5145019Z 
+2025-07-01T09:46:53.5145553Z [[Boot timeout]]
+2025-07-01T09:46:53.5145874Z None
+2025-07-01T09:46:53.5146129Z 1 tries remaining..
+2025-07-01T09:46:53.5146810Z Rebooting tx2b and loading image: /tmp/tmp.gTIi4OAVen
+2025-07-01T09:47:23.7816843Z 
+2025-07-01T09:47:23.7817338Z [[Boot timeout]]
+2025-07-01T09:47:23.7817735Z None
+2025-07-01T09:47:23.7817976Z 0 tries remaining..
+2025-07-01T10:02:23.8533634Z 
+2025-07-01T10:02:23.8534157Z [[Timeout]]
+2025-07-01T10:02:23.8534550Z None
+2025-07-01T10:02:24.0548379Z 
+2025-07-01T10:02:24.0548838Z console_run returned -1
+2025-07-01T10:02:24.0549414Z Shutting down tx2b
+2025-07-01T10:02:24.5518848Z 
+2025-07-01T10:02:27.6738738Z Command exited with non-zero status 255
+2025-07-01T10:02:27.6739579Z 0.03user 0.04system 16:43.95elapsed 0%CPU (0avgtext+0avgdata 8232maxresident)k
+2025-07-01T10:02:27.6741733Z 0inputs+8outputs (0major+7200minor)pagefaults 0swaps
+2025-07-01T10:02:27.6742684Z [31;1m>>> command failed, aborting.[0m
+2025-07-01T10:02:27.6743335Z [33m+++ mq.sh sem -signal tx2b -k seL4/seL4-Deploy-15846631725-hw-run-35[0m
+2025-07-01T10:02:31.6500140Z [1m-----------[ end test TX2_release_clang_64 ]-----------[0m
+2025-07-01T10:02:31.6501030Z ##[endgroup]
+2025-07-01T10:02:31.6501423Z [31;1mTX2_release_clang_64 FAILED[0m
+2025-07-01T10:02:31.6501690Z 
+2025-07-01T10:02:31.6502055Z ##[group]TX2_release_MCS_clang_64
+2025-07-01T10:02:31.6502593Z [1m-----------[ start test TX2_release_MCS_clang_64 ]-----------[0m
+2025-07-01T10:02:31.6507170Z [33m+++ tar xvzf ../TX2_release_MCS_clang_64-images.tar.gz[0m
+2025-07-01T10:02:31.6534618Z images/
+2025-07-01T10:02:31.6535050Z images/sel4test-driver-image-arm-tx2
+2025-07-01T10:02:31.6630077Z [33m+++ mq.sh sem -info tx2b[0m
+2025-07-01T10:02:34.9842218Z Lock for tx2b currently free
+2025-07-01T10:02:34.9843153Z [33m+++ time mq.sh sem -wait tx2b -k seL4/seL4-Deploy-15846631725-hw-run-35 -T 1800[0m
+2025-07-01T10:02:38.2971735Z 0.02user 0.01system 0:03.31elapsed 1%CPU (0avgtext+0avgdata 8152maxresident)k
+2025-07-01T10:02:38.2972610Z 0inputs+0outputs (1major+4210minor)pagefaults 0swaps
+2025-07-01T10:02:38.2974053Z [33m+++ time mq.sh run -c </testsuite> -s tx2b -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-Deploy-15846631725-hw-run-35 -f images/sel4test-driver-image-arm-tx2[0m
+2025-07-01T10:02:40.9540266Z Lock acquired, we are allowed to run
+2025-07-01T10:02:46.6915520Z pxelinux=False
+2025-07-01T10:02:46.6916085Z copied '/tmp/tmp.cpseS8TRMr' -> '/tftpboot/tx2b/seL4-image'
+2025-07-01T10:02:46.6916788Z removed '/tmp/tmp.cpseS8TRMr'
+2025-07-01T10:02:46.8931512Z co
+2025-07-01T10:02:46.8931880Z ^Eco
+2025-07-01T10:02:46.8932219Z [Enter `^Ec?' for help]
+2025-07-01T10:02:47.5077717Z [connecting...up]
+2025-07-01T10:02:47.5078229Z Rebooting tx2b and loading image: /tmp/tmp.cpseS8TRMr
+2025-07-01T10:03:17.6756192Z 
+2025-07-01T10:03:17.6756850Z [[Boot timeout]]
+2025-07-01T10:03:17.6757222Z None
+2025-07-01T10:03:17.6757532Z 2 tries remaining..
+2025-07-01T10:03:17.6757980Z Rebooting tx2b and loading image: /tmp/tmp.cpseS8TRMr
+2025-07-01T10:03:48.1454357Z 
+2025-07-01T10:03:48.1454882Z [[Boot timeout]]
+2025-07-01T10:03:48.1455349Z None
+2025-07-01T10:03:48.1455650Z 1 tries remaining..
+2025-07-01T10:03:48.1456065Z Rebooting tx2b and loading image: /tmp/tmp.cpseS8TRMr
+2025-07-01T10:04:18.5642892Z 
+2025-07-01T10:04:18.5643264Z [[Boot timeout]]
+2025-07-01T10:04:18.5643662Z None
+2025-07-01T10:04:18.5643998Z 0 tries remaining..
+2025-07-01T10:19:18.6097493Z 
+2025-07-01T10:19:18.6097905Z [[Timeout]]
+2025-07-01T10:19:18.6098184Z None
+2025-07-01T10:19:18.8112336Z 
+2025-07-01T10:19:18.8112815Z console_run returned -1
+2025-07-01T10:19:18.8113185Z Shutting down tx2b
+2025-07-01T10:19:19.1916134Z 
+2025-07-01T10:19:22.3079695Z Command exited with non-zero status 255
+2025-07-01T10:19:22.3080739Z 0.03user 0.03system 16:44.00elapsed 0%CPU (0avgtext+0avgdata 8220maxresident)k
+2025-07-01T10:19:22.3081478Z 0inputs+8outputs (0major+7226minor)pagefaults 0swaps
+2025-07-01T10:19:22.3082700Z [31;1m>>> command failed, aborting.[0m
+2025-07-01T10:19:22.3083469Z [33m+++ mq.sh sem -signal tx2b -k seL4/seL4-Deploy-15846631725-hw-run-35[0m
+2025-07-01T10:19:26.2839705Z [1m-----------[ end test TX2_release_MCS_clang_64 ]-----------[0m
+2025-07-01T10:19:26.2840610Z ##[endgroup]
+2025-07-01T10:19:26.2840898Z [31;1mTX2_release_MCS_clang_64 FAILED[0m
+2025-07-01T10:19:26.2841100Z 
+2025-07-01T10:19:26.2843069Z ##[group]TX2_release_hyp_clang_64
+2025-07-01T10:19:26.2843781Z [1m-----------[ start test TX2_release_hyp_clang_64 ]-----------[0m
+2025-07-01T10:19:26.2844549Z [33m+++ tar xvzf ../TX2_release_hyp_clang_64-images.tar.gz[0m
+2025-07-01T10:19:26.2872208Z images/
+2025-07-01T10:19:26.2872854Z images/sel4test-driver-image-arm-tx2
+2025-07-01T10:19:26.2957016Z [33m+++ mq.sh sem -info tx2b[0m
+2025-07-01T10:19:30.2668739Z Lock for tx2b held by sel4_ci since 2025-07-01 20:19:26.169229625 +1000, timeout 1800 with key 'seL4/seL4-HW-15960497578-hw-run-29'
+2025-07-01T10:19:30.2670192Z [33m+++ time mq.sh sem -wait tx2b -k seL4/seL4-Deploy-15846631725-hw-run-35 -T 1800[0m
+2025-07-01T10:36:14.7864712Z 0.02user 0.03system 16:44.51elapsed 0%CPU (0avgtext+0avgdata 8152maxresident)k
+2025-07-01T10:36:14.7865503Z 0inputs+0outputs (0major+5503minor)pagefaults 0swaps
+2025-07-01T10:36:14.7867278Z [33m+++ time mq.sh run -c </testsuite> -s tx2b -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-Deploy-15846631725-hw-run-35 -f images/sel4test-driver-image-arm-tx2[0m
+2025-07-01T10:36:17.4388339Z Lock acquired, we are allowed to run
+2025-07-01T10:36:23.1673605Z pxelinux=False
+2025-07-01T10:36:23.1674289Z copied '/tmp/tmp.MD2FuwI47K' -> '/tftpboot/tx2b/seL4-image'
+2025-07-01T10:36:23.3724269Z removed '/tmp/tmp.MD2FuwI47K'
+2025-07-01T10:36:23.3725080Z co
+2025-07-01T10:36:23.3725303Z ^Eco
+2025-07-01T10:36:23.5740011Z [Enter `^Ec?' for help]
+2025-07-01T10:36:24.0920155Z [connecting...up]
+2025-07-01T10:36:24.0920683Z Rebooting tx2b and loading image: /tmp/tmp.MD2FuwI47K
+2025-07-01T10:36:54.4897638Z 
+2025-07-01T10:36:54.4898374Z [[Boot timeout]]
+2025-07-01T10:36:54.4898884Z None
+2025-07-01T10:36:54.4899183Z 2 tries remaining..
+2025-07-01T10:36:54.4899625Z Rebooting tx2b and loading image: /tmp/tmp.MD2FuwI47K
+2025-07-01T10:37:24.7003439Z 
+2025-07-01T10:37:24.7004054Z [[Boot timeout]]
+2025-07-01T10:37:24.7004533Z None
+2025-07-01T10:37:24.7004832Z 1 tries remaining..
+2025-07-01T10:37:24.7005270Z Rebooting tx2b and loading image: /tmp/tmp.MD2FuwI47K
+2025-07-01T10:37:55.0061642Z 
+2025-07-01T10:37:55.0062222Z [[Boot timeout]]
+2025-07-01T10:37:55.0062489Z None
+2025-07-01T10:37:55.0062695Z 0 tries remaining..
+2025-07-01T10:52:55.1017122Z 
+2025-07-01T10:52:55.1017650Z [[Timeout]]
+2025-07-01T10:52:55.1018119Z None
+2025-07-01T10:52:55.3030367Z 
+2025-07-01T10:52:55.3030777Z console_run returned -1
+2025-07-01T10:52:55.3031127Z Shutting down tx2b
+2025-07-01T10:52:55.9072724Z 
+2025-07-01T10:52:59.0349352Z Command exited with non-zero status 255
+2025-07-01T10:52:59.0350149Z 0.03user 0.03system 16:44.24elapsed 0%CPU (0avgtext+0avgdata 8140maxresident)k
+2025-07-01T10:52:59.0350635Z 0inputs+8outputs (0major+7184minor)pagefaults 0swaps
+2025-07-01T10:52:59.0351895Z [31;1m>>> command failed, aborting.[0m
+2025-07-01T10:52:59.0352397Z [33m+++ mq.sh sem -signal tx2b -k seL4/seL4-Deploy-15846631725-hw-run-35[0m
+2025-07-01T10:53:02.9978335Z [1m-----------[ end test TX2_release_hyp_clang_64 ]-----------[0m
+2025-07-01T10:53:02.9979315Z ##[endgroup]
+2025-07-01T10:53:02.9979600Z [31;1mTX2_release_hyp_clang_64 FAILED[0m
+2025-07-01T10:53:02.9979809Z 
+2025-07-01T10:53:02.9980105Z ##[group]TX2_release_hyp_MCS_clang_64
+2025-07-01T10:53:02.9980527Z [1m-----------[ start test TX2_release_hyp_MCS_clang_64 ]-----------[0m
+2025-07-01T10:53:02.9983522Z [33m+++ tar xvzf ../TX2_release_hyp_MCS_clang_64-images.tar.gz[0m
+2025-07-01T10:53:03.0010944Z images/
+2025-07-01T10:53:03.0011636Z images/sel4test-driver-image-arm-tx2
+2025-07-01T10:53:03.0107020Z [33m+++ mq.sh sem -info tx2b[0m
+2025-07-01T10:53:06.3216836Z Lock for tx2b currently free
+2025-07-01T10:53:06.3218194Z [33m+++ time mq.sh sem -wait tx2b -k seL4/seL4-Deploy-15846631725-hw-run-35 -T 1800[0m
+2025-07-01T10:58:45.4410529Z 0.02user 0.01system 5:39.11elapsed 0%CPU (0avgtext+0avgdata 8148maxresident)k
+2025-07-01T10:58:45.4411035Z 0inputs+0outputs (0major+4219minor)pagefaults 0swaps
+2025-07-01T10:58:45.4412338Z [33m+++ time mq.sh run -c </testsuite> -s tx2b -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-Deploy-15846631725-hw-run-35 -f images/sel4test-driver-image-arm-tx2[0m
+2025-07-01T10:58:48.0959288Z Lock acquired, we are allowed to run
+2025-07-01T10:58:53.8447062Z pxelinux=False
+2025-07-01T10:58:53.8447834Z copied '/tmp/tmp.cRBK9YuvKa' -> '/tftpboot/tx2b/seL4-image'
+2025-07-01T10:58:53.8448410Z removed '/tmp/tmp.cRBK9YuvKa'
+2025-07-01T10:58:53.8449426Z co
+2025-07-01T10:58:53.8449679Z ^Eco
+2025-07-01T10:58:54.0460960Z [Enter `^Ec?' for help]
+2025-07-01T10:58:54.4493761Z [connecting...up]
+2025-07-01T10:58:54.4494150Z Rebooting tx2b and loading image: /tmp/tmp.cRBK9YuvKa
+2025-07-01T10:59:24.8164253Z 
+2025-07-01T10:59:24.8164872Z [[Boot timeout]]
+2025-07-01T10:59:24.8165345Z None
+2025-07-01T10:59:24.8165726Z 2 tries remaining..
+2025-07-01T10:59:24.8166197Z Rebooting tx2b and loading image: /tmp/tmp.cRBK9YuvKa
+2025-07-01T10:59:55.1844088Z 
+2025-07-01T10:59:55.1844664Z [[Boot timeout]]
+2025-07-01T10:59:55.1844978Z None
+2025-07-01T10:59:55.1845228Z 1 tries remaining..
+2025-07-01T10:59:55.1845584Z Rebooting tx2b and loading image: /tmp/tmp.cRBK9YuvKa
+2025-07-01T11:00:25.6364102Z 
+2025-07-01T11:00:25.6364515Z [[Boot timeout]]
+2025-07-01T11:00:25.6364831Z None
+2025-07-01T11:00:25.6365066Z 0 tries remaining..
+2025-07-01T11:15:25.7355162Z 
+2025-07-01T11:15:25.7355655Z [[Timeout]]
+2025-07-01T11:15:25.7355984Z None
+2025-07-01T11:15:25.9372039Z 
+2025-07-01T11:15:25.9372540Z console_run returned -1
+2025-07-01T11:15:25.9372934Z Shutting down tx2b
+2025-07-01T11:15:26.3262640Z 
+2025-07-01T11:15:29.4369148Z Command exited with non-zero status 255
+2025-07-01T11:15:29.4370106Z 0.03user 0.03system 16:43.99elapsed 0%CPU (0avgtext+0avgdata 8188maxresident)k
+2025-07-01T11:15:29.4370703Z 0inputs+8outputs (0major+7206minor)pagefaults 0swaps
+2025-07-01T11:15:29.4372006Z [31;1m>>> command failed, aborting.[0m
+2025-07-01T11:15:29.4372608Z [33m+++ mq.sh sem -signal tx2b -k seL4/seL4-Deploy-15846631725-hw-run-35[0m
+2025-07-01T11:15:33.4842845Z [1m-----------[ end test TX2_release_hyp_MCS_clang_64 ]-----------[0m
+2025-07-01T11:15:33.4843968Z ##[endgroup]
+2025-07-01T11:15:33.4844483Z [31;1mTX2_release_hyp_MCS_clang_64 FAILED[0m
+2025-07-01T11:15:33.4844859Z 
+2025-07-01T11:15:33.4847156Z ##[group]TX2_release_SMP_clang_64
+2025-07-01T11:15:33.4847853Z [1m-----------[ start test TX2_release_SMP_clang_64 ]-----------[0m
+2025-07-01T11:15:33.4848645Z [33m+++ tar xvzf ../TX2_release_SMP_clang_64-images.tar.gz[0m
+2025-07-01T11:15:33.4875149Z images/
+2025-07-01T11:15:33.4875982Z images/sel4test-driver-image-arm-tx2
+2025-07-01T11:15:33.4962218Z [33m+++ mq.sh sem -info tx2b[0m
+2025-07-01T11:15:36.8109991Z Lock for tx2b currently free
+2025-07-01T11:15:36.8111182Z [33m+++ time mq.sh sem -wait tx2b -k seL4/seL4-Deploy-15846631725-hw-run-35 -T 1800[0m
+2025-07-01T11:15:40.1290543Z 0.01user 0.02system 0:03.31elapsed 1%CPU (0avgtext+0avgdata 8180maxresident)k
+2025-07-01T11:15:40.1291299Z 0inputs+0outputs (0major+4215minor)pagefaults 0swaps
+2025-07-01T11:15:40.1292848Z [33m+++ time mq.sh run -c </testsuite> -s tx2b -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-Deploy-15846631725-hw-run-35 -f images/sel4test-driver-image-arm-tx2[0m
+2025-07-01T11:15:42.7871045Z Lock acquired, we are allowed to run
+2025-07-01T11:15:48.9208885Z pxelinux=False
+2025-07-01T11:15:48.9209347Z copied '/tmp/tmp.jLymIhCIGW' -> '/tftpboot/tx2b/seL4-image'
+2025-07-01T11:15:48.9209799Z removed '/tmp/tmp.jLymIhCIGW'
+2025-07-01T11:15:49.1227050Z co
+2025-07-01T11:15:49.1227514Z ^Eco
+2025-07-01T11:15:49.1227850Z [Enter `^Ec?' for help]
+2025-07-01T11:15:49.7351190Z [connecting...up]
+2025-07-01T11:15:49.7351753Z Rebooting tx2b and loading image: /tmp/tmp.jLymIhCIGW
+2025-07-01T11:16:19.9929049Z 
+2025-07-01T11:16:19.9929665Z [[Boot timeout]]
+2025-07-01T11:16:19.9930017Z None
+2025-07-01T11:16:19.9930303Z 2 tries remaining..
+2025-07-01T11:16:19.9930714Z Rebooting tx2b and loading image: /tmp/tmp.jLymIhCIGW
+2025-07-01T11:16:50.5146095Z 
+2025-07-01T11:16:50.5147050Z [[Boot timeout]]
+2025-07-01T11:16:50.5147700Z None
+2025-07-01T11:16:50.5148017Z 1 tries remaining..
+2025-07-01T11:16:50.5148479Z Rebooting tx2b and loading image: /tmp/tmp.jLymIhCIGW
+2025-07-01T11:17:20.7198696Z 
+2025-07-01T11:17:20.7199189Z [[Boot timeout]]
+2025-07-01T11:17:20.7199589Z None
+2025-07-01T11:17:20.7199820Z 0 tries remaining..
+2025-07-01T11:27:03.9508528Z ##[error]The operation was canceled.
+2025-07-01T11:27:03.9563176Z Post job cleanup.
+2025-07-01T11:27:04.0495131Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/post-steps.sh
+2025-07-01T11:27:04.0547282Z ##[group]Releasing mq lock
+2025-07-01T11:27:04.0616898Z Agent pid 6246
+2025-07-01T11:27:04.2083622Z mq.sh sem -cancel tx2b -k seL4/seL4-Deploy-15846631725-hw-run-35
+2025-07-01T11:27:06.8597023Z mq.sh sem -signal tx2b -k seL4/seL4-Deploy-15846631725-hw-run-35
+2025-07-01T11:27:10.8770322Z ##[endgroup]
+2025-07-01T11:27:10.8897207Z Post job cleanup.
+2025-07-01T11:27:10.9829961Z [command]/usr/bin/git version
+2025-07-01T11:27:10.9866974Z git version 2.49.0
+2025-07-01T11:27:10.9911989Z Temporarily overriding HOME='/home/runner/work/_temp/934b4cfd-b9b1-43e4-93fd-b4ffd9a00779' before making global git config changes
+2025-07-01T11:27:10.9913379Z Adding repository directory to the temporary git global config as a safe directory
+2025-07-01T11:27:10.9918571Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/seL4/seL4/machine_queue
+2025-07-01T11:27:10.9954582Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-07-01T11:27:10.9987273Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-07-01T11:27:11.0210779Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-07-01T11:27:11.0231419Z http.https://github.com/.extraheader
+2025-07-01T11:27:11.0244120Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-07-01T11:27:11.0274363Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-07-01T11:27:11.0598207Z Cleaning up orphan processes
+2025-07-01T11:27:11.0803555Z Terminate orphan process: pid (2082) (steps.sh)
+2025-07-01T11:27:11.0865430Z Terminate orphan process: pid (2083) (hw-steps.sh)
+2025-07-01T11:27:11.0937483Z Terminate orphan process: pid (2144) (python3)
+2025-07-01T11:27:11.1010649Z Terminate orphan process: pid (2161) (ssh)
+2025-07-01T11:27:11.1142209Z Terminate orphan process: pid (6155) (time)
+2025-07-01T11:27:11.1202682Z Terminate orphan process: pid (6156) (mq.sh)

@@ -1,0 +1,604 @@
+﻿2025-07-01T05:27:05.1769762Z Current runner version: '2.325.0'
+2025-07-01T05:27:05.1805327Z ##[group]Runner Image Provisioner
+2025-07-01T05:27:05.1806912Z Hosted Compute Agent
+2025-07-01T05:27:05.1808024Z Version: 20250620.352
+2025-07-01T05:27:05.1809236Z Commit: f262f3aba23b10ea191b2a62bdee1ca4c3d344da
+2025-07-01T05:27:05.1810456Z Build Date: 2025-06-20T19:27:17Z
+2025-07-01T05:27:05.1811726Z ##[endgroup]
+2025-07-01T05:27:05.1812780Z ##[group]Operating System
+2025-07-01T05:27:05.1814009Z Ubuntu
+2025-07-01T05:27:05.1815032Z 24.04.2
+2025-07-01T05:27:05.1815949Z LTS
+2025-07-01T05:27:05.1817414Z ##[endgroup]
+2025-07-01T05:27:05.1818456Z ##[group]Runner Image
+2025-07-01T05:27:05.1819673Z Image: ubuntu-24.04
+2025-07-01T05:27:05.1820747Z Version: 20250622.1.0
+2025-07-01T05:27:05.1822908Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250622.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-07-01T05:27:05.1826041Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250622.1
+2025-07-01T05:27:05.1828083Z ##[endgroup]
+2025-07-01T05:27:05.1832653Z ##[group]GITHUB_TOKEN Permissions
+2025-07-01T05:27:05.1836308Z Actions: write
+2025-07-01T05:27:05.1837567Z Attestations: write
+2025-07-01T05:27:05.1838537Z Checks: write
+2025-07-01T05:27:05.1839419Z Contents: write
+2025-07-01T05:27:05.1840658Z Deployments: write
+2025-07-01T05:27:05.1841701Z Discussions: write
+2025-07-01T05:27:05.1842761Z Issues: write
+2025-07-01T05:27:05.1843957Z Metadata: read
+2025-07-01T05:27:05.1844870Z Models: read
+2025-07-01T05:27:05.1845891Z Packages: write
+2025-07-01T05:27:05.1846970Z Pages: write
+2025-07-01T05:27:05.1848000Z PullRequests: write
+2025-07-01T05:27:05.1848982Z RepositoryProjects: write
+2025-07-01T05:27:05.1849999Z SecurityEvents: write
+2025-07-01T05:27:05.1851248Z Statuses: write
+2025-07-01T05:27:05.1852279Z ##[endgroup]
+2025-07-01T05:27:05.1855750Z Secret source: Actions
+2025-07-01T05:27:05.1856972Z Prepare workflow directory
+2025-07-01T05:27:05.2338061Z Prepare all required actions
+2025-07-01T05:27:05.2395251Z Getting action download info
+2025-07-01T05:27:05.4582334Z ##[group]Download immutable action package 'actions/checkout@v4'
+2025-07-01T05:27:05.4583471Z Version: 4.2.2
+2025-07-01T05:27:05.4584707Z Digest: sha256:ccb2698953eaebd21c7bf6268a94f9c26518a7e38e27e0b83c1fe1ad049819b1
+2025-07-01T05:27:05.4586097Z Source commit SHA: 11bd71901bbe5b1630ceea73d27597364c9af683
+2025-07-01T05:27:05.4586884Z ##[endgroup]
+2025-07-01T05:27:05.5345368Z ##[group]Download immutable action package 'actions/download-artifact@v4'
+2025-07-01T05:27:05.5346298Z Version: 4.3.0
+2025-07-01T05:27:05.5347193Z Digest: sha256:552a5b9ad918f62ec0c2e8f42f3c694d4ebd1b4036b18c39b14168fcdfc0e4f2
+2025-07-01T05:27:05.5348233Z Source commit SHA: d3f86a106a0bac45b974a628896c90dbdf5c8093
+2025-07-01T05:27:05.5349061Z ##[endgroup]
+2025-07-01T05:27:05.7050122Z Download action repository 'seL4/ci-actions@master' (SHA:6770f77eab8909429ba78e2a5ac98b5983a38f92)
+2025-07-01T05:27:10.4652366Z Complete job name: HW Run (IMX93, armv8a, clang)
+2025-07-01T05:27:10.5300599Z ##[group]Run actions/checkout@v4
+2025-07-01T05:27:10.5301300Z with:
+2025-07-01T05:27:10.5301585Z   repository: seL4/machine_queue
+2025-07-01T05:27:10.5301911Z   path: machine_queue
+2025-07-01T05:27:10.5302365Z   token: ***
+2025-07-01T05:27:10.5302639Z   ssh-strict: true
+2025-07-01T05:27:10.5302915Z   ssh-user: git
+2025-07-01T05:27:10.5303191Z   persist-credentials: true
+2025-07-01T05:27:10.5303489Z   clean: true
+2025-07-01T05:27:10.5303938Z   sparse-checkout-cone-mode: true
+2025-07-01T05:27:10.5304249Z   fetch-depth: 1
+2025-07-01T05:27:10.5304520Z   fetch-tags: false
+2025-07-01T05:27:10.5304791Z   show-progress: true
+2025-07-01T05:27:10.5305067Z   lfs: false
+2025-07-01T05:27:10.5305319Z   submodules: false
+2025-07-01T05:27:10.5305583Z   set-safe-directory: true
+2025-07-01T05:27:10.5306116Z ##[endgroup]
+2025-07-01T05:27:10.6381568Z Syncing repository: seL4/machine_queue
+2025-07-01T05:27:10.6383101Z ##[group]Getting Git version info
+2025-07-01T05:27:10.6384030Z Working directory is '/home/runner/work/seL4/seL4/machine_queue'
+2025-07-01T05:27:10.6385073Z [command]/usr/bin/git version
+2025-07-01T05:27:10.6410511Z git version 2.49.0
+2025-07-01T05:27:10.6436967Z ##[endgroup]
+2025-07-01T05:27:10.6449884Z Temporarily overriding HOME='/home/runner/work/_temp/20d977b1-485d-4d6c-b5b5-7228b252b29b' before making global git config changes
+2025-07-01T05:27:10.6450862Z Adding repository directory to the temporary git global config as a safe directory
+2025-07-01T05:27:10.6462014Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/seL4/seL4/machine_queue
+2025-07-01T05:27:10.6494398Z ##[group]Initializing the repository
+2025-07-01T05:27:10.6499040Z [command]/usr/bin/git init /home/runner/work/seL4/seL4/machine_queue
+2025-07-01T05:27:10.6552214Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-07-01T05:27:10.6553327Z hint: is subject to change. To configure the initial branch name to use in all
+2025-07-01T05:27:10.6554766Z hint: of your new repositories, which will suppress this warning, call:
+2025-07-01T05:27:10.6555546Z hint:
+2025-07-01T05:27:10.6556063Z hint: 	git config --global init.defaultBranch <name>
+2025-07-01T05:27:10.6556663Z hint:
+2025-07-01T05:27:10.6557246Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-07-01T05:27:10.6558195Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-07-01T05:27:10.6558887Z hint:
+2025-07-01T05:27:10.6559190Z hint: 	git branch -m <name>
+2025-07-01T05:27:10.6559644Z Initialized empty Git repository in /home/runner/work/seL4/seL4/machine_queue/.git/
+2025-07-01T05:27:10.6567158Z [command]/usr/bin/git remote add origin https://github.com/seL4/machine_queue
+2025-07-01T05:27:10.6596688Z ##[endgroup]
+2025-07-01T05:27:10.6597495Z ##[group]Disabling automatic garbage collection
+2025-07-01T05:27:10.6600803Z [command]/usr/bin/git config --local gc.auto 0
+2025-07-01T05:27:10.6628496Z ##[endgroup]
+2025-07-01T05:27:10.6628983Z ##[group]Setting up auth
+2025-07-01T05:27:10.6634771Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-07-01T05:27:10.6662626Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-07-01T05:27:10.6918623Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-07-01T05:27:10.6947608Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-07-01T05:27:10.7167066Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-07-01T05:27:10.7201633Z ##[endgroup]
+2025-07-01T05:27:10.7202195Z ##[group]Determining the default branch
+2025-07-01T05:27:10.7206410Z Retrieving the default branch name
+2025-07-01T05:27:10.9087445Z Default branch 'master'
+2025-07-01T05:27:10.9089103Z ##[endgroup]
+2025-07-01T05:27:10.9089963Z ##[group]Fetching the repository
+2025-07-01T05:27:10.9095077Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/master:refs/remotes/origin/master
+2025-07-01T05:27:11.2250779Z From https://github.com/seL4/machine_queue
+2025-07-01T05:27:11.2251561Z  * [new branch]      master     -> origin/master
+2025-07-01T05:27:11.2281454Z ##[endgroup]
+2025-07-01T05:27:11.2281972Z ##[group]Determining the checkout info
+2025-07-01T05:27:11.2283177Z ##[endgroup]
+2025-07-01T05:27:11.2288487Z [command]/usr/bin/git sparse-checkout disable
+2025-07-01T05:27:11.2326879Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-07-01T05:27:11.2353526Z ##[group]Checking out the ref
+2025-07-01T05:27:11.2358718Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2025-07-01T05:27:11.2442475Z Reset branch 'master'
+2025-07-01T05:27:11.2444374Z branch 'master' set up to track 'origin/master'.
+2025-07-01T05:27:11.2450354Z ##[endgroup]
+2025-07-01T05:27:11.2488121Z [command]/usr/bin/git log -1 --format=%H
+2025-07-01T05:27:11.2510602Z 9c388cd54d6131052ae729dbfbd6885f99ccce70
+2025-07-01T05:27:11.2775279Z ##[group]Run actions/download-artifact@v4
+2025-07-01T05:27:11.2775923Z with:
+2025-07-01T05:27:11.2776335Z   name: images-armv8a-clang
+2025-07-01T05:27:11.2776842Z   merge-multiple: false
+2025-07-01T05:27:11.2777337Z   repository: seL4/seL4
+2025-07-01T05:27:11.2777818Z   run-id: 15846631725
+2025-07-01T05:27:11.2778281Z ##[endgroup]
+2025-07-01T05:27:11.4794637Z Downloading single artifact
+2025-07-01T05:27:11.5678758Z Preparing to download the following artifacts:
+2025-07-01T05:27:11.5680083Z - images-armv8a-clang (ID: 3391005054, Size: 196700831, Expected Digest: sha256:8973128b7165f26932bdbc8a3af03f196898f3796a063dbfbe4693ae619cf3b4)
+2025-07-01T05:27:11.6205923Z Redirecting to blob download url: https://productionresultssa9.blob.core.windows.net/actions-results/625301e5-9e42-4cad-a47b-4a3df3c93f20/workflow-job-run-f39f853a-e3a7-5840-b078-175e5143971e/artifacts/45ddfe8bba391b0b2effbab876533394f829a540530108e69e7cd4792ff79156.zip
+2025-07-01T05:27:11.6207472Z Starting download of artifact to: /home/runner/work/seL4/seL4
+2025-07-01T05:27:11.7260195Z (node:2052) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2025-07-01T05:27:11.7262671Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-07-01T05:27:14.0078973Z SHA256 digest of downloaded artifact is 8973128b7165f26932bdbc8a3af03f196898f3796a063dbfbe4693ae619cf3b4
+2025-07-01T05:27:14.0080034Z Artifact download completed successfully.
+2025-07-01T05:27:14.0080427Z Total of 1 artifact(s) downloaded
+2025-07-01T05:27:14.0086209Z Download artifact has finished successfully
+2025-07-01T05:27:14.0259455Z ##[group]Run seL4/ci-actions/sel4test-hw-run@master
+2025-07-01T05:27:14.0259849Z with:
+2025-07-01T05:27:14.0260063Z   platform: IMX93
+2025-07-01T05:27:14.0260286Z   compiler: clang
+2025-07-01T05:27:14.0260525Z   index: $17
+2025-07-01T05:27:14.0260764Z   action_name: sel4test-hw-run
+2025-07-01T05:27:14.0261016Z env:
+2025-07-01T05:27:14.0262810Z   HW_SSH: ***
+
+2025-07-01T05:27:14.0263033Z ##[endgroup]
+2025-07-01T05:27:14.1251578Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/steps.sh
+2025-07-01T05:27:14.1308235Z ##[group]Setting up
+2025-07-01T05:27:14.1522117Z Agent pid 2081
+2025-07-01T05:27:14.1710930Z Cloning into 'seL4_libs'...
+2025-07-01T05:27:15.1896903Z Reading package lists...
+2025-07-01T05:27:15.3677670Z Building dependency tree...
+2025-07-01T05:27:15.3684983Z Reading state information...
+2025-07-01T05:27:15.5462267Z libffi-dev is already the newest version (3.4.6-1build1).
+2025-07-01T05:27:15.5463038Z libffi-dev set to manually installed.
+2025-07-01T05:27:15.5464024Z 0 upgraded, 0 newly installed, 0 to remove and 21 not upgraded.
+2025-07-01T05:27:17.4440538Z Collecting junitparser==3.*
+2025-07-01T05:27:17.4880683Z   Downloading junitparser-3.2.0-py2.py3-none-any.whl.metadata (9.0 kB)
+2025-07-01T05:27:17.5170350Z Collecting sel4-deps
+2025-07-01T05:27:17.5261447Z   Downloading sel4_deps-0.5.0-py3-none-any.whl.metadata (653 bytes)
+2025-07-01T05:27:17.5362318Z Requirement already satisfied: six in /usr/lib/python3/dist-packages (from sel4-deps) (1.16.0)
+2025-07-01T05:27:17.5516635Z Collecting future (from sel4-deps)
+2025-07-01T05:27:17.5549564Z   Downloading future-1.0.0-py3-none-any.whl.metadata (4.0 kB)
+2025-07-01T05:27:17.5591381Z Requirement already satisfied: jinja2 in /usr/lib/python3/dist-packages (from sel4-deps) (3.1.2)
+2025-07-01T05:27:17.7645739Z Collecting lxml (from sel4-deps)
+2025-07-01T05:27:17.7683054Z   Downloading lxml-6.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+2025-07-01T05:27:17.7827731Z Collecting ply (from sel4-deps)
+2025-07-01T05:27:17.7861927Z   Downloading ply-3.11-py2.py3-none-any.whl.metadata (844 bytes)
+2025-07-01T05:27:17.8704615Z Collecting psutil (from sel4-deps)
+2025-07-01T05:27:17.8738951Z   Downloading psutil-7.0.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (22 kB)
+2025-07-01T05:27:17.8904070Z Collecting bs4 (from sel4-deps)
+2025-07-01T05:27:17.8939107Z   Downloading bs4-0.0.2-py2.py3-none-any.whl.metadata (411 bytes)
+2025-07-01T05:27:17.9100209Z Collecting pyelftools (from sel4-deps)
+2025-07-01T05:27:17.9142975Z   Downloading pyelftools-0.32-py3-none-any.whl.metadata (372 bytes)
+2025-07-01T05:27:17.9402999Z Collecting sh (from sel4-deps)
+2025-07-01T05:27:17.9446921Z   Downloading sh-2.2.2-py3-none-any.whl.metadata (3.7 kB)
+2025-07-01T05:27:17.9486939Z Requirement already satisfied: pexpect in /usr/lib/python3/dist-packages (from sel4-deps) (4.9.0)
+2025-07-01T05:27:17.9497082Z Requirement already satisfied: pyyaml>=5.1 in /usr/lib/python3/dist-packages (from sel4-deps) (6.0.1)
+2025-07-01T05:27:17.9506213Z Requirement already satisfied: jsonschema in /usr/lib/python3/dist-packages (from sel4-deps) (4.10.3)
+2025-07-01T05:27:17.9618839Z Collecting pyfdt (from sel4-deps)
+2025-07-01T05:27:17.9663906Z   Downloading pyfdt-0.3.tar.gz (9.1 kB)
+2025-07-01T05:27:17.9715868Z   Preparing metadata (setup.py): started
+2025-07-01T05:27:18.1583443Z   Preparing metadata (setup.py): finished with status 'done'
+2025-07-01T05:27:18.1784639Z Collecting cmake-format==0.4.5 (from sel4-deps)
+2025-07-01T05:27:18.1822476Z   Downloading cmake_format-0.4.5.tar.gz (51 kB)
+2025-07-01T05:27:18.1869566Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 51.1/51.1 kB 16.3 MB/s eta 0:00:00
+2025-07-01T05:27:18.1933235Z   Preparing metadata (setup.py): started
+2025-07-01T05:27:18.3558792Z   Preparing metadata (setup.py): finished with status 'done'
+2025-07-01T05:27:18.3694369Z Collecting guardonce (from sel4-deps)
+2025-07-01T05:27:18.3737588Z   Downloading guardonce-2.4.0-py2.py3-none-any.whl.metadata (3.4 kB)
+2025-07-01T05:27:18.3954453Z Collecting autopep8==2.3.1 (from sel4-deps)
+2025-07-01T05:27:18.3999443Z   Downloading autopep8-2.3.1-py2.py3-none-any.whl.metadata (16 kB)
+2025-07-01T05:27:18.4179408Z Collecting libarchive-c (from sel4-deps)
+2025-07-01T05:27:18.4226720Z   Downloading libarchive_c-5.3-py3-none-any.whl.metadata (5.8 kB)
+2025-07-01T05:27:18.4438344Z Collecting pycodestyle>=2.12.0 (from autopep8==2.3.1->sel4-deps)
+2025-07-01T05:27:18.4471193Z   Downloading pycodestyle-2.14.0-py2.py3-none-any.whl.metadata (4.5 kB)
+2025-07-01T05:27:18.4734306Z Collecting beautifulsoup4 (from bs4->sel4-deps)
+2025-07-01T05:27:18.4767034Z   Downloading beautifulsoup4-4.13.4-py3-none-any.whl.metadata (3.8 kB)
+2025-07-01T05:27:18.4972002Z Requirement already satisfied: attrs>=17.4.0 in /usr/lib/python3/dist-packages (from jsonschema->sel4-deps) (23.2.0)
+2025-07-01T05:27:18.4987416Z Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,>=0.14.0 in /usr/lib/python3/dist-packages (from jsonschema->sel4-deps) (0.20.0)
+2025-07-01T05:27:18.5860744Z Collecting soupsieve>1.2 (from beautifulsoup4->bs4->sel4-deps)
+2025-07-01T05:27:18.5891945Z   Downloading soupsieve-2.7-py3-none-any.whl.metadata (4.6 kB)
+2025-07-01T05:27:18.5934270Z Requirement already satisfied: typing-extensions>=4.0.0 in /usr/lib/python3/dist-packages (from beautifulsoup4->bs4->sel4-deps) (4.10.0)
+2025-07-01T05:27:18.6010767Z Downloading junitparser-3.2.0-py2.py3-none-any.whl (13 kB)
+2025-07-01T05:27:18.6080904Z Downloading sel4_deps-0.5.0-py3-none-any.whl (1.2 kB)
+2025-07-01T05:27:18.6131175Z Downloading autopep8-2.3.1-py2.py3-none-any.whl (45 kB)
+2025-07-01T05:27:18.6170557Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.7/45.7 kB 17.2 MB/s eta 0:00:00
+2025-07-01T05:27:18.6202393Z Downloading bs4-0.0.2-py2.py3-none-any.whl (1.2 kB)
+2025-07-01T05:27:18.6250583Z Downloading future-1.0.0-py3-none-any.whl (491 kB)
+2025-07-01T05:27:18.6322908Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 491.3/491.3 kB 87.1 MB/s eta 0:00:00
+2025-07-01T05:27:18.6365593Z Downloading guardonce-2.4.0-py2.py3-none-any.whl (15 kB)
+2025-07-01T05:27:18.6426580Z Downloading libarchive_c-5.3-py3-none-any.whl (17 kB)
+2025-07-01T05:27:18.6476559Z Downloading lxml-6.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (5.3 MB)
+2025-07-01T05:27:18.6787269Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 179.7 MB/s eta 0:00:00
+2025-07-01T05:27:18.6895341Z Downloading ply-3.11-py2.py3-none-any.whl (49 kB)
+2025-07-01T05:27:18.6934385Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.6/49.6 kB 18.1 MB/s eta 0:00:00
+2025-07-01T05:27:18.6970957Z Downloading psutil-7.0.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (277 kB)
+2025-07-01T05:27:18.7020508Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 278.0/278.0 kB 79.6 MB/s eta 0:00:00
+2025-07-01T05:27:18.7053834Z Downloading pyelftools-0.32-py3-none-any.whl (188 kB)
+2025-07-01T05:27:18.7099300Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.5/188.5 kB 62.6 MB/s eta 0:00:00
+2025-07-01T05:27:18.7129068Z Downloading sh-2.2.2-py3-none-any.whl (38 kB)
+2025-07-01T05:27:18.7180671Z Downloading pycodestyle-2.14.0-py2.py3-none-any.whl (31 kB)
+2025-07-01T05:27:18.7232315Z Downloading beautifulsoup4-4.13.4-py3-none-any.whl (187 kB)
+2025-07-01T05:27:18.7276307Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 187.3/187.3 kB 64.5 MB/s eta 0:00:00
+2025-07-01T05:27:18.7307086Z Downloading soupsieve-2.7-py3-none-any.whl (36 kB)
+2025-07-01T05:27:18.7558331Z Building wheels for collected packages: cmake-format, pyfdt
+2025-07-01T05:27:18.7563821Z   Building wheel for cmake-format (setup.py): started
+2025-07-01T05:27:19.0577195Z   Building wheel for cmake-format (setup.py): finished with status 'done'
+2025-07-01T05:27:19.0580806Z   Created wheel for cmake-format: filename=cmake_format-0.4.5-py3-none-any.whl size=57091 sha256=a72cfd39f9ee0785687bcf59fbc627d114f0506c88629e8f072c3a2612ee3de1
+2025-07-01T05:27:19.0582910Z   Stored in directory: /home/runner/.cache/pip/wheels/26/fb/b2/73a635046d239de7405e0f77cf67c3d31a3f0d5edcf8986d29
+2025-07-01T05:27:19.0609807Z   Building wheel for pyfdt (setup.py): started
+2025-07-01T05:27:19.2938168Z   Building wheel for pyfdt (setup.py): finished with status 'done'
+2025-07-01T05:27:19.2942000Z   Created wheel for pyfdt: filename=pyfdt-0.3-py3-none-any.whl size=10969 sha256=22d4fa701d881595b7660ed1a5b6f7e2b2724681266c5664065db9166baf60aa
+2025-07-01T05:27:19.2943833Z   Stored in directory: /home/runner/.cache/pip/wheels/d9/8e/2a/cff33f3accb8eaa34608e68786db1ec323a5f6bce8d724d90a
+2025-07-01T05:27:19.2958264Z Successfully built cmake-format pyfdt
+2025-07-01T05:27:19.5684235Z Installing collected packages: pyfdt, pyelftools, ply, libarchive-c, junitparser, guardonce, cmake-format, soupsieve, sh, pycodestyle, psutil, lxml, future, beautifulsoup4, autopep8, bs4, sel4-deps
+2025-07-01T05:27:20.5800773Z Successfully installed autopep8-2.3.1 beautifulsoup4-4.13.4 bs4-0.0.2 cmake-format-0.4.5 future-1.0.0 guardonce-2.4.0 junitparser-3.2.0 libarchive-c-5.3 lxml-6.0.0 ply-3.11 psutil-7.0.0 pycodestyle-2.14.0 pyelftools-0.32 pyfdt-0.3 sel4-deps-0.5.0 sh-2.2.2 soupsieve-2.7
+2025-07-01T05:27:20.6628075Z ##[endgroup]
+2025-07-01T05:27:20.8120700Z 
+2025-07-01T05:27:20.8123103Z ##[group]IMX93_debug_clang_64
+2025-07-01T05:27:20.8124544Z [1m-----------[ start test IMX93_debug_clang_64 ]-----------[0m
+2025-07-01T05:27:20.8125666Z [33m+++ tar xvzf ../IMX93_debug_clang_64-images.tar.gz[0m
+2025-07-01T05:27:20.8150232Z images/
+2025-07-01T05:27:20.8150640Z images/sel4test-driver-image-arm-imx93
+2025-07-01T05:27:20.8344349Z [33m+++ mq.sh sem -info imx93a[0m
+2025-07-01T05:27:29.3994739Z Lock for imx93a held by sel4_ci since 2025-07-01 15:16:32.395992703 +1000, timeout 1800 with key 'seL4/seL4-HW-15960497578-hw-run-9'
+2025-07-01T05:27:29.3996238Z [33m+++ time mq.sh sem -wait imx93a -k seL4/seL4-Deploy-15846631725-hw-run-17 -T 1800[0m
+2025-07-01T06:05:02.1776094Z 0.02user 0.02system 37:32.77elapsed 0%CPU (0avgtext+0avgdata 8128maxresident)k
+2025-07-01T06:05:02.1777073Z 0inputs+0outputs (0major+5494minor)pagefaults 0swaps
+2025-07-01T06:05:02.1779088Z [33m+++ time mq.sh run -c </testsuite> -s imx93a -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-Deploy-15846631725-hw-run-17 -f images/sel4test-driver-image-arm-imx93[0m
+2025-07-01T06:05:04.9354562Z Lock acquired, we are allowed to run
+2025-07-01T06:05:11.3443048Z pxelinux=False
+2025-07-01T06:05:11.3443850Z copied '/tmp/tmp.VXXkDsobMA' -> '/tftpboot/imx93a/sel4-image'
+2025-07-01T06:05:11.5546316Z removed '/tmp/tmp.VXXkDsobMA'
+2025-07-01T06:05:11.5546823Z co
+2025-07-01T06:05:11.5547015Z ^Eco
+2025-07-01T06:05:11.7650996Z [Enter `^Ec?' for help]
+2025-07-01T06:05:11.9751722Z [up]
+2025-07-01T06:05:11.9752425Z Rebooting imx93a and loading image: /tmp/tmp.VXXkDsobMA
+2025-07-01T06:05:27.9818805Z 
+2025-07-01T06:05:27.9819228Z [[Boot timeout]]
+2025-07-01T06:05:27.9819634Z None
+2025-07-01T06:05:27.9819951Z 2 tries remaining..
+2025-07-01T06:05:27.9820458Z Rebooting imx93a and loading image: /tmp/tmp.VXXkDsobMA
+2025-07-01T06:05:39.8298657Z 
+2025-07-01T06:05:39.8299121Z [[Boot timeout]]
+2025-07-01T06:05:39.8299567Z None
+2025-07-01T06:05:39.8299843Z 1 tries remaining..
+2025-07-01T06:05:39.8300400Z Rebooting imx93a and loading image: /tmp/tmp.VXXkDsobMA
+2025-07-01T06:05:51.7816896Z 
+2025-07-01T06:05:51.7817523Z [[Boot timeout]]
+2025-07-01T06:05:51.7817896Z None
+2025-07-01T06:05:51.7818191Z 0 tries remaining..
+2025-07-01T06:20:51.7756129Z 
+2025-07-01T06:20:51.7756549Z [[Timeout]]
+2025-07-01T06:20:51.7756804Z None
+2025-07-01T06:20:51.9769740Z 
+2025-07-01T06:20:51.9769954Z console_run returned -1
+2025-07-01T06:20:51.9770241Z Shutting down imx93a
+2025-07-01T06:21:02.1203358Z 
+2025-07-01T06:21:05.2321018Z Command exited with non-zero status 255
+2025-07-01T06:21:05.2321958Z 0.03user 0.03system 16:03.05elapsed 0%CPU (0avgtext+0avgdata 8124maxresident)k
+2025-07-01T06:21:05.2322510Z 272inputs+8outputs (2major+7199minor)pagefaults 0swaps
+2025-07-01T06:21:05.2324015Z [31;1m>>> command failed, aborting.[0m
+2025-07-01T06:21:05.2325215Z [33m+++ mq.sh sem -signal imx93a -k seL4/seL4-Deploy-15846631725-hw-run-17[0m
+2025-07-01T06:21:09.1951680Z [1m-----------[ end test IMX93_debug_clang_64 ]-----------[0m
+2025-07-01T06:21:09.1952787Z ##[endgroup]
+2025-07-01T06:21:09.1953238Z [31;1mIMX93_debug_clang_64 FAILED[0m
+2025-07-01T06:21:09.1953526Z 
+2025-07-01T06:21:09.1954154Z ##[group]IMX93_debug_MCS_clang_64
+2025-07-01T06:21:09.1954792Z [1m-----------[ start test IMX93_debug_MCS_clang_64 ]-----------[0m
+2025-07-01T06:21:09.1960370Z [33m+++ tar xvzf ../IMX93_debug_MCS_clang_64-images.tar.gz[0m
+2025-07-01T06:21:09.1987682Z images/
+2025-07-01T06:21:09.1988080Z images/sel4test-driver-image-arm-imx93
+2025-07-01T06:21:09.2189207Z [33m+++ mq.sh sem -info imx93a[0m
+2025-07-01T06:21:13.1852143Z Lock for imx93a held by sel4_ci since 2025-07-01 16:21:10.329864505 +1000, timeout 1800 with key 'seL4/seL4-HW-15960497578-hw-run-8'
+2025-07-01T06:21:13.1853240Z [33m+++ time mq.sh sem -wait imx93a -k seL4/seL4-Deploy-15846631725-hw-run-17 -T 1800[0m
+2025-07-01T06:37:17.7292771Z 0.02user 0.02system 16:04.54elapsed 0%CPU (0avgtext+0avgdata 8160maxresident)k
+2025-07-01T06:37:17.7293559Z 0inputs+0outputs (0major+5480minor)pagefaults 0swaps
+2025-07-01T06:37:17.7295789Z [33m+++ time mq.sh run -c </testsuite> -s imx93a -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-Deploy-15846631725-hw-run-17 -f images/sel4test-driver-image-arm-imx93[0m
+2025-07-01T06:37:20.4876719Z Lock acquired, we are allowed to run
+2025-07-01T06:37:26.8994165Z pxelinux=False
+2025-07-01T06:37:26.8994915Z copied '/tmp/tmp.92v8QXxzck' -> '/tftpboot/imx93a/sel4-image'
+2025-07-01T06:37:26.8995507Z removed '/tmp/tmp.92v8QXxzck'
+2025-07-01T06:37:27.1101289Z co
+2025-07-01T06:37:27.1101669Z ^Eco
+2025-07-01T06:37:27.3210411Z [Enter `^Ec?' for help]
+2025-07-01T06:37:27.5317184Z [up]
+2025-07-01T06:37:27.5317846Z Rebooting imx93a and loading image: /tmp/tmp.92v8QXxzck
+2025-07-01T06:37:43.1128952Z 
+2025-07-01T06:37:43.1129543Z [[Boot timeout]]
+2025-07-01T06:37:43.1129990Z None
+2025-07-01T06:37:43.1130277Z 2 tries remaining..
+2025-07-01T06:37:43.1130605Z Rebooting imx93a and loading image: /tmp/tmp.92v8QXxzck
+2025-07-01T06:37:54.9068702Z 
+2025-07-01T06:37:54.9069397Z [[Boot timeout]]
+2025-07-01T06:37:54.9069889Z None
+2025-07-01T06:37:54.9070241Z 1 tries remaining..
+2025-07-01T06:38:06.6488221Z Rebooting imx93a and loading image: /tmp/tmp.92v8QXxzck
+2025-07-01T06:38:06.6488755Z 
+2025-07-01T06:38:06.6488892Z [[Boot timeout]]
+2025-07-01T06:38:06.6489248Z None
+2025-07-01T06:38:06.6489664Z 0 tries remaining..
+2025-07-01T06:53:06.6623886Z 
+2025-07-01T06:53:06.6626524Z [[Timeout]]
+2025-07-01T06:53:06.6627002Z None
+2025-07-01T06:53:06.8729484Z 
+2025-07-01T06:53:06.8729910Z console_run returned -1
+2025-07-01T06:53:06.8730507Z Shutting down imx93a
+2025-07-01T06:53:16.8796142Z 
+2025-07-01T06:53:20.1242731Z Command exited with non-zero status 255
+2025-07-01T06:53:20.1243879Z 0.03user 0.04system 16:02.39elapsed 0%CPU (0avgtext+0avgdata 8208maxresident)k
+2025-07-01T06:53:20.1244631Z 0inputs+8outputs (0major+7191minor)pagefaults 0swaps
+2025-07-01T06:53:20.1245607Z [31;1m>>> command failed, aborting.[0m
+2025-07-01T06:53:20.1246427Z [33m+++ mq.sh sem -signal imx93a -k seL4/seL4-Deploy-15846631725-hw-run-17[0m
+2025-07-01T06:53:24.2466395Z [1m-----------[ end test IMX93_debug_MCS_clang_64 ]-----------[0m
+2025-07-01T06:53:24.2467461Z ##[endgroup]
+2025-07-01T06:53:24.2467812Z [31;1mIMX93_debug_MCS_clang_64 FAILED[0m
+2025-07-01T06:53:24.2468063Z 
+2025-07-01T06:53:24.2470068Z ##[group]IMX93_debug_hyp_clang_64
+2025-07-01T06:53:24.2470742Z [1m-----------[ start test IMX93_debug_hyp_clang_64 ]-----------[0m
+2025-07-01T06:53:24.2474986Z [33m+++ tar xvzf ../IMX93_debug_hyp_clang_64-images.tar.gz[0m
+2025-07-01T06:53:24.2501897Z images/
+2025-07-01T06:53:24.2502796Z images/sel4test-driver-image-arm-imx93
+2025-07-01T06:53:24.2697558Z [33m+++ mq.sh sem -info imx93a[0m
+2025-07-01T06:53:28.3965193Z Lock for imx93a held by sel4_ci since 2025-07-01 16:53:24.374729139 +1000, timeout 1800 with key 'seL4/seL4-HW-15960497578-hw-run-8'
+2025-07-01T06:53:28.3967075Z [33m+++ time mq.sh sem -wait imx93a -k seL4/seL4-Deploy-15846631725-hw-run-17 -T 1800[0m
+2025-07-01T07:09:33.1097364Z 0.02user 0.02system 16:04.71elapsed 0%CPU (0avgtext+0avgdata 8132maxresident)k
+2025-07-01T07:09:33.1098018Z 0inputs+0outputs (0major+5516minor)pagefaults 0swaps
+2025-07-01T07:09:33.1099594Z [33m+++ time mq.sh run -c </testsuite> -s imx93a -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-Deploy-15846631725-hw-run-17 -f images/sel4test-driver-image-arm-imx93[0m
+2025-07-01T07:09:35.7530976Z Lock acquired, we are allowed to run
+2025-07-01T07:09:41.7044329Z pxelinux=False
+2025-07-01T07:09:41.7044814Z copied '/tmp/tmp.XsOV1oCDIC' -> '/tftpboot/imx93a/sel4-image'
+2025-07-01T07:09:41.9057540Z removed '/tmp/tmp.XsOV1oCDIC'
+2025-07-01T07:09:41.9059534Z co
+2025-07-01T07:09:41.9059804Z ^Eco
+2025-07-01T07:09:42.1073896Z [Enter `^Ec?' for help]
+2025-07-01T07:09:42.5102698Z [up]
+2025-07-01T07:09:42.5103186Z Rebooting imx93a and loading image: /tmp/tmp.XsOV1oCDIC
+2025-07-01T07:09:58.0450129Z 
+2025-07-01T07:09:58.0454218Z [[Boot timeout]]
+2025-07-01T07:09:58.0454546Z None
+2025-07-01T07:09:58.0454842Z 2 tries remaining..
+2025-07-01T07:09:58.0455263Z Rebooting imx93a and loading image: /tmp/tmp.XsOV1oCDIC
+2025-07-01T07:10:09.7289345Z 
+2025-07-01T07:10:09.7289702Z [[Boot timeout]]
+2025-07-01T07:10:09.7290049Z None
+2025-07-01T07:10:09.7290334Z 1 tries remaining..
+2025-07-01T07:10:09.7290761Z Rebooting imx93a and loading image: /tmp/tmp.XsOV1oCDIC
+2025-07-01T07:10:21.5764079Z 
+2025-07-01T07:10:21.5764553Z [[Boot timeout]]
+2025-07-01T07:10:21.5764920Z None
+2025-07-01T07:10:21.5765217Z 0 tries remaining..
+2025-07-01T07:25:21.5904262Z 
+2025-07-01T07:25:21.5904839Z [[Timeout]]
+2025-07-01T07:25:21.5905286Z None
+2025-07-01T07:25:21.8009794Z 
+2025-07-01T07:25:21.8010306Z console_run returned -1
+2025-07-01T07:25:21.8010707Z Shutting down imx93a
+2025-07-01T07:25:31.3941118Z 
+2025-07-01T07:25:34.6664795Z Command exited with non-zero status 255
+2025-07-01T07:25:34.6665953Z 0.02user 0.04system 16:01.55elapsed 0%CPU (0avgtext+0avgdata 8144maxresident)k
+2025-07-01T07:25:34.6666586Z 0inputs+8outputs (1major+7191minor)pagefaults 0swaps
+2025-07-01T07:25:34.6669405Z [31;1m>>> command failed, aborting.[0m
+2025-07-01T07:25:34.6671248Z [33m+++ mq.sh sem -signal imx93a -k seL4/seL4-Deploy-15846631725-hw-run-17[0m
+2025-07-01T07:25:38.7986355Z [1m-----------[ end test IMX93_debug_hyp_clang_64 ]-----------[0m
+2025-07-01T07:25:38.7987488Z ##[endgroup]
+2025-07-01T07:25:38.7987971Z [31;1mIMX93_debug_hyp_clang_64 FAILED[0m
+2025-07-01T07:25:38.7988300Z 
+2025-07-01T07:25:38.7988772Z ##[group]IMX93_debug_hyp_MCS_clang_64
+2025-07-01T07:25:38.7989518Z [1m-----------[ start test IMX93_debug_hyp_MCS_clang_64 ]-----------[0m
+2025-07-01T07:25:38.7996040Z [33m+++ tar xvzf ../IMX93_debug_hyp_MCS_clang_64-images.tar.gz[0m
+2025-07-01T07:25:38.8022961Z images/
+2025-07-01T07:25:38.8023778Z images/sel4test-driver-image-arm-imx93
+2025-07-01T07:25:38.8229113Z [33m+++ mq.sh sem -info imx93a[0m
+2025-07-01T07:25:42.9517193Z Lock for imx93a held by sel4_ci since 2025-07-01 17:25:39.146836333 +1000, timeout 1800 with key 'seL4/seL4-HW-15960497578-hw-run-8'
+2025-07-01T07:25:42.9518616Z [33m+++ time mq.sh sem -wait imx93a -k seL4/seL4-Deploy-15846631725-hw-run-17 -T 1800[0m
+2025-07-01T07:41:47.6161877Z 0.02user 0.02system 16:04.66elapsed 0%CPU (0avgtext+0avgdata 8136maxresident)k
+2025-07-01T07:41:47.6164505Z 0inputs+0outputs (0major+5486minor)pagefaults 0swaps
+2025-07-01T07:41:47.6166132Z [33m+++ time mq.sh run -c </testsuite> -s imx93a -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-Deploy-15846631725-hw-run-17 -f images/sel4test-driver-image-arm-imx93[0m
+2025-07-01T07:41:50.3721844Z Lock acquired, we are allowed to run
+2025-07-01T07:41:56.9865772Z pxelinux=False
+2025-07-01T07:41:56.9866502Z copied '/tmp/tmp.SssbEUq0E5' -> '/tftpboot/imx93a/sel4-image'
+2025-07-01T07:41:57.2289526Z removed '/tmp/tmp.SssbEUq0E5'
+2025-07-01T07:41:57.4396008Z co
+2025-07-01T07:41:57.4396325Z ^Eco
+2025-07-01T07:41:57.6499802Z [Enter `^Ec?' for help]
+2025-07-01T07:41:57.8605639Z [up]
+2025-07-01T07:41:57.8606101Z Rebooting imx93a and loading image: /tmp/tmp.SssbEUq0E5
+2025-07-01T07:42:13.5620207Z 
+2025-07-01T07:42:13.5620803Z [[Boot timeout]]
+2025-07-01T07:42:13.5621107Z None
+2025-07-01T07:42:13.5621347Z 2 tries remaining..
+2025-07-01T07:42:13.5621715Z Rebooting imx93a and loading image: /tmp/tmp.SssbEUq0E5
+2025-07-01T07:42:25.2794642Z 
+2025-07-01T07:42:25.2795249Z [[Boot timeout]]
+2025-07-01T07:42:25.2795629Z None
+2025-07-01T07:42:25.2795919Z 1 tries remaining..
+2025-07-01T07:42:25.2796373Z Rebooting imx93a and loading image: /tmp/tmp.SssbEUq0E5
+2025-07-01T07:42:37.3423407Z 
+2025-07-01T07:42:37.3424104Z [[Boot timeout]]
+2025-07-01T07:42:37.3424468Z None
+2025-07-01T07:42:37.3424769Z 0 tries remaining..
+2025-07-01T07:57:37.4356975Z 
+2025-07-01T07:57:37.4357419Z [[Timeout]]
+2025-07-01T07:57:37.4357808Z None
+2025-07-01T07:57:37.6371580Z 
+2025-07-01T07:57:37.6372069Z console_run returned -1
+2025-07-01T07:57:37.6372428Z Shutting down imx93a
+2025-07-01T07:57:47.5064714Z 
+2025-07-01T07:57:50.6148113Z Command exited with non-zero status 255
+2025-07-01T07:57:50.6148937Z 0.03user 0.03system 16:02.99elapsed 0%CPU (0avgtext+0avgdata 8172maxresident)k
+2025-07-01T07:57:50.6149732Z 0inputs+8outputs (1major+7245minor)pagefaults 0swaps
+2025-07-01T07:57:50.6150632Z [31;1m>>> command failed, aborting.[0m
+2025-07-01T07:57:50.6151438Z [33m+++ mq.sh sem -signal imx93a -k seL4/seL4-Deploy-15846631725-hw-run-17[0m
+2025-07-01T07:57:54.6019408Z [1m-----------[ end test IMX93_debug_hyp_MCS_clang_64 ]-----------[0m
+2025-07-01T07:57:54.6020509Z ##[endgroup]
+2025-07-01T07:57:54.6020983Z [31;1mIMX93_debug_hyp_MCS_clang_64 FAILED[0m
+2025-07-01T07:57:54.6021317Z 
+2025-07-01T07:57:54.6021726Z ##[group]IMX93_debug_SMP_clang_64
+2025-07-01T07:57:54.6022343Z [1m-----------[ start test IMX93_debug_SMP_clang_64 ]-----------[0m
+2025-07-01T07:57:54.6028534Z [33m+++ tar xvzf ../IMX93_debug_SMP_clang_64-images.tar.gz[0m
+2025-07-01T07:57:54.6055499Z images/
+2025-07-01T07:57:54.6056117Z images/sel4test-driver-image-arm-imx93
+2025-07-01T07:57:54.6250113Z [33m+++ mq.sh sem -info imx93a[0m
+2025-07-01T07:57:57.9628677Z Lock for imx93a currently free
+2025-07-01T07:57:57.9629529Z [33m+++ time mq.sh sem -wait imx93a -k seL4/seL4-Deploy-15846631725-hw-run-17 -T 1800[0m
+2025-07-01T08:46:26.6326561Z 0.02user 0.02system 48:28.66elapsed 0%CPU (0avgtext+0avgdata 8156maxresident)k
+2025-07-01T08:46:26.6327327Z 0inputs+0outputs (0major+5503minor)pagefaults 0swaps
+2025-07-01T08:46:26.6328784Z [33m+++ time mq.sh run -c </testsuite> -s imx93a -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-Deploy-15846631725-hw-run-17 -f images/sel4test-driver-image-arm-imx93[0m
+2025-07-01T08:46:29.3236881Z Lock acquired, we are allowed to run
+2025-07-01T08:46:35.5313349Z pxelinux=False
+2025-07-01T08:46:35.5314088Z copied '/tmp/tmp.7Odpv5F833' -> '/tftpboot/imx93a/sel4-image'
+2025-07-01T08:46:35.7360188Z removed '/tmp/tmp.7Odpv5F833'
+2025-07-01T08:46:35.7360797Z co
+2025-07-01T08:46:35.7361060Z ^Eco
+2025-07-01T08:46:35.9406892Z [Enter `^Ec?' for help]
+2025-07-01T08:46:36.3498679Z [up]
+2025-07-01T08:46:36.3499122Z Rebooting imx93a and loading image: /tmp/tmp.7Odpv5F833
+2025-07-01T08:46:51.6309962Z 
+2025-07-01T08:46:51.6310388Z [[Boot timeout]]
+2025-07-01T08:46:51.6310727Z None
+2025-07-01T08:46:51.6311007Z 2 tries remaining..
+2025-07-01T08:46:51.6311435Z Rebooting imx93a and loading image: /tmp/tmp.7Odpv5F833
+2025-07-01T08:47:03.4085077Z 
+2025-07-01T08:47:03.4085558Z [[Boot timeout]]
+2025-07-01T08:47:03.4085901Z None
+2025-07-01T08:47:03.4086165Z 1 tries remaining..
+2025-07-01T08:47:03.4086557Z Rebooting imx93a and loading image: /tmp/tmp.7Odpv5F833
+2025-07-01T08:47:15.3507984Z 
+2025-07-01T08:47:15.3508414Z [[Boot timeout]]
+2025-07-01T08:47:15.3508805Z None
+2025-07-01T08:47:15.3509019Z 0 tries remaining..
+2025-07-01T09:02:15.4549996Z 
+2025-07-01T09:02:15.4550588Z [[Timeout]]
+2025-07-01T09:02:15.4550894Z None
+2025-07-01T09:02:15.6594806Z 
+2025-07-01T09:02:15.6597619Z console_run returned -1
+2025-07-01T09:02:15.6598690Z Shutting down imx93a
+2025-07-01T09:02:25.5567814Z 
+2025-07-01T09:02:28.7034447Z Command exited with non-zero status 255
+2025-07-01T09:02:28.7035431Z 0.03user 0.03system 16:02.06elapsed 0%CPU (0avgtext+0avgdata 8252maxresident)k
+2025-07-01T09:02:28.7036006Z 0inputs+8outputs (0major+7192minor)pagefaults 0swaps
+2025-07-01T09:02:28.7037357Z [31;1m>>> command failed, aborting.[0m
+2025-07-01T09:02:28.7038109Z [33m+++ mq.sh sem -signal imx93a -k seL4/seL4-Deploy-15846631725-hw-run-17[0m
+2025-07-01T09:02:32.7177797Z [1m-----------[ end test IMX93_debug_SMP_clang_64 ]-----------[0m
+2025-07-01T09:02:32.7178533Z ##[endgroup]
+2025-07-01T09:02:32.7178822Z [31;1mIMX93_debug_SMP_clang_64 FAILED[0m
+2025-07-01T09:02:32.7179013Z 
+2025-07-01T09:02:32.7179287Z ##[group]IMX93_debug_SMP_MCS_clang_64
+2025-07-01T09:02:32.7179690Z [1m-----------[ start test IMX93_debug_SMP_MCS_clang_64 ]-----------[0m
+2025-07-01T09:02:32.7185532Z [33m+++ tar xvzf ../IMX93_debug_SMP_MCS_clang_64-images.tar.gz[0m
+2025-07-01T09:02:32.7213180Z images/
+2025-07-01T09:02:32.7213783Z images/sel4test-driver-image-arm-imx93
+2025-07-01T09:02:32.7438833Z [33m+++ mq.sh sem -info imx93a[0m
+2025-07-01T09:02:36.1164925Z Lock for imx93a currently free
+2025-07-01T09:02:36.1166075Z [33m+++ time mq.sh sem -wait imx93a -k seL4/seL4-Deploy-15846631725-hw-run-17 -T 1800[0m
+2025-07-01T09:18:40.6826089Z 0.02user 0.02system 16:04.56elapsed 0%CPU (0avgtext+0avgdata 8108maxresident)k
+2025-07-01T09:18:40.6826926Z 0inputs+0outputs (0major+5487minor)pagefaults 0swaps
+2025-07-01T09:18:40.6828053Z [33m+++ time mq.sh run -c </testsuite> -s imx93a -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-Deploy-15846631725-hw-run-17 -f images/sel4test-driver-image-arm-imx93[0m
+2025-07-01T09:18:43.3716258Z Lock acquired, we are allowed to run
+2025-07-01T09:18:50.0026582Z pxelinux=False
+2025-07-01T09:18:50.0027077Z copied '/tmp/tmp.EmfzOYBbDB' -> '/tftpboot/imx93a/sel4-image'
+2025-07-01T09:18:50.2075219Z removed '/tmp/tmp.EmfzOYBbDB'
+2025-07-01T09:18:50.2075823Z co
+2025-07-01T09:18:50.2076083Z ^Eco
+2025-07-01T09:18:50.4120580Z [Enter `^Ec?' for help]
+2025-07-01T09:18:50.6180211Z [up]
+2025-07-01T09:18:50.8230908Z Rebooting imx93a and loading image: /tmp/tmp.EmfzOYBbDB
+2025-07-01T09:19:05.8864170Z 
+2025-07-01T09:19:05.8864768Z [[Boot timeout]]
+2025-07-01T09:19:05.8865088Z None
+2025-07-01T09:19:05.8865331Z 2 tries remaining..
+2025-07-01T09:19:05.8865709Z Rebooting imx93a and loading image: /tmp/tmp.EmfzOYBbDB
+2025-07-01T09:19:17.5965742Z 
+2025-07-01T09:19:17.5966170Z [[Boot timeout]]
+2025-07-01T09:19:17.5966508Z None
+2025-07-01T09:19:17.5966819Z 1 tries remaining..
+2025-07-01T09:19:17.5967184Z Rebooting imx93a and loading image: /tmp/tmp.EmfzOYBbDB
+2025-07-01T09:19:29.4588981Z 
+2025-07-01T09:19:29.4589445Z [[Boot timeout]]
+2025-07-01T09:19:29.4589914Z None
+2025-07-01T09:19:29.4590211Z 0 tries remaining..
+2025-07-01T09:34:29.4831972Z 
+2025-07-01T09:34:29.4832436Z [[Timeout]]
+2025-07-01T09:34:29.4832740Z None
+2025-07-01T09:34:29.6844773Z 
+2025-07-01T09:34:29.6845026Z console_run returned -1
+2025-07-01T09:34:29.6845402Z Shutting down imx93a
+2025-07-01T09:34:39.7423953Z 
+2025-07-01T09:34:42.8503411Z Command exited with non-zero status 255
+2025-07-01T09:34:42.8504392Z 0.03user 0.03system 16:02.16elapsed 0%CPU (0avgtext+0avgdata 8120maxresident)k
+2025-07-01T09:34:42.8506435Z 0inputs+8outputs (1major+7193minor)pagefaults 0swaps
+2025-07-01T09:34:42.8507503Z [31;1m>>> command failed, aborting.[0m
+2025-07-01T09:34:42.8508094Z [33m+++ mq.sh sem -signal imx93a -k seL4/seL4-Deploy-15846631725-hw-run-17[0m
+2025-07-01T09:34:46.8104222Z [1m-----------[ end test IMX93_debug_SMP_MCS_clang_64 ]-----------[0m
+2025-07-01T09:34:46.8105446Z ##[endgroup]
+2025-07-01T09:34:46.8111495Z [31;1mIMX93_debug_SMP_MCS_clang_64 FAILED[0m
+2025-07-01T09:34:46.8111875Z 
+2025-07-01T09:34:46.8113873Z ##[group]IMX93_debug_SMP_hyp_clang_64
+2025-07-01T09:34:46.8114576Z [1m-----------[ start test IMX93_debug_SMP_hyp_clang_64 ]-----------[0m
+2025-07-01T09:34:46.8115299Z [33m+++ tar xvzf ../IMX93_debug_SMP_hyp_clang_64-images.tar.gz[0m
+2025-07-01T09:34:46.8139109Z images/
+2025-07-01T09:34:46.8139717Z images/sel4test-driver-image-arm-imx93
+2025-07-01T09:34:46.8336381Z [33m+++ mq.sh sem -info imx93a[0m
+2025-07-01T09:34:50.8093058Z Lock for imx93a held by sel4_ci since 2025-07-01 19:34:46.638442110 +1000, timeout 1800 with key 'seL4/seL4-HW-15960497578-hw-run-8'
+2025-07-01T09:34:50.8094448Z [33m+++ time mq.sh sem -wait imx93a -k seL4/seL4-Deploy-15846631725-hw-run-17 -T 1800[0m
+2025-07-01T11:11:35.7991816Z 0.01user 0.03system 1:36:44elapsed 0%CPU (0avgtext+0avgdata 8124maxresident)k
+2025-07-01T11:11:35.7992634Z 0inputs+0outputs (1major+5503minor)pagefaults 0swaps
+2025-07-01T11:11:35.7994398Z [33m+++ time mq.sh run -c </testsuite> -s imx93a -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-Deploy-15846631725-hw-run-17 -f images/sel4test-driver-image-arm-imx93[0m
+2025-07-01T11:11:38.5195241Z Lock acquired, we are allowed to run
+2025-07-01T11:11:44.8276231Z pxelinux=False
+2025-07-01T11:11:44.8276760Z copied '/tmp/tmp.PZg8mXHxQK' -> '/tftpboot/imx93a/sel4-image'
+2025-07-01T11:11:45.0352063Z removed '/tmp/tmp.PZg8mXHxQK'
+2025-07-01T11:11:45.0352757Z co
+2025-07-01T11:11:45.0353037Z ^Eco
+2025-07-01T11:11:45.2428309Z [Enter `^Ec?' for help]
+2025-07-01T11:11:45.6579390Z [up]
+2025-07-01T11:11:45.6580033Z Rebooting imx93a and loading image: /tmp/tmp.PZg8mXHxQK
+2025-07-01T11:12:01.5577025Z 
+2025-07-01T11:12:01.5577638Z [[Boot timeout]]
+2025-07-01T11:12:01.5578009Z None
+2025-07-01T11:12:01.5578314Z 2 tries remaining..
+2025-07-01T11:12:01.5578768Z Rebooting imx93a and loading image: /tmp/tmp.PZg8mXHxQK
+2025-07-01T11:12:13.1894047Z 
+2025-07-01T11:12:13.1894451Z [[Boot timeout]]
+2025-07-01T11:12:13.1894785Z None
+2025-07-01T11:12:13.1895046Z 1 tries remaining..
+2025-07-01T11:12:13.1895444Z Rebooting imx93a and loading image: /tmp/tmp.PZg8mXHxQK
+2025-07-01T11:12:24.9401545Z 
+2025-07-01T11:12:24.9401972Z [[Boot timeout]]
+2025-07-01T11:12:24.9402371Z None
+2025-07-01T11:12:24.9402694Z 0 tries remaining..
+2025-07-01T11:27:04.7295648Z ##[error]The operation was canceled.
+2025-07-01T11:27:04.7350882Z Post job cleanup.
+2025-07-01T11:27:04.8283211Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/post-steps.sh
+2025-07-01T11:27:04.8337645Z ##[group]Releasing mq lock
+2025-07-01T11:27:04.8411374Z Agent pid 5378
+2025-07-01T11:27:04.9963224Z mq.sh sem -cancel imx93a -k seL4/seL4-Deploy-15846631725-hw-run-17
+2025-07-01T11:27:07.7492065Z mq.sh sem -signal imx93a -k seL4/seL4-Deploy-15846631725-hw-run-17
+2025-07-01T11:27:12.1049995Z ##[endgroup]
+2025-07-01T11:27:12.1176472Z Post job cleanup.
+2025-07-01T11:27:12.2107169Z [command]/usr/bin/git version
+2025-07-01T11:27:12.2143761Z git version 2.49.0
+2025-07-01T11:27:12.2186662Z Temporarily overriding HOME='/home/runner/work/_temp/0fd6d747-887d-49f4-b1d2-0a7805ab7090' before making global git config changes
+2025-07-01T11:27:12.2187930Z Adding repository directory to the temporary git global config as a safe directory
+2025-07-01T11:27:12.2192197Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/seL4/seL4/machine_queue
+2025-07-01T11:27:12.2228067Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-07-01T11:27:12.2259782Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-07-01T11:27:12.2481084Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-07-01T11:27:12.2500838Z http.https://github.com/.extraheader
+2025-07-01T11:27:12.2514745Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-07-01T11:27:12.2543737Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-07-01T11:27:12.2858315Z Cleaning up orphan processes
+2025-07-01T11:27:12.3066403Z Terminate orphan process: pid (2074) (steps.sh)
+2025-07-01T11:27:12.3119260Z Terminate orphan process: pid (2075) (hw-steps.sh)
+2025-07-01T11:27:12.3183951Z Terminate orphan process: pid (2136) (python3)
+2025-07-01T11:27:12.3236694Z Terminate orphan process: pid (2153) (ssh)
+2025-07-01T11:27:12.3345032Z Terminate orphan process: pid (5277) (time)
+2025-07-01T11:27:12.3399545Z Terminate orphan process: pid (5278) (mq.sh)

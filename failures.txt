@@ -94,6 +94,11 @@ ZYNQMP106_debug_gcc_32
 	kind: output timeout
 	variant: after enabling mmu
 ZYNQMP106_debug_gcc_32
+	path: 2025/06/24/github/push/master/6dbe58e/Deploy/886/logs/52_HW Run (ZYNQMP106, armv8a, gcc).txt
+	system: zcu106
+	kind: output timeout
+	variant: after enabling mmu
+ZYNQMP106_debug_gcc_32
 	path: 2025/05/23/github/push/master/5e6f7c2/Deploy/868/logs/35_HW Run (ZYNQMP106, armv8a, gcc).txt
 	system: zcu106
 	kind: output timeout
