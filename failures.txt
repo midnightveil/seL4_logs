@@ -138,6 +138,16 @@ ZYNQMP106_release_gcc_32
 	system: zcu106
 	kind: output timeout
 	variant: after enabling mmu
+ZYNQMP106_verification_MCS_gcc_32
+	path: 2025/07/08/github/manual/20250708T100801/c8ee042/Deploy/890/logs/41_HW Run (ZYNQMP106, armv8a, gcc).txt
+	system: zcu106
+	kind: output timeout
+	variant: after enabling mmu
+ZYNQMP106_verification_MCS_gcc_32
+	path: 2025/07/03/github/push/master/bcf5ab7/Deploy/887/logs/55_HW Run (ZYNQMP106, armv8a, gcc).txt
+	system: zcu106
+	kind: output timeout
+	variant: after enabling mmu
 ZYNQMP106_verification_gcc_32
 	path: 2025/06/13/github/push/master/2417e0f/Deploy/884/logs/26_HW Run (ZYNQMP106, armv8a, gcc).txt
 	system: zcu106
