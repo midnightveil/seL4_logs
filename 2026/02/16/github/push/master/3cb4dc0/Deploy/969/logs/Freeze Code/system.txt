@@ -1,0 +1,8 @@
+2026-02-16T03:50:08.9790000Z Job is waiting for a hosted runner to come online.
+2026-02-16T03:50:08.9780000Z Job is about to start running on the hosted runner: GitHub Actions 1000063897
+2026-02-16T03:50:08.9750000Z Evaluating code.if
+2026-02-16T03:50:08.9750000Z Evaluating: success()
+2026-02-16T03:50:08.9750000Z Result: true
+2026-02-16T03:50:08.9770000Z Requested labels: ubuntu-latest
+2026-02-16T03:50:08.9770000Z Job defined at: seL4/seL4/.github/workflows/sel4test-deploy.yml@refs/heads/master
+2026-02-16T03:50:08.9770000Z Waiting for a runner to pick up this job...

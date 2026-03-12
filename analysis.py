@@ -19,7 +19,7 @@ class Run(TypedDict):
 
 all_runs: list[Run] = []
 
-for root, dirs, files in os.walk("2025"):
+for root, dirs, files in os.walk("2026"):
     for file in files:
         if "HW Run" in root or "HW Run" in file:
             if ".txt" in file:

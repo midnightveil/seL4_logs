@@ -1,0 +1,8 @@
+2026-02-23T22:59:34.9750000Z Evaluating hw-build.if
+2026-02-23T22:59:34.9750000Z Evaluating: success()
+2026-02-23T22:59:34.9750000Z Result: true
+2026-02-23T22:59:35.1440000Z Requested labels: ubuntu-latest
+2026-02-23T22:59:35.1440000Z Job defined at: seL4/seL4/.github/workflows/sel4test-deploy.yml@refs/heads/master
+2026-02-23T22:59:35.1440000Z Waiting for a runner to pick up this job...
+2026-02-23T22:59:35.1840000Z Job is waiting for a hosted runner to come online.
+2026-02-23T22:59:35.1840000Z Job is about to start running on the hosted runner: GitHub Actions 1000066866

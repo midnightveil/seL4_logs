@@ -1,0 +1,9 @@
+2026-02-16T08:07:27.0840000Z Requested labels: ubuntu-latest
+2026-02-16T08:07:27.0840000Z Job defined at: seL4/seL4/.github/workflows/sel4test-deploy.yml@refs/heads/master
+2026-02-16T08:07:27.0840000Z Waiting for a runner to pick up this job...
+2026-02-16T08:07:27.0810000Z Evaluating hw-run.if
+2026-02-16T08:07:27.0810000Z Evaluating: (success() && ((github.repository_owner == 'seL4')))
+2026-02-16T08:07:27.0810000Z Expanded: (true && ('seL4' == 'seL4'))
+2026-02-16T08:07:27.0810000Z Result: true
+2026-02-16T08:07:27.5000000Z Job is about to start running on the hosted runner: GitHub Actions 1000064356
+2026-02-16T08:07:27.5000000Z Job is waiting for a hosted runner to come online.
