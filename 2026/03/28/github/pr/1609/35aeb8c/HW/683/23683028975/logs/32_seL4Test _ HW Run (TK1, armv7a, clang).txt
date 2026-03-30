@@ -1,0 +1,970 @@
+﻿2026-03-28T11:19:20.6070846Z Current runner version: '2.333.0'
+2026-03-28T11:19:20.6093842Z ##[group]Runner Image Provisioner
+2026-03-28T11:19:20.6094695Z Hosted Compute Agent
+2026-03-28T11:19:20.6095366Z Version: 20260213.493
+2026-03-28T11:19:20.6096071Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-03-28T11:19:20.6096826Z Build Date: 2026-02-13T00:28:41Z
+2026-03-28T11:19:20.6097591Z Worker ID: {495231fe-84bc-4e0f-80f4-f0ec6a0810ee}
+2026-03-28T11:19:20.6098304Z Azure Region: westus
+2026-03-28T11:19:20.6098905Z ##[endgroup]
+2026-03-28T11:19:20.6100739Z ##[group]Operating System
+2026-03-28T11:19:20.6101416Z Ubuntu
+2026-03-28T11:19:20.6102068Z 24.04.4
+2026-03-28T11:19:20.6102586Z LTS
+2026-03-28T11:19:20.6103130Z ##[endgroup]
+2026-03-28T11:19:20.6103743Z ##[group]Runner Image
+2026-03-28T11:19:20.6104356Z Image: ubuntu-24.04
+2026-03-28T11:19:20.6104982Z Version: 20260323.65.1
+2026-03-28T11:19:20.6106246Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260323.65/images/ubuntu/Ubuntu2404-Readme.md
+2026-03-28T11:19:20.6107911Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260323.65
+2026-03-28T11:19:20.6108879Z ##[endgroup]
+2026-03-28T11:19:20.6110451Z ##[group]GITHUB_TOKEN Permissions
+2026-03-28T11:19:20.6112327Z Contents: read
+2026-03-28T11:19:20.6113088Z Metadata: read
+2026-03-28T11:19:20.6113656Z ##[endgroup]
+2026-03-28T11:19:20.6115730Z Secret source: Actions
+2026-03-28T11:19:20.6116618Z Prepare workflow directory
+2026-03-28T11:19:20.6443351Z Prepare all required actions
+2026-03-28T11:19:20.6484195Z Getting action download info
+2026-03-28T11:19:21.1204873Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-03-28T11:19:21.2652571Z Download action repository 'actions/download-artifact@v4' (SHA:d3f86a106a0bac45b974a628896c90dbdf5c8093)
+2026-03-28T11:19:21.9132038Z Download action repository 'seL4/ci-actions@master' (SHA:5ffc97f19e2c7d81ad945d0d1b84b1c7c9ce26aa)
+2026-03-28T11:19:22.5909985Z Uses: seL4/ci-actions/.github/workflows/sel4test-hw.yml@refs/heads/master (5ffc97f19e2c7d81ad945d0d1b84b1c7c9ce26aa)
+2026-03-28T11:19:22.5916176Z Complete job name: seL4Test / HW Run (TK1, armv7a, clang)
+2026-03-28T11:19:22.6755093Z ##[group]Run actions/checkout@v4
+2026-03-28T11:19:22.6756473Z with:
+2026-03-28T11:19:22.6757323Z   repository: seL4/machine_queue
+2026-03-28T11:19:22.6758387Z   path: machine_queue
+2026-03-28T11:19:22.6759795Z   token: ***
+2026-03-28T11:19:22.6760658Z   ssh-strict: true
+2026-03-28T11:19:22.6761531Z   ssh-user: git
+2026-03-28T11:19:22.6762432Z   persist-credentials: true
+2026-03-28T11:19:22.6763430Z   clean: true
+2026-03-28T11:19:22.6764355Z   sparse-checkout-cone-mode: true
+2026-03-28T11:19:22.6765454Z   fetch-depth: 1
+2026-03-28T11:19:22.6766337Z   fetch-tags: false
+2026-03-28T11:19:22.6767249Z   show-progress: true
+2026-03-28T11:19:22.6768167Z   lfs: false
+2026-03-28T11:19:22.6769018Z   submodules: false
+2026-03-28T11:19:22.6770089Z   set-safe-directory: true
+2026-03-28T11:19:22.6771386Z ##[endgroup]
+2026-03-28T11:19:22.7851181Z Syncing repository: seL4/machine_queue
+2026-03-28T11:19:22.7854271Z ##[group]Getting Git version info
+2026-03-28T11:19:22.7855882Z Working directory is '/home/runner/work/seL4/seL4/machine_queue'
+2026-03-28T11:19:22.7858216Z [command]/usr/bin/git version
+2026-03-28T11:19:22.7902148Z git version 2.53.0
+2026-03-28T11:19:22.7927866Z ##[endgroup]
+2026-03-28T11:19:22.7941735Z Temporarily overriding HOME='/home/runner/work/_temp/75df4eab-edef-40b7-831a-70cd24ec7f2d' before making global git config changes
+2026-03-28T11:19:22.7944882Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-28T11:19:22.7948259Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/seL4/seL4/machine_queue
+2026-03-28T11:19:22.7977111Z ##[group]Initializing the repository
+2026-03-28T11:19:22.7981841Z [command]/usr/bin/git init /home/runner/work/seL4/seL4/machine_queue
+2026-03-28T11:19:22.8089167Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-03-28T11:19:22.8093501Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-03-28T11:19:22.8097178Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-03-28T11:19:22.8100267Z hint: call:
+2026-03-28T11:19:22.8101860Z hint:
+2026-03-28T11:19:22.8103629Z hint: 	git config --global init.defaultBranch <name>
+2026-03-28T11:19:22.8105797Z hint:
+2026-03-28T11:19:22.8107824Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-03-28T11:19:22.8110473Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-03-28T11:19:22.8112517Z hint:
+2026-03-28T11:19:22.8114029Z hint: 	git branch -m <name>
+2026-03-28T11:19:22.8115802Z hint:
+2026-03-28T11:19:22.8117687Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-03-28T11:19:22.8120359Z Initialized empty Git repository in /home/runner/work/seL4/seL4/machine_queue/.git/
+2026-03-28T11:19:22.8124143Z [command]/usr/bin/git remote add origin https://github.com/seL4/machine_queue
+2026-03-28T11:19:22.8134068Z ##[endgroup]
+2026-03-28T11:19:22.8136999Z ##[group]Disabling automatic garbage collection
+2026-03-28T11:19:22.8139684Z [command]/usr/bin/git config --local gc.auto 0
+2026-03-28T11:19:22.8167767Z ##[endgroup]
+2026-03-28T11:19:22.8170706Z ##[group]Setting up auth
+2026-03-28T11:19:22.8173834Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-28T11:19:22.8203255Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-28T11:19:22.8485726Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-28T11:19:22.8517683Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-28T11:19:22.8726766Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-28T11:19:22.8765559Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-28T11:19:22.8980146Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-03-28T11:19:22.9014554Z ##[endgroup]
+2026-03-28T11:19:22.9016417Z ##[group]Determining the default branch
+2026-03-28T11:19:22.9018152Z Retrieving the default branch name
+2026-03-28T11:19:23.2156411Z Default branch 'master'
+2026-03-28T11:19:23.2161763Z ##[endgroup]
+2026-03-28T11:19:23.2164806Z ##[group]Fetching the repository
+2026-03-28T11:19:23.2169135Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/master:refs/remotes/origin/master
+2026-03-28T11:19:23.7176534Z From https://github.com/seL4/machine_queue
+2026-03-28T11:19:23.7179564Z  * [new branch]      master     -> origin/master
+2026-03-28T11:19:23.7202454Z ##[endgroup]
+2026-03-28T11:19:23.7203906Z ##[group]Determining the checkout info
+2026-03-28T11:19:23.7205352Z ##[endgroup]
+2026-03-28T11:19:23.7210489Z [command]/usr/bin/git sparse-checkout disable
+2026-03-28T11:19:23.7253426Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-03-28T11:19:23.7279982Z ##[group]Checking out the ref
+2026-03-28T11:19:23.7283861Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2026-03-28T11:19:23.7357747Z Reset branch 'master'
+2026-03-28T11:19:23.7360774Z branch 'master' set up to track 'origin/master'.
+2026-03-28T11:19:23.7367057Z ##[endgroup]
+2026-03-28T11:19:23.7402449Z [command]/usr/bin/git log -1 --format=%H
+2026-03-28T11:19:23.7424297Z f0835aa54749667d30c9143e0fd3353e9367f2dd
+2026-03-28T11:19:23.7722772Z ##[group]Run actions/download-artifact@v4
+2026-03-28T11:19:23.7723101Z with:
+2026-03-28T11:19:23.7723490Z   name: images-sel4test-armv7a-clang
+2026-03-28T11:19:23.7723770Z   merge-multiple: false
+2026-03-28T11:19:23.7724009Z   repository: seL4/seL4
+2026-03-28T11:19:23.7724226Z   run-id: 23683028975
+2026-03-28T11:19:23.7724441Z ##[endgroup]
+2026-03-28T11:19:23.9629038Z Downloading single artifact
+2026-03-28T11:19:24.2463995Z Preparing to download the following artifacts:
+2026-03-28T11:19:24.2465292Z - images-sel4test-armv7a-clang (ID: 6158017164, Size: 45330456, Expected Digest: sha256:fcabd37ffe4c79c6c7f9d1e3f7928249558cf90dcce71b862866767666515d45)
+2026-03-28T11:19:24.4314845Z Redirecting to blob download url: https://productionresultssa12.blob.core.windows.net/actions-results/67943b6a-35be-482f-9f9f-0b154c4e5a22/workflow-job-run-fa4830dc-7b2e-5d85-a4e6-c2efc339144b/artifacts/7655c76844bb67c8c02557a77662458dedf10764e28ec1be518219a903ddc5a8.zip
+2026-03-28T11:19:24.4317252Z Starting download of artifact to: /home/runner/work/seL4/seL4
+2026-03-28T11:19:24.7513743Z (node:2275) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-03-28T11:19:24.7515532Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-03-28T11:19:27.2096563Z SHA256 digest of downloaded artifact is fcabd37ffe4c79c6c7f9d1e3f7928249558cf90dcce71b862866767666515d45
+2026-03-28T11:19:27.2097888Z Artifact download completed successfully.
+2026-03-28T11:19:27.2100463Z Total of 1 artifact(s) downloaded
+2026-03-28T11:19:27.2105089Z Download artifact has finished successfully
+2026-03-28T11:19:27.2268936Z ##[group]Run seL4/ci-actions/sel4test-hw-run@master
+2026-03-28T11:19:27.2269578Z with:
+2026-03-28T11:19:27.2269803Z   platform: TK1
+2026-03-28T11:19:27.2270024Z   compiler: clang
+2026-03-28T11:19:27.2270228Z   index: $3
+2026-03-28T11:19:27.2270447Z   action_name: sel4test-hw-run
+2026-03-28T11:19:27.2270698Z env:
+2026-03-28T11:19:27.2272438Z   HW_SSH: ***
+
+2026-03-28T11:19:27.2272675Z ##[endgroup]
+2026-03-28T11:19:27.3317056Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/steps.sh
+2026-03-28T11:19:27.3366758Z ##[group]Setting up
+2026-03-28T11:19:27.3590188Z Agent pid 2305
+2026-03-28T11:19:27.3753310Z Cloning into 'seL4_libs'...
+2026-03-28T11:19:28.7476004Z Reading package lists...
+2026-03-28T11:19:28.9310924Z Building dependency tree...
+2026-03-28T11:19:28.9330145Z Reading state information...
+2026-03-28T11:19:29.1196547Z libffi-dev is already the newest version (3.4.6-1build1).
+2026-03-28T11:19:29.1224970Z libffi-dev set to manually installed.
+2026-03-28T11:19:29.1233497Z 0 upgraded, 0 newly installed, 0 to remove and 24 not upgraded.
+2026-03-28T11:19:32.9186029Z Collecting junitparser==3.*
+2026-03-28T11:19:32.9505615Z   Downloading junitparser-3.2.0-py2.py3-none-any.whl.metadata (9.0 kB)
+2026-03-28T11:19:32.9794958Z Collecting sel4-deps
+2026-03-28T11:19:32.9827749Z   Downloading sel4_deps-0.7.0-py3-none-any.whl.metadata (1.1 kB)
+2026-03-28T11:19:32.9936596Z Requirement already satisfied: six in /usr/lib/python3/dist-packages (from sel4-deps) (1.16.0)
+2026-03-28T11:19:33.0074151Z Collecting future (from sel4-deps)
+2026-03-28T11:19:33.0095722Z   Downloading future-1.0.0-py3-none-any.whl.metadata (4.0 kB)
+2026-03-28T11:19:33.0140291Z Requirement already satisfied: jinja2 in /usr/lib/python3/dist-packages (from sel4-deps) (3.1.2)
+2026-03-28T11:19:33.2198560Z Collecting lxml (from sel4-deps)
+2026-03-28T11:19:33.2227881Z   Downloading lxml-6.0.2-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.6 kB)
+2026-03-28T11:19:33.2445028Z Collecting ply (from sel4-deps)
+2026-03-28T11:19:33.2486082Z   Downloading ply-3.11-py2.py3-none-any.whl.metadata (844 bytes)
+2026-03-28T11:19:33.3454843Z Collecting psutil (from sel4-deps)
+2026-03-28T11:19:33.3486002Z   Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+2026-03-28T11:19:33.3724575Z Collecting bs4 (from sel4-deps)
+2026-03-28T11:19:33.3754474Z   Downloading bs4-0.0.2-py2.py3-none-any.whl.metadata (411 bytes)
+2026-03-28T11:19:33.3911923Z Collecting pyelftools (from sel4-deps)
+2026-03-28T11:19:33.3933335Z   Downloading pyelftools-0.32-py3-none-any.whl.metadata (372 bytes)
+2026-03-28T11:19:33.4145425Z Collecting sh (from sel4-deps)
+2026-03-28T11:19:33.4178902Z   Downloading sh-2.2.2-py3-none-any.whl.metadata (3.7 kB)
+2026-03-28T11:19:33.4221593Z Requirement already satisfied: pexpect in /usr/lib/python3/dist-packages (from sel4-deps) (4.9.0)
+2026-03-28T11:19:33.4231430Z Requirement already satisfied: pyyaml>=5.1 in /usr/lib/python3/dist-packages (from sel4-deps) (6.0.1)
+2026-03-28T11:19:33.4240246Z Requirement already satisfied: jsonschema in /usr/lib/python3/dist-packages (from sel4-deps) (4.10.3)
+2026-03-28T11:19:33.4349551Z Collecting pyfdt (from sel4-deps)
+2026-03-28T11:19:33.4378677Z   Downloading pyfdt-0.3.tar.gz (9.1 kB)
+2026-03-28T11:19:33.4492757Z   Preparing metadata (setup.py): started
+2026-03-28T11:19:33.6342454Z   Preparing metadata (setup.py): finished with status 'done'
+2026-03-28T11:19:33.6506672Z Collecting cmake-format==0.6.13 (from sel4-deps)
+2026-03-28T11:19:33.6542887Z   Downloading cmake_format-0.6.13-py3-none-any.whl.metadata (23 kB)
+2026-03-28T11:19:33.6712599Z Collecting guardonce (from sel4-deps)
+2026-03-28T11:19:33.6745957Z   Downloading guardonce-2.4.0-py2.py3-none-any.whl.metadata (3.4 kB)
+2026-03-28T11:19:33.6966834Z Collecting autopep8==2.3.2 (from sel4-deps)
+2026-03-28T11:19:33.6994728Z   Downloading autopep8-2.3.2-py2.py3-none-any.whl.metadata (16 kB)
+2026-03-28T11:19:33.7167579Z Collecting libarchive-c (from sel4-deps)
+2026-03-28T11:19:33.7198678Z   Downloading libarchive_c-5.3-py3-none-any.whl.metadata (5.8 kB)
+2026-03-28T11:19:33.7435833Z Collecting pycodestyle>=2.12.0 (from autopep8==2.3.2->sel4-deps)
+2026-03-28T11:19:33.7460311Z   Downloading pycodestyle-2.14.0-py2.py3-none-any.whl.metadata (4.5 kB)
+2026-03-28T11:19:33.7624287Z Collecting cmakelang>=0.6.13 (from cmake-format==0.6.13->sel4-deps)
+2026-03-28T11:19:33.7656006Z   Downloading cmakelang-0.6.13-py3-none-any.whl.metadata (23 kB)
+2026-03-28T11:19:33.7932258Z Collecting beautifulsoup4 (from bs4->sel4-deps)
+2026-03-28T11:19:33.7954672Z   Downloading beautifulsoup4-4.14.3-py3-none-any.whl.metadata (3.8 kB)
+2026-03-28T11:19:33.8170473Z Requirement already satisfied: attrs>=17.4.0 in /usr/lib/python3/dist-packages (from jsonschema->sel4-deps) (23.2.0)
+2026-03-28T11:19:33.8186077Z Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,>=0.14.0 in /usr/lib/python3/dist-packages (from jsonschema->sel4-deps) (0.20.0)
+2026-03-28T11:19:33.9181172Z Collecting soupsieve>=1.6.1 (from beautifulsoup4->bs4->sel4-deps)
+2026-03-28T11:19:33.9205894Z   Downloading soupsieve-2.8.3-py3-none-any.whl.metadata (4.6 kB)
+2026-03-28T11:19:33.9256209Z Requirement already satisfied: typing-extensions>=4.0.0 in /usr/lib/python3/dist-packages (from beautifulsoup4->bs4->sel4-deps) (4.10.0)
+2026-03-28T11:19:33.9325344Z Downloading junitparser-3.2.0-py2.py3-none-any.whl (13 kB)
+2026-03-28T11:19:33.9393270Z Downloading sel4_deps-0.7.0-py3-none-any.whl (1.4 kB)
+2026-03-28T11:19:33.9440355Z Downloading autopep8-2.3.2-py2.py3-none-any.whl (45 kB)
+2026-03-28T11:19:33.9492381Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.8/45.8 kB 12.1 MB/s eta 0:00:00
+2026-03-28T11:19:33.9524099Z Downloading cmake_format-0.6.13-py3-none-any.whl (19 kB)
+2026-03-28T11:19:33.9568733Z Downloading bs4-0.0.2-py2.py3-none-any.whl (1.2 kB)
+2026-03-28T11:19:33.9610473Z Downloading future-1.0.0-py3-none-any.whl (491 kB)
+2026-03-28T11:19:33.9684393Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 491.3/491.3 kB 85.1 MB/s eta 0:00:00
+2026-03-28T11:19:33.9720571Z Downloading guardonce-2.4.0-py2.py3-none-any.whl (15 kB)
+2026-03-28T11:19:33.9777123Z Downloading libarchive_c-5.3-py3-none-any.whl (17 kB)
+2026-03-28T11:19:33.9823202Z Downloading lxml-6.0.2-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.3 MB)
+2026-03-28T11:19:34.0173046Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 157.9 MB/s eta 0:00:00
+2026-03-28T11:19:34.0196016Z Downloading ply-3.11-py2.py3-none-any.whl (49 kB)
+2026-03-28T11:19:34.0245102Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.6/49.6 kB 12.6 MB/s eta 0:00:00
+2026-03-28T11:19:34.0270064Z Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+2026-03-28T11:19:34.0313345Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.6/155.6 kB 53.8 MB/s eta 0:00:00
+2026-03-28T11:19:34.0334592Z Downloading pyelftools-0.32-py3-none-any.whl (188 kB)
+2026-03-28T11:19:34.0383841Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.5/188.5 kB 54.4 MB/s eta 0:00:00
+2026-03-28T11:19:34.0419070Z Downloading sh-2.2.2-py3-none-any.whl (38 kB)
+2026-03-28T11:19:34.0480850Z Downloading cmakelang-0.6.13-py3-none-any.whl (159 kB)
+2026-03-28T11:19:34.0530677Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 159.8/159.8 kB 46.5 MB/s eta 0:00:00
+2026-03-28T11:19:34.0553049Z Downloading pycodestyle-2.14.0-py2.py3-none-any.whl (31 kB)
+2026-03-28T11:19:34.0601243Z Downloading beautifulsoup4-4.14.3-py3-none-any.whl (107 kB)
+2026-03-28T11:19:34.0643843Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.7/107.7 kB 37.0 MB/s eta 0:00:00
+2026-03-28T11:19:34.0664253Z Downloading soupsieve-2.8.3-py3-none-any.whl (37 kB)
+2026-03-28T11:19:34.0949743Z Building wheels for collected packages: pyfdt
+2026-03-28T11:19:34.0956575Z   Building wheel for pyfdt (setup.py): started
+2026-03-28T11:19:34.4310951Z   Building wheel for pyfdt (setup.py): finished with status 'done'
+2026-03-28T11:19:34.4315236Z   Created wheel for pyfdt: filename=pyfdt-0.3-py3-none-any.whl size=10969 sha256=e2e4158c231f034674fadb16de4bf83864c351ebf6dc1d53245b73636746bca1
+2026-03-28T11:19:34.4317052Z   Stored in directory: /home/runner/.cache/pip/wheels/d9/8e/2a/cff33f3accb8eaa34608e68786db1ec323a5f6bce8d724d90a
+2026-03-28T11:19:34.4331930Z Successfully built pyfdt
+2026-03-28T11:19:34.7251853Z Installing collected packages: pyfdt, pyelftools, ply, libarchive-c, junitparser, guardonce, soupsieve, sh, pycodestyle, psutil, lxml, future, cmakelang, cmake-format, beautifulsoup4, autopep8, bs4, sel4-deps
+2026-03-28T11:19:35.6441913Z Successfully installed autopep8-2.3.2 beautifulsoup4-4.14.3 bs4-0.0.2 cmake-format-0.6.13 cmakelang-0.6.13 future-1.0.0 guardonce-2.4.0 junitparser-3.2.0 libarchive-c-5.3 lxml-6.0.2 ply-3.11 psutil-7.2.2 pycodestyle-2.14.0 pyelftools-0.32 pyfdt-0.3 sel4-deps-0.7.0 sh-2.2.2 soupsieve-2.8.3
+2026-03-28T11:19:35.7262921Z ##[endgroup]
+2026-03-28T11:19:35.8674389Z 
+2026-03-28T11:19:35.8675562Z ##[group]TK1_debug_clang_32
+2026-03-28T11:19:35.8676618Z [1m-----------[ start test TK1_debug_clang_32 ]-----------[0m
+2026-03-28T11:19:35.8677298Z [33m+++ tar xvzf ../TK1_debug_clang_32-images.tar.gz[0m
+2026-03-28T11:19:35.8702779Z images/
+2026-03-28T11:19:35.8703419Z images/sel4test-driver-image-arm-tk1
+2026-03-28T11:19:35.8951084Z [33m+++ mq.sh sem -info jetson1[0m
+2026-03-28T11:20:17.8716840Z Lock for jetson1 currently free
+2026-03-28T11:20:17.8717971Z [33m+++ time mq.sh sem -wait jetson1 -k seL4/seL4-HW-23683028975-hw-run-3 -T 1800[0m
+2026-03-28T11:20:51.9355571Z 0.02user 0.01system 0:34.05elapsed 0%CPU (0avgtext+0avgdata 8312maxresident)k
+2026-03-28T11:20:51.9356381Z 0inputs+0outputs (0major+4199minor)pagefaults 0swaps
+2026-03-28T11:20:51.9357537Z [33m+++ time mq.sh run -c </testsuite> -s jetson1 -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-23683028975-hw-run-3 -f images/sel4test-driver-image-arm-tk1[0m
+2026-03-28T11:20:59.0043784Z Lock acquired, we are allowed to run
+2026-03-28T11:21:15.0184745Z pxelinux=False
+2026-03-28T11:21:15.0185608Z copied '/tmp/tmp.eJTiceI97s' -> '/tftpboot/jetson1/sel4-image'
+2026-03-28T11:21:15.1653537Z removed '/tmp/tmp.eJTiceI97s'
+2026-03-28T11:21:15.1654343Z co
+2026-03-28T11:21:15.1654755Z ^Eco
+2026-03-28T11:21:15.3118961Z [Enter `^Ec?' for help]
+2026-03-28T11:21:15.6845172Z [connecting...up]
+2026-03-28T11:21:15.8312122Z Rebooting jetson1 and loading image: /tmp/tmp.eJTiceI97s
+2026-03-28T11:21:17.8004030Z  
+2026-03-28T11:21:17.8005872Z U-Boot SPL 2019.04-00592-g6c5f8dd540 (Apr 24 2019 - 12:42:58 +1000)
+2026-03-28T11:21:17.8006808Z Trying to boot from RAM
+2026-03-28T11:21:17.9518881Z 
+2026-03-28T11:21:17.9519097Z 
+2026-03-28T11:21:17.9519613Z U-Boot 2019.04-00592-g6c5f8dd540 (Apr 24 2019 - 12:42:58 +1000)
+2026-03-28T11:21:17.9520113Z 
+2026-03-28T11:21:17.9520199Z TEGRA124
+2026-03-28T11:21:17.9520399Z Model: NVIDIA Jetson TK1
+2026-03-28T11:21:17.9520640Z Board: NVIDIA Jetson TK1
+2026-03-28T11:21:17.9520888Z DRAM:  2 GiB
+2026-03-28T11:21:18.0985566Z MMC:   sdhci@700b0400: 1, sdhci@700b0600: 0
+2026-03-28T11:21:18.2454091Z Loading Environment from MMC... OK
+2026-03-28T11:21:18.2454708Z In:    serial
+2026-03-28T11:21:18.2454983Z Out:   serial
+2026-03-28T11:21:18.2455233Z Err:   serial
+2026-03-28T11:21:18.2455495Z Net:   No ethernet found.
+2026-03-28T11:21:18.3922087Z Hit any key to stop autoboot:  2
+2026-03-28T11:21:18.3922801Z  0
+2026-03-28T11:21:18.3923325Z Tegra124 (Jetson TK1) # pci enum && setenv autoload no && dhcp && tftpboot 0x81000000 jetson1/sel4-image
+2026-03-28T11:21:18.3924090Z pci enum && setenv autoload no && dhcp && tftpboot 0x81000000 jetson1/sel4-image
+2026-03-28T11:21:19.7296780Z 
+2026-03-28T11:21:19.7297368Z Warning: eth_rtl8169 using MAC address from ROM
+2026-03-28T11:21:19.7297889Z BOOTP broadcast 1
+2026-03-28T11:21:19.8765846Z BOOTP broadcast 2
+2026-03-28T11:21:20.3233835Z BOOTP broadcast 3
+2026-03-28T11:21:21.3235157Z BOOTP broadcast 4
+2026-03-28T11:21:23.3231423Z BOOTP broadcast 5
+2026-03-28T11:21:23.4701450Z DHCP client bound to address 172.16.1.69 (3763 ms)
+2026-03-28T11:21:23.4701872Z Using eth_rtl8169 device
+2026-03-28T11:21:23.4702543Z TFTP from server 172.16.0.2; our IP address is 172.16.1.69
+2026-03-28T11:21:23.4702916Z Filename 'jetson1/sel4-image'.
+2026-03-28T11:21:23.4703161Z Load address: 0x81000000
+2026-03-28T11:21:23.7699953Z Loading: *#################################################################
+2026-03-28T11:21:24.2102097Z 	 #################################################################
+2026-03-28T11:21:24.3569752Z 	 #################################################################
+2026-03-28T11:21:24.5038061Z 	 ###################################################
+2026-03-28T11:21:24.5038647Z 	 3.1 MiB/s
+2026-03-28T11:21:24.5038878Z done
+2026-03-28T11:21:24.5039123Z Bytes transferred = 3597852 (36e61c hex)
+2026-03-28T11:21:24.5039809Z Tegra124 (Jetson TK1) # bootelf 0x81000000 || bootefi 0x81000000
+2026-03-28T11:21:24.6508020Z bootelf 0x81000000 || bootefi 0x81000000
+2026-03-28T11:21:24.6508723Z ## No elf image at address 0x81000000
+2026-03-28T11:21:24.6509885Z 7[r[999;999H[6n8MMC: no card present
+2026-03-28T11:21:24.6510304Z Scanning disk sdhci@700b0400.blk...
+2026-03-28T11:21:24.6510663Z Disk sdhci@700b0400.blk not ready
+2026-03-28T11:21:24.6511005Z Scanning disk sdhci@700b0600.blk...
+2026-03-28T11:21:24.7976672Z Found 3 disks
+2026-03-28T11:21:24.7977169Z WARNING: booting without device tree
+2026-03-28T11:21:24.7977558Z ## Starting EFI application at 81000000 ...
+2026-03-28T11:21:24.7977932Z ELF loader: monitor mode init done
+2026-03-28T11:21:24.7978204Z 
+2026-03-28T11:21:24.7978399Z ELF-loader started on CPU: ARM Ltd. Cortex-A15 r3p3
+2026-03-28T11:21:24.7978793Z   paddr=[fc6d0000..fca3efff]
+2026-03-28T11:21:24.7979126Z No DTB passed in from boot loader.
+2026-03-28T11:21:24.7979759Z Looking for DTB in CPIO archive...found at fc7186e4.
+2026-03-28T11:21:24.7980162Z Loaded DTB from fc7186e4.
+2026-03-28T11:21:24.7980447Z    paddr=[80044000..80054fff]
+2026-03-28T11:21:24.7980752Z ELF-loading image 'kernel' to 80000000
+2026-03-28T11:21:24.7981075Z   paddr=[80000000..80043fff]
+2026-03-28T11:21:24.7981372Z   vaddr=[e0000000..e0043fff]
+2026-03-28T11:21:24.7981648Z   virt_entry=e0000000
+2026-03-28T11:21:24.9772548Z ELF-loading image 'rootserver' to 80055000
+2026-03-28T11:21:24.9773200Z   paddr=[80055000..8049afff]
+2026-03-28T11:21:24.9773537Z   vaddr=[10000..455fff]
+2026-03-28T11:21:24.9773826Z   virt_entry=1fe44
+2026-03-28T11:21:28.2891638Z relocating from fc6d0000-fca3f000 to dfc90000-dffff000... size=0x36f000 (padded size = 0x370000)
+2026-03-28T11:21:30.7547029Z ELF loader relocated, continuing boot...
+2026-03-28T11:21:30.7547564Z Not in hyp mode, cannot reset CNTVOFF_EL2
+2026-03-28T11:21:30.7548026Z Enabling MMU and jumping to entry point...
+2026-03-28T11:21:30.7548339Z 
+2026-03-28T11:21:30.9014443Z DIDRv: 5, armv 71, coproc baseline only? no.
+2026-03-28T11:21:30.9015338Z CPU is in secure mode. Enabling debugging in secure user mode.
+2026-03-28T11:21:30.9016085Z Bootstrapping kernel
+2026-03-28T11:21:30.9016600Z available phys memory regions: 1
+2026-03-28T11:21:30.9017172Z   [80000000..a7f00000)
+2026-03-28T11:21:30.9017767Z reserved virt address space regions: 4
+2026-03-28T11:21:30.9018419Z   [e0000000..e0044000)
+2026-03-28T11:21:30.9018856Z   [e0044000..e00544c7)
+2026-03-28T11:21:30.9019667Z   [e0055000..e049b000)
+2026-03-28T11:21:30.9020234Z   [ff000000..ff100000)
+2026-03-28T11:21:30.9020842Z Booting all finished, dropped to user space
+2026-03-28T11:21:30.9021607Z Caught cap fault in send phase at address 0
+2026-03-28T11:21:30.9022322Z while trying to handle:
+2026-03-28T11:21:30.9023019Z vm fault on data at address 0xdf7fe000 with status 0x805
+2026-03-28T11:21:30.9023930Z in thread 0xffee7400 "sel4test-driver" at address 0x8b7ec
+2026-03-28T11:21:30.9024710Z With stack:
+2026-03-28T11:21:30.9025113Z 0x343d00: 0x343d90
+2026-03-28T11:21:30.9025425Z 0x343d04: 0x418c4
+2026-03-28T11:21:30.9025802Z 0x343d08: 0xf
+2026-03-28T11:21:30.9026143Z 0x343d0c: 0x1
+2026-03-28T11:21:30.9026465Z 0x343d10: 0x343d44
+2026-03-28T11:21:30.9026732Z 0x343d14: 0x343d40
+2026-03-28T11:21:30.9026984Z 0x343d18: 0x2
+2026-03-28T11:21:30.9027219Z 0x343d1c: 0x0
+2026-03-28T11:21:30.9027704Z 0x343d20: 0x0
+2026-03-28T11:21:30.9027946Z 0x343d24: 0xdf7fe000
+2026-03-28T11:21:30.9028214Z 0x343d28: 0x4be
+2026-03-28T11:21:30.9028457Z 0x343d2c: 0x3
+2026-03-28T11:21:30.9028697Z 0x343d30: 0x320004
+2026-03-28T11:21:30.9028953Z 0x343d34: 0x2
+2026-03-28T11:21:30.9029190Z 0x343d38: 0x0
+2026-03-28T11:21:30.9029640Z 0x343d3c: 0xf
+2026-03-28T11:36:24.7503167Z 
+2026-03-28T11:36:24.7503742Z [[Timeout]]
+2026-03-28T11:36:24.7504062Z None
+2026-03-28T11:36:24.8971451Z 
+2026-03-28T11:36:24.8971884Z console_run returned -1
+2026-03-28T11:36:24.8972338Z Shutting down jetson1
+2026-03-28T11:36:25.3178471Z 
+2026-03-28T11:36:27.6975634Z Command exited with non-zero status 255
+2026-03-28T11:36:27.6976699Z 0.02user 0.04system 15:35.76elapsed 0%CPU (0avgtext+0avgdata 8260maxresident)k
+2026-03-28T11:36:27.6977271Z 272inputs+8outputs (2major+7208minor)pagefaults 0swaps
+2026-03-28T11:36:27.6978149Z [31;1m>>> command failed, aborting.[0m
+2026-03-28T11:36:27.6978650Z [33m+++ mq.sh sem -signal jetson1 -k seL4/seL4-HW-23683028975-hw-run-3[0m
+2026-03-28T11:36:36.3313582Z [1m-----------[ end test TK1_debug_clang_32 ]-----------[0m
+2026-03-28T11:36:36.3314335Z ##[endgroup]
+2026-03-28T11:36:36.3314597Z [31;1mTK1_debug_clang_32 FAILED[0m
+2026-03-28T11:36:36.3314779Z 
+2026-03-28T11:36:36.3315035Z ##[group]TK1_debug_MCS_clang_32
+2026-03-28T11:36:36.3315408Z [1m-----------[ start test TK1_debug_MCS_clang_32 ]-----------[0m
+2026-03-28T11:36:36.3322753Z [33m+++ tar xvzf ../TK1_debug_MCS_clang_32-images.tar.gz[0m
+2026-03-28T11:36:36.3348763Z images/
+2026-03-28T11:36:36.3349469Z images/sel4test-driver-image-arm-tk1
+2026-03-28T11:36:36.3573044Z [33m+++ mq.sh sem -info jetson1[0m
+2026-03-28T11:36:49.8035042Z Lock for jetson1 held by sel4_ci since 2026-03-28 22:36:43.242607118 +1100, timeout 1800 with key 'seL4/seL4-HW-23683028975-hw-run-2'
+2026-03-28T11:36:49.8036171Z [33m+++ time mq.sh sem -wait jetson1 -k seL4/seL4-HW-23683028975-hw-run-3 -T 1800[0m
+2026-03-28T11:52:34.0938627Z 0.02user 0.03system 15:44.28elapsed 0%CPU (0avgtext+0avgdata 8252maxresident)k
+2026-03-28T11:52:34.0939634Z 0inputs+0outputs (1major+5490minor)pagefaults 0swaps
+2026-03-28T11:52:34.0941289Z [33m+++ time mq.sh run -c </testsuite> -s jetson1 -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-23683028975-hw-run-3 -f images/sel4test-driver-image-arm-tk1[0m
+2026-03-28T11:52:43.2283806Z Lock acquired, we are allowed to run
+2026-03-28T11:52:55.0261848Z pxelinux=False
+2026-03-28T11:52:55.0262741Z copied '/tmp/tmp.ZX2x9qQcuW' -> '/tftpboot/jetson1/sel4-image'
+2026-03-28T11:52:55.1728743Z removed '/tmp/tmp.ZX2x9qQcuW'
+2026-03-28T11:52:55.1729818Z co
+2026-03-28T11:52:55.1730186Z ^Eco
+2026-03-28T11:52:55.3195594Z [Enter `^Ec?' for help]
+2026-03-28T11:52:55.6923773Z [connecting...up]
+2026-03-28T11:52:55.8390121Z Rebooting jetson1 and loading image: /tmp/tmp.ZX2x9qQcuW
+2026-03-28T11:52:57.7849921Z  
+2026-03-28T11:52:57.7850462Z U-Boot SPL 2019.04-00592-g6c5f8dd540 (Apr 24 2019 - 12:42:58 +1000)
+2026-03-28T11:52:57.7850919Z Trying to boot from RAM
+2026-03-28T11:52:57.9364229Z 
+2026-03-28T11:52:57.9364398Z 
+2026-03-28T11:52:57.9364869Z U-Boot 2019.04-00592-g6c5f8dd540 (Apr 24 2019 - 12:42:58 +1000)
+2026-03-28T11:52:57.9365239Z 
+2026-03-28T11:52:57.9365344Z TEGRA124
+2026-03-28T11:52:57.9365589Z Model: NVIDIA Jetson TK1
+2026-03-28T11:52:57.9365891Z Board: NVIDIA Jetson TK1
+2026-03-28T11:52:57.9366165Z DRAM:  2 GiB
+2026-03-28T11:52:58.0830659Z MMC:   sdhci@700b0400: 1, sdhci@700b0600: 0
+2026-03-28T11:52:58.2299529Z Loading Environment from MMC... OK
+2026-03-28T11:52:58.2300354Z In:    serial
+2026-03-28T11:52:58.2300619Z Out:   serial
+2026-03-28T11:52:58.2300867Z Err:   serial
+2026-03-28T11:52:58.2301132Z Net:   No ethernet found.
+2026-03-28T11:52:58.3768231Z Hit any key to stop autoboot:  2
+2026-03-28T11:52:58.3768931Z  0
+2026-03-28T11:52:58.3769715Z Tegra124 (Jetson TK1) # pci enum && setenv autoload no && dhcp && tftpboot 0x81000000 jetson1/sel4-image
+2026-03-28T11:52:58.3770844Z pci enum && setenv autoload no && dhcp && tftpboot 0x81000000 jetson1/sel4-image
+2026-03-28T11:52:59.5646203Z 
+2026-03-28T11:52:59.5646808Z Warning: eth_rtl8169 using MAC address from ROM
+2026-03-28T11:52:59.5647302Z BOOTP broadcast 1
+2026-03-28T11:52:59.8335145Z BOOTP broadcast 2
+2026-03-28T11:53:00.3334680Z BOOTP broadcast 3
+2026-03-28T11:53:01.3315498Z BOOTP broadcast 4
+2026-03-28T11:53:03.3302044Z BOOTP broadcast 5
+2026-03-28T11:53:03.3302445Z DHCP client bound to address 172.16.1.69 (3764 ms)
+2026-03-28T11:53:03.4767890Z Using eth_rtl8169 device
+2026-03-28T11:53:03.4768447Z TFTP from server 172.16.0.2; our IP address is 172.16.1.69
+2026-03-28T11:53:03.4768927Z Filename 'jetson1/sel4-image'.
+2026-03-28T11:53:03.4769568Z Load address: 0x81000000
+2026-03-28T11:53:03.6449573Z Loading: *#################################################################
+2026-03-28T11:53:03.9679305Z 	 #################################################################
+2026-03-28T11:53:04.4661210Z 	 #################################################################
+2026-03-28T11:53:04.6128724Z 	 ###############################################################
+2026-03-28T11:53:04.6129682Z 	 3 MiB/s
+2026-03-28T11:53:04.6130098Z done
+2026-03-28T11:53:04.6130453Z Bytes transferred = 3778076 (39a61c hex)
+2026-03-28T11:53:04.6130948Z Tegra124 (Jetson TK1) # bootelf 0x81000000 || bootefi 0x81000000
+2026-03-28T11:53:04.7597926Z bootelf 0x81000000 || bootefi 0x81000000
+2026-03-28T11:53:04.7598623Z ## No elf image at address 0x81000000
+2026-03-28T11:53:04.7599825Z 7[r[999;999H[6n8MMC: no card present
+2026-03-28T11:53:04.7600266Z Scanning disk sdhci@700b0400.blk...
+2026-03-28T11:53:04.7600666Z Disk sdhci@700b0400.blk not ready
+2026-03-28T11:53:04.7601046Z Scanning disk sdhci@700b0600.blk...
+2026-03-28T11:53:04.9065807Z Found 3 disks
+2026-03-28T11:53:04.9066281Z WARNING: booting without device tree
+2026-03-28T11:53:04.9066673Z ## Starting EFI application at 81000000 ...
+2026-03-28T11:53:04.9067050Z ELF loader: monitor mode init done
+2026-03-28T11:53:04.9067271Z 
+2026-03-28T11:53:04.9067471Z ELF-loader started on CPU: ARM Ltd. Cortex-A15 r3p3
+2026-03-28T11:53:04.9067898Z   paddr=[fc6a4000..fca3efff]
+2026-03-28T11:53:04.9068255Z No DTB passed in from boot loader.
+2026-03-28T11:53:04.9068639Z Looking for DTB in CPIO archive...found at fc6f6ee4.
+2026-03-28T11:53:04.9068999Z Loaded DTB from fc6f6ee4.
+2026-03-28T11:53:04.9069262Z    paddr=[80050000..80060fff]
+2026-03-28T11:53:04.9069836Z ELF-loading image 'kernel' to 80000000
+2026-03-28T11:53:04.9070136Z   paddr=[80000000..8004ffff]
+2026-03-28T11:53:04.9070738Z   vaddr=[e0000000..e004ffff]
+2026-03-28T11:53:04.9070994Z   virt_entry=e0000000
+2026-03-28T11:53:05.1392488Z ELF-loading image 'rootserver' to 80061000
+2026-03-28T11:53:05.1393212Z   paddr=[80061000..804c6fff]
+2026-03-28T11:53:05.1393575Z   vaddr=[10000..475fff]
+2026-03-28T11:53:05.1393907Z   virt_entry=20618
+2026-03-28T11:53:08.5751086Z relocating from fc6a4000-fca3f000 to dfc64000-dffff000... size=0x39b000 (padded size = 0x39c000)
+2026-03-28T11:53:11.1641122Z ELF loader relocated, continuing boot...
+2026-03-28T11:53:11.1641640Z Not in hyp mode, cannot reset CNTVOFF_EL2
+2026-03-28T11:53:11.1642070Z Enabling MMU and jumping to entry point...
+2026-03-28T11:53:11.1642364Z 
+2026-03-28T11:53:11.3106717Z DIDRv: 5, armv 71, coproc baseline only? no.
+2026-03-28T11:53:11.3107554Z CPU is in secure mode. Enabling debugging in secure user mode.
+2026-03-28T11:53:11.3108053Z Bootstrapping kernel
+2026-03-28T11:53:11.3108381Z available phys memory regions: 1
+2026-03-28T11:53:11.3108723Z   [80000000..a7f00000)
+2026-03-28T11:53:11.3108988Z reserved virt address space regions: 4
+2026-03-28T11:53:11.3109616Z   [e0000000..e0050000)
+2026-03-28T11:53:11.3109867Z   [e0050000..e00604c7)
+2026-03-28T11:53:11.3110093Z   [e0061000..e04c7000)
+2026-03-28T11:53:11.3110325Z   [ff000000..ff100000)
+2026-03-28T11:53:11.3110587Z Booting all finished, dropped to user space
+2026-03-28T11:53:11.3110981Z Found thread has no fault handler while trying to handle:
+2026-03-28T11:53:11.3111410Z vm fault on data at address 0xdf7fe000 with status 0x805
+2026-03-28T11:53:11.3112193Z in thread 0xffee7400 "sel4test-driver" at address 0x8cc4c
+2026-03-28T11:53:11.3112547Z With stack:
+2026-03-28T11:53:11.3112753Z 0x363d00: 0x363d90
+2026-03-28T11:53:11.3112974Z 0x363d04: 0x42b1c
+2026-03-28T11:53:11.3113193Z 0x363d08: 0xf
+2026-03-28T11:53:11.3113397Z 0x363d0c: 0x1
+2026-03-28T11:53:11.3113601Z 0x363d10: 0x363d44
+2026-03-28T11:53:11.3113812Z 0x363d14: 0x363d40
+2026-03-28T11:53:11.3114028Z 0x363d18: 0x2
+2026-03-28T11:53:11.3114237Z 0x363d1c: 0x0
+2026-03-28T11:53:11.3114439Z 0x363d20: 0x0
+2026-03-28T11:53:11.3114643Z 0x363d24: 0xdf7fe000
+2026-03-28T11:53:11.3114873Z 0x363d28: 0x4e1
+2026-03-28T11:53:11.3115079Z 0x363d2c: 0x3
+2026-03-28T11:53:11.3115281Z 0x363d30: 0x340004
+2026-03-28T11:53:11.3115496Z 0x363d34: 0x2
+2026-03-28T11:53:11.3115696Z 0x363d38: 0x0
+2026-03-28T11:53:11.3115895Z 0x363d3c: 0xf
+2026-03-28T12:08:04.8229871Z 
+2026-03-28T12:08:04.8230328Z [[Timeout]]
+2026-03-28T12:08:04.8230659Z None
+2026-03-28T12:08:04.9695606Z 
+2026-03-28T12:08:04.9695972Z console_run returned -1
+2026-03-28T12:08:04.9696405Z Shutting down jetson1
+2026-03-28T12:08:05.3180245Z 
+2026-03-28T12:08:07.6506369Z Command exited with non-zero status 255
+2026-03-28T12:08:07.6507443Z 0.03user 0.03system 15:33.55elapsed 0%CPU (0avgtext+0avgdata 8260maxresident)k
+2026-03-28T12:08:07.6508372Z 0inputs+8outputs (1major+7237minor)pagefaults 0swaps
+2026-03-28T12:08:07.6509559Z [31;1m>>> command failed, aborting.[0m
+2026-03-28T12:08:07.6510472Z [33m+++ mq.sh sem -signal jetson1 -k seL4/seL4-HW-23683028975-hw-run-3[0m
+2026-03-28T12:08:10.8255568Z [1m-----------[ end test TK1_debug_MCS_clang_32 ]-----------[0m
+2026-03-28T12:08:10.8256324Z ##[endgroup]
+2026-03-28T12:08:10.8256589Z [31;1mTK1_debug_MCS_clang_32 FAILED[0m
+2026-03-28T12:08:10.8256787Z 
+2026-03-28T12:08:10.8259021Z ##[group]TK1_debug_hyp_clang_32
+2026-03-28T12:08:10.8259896Z [1m-----------[ start test TK1_debug_hyp_clang_32 ]-----------[0m
+2026-03-28T12:08:10.8265677Z [33m+++ tar xvzf ../TK1_debug_hyp_clang_32-images.tar.gz[0m
+2026-03-28T12:08:10.8292510Z images/
+2026-03-28T12:08:10.8292868Z images/sel4test-driver-image-arm-tk1
+2026-03-28T12:08:10.8507268Z [33m+++ mq.sh sem -info jetson1[0m
+2026-03-28T12:08:13.5543292Z Lock for jetson1 currently free
+2026-03-28T12:08:13.5546223Z [33m+++ time mq.sh sem -wait jetson1 -k seL4/seL4-HW-23683028975-hw-run-3 -T 1800[0m
+2026-03-28T12:23:44.2937699Z 0.01user 0.02system 15:30.73elapsed 0%CPU (0avgtext+0avgdata 8260maxresident)k
+2026-03-28T12:23:44.2938987Z 0inputs+0outputs (0major+4234minor)pagefaults 0swaps
+2026-03-28T12:23:44.2940383Z [33m+++ time mq.sh run -c </testsuite> -s jetson1 -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-23683028975-hw-run-3 -f images/sel4test-driver-image-arm-tk1[0m
+2026-03-28T12:23:46.7985705Z Lock acquired, we are allowed to run
+2026-03-28T12:23:51.3393337Z pxelinux=False
+2026-03-28T12:23:51.3393861Z copied '/tmp/tmp.5MYQcpk7in' -> '/tftpboot/jetson1/sel4-image'
+2026-03-28T12:23:51.5428784Z removed '/tmp/tmp.5MYQcpk7in'
+2026-03-28T12:23:51.6899113Z co
+2026-03-28T12:23:51.6899777Z ^Eco
+2026-03-28T12:23:51.8368680Z [Enter `^Ec?' for help]
+2026-03-28T12:23:52.1424763Z [connecting...up]
+2026-03-28T12:23:52.2895852Z Rebooting jetson1 and loading image: /tmp/tmp.5MYQcpk7in
+2026-03-28T12:23:54.2425658Z  
+2026-03-28T12:23:54.2426112Z U-Boot SPL 2019.04-00592-g6c5f8dd540 (Apr 24 2019 - 12:42:58 +1000)
+2026-03-28T12:23:54.2426587Z Trying to boot from RAM
+2026-03-28T12:23:54.3942945Z 
+2026-03-28T12:23:54.3942962Z 
+2026-03-28T12:23:54.3943693Z U-Boot 2019.04-00592-g6c5f8dd540 (Apr 24 2019 - 12:42:58 +1000)
+2026-03-28T12:23:54.3944132Z 
+2026-03-28T12:23:54.3944238Z TEGRA124
+2026-03-28T12:23:54.3944487Z Model: NVIDIA Jetson TK1
+2026-03-28T12:23:54.3944786Z Board: NVIDIA Jetson TK1
+2026-03-28T12:23:54.3945112Z DRAM:  2 GiB
+2026-03-28T12:23:54.5410399Z MMC:   sdhci@700b0400: 1, sdhci@700b0600: 0
+2026-03-28T12:23:54.6879562Z Loading Environment from MMC... OK
+2026-03-28T12:23:54.6880354Z In:    serial
+2026-03-28T12:23:54.6880777Z Out:   serial
+2026-03-28T12:23:54.6881087Z Err:   serial
+2026-03-28T12:23:54.6881942Z Net:   No ethernet found.
+2026-03-28T12:23:54.8350095Z Hit any key to stop autoboot:  2
+2026-03-28T12:23:54.8350886Z  0
+2026-03-28T12:23:54.8351329Z Tegra124 (Jetson TK1) # pci enum && setenv autoload no && dhcp && tftpboot 0x81000000 jetson1/sel4-image
+2026-03-28T12:23:54.8351954Z pci enum && setenv autoload no && dhcp && tftpboot 0x81000000 jetson1/sel4-image
+2026-03-28T12:23:56.0111295Z 
+2026-03-28T12:23:56.0111758Z Warning: eth_rtl8169 using MAC address from ROM
+2026-03-28T12:23:56.0112107Z BOOTP broadcast 1
+2026-03-28T12:23:56.2887442Z BOOTP broadcast 2
+2026-03-28T12:23:56.7705879Z BOOTP broadcast 3
+2026-03-28T12:23:57.7878489Z BOOTP broadcast 4
+2026-03-28T12:23:59.7678291Z BOOTP broadcast 5
+2026-03-28T12:23:59.9148213Z DHCP client bound to address 172.16.1.69 (3763 ms)
+2026-03-28T12:23:59.9148655Z Using eth_rtl8169 device
+2026-03-28T12:23:59.9149033Z TFTP from server 172.16.0.2; our IP address is 172.16.1.69
+2026-03-28T12:23:59.9149777Z Filename 'jetson1/sel4-image'.
+2026-03-28T12:23:59.9150147Z Load address: 0x81000000
+2026-03-28T12:24:00.2086480Z Loading: *#################################################################
+2026-03-28T12:24:00.5023537Z 	 #################################################################
+2026-03-28T12:24:00.9431759Z 	 #################################################################
+2026-03-28T12:24:01.0898988Z 	 #####################################################
+2026-03-28T12:24:01.0899863Z 	 2.9 MiB/s
+2026-03-28T12:24:01.0900112Z done
+2026-03-28T12:24:01.0900368Z Bytes transferred = 3630740 (376694 hex)
+2026-03-28T12:24:01.0900822Z Tegra124 (Jetson TK1) # bootelf 0x81000000 || bootefi 0x81000000
+2026-03-28T12:24:01.0901291Z bootelf 0x81000000 || bootefi 0x81000000
+2026-03-28T12:24:01.0901645Z ## No elf image at address 0x81000000
+2026-03-28T12:24:01.2370751Z 7[r[999;999H[6n8MMC: no card present
+2026-03-28T12:24:01.2371159Z Scanning disk sdhci@700b0400.blk...
+2026-03-28T12:24:01.2371462Z Disk sdhci@700b0400.blk not ready
+2026-03-28T12:24:01.2371801Z Scanning disk sdhci@700b0600.blk...
+2026-03-28T12:24:01.2372111Z Found 3 disks
+2026-03-28T12:24:01.2372345Z WARNING: booting without device tree
+2026-03-28T12:24:01.2372661Z ## Starting EFI application at 81000000 ...
+2026-03-28T12:24:01.2372989Z ELF loader: monitor mode init done
+2026-03-28T12:24:01.2373400Z Copy monitor mode vector from fffffffffc6cffb8 to ffffffffa7f00000 size 50
+2026-03-28T12:24:01.2373823Z Number of IRQs: 192
+2026-03-28T12:24:01.2376668Z Load seL4 in nonsecure HYP mode 600001da
+2026-03-28T12:24:01.3841806Z ELF-loader started on CPU: ARM Ltd. Cortex-A15 r3p3
+2026-03-28T12:24:01.3842254Z   paddr=[fc6c8000..fca3efff]
+2026-03-28T12:24:01.3842522Z No DTB passed in from boot loader.
+2026-03-28T12:24:01.3842847Z Looking for DTB in CPIO archive...found at fc713720.
+2026-03-28T12:24:01.3843175Z Loaded DTB from fc713720.
+2026-03-28T12:24:01.3843412Z    paddr=[80044000..80054fff]
+2026-03-28T12:24:01.3843668Z ELF-loading image 'kernel' to 80000000
+2026-03-28T12:24:01.3843956Z   paddr=[80000000..80043fff]
+2026-03-28T12:24:01.3844186Z   vaddr=[e0000000..e0043fff]
+2026-03-28T12:24:01.3844414Z   virt_entry=e0000000
+2026-03-28T12:24:01.5311620Z ELF-loading image 'rootserver' to 80055000
+2026-03-28T12:24:01.5312079Z   paddr=[80055000..8049afff]
+2026-03-28T12:24:01.5312409Z   vaddr=[10000..455fff]
+2026-03-28T12:24:01.5312705Z   virt_entry=1fe44
+2026-03-28T12:24:04.0286149Z relocating from fc6c8000-fca3f000 to dfc88000-dffff000... size=0x377000 (padded size = 0x378000)
+2026-03-28T12:24:05.7905201Z ELF loader relocated, continuing boot...
+2026-03-28T12:24:05.7905640Z Enabling hypervisor MMU and jumping to entry point...
+2026-03-28T12:24:05.7905919Z 
+2026-03-28T12:24:05.8937600Z DIDRv: 5, armv 71, coproc baseline only? no.
+2026-03-28T12:24:05.8938142Z Bootstrapping kernel
+2026-03-28T12:24:05.8938439Z available phys memory regions: 1
+2026-03-28T12:24:05.8938743Z   [80000000..a7f00000)
+2026-03-28T12:24:05.8939030Z reserved virt address space regions: 4
+2026-03-28T12:24:05.8939723Z   [e0000000..e0044000)
+2026-03-28T12:24:05.8940412Z   [e0044000..e00544c7)
+2026-03-28T12:24:05.8940751Z   [e0055000..e049b000)
+2026-03-28T12:24:05.8940999Z   [ff000000..ff200000)
+2026-03-28T12:24:05.8941290Z Booting all finished, dropped to user space
+2026-03-28T12:24:05.8941639Z Node 0 of 1
+2026-03-28T12:24:05.8941867Z IOPT levels:     0
+2026-03-28T12:24:05.8942123Z IPC buffer:      0x456000
+2026-03-28T12:24:05.8942445Z Empty slots:     [1210 --> 8192)
+2026-03-28T12:24:05.8942761Z sharedFrames:    [0 --> 0)
+2026-03-28T12:24:05.8943048Z userImageFrames: [36 --> 1130)
+2026-03-28T12:24:05.8943343Z userImagePaging: [16 --> 19)
+2026-03-28T12:24:05.8943636Z untypeds:        [1130 --> 1210)
+2026-03-28T12:24:05.8943923Z Initial thread domain: 0
+2026-03-28T12:24:05.8944204Z Initial thread cnode size: 13
+2026-03-28T12:24:05.8944492Z List of untypeds
+2026-03-28T12:24:05.8944733Z ------------------
+2026-03-28T12:24:05.8944990Z Paddr    | Size   | Device
+2026-03-28T12:24:05.8945254Z 0 | 29 | 1
+2026-03-28T12:24:05.8945476Z 0x20000000 | 29 | 1
+2026-03-28T12:24:05.8945718Z 0x40000000 | 28 | 1
+2026-03-28T12:24:05.8945959Z 0x50000000 | 18 | 1
+2026-03-28T12:24:05.8946219Z 0x50040000 | 12 | 1
+2026-03-28T12:24:05.8946466Z 0x50043000 | 12 | 1
+2026-03-28T12:24:05.8946671Z 0x50045000 | 12 | 1
+2026-03-28T12:24:05.8946878Z 0x50046000 | 13 | 1
+2026-03-28T12:24:05.8947086Z 0x50048000 | 15 | 1
+2026-03-28T12:24:05.8947289Z 0x50050000 | 16 | 1
+2026-03-28T12:24:05.8947493Z 0x50060000 | 17 | 1
+2026-03-28T12:24:05.9373596Z 0x50080000 | 19 | 1
+2026-03-28T12:24:05.9374101Z 0x50100000 | 20 | 1
+2026-03-28T12:24:05.9374516Z 0x50200000 | 21 | 1
+2026-03-28T12:24:05.9374786Z 0x50400000 | 22 | 1
+2026-03-28T12:24:05.9375037Z 0x50800000 | 23 | 1
+2026-03-28T12:24:05.9375288Z 0x51000000 | 24 | 1
+2026-03-28T12:24:05.9375530Z 0x52000000 | 25 | 1
+2026-03-28T12:24:05.9375768Z 0x54000000 | 26 | 1
+2026-03-28T12:24:05.9376015Z 0x58000000 | 27 | 1
+2026-03-28T12:24:05.9376255Z 0x60000000 | 29 | 1
+2026-03-28T12:24:05.9376497Z 0x9ff00000 | 20 | 1
+2026-03-28T12:24:05.9376737Z 0xa0000000 | 29 | 1
+2026-03-28T12:24:05.9377030Z 0xc0000000 | 29 | 1
+2026-03-28T12:24:05.9377294Z 0xe0000000 | 28 | 1
+2026-03-28T12:24:05.9377502Z 0xf0000000 | 27 | 1
+2026-03-28T12:24:05.9377714Z 0xf8000000 | 26 | 1
+2026-03-28T12:24:05.9377923Z 0xfc000000 | 25 | 1
+2026-03-28T12:24:05.9378134Z 0xfe000000 | 24 | 1
+2026-03-28T12:24:05.9378351Z 0xff000000 | 23 | 1
+2026-03-28T12:24:05.9378580Z 0xff800000 | 22 | 1
+2026-03-28T12:24:05.9378790Z 0xffc00000 | 21 | 1
+2026-03-28T12:24:05.9379644Z 0xffe00000 | 20 | 1
+2026-03-28T12:24:05.9379872Z 0xfff00000 | 19 | 1
+2026-03-28T12:24:05.9380086Z 0xfff80000 | 18 | 1
+2026-03-28T12:24:05.9380298Z 0xfffc0000 | 17 | 1
+2026-03-28T12:24:05.9380513Z 0xfffe0000 | 16 | 1
+2026-03-28T12:24:05.9380737Z 0xffff0000 | 15 | 1
+2026-03-28T12:24:05.9380950Z 0xffff8000 | 14 | 1
+2026-03-28T12:24:06.0264474Z 0xffffc000 | 13 | 1
+2026-03-28T12:24:06.0264841Z 0xffffe000 | 12 | 1
+2026-03-28T12:24:06.0265232Z 0xfffff000 | 11 | 1
+2026-03-28T12:24:06.0265652Z 0xfffff800 | 10 | 1
+2026-03-28T12:24:06.0266082Z 0xfffffc00 | 9 | 1
+2026-03-28T12:24:06.0266548Z 0xfffffe00 | 8 | 1
+2026-03-28T12:24:06.0266972Z 0xffffff00 | 7 | 1
+2026-03-28T12:24:06.0267342Z 0xffffff80 | 6 | 1
+2026-03-28T12:24:06.0267621Z 0xffffffc0 | 5 | 1
+2026-03-28T12:24:06.0267889Z 0xffffffe0 | 4 | 1
+2026-03-28T12:24:06.0268147Z 0x80000000 | 16 | 0
+2026-03-28T12:24:06.0268403Z 0x800544d0 | 4 | 0
+2026-03-28T12:24:06.0268665Z 0x800544e0 | 5 | 0
+2026-03-28T12:24:06.0268916Z 0x80054500 | 8 | 0
+2026-03-28T12:24:06.0269129Z 0x80054600 | 9 | 0
+2026-03-28T12:24:06.0269656Z 0x80054800 | 11 | 0
+2026-03-28T12:24:06.0269876Z 0x8049b000 | 12 | 0
+2026-03-28T12:24:06.0270090Z 0x8049c000 | 14 | 0
+2026-03-28T12:24:06.0270301Z 0x804a0000 | 17 | 0
+2026-03-28T12:24:06.0270507Z 0x804c0000 | 18 | 0
+2026-03-28T12:24:06.0270710Z 0x80500000 | 20 | 0
+2026-03-28T12:24:06.0270914Z 0x80600000 | 21 | 0
+2026-03-28T12:24:06.0271124Z 0x80800000 | 23 | 0
+2026-03-28T12:24:06.0271328Z 0x81000000 | 24 | 0
+2026-03-28T12:24:06.0271531Z 0x82000000 | 25 | 0
+2026-03-28T12:24:06.0271744Z 0x84000000 | 26 | 0
+2026-03-28T12:24:06.0272280Z 0x88000000 | 27 | 0
+2026-03-28T12:24:06.0272508Z 0x90000000 | 27 | 0
+2026-03-28T12:24:06.0272721Z 0x98000000 | 26 | 0
+2026-03-28T12:24:06.0272960Z 0x9c000000 | 25 | 0
+2026-03-28T12:24:06.0273173Z 0x9e000000 | 24 | 0
+2026-03-28T12:24:06.0273381Z 0x9f200000 | 21 | 0
+2026-03-28T12:24:06.0273596Z 0x9f400000 | 22 | 0
+2026-03-28T12:24:06.0273806Z 0x9f800000 | 22 | 0
+2026-03-28T12:24:06.0274019Z 0x9fc00000 | 21 | 0
+2026-03-28T12:24:06.0274235Z 0x9fe00000 | 19 | 0
+2026-03-28T12:24:06.0274451Z 0x9fe80000 | 17 | 0
+2026-03-28T12:24:06.0283496Z 0x9feea800 | 11 | 0
+2026-03-28T12:24:06.0283828Z 0x9feeb000 | 12 | 0
+2026-03-28T12:24:06.0284045Z 0x9feec000 | 14 | 0
+2026-03-28T12:24:06.0284244Z 0x9fef0000 | 16 | 0
+2026-03-28T12:24:06.0284447Z Untyped summary
+2026-03-28T12:24:06.0284656Z 2 untypeds of size 4
+2026-03-28T12:24:06.0284872Z 2 untypeds of size 5
+2026-03-28T12:24:06.0285093Z 1 untypeds of size 6
+2026-03-28T12:24:06.0285293Z 1 untypeds of size 7
+2026-03-28T12:24:06.0842449Z 2 untypeds of size 8
+2026-03-28T12:24:06.0842927Z 2 untypeds of size 9
+2026-03-28T12:24:06.0843244Z 1 untypeds of size 10
+2026-03-28T12:24:06.0843543Z 3 untypeds of size 11
+2026-03-28T12:24:06.0843832Z 6 untypeds of size 12
+2026-03-28T12:24:06.0844124Z 2 untypeds of size 13
+2026-03-28T12:24:06.0844533Z 3 untypeds of size 14
+2026-03-28T12:24:06.0844822Z 2 untypeds of size 15
+2026-03-28T12:24:06.0845111Z 4 untypeds of size 16
+2026-03-28T12:24:06.0845404Z 4 untypeds of size 17
+2026-03-28T12:24:06.0845701Z 3 untypeds of size 18
+2026-03-28T12:24:06.0845982Z 3 untypeds of size 19
+2026-03-28T12:24:06.0846271Z 4 untypeds of size 20
+2026-03-28T12:24:06.0846575Z 5 untypeds of size 21
+2026-03-28T12:24:06.0846855Z 4 untypeds of size 22
+2026-03-28T12:24:06.0847141Z 3 untypeds of size 23
+2026-03-28T12:24:06.0847423Z 4 untypeds of size 24
+2026-03-28T12:24:06.0847705Z 4 untypeds of size 25
+2026-03-28T12:24:06.0847987Z 4 untypeds of size 26
+2026-03-28T12:24:06.0848274Z 4 untypeds of size 27
+2026-03-28T12:24:06.0848555Z 2 untypeds of size 28
+2026-03-28T12:24:06.0848843Z 5 untypeds of size 29
+2026-03-28T12:24:06.0849167Z Switching to a safer, bigger stack...
+2026-03-28T12:24:06.0849803Z seL4 Test
+2026-03-28T12:24:06.0850029Z =========
+2026-03-28T12:24:06.0850148Z 
+2026-03-28T12:24:06.2311484Z vka_alloc_object_at_maybe_dev@object.h:58 Failed to allocate object of size 2147483648, error 1
+2026-03-28T12:24:06.2312307Z vka_alloc_object_at_maybe_dev@object.h:58 Failed to allocate object of size 1073741824, error 1
+2026-03-28T12:24:06.2313518Z vka_alloc_object_at_maybe_dev@object.h:58 Failed to allocate object of size 536870912, error 1
+2026-03-28T12:24:06.2314132Z vka_alloc_object_at_maybe_dev@object.h:58 Failed to allocate object of size 268435456, error 1
+2026-03-28T12:24:06.3780682Z vka_alloc_object_at_maybe_dev@object.h:58 Failed to allocate object of size 134217728, error 1
+2026-03-28T12:24:06.3781652Z vka_alloc_object_at_maybe_dev@object.h:58 Failed to allocate object of size 67108864, error 1
+2026-03-28T12:24:06.3782496Z vka_alloc_object_at_maybe_dev@object.h:58 Failed to allocate object of size 33554432, error 1
+2026-03-28T12:24:06.3783312Z vka_alloc_object_at_maybe_dev@object.h:58 Failed to allocate object of size 16777216, error 1
+2026-03-28T12:24:06.3784117Z vka_alloc_object_at_maybe_dev@object.h:58 Failed to allocate object of size 8388608, error 1
+2026-03-28T12:24:06.3784930Z vka_alloc_object_at_maybe_dev@object.h:58 Failed to allocate object of size 4194304, error 1
+2026-03-28T12:24:06.3785733Z vka_alloc_object_at_maybe_dev@object.h:58 Failed to allocate object of size 2097152, error 1
+2026-03-28T12:24:06.3786420Z vka_alloc_object_at_maybe_dev@object.h:58 Failed to allocate object of size 1048576, error 1
+2026-03-28T12:24:06.4790564Z vka_alloc_object_at_maybe_dev@object.h:58 Failed to allocate object of size 524288, error 1
+2026-03-28T12:24:06.4791646Z vka_alloc_object_at_maybe_dev@object.h:58 Failed to allocate object of size 262144, error 1
+2026-03-28T12:24:06.4792909Z vka_alloc_object_at_maybe_dev@object.h:58 Failed to allocate object of size 131072, error 1
+2026-03-28T12:24:06.4793722Z vka_alloc_object_at_maybe_dev@object.h:58 Failed to allocate object of size 65536, error 1
+2026-03-28T12:24:06.4794526Z vka_alloc_object_at_maybe_dev@object.h:58 Failed to allocate object of size 32768, error 1
+2026-03-28T12:24:06.4795305Z vka_alloc_object_at_maybe_dev@object.h:58 Failed to allocate object of size 16384, error 1
+2026-03-28T12:24:06.4796086Z vka_alloc_object_at_maybe_dev@object.h:58 Failed to allocate object of size 8192, error 1
+2026-03-28T12:24:06.4796673Z <testsuite>
+2026-03-28T12:24:06.4797063Z 	<testcase classname="sel4test" name="Test that there are tests">
+2026-03-28T12:24:06.4797546Z 	</testcase>
+2026-03-28T12:24:06.4797880Z 	<testcase classname="sel4test" name="SYSCALL0000">
+2026-03-28T12:24:06.4798284Z 	</testcase>
+2026-03-28T12:24:06.5245974Z 	<testcase classname="sel4test" name="SYSCALL0001">
+2026-03-28T12:24:06.5247360Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.5248698Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.5249992Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.6108729Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.6110457Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.6111636Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.6112785Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.6113901Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.6115019Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.6116509Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.6117169Z 	</testcase>
+2026-03-28T12:24:06.6716000Z 	<testcase classname="sel4test" name="SYSCALL0002">
+2026-03-28T12:24:06.6717508Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.6718883Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.6720461Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.6721672Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.7617300Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.7618691Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.7620228Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.7621875Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.7623115Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.7624159Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.7624782Z 	</testcase>
+2026-03-28T12:24:06.7625038Z 	<testcase classname="sel4test" name="SYSCALL0003">
+2026-03-28T12:24:06.7625347Z 	</testcase>
+2026-03-28T12:24:06.7625592Z 	<testcase classname="sel4test" name="SYSCALL0004">
+2026-03-28T12:24:06.8183841Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @199f8]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.8185097Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @199f8]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.8186255Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @199f8]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.8187391Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @199f8]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.8188512Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @199f8]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.9105413Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @199f8]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.9106664Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @199f8]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.9107754Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @199f8]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.9108819Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @199f8]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.9110077Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @199f8]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.9111037Z 	</testcase>
+2026-03-28T12:24:06.9111289Z 	<testcase classname="sel4test" name="SYSCALL0005">
+2026-03-28T12:24:06.9112054Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @19bc0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.9652179Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @19bc0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.9653754Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @19bc0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.9655217Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @19bc0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.9656608Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @19bc0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:06.9657761Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @19bc0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.0603067Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @19bc0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.0604886Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @19bc0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.0606983Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @19bc0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.0608586Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @19bc0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.0609585Z 	</testcase>
+2026-03-28T12:24:07.0609905Z 	<testcase classname="sel4test" name="SYSCALL0006">
+2026-03-28T12:24:07.0610321Z           	</testcase>
+2026-03-28T12:24:07.0610654Z 	<testcase classname="sel4test" name="SYSCALL0010">
+2026-03-28T12:24:07.0611041Z 	</testcase>
+2026-03-28T12:24:07.0611355Z 	<testcase classname="sel4test" name="SYSCALL0011">
+2026-03-28T12:24:07.0611735Z 	</testcase>
+2026-03-28T12:24:07.0612037Z 	<testcase classname="sel4test" name="SYSCALL0012">
+2026-03-28T12:24:07.0612421Z 	</testcase>
+2026-03-28T12:24:07.0612713Z 	<testcase classname="sel4test" name="SYSCALL0013">
+2026-03-28T12:24:07.0613086Z 	</testcase>
+2026-03-28T12:24:07.0613385Z 	<testcase classname="sel4test" name="SYSCALL0014">
+2026-03-28T12:24:07.1121524Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.1122853Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.1124090Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.1125326Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.1126545Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.2104608Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.2106198Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.2107645Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.2109746Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.2111218Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.2111920Z 	</testcase>
+2026-03-28T12:24:07.2112192Z 	<testcase classname="sel4test" name="SYSCALL0015">
+2026-03-28T12:24:07.2113032Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.2592146Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.2593817Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.2595380Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.2596949Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.3441720Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.3443695Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.3444817Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.3445879Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.3446940Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @195d0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.3447549Z 	</testcase>
+2026-03-28T12:24:07.3447809Z 	<testcase classname="sel4test" name="SYSCALL0016">
+2026-03-28T12:24:07.3448121Z 	</testcase>
+2026-03-28T12:24:07.3448366Z 	<testcase classname="sel4test" name="SYSCALL0017">
+2026-03-28T12:24:07.4057714Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @19bc0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.4059521Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @19bc0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.4061232Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @19bc0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.4062775Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @19bc0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.4063870Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @19bc0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.5530250Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @19bc0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.5531454Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @19bc0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.5532535Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @19bc0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.5533598Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @19bc0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.5535022Z [0m[1m<<[0m[32mseL4(CPU 0)[0m[1m [decodeCNodeInvocation/54 T0xffeea400 "sel4test-driver" @19bc0]: CNodeCap: Illegal Operation attempted.>>[0m
+2026-03-28T12:24:07.5535642Z 	</testcase>
+2026-03-28T12:24:07.5535890Z 	<testcase classname="sel4test" name="TIMER0001">
+2026-03-28T12:24:07.7604744Z 	</testcase>
+2026-03-28T12:24:07.7605343Z 	<testcase classname="sel4test" name="TIMER0002">
+2026-03-28T12:24:07.9074224Z 	</testcase>
+2026-03-28T12:24:07.9074720Z 	<testcase classname="sel4test" name="BIND0001">
+2026-03-28T12:24:07.9075411Z Running test BIND0001 (Test that a bound tcb waiting on a sync endpoint receives normal sync ipc and notification notifications.)
+2026-03-28T12:24:07.9076012Z Test BIND0001 passed
+2026-03-28T12:24:07.9076234Z 	</testcase>
+2026-03-28T12:24:07.9076476Z 	<testcase classname="sel4test" name="BIND0002">
+2026-03-28T12:24:08.0542796Z [1;31mPagefault from [BIND0002]: read fault at PC: 0xd8004 vaddr: 0, FSR 0x3000007[0m
+2026-03-28T12:24:08.0543517Z Register of root thread in test (may not be the thread that faulted)
+2026-03-28T12:24:08.0543980Z Register dump:
+2026-03-28T12:24:08.0544236Z pc:	0xd8004
+2026-03-28T12:24:08.0544463Z sp:	0x10011de0
+2026-03-28T12:24:08.0544691Z cpsr:	0x20000050
+2026-03-28T12:24:08.0544934Z r0:	0x10000004
+2026-03-28T12:24:08.0545157Z r1:	0x10011f19
+2026-03-28T12:24:08.0545379Z r8:	0x0
+2026-03-28T12:24:08.0545585Z r9:	0x0
+2026-03-28T12:24:08.0545798Z r10:	0x0
+2026-03-28T12:24:08.0546011Z r11:	0x10011e20
+2026-03-28T12:24:08.0546246Z r12:	0x38
+2026-03-28T12:24:08.0546457Z r2:	0x3c
+2026-03-28T12:24:08.0547119Z r3:	0x1164d
+2026-03-28T12:24:08.0547341Z r4:	0x0
+2026-03-28T12:24:08.0547518Z r5:	0x0
+2026-03-28T12:24:08.0547700Z r6:	0x0
+2026-03-28T12:24:08.0547882Z r7:	0x0
+2026-03-28T12:24:08.0548059Z r14:	0x7d0e0
+2026-03-28T12:24:08.0548252Z tpidrurw:	0x0
+2026-03-28T12:24:08.0548464Z tpidruro:	0x1164d0
+2026-03-28T12:24:08.0549069Z 		<failure type="failure">result == SUCCESS at line 296 of file /github/workspace/projects/sel4test/apps/sel4test-driver/src/testtypes.c</failure>
+2026-03-28T12:24:08.0550264Z 		<error>result == SUCCESS at line 217 of file /github/workspace/projects/sel4test/apps/sel4test-driver/src/main.c</error>
+2026-03-28T12:24:08.0550833Z 	</testcase>
+2026-03-28T12:24:08.0551074Z 	<testcase classname="sel4test" name="BIND0003">
+2026-03-28T12:24:08.2013319Z [1;31mPagefault from [BIND0003]: read fault at PC: 0x10178 vaddr: 0xffffffc0, FSR 0x3830006[0m
+2026-03-28T12:24:08.2013941Z Register of root thread in test (may not be the thread that faulted)
+2026-03-28T12:24:08.2014353Z Register dump:
+2026-03-28T12:24:08.2014589Z pc:	0x10178
+2026-03-28T12:24:08.2014785Z sp:	0x10011eb0
+2026-03-28T12:24:08.2014984Z cpsr:	0x50
+2026-03-28T12:24:08.2015171Z r0:	0x0
+2026-03-28T12:24:08.2015354Z r1:	0x0
+2026-03-28T12:24:08.2015529Z r8:	0x0
+2026-03-28T12:24:08.2015705Z r9:	0x0
+2026-03-28T12:24:08.2015887Z r10:	0x0
+2026-03-28T12:24:08.2016072Z r11:	0x0
+2026-03-28T12:24:08.2016252Z r12:	0x0
+2026-03-28T12:24:08.2016430Z r2:	0x0
+2026-03-28T12:24:08.2016611Z r3:	0x0
+2026-03-28T12:24:08.2016796Z r4:	0x0
+2026-03-28T12:24:08.2016970Z r5:	0x0
+2026-03-28T12:24:08.2017157Z r6:	0x0
+2026-03-28T12:24:08.2017333Z r7:	0x0
+2026-03-28T12:24:08.2017516Z r14:	0x0
+2026-03-28T12:24:08.2017706Z tpidrurw:	0x0
+2026-03-28T12:24:08.2017913Z tpidruro:	0x0
+2026-03-28T12:24:08.2018506Z 		<failure type="failure">result == SUCCESS at line 296 of file /github/workspace/projects/sel4test/apps/sel4test-driver/src/testtypes.c</failure>
+2026-03-28T12:24:08.2019706Z 		<error>result == SUCCESS at line 217 of file /github/workspace/projects/sel4test/apps/sel4test-driver/src/main.c</error>
+2026-03-28T12:24:08.2020269Z 	</testcase>
+2026-03-28T12:24:08.2020516Z 	<testcase classname="sel4test" name="BIND0004">
+2026-03-28T12:24:08.3482226Z [1;31mInvalid instruction from [BIND0004] at PC: 0x10178[0m
+2026-03-28T12:24:08.3482793Z Register of root thread in test (may not be the thread that faulted)
+2026-03-28T12:24:08.3483177Z Register dump:
+2026-03-28T12:24:08.3483384Z pc:	0x10178
+2026-03-28T12:24:08.3483588Z sp:	0x10011eb0
+2026-03-28T12:24:08.3484439Z cpsr:	0x50
+2026-03-28T12:24:08.3484715Z r0:	0x0
+2026-03-28T12:24:08.3484976Z r1:	0x0
+2026-03-28T12:24:08.3485245Z r8:	0x0
+2026-03-28T12:24:08.3485521Z r9:	0x0
+2026-03-28T12:24:08.3485829Z r10:	0x0
+2026-03-28T12:24:08.3486137Z r11:	0x0
+2026-03-28T12:24:08.3486429Z r12:	0x0
+2026-03-28T12:24:08.3486709Z r2:	0x0
+2026-03-28T12:24:08.3486988Z r3:	0x0
+2026-03-28T12:24:08.3487259Z r4:	0x0
+2026-03-28T12:24:08.3487536Z r5:	0x0
+2026-03-28T12:24:08.3487822Z r6:	0x0
+2026-03-28T12:24:08.3488107Z r7:	0x0
+2026-03-28T12:24:08.3488388Z r14:	0x0
+2026-03-28T12:24:08.3488723Z tpidrurw:	0x0
+2026-03-28T12:24:08.3489033Z tpidruro:	0x0
+2026-03-28T12:24:08.3490128Z 		<failure type="failure">result == SUCCESS at line 296 of file /github/workspace/projects/sel4test/apps/sel4test-driver/src/testtypes.c</failure>
+2026-03-28T12:24:08.3491101Z 		<error>result == SUCCESS at line 217 of file /github/workspace/projects/sel4test/apps/sel4test-driver/src/main.c</error>
+2026-03-28T12:24:08.3491661Z 	</testcase>
+2026-03-28T12:24:08.3491932Z 	<testcase classname="sel4test" name="BREAKPOINT_001">
+2026-03-28T12:28:28.7254693Z ##[error]The operation was canceled.
+2026-03-28T12:28:28.7316155Z Post job cleanup.
+2026-03-28T12:28:28.8440623Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/post-steps.sh
+2026-03-28T12:28:28.8492785Z ##[group]Releasing mq lock
+2026-03-28T12:28:28.8563567Z Agent pid 3354
+2026-03-28T12:28:28.9986729Z mq.sh sem -cancel jetson1 -k seL4/seL4-HW-23683028975-hw-run-3
+2026-03-28T12:28:46.2083161Z mq.sh sem -signal jetson1 -k seL4/seL4-HW-23683028975-hw-run-3
+2026-03-28T12:29:30.9554900Z ##[endgroup]
+2026-03-28T12:29:30.9718939Z Post job cleanup.
+2026-03-28T12:29:31.0653220Z [command]/usr/bin/git version
+2026-03-28T12:29:31.0690249Z git version 2.53.0
+2026-03-28T12:29:31.0740218Z Temporarily overriding HOME='/home/runner/work/_temp/62582370-d32a-4f40-bcb2-ceaa57c3efae' before making global git config changes
+2026-03-28T12:29:31.0741261Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-28T12:29:31.0745810Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/seL4/seL4/machine_queue
+2026-03-28T12:29:31.0781232Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-28T12:29:31.0812264Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-28T12:29:31.1029045Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-28T12:29:31.1049447Z http.https://github.com/.extraheader
+2026-03-28T12:29:31.1063202Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-03-28T12:29:31.1093249Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-28T12:29:31.1307289Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-28T12:29:31.1337909Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-28T12:29:31.1662549Z Cleaning up orphan processes
+2026-03-28T12:29:31.1894505Z Terminate orphan process: pid (2298) (steps.sh)
+2026-03-28T12:29:31.1956846Z Terminate orphan process: pid (2299) (hw-steps.sh)
+2026-03-28T12:29:31.2116605Z Terminate orphan process: pid (2391) (python3)
+2026-03-28T12:29:31.2178812Z Terminate orphan process: pid (2408) (ssh)
+2026-03-28T12:29:31.2300026Z Terminate orphan process: pid (3256) (time)
+2026-03-28T12:29:31.2363266Z Terminate orphan process: pid (3257) (mq.sh)
+2026-03-28T12:29:31.2395344Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/download-artifact@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

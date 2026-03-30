@@ -1,0 +1,627 @@
+﻿2026-03-28T11:19:18.7376983Z Current runner version: '2.333.0'
+2026-03-28T11:19:18.7412617Z ##[group]Runner Image Provisioner
+2026-03-28T11:19:18.7414371Z Hosted Compute Agent
+2026-03-28T11:19:18.7415446Z Version: 20260213.493
+2026-03-28T11:19:18.7416506Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-03-28T11:19:18.7417838Z Build Date: 2026-02-13T00:28:41Z
+2026-03-28T11:19:18.7419134Z Worker ID: {1d1d10b8-e22d-43c0-bf64-d9c4a8a9b37c}
+2026-03-28T11:19:18.7420490Z Azure Region: eastus2
+2026-03-28T11:19:18.7421467Z ##[endgroup]
+2026-03-28T11:19:18.7424110Z ##[group]Operating System
+2026-03-28T11:19:18.7425309Z Ubuntu
+2026-03-28T11:19:18.7426294Z 24.04.4
+2026-03-28T11:19:18.7427274Z LTS
+2026-03-28T11:19:18.7428177Z ##[endgroup]
+2026-03-28T11:19:18.7429140Z ##[group]Runner Image
+2026-03-28T11:19:18.7430370Z Image: ubuntu-24.04
+2026-03-28T11:19:18.7431447Z Version: 20260323.65.1
+2026-03-28T11:19:18.7433765Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260323.65/images/ubuntu/Ubuntu2404-Readme.md
+2026-03-28T11:19:18.7436906Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260323.65
+2026-03-28T11:19:18.7438582Z ##[endgroup]
+2026-03-28T11:19:18.7440596Z ##[group]GITHUB_TOKEN Permissions
+2026-03-28T11:19:18.7443714Z Contents: read
+2026-03-28T11:19:18.7445164Z Metadata: read
+2026-03-28T11:19:18.7446324Z ##[endgroup]
+2026-03-28T11:19:18.7449695Z Secret source: Actions
+2026-03-28T11:19:18.7451544Z Prepare workflow directory
+2026-03-28T11:19:18.7958073Z Prepare all required actions
+2026-03-28T11:19:18.8016506Z Getting action download info
+2026-03-28T11:19:19.0682120Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-03-28T11:19:19.1937259Z Download action repository 'actions/download-artifact@v4' (SHA:d3f86a106a0bac45b974a628896c90dbdf5c8093)
+2026-03-28T11:19:19.5401819Z Download action repository 'seL4/ci-actions@master' (SHA:5ffc97f19e2c7d81ad945d0d1b84b1c7c9ce26aa)
+2026-03-28T11:19:19.9240866Z Uses: seL4/ci-actions/.github/workflows/sel4test-hw.yml@refs/heads/master (5ffc97f19e2c7d81ad945d0d1b84b1c7c9ce26aa)
+2026-03-28T11:19:19.9246179Z Complete job name: seL4Test / HW Run (OMAP3, armv7a, gcc)
+2026-03-28T11:19:20.0008381Z ##[group]Run actions/checkout@v4
+2026-03-28T11:19:20.0009384Z with:
+2026-03-28T11:19:20.0009934Z   repository: seL4/machine_queue
+2026-03-28T11:19:20.0010558Z   path: machine_queue
+2026-03-28T11:19:20.0011351Z   token: ***
+2026-03-28T11:19:20.0011882Z   ssh-strict: true
+2026-03-28T11:19:20.0012405Z   ssh-user: git
+2026-03-28T11:19:20.0012942Z   persist-credentials: true
+2026-03-28T11:19:20.0013525Z   clean: true
+2026-03-28T11:19:20.0014267Z   sparse-checkout-cone-mode: true
+2026-03-28T11:19:20.0014906Z   fetch-depth: 1
+2026-03-28T11:19:20.0015431Z   fetch-tags: false
+2026-03-28T11:19:20.0015976Z   show-progress: true
+2026-03-28T11:19:20.0016522Z   lfs: false
+2026-03-28T11:19:20.0017014Z   submodules: false
+2026-03-28T11:19:20.0017548Z   set-safe-directory: true
+2026-03-28T11:19:20.0018400Z ##[endgroup]
+2026-03-28T11:19:20.1114419Z Syncing repository: seL4/machine_queue
+2026-03-28T11:19:20.1116548Z ##[group]Getting Git version info
+2026-03-28T11:19:20.1117771Z Working directory is '/home/runner/work/seL4/seL4/machine_queue'
+2026-03-28T11:19:20.1118996Z [command]/usr/bin/git version
+2026-03-28T11:19:20.1168861Z git version 2.53.0
+2026-03-28T11:19:20.1197260Z ##[endgroup]
+2026-03-28T11:19:20.1209691Z Temporarily overriding HOME='/home/runner/work/_temp/6fd0adf8-eaaa-4709-b5c2-1dc8bfe11c65' before making global git config changes
+2026-03-28T11:19:20.1211385Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-28T11:19:20.1215188Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/seL4/seL4/machine_queue
+2026-03-28T11:19:20.1245550Z ##[group]Initializing the repository
+2026-03-28T11:19:20.1250206Z [command]/usr/bin/git init /home/runner/work/seL4/seL4/machine_queue
+2026-03-28T11:19:20.1323156Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-03-28T11:19:20.1326112Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-03-28T11:19:20.1328313Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-03-28T11:19:20.1330079Z hint: call:
+2026-03-28T11:19:20.1331068Z hint:
+2026-03-28T11:19:20.1332525Z hint: 	git config --global init.defaultBranch <name>
+2026-03-28T11:19:20.1334097Z hint:
+2026-03-28T11:19:20.1335468Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-03-28T11:19:20.1337580Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-03-28T11:19:20.1339174Z hint:
+2026-03-28T11:19:20.1340052Z hint: 	git branch -m <name>
+2026-03-28T11:19:20.1341023Z hint:
+2026-03-28T11:19:20.1342372Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-03-28T11:19:20.1344411Z Initialized empty Git repository in /home/runner/work/seL4/seL4/machine_queue/.git/
+2026-03-28T11:19:20.1346380Z [command]/usr/bin/git remote add origin https://github.com/seL4/machine_queue
+2026-03-28T11:19:20.1368598Z ##[endgroup]
+2026-03-28T11:19:20.1370450Z ##[group]Disabling automatic garbage collection
+2026-03-28T11:19:20.1374073Z [command]/usr/bin/git config --local gc.auto 0
+2026-03-28T11:19:20.1403188Z ##[endgroup]
+2026-03-28T11:19:20.1405215Z ##[group]Setting up auth
+2026-03-28T11:19:20.1410768Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-28T11:19:20.1441305Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-28T11:19:20.1712331Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-28T11:19:20.1743451Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-28T11:19:20.1971947Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-28T11:19:20.2004552Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-28T11:19:20.2225077Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-03-28T11:19:20.2257702Z ##[endgroup]
+2026-03-28T11:19:20.2258652Z ##[group]Determining the default branch
+2026-03-28T11:19:20.2260968Z Retrieving the default branch name
+2026-03-28T11:19:20.4783590Z Default branch 'master'
+2026-03-28T11:19:20.4786182Z ##[endgroup]
+2026-03-28T11:19:20.4788101Z ##[group]Fetching the repository
+2026-03-28T11:19:20.4791922Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/master:refs/remotes/origin/master
+2026-03-28T11:19:20.7047981Z From https://github.com/seL4/machine_queue
+2026-03-28T11:19:20.7049887Z  * [new branch]      master     -> origin/master
+2026-03-28T11:19:20.7078736Z ##[endgroup]
+2026-03-28T11:19:20.7081724Z ##[group]Determining the checkout info
+2026-03-28T11:19:20.7084525Z ##[endgroup]
+2026-03-28T11:19:20.7086324Z [command]/usr/bin/git sparse-checkout disable
+2026-03-28T11:19:20.7135840Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-03-28T11:19:20.7169322Z ##[group]Checking out the ref
+2026-03-28T11:19:20.7174459Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2026-03-28T11:19:20.7266427Z Reset branch 'master'
+2026-03-28T11:19:20.7269482Z branch 'master' set up to track 'origin/master'.
+2026-03-28T11:19:20.7281064Z ##[endgroup]
+2026-03-28T11:19:20.7322439Z [command]/usr/bin/git log -1 --format=%H
+2026-03-28T11:19:20.7347539Z f0835aa54749667d30c9143e0fd3353e9367f2dd
+2026-03-28T11:19:20.7750090Z ##[group]Run actions/download-artifact@v4
+2026-03-28T11:19:20.7751424Z with:
+2026-03-28T11:19:20.7752620Z   name: images-sel4test-armv7a-gcc
+2026-03-28T11:19:20.7754142Z   merge-multiple: false
+2026-03-28T11:19:20.7755212Z   repository: seL4/seL4
+2026-03-28T11:19:20.7756226Z   run-id: 23683028975
+2026-03-28T11:19:20.7757187Z ##[endgroup]
+2026-03-28T11:19:20.9807061Z Downloading single artifact
+2026-03-28T11:19:21.0987628Z Preparing to download the following artifacts:
+2026-03-28T11:19:21.0990983Z - images-sel4test-armv7a-gcc (ID: 6157999371, Size: 46579792, Expected Digest: sha256:5c3f405158321c4fc6699be05d6529ff3c667b9bb0d3bb26314cd86b4ef390df)
+2026-03-28T11:19:21.1665399Z Redirecting to blob download url: https://productionresultssa12.blob.core.windows.net/actions-results/67943b6a-35be-482f-9f9f-0b154c4e5a22/workflow-job-run-23735521-2c38-556b-81d0-c1a303b92c00/artifacts/087f634bd2ef84aefc9a487dd01aeff6fa1f28ace2d85ca502fa9f39c418fa1c.zip
+2026-03-28T11:19:21.1674510Z Starting download of artifact to: /home/runner/work/seL4/seL4
+2026-03-28T11:19:21.2598036Z (node:2201) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-03-28T11:19:21.2602627Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-03-28T11:19:22.0345055Z SHA256 digest of downloaded artifact is 5c3f405158321c4fc6699be05d6529ff3c667b9bb0d3bb26314cd86b4ef390df
+2026-03-28T11:19:22.0345899Z Artifact download completed successfully.
+2026-03-28T11:19:22.0346291Z Total of 1 artifact(s) downloaded
+2026-03-28T11:19:22.0351883Z Download artifact has finished successfully
+2026-03-28T11:19:22.0541432Z ##[group]Run seL4/ci-actions/sel4test-hw-run@master
+2026-03-28T11:19:22.0541867Z with:
+2026-03-28T11:19:22.0542122Z   platform: OMAP3
+2026-03-28T11:19:22.0542403Z   compiler: gcc
+2026-03-28T11:19:22.0542667Z   index: $10
+2026-03-28T11:19:22.0542953Z   action_name: sel4test-hw-run
+2026-03-28T11:19:22.0543266Z env:
+2026-03-28T11:19:22.0545685Z   HW_SSH: ***
+
+2026-03-28T11:19:22.0545993Z ##[endgroup]
+2026-03-28T11:19:22.1629681Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/steps.sh
+2026-03-28T11:19:22.1687534Z ##[group]Setting up
+2026-03-28T11:19:22.2039298Z Agent pid 2232
+2026-03-28T11:19:22.2266185Z Cloning into 'seL4_libs'...
+2026-03-28T11:19:25.0212747Z Reading package lists...
+2026-03-28T11:19:25.2419445Z Building dependency tree...
+2026-03-28T11:19:25.2487790Z Reading state information...
+2026-03-28T11:19:25.4721880Z libffi-dev is already the newest version (3.4.6-1build1).
+2026-03-28T11:19:25.4722613Z libffi-dev set to manually installed.
+2026-03-28T11:19:25.4723303Z 0 upgraded, 0 newly installed, 0 to remove and 24 not upgraded.
+2026-03-28T11:19:26.2180543Z Collecting junitparser==3.*
+2026-03-28T11:19:26.2646252Z   Downloading junitparser-3.2.0-py2.py3-none-any.whl.metadata (9.0 kB)
+2026-03-28T11:19:26.2985546Z Collecting sel4-deps
+2026-03-28T11:19:26.3074668Z   Downloading sel4_deps-0.7.0-py3-none-any.whl.metadata (1.1 kB)
+2026-03-28T11:19:26.3182200Z Requirement already satisfied: six in /usr/lib/python3/dist-packages (from sel4-deps) (1.16.0)
+2026-03-28T11:19:26.3381039Z Collecting future (from sel4-deps)
+2026-03-28T11:19:26.3453663Z   Downloading future-1.0.0-py3-none-any.whl.metadata (4.0 kB)
+2026-03-28T11:19:26.3507356Z Requirement already satisfied: jinja2 in /usr/lib/python3/dist-packages (from sel4-deps) (3.1.2)
+2026-03-28T11:19:26.5780741Z Collecting lxml (from sel4-deps)
+2026-03-28T11:19:26.5853617Z   Downloading lxml-6.0.2-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.6 kB)
+2026-03-28T11:19:26.6051211Z Collecting ply (from sel4-deps)
+2026-03-28T11:19:26.6123698Z   Downloading ply-3.11-py2.py3-none-any.whl.metadata (844 bytes)
+2026-03-28T11:19:26.7037599Z Collecting psutil (from sel4-deps)
+2026-03-28T11:19:26.7112826Z   Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+2026-03-28T11:19:26.7334225Z Collecting bs4 (from sel4-deps)
+2026-03-28T11:19:26.7402720Z   Downloading bs4-0.0.2-py2.py3-none-any.whl.metadata (411 bytes)
+2026-03-28T11:19:26.7591278Z Collecting pyelftools (from sel4-deps)
+2026-03-28T11:19:26.7660512Z   Downloading pyelftools-0.32-py3-none-any.whl.metadata (372 bytes)
+2026-03-28T11:19:26.8144312Z Collecting sh (from sel4-deps)
+2026-03-28T11:19:26.8223334Z   Downloading sh-2.2.2-py3-none-any.whl.metadata (3.7 kB)
+2026-03-28T11:19:26.8267547Z Requirement already satisfied: pexpect in /usr/lib/python3/dist-packages (from sel4-deps) (4.9.0)
+2026-03-28T11:19:26.8277603Z Requirement already satisfied: pyyaml>=5.1 in /usr/lib/python3/dist-packages (from sel4-deps) (6.0.1)
+2026-03-28T11:19:26.8286122Z Requirement already satisfied: jsonschema in /usr/lib/python3/dist-packages (from sel4-deps) (4.10.3)
+2026-03-28T11:19:26.8445401Z Collecting pyfdt (from sel4-deps)
+2026-03-28T11:19:26.8534156Z   Downloading pyfdt-0.3.tar.gz (9.1 kB)
+2026-03-28T11:19:26.8593906Z   Preparing metadata (setup.py): started
+2026-03-28T11:19:27.0382285Z   Preparing metadata (setup.py): finished with status 'done'
+2026-03-28T11:19:27.0587277Z Collecting cmake-format==0.6.13 (from sel4-deps)
+2026-03-28T11:19:27.0670841Z   Downloading cmake_format-0.6.13-py3-none-any.whl.metadata (23 kB)
+2026-03-28T11:19:27.0897040Z Collecting guardonce (from sel4-deps)
+2026-03-28T11:19:27.0981273Z   Downloading guardonce-2.4.0-py2.py3-none-any.whl.metadata (3.4 kB)
+2026-03-28T11:19:27.1243356Z Collecting autopep8==2.3.2 (from sel4-deps)
+2026-03-28T11:19:27.1333026Z   Downloading autopep8-2.3.2-py2.py3-none-any.whl.metadata (16 kB)
+2026-03-28T11:19:27.1557962Z Collecting libarchive-c (from sel4-deps)
+2026-03-28T11:19:27.1640466Z   Downloading libarchive_c-5.3-py3-none-any.whl.metadata (5.8 kB)
+2026-03-28T11:19:27.1911410Z Collecting pycodestyle>=2.12.0 (from autopep8==2.3.2->sel4-deps)
+2026-03-28T11:19:27.1983910Z   Downloading pycodestyle-2.14.0-py2.py3-none-any.whl.metadata (4.5 kB)
+2026-03-28T11:19:27.2207229Z Collecting cmakelang>=0.6.13 (from cmake-format==0.6.13->sel4-deps)
+2026-03-28T11:19:27.2292293Z   Downloading cmakelang-0.6.13-py3-none-any.whl.metadata (23 kB)
+2026-03-28T11:19:27.2594791Z Collecting beautifulsoup4 (from bs4->sel4-deps)
+2026-03-28T11:19:27.2665063Z   Downloading beautifulsoup4-4.14.3-py3-none-any.whl.metadata (3.8 kB)
+2026-03-28T11:19:27.2877492Z Requirement already satisfied: attrs>=17.4.0 in /usr/lib/python3/dist-packages (from jsonschema->sel4-deps) (23.2.0)
+2026-03-28T11:19:27.2892470Z Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,>=0.14.0 in /usr/lib/python3/dist-packages (from jsonschema->sel4-deps) (0.20.0)
+2026-03-28T11:19:27.4071594Z Collecting soupsieve>=1.6.1 (from beautifulsoup4->bs4->sel4-deps)
+2026-03-28T11:19:27.4145067Z   Downloading soupsieve-2.8.3-py3-none-any.whl.metadata (4.6 kB)
+2026-03-28T11:19:27.4188424Z Requirement already satisfied: typing-extensions>=4.0.0 in /usr/lib/python3/dist-packages (from beautifulsoup4->bs4->sel4-deps) (4.10.0)
+2026-03-28T11:19:27.4317732Z Downloading junitparser-3.2.0-py2.py3-none-any.whl (13 kB)
+2026-03-28T11:19:27.4416530Z Downloading sel4_deps-0.7.0-py3-none-any.whl (1.4 kB)
+2026-03-28T11:19:27.4504385Z Downloading autopep8-2.3.2-py2.py3-none-any.whl (45 kB)
+2026-03-28T11:19:27.4551542Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.8/45.8 kB 14.8 MB/s eta 0:00:00
+2026-03-28T11:19:27.4633312Z Downloading cmake_format-0.6.13-py3-none-any.whl (19 kB)
+2026-03-28T11:19:27.4724794Z Downloading bs4-0.0.2-py2.py3-none-any.whl (1.2 kB)
+2026-03-28T11:19:27.4818640Z Downloading future-1.0.0-py3-none-any.whl (491 kB)
+2026-03-28T11:19:27.5075546Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 491.3/491.3 kB 20.3 MB/s eta 0:00:00
+2026-03-28T11:19:27.5159698Z Downloading guardonce-2.4.0-py2.py3-none-any.whl (15 kB)
+2026-03-28T11:19:27.5251486Z Downloading libarchive_c-5.3-py3-none-any.whl (17 kB)
+2026-03-28T11:19:27.5344976Z Downloading lxml-6.0.2-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.3 MB)
+2026-03-28T11:19:27.5894410Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 99.6 MB/s eta 0:00:00
+2026-03-28T11:19:27.5967259Z Downloading ply-3.11-py2.py3-none-any.whl (49 kB)
+2026-03-28T11:19:27.6009882Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.6/49.6 kB 16.7 MB/s eta 0:00:00
+2026-03-28T11:19:27.6087296Z Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+2026-03-28T11:19:27.6132631Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.6/155.6 kB 54.0 MB/s eta 0:00:00
+2026-03-28T11:19:27.6203647Z Downloading pyelftools-0.32-py3-none-any.whl (188 kB)
+2026-03-28T11:19:27.6260352Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.5/188.5 kB 47.6 MB/s eta 0:00:00
+2026-03-28T11:19:27.6350816Z Downloading sh-2.2.2-py3-none-any.whl (38 kB)
+2026-03-28T11:19:27.6480062Z Downloading cmakelang-0.6.13-py3-none-any.whl (159 kB)
+2026-03-28T11:19:27.6528680Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 159.8/159.8 kB 53.3 MB/s eta 0:00:00
+2026-03-28T11:19:27.6599353Z Downloading pycodestyle-2.14.0-py2.py3-none-any.whl (31 kB)
+2026-03-28T11:19:27.6697990Z Downloading beautifulsoup4-4.14.3-py3-none-any.whl (107 kB)
+2026-03-28T11:19:27.6746780Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.7/107.7 kB 33.5 MB/s eta 0:00:00
+2026-03-28T11:19:27.6816916Z Downloading soupsieve-2.8.3-py3-none-any.whl (37 kB)
+2026-03-28T11:19:27.7061573Z Building wheels for collected packages: pyfdt
+2026-03-28T11:19:27.7066752Z   Building wheel for pyfdt (setup.py): started
+2026-03-28T11:19:27.9580076Z   Building wheel for pyfdt (setup.py): finished with status 'done'
+2026-03-28T11:19:27.9584489Z   Created wheel for pyfdt: filename=pyfdt-0.3-py3-none-any.whl size=10969 sha256=bd53ddf054f625a06636f929a1237f80c636f234b76df9781f47091ccc429cfa
+2026-03-28T11:19:27.9586551Z   Stored in directory: /home/runner/.cache/pip/wheels/d9/8e/2a/cff33f3accb8eaa34608e68786db1ec323a5f6bce8d724d90a
+2026-03-28T11:19:27.9601553Z Successfully built pyfdt
+2026-03-28T11:19:28.2446690Z Installing collected packages: pyfdt, pyelftools, ply, libarchive-c, junitparser, guardonce, soupsieve, sh, pycodestyle, psutil, lxml, future, cmakelang, cmake-format, beautifulsoup4, autopep8, bs4, sel4-deps
+2026-03-28T11:19:29.1882479Z Successfully installed autopep8-2.3.2 beautifulsoup4-4.14.3 bs4-0.0.2 cmake-format-0.6.13 cmakelang-0.6.13 future-1.0.0 guardonce-2.4.0 junitparser-3.2.0 libarchive-c-5.3 lxml-6.0.2 ply-3.11 psutil-7.2.2 pycodestyle-2.14.0 pyelftools-0.32 pyfdt-0.3 sel4-deps-0.7.0 sh-2.2.2 soupsieve-2.8.3
+2026-03-28T11:19:29.2936858Z ##[endgroup]
+2026-03-28T11:19:29.4376930Z 
+2026-03-28T11:19:29.4378514Z ##[group]OMAP3_debug_gcc_32
+2026-03-28T11:19:29.4379627Z [1m-----------[ start test OMAP3_debug_gcc_32 ]-----------[0m
+2026-03-28T11:19:29.4380638Z [33m+++ tar xvzf ../OMAP3_debug_gcc_32-images.tar.gz[0m
+2026-03-28T11:19:29.4412743Z images/
+2026-03-28T11:19:29.4413683Z images/sel4test-driver-image-arm-omap3
+2026-03-28T11:19:29.4637985Z [33m+++ mq.sh sem -info beagle[0m
+2026-03-28T11:19:46.0994392Z Lock for beagle currently free
+2026-03-28T11:19:46.0995228Z [33m+++ time mq.sh sem -wait beagle -k seL4/seL4-HW-23683028975-hw-run-10 -T 1800[0m
+2026-03-28T11:36:51.0397501Z 0.02user 0.02system 17:04.93elapsed 0%CPU (0avgtext+0avgdata 8288maxresident)k
+2026-03-28T11:36:51.0398497Z 0inputs+0outputs (0major+5470minor)pagefaults 0swaps
+2026-03-28T11:36:51.0399992Z [33m+++ time mq.sh run -c </testsuite> -s beagle -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-23683028975-hw-run-10 -f images/sel4test-driver-image-arm-omap3[0m
+2026-03-28T11:37:01.6732137Z Lock acquired, we are allowed to run
+2026-03-28T11:37:16.1080302Z pxelinux=False
+2026-03-28T11:37:16.1081002Z copied '/tmp/tmp.kHjaPY3kdX' -> '/tftpboot/beagle1/sel4-image'
+2026-03-28T11:37:16.1081628Z removed '/tmp/tmp.kHjaPY3kdX'
+2026-03-28T11:37:16.3041590Z co
+2026-03-28T11:37:16.3041901Z ^Eco
+2026-03-28T11:37:16.3042150Z [Enter `^Ec?' for help]
+2026-03-28T11:37:16.6966350Z [connecting...up]
+2026-03-28T11:37:16.6966881Z Rebooting beagle1 and loading image: /tmp/tmp.kHjaPY3kdX
+2026-03-28T11:37:19.0895171Z  
+2026-03-28T11:37:19.0895709Z U-Boot SPL 2015.07-rc1-00304-ga84988c (May 25 2015 - 17:05:34)
+2026-03-28T11:37:19.2856291Z SPL: Please implement spl_start_uboot() for your board
+2026-03-28T11:37:19.2856778Z SPL: Direct Linux boot not active!
+2026-03-28T11:37:19.4817189Z reading u-boot.img
+2026-03-28T11:37:19.4817675Z reading u-boot.img
+2026-03-28T11:37:19.4817948Z 
+2026-03-28T11:37:19.4817955Z 
+2026-03-28T11:37:19.4817962Z 
+2026-03-28T11:37:19.4818281Z U-Boot 2015.07-rc1-00304-ga84988c (May 25 2015 - 17:05:34)
+2026-03-28T11:37:19.4818768Z 
+2026-03-28T11:37:19.4818772Z 
+2026-03-28T11:37:19.4819085Z OMAP3630/3730-GP ES1.1, CPU-OPP2, L3-200MHz, Max CPU Clock 1 Ghz
+2026-03-28T11:37:19.4819544Z 
+2026-03-28T11:37:19.4819710Z OMAP3 Beagle board + LPDDR/NAND
+2026-03-28T11:37:19.4819987Z 
+2026-03-28T11:37:19.4820132Z I2C:   ready
+2026-03-28T11:37:19.4820309Z 
+2026-03-28T11:37:19.4820449Z DRAM:  512 MiB
+2026-03-28T11:37:19.4820645Z 
+2026-03-28T11:37:19.4820791Z NAND:  256 MiB
+2026-03-28T11:37:19.4821023Z 
+2026-03-28T11:37:19.4821167Z MMC:   OMAP SD/MMC: 0
+2026-03-28T11:37:19.6776388Z 
+2026-03-28T11:37:19.6777119Z Beagle xM Rev A/B
+2026-03-28T11:37:19.6777438Z 
+2026-03-28T11:37:19.6777589Z No EEPROM on expansion board
+2026-03-28T11:37:19.6777850Z 
+2026-03-28T11:37:19.6778002Z Die ID #506e00011ff00000015739eb0c00700e
+2026-03-28T11:37:19.6778314Z 
+2026-03-28T11:37:19.6778449Z Net:   usb_ether
+2026-03-28T11:37:19.6778635Z 
+2026-03-28T11:37:19.6778778Z Error: usb_ether address not set.
+2026-03-28T11:37:19.6779028Z 
+2026-03-28T11:37:19.6779053Z 
+2026-03-28T11:37:19.6779213Z U-Boot# setenv autoload no
+2026-03-28T11:37:19.6779560Z setenv autoload no
+2026-03-28T11:37:19.6780170Z 
+2026-03-28T11:37:19.8737111Z U-Boot# usb start
+2026-03-28T11:37:19.8737445Z usb start
+2026-03-28T11:37:19.8737583Z 
+2026-03-28T11:37:19.8737680Z starting USB...
+2026-03-28T11:37:19.8737841Z 
+2026-03-28T11:37:19.8737944Z USB0:   USB EHCI 1.00
+2026-03-28T11:37:19.8738122Z 
+2026-03-28T11:37:23.6105204Z scanning bus 0 for devices... 3 USB Device(s) found
+2026-03-28T11:37:23.6105644Z 
+2026-03-28T11:37:23.6105858Z        scanning usb for storage devices... 0 Storage Device(s) found
+2026-03-28T11:37:23.6106211Z 
+2026-03-28T11:37:23.6106426Z        scanning usb for ethernet devices... 1 Ethernet Device(s) found
+2026-03-28T11:37:23.6106762Z 
+2026-03-28T11:37:23.8066077Z U-Boot# dhcp
+2026-03-28T11:37:23.8066490Z dhcp
+2026-03-28T11:37:23.8066658Z 
+2026-03-28T11:37:23.8066850Z ERROR: Need valid 'usbnet_devaddr' to be set
+2026-03-28T11:37:23.8067198Z 
+2026-03-28T11:37:23.8067415Z at drivers/usb/gadget/ether.c:2332/usb_eth_init()
+2026-03-28T11:37:23.8067775Z 
+2026-03-28T11:37:25.1561232Z Waiting for Ethernet connection... done.
+2026-03-28T11:37:25.1561763Z 
+2026-03-28T11:37:25.1561934Z BOOTP broadcast 1
+2026-03-28T11:37:29.4864232Z 
+2026-03-28T11:37:29.4864771Z BOOTP broadcast 2
+2026-03-28T11:37:29.6824898Z 
+2026-03-28T11:37:29.6825730Z DHCP client bound to address 172.16.1.63 (4339 ms)
+2026-03-28T11:37:29.6826138Z 
+2026-03-28T11:37:29.6826338Z U-Boot# tftpboot 0x81000000 beagle1/sel4-image
+2026-03-28T11:37:29.6826838Z tftpboot 0x81000000 beagle1/sel4-image
+2026-03-28T11:37:29.6827168Z 
+2026-03-28T11:37:31.1938758Z Waiting for Ethernet connection... done.
+2026-03-28T11:37:31.1939095Z 
+2026-03-28T11:37:31.1939212Z Using sms0 device
+2026-03-28T11:37:31.1939382Z 
+2026-03-28T11:37:31.1939577Z TFTP from server 172.16.0.2; our IP address is 172.16.1.63
+2026-03-28T11:37:31.1939904Z 
+2026-03-28T11:37:31.1940036Z Filename 'beagle1/sel4-image'.
+2026-03-28T11:37:31.1940247Z 
+2026-03-28T11:37:31.1940362Z Load address: 0x81000000
+2026-03-28T11:37:31.1940553Z 
+2026-03-28T11:37:36.2072834Z Loading: *EHCI timed out on TD - token=0x88008d80
+2026-03-28T11:37:36.2073434Z 
+2026-03-28T11:37:36.7963297Z T #################################################################
+2026-03-28T11:37:36.7963660Z 
+2026-03-28T11:37:37.1887802Z 	 #################################################################
+2026-03-28T11:37:37.1888269Z 
+2026-03-28T11:37:37.5811111Z 	 #################################################################
+2026-03-28T11:37:37.5811568Z 
+2026-03-28T11:37:37.7772959Z 	 ##############################
+2026-03-28T11:37:37.7773299Z 
+2026-03-28T11:37:37.7773409Z 	 493.2 KiB/s
+2026-03-28T11:37:37.7773563Z 
+2026-03-28T11:37:37.7773662Z done
+2026-03-28T11:37:37.7774120Z 
+2026-03-28T11:37:37.7774271Z Bytes transferred = 3292004 (323b64 hex)
+2026-03-28T11:37:37.7774532Z 
+2026-03-28T11:37:37.7774671Z U-Boot# bootelf 0x81000000
+2026-03-28T11:37:37.7774971Z bootelf 0x81000000
+2026-03-28T11:37:37.9733386Z 
+2026-03-28T11:37:37.9734229Z ## Starting application at 0x80462000 ...
+2026-03-28T11:37:37.9734672Z 
+2026-03-28T11:37:37.9734677Z 
+2026-03-28T11:37:37.9734944Z ELF-loader started on CPU: ARM Ltd. Cortex-A8 r3p2
+2026-03-28T11:37:37.9735416Z   paddr=[80462000..8077d047]
+2026-03-28T11:37:37.9735779Z No DTB passed in from boot loader.
+2026-03-28T11:37:37.9736232Z Looking for DTB in CPIO archive...found at 804a10a0.
+2026-03-28T11:37:37.9736685Z Loaded DTB from 804a10a0.
+2026-03-28T11:37:37.9737015Z    paddr=[8003c000..8004bfff]
+2026-03-28T11:37:37.9737382Z ELF-loading image 'kernel' to 80000000
+2026-03-28T11:37:37.9737776Z   paddr=[80000000..8003bfff]
+2026-03-28T11:37:37.9738119Z   vaddr=[f0000000..f003bfff]
+2026-03-28T11:37:37.9738445Z   virt_entry=f0000000
+2026-03-28T11:37:38.1695578Z ELF-loading image 'rootserver' to 8004c000
+2026-03-28T11:37:38.1696066Z   paddr=[8004c000..80441fff]
+2026-03-28T11:37:38.1696389Z   vaddr=[10000..405fff]
+2026-03-28T11:37:38.1696672Z   virt_entry=1e218
+2026-03-28T11:37:41.1779124Z Enabling MMU and jumping to entry point...
+2026-03-28T11:37:41.1779501Z 
+2026-03-28T11:37:41.3739813Z Bootstrapping kernel
+2026-03-28T11:37:41.3740901Z available phys memory regions: 1
+2026-03-28T11:37:41.3741344Z   [80000000..90000000)
+2026-03-28T11:37:41.3741720Z reserved virt address space regions: 4
+2026-03-28T11:37:41.3742155Z   [f0000000..f003c000)
+2026-03-28T11:37:41.3742485Z   [f003c000..f004b05e)
+2026-03-28T11:37:41.3742812Z   [f004c000..f0442000)
+2026-03-28T11:37:41.3743134Z   [ff000000..ff100000)
+2026-03-28T11:37:41.3743510Z Booting all finished, dropped to user space
+2026-03-28T11:37:41.3744401Z Caught cap fault in send phase at address 0
+2026-03-28T11:37:41.3744862Z while trying to handle:
+2026-03-28T11:37:41.3745310Z vm fault on data at address 0xef7fe000 with status 0x805
+2026-03-28T11:37:41.3745924Z in thread 0xffef7200 "sel4test-driver" at address 0x7b37c
+2026-03-28T11:37:41.3746432Z With stack:
+2026-03-28T11:37:41.3746723Z 0x2f3d70: 0xf
+2026-03-28T11:37:41.3747028Z 0x2f3d74: 0x1
+2026-03-28T11:37:41.3747268Z 0x2f3d78: 0x2f3d88
+2026-03-28T11:37:41.3747525Z 0x2f3d7c: 0x2f3da8
+2026-03-28T11:37:41.3747774Z 0x2f3d80: 0x1000
+2026-03-28T11:37:41.3748034Z 0x2f3d84: 0x2d0028
+2026-03-28T11:37:41.3748279Z 0x2f3d88: 0x478
+2026-03-28T11:37:41.3748521Z 0x2f3d8c: 0x2d2150
+2026-03-28T11:37:41.3748765Z 0x2f3d90: 0xa
+2026-03-28T11:37:41.3749002Z 0x2f3d94: 0xa
+2026-03-28T11:37:41.3749234Z 0x2f3d98: 0x2d2810
+2026-03-28T11:37:41.3749477Z 0x2f3d9c: 0x2d0ad8
+2026-03-28T11:37:41.3749725Z 0x2f3da0: 0x2f3dbc
+2026-03-28T11:37:41.3749969Z 0x2f3da4: 0x2f3dbc
+2026-03-28T11:37:41.3750210Z 0x2f3da8: 0x1
+2026-03-28T11:37:41.3750448Z 0x2f3dac: 0x479
+2026-03-28T11:52:37.9066426Z 
+2026-03-28T11:52:37.9066866Z [[Timeout]]
+2026-03-28T11:52:37.9067156Z None
+2026-03-28T11:52:38.1027384Z 
+2026-03-28T11:52:38.1028264Z console_run returned -1
+2026-03-28T11:52:38.1028655Z Shutting down beagle1
+2026-03-28T11:52:38.3836111Z 
+2026-03-28T11:52:41.9213725Z Command exited with non-zero status 255
+2026-03-28T11:52:41.9215159Z 0.03user 0.03system 15:50.88elapsed 0%CPU (0avgtext+0avgdata 8316maxresident)k
+2026-03-28T11:52:41.9216103Z 272inputs+8outputs (1major+7247minor)pagefaults 0swaps
+2026-03-28T11:52:41.9217145Z [31;1m>>> command failed, aborting.[0m
+2026-03-28T11:52:41.9217796Z [33m+++ mq.sh sem -signal beagle -k seL4/seL4-HW-23683028975-hw-run-10[0m
+2026-03-28T11:52:53.3054428Z [1m-----------[ end test OMAP3_debug_gcc_32 ]-----------[0m
+2026-03-28T11:52:53.3055886Z ##[endgroup]
+2026-03-28T11:52:53.3056531Z [31;1mOMAP3_debug_gcc_32 FAILED[0m
+2026-03-28T11:52:53.3057005Z 
+2026-03-28T11:52:53.3057646Z ##[group]OMAP3_debug_MCS_gcc_32
+2026-03-28T11:52:53.3058629Z [1m-----------[ start test OMAP3_debug_MCS_gcc_32 ]-----------[0m
+2026-03-28T11:52:53.3062443Z [33m+++ tar xvzf ../OMAP3_debug_MCS_gcc_32-images.tar.gz[0m
+2026-03-28T11:52:53.3089832Z images/
+2026-03-28T11:52:53.3090552Z images/sel4test-driver-image-arm-omap3
+2026-03-28T11:52:53.3307389Z [33m+++ mq.sh sem -info beagle[0m
+2026-03-28T11:52:59.5293086Z Lock for beagle currently free
+2026-03-28T11:52:59.5294484Z [33m+++ time mq.sh sem -wait beagle -k seL4/seL4-HW-23683028975-hw-run-10 -T 1800[0m
+2026-03-28T12:08:52.4310492Z 0.02user 0.02system 15:52.90elapsed 0%CPU (0avgtext+0avgdata 8316maxresident)k
+2026-03-28T12:08:52.4311329Z 0inputs+0outputs (1major+5475minor)pagefaults 0swaps
+2026-03-28T12:08:52.4312761Z [33m+++ time mq.sh run -c </testsuite> -s beagle -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-23683028975-hw-run-10 -f images/sel4test-driver-image-arm-omap3[0m
+2026-03-28T12:08:56.2011456Z Lock acquired, we are allowed to run
+2026-03-28T12:09:02.5699357Z pxelinux=False
+2026-03-28T12:09:02.5699850Z copied '/tmp/tmp.LNMAmMuMuR' -> '/tftpboot/beagle1/sel4-image'
+2026-03-28T12:09:02.5700328Z removed '/tmp/tmp.LNMAmMuMuR'
+2026-03-28T12:09:02.7661094Z co
+2026-03-28T12:09:02.7661375Z ^Eco
+2026-03-28T12:09:02.7661608Z [Enter `^Ec?' for help]
+2026-03-28T12:09:03.1945813Z [connecting...up]
+2026-03-28T12:09:03.3907522Z Rebooting beagle1 and loading image: /tmp/tmp.LNMAmMuMuR
+2026-03-28T12:09:05.6138465Z  
+2026-03-28T12:09:05.6138976Z U-Boot SPL 2015.07-rc1-00304-ga84988c (May 25 2015 - 17:05:34)
+2026-03-28T12:09:05.8100303Z SPL: Please implement spl_start_uboot() for your board
+2026-03-28T12:09:05.8100956Z SPL: Direct Linux boot not active!
+2026-03-28T12:09:06.0061489Z reading u-boot.img
+2026-03-28T12:09:06.0061855Z reading u-boot.img
+2026-03-28T12:09:06.0062024Z 
+2026-03-28T12:09:06.0062029Z 
+2026-03-28T12:09:06.0062032Z 
+2026-03-28T12:09:06.0062221Z U-Boot 2015.07-rc1-00304-ga84988c (May 25 2015 - 17:05:34)
+2026-03-28T12:09:06.0062517Z 
+2026-03-28T12:09:06.0062548Z 
+2026-03-28T12:09:06.0062761Z OMAP3630/3730-GP ES1.1, CPU-OPP2, L3-200MHz, Max CPU Clock 1 Ghz
+2026-03-28T12:09:06.0063092Z 
+2026-03-28T12:09:06.0063204Z OMAP3 Beagle board + LPDDR/NAND
+2026-03-28T12:09:06.0063404Z 
+2026-03-28T12:09:06.0063501Z I2C:   ready
+2026-03-28T12:09:06.0063651Z 
+2026-03-28T12:09:06.0063965Z DRAM:  512 MiB
+2026-03-28T12:09:06.0064121Z 
+2026-03-28T12:09:06.0064213Z NAND:  256 MiB
+2026-03-28T12:09:06.0064352Z 
+2026-03-28T12:09:06.0064455Z MMC:   OMAP SD/MMC: 0
+2026-03-28T12:09:06.2025128Z 
+2026-03-28T12:09:06.2025742Z Beagle xM Rev A/B
+2026-03-28T12:09:06.2025984Z 
+2026-03-28T12:09:06.2026109Z No EEPROM on expansion board
+2026-03-28T12:09:06.2026334Z 
+2026-03-28T12:09:06.2026467Z Die ID #506e00011ff00000015739eb0c00700e
+2026-03-28T12:09:06.2026714Z 
+2026-03-28T12:09:06.2026836Z Net:   usb_ether
+2026-03-28T12:09:06.2027008Z 
+2026-03-28T12:09:06.2027137Z Error: usb_ether address not set.
+2026-03-28T12:09:06.2027362Z 
+2026-03-28T12:09:06.2027366Z 
+2026-03-28T12:09:06.2027483Z U-Boot# setenv autoload no
+2026-03-28T12:09:06.3990249Z setenv autoload no
+2026-03-28T12:09:06.3990632Z 
+2026-03-28T12:09:06.3990761Z U-Boot# usb start
+2026-03-28T12:09:06.3991070Z usb start
+2026-03-28T12:09:06.3991224Z 
+2026-03-28T12:09:06.3991349Z starting USB...
+2026-03-28T12:09:06.3991541Z 
+2026-03-28T12:09:06.3991663Z USB0:   USB EHCI 1.00
+2026-03-28T12:09:06.3991872Z 
+2026-03-28T12:09:10.1528605Z scanning bus 0 for devices... 3 USB Device(s) found
+2026-03-28T12:09:10.1529000Z 
+2026-03-28T12:09:10.1529264Z        scanning usb for storage devices... 0 Storage Device(s) found
+2026-03-28T12:09:10.1529621Z 
+2026-03-28T12:09:10.1529846Z        scanning usb for ethernet devices... 1 Ethernet Device(s) found
+2026-03-28T12:09:10.1530210Z 
+2026-03-28T12:09:10.3487936Z U-Boot# dhcp
+2026-03-28T12:09:10.3488265Z dhcp
+2026-03-28T12:09:10.3488425Z 
+2026-03-28T12:09:10.3488596Z ERROR: Need valid 'usbnet_devaddr' to be set
+2026-03-28T12:09:10.3488924Z 
+2026-03-28T12:09:10.3489122Z at drivers/usb/gadget/ether.c:2332/usb_eth_init()
+2026-03-28T12:09:10.3489973Z 
+2026-03-28T12:09:11.8151994Z Waiting for Ethernet connection... done.
+2026-03-28T12:09:11.8152354Z 
+2026-03-28T12:09:11.8152491Z BOOTP broadcast 1
+2026-03-28T12:09:14.5616696Z 
+2026-03-28T12:09:14.5617288Z BOOTP broadcast 2
+2026-03-28T12:09:14.5617543Z 
+2026-03-28T12:09:14.5617740Z DHCP client bound to address 172.16.1.63 (2761 ms)
+2026-03-28T12:09:14.5618094Z 
+2026-03-28T12:09:14.7578695Z U-Boot# tftpboot 0x81000000 beagle1/sel4-image
+2026-03-28T12:09:14.7579342Z tftpboot 0x81000000 beagle1/sel4-image
+2026-03-28T12:09:14.7579662Z 
+2026-03-28T12:09:16.2619613Z Waiting for Ethernet connection... done.
+2026-03-28T12:09:16.2619924Z 
+2026-03-28T12:09:16.2620023Z Using sms0 device
+2026-03-28T12:09:16.2620183Z 
+2026-03-28T12:09:16.2620373Z TFTP from server 172.16.0.2; our IP address is 172.16.1.63
+2026-03-28T12:09:16.2620689Z 
+2026-03-28T12:09:16.2620822Z Filename 'beagle1/sel4-image'.
+2026-03-28T12:09:16.2621034Z 
+2026-03-28T12:09:16.2621146Z Load address: 0x81000000
+2026-03-28T12:09:16.2621350Z 
+2026-03-28T12:09:23.9492944Z Loading: *EHCI timed out on TD - token=0x8008d80
+2026-03-28T12:09:23.9493324Z 
+2026-03-28T12:09:24.3541160Z T #################################################################
+2026-03-28T12:09:24.3541547Z 
+2026-03-28T12:09:24.7631126Z 	 #################################################################
+2026-03-28T12:09:24.7631465Z 
+2026-03-28T12:09:25.3590947Z 	 #################################################################
+2026-03-28T12:09:25.3591257Z 
+2026-03-28T12:09:25.5554672Z 	 ############################################
+2026-03-28T12:09:25.5555148Z 
+2026-03-28T12:09:25.5555283Z 	 374 KiB/s
+2026-03-28T12:09:25.5555477Z 
+2026-03-28T12:09:25.5555597Z done
+2026-03-28T12:09:25.5555759Z 
+2026-03-28T12:09:25.5555940Z Bytes transferred = 3502948 (357364 hex)
+2026-03-28T12:09:25.5556281Z 
+2026-03-28T12:09:25.5556439Z U-Boot# bootelf 0x81000000
+2026-03-28T12:09:25.5556842Z bootelf 0x81000000
+2026-03-28T12:09:25.5557075Z 
+2026-03-28T12:09:25.5557273Z ## Starting application at 0x8048a000 ...
+2026-03-28T12:09:25.5557632Z 
+2026-03-28T12:09:25.5557635Z 
+2026-03-28T12:09:25.5557803Z ELF-loader started on CPU: ARM Ltd. Cortex-A8 r3p2
+2026-03-28T12:09:25.5558198Z   paddr=[8048a000..807cd047]
+2026-03-28T12:09:25.5558502Z No DTB passed in from boot loader.
+2026-03-28T12:09:25.5558867Z Looking for DTB in CPIO archive...found at 804d1ca4.
+2026-03-28T12:09:25.7515969Z Loaded DTB from 804d1ca4.
+2026-03-28T12:09:25.7516508Z    paddr=[80044000..80053fff]
+2026-03-28T12:09:25.7516909Z ELF-loading image 'kernel' to 80000000
+2026-03-28T12:09:25.7517361Z   paddr=[80000000..80043fff]
+2026-03-28T12:09:25.7517703Z   vaddr=[f0000000..f0043fff]
+2026-03-28T12:09:25.7517986Z   virt_entry=f0000000
+2026-03-28T12:09:25.9476345Z ELF-loading image 'rootserver' to 80054000
+2026-03-28T12:09:25.9476843Z   paddr=[80054000..80469fff]
+2026-03-28T12:09:25.9477184Z   vaddr=[10000..425fff]
+2026-03-28T12:09:25.9477520Z   virt_entry=1e714
+2026-03-28T12:09:29.0329206Z Enabling MMU and jumping to entry point...
+2026-03-28T12:09:29.0329586Z 
+2026-03-28T12:09:29.2296362Z Bootstrapping kernel
+2026-03-28T12:09:29.2296962Z available phys memory regions: 1
+2026-03-28T12:09:29.2297380Z   [80000000..90000000)
+2026-03-28T12:09:29.2297760Z reserved virt address space regions: 4
+2026-03-28T12:09:29.2298205Z   [f0000000..f0044000)
+2026-03-28T12:09:29.2298542Z   [f0044000..f005305e)
+2026-03-28T12:09:29.2298867Z   [f0054000..f046a000)
+2026-03-28T12:09:29.2299189Z   [ff000000..ff100000)
+2026-03-28T12:09:29.2299566Z Booting all finished, dropped to user space
+2026-03-28T12:09:29.2300166Z Found thread has no fault handler while trying to handle:
+2026-03-28T12:09:29.2300795Z vm fault on data at address 0xef7fe000 with status 0x805
+2026-03-28T12:09:29.2301402Z in thread 0xffef7200 "sel4test-driver" at address 0x7c27c
+2026-03-28T12:09:29.2301914Z With stack:
+2026-03-28T12:09:29.2302206Z 0x313d70: 0xf
+2026-03-28T12:09:29.2302445Z 0x313d74: 0x1
+2026-03-28T12:09:29.2302690Z 0x313d78: 0x313d88
+2026-03-28T12:09:29.2302943Z 0x313d7c: 0x313da8
+2026-03-28T12:09:29.2303555Z 0x313d80: 0x1000
+2026-03-28T12:09:29.2304104Z 0x313d84: 0x2f0028
+2026-03-28T12:09:29.2304378Z 0x313d88: 0x49a
+2026-03-28T12:09:29.2304626Z 0x313d8c: 0x2f2788
+2026-03-28T12:09:29.2304876Z 0x313d90: 0xc
+2026-03-28T12:09:29.2305118Z 0x313d94: 0xa
+2026-03-28T12:09:29.2305351Z 0x313d98: 0x2f2848
+2026-03-28T12:09:29.2305597Z 0x313d9c: 0x2f0ad0
+2026-03-28T12:09:29.2305841Z 0x313da0: 0x313dbc
+2026-03-28T12:09:29.2306088Z 0x313da4: 0x313dbc
+2026-03-28T12:09:29.2306327Z 0x313da8: 0x1
+2026-03-28T12:09:29.2306575Z 0x313dac: 0x49b
+2026-03-28T12:24:25.5564651Z 
+2026-03-28T12:24:25.5565149Z [[Timeout]]
+2026-03-28T12:24:25.5565470Z None
+2026-03-28T12:24:25.7524108Z 
+2026-03-28T12:24:25.7524431Z console_run returned -1
+2026-03-28T12:24:25.7524812Z Shutting down beagle1
+2026-03-28T12:24:26.0585288Z 
+2026-03-28T12:24:29.2793127Z Command exited with non-zero status 255
+2026-03-28T12:24:29.2794524Z 0.04user 0.03system 15:36.84elapsed 0%CPU (0avgtext+0avgdata 8268maxresident)k
+2026-03-28T12:24:29.2795171Z 0inputs+8outputs (0major+7212minor)pagefaults 0swaps
+2026-03-28T12:24:29.2796366Z [31;1m>>> command failed, aborting.[0m
+2026-03-28T12:24:29.2797151Z [33m+++ mq.sh sem -signal beagle -k seL4/seL4-HW-23683028975-hw-run-10[0m
+2026-03-28T12:24:33.6193064Z [1m-----------[ end test OMAP3_debug_MCS_gcc_32 ]-----------[0m
+2026-03-28T12:24:33.6195416Z ##[endgroup]
+2026-03-28T12:24:33.6195860Z [31;1mOMAP3_debug_MCS_gcc_32 FAILED[0m
+2026-03-28T12:24:33.6196120Z 
+2026-03-28T12:24:33.6198189Z ##[group]OMAP3_release_gcc_32
+2026-03-28T12:24:33.6199227Z [1m-----------[ start test OMAP3_release_gcc_32 ]-----------[0m
+2026-03-28T12:24:33.6202476Z [33m+++ tar xvzf ../OMAP3_release_gcc_32-images.tar.gz[0m
+2026-03-28T12:24:33.6230697Z images/
+2026-03-28T12:24:33.6231291Z images/sel4test-driver-image-arm-omap3
+2026-03-28T12:24:33.6321222Z [33m+++ mq.sh sem -info beagle[0m
+2026-03-28T12:24:38.7514265Z Lock for beagle held by sel4_ci since 2026-03-28 23:24:35.209010807 +1100, timeout 1800 with key 'seL4/seL4-HW-23683028975-hw-run-11'
+2026-03-28T12:24:38.7515727Z [33m+++ time mq.sh sem -wait beagle -k seL4/seL4-HW-23683028975-hw-run-10 -T 1800[0m
+2026-03-28T12:28:28.6680311Z ##[error]The operation was canceled.
+2026-03-28T12:28:28.6739937Z Post job cleanup.
+2026-03-28T12:28:28.7824648Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/post-steps.sh
+2026-03-28T12:28:28.7876133Z ##[group]Releasing mq lock
+2026-03-28T12:28:28.7946364Z Agent pid 3310
+2026-03-28T12:28:28.9434940Z mq.sh sem -cancel beagle -k seL4/seL4-HW-23683028975-hw-run-10
+2026-03-28T12:28:49.5484559Z mq.sh sem -signal beagle -k seL4/seL4-HW-23683028975-hw-run-10
+2026-03-28T12:29:37.2583038Z Attempting to unlock system beagle with the wrong key!
+2026-03-28T12:29:37.2680242Z ##[endgroup]
+2026-03-28T12:29:37.2831374Z Post job cleanup.
+2026-03-28T12:29:37.3765533Z [command]/usr/bin/git version
+2026-03-28T12:29:37.3802617Z git version 2.53.0
+2026-03-28T12:29:37.3847087Z Temporarily overriding HOME='/home/runner/work/_temp/e8843af8-761e-4524-8437-f0589cbb2a40' before making global git config changes
+2026-03-28T12:29:37.3848627Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-28T12:29:37.3860977Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/seL4/seL4/machine_queue
+2026-03-28T12:29:37.3895695Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-28T12:29:37.3926984Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-28T12:29:37.4144675Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-28T12:29:37.4165252Z http.https://github.com/.extraheader
+2026-03-28T12:29:37.4177460Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-03-28T12:29:37.4206838Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-28T12:29:37.4419997Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-28T12:29:37.4449903Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-28T12:29:37.4772507Z Cleaning up orphan processes
+2026-03-28T12:29:37.5013118Z Terminate orphan process: pid (2302) (ssh)
+2026-03-28T12:29:37.5175795Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/download-artifact@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

@@ -1,0 +1,8 @@
+﻿2026-03-30T03:16:46.4770664Z Post job cleanup.
+2026-03-30T03:16:46.5872251Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/post-steps.sh
+2026-03-30T03:16:46.5925378Z ##[group]Releasing mq lock
+2026-03-30T03:16:46.5992433Z Agent pid 5902
+2026-03-30T03:16:46.7327295Z mq.sh sem -cancel zcu102_2 -k seL4/seL4-HW-23723123299-hw-run-3
+2026-03-30T03:16:49.3204642Z mq.sh sem -signal zcu102_2 -k seL4/seL4-HW-23723123299-hw-run-3
+2026-03-30T03:16:52.8661358Z Attempting to unlock system zcu102_2 with the wrong key!
+2026-03-30T03:16:52.8794795Z ##[endgroup]

@@ -1,0 +1,1117 @@
+﻿2026-03-29T13:36:36.3749988Z Current runner version: '2.333.0'
+2026-03-29T13:36:36.3775567Z ##[group]Runner Image Provisioner
+2026-03-29T13:36:36.3776961Z Hosted Compute Agent
+2026-03-29T13:36:36.3777580Z Version: 20260213.493
+2026-03-29T13:36:36.3778272Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-03-29T13:36:36.3779045Z Build Date: 2026-02-13T00:28:41Z
+2026-03-29T13:36:36.3779746Z Worker ID: {77718efd-9c32-4ba4-a220-896e5c4bc9c8}
+2026-03-29T13:36:36.3780563Z Azure Region: eastus
+2026-03-29T13:36:36.3781194Z ##[endgroup]
+2026-03-29T13:36:36.3783074Z ##[group]Operating System
+2026-03-29T13:36:36.3783774Z Ubuntu
+2026-03-29T13:36:36.3784343Z 24.04.4
+2026-03-29T13:36:36.3784914Z LTS
+2026-03-29T13:36:36.3785435Z ##[endgroup]
+2026-03-29T13:36:36.3786498Z ##[group]Runner Image
+2026-03-29T13:36:36.3787287Z Image: ubuntu-24.04
+2026-03-29T13:36:36.3787906Z Version: 20260323.65.1
+2026-03-29T13:36:36.3789245Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260323.65/images/ubuntu/Ubuntu2404-Readme.md
+2026-03-29T13:36:36.3790917Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260323.65
+2026-03-29T13:36:36.3791947Z ##[endgroup]
+2026-03-29T13:36:36.3793151Z ##[group]GITHUB_TOKEN Permissions
+2026-03-29T13:36:36.3795394Z Contents: read
+2026-03-29T13:36:36.3796433Z Metadata: read
+2026-03-29T13:36:36.3797198Z ##[endgroup]
+2026-03-29T13:36:36.3799473Z Secret source: Actions
+2026-03-29T13:36:36.3800674Z Prepare workflow directory
+2026-03-29T13:36:36.4140101Z Prepare all required actions
+2026-03-29T13:36:36.4179276Z Getting action download info
+2026-03-29T13:36:36.7678829Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-03-29T13:36:36.8983377Z Download action repository 'actions/download-artifact@v4' (SHA:d3f86a106a0bac45b974a628896c90dbdf5c8093)
+2026-03-29T13:36:37.1371507Z Download action repository 'seL4/ci-actions@master' (SHA:5ffc97f19e2c7d81ad945d0d1b84b1c7c9ce26aa)
+2026-03-29T13:36:37.7669747Z Uses: seL4/ci-actions/.github/workflows/sel4test-hw.yml@refs/heads/master (5ffc97f19e2c7d81ad945d0d1b84b1c7c9ce26aa)
+2026-03-29T13:36:37.7676669Z Complete job name: seL4Test / HW Run (ODROID_C2, armv8a, clang)
+2026-03-29T13:36:37.8556367Z ##[group]Run actions/checkout@v4
+2026-03-29T13:36:37.8557826Z with:
+2026-03-29T13:36:37.8558671Z   repository: seL4/machine_queue
+2026-03-29T13:36:37.8559717Z   path: machine_queue
+2026-03-29T13:36:37.8560986Z   token: ***
+2026-03-29T13:36:37.8561822Z   ssh-strict: true
+2026-03-29T13:36:37.8562686Z   ssh-user: git
+2026-03-29T13:36:37.8563561Z   persist-credentials: true
+2026-03-29T13:36:37.8564540Z   clean: true
+2026-03-29T13:36:37.8565411Z   sparse-checkout-cone-mode: true
+2026-03-29T13:36:37.8566680Z   fetch-depth: 1
+2026-03-29T13:36:37.8567532Z   fetch-tags: false
+2026-03-29T13:36:37.8568405Z   show-progress: true
+2026-03-29T13:36:37.8569286Z   lfs: false
+2026-03-29T13:36:37.8570110Z   submodules: false
+2026-03-29T13:36:37.8571036Z   set-safe-directory: true
+2026-03-29T13:36:37.8572309Z ##[endgroup]
+2026-03-29T13:36:37.9761540Z Syncing repository: seL4/machine_queue
+2026-03-29T13:36:37.9766221Z ##[group]Getting Git version info
+2026-03-29T13:36:37.9768096Z Working directory is '/home/runner/work/seL4/seL4/machine_queue'
+2026-03-29T13:36:37.9771018Z [command]/usr/bin/git version
+2026-03-29T13:36:37.9782897Z git version 2.53.0
+2026-03-29T13:36:37.9809980Z ##[endgroup]
+2026-03-29T13:36:37.9824323Z Temporarily overriding HOME='/home/runner/work/_temp/419f0a64-ee08-4c3f-b529-329722803c33' before making global git config changes
+2026-03-29T13:36:37.9827507Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-29T13:36:37.9830564Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/seL4/seL4/machine_queue
+2026-03-29T13:36:37.9859549Z ##[group]Initializing the repository
+2026-03-29T13:36:37.9864638Z [command]/usr/bin/git init /home/runner/work/seL4/seL4/machine_queue
+2026-03-29T13:36:37.9944816Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-03-29T13:36:37.9949063Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-03-29T13:36:37.9952530Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-03-29T13:36:37.9955182Z hint: call:
+2026-03-29T13:36:37.9956885Z hint:
+2026-03-29T13:36:37.9958884Z hint: 	git config --global init.defaultBranch <name>
+2026-03-29T13:36:37.9960991Z hint:
+2026-03-29T13:36:37.9962955Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-03-29T13:36:37.9965401Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-03-29T13:36:37.9967247Z hint:
+2026-03-29T13:36:37.9968067Z hint: 	git branch -m <name>
+2026-03-29T13:36:37.9969568Z hint:
+2026-03-29T13:36:37.9971796Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-03-29T13:36:37.9974900Z Initialized empty Git repository in /home/runner/work/seL4/seL4/machine_queue/.git/
+2026-03-29T13:36:37.9978566Z [command]/usr/bin/git remote add origin https://github.com/seL4/machine_queue
+2026-03-29T13:36:37.9990745Z ##[endgroup]
+2026-03-29T13:36:37.9993438Z ##[group]Disabling automatic garbage collection
+2026-03-29T13:36:37.9996090Z [command]/usr/bin/git config --local gc.auto 0
+2026-03-29T13:36:38.0024980Z ##[endgroup]
+2026-03-29T13:36:38.0027784Z ##[group]Setting up auth
+2026-03-29T13:36:38.0032179Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-29T13:36:38.0064491Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-29T13:36:38.0375511Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-29T13:36:38.0408965Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-29T13:36:38.0626993Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-29T13:36:38.0675496Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-29T13:36:38.0908750Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-03-29T13:36:38.0944006Z ##[endgroup]
+2026-03-29T13:36:38.0946929Z ##[group]Determining the default branch
+2026-03-29T13:36:38.0949026Z Retrieving the default branch name
+2026-03-29T13:36:38.3428075Z Default branch 'master'
+2026-03-29T13:36:38.3431667Z ##[endgroup]
+2026-03-29T13:36:38.3434143Z ##[group]Fetching the repository
+2026-03-29T13:36:38.3439216Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/master:refs/remotes/origin/master
+2026-03-29T13:36:38.5386544Z From https://github.com/seL4/machine_queue
+2026-03-29T13:36:38.5389172Z  * [new branch]      master     -> origin/master
+2026-03-29T13:36:38.5416375Z ##[endgroup]
+2026-03-29T13:36:38.5418897Z ##[group]Determining the checkout info
+2026-03-29T13:36:38.5421730Z ##[endgroup]
+2026-03-29T13:36:38.5423433Z [command]/usr/bin/git sparse-checkout disable
+2026-03-29T13:36:38.5461979Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-03-29T13:36:38.5491614Z ##[group]Checking out the ref
+2026-03-29T13:36:38.5494955Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2026-03-29T13:36:38.5572352Z Reset branch 'master'
+2026-03-29T13:36:38.5575078Z branch 'master' set up to track 'origin/master'.
+2026-03-29T13:36:38.5583644Z ##[endgroup]
+2026-03-29T13:36:38.5616578Z [command]/usr/bin/git log -1 --format=%H
+2026-03-29T13:36:38.5639696Z f0835aa54749667d30c9143e0fd3353e9367f2dd
+2026-03-29T13:36:38.5976496Z ##[group]Run actions/download-artifact@v4
+2026-03-29T13:36:38.5977679Z with:
+2026-03-29T13:36:38.5978815Z   name: images-sel4test-armv8a-clang
+2026-03-29T13:36:38.5979915Z   merge-multiple: false
+2026-03-29T13:36:38.5980906Z   repository: seL4/seL4
+2026-03-29T13:36:38.5981792Z   run-id: 23707963085
+2026-03-29T13:36:38.5982644Z ##[endgroup]
+2026-03-29T13:36:38.7991892Z Downloading single artifact
+2026-03-29T13:36:38.8936150Z Preparing to download the following artifacts:
+2026-03-29T13:36:38.8940767Z - images-sel4test-armv8a-clang (ID: 6165746194, Size: 203598957, Expected Digest: sha256:3655fea184eccc472ed0efd9a5d833bcd6828cc83fbb1cd8f006661bf5240939)
+2026-03-29T13:36:38.9440439Z Redirecting to blob download url: https://productionresultssa19.blob.core.windows.net/actions-results/eee551b0-1969-4dfe-904a-7b08837ca965/workflow-job-run-22bcabd7-f00b-58f5-bab7-34872875ecfe/artifacts/75ad69d55a0d6b2fd77eb6a5da6fe6e3c703272e6945cb812e783578507f8883.zip
+2026-03-29T13:36:38.9445074Z Starting download of artifact to: /home/runner/work/seL4/seL4
+2026-03-29T13:36:39.0295180Z (node:2293) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-03-29T13:36:39.0299053Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-03-29T13:36:41.7011248Z SHA256 digest of downloaded artifact is 3655fea184eccc472ed0efd9a5d833bcd6828cc83fbb1cd8f006661bf5240939
+2026-03-29T13:36:41.7012753Z Artifact download completed successfully.
+2026-03-29T13:36:41.7013476Z Total of 1 artifact(s) downloaded
+2026-03-29T13:36:41.7018034Z Download artifact has finished successfully
+2026-03-29T13:36:41.7204930Z ##[group]Run seL4/ci-actions/sel4test-hw-run@master
+2026-03-29T13:36:41.7205303Z with:
+2026-03-29T13:36:41.7205520Z   platform: ODROID_C2
+2026-03-29T13:36:41.7206112Z   compiler: clang
+2026-03-29T13:36:41.7206358Z   index: $19
+2026-03-29T13:36:41.7206584Z   action_name: sel4test-hw-run
+2026-03-29T13:36:41.7206842Z env:
+2026-03-29T13:36:41.7208657Z   HW_SSH: ***
+
+2026-03-29T13:36:41.7208888Z ##[endgroup]
+2026-03-29T13:36:41.8344995Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/steps.sh
+2026-03-29T13:36:41.8397005Z ##[group]Setting up
+2026-03-29T13:36:41.9174514Z Agent pid 2325
+2026-03-29T13:36:41.9418134Z Cloning into 'seL4_libs'...
+2026-03-29T13:36:45.6993496Z Reading package lists...
+2026-03-29T13:36:45.9510757Z Building dependency tree...
+2026-03-29T13:36:45.9522249Z Reading state information...
+2026-03-29T13:36:46.2070185Z libffi-dev is already the newest version (3.4.6-1build1).
+2026-03-29T13:36:46.2071276Z libffi-dev set to manually installed.
+2026-03-29T13:36:46.2071911Z 0 upgraded, 0 newly installed, 0 to remove and 24 not upgraded.
+2026-03-29T13:36:48.8917809Z Collecting junitparser==3.*
+2026-03-29T13:36:48.9291784Z   Downloading junitparser-3.2.0-py2.py3-none-any.whl.metadata (9.0 kB)
+2026-03-29T13:36:48.9623478Z Collecting sel4-deps
+2026-03-29T13:36:48.9706609Z   Downloading sel4_deps-0.7.0-py3-none-any.whl.metadata (1.1 kB)
+2026-03-29T13:36:48.9815972Z Requirement already satisfied: six in /usr/lib/python3/dist-packages (from sel4-deps) (1.16.0)
+2026-03-29T13:36:48.9976666Z Collecting future (from sel4-deps)
+2026-03-29T13:36:49.0013647Z   Downloading future-1.0.0-py3-none-any.whl.metadata (4.0 kB)
+2026-03-29T13:36:49.0053799Z Requirement already satisfied: jinja2 in /usr/lib/python3/dist-packages (from sel4-deps) (3.1.2)
+2026-03-29T13:36:49.2224774Z Collecting lxml (from sel4-deps)
+2026-03-29T13:36:49.2283147Z   Downloading lxml-6.0.2-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.6 kB)
+2026-03-29T13:36:49.2436071Z Collecting ply (from sel4-deps)
+2026-03-29T13:36:49.2473533Z   Downloading ply-3.11-py2.py3-none-any.whl.metadata (844 bytes)
+2026-03-29T13:36:49.3371489Z Collecting psutil (from sel4-deps)
+2026-03-29T13:36:49.3414436Z   Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+2026-03-29T13:36:49.3605280Z Collecting bs4 (from sel4-deps)
+2026-03-29T13:36:49.3642037Z   Downloading bs4-0.0.2-py2.py3-none-any.whl.metadata (411 bytes)
+2026-03-29T13:36:49.3797050Z Collecting pyelftools (from sel4-deps)
+2026-03-29T13:36:49.3832193Z   Downloading pyelftools-0.32-py3-none-any.whl.metadata (372 bytes)
+2026-03-29T13:36:49.4061885Z Collecting sh (from sel4-deps)
+2026-03-29T13:36:49.4129490Z   Downloading sh-2.2.2-py3-none-any.whl.metadata (3.7 kB)
+2026-03-29T13:36:49.4171034Z Requirement already satisfied: pexpect in /usr/lib/python3/dist-packages (from sel4-deps) (4.9.0)
+2026-03-29T13:36:49.4180574Z Requirement already satisfied: pyyaml>=5.1 in /usr/lib/python3/dist-packages (from sel4-deps) (6.0.1)
+2026-03-29T13:36:49.4189136Z Requirement already satisfied: jsonschema in /usr/lib/python3/dist-packages (from sel4-deps) (4.10.3)
+2026-03-29T13:36:49.4317993Z Collecting pyfdt (from sel4-deps)
+2026-03-29T13:36:49.4368090Z   Downloading pyfdt-0.3.tar.gz (9.1 kB)
+2026-03-29T13:36:49.4465714Z   Preparing metadata (setup.py): started
+2026-03-29T13:36:49.6397297Z   Preparing metadata (setup.py): finished with status 'done'
+2026-03-29T13:36:49.6580599Z Collecting cmake-format==0.6.13 (from sel4-deps)
+2026-03-29T13:36:49.6634584Z   Downloading cmake_format-0.6.13-py3-none-any.whl.metadata (23 kB)
+2026-03-29T13:36:49.6806877Z Collecting guardonce (from sel4-deps)
+2026-03-29T13:36:49.6890812Z   Downloading guardonce-2.4.0-py2.py3-none-any.whl.metadata (3.4 kB)
+2026-03-29T13:36:49.7123701Z Collecting autopep8==2.3.2 (from sel4-deps)
+2026-03-29T13:36:49.7175194Z   Downloading autopep8-2.3.2-py2.py3-none-any.whl.metadata (16 kB)
+2026-03-29T13:36:49.7369061Z Collecting libarchive-c (from sel4-deps)
+2026-03-29T13:36:49.7422997Z   Downloading libarchive_c-5.3-py3-none-any.whl.metadata (5.8 kB)
+2026-03-29T13:36:49.7663255Z Collecting pycodestyle>=2.12.0 (from autopep8==2.3.2->sel4-deps)
+2026-03-29T13:36:49.7703624Z   Downloading pycodestyle-2.14.0-py2.py3-none-any.whl.metadata (4.5 kB)
+2026-03-29T13:36:49.7893969Z Collecting cmakelang>=0.6.13 (from cmake-format==0.6.13->sel4-deps)
+2026-03-29T13:36:49.7944515Z   Downloading cmakelang-0.6.13-py3-none-any.whl.metadata (23 kB)
+2026-03-29T13:36:49.8228244Z Collecting beautifulsoup4 (from bs4->sel4-deps)
+2026-03-29T13:36:49.8265514Z   Downloading beautifulsoup4-4.14.3-py3-none-any.whl.metadata (3.8 kB)
+2026-03-29T13:36:49.8481741Z Requirement already satisfied: attrs>=17.4.0 in /usr/lib/python3/dist-packages (from jsonschema->sel4-deps) (23.2.0)
+2026-03-29T13:36:49.8504866Z Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,>=0.14.0 in /usr/lib/python3/dist-packages (from jsonschema->sel4-deps) (0.20.0)
+2026-03-29T13:36:49.9620377Z Collecting soupsieve>=1.6.1 (from beautifulsoup4->bs4->sel4-deps)
+2026-03-29T13:36:49.9659903Z   Downloading soupsieve-2.8.3-py3-none-any.whl.metadata (4.6 kB)
+2026-03-29T13:36:49.9705180Z Requirement already satisfied: typing-extensions>=4.0.0 in /usr/lib/python3/dist-packages (from beautifulsoup4->bs4->sel4-deps) (4.10.0)
+2026-03-29T13:36:49.9813196Z Downloading junitparser-3.2.0-py2.py3-none-any.whl (13 kB)
+2026-03-29T13:36:49.9899142Z Downloading sel4_deps-0.7.0-py3-none-any.whl (1.4 kB)
+2026-03-29T13:36:49.9966228Z Downloading autopep8-2.3.2-py2.py3-none-any.whl (45 kB)
+2026-03-29T13:36:50.0013680Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.8/45.8 kB 15.2 MB/s eta 0:00:00
+2026-03-29T13:36:50.0052308Z Downloading cmake_format-0.6.13-py3-none-any.whl (19 kB)
+2026-03-29T13:36:50.0106402Z Downloading bs4-0.0.2-py2.py3-none-any.whl (1.2 kB)
+2026-03-29T13:36:50.0158591Z Downloading future-1.0.0-py3-none-any.whl (491 kB)
+2026-03-29T13:36:50.0298110Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 491.3/491.3 kB 41.4 MB/s eta 0:00:00
+2026-03-29T13:36:50.0349713Z Downloading guardonce-2.4.0-py2.py3-none-any.whl (15 kB)
+2026-03-29T13:36:50.0493417Z Downloading libarchive_c-5.3-py3-none-any.whl (17 kB)
+2026-03-29T13:36:50.0626220Z Downloading lxml-6.0.2-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.3 MB)
+2026-03-29T13:36:50.1036796Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 134.0 MB/s eta 0:00:00
+2026-03-29T13:36:50.1073705Z Downloading ply-3.11-py2.py3-none-any.whl (49 kB)
+2026-03-29T13:36:50.1113795Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.6/49.6 kB 17.6 MB/s eta 0:00:00
+2026-03-29T13:36:50.1155010Z Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+2026-03-29T13:36:50.1203008Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.6/155.6 kB 50.8 MB/s eta 0:00:00
+2026-03-29T13:36:50.1258696Z Downloading pyelftools-0.32-py3-none-any.whl (188 kB)
+2026-03-29T13:36:50.1306597Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.5/188.5 kB 61.5 MB/s eta 0:00:00
+2026-03-29T13:36:50.1345404Z Downloading sh-2.2.2-py3-none-any.whl (38 kB)
+2026-03-29T13:36:50.1415867Z Downloading cmakelang-0.6.13-py3-none-any.whl (159 kB)
+2026-03-29T13:36:50.1462490Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 159.8/159.8 kB 55.0 MB/s eta 0:00:00
+2026-03-29T13:36:50.1500800Z Downloading pycodestyle-2.14.0-py2.py3-none-any.whl (31 kB)
+2026-03-29T13:36:50.1558146Z Downloading beautifulsoup4-4.14.3-py3-none-any.whl (107 kB)
+2026-03-29T13:36:50.1598680Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.7/107.7 kB 42.6 MB/s eta 0:00:00
+2026-03-29T13:36:50.1633468Z Downloading soupsieve-2.8.3-py3-none-any.whl (37 kB)
+2026-03-29T13:36:50.1900997Z Building wheels for collected packages: pyfdt
+2026-03-29T13:36:50.1906231Z   Building wheel for pyfdt (setup.py): started
+2026-03-29T13:36:50.5100992Z   Building wheel for pyfdt (setup.py): finished with status 'done'
+2026-03-29T13:36:50.5105336Z   Created wheel for pyfdt: filename=pyfdt-0.3-py3-none-any.whl size=10969 sha256=d39ed58bf445d2ae999db901b81b976cbc74e0ae31a65d489a5c48e430c2b45e
+2026-03-29T13:36:50.5107132Z   Stored in directory: /home/runner/.cache/pip/wheels/d9/8e/2a/cff33f3accb8eaa34608e68786db1ec323a5f6bce8d724d90a
+2026-03-29T13:36:50.5124393Z Successfully built pyfdt
+2026-03-29T13:36:50.8168127Z Installing collected packages: pyfdt, pyelftools, ply, libarchive-c, junitparser, guardonce, soupsieve, sh, pycodestyle, psutil, lxml, future, cmakelang, cmake-format, beautifulsoup4, autopep8, bs4, sel4-deps
+2026-03-29T13:36:51.7865337Z Successfully installed autopep8-2.3.2 beautifulsoup4-4.14.3 bs4-0.0.2 cmake-format-0.6.13 cmakelang-0.6.13 future-1.0.0 guardonce-2.4.0 junitparser-3.2.0 libarchive-c-5.3 lxml-6.0.2 ply-3.11 psutil-7.2.2 pycodestyle-2.14.0 pyelftools-0.32 pyfdt-0.3 sel4-deps-0.7.0 sh-2.2.2 soupsieve-2.8.3
+2026-03-29T13:36:51.9036423Z ##[endgroup]
+2026-03-29T13:36:52.0500141Z 
+2026-03-29T13:36:52.0501666Z ##[group]ODROID_C2_debug_clang_64
+2026-03-29T13:36:52.0502868Z [1m-----------[ start test ODROID_C2_debug_clang_64 ]-----------[0m
+2026-03-29T13:36:52.0503926Z [33m+++ tar xvzf ../ODROID_C2_debug_clang_64-images.tar.gz[0m
+2026-03-29T13:36:52.0534762Z images/
+2026-03-29T13:36:52.0538132Z images/sel4test-driver-image-arm-odroidc2
+2026-03-29T13:36:52.0731515Z [33m+++ mq.sh sem -info odroidc2[0m
+2026-03-29T13:37:01.2038929Z Lock for odroidc2 held by sel4_ci since 2026-03-30 00:28:32.926776358 +1100, timeout 1800 with key 'seL4/seL4-HW-23707963085-hw-run-18'
+2026-03-29T13:37:01.2040362Z [33m+++ time mq.sh sem -wait odroidc2 -k seL4/seL4-HW-23707963085-hw-run-19 -T 1800[0m
+2026-03-29T13:44:04.1543880Z 0.02user 0.03system 7:02.94elapsed 0%CPU (0avgtext+0avgdata 8276maxresident)k
+2026-03-29T13:44:04.1544715Z 0inputs+0outputs (1major+5486minor)pagefaults 0swaps
+2026-03-29T13:44:04.1546837Z [33m+++ time mq.sh run -c </testsuite> -s odroidc2 -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-23707963085-hw-run-19 -f images/sel4test-driver-image-arm-odroidc2[0m
+2026-03-29T13:44:07.7040633Z Lock acquired, we are allowed to run
+2026-03-29T13:44:14.2056363Z pxelinux=False
+2026-03-29T13:44:14.2057184Z copied '/tmp/tmp.AhEe46Bdt2' -> '/tftpboot/odroidc2/local-kernel'
+2026-03-29T13:44:14.4138157Z removed '/tmp/tmp.AhEe46Bdt2'
+2026-03-29T13:44:14.6147470Z '/tftpboot/odroidc2/meson64_odroidc2.dtb' -> '/tftpboot/odroidc2/local-dtb'
+2026-03-29T13:44:14.6148400Z co
+2026-03-29T13:44:14.6148737Z ^Eco
+2026-03-29T13:44:14.8158623Z [Enter `^Ec?' for help]
+2026-03-29T13:44:15.0854343Z [connecting...up]
+2026-03-29T13:44:15.0855042Z Rebooting odroid-c2 and loading image: /tmp/tmp.AhEe46Bdt2
+2026-03-29T13:44:20.8376504Z GXBB:BL1:08dafd:0a8993;FEAT:EDFD718C;POC:3;RCY:0;EMMC:0;READ:0;CHK:0;
+2026-03-29T13:44:20.8377303Z TE: 114050
+2026-03-29T13:44:20.8377582Z no sdio debug board detected
+2026-03-29T13:44:20.8377967Z 
+2026-03-29T13:44:20.8378162Z BL2 Built : 11:44:26, Nov 25 2015.
+2026-03-29T13:44:20.8378743Z gxb gfb13a3b-c2 - jcao@wonton
+2026-03-29T13:44:20.8379090Z 
+2026-03-29T13:44:20.8379270Z Board ID = 8
+2026-03-29T13:44:20.8379754Z set vcck to 1100 mv
+2026-03-29T13:44:20.8380064Z set vddee to 1050 mv
+2026-03-29T13:44:20.8380479Z CPU clk: 1536MHz
+2026-03-29T13:44:20.8380901Z DDR channel setting: DDR0 Rank0+1 same
+2026-03-29T13:44:20.8381360Z DDR0: 2048MB(auto) @ 912MHz(2T)-13
+2026-03-29T13:44:20.8381632Z DataBus test pass!
+2026-03-29T13:44:20.8381984Z AddrBus test pass!
+2026-03-29T13:44:20.8382528Z Load fip header from eMMC, src: 0x0000c200, des: 0x01400000, size: 0x000000b0
+2026-03-29T13:44:20.8383267Z Load bl30 from eMMC, src: 0x00010200, des: 0x01000000, size: 0x00009ef0
+2026-03-29T13:44:20.8383673Z Sending bl30........................................OK.
+2026-03-29T13:44:20.8383975Z Run bl30...
+2026-03-29T13:44:20.8384271Z Load bl301 from eMMC, src: 0x0001c200, des: 0x01000000, size: 0x000018c0
+2026-03-29T13:44:20.8384644Z Wait bl30...Done
+2026-03-29T13:44:20.8384868Z Sending bl301.......OK.
+2026-03-29T13:44:20.8385094Z Run bl301...
+2026-03-29T13:44:20.8385297Z Load bl3
+2026-03-29T13:44:20.8523931Z  from eMMC, src: 0x00020200, des: 0x10100000, size: 0x00011130
+2026-03-29T13:44:20.8524509Z 
+2026-03-29T13:44:20.8524518Z 
+2026-03-29T13:44:20.8524525Z 
+2026-03-29T13:44:20.8524740Z --- UART initialized after reboot ---
+2026-03-29T13:44:20.8524967Z 
+2026-03-29T13:44:20.8525068Z [Reset cause: unknown]
+2026-03-29T13:44:20.8525224Z 
+2026-03-29T13:44:20.8525465Z [Image: unknown, amlogic_v1.1.3046-00db630-dirty 2016-08-31 09:24:14 tao.zeng@droid04]
+2026-03-29T13:44:20.8526079Z 
+2026-03-29T13:44:21.0535009Z bl30: check_permit, count is 1
+2026-03-29T13:44:21.0535464Z 
+2026-03-29T13:44:21.0535472Z 
+2026-03-29T13:44:21.0535926Z bl30: check_permit: ok!
+2026-03-29T13:44:21.0536270Z 
+2026-03-29T13:44:21.0536277Z 
+2026-03-29T13:44:21.0536576Z chipid: Load bl33 from eMMC, src: 0x00034200, des: 0x01000000, size: 0x000781d0
+2026-03-29T13:44:21.0537115Z ef be ad de d f0 ad ba ef be ad de not ES chip
+2026-03-29T13:44:21.0537384Z 
+2026-03-29T13:44:21.0537492Z [0.229193 Inits done]
+2026-03-29T13:44:21.0537689Z 
+2026-03-29T13:44:21.0537838Z secure task start!
+2026-03-29T13:44:21.0538114Z high task start!
+2026-03-29T13:44:21.0538395Z low task start!
+2026-03-29T13:44:21.0538697Z NOTICE:  BL3-1: v1.0(debug):4d2e34d
+2026-03-29T13:44:21.0539071Z NOTICE:  BL3-1: Built : 17:08:35, Oct 29 2015
+2026-03-29T13:44:21.0539420Z INFO:    BL3-1: Initializing runtime services
+2026-03-29T13:44:21.0539802Z INFO:    BL3-1: Preparing for EL3 exit to normal world
+2026-03-29T13:44:21.0540203Z INFO:    BL3-1: Next image address = 0x1000000
+2026-03-29T13:44:21.0540588Z INFO:    BL3-1: Next image spsr = 0x3c9
+2026-03-29T13:44:21.2545090Z 
+2026-03-29T13:44:21.2545363Z 
+2026-03-29T13:44:21.2546430Z U-Boot 2019.04-dirty (Apr 26 2019 - 11:43:44 +1000) odroid-c2
+2026-03-29T13:44:21.2547040Z 
+2026-03-29T13:44:21.2547230Z DRAM:  2 GiB
+2026-03-29T13:44:21.2547652Z MMC:   mmc@72000: 0, mmc@74000: 1
+2026-03-29T13:44:21.2548176Z Loading Environment from MMC... OK
+2026-03-29T13:44:21.2548700Z In:    serial
+2026-03-29T13:44:21.2549070Z Out:   serial
+2026-03-29T13:44:21.2549474Z Err:   serial
+2026-03-29T13:44:22.2904730Z Net:   eth0: ethernet@c9410000
+2026-03-29T13:44:22.4913922Z => setenv autoload no && dhcp && tftpboot 0x20000000 odroidc2/local-kernel
+2026-03-29T13:44:22.4914649Z setenv autoload no && dhcp && tftpboot 0x20000000 odroidc2/local-kernel
+2026-03-29T13:44:25.2426328Z ethernet@c9410000 Waiting for PHY auto negotiation to complete...... done
+2026-03-29T13:44:25.2427013Z Speed: 1000, full duplex
+2026-03-29T13:44:25.2427812Z BOOTP broadcast 1
+2026-03-29T13:44:25.4432886Z BOOTP broadcast 2
+2026-03-29T13:44:25.9121734Z BOOTP broadcast 3
+2026-03-29T13:44:26.9110350Z BOOTP broadcast 4
+2026-03-29T13:44:28.9122653Z BOOTP broadcast 5
+2026-03-29T13:44:29.1131791Z DHCP client bound to address 172.16.1.111 (3758 ms)
+2026-03-29T13:44:29.1132230Z Speed: 1000, full duplex
+2026-03-29T13:44:29.1132520Z Using ethernet@c9410000 device
+2026-03-29T13:44:29.1132876Z TFTP from server 172.16.0.2; our IP address is 172.16.1.111
+2026-03-29T13:44:29.1133275Z Filename 'odroidc2/local-kernel'.
+2026-03-29T13:44:29.1133609Z Load address: 0x20000000
+2026-03-29T13:44:29.1134178Z Loading: *#################################################################
+2026-03-29T13:44:29.3142609Z 	 #################################################################
+2026-03-29T13:44:29.3143167Z 	 #################################################################
+2026-03-29T13:44:29.3143559Z 	 ############
+2026-03-29T13:44:29.3143836Z 	 8.6 MiB/s
+2026-03-29T13:44:29.3144062Z done
+2026-03-29T13:44:29.3144277Z Bytes transferred = 3029048 (2e3838 hex)
+2026-03-29T13:44:29.3144570Z => go 0x20000000
+2026-03-29T13:44:29.3144787Z go 0x20000000
+2026-03-29T13:44:29.3145021Z ## Starting application at 0x20000000 ...
+2026-03-29T13:44:29.5150221Z 
+2026-03-29T13:44:29.5150955Z ELF-loader started on CPU: ARM Ltd. Cortex-A53 r0p4
+2026-03-29T13:44:29.5151336Z   paddr=[163b000..192608f]
+2026-03-29T13:44:29.5151607Z No DTB passed in from boot loader.
+2026-03-29T13:44:29.5151929Z Looking for DTB in CPIO archive...found at 1679a10.
+2026-03-29T13:44:29.5152652Z Loaded DTB from 1679a10.
+2026-03-29T13:44:29.5152906Z    paddr=[123f000..1244fff]
+2026-03-29T13:44:29.5153173Z ELF-loading image 'kernel' to 1000000
+2026-03-29T13:44:29.5153445Z   paddr=[1000000..123efff]
+2026-03-29T13:44:29.5153727Z   vaddr=[ffffff8001000000..ffffff800123efff]
+2026-03-29T13:44:29.5154025Z   virt_entry=ffffff8001000000
+2026-03-29T13:44:29.5154295Z ELF-loading image 'rootserver' to 1245000
+2026-03-29T13:44:29.5154592Z   paddr=[1245000..161afff]
+2026-03-29T13:44:29.5154826Z   vaddr=[400000..7d5fff]
+2026-03-29T13:44:29.5155052Z   virt_entry=410e60
+2026-03-29T13:44:29.5155296Z Enabling MMU and jumping to entry point...
+2026-03-29T13:44:29.5155500Z 
+2026-03-29T13:59:29.5318950Z 
+2026-03-29T13:59:29.5319480Z [[Timeout]]
+2026-03-29T13:59:29.5319730Z None
+2026-03-29T13:59:29.5319855Z 
+2026-03-29T13:59:29.5320013Z console_run returned -1
+2026-03-29T13:59:29.5320418Z Shutting down odroid-c2
+2026-03-29T13:59:29.9500294Z 
+2026-03-29T13:59:35.7754006Z Command exited with non-zero status 255
+2026-03-29T13:59:35.7754832Z 0.03user 0.04system 15:31.61elapsed 0%CPU (0avgtext+0avgdata 8264maxresident)k
+2026-03-29T13:59:35.7755623Z 272inputs+8outputs (2major+7213minor)pagefaults 0swaps
+2026-03-29T13:59:35.7756785Z [31;1m>>> command failed, aborting.[0m
+2026-03-29T13:59:35.7757624Z [33m+++ mq.sh sem -signal odroidc2 -k seL4/seL4-HW-23707963085-hw-run-19[0m
+2026-03-29T13:59:49.1392182Z [1m-----------[ end test ODROID_C2_debug_clang_64 ]-----------[0m
+2026-03-29T13:59:49.1393305Z ##[endgroup]
+2026-03-29T13:59:49.1393763Z [31;1mODROID_C2_debug_clang_64 FAILED[0m
+2026-03-29T13:59:49.1394089Z 
+2026-03-29T13:59:49.1394527Z ##[group]ODROID_C2_debug_MCS_clang_64
+2026-03-29T13:59:49.1395219Z [1m-----------[ start test ODROID_C2_debug_MCS_clang_64 ]-----------[0m
+2026-03-29T13:59:49.1401024Z [33m+++ tar xvzf ../ODROID_C2_debug_MCS_clang_64-images.tar.gz[0m
+2026-03-29T13:59:49.1428991Z images/
+2026-03-29T13:59:49.1429554Z images/sel4test-driver-image-arm-odroidc2
+2026-03-29T13:59:49.1633754Z [33m+++ mq.sh sem -info odroidc2[0m
+2026-03-29T14:00:06.0176138Z Lock for odroidc2 held by sel4_ci since 2026-03-30 00:59:50.599464362 +1100, timeout 1800 with key 'seL4/seL4_tools-HW-23709039769-hw-run-3'
+2026-03-29T14:00:06.0177635Z [33m+++ time mq.sh sem -wait odroidc2 -k seL4/seL4-HW-23707963085-hw-run-19 -T 1800[0m
+2026-03-29T14:36:20.9578637Z 0.01user 0.03system 36:14.93elapsed 0%CPU (0avgtext+0avgdata 8312maxresident)k
+2026-03-29T14:36:20.9580037Z 0inputs+0outputs (0major+5519minor)pagefaults 0swaps
+2026-03-29T14:36:20.9581377Z [33m+++ time mq.sh run -c </testsuite> -s odroidc2 -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-23707963085-hw-run-19 -f images/sel4test-driver-image-arm-odroidc2[0m
+2026-03-29T14:36:24.2443661Z Lock acquired, we are allowed to run
+2026-03-29T14:36:30.4431372Z pxelinux=False
+2026-03-29T14:36:30.4431834Z copied '/tmp/tmp.VsR2oVxeqk' -> '/tftpboot/odroidc2/local-kernel'
+2026-03-29T14:36:30.4432276Z removed '/tmp/tmp.VsR2oVxeqk'
+2026-03-29T14:36:30.4432739Z '/tftpboot/odroidc2/meson64_odroidc2.dtb' -> '/tftpboot/odroidc2/local-dtb'
+2026-03-29T14:36:30.6440734Z co
+2026-03-29T14:36:30.6441160Z ^Eco
+2026-03-29T14:36:30.8451216Z [Enter `^Ec?' for help]
+2026-03-29T14:36:31.1118692Z [connecting...up]
+2026-03-29T14:36:31.3128190Z Rebooting odroid-c2 and loading image: /tmp/tmp.VsR2oVxeqk
+2026-03-29T14:36:36.8528980Z GXBB:BL1:08dafd:0a8993;FEAT:EDFD718C;POC:3;RCY:0;EMMC:0;READ:0;CHK:0;
+2026-03-29T14:36:36.8529554Z TE: 113720
+2026-03-29T14:36:36.8529885Z no sdio debug board detected
+2026-03-29T14:36:36.8530126Z 
+2026-03-29T14:36:36.8530262Z BL2 Built : 11:44:26, Nov 25 2015.
+2026-03-29T14:36:36.8530649Z gxb gfb13a3b-c2 - jcao@wonton
+2026-03-29T14:36:36.8530891Z 
+2026-03-29T14:36:36.8531009Z Board ID = 8
+2026-03-29T14:36:36.8531302Z set vcck to 1100 mv
+2026-03-29T14:36:36.8531600Z set vddee to 1050 mv
+2026-03-29T14:36:36.8531902Z CPU clk: 1536MHz
+2026-03-29T14:36:36.8532219Z DDR channel setting: DDR0 Rank0+1 same
+2026-03-29T14:36:36.8532614Z DDR0: 2048MB(auto) @ 912MHz(2T)-13
+2026-03-29T14:36:36.8533297Z DataBus test pass!
+2026-03-29T14:36:36.8533538Z AddrBus test pass!
+2026-03-29T14:36:36.8533888Z Load fip header from eMMC, src: 0x0000c200, des: 0x01400000, size: 0x000000b0
+2026-03-29T14:36:36.8534380Z Load bl30 from eMMC, src: 0x00010200, des: 0x01000000, size: 0x00009ef0
+2026-03-29T14:36:36.8534801Z Sending bl30........................................OK.
+2026-03-29T14:36:36.8535121Z Run bl30...
+2026-03-29T14:36:36.8535422Z Load bl301 from eMMC, src: 0x0001c200, des: 0x01000000, size: 0x000018c0
+2026-03-29T14:36:36.8536100Z Wait bl30...Done
+2026-03-29T14:36:36.8536337Z Sending bl301.......OK.
+2026-03-29T14:36:36.8536568Z Run bl301...
+2026-03-29T14:36:36.8536782Z Load bl3
+2026-03-29T14:36:36.8873735Z  from eMMC, src: 0x00020200, des: 0x10100000, size: 0x00011130
+2026-03-29T14:36:36.8874167Z 
+2026-03-29T14:36:36.8874171Z 
+2026-03-29T14:36:36.8874174Z 
+2026-03-29T14:36:36.8874325Z --- UART initialized after reboot ---
+2026-03-29T14:36:36.8874538Z 
+2026-03-29T14:36:36.8874635Z [Reset cause: unknown]
+2026-03-29T14:36:36.8874806Z 
+2026-03-29T14:36:36.8875063Z [Image: unknown, amlogic_v1.1.3046-00db630-dirty 2016-08-31 09:24:14 tao.zeng@droid04]
+2026-03-29T14:36:36.8875423Z 
+2026-03-29T14:36:36.8875537Z bl30: check_permit, count is 1
+2026-03-29T14:36:36.8875977Z 
+2026-03-29T14:36:36.8875981Z 
+2026-03-29T14:36:36.8876084Z bl30: check_permit: ok!
+2026-03-29T14:36:36.8876247Z 
+2026-03-29T14:36:36.8876251Z 
+2026-03-29T14:36:36.8876469Z chipid: Load bl33 from eMMC, src: 0x00034200, des: 0x01000000, size: 0x000781d0
+2026-03-29T14:36:36.8876914Z ef be ad de d f0 ad ba ef be ad de not ES chip
+2026-03-29T14:36:36.8877135Z 
+2026-03-29T14:36:36.8877225Z [0.228860 Inits done]
+2026-03-29T14:36:36.8877372Z 
+2026-03-29T14:36:36.8877468Z secure task start!
+2026-03-29T14:36:36.8877697Z high task start!
+2026-03-29T14:36:36.8877918Z low task start!
+2026-03-29T14:36:37.0885352Z NOTICE:  BL3-1: v1.0(debug):4d2e34d
+2026-03-29T14:36:37.0886171Z NOTICE:  BL3-1: Built : 17:08:35, Oct 29 2015
+2026-03-29T14:36:37.0886632Z INFO:    BL3-1: Initializing runtime services
+2026-03-29T14:36:37.0887023Z INFO:    BL3-1: Preparing for EL3 exit to normal world
+2026-03-29T14:36:37.0887398Z INFO:    BL3-1: Next image address = 0x1000000
+2026-03-29T14:36:37.0887717Z INFO:    BL3-1: Next image spsr = 0x3c9
+2026-03-29T14:36:37.2894548Z 
+2026-03-29T14:36:37.2894588Z 
+2026-03-29T14:36:37.2895211Z U-Boot 2019.04-dirty (Apr 26 2019 - 11:43:44 +1000) odroid-c2
+2026-03-29T14:36:37.2895532Z 
+2026-03-29T14:36:37.2900203Z DRAM:  2 GiB
+2026-03-29T14:36:37.2900478Z MMC:   mmc@72000: 0, mmc@74000: 1
+2026-03-29T14:36:37.2900801Z Loading Environment from MMC... OK
+2026-03-29T14:36:37.2901095Z In:    serial
+2026-03-29T14:36:37.2901327Z Out:   serial
+2026-03-29T14:36:37.2901668Z Err:   serial
+2026-03-29T14:36:38.2957907Z Net:   eth0: ethernet@c9410000
+2026-03-29T14:36:38.4967672Z => setenv autoload no && dhcp && tftpboot 0x20000000 odroidc2/local-kernel
+2026-03-29T14:36:38.4968390Z setenv autoload no && dhcp && tftpboot 0x20000000 odroidc2/local-kernel
+2026-03-29T14:36:41.2570281Z ethernet@c9410000 Waiting for PHY auto negotiation to complete...... done
+2026-03-29T14:36:41.2570883Z Speed: 1000, full duplex
+2026-03-29T14:36:41.2571254Z BOOTP broadcast 1
+2026-03-29T14:36:41.4580001Z BOOTP broadcast 2
+2026-03-29T14:36:41.8858510Z BOOTP broadcast 3
+2026-03-29T14:36:42.8892637Z BOOTP broadcast 4
+2026-03-29T14:36:44.8870087Z BOOTP broadcast 5
+2026-03-29T14:36:45.0881026Z DHCP client bound to address 172.16.1.111 (3760 ms)
+2026-03-29T14:36:45.0881830Z Speed: 1000, full duplex
+2026-03-29T14:36:45.0882171Z Using ethernet@c9410000 device
+2026-03-29T14:36:45.0882588Z TFTP from server 172.16.0.2; our IP address is 172.16.1.111
+2026-03-29T14:36:45.0883063Z Filename 'odroidc2/local-kernel'.
+2026-03-29T14:36:45.0883413Z Load address: 0x20000000
+2026-03-29T14:36:45.0884046Z Loading: *#################################################################
+2026-03-29T14:36:45.2891520Z 	 #################################################################
+2026-03-29T14:36:45.2892416Z 	 #################################################################
+2026-03-29T14:36:45.2892756Z 	 #######################
+2026-03-29T14:36:45.2892999Z 	 9.8 MiB/s
+2026-03-29T14:36:45.2893202Z done
+2026-03-29T14:36:45.2893428Z Bytes transferred = 3189304 (30aa38 hex)
+2026-03-29T14:36:45.2893725Z => go 0x20000000
+2026-03-29T14:36:45.2893941Z go 0x20000000
+2026-03-29T14:36:45.2894176Z ## Starting application at 0x20000000 ...
+2026-03-29T14:36:45.4902452Z 
+2026-03-29T14:36:45.4903190Z ELF-loader started on CPU: ARM Ltd. Cortex-A53 r0p4
+2026-03-29T14:36:45.4903741Z   paddr=[1665000..197708f]
+2026-03-29T14:36:45.4904089Z No DTB passed in from boot loader.
+2026-03-29T14:36:45.4904503Z Looking for DTB in CPIO archive...found at 16ada10.
+2026-03-29T14:36:45.4904870Z Loaded DTB from 16ada10.
+2026-03-29T14:36:45.4905115Z    paddr=[1249000..124efff]
+2026-03-29T14:36:45.4905382Z ELF-loading image 'kernel' to 1000000
+2026-03-29T14:36:45.4905661Z   paddr=[1000000..1248fff]
+2026-03-29T14:36:45.4906245Z   vaddr=[ffffff8001000000..ffffff8001248fff]
+2026-03-29T14:36:45.4906573Z   virt_entry=ffffff8001000000
+2026-03-29T14:36:45.4906851Z ELF-loading image 'rootserver' to 124f000
+2026-03-29T14:36:45.4907140Z   paddr=[124f000..1644fff]
+2026-03-29T14:36:45.4907375Z   vaddr=[400000..7f5fff]
+2026-03-29T14:36:45.4907610Z   virt_entry=4113b8
+2026-03-29T14:36:45.4907857Z Enabling MMU and jumping to entry point...
+2026-03-29T14:36:45.4908063Z 
+2026-03-29T14:51:45.5280243Z 
+2026-03-29T14:51:45.5280938Z [[Timeout]]
+2026-03-29T14:51:45.5281311Z None
+2026-03-29T14:51:45.5281486Z 
+2026-03-29T14:51:45.5281639Z console_run returned -1
+2026-03-29T14:51:45.5282033Z Shutting down odroid-c2
+2026-03-29T14:51:45.9180494Z 
+2026-03-29T14:51:49.1229785Z Command exited with non-zero status 255
+2026-03-29T14:51:49.1230526Z 0.02user 0.04system 15:28.16elapsed 0%CPU (0avgtext+0avgdata 8256maxresident)k
+2026-03-29T14:51:49.1231278Z 0inputs+8outputs (0major+7221minor)pagefaults 0swaps
+2026-03-29T14:51:49.1233422Z [31;1m>>> command failed, aborting.[0m
+2026-03-29T14:51:49.1234315Z [33m+++ mq.sh sem -signal odroidc2 -k seL4/seL4-HW-23707963085-hw-run-19[0m
+2026-03-29T14:51:54.1562570Z [1m-----------[ end test ODROID_C2_debug_MCS_clang_64 ]-----------[0m
+2026-03-29T14:51:54.1563908Z ##[endgroup]
+2026-03-29T14:51:54.1564428Z [31;1mODROID_C2_debug_MCS_clang_64 FAILED[0m
+2026-03-29T14:51:54.1564827Z 
+2026-03-29T14:51:54.1567653Z ##[group]ODROID_C2_release_clang_64
+2026-03-29T14:51:54.1568450Z [1m-----------[ start test ODROID_C2_release_clang_64 ]-----------[0m
+2026-03-29T14:51:54.1572428Z [33m+++ tar xvzf ../ODROID_C2_release_clang_64-images.tar.gz[0m
+2026-03-29T14:51:54.1602057Z images/
+2026-03-29T14:51:54.1602416Z images/sel4test-driver-image-arm-odroidc2
+2026-03-29T14:51:54.1675089Z [33m+++ mq.sh sem -info odroidc2[0m
+2026-03-29T14:52:02.4262793Z Lock for odroidc2 held by sel4_ci since 2026-03-30 01:51:55.728644649 +1100, timeout 1800 with key 'seL4/seL4_tools-HW-23709039769-hw-run-2'
+2026-03-29T14:52:02.4264051Z [33m+++ time mq.sh sem -wait odroidc2 -k seL4/seL4-HW-23707963085-hw-run-19 -T 1800[0m
+2026-03-29T14:53:12.1190074Z 0.02user 0.02system 1:09.69elapsed 0%CPU (0avgtext+0avgdata 8264maxresident)k
+2026-03-29T14:53:12.1190850Z 0inputs+0outputs (0major+5464minor)pagefaults 0swaps
+2026-03-29T14:53:12.1192469Z [33m+++ time mq.sh run -c </testsuite> -s odroidc2 -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-23707963085-hw-run-19 -f images/sel4test-driver-image-arm-odroidc2[0m
+2026-03-29T14:53:15.2402347Z Lock acquired, we are allowed to run
+2026-03-29T14:53:21.2127282Z pxelinux=False
+2026-03-29T14:53:21.2128069Z copied '/tmp/tmp.FL02Tqnb5V' -> '/tftpboot/odroidc2/local-kernel'
+2026-03-29T14:53:21.2128737Z removed '/tmp/tmp.FL02Tqnb5V'
+2026-03-29T14:53:21.2129306Z '/tftpboot/odroidc2/meson64_odroidc2.dtb' -> '/tftpboot/odroidc2/local-dtb'
+2026-03-29T14:53:21.4174481Z co
+2026-03-29T14:53:21.4174745Z ^Eco
+2026-03-29T14:53:21.4174975Z [Enter `^Ec?' for help]
+2026-03-29T14:53:21.8272305Z [connecting...up]
+2026-03-29T14:53:21.8273331Z Rebooting odroid-c2 and loading image: /tmp/tmp.FL02Tqnb5V
+2026-03-29T14:53:27.5632514Z GXBB:BL1:08dafd:0a8993;FEAT:EDFD718C;POC:3;RCY:0;EMMC:0;READ:0;CHK:0;
+2026-03-29T14:53:27.5633089Z TE: 113716
+2026-03-29T14:53:27.5633337Z no sdio debug board detected
+2026-03-29T14:53:27.5633528Z 
+2026-03-29T14:53:27.5633642Z BL2 Built : 11:44:26, Nov 25 2015.
+2026-03-29T14:53:27.5633953Z gxb gfb13a3b-c2 - jcao@wonton
+2026-03-29T14:53:27.5634149Z 
+2026-03-29T14:53:27.5634247Z Board ID = 8
+2026-03-29T14:53:27.5634504Z set vcck to 1100 mv
+2026-03-29T14:53:27.5634755Z set vddee to 1050 mv
+2026-03-29T14:53:27.5635021Z CPU clk: 1536MHz
+2026-03-29T14:53:27.5635276Z DDR channel setting: DDR0 Rank0+1 same
+2026-03-29T14:53:27.5635596Z DDR0: 2048MB(auto) @ 912MHz(2T)-13
+2026-03-29T14:53:27.5636198Z DataBus test pass!
+2026-03-29T14:53:27.5636449Z AddrBus test pass!
+2026-03-29T14:53:27.5639006Z Load fip header from eMMC, src: 0x0000c200, des: 0x01400000, size: 0x000000b0
+2026-03-29T14:53:27.5639559Z Load bl30 from eMMC, src: 0x00010200, des: 0x01000000, size: 0x00009ef0
+2026-03-29T14:53:27.5640036Z Sending bl30........................................OK.
+2026-03-29T14:53:27.5640378Z Run bl30...
+2026-03-29T14:53:27.5640701Z Load bl301 from eMMC, src: 0x0001c200, des: 0x01000000, size: 0x000018c0
+2026-03-29T14:53:27.5641106Z Wait bl30...Done
+2026-03-29T14:53:27.5660242Z Sending bl301.......OK.
+2026-03-29T14:53:27.5660689Z Run bl301...
+2026-03-29T14:53:27.5661021Z Load bl3
+2026-03-29T14:53:27.5759055Z  from eMMC, src: 0x00020200, des: 0x10100000, size: 0x00011130
+2026-03-29T14:53:27.5759477Z 
+2026-03-29T14:53:27.5759481Z 
+2026-03-29T14:53:27.5759491Z 
+2026-03-29T14:53:27.5759620Z --- UART initialized after reboot ---
+2026-03-29T14:53:27.5759839Z 
+2026-03-29T14:53:27.5759945Z [Reset cause: unknown]
+2026-03-29T14:53:27.5760103Z 
+2026-03-29T14:53:27.5760360Z [Image: unknown, amlogic_v1.1.3046-00db630-dirty 2016-08-31 09:24:14 tao.zeng@droid04]
+2026-03-29T14:53:27.5760735Z 
+2026-03-29T14:53:27.7812444Z bl30: check_permit, count is 1
+2026-03-29T14:53:27.7812759Z 
+2026-03-29T14:53:27.7812766Z 
+2026-03-29T14:53:27.7812940Z bl30: check_permit: ok!
+2026-03-29T14:53:27.7813163Z 
+2026-03-29T14:53:27.7813169Z 
+2026-03-29T14:53:27.7813462Z chipid: Load bl33 from eMMC, src: 0x00034200, des: 0x01000000, size: 0x000781d0
+2026-03-29T14:53:27.7814091Z ef be ad de d f0 ad ba ef be ad de not ES chip
+2026-03-29T14:53:27.7814377Z 
+2026-03-29T14:53:27.7814504Z [0.228860 Inits done]
+2026-03-29T14:53:27.7814697Z 
+2026-03-29T14:53:27.7815457Z secure task start!
+2026-03-29T14:53:27.7816030Z high task start!
+2026-03-29T14:53:27.7816285Z low task start!
+2026-03-29T14:53:27.7816534Z NOTICE:  BL3-1: v1.0(debug):4d2e34d
+2026-03-29T14:53:27.7816947Z NOTICE:  BL3-1: Built : 17:08:35, Oct 29 2015
+2026-03-29T14:53:27.7817300Z INFO:    BL3-1: Initializing runtime services
+2026-03-29T14:53:27.7817681Z INFO:    BL3-1: Preparing for EL3 exit to normal world
+2026-03-29T14:53:27.7818078Z INFO:    BL3-1: Next image address = 0x1000000
+2026-03-29T14:53:27.7818418Z INFO:    BL3-1: Next image spsr = 0x3c9
+2026-03-29T14:53:27.9859024Z 
+2026-03-29T14:53:27.9859076Z 
+2026-03-29T14:53:27.9859585Z U-Boot 2019.04-dirty (Apr 26 2019 - 11:43:44 +1000) odroid-c2
+2026-03-29T14:53:27.9859909Z 
+2026-03-29T14:53:27.9860005Z DRAM:  2 GiB
+2026-03-29T14:53:27.9860257Z MMC:   mmc@72000: 0, mmc@74000: 1
+2026-03-29T14:53:27.9860571Z Loading Environment from MMC... OK
+2026-03-29T14:53:27.9860862Z In:    serial
+2026-03-29T14:53:27.9861087Z Out:   serial
+2026-03-29T14:53:27.9861317Z Err:   serial
+2026-03-29T14:53:29.0094136Z Net:   eth0: ethernet@c9410000
+2026-03-29T14:53:29.2143140Z => setenv autoload no && dhcp && tftpboot 0x20000000 odroidc2/local-kernel
+2026-03-29T14:53:29.2143734Z setenv autoload no && dhcp && tftpboot 0x20000000 odroidc2/local-kernel
+2026-03-29T14:53:31.9724722Z ethernet@c9410000 Waiting for PHY auto negotiation to complete...... done
+2026-03-29T14:53:31.9725178Z Speed: 1000, full duplex
+2026-03-29T14:53:31.9725441Z BOOTP broadcast 1
+2026-03-29T14:53:32.1772935Z BOOTP broadcast 2
+2026-03-29T14:53:32.5982223Z BOOTP broadcast 3
+2026-03-29T14:53:33.6034837Z BOOTP broadcast 4
+2026-03-29T14:53:35.6001175Z BOOTP broadcast 5
+2026-03-29T14:53:35.8049429Z DHCP client bound to address 172.16.1.111 (3758 ms)
+2026-03-29T14:53:35.8049968Z Speed: 1000, full duplex
+2026-03-29T14:53:35.8050322Z Using ethernet@c9410000 device
+2026-03-29T14:53:35.8050770Z TFTP from server 172.16.0.2; our IP address is 172.16.1.111
+2026-03-29T14:53:35.8051263Z Filename 'odroidc2/local-kernel'.
+2026-03-29T14:53:35.8051666Z Load address: 0x20000000
+2026-03-29T14:53:35.8052333Z Loading: *#################################################################
+2026-03-29T14:53:35.8052798Z 	 ######
+2026-03-29T14:53:35.8053062Z 	 8.3 MiB/s
+2026-03-29T14:53:35.8053319Z done
+2026-03-29T14:53:35.8053604Z Bytes transferred = 1041896 (fe5e8 hex)
+2026-03-29T14:53:35.8053993Z => go 0x20000000
+2026-03-29T14:53:35.8054278Z go 0x20000000
+2026-03-29T14:53:35.8054587Z ## Starting application at 0x20000000 ...
+2026-03-29T14:53:35.8054863Z 
+2026-03-29T14:53:35.8055066Z ELF-loader started on CPU: ARM Ltd. Cortex-A53 r0p4
+2026-03-29T14:53:35.8055520Z   paddr=[1459000..155f08f]
+2026-03-29T14:53:35.8056196Z No DTB passed in from boot loader.
+2026-03-29T14:53:36.0100253Z Looking for DTB in CPIO archive...found at 1485dc0.
+2026-03-29T14:53:36.0100797Z Loaded DTB from 1485dc0.
+2026-03-29T14:53:36.0101138Z    paddr=[122d000..1232fff]
+2026-03-29T14:53:36.0101501Z ELF-loading image 'kernel' to 1000000
+2026-03-29T14:53:36.0101890Z   paddr=[1000000..122cfff]
+2026-03-29T14:53:36.0102292Z   vaddr=[ffffff8001000000..ffffff800122cfff]
+2026-03-29T14:53:36.0102702Z   virt_entry=ffffff8001000000
+2026-03-29T14:53:36.0103073Z ELF-loading image 'rootserver' to 1233000
+2026-03-29T14:53:36.0103469Z   paddr=[1233000..1438fff]
+2026-03-29T14:53:36.0103788Z   vaddr=[400000..605fff]
+2026-03-29T14:53:36.0104102Z   virt_entry=4057d0
+2026-03-29T14:53:36.0104440Z Enabling MMU and jumping to entry point...
+2026-03-29T14:53:36.0104717Z 
+2026-03-29T15:08:35.8571339Z 
+2026-03-29T15:08:35.8571961Z [[Timeout]]
+2026-03-29T15:08:35.8572251Z None
+2026-03-29T15:08:36.0621626Z 
+2026-03-29T15:08:36.0623926Z console_run returned -1
+2026-03-29T15:08:36.0624541Z Shutting down odroid-c2
+2026-03-29T15:08:36.3876723Z 
+2026-03-29T15:08:39.5900428Z Command exited with non-zero status 255
+2026-03-29T15:08:39.5901386Z 0.03user 0.03system 15:27.46elapsed 0%CPU (0avgtext+0avgdata 8328maxresident)k
+2026-03-29T15:08:39.5901903Z 0inputs+8outputs (0major+7219minor)pagefaults 0swaps
+2026-03-29T15:08:39.5903269Z [31;1m>>> command failed, aborting.[0m
+2026-03-29T15:08:39.5903788Z [33m+++ mq.sh sem -signal odroidc2 -k seL4/seL4-HW-23707963085-hw-run-19[0m
+2026-03-29T15:08:43.8092239Z [1m-----------[ end test ODROID_C2_release_clang_64 ]-----------[0m
+2026-03-29T15:08:43.8093172Z ##[endgroup]
+2026-03-29T15:08:43.8093487Z [31;1mODROID_C2_release_clang_64 FAILED[0m
+2026-03-29T15:08:43.8093717Z 
+2026-03-29T15:08:43.8094027Z ##[group]ODROID_C2_release_MCS_clang_64
+2026-03-29T15:08:43.8094504Z [1m-----------[ start test ODROID_C2_release_MCS_clang_64 ]-----------[0m
+2026-03-29T15:08:43.8096404Z [33m+++ tar xvzf ../ODROID_C2_release_MCS_clang_64-images.tar.gz[0m
+2026-03-29T15:08:43.8123977Z images/
+2026-03-29T15:08:43.8124608Z images/sel4test-driver-image-arm-odroidc2
+2026-03-29T15:08:43.8202528Z [33m+++ mq.sh sem -info odroidc2[0m
+2026-03-29T15:08:48.3793040Z Lock for odroidc2 held by sel4_ci since 2026-03-30 02:08:45.963340164 +1100, timeout 1800 with key 'seL4/seL4_tools-HW-23709039769-hw-run-3'
+2026-03-29T15:08:48.3796965Z [33m+++ time mq.sh sem -wait odroidc2 -k seL4/seL4-HW-23707963085-hw-run-19 -T 1800[0m
+2026-03-29T15:09:33.2335983Z 0.02user 0.02system 0:44.85elapsed 0%CPU (0avgtext+0avgdata 8308maxresident)k
+2026-03-29T15:09:33.2337519Z 0inputs+0outputs (1major+5517minor)pagefaults 0swaps
+2026-03-29T15:09:33.2339107Z [33m+++ time mq.sh run -c </testsuite> -s odroidc2 -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-23707963085-hw-run-19 -f images/sel4test-driver-image-arm-odroidc2[0m
+2026-03-29T15:09:37.3659671Z Lock acquired, we are allowed to run
+2026-03-29T15:09:43.6584150Z pxelinux=False
+2026-03-29T15:09:43.6584669Z copied '/tmp/tmp.wPUODWbLfi' -> '/tftpboot/odroidc2/local-kernel'
+2026-03-29T15:09:43.6585082Z removed '/tmp/tmp.wPUODWbLfi'
+2026-03-29T15:09:43.8602253Z '/tftpboot/odroidc2/meson64_odroidc2.dtb' -> '/tftpboot/odroidc2/local-dtb'
+2026-03-29T15:09:43.8603074Z co
+2026-03-29T15:09:43.8603319Z ^Eco
+2026-03-29T15:09:43.8603575Z [Enter `^Ec?' for help]
+2026-03-29T15:09:44.2914282Z [connecting...up]
+2026-03-29T15:09:44.2914679Z Rebooting odroid-c2 and loading image: /tmp/tmp.wPUODWbLfi
+2026-03-29T15:09:50.0167185Z GXBB:BL1:08dafd:0a8993;FEAT:EDFD718C;POC:3;RCY:0;EMMC:0;READ:0;CHK:0;
+2026-03-29T15:09:50.0167894Z TE: 113482
+2026-03-29T15:09:50.0168189Z no sdio debug board detected
+2026-03-29T15:09:50.0168429Z 
+2026-03-29T15:09:50.0168583Z BL2 Built : 11:44:26, Nov 25 2015.
+2026-03-29T15:09:50.0168966Z gxb gfb13a3b-c2 - jcao@wonton
+2026-03-29T15:09:50.0169203Z 
+2026-03-29T15:09:50.0169328Z Board ID = 8
+2026-03-29T15:09:50.0169572Z set vcck to 1100 mv
+2026-03-29T15:09:50.0169844Z set vddee to 1050 mv
+2026-03-29T15:09:50.0170088Z CPU clk: 1536MHz
+2026-03-29T15:09:50.0170361Z DDR channel setting: DDR0 Rank0+1 same
+2026-03-29T15:09:50.0170662Z DDR0: 2048MB(auto) @ 912MHz(2T)-13
+2026-03-29T15:09:50.0170930Z DataBus test pass!
+2026-03-29T15:09:50.0171152Z AddrBus test pass!
+2026-03-29T15:09:50.0171494Z Load fip header from eMMC, src: 0x0000c200, des: 0x01400000, size: 0x000000b0
+2026-03-29T15:09:50.0171993Z Load bl30 from eMMC, src: 0x00010200, des: 0x01000000, size: 0x00009ef0
+2026-03-29T15:09:50.0172407Z Sending bl30........................................OK.
+2026-03-29T15:09:50.0172723Z Run bl30...
+2026-03-29T15:09:50.0173021Z Load bl301 from eMMC, src: 0x0001c200, des: 0x01000000, size: 0x000018c0
+2026-03-29T15:09:50.0173392Z Wait bl30...Done
+2026-03-29T15:09:50.0173614Z Sending bl301.......OK.
+2026-03-29T15:09:50.0173852Z Run bl301...
+2026-03-29T15:09:50.0174062Z Load bl31 from
+2026-03-29T15:09:50.2184505Z eMMC, src: 0x00020200, des: 0x10100000, size: 0x00011130
+2026-03-29T15:09:50.2185001Z 
+2026-03-29T15:09:50.2185007Z 
+2026-03-29T15:09:50.2185011Z 
+2026-03-29T15:09:50.2185276Z --- UART initialized after reboot ---
+2026-03-29T15:09:50.2185680Z 
+2026-03-29T15:09:50.2186243Z [Reset cause: unknown]
+2026-03-29T15:09:50.2186621Z 
+2026-03-29T15:09:50.2187101Z [Image: unknown, amlogic_v1.1.3046-00db630-dirty 2016-08-31 09:24:14 tao.zeng@droid04]
+2026-03-29T15:09:50.2187790Z 
+2026-03-29T15:09:50.2188399Z bl30: check_permit, count is 1
+2026-03-29T15:09:50.2188627Z 
+2026-03-29T15:09:50.2188632Z 
+2026-03-29T15:09:50.2188753Z bl30: check_permit: ok!
+2026-03-29T15:09:50.2188948Z 
+2026-03-29T15:09:50.2188953Z 
+2026-03-29T15:09:50.2189229Z chipid: Load bl33 from eMMC, src: 0x00034200, des: 0x01000000, size: 0x000781d0
+2026-03-29T15:09:50.2189782Z ef be ad de d f0 ad ba ef be ad de not ES chip
+2026-03-29T15:09:50.2190057Z 
+2026-03-29T15:09:50.2190167Z [0.228624 Inits done]
+2026-03-29T15:09:50.2190352Z 
+2026-03-29T15:09:50.2190469Z secure task start!
+2026-03-29T15:09:50.2190761Z high task start!
+2026-03-29T15:09:50.2191035Z low task start!
+2026-03-29T15:09:50.4200313Z NOTICE:  BL3-1: v1.0(debug):4d2e34d
+2026-03-29T15:09:50.4200863Z NOTICE:  BL3-1: Built : 17:08:35, Oct 29 2015
+2026-03-29T15:09:50.4201309Z INFO:    BL3-1: Initializing runtime services
+2026-03-29T15:09:50.4201791Z INFO:    BL3-1: Preparing for EL3 exit to normal world
+2026-03-29T15:09:50.4202267Z INFO:    BL3-1: Next image address = 0x1000000
+2026-03-29T15:09:50.4202717Z INFO:    BL3-1: Next image spsr = 0x3c9
+2026-03-29T15:09:50.4202987Z 
+2026-03-29T15:09:50.4202992Z 
+2026-03-29T15:09:50.4203218Z U-Boot 2019.04-dirty (Apr 26 2019 - 11:43:44 +1000) odroid-c2
+2026-03-29T15:09:50.4203555Z 
+2026-03-29T15:09:50.4203676Z DRAM:  2 GiB
+2026-03-29T15:09:50.4203963Z MMC:   mmc@72000: 0, mmc@74000: 1
+2026-03-29T15:09:50.6214263Z Loading Environment from MMC... OK
+2026-03-29T15:09:50.6214813Z In:    serial
+2026-03-29T15:09:50.6215114Z Out:   serial
+2026-03-29T15:09:50.6215393Z Err:   serial
+2026-03-29T15:09:51.4826535Z Net:   eth0: ethernet@c9410000
+2026-03-29T15:09:51.6840243Z => setenv autoload no && dhcp && tftpboot 0x20000000 odroidc2/local-kernel
+2026-03-29T15:09:51.6841034Z setenv autoload no && dhcp && tftpboot 0x20000000 odroidc2/local-kernel
+2026-03-29T15:09:54.4444989Z ethernet@c9410000 Waiting for PHY auto negotiation to complete...... done
+2026-03-29T15:09:54.4445482Z Speed: 1000, full duplex
+2026-03-29T15:09:54.4446124Z BOOTP broadcast 1
+2026-03-29T15:09:54.6462092Z BOOTP broadcast 2
+2026-03-29T15:09:55.0634661Z BOOTP broadcast 3
+2026-03-29T15:09:56.0620458Z BOOTP broadcast 4
+2026-03-29T15:09:58.0620737Z BOOTP broadcast 5
+2026-03-29T15:09:58.2635789Z DHCP client bound to address 172.16.1.111 (3760 ms)
+2026-03-29T15:09:58.2636504Z Speed: 1000, full duplex
+2026-03-29T15:09:58.2636766Z Using ethernet@c9410000 device
+2026-03-29T15:09:58.2637086Z TFTP from server 172.16.0.2; our IP address is 172.16.1.111
+2026-03-29T15:09:58.2637470Z Filename 'odroidc2/local-kernel'.
+2026-03-29T15:09:58.2637743Z Load address: 0x20000000
+2026-03-29T15:09:58.2638306Z Loading: *#################################################################
+2026-03-29T15:09:58.2638640Z 	 ###########
+2026-03-29T15:09:58.2638840Z 	 9.5 MiB/s
+2026-03-29T15:09:58.2639029Z done
+2026-03-29T15:09:58.2639258Z Bytes transferred = 1106920 (10e3e8 hex)
+2026-03-29T15:09:58.2639528Z => go 0x20000000
+2026-03-29T15:09:58.2639735Z go 0x20000000
+2026-03-29T15:09:58.2639959Z ## Starting application at 0x20000000 ...
+2026-03-29T15:09:58.2640173Z 
+2026-03-29T15:09:58.2640320Z ELF-loader started on CPU: ARM Ltd. Cortex-A53 r0p4
+2026-03-29T15:09:58.2640638Z   paddr=[146d000..158308f]
+2026-03-29T15:09:58.2640894Z No DTB passed in from boot loader.
+2026-03-29T15:09:58.4651209Z Looking for DTB in CPIO archive...found at 149edc0.
+2026-03-29T15:09:58.4651683Z Loaded DTB from 149edc0.
+2026-03-29T15:09:58.4651948Z    paddr=[1231000..1236fff]
+2026-03-29T15:09:58.4652229Z ELF-loading image 'kernel' to 1000000
+2026-03-29T15:09:58.4652525Z   paddr=[1000000..1230fff]
+2026-03-29T15:09:58.4652853Z   vaddr=[ffffff8001000000..ffffff8001230fff]
+2026-03-29T15:09:58.4653172Z   virt_entry=ffffff8001000000
+2026-03-29T15:09:58.4653477Z ELF-loading image 'rootserver' to 1237000
+2026-03-29T15:09:58.4653779Z   paddr=[1237000..144cfff]
+2026-03-29T15:09:58.4654024Z   vaddr=[400000..615fff]
+2026-03-29T15:09:58.4654260Z   virt_entry=405d18
+2026-03-29T15:09:58.4654512Z Enabling MMU and jumping to entry point...
+2026-03-29T15:09:58.4655114Z 
+2026-03-29T15:24:58.2890510Z 
+2026-03-29T15:24:58.2894382Z [[Timeout]]
+2026-03-29T15:24:58.2894640Z None
+2026-03-29T15:24:58.4903179Z 
+2026-03-29T15:24:58.4903876Z console_run returned -1
+2026-03-29T15:24:58.4904260Z Shutting down odroid-c2
+2026-03-29T15:24:58.8076899Z 
+2026-03-29T15:25:01.9548484Z Command exited with non-zero status 255
+2026-03-29T15:25:01.9549261Z 0.04user 0.03system 15:28.72elapsed 0%CPU (0avgtext+0avgdata 8300maxresident)k
+2026-03-29T15:25:01.9549849Z 0inputs+8outputs (1major+7247minor)pagefaults 0swaps
+2026-03-29T15:25:01.9551085Z [31;1m>>> command failed, aborting.[0m
+2026-03-29T15:25:01.9551775Z [33m+++ mq.sh sem -signal odroidc2 -k seL4/seL4-HW-23707963085-hw-run-19[0m
+2026-03-29T15:25:06.1288084Z [1m-----------[ end test ODROID_C2_release_MCS_clang_64 ]-----------[0m
+2026-03-29T15:25:06.1290132Z ##[endgroup]
+2026-03-29T15:25:06.1290662Z [31;1mODROID_C2_release_MCS_clang_64 FAILED[0m
+2026-03-29T15:25:06.1291037Z 
+2026-03-29T15:25:06.1291547Z ##[group]ODROID_C2_verification_clang_64
+2026-03-29T15:25:06.1292359Z [1m-----------[ start test ODROID_C2_verification_clang_64 ]-----------[0m
+2026-03-29T15:25:06.1293690Z [33m+++ tar xvzf ../ODROID_C2_verification_clang_64-images.tar.gz[0m
+2026-03-29T15:25:06.1320959Z images/
+2026-03-29T15:25:06.1321982Z images/sel4test-driver-image-arm-odroidc2
+2026-03-29T15:25:06.1510599Z [33m+++ mq.sh sem -info odroidc2[0m
+2026-03-29T15:25:09.6369065Z Lock for odroidc2 currently free
+2026-03-29T15:25:09.6370090Z [33m+++ time mq.sh sem -wait odroidc2 -k seL4/seL4-HW-23707963085-hw-run-19 -T 1800[0m
+2026-03-29T15:26:10.6931589Z 0.02user 0.02system 1:01.05elapsed 0%CPU (0avgtext+0avgdata 8272maxresident)k
+2026-03-29T15:26:10.6932453Z 0inputs+0outputs (1major+5478minor)pagefaults 0swaps
+2026-03-29T15:26:10.6933584Z [33m+++ time mq.sh run -c </testsuite> -s odroidc2 -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-23707963085-hw-run-19 -f images/sel4test-driver-image-arm-odroidc2[0m
+2026-03-29T15:26:13.7226637Z Lock acquired, we are allowed to run
+2026-03-29T15:26:19.5464176Z pxelinux=False
+2026-03-29T15:26:19.5464694Z copied '/tmp/tmp.zfcvZNR2a6' -> '/tftpboot/odroidc2/local-kernel'
+2026-03-29T15:26:19.7475225Z removed '/tmp/tmp.zfcvZNR2a6'
+2026-03-29T15:26:19.7476092Z '/tftpboot/odroidc2/meson64_odroidc2.dtb' -> '/tftpboot/odroidc2/local-dtb'
+2026-03-29T15:26:19.7476815Z co
+2026-03-29T15:26:19.7477055Z ^Eco
+2026-03-29T15:26:19.9490148Z [Enter `^Ec?' for help]
+2026-03-29T15:26:20.2251222Z [connecting...up]
+2026-03-29T15:26:20.4265566Z Rebooting odroid-c2 and loading image: /tmp/tmp.zfcvZNR2a6
+2026-03-29T15:26:25.9429337Z GXBB:BL1:08dafd:0a8993;FEAT:EDFD718C;POC:3;RCY:0;EMMC:0;READ:0;CHK:0;
+2026-03-29T15:26:25.9430142Z TE: 113410
+2026-03-29T15:26:25.9430427Z no sdio debug board detected
+2026-03-29T15:26:25.9430627Z 
+2026-03-29T15:26:25.9430728Z BL2 Built : 11:44:26, Nov 25 2015.
+2026-03-29T15:26:25.9431075Z gxb gfb13a3b-c2 - jcao@wonton
+2026-03-29T15:26:25.9431246Z 
+2026-03-29T15:26:25.9431339Z Board ID = 8
+2026-03-29T15:26:25.9431555Z set vcck to 1100 mv
+2026-03-29T15:26:25.9431801Z set vddee to 1050 mv
+2026-03-29T15:26:25.9432039Z CPU clk: 1536MHz
+2026-03-29T15:26:25.9432288Z DDR channel setting: DDR0 Rank0+1 same
+2026-03-29T15:26:25.9432588Z DDR0: 2048MB(auto) @ 912MHz(2T)-13
+2026-03-29T15:26:25.9432864Z DataBus test pass!
+2026-03-29T15:26:25.9433095Z AddrBus test pass!
+2026-03-29T15:26:25.9433440Z Load fip header from eMMC, src: 0x0000c200, des: 0x01400000, size: 0x000000b0
+2026-03-29T15:26:25.9433941Z Load bl30 from eMMC, src: 0x00010200, des: 0x01000000, size: 0x00009ef0
+2026-03-29T15:26:25.9434371Z Sending bl30........................................OK.
+2026-03-29T15:26:25.9434689Z Run bl30...
+2026-03-29T15:26:25.9434989Z Load bl301 from eMMC, src: 0x0001c200, des: 0x01000000, size: 0x000018c0
+2026-03-29T15:26:25.9435369Z Wait bl30...Done
+2026-03-29T15:26:25.9435593Z Sending bl301.......OK.
+2026-03-29T15:26:25.9436143Z Run bl301...
+2026-03-29T15:26:25.9436358Z Load bl3
+2026-03-29T15:26:25.9506319Z  from eMMC, src: 0x00020200, des: 0x10100000, size: 0x00011130
+2026-03-29T15:26:25.9507823Z 
+2026-03-29T15:26:25.9507831Z 
+2026-03-29T15:26:25.9507837Z 
+2026-03-29T15:26:25.9508080Z --- UART initialized after reboot ---
+2026-03-29T15:26:25.9508497Z 
+2026-03-29T15:26:25.9508694Z [Reset cause: unknown]
+2026-03-29T15:26:25.9508983Z 
+2026-03-29T15:26:25.9509288Z [Image: unknown, amlogic_v1.1.3046-00db630-dirty 2016-08-31 09:24:14 tao.zeng@droid04]
+2026-03-29T15:26:25.9509723Z 
+2026-03-29T15:26:26.1519535Z bl30: check_permit, count is 1
+2026-03-29T15:26:26.1519996Z 
+2026-03-29T15:26:26.1520006Z 
+2026-03-29T15:26:26.1520262Z bl30: check_permit: ok!
+2026-03-29T15:26:26.1520475Z 
+2026-03-29T15:26:26.1520479Z 
+2026-03-29T15:26:26.1520838Z chipid:L oad bl33 from eMMC, src: 0x00034200, des: 0x01000000, size: 0x000781d0
+2026-03-29T15:26:26.1521734Z ef be ad de d f0 ad ba ef be ad de not ES chip
+2026-03-29T15:26:26.1522170Z 
+2026-03-29T15:26:26.1522356Z [0.228554 Inits done]
+2026-03-29T15:26:26.1522576Z 
+2026-03-29T15:26:26.1522694Z secure task start!
+2026-03-29T15:26:26.1522981Z high task start!
+2026-03-29T15:26:26.1523249Z low task start!
+2026-03-29T15:26:26.1523532Z NOTICE:  BL3-1: v1.0(debug):4d2e34d
+2026-03-29T15:26:26.1523907Z NOTICE:  BL3-1: Built : 17:08:35, Oct 29 2015
+2026-03-29T15:26:26.1524227Z INFO:    BL3-1: Initializing runtime services
+2026-03-29T15:26:26.1524575Z INFO:    BL3-1: Preparing for EL3 exit to normal world
+2026-03-29T15:26:26.3529319Z INFO:    BL3-1: Next image address = 0x1000000
+2026-03-29T15:26:26.3529838Z INFO:    BL3-1: Next image spsr = 0x3c9
+2026-03-29T15:26:26.3530096Z 
+2026-03-29T15:26:26.3530102Z 
+2026-03-29T15:26:26.3530767Z U-Boot 2019.04-dirty (Apr 26 2019 - 11:43:44 +1000) odroid-c2
+2026-03-29T15:26:26.3531085Z 
+2026-03-29T15:26:26.3531196Z DRAM:  2 GiB
+2026-03-29T15:26:26.3531485Z MMC:   mmc@72000: 0, mmc@74000: 1
+2026-03-29T15:26:26.3531833Z Loading Environment from MMC... OK
+2026-03-29T15:26:26.3532157Z In:    serial
+2026-03-29T15:26:26.3532403Z Out:   serial
+2026-03-29T15:26:26.3532644Z Err:   serial
+2026-03-29T15:26:27.3887885Z Net:   eth0: ethernet@c9410000
+2026-03-29T15:26:27.5900754Z => setenv autoload no && dhcp && tftpboot 0x20000000 odroidc2/local-kernel
+2026-03-29T15:26:27.5901564Z setenv autoload no && dhcp && tftpboot 0x20000000 odroidc2/local-kernel
+2026-03-29T15:26:30.3499296Z ethernet@c9410000 Waiting for PHY auto negotiation to complete...... done
+2026-03-29T15:26:30.3499882Z Speed: 1000, full duplex
+2026-03-29T15:26:30.3500194Z BOOTP broadcast 1
+2026-03-29T15:26:30.5588382Z BOOTP broadcast 2
+2026-03-29T15:26:31.0698200Z BOOTP broadcast 3
+2026-03-29T15:26:32.0710964Z BOOTP broadcast 4
+2026-03-29T15:26:34.0656157Z BOOTP broadcast 5
+2026-03-29T15:26:34.0656719Z DHCP client bound to address 172.16.1.111 (3759 ms)
+2026-03-29T15:26:34.0657180Z Speed: 1000, full duplex
+2026-03-29T15:26:34.0657533Z Using ethernet@c9410000 device
+2026-03-29T15:26:34.0657968Z TFTP from server 172.16.0.2; our IP address is 172.16.1.111
+2026-03-29T15:26:34.2664017Z Filename 'odroidc2/local-kernel'.
+2026-03-29T15:26:34.2664516Z Load address: 0x20000000
+2026-03-29T15:26:34.2665221Z Loading: *#################################################################
+2026-03-29T15:26:34.4673936Z 	 #################################################################
+2026-03-29T15:26:34.4674379Z 	 #################################################################
+2026-03-29T15:26:34.4674701Z 	 #
+2026-03-29T15:26:34.4674906Z 	 8.8 MiB/s
+2026-03-29T15:26:34.4675109Z done
+2026-03-29T15:26:34.4675326Z Bytes transferred = 2875448 (2be038 hex)
+2026-03-29T15:26:34.4675622Z => go 0x20000000
+2026-03-29T15:26:34.4676139Z go 0x20000000
+2026-03-29T15:26:34.4676438Z ## Starting application at 0x20000000 ...
+2026-03-29T15:26:34.6684075Z 
+2026-03-29T15:26:34.6686953Z ELF-loader started on CPU: ARM Ltd. Cortex-A53 r0p4
+2026-03-29T15:26:34.6687369Z   paddr=[1617000..18dd08f]
+2026-03-29T15:26:34.6687659Z No DTB passed in from boot loader.
+2026-03-29T15:26:34.6688008Z Looking for DTB in CPIO archive...found at 1643a10.
+2026-03-29T15:26:34.6688363Z Loaded DTB from 1643a10.
+2026-03-29T15:26:34.6688991Z    paddr=[122b000..1230fff]
+2026-03-29T15:26:34.6689277Z ELF-loading image 'kernel' to 1000000
+2026-03-29T15:26:34.6689579Z   paddr=[1000000..122afff]
+2026-03-29T15:26:34.6689873Z   vaddr=[ffffff8001000000..ffffff800122afff]
+2026-03-29T15:26:34.6690204Z   virt_entry=ffffff8001000000
+2026-03-29T15:26:34.6690516Z ELF-loading image 'rootserver' to 1231000
+2026-03-29T15:26:34.6690835Z   paddr=[1231000..15f6fff]
+2026-03-29T15:26:34.6691096Z   vaddr=[400000..7c5fff]
+2026-03-29T15:26:34.6691346Z   virt_entry=410538
+2026-03-29T15:26:34.6691630Z Enabling MMU and jumping to entry point...
+2026-03-29T15:26:34.6691859Z 
+2026-03-29T15:41:34.5244369Z 
+2026-03-29T15:41:34.5244852Z [[Timeout]]
+2026-03-29T15:41:34.5245325Z None
+2026-03-29T15:41:34.7263653Z 
+2026-03-29T15:41:34.7264140Z console_run returned -1
+2026-03-29T15:41:34.7264627Z Shutting down odroid-c2
+2026-03-29T15:41:35.0181546Z 
+2026-03-29T15:41:38.1722750Z Command exited with non-zero status 255
+2026-03-29T15:41:38.1723502Z 0.03user 0.03system 15:27.47elapsed 0%CPU (0avgtext+0avgdata 8268maxresident)k
+2026-03-29T15:41:38.1724043Z 0inputs+8outputs (0major+7231minor)pagefaults 0swaps
+2026-03-29T15:41:38.1725519Z [31;1m>>> command failed, aborting.[0m
+2026-03-29T15:41:38.1726352Z [33m+++ mq.sh sem -signal odroidc2 -k seL4/seL4-HW-23707963085-hw-run-19[0m
+2026-03-29T15:41:42.5000465Z [1m-----------[ end test ODROID_C2_verification_clang_64 ]-----------[0m
+2026-03-29T15:41:42.5001646Z ##[endgroup]
+2026-03-29T15:41:42.5002095Z [31;1mODROID_C2_verification_clang_64 FAILED[0m
+2026-03-29T15:41:42.5002349Z 
+2026-03-29T15:41:42.5003019Z ##[group]ODROID_C2_verification_MCS_clang_64
+2026-03-29T15:41:42.5003569Z [1m-----------[ start test ODROID_C2_verification_MCS_clang_64 ]-----------[0m
+2026-03-29T15:41:42.5008878Z [33m+++ tar xvzf ../ODROID_C2_verification_MCS_clang_64-images.tar.gz[0m
+2026-03-29T15:41:42.5036781Z images/
+2026-03-29T15:41:42.5037103Z images/sel4test-driver-image-arm-odroidc2
+2026-03-29T15:41:42.5228725Z [33m+++ mq.sh sem -info odroidc2[0m
+2026-03-29T15:41:47.2200473Z Lock for odroidc2 held by sel4_ci since 2026-03-30 02:41:43.331066078 +1100, timeout 1800 with key 'seL4/seL4_tools-HW-23709039769-hw-run-2'
+2026-03-29T15:41:47.2201876Z [33m+++ time mq.sh sem -wait odroidc2 -k seL4/seL4-HW-23707963085-hw-run-19 -T 1800[0m
+2026-03-29T15:42:24.4982601Z 0.02user 0.02system 0:37.27elapsed 0%CPU (0avgtext+0avgdata 8316maxresident)k
+2026-03-29T15:42:24.4983415Z 0inputs+0outputs (1major+5478minor)pagefaults 0swaps
+2026-03-29T15:42:24.4985229Z [33m+++ time mq.sh run -c </testsuite> -s odroidc2 -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-23707963085-hw-run-19 -f images/sel4test-driver-image-arm-odroidc2[0m
+2026-03-29T15:42:27.2827669Z Lock acquired, we are allowed to run
+2026-03-29T15:42:33.8789001Z pxelinux=False
+2026-03-29T15:42:33.8789532Z copied '/tmp/tmp.Rlzqa2jbFX' -> '/tftpboot/odroidc2/local-kernel'
+2026-03-29T15:42:33.8790029Z removed '/tmp/tmp.Rlzqa2jbFX'
+2026-03-29T15:42:33.8790523Z '/tftpboot/odroidc2/meson64_odroidc2.dtb' -> '/tftpboot/odroidc2/local-dtb'
+2026-03-29T15:42:34.0806936Z co
+2026-03-29T15:42:34.0807277Z ^Eco
+2026-03-29T15:42:34.0807578Z [Enter `^Ec?' for help]
+2026-03-29T15:42:34.4841372Z [connecting...up]
+2026-03-29T15:42:34.4842029Z Rebooting odroid-c2 and loading image: /tmp/tmp.Rlzqa2jbFX
+2026-03-29T15:42:40.2081348Z GXBB:BL1:08dafd:0a8993;FEAT:EDFD718C;POC:3;RCY:0;EMMC:0;READ:0;CHK:0;
+2026-03-29T15:42:40.2081878Z TE: 113400
+2026-03-29T15:42:40.2082184Z no sdio debug board detected
+2026-03-29T15:42:40.2082413Z 
+2026-03-29T15:42:40.2082565Z BL2 Built : 11:44:26, Nov 25 2015.
+2026-03-29T15:42:40.2082977Z gxb gfb13a3b-c2 - jcao@wonton
+2026-03-29T15:42:40.2083201Z 
+2026-03-29T15:42:40.2083318Z Board ID = 8
+2026-03-29T15:42:40.2083583Z set vcck to 1100 mv
+2026-03-29T15:42:40.2083867Z set vddee to 1050 mv
+2026-03-29T15:42:40.2084153Z CPU clk: 1536MHz
+2026-03-29T15:42:40.2084426Z DDR channel setting: DDR0 Rank0+1 same
+2026-03-29T15:42:40.2084723Z DDR0: 2048MB(auto) @ 912MHz(2T)-13
+2026-03-29T15:42:40.2084993Z DataBus test pass!
+2026-03-29T15:42:40.2085986Z AddrBus test pass!
+2026-03-29T15:42:40.2086353Z Load fip header from eMMC, src: 0x0000c200, des: 0x01400000, size: 0x000000b0
+2026-03-29T15:42:40.2086826Z Load bl30 from eMMC, src: 0x00010200, des: 0x01000000, size: 0x00009ef0
+2026-03-29T15:42:40.2087227Z Sending bl30........................................OK.
+2026-03-29T15:42:40.2087538Z Run bl30...
+2026-03-29T15:42:40.2087827Z Load bl301 from eMMC, src: 0x0001c200, des: 0x01000000, size: 0x000018c0
+2026-03-29T15:42:40.2088181Z Wait bl30...Done
+2026-03-29T15:42:40.2088409Z Sending bl301.......OK.
+2026-03-29T15:42:40.2088632Z Run bl301...
+2026-03-29T15:42:40.2088830Z Load bl3
+2026-03-29T15:42:40.2164561Z  from eMMC, src: 0x00020200, des: 0x10100000, size: 0x00011130
+2026-03-29T15:42:40.2165101Z 
+2026-03-29T15:42:40.2165109Z 
+2026-03-29T15:42:40.2165115Z 
+2026-03-29T15:42:40.2165352Z --- UART initialized after reboot ---
+2026-03-29T15:42:40.2166042Z 
+2026-03-29T15:42:40.2166235Z [Reset cause: unknown]
+2026-03-29T15:42:40.2166583Z 
+2026-03-29T15:42:40.2166907Z [Image: unknown, amlogic_v1.1.3046-00db630-dirty 2016-08-31 09:24:14 tao.zeng@droid04]
+2026-03-29T15:42:40.2167330Z 
+2026-03-29T15:42:40.4181980Z bl30: check_permit, count is 1
+2026-03-29T15:42:40.4182281Z 
+2026-03-29T15:42:40.4182305Z 
+2026-03-29T15:42:40.4182436Z bl30: check_permit: ok!
+2026-03-29T15:42:40.4182635Z 
+2026-03-29T15:42:40.4182640Z 
+2026-03-29T15:42:40.4182917Z chipid: Load bl33 from eMMC, src: 0x00034200, des: 0x01000000, size: 0x000781d0
+2026-03-29T15:42:40.4183475Z ef be ad de d f0 ad ba ef be ad de not ES chip
+2026-03-29T15:42:40.4184215Z 
+2026-03-29T15:42:40.4184338Z [0.228545 Inits done]
+2026-03-29T15:42:40.4184514Z 
+2026-03-29T15:42:40.4184633Z secure task start!
+2026-03-29T15:42:40.4184915Z high task start!
+2026-03-29T15:42:40.4185193Z low task start!
+2026-03-29T15:42:40.4185479Z NOTICE:  BL3-1: v1.0(debug):4d2e34d
+2026-03-29T15:42:40.4186234Z NOTICE:  BL3-1: Built : 17:08:35, Oct 29 2015
+2026-03-29T15:42:40.4186646Z INFO:    BL3-1: Initializing runtime services
+2026-03-29T15:42:40.4187122Z INFO:    BL3-1: Preparing for EL3 exit to normal world
+2026-03-29T15:42:40.6196933Z INFO:    BL3-1: Next image address = 0x1000000
+2026-03-29T15:42:40.6197407Z INFO:    BL3-1: Next image spsr = 0x3c9
+2026-03-29T15:42:40.6197673Z 
+2026-03-29T15:42:40.6197678Z 
+2026-03-29T15:42:40.6197909Z U-Boot 2019.04-dirty (Apr 26 2019 - 11:43:44 +1000) odroid-c2
+2026-03-29T15:42:40.6198227Z 
+2026-03-29T15:42:40.6198339Z DRAM:  2 GiB
+2026-03-29T15:42:40.6198608Z MMC:   mmc@72000: 0, mmc@74000: 1
+2026-03-29T15:42:40.6199001Z Loading Environment from MMC... OK
+2026-03-29T15:42:40.6199321Z In:    serial
+2026-03-29T15:42:40.6199568Z Out:   serial
+2026-03-29T15:42:40.6199807Z Err:   serial
+2026-03-29T15:42:41.6583008Z Net:   eth0: ethernet@c9410000
+2026-03-29T15:42:41.8599118Z => setenv autoload no && dhcp && tftpboot 0x20000000 odroidc2/local-kernel
+2026-03-29T15:42:41.8599789Z setenv autoload no && dhcp && tftpboot 0x20000000 odroidc2/local-kernel
+2026-03-29T15:42:44.6175015Z ethernet@c9410000 Waiting for PHY auto negotiation to complete...... done
+2026-03-29T15:42:44.6175668Z Speed: 1000, full duplex
+2026-03-29T15:42:44.6176304Z BOOTP broadcast 1
+2026-03-29T15:42:44.8190805Z BOOTP broadcast 2
+2026-03-29T15:42:45.2569745Z BOOTP broadcast 3
+2026-03-29T15:42:46.2471732Z BOOTP broadcast 4
+2026-03-29T15:42:48.2453216Z BOOTP broadcast 5
+2026-03-29T15:42:48.4473128Z DHCP client bound to address 172.16.1.111 (3760 ms)
+2026-03-29T15:42:48.4473635Z Speed: 1000, full duplex
+2026-03-29T15:42:48.4473958Z Using ethernet@c9410000 device
+2026-03-29T15:42:48.4474388Z TFTP from server 172.16.0.2; our IP address is 172.16.1.111
+2026-03-29T15:42:48.4474848Z Filename 'odroidc2/local-kernel'.
+2026-03-29T15:42:48.4475186Z Load address: 0x20000000
+2026-03-29T15:42:48.4476156Z Loading: *#################################################################
+2026-03-29T15:42:48.6484392Z 	 #################################################################
+2026-03-29T15:42:48.6484934Z 	 #################################################################
+2026-03-29T15:42:48.6486121Z 	 ###########
+2026-03-29T15:42:48.6486392Z 	 11.1 MiB/s
+2026-03-29T15:42:48.6486665Z done
+2026-03-29T15:42:48.6493364Z Bytes transferred = 3010616 (2df038 hex)
+2026-03-29T15:42:48.6493823Z => go 0x20000000
+2026-03-29T15:42:48.6494087Z go 0x20000000
+2026-03-29T15:42:48.6494339Z ## Starting application at 0x20000000 ...
+2026-03-29T15:42:48.6494543Z 
+2026-03-29T15:42:48.6494699Z ELF-loader started on CPU: ARM Ltd. Cortex-A53 r0p4
+2026-03-29T15:42:48.6495040Z   paddr=[163b000..192208f]
+2026-03-29T15:42:48.6495323Z No DTB passed in from boot loader.
+2026-03-29T15:42:48.6495650Z Looking for DTB in CPIO archive...found at 166ca10.
+2026-03-29T15:42:48.6496138Z Loaded DTB from 166ca10.
+2026-03-29T15:42:48.6496385Z    paddr=[122f000..1234fff]
+2026-03-29T15:42:48.6496651Z ELF-loading image 'kernel' to 1000000
+2026-03-29T15:42:48.6496929Z   paddr=[1000000..122efff]
+2026-03-29T15:42:48.6497196Z   vaddr=[ffffff8001000000..ffffff800122efff]
+2026-03-29T15:42:48.6497507Z   virt_entry=ffffff8001000000
+2026-03-29T15:42:48.6497782Z ELF-loading image 'rootserver' to 1235000
+2026-03-29T15:42:48.6498066Z   paddr=[1235000..161afff]
+2026-03-29T15:42:48.6498298Z   vaddr=[400000..7e5fff]
+2026-03-29T15:42:48.6498531Z   virt_entry=410a20
+2026-03-29T15:42:48.6498775Z Enabling MMU and jumping to entry point...
+2026-03-29T15:42:48.6498980Z 
+2026-03-29T15:57:48.7132518Z 
+2026-03-29T15:57:48.7132879Z [[Timeout]]
+2026-03-29T15:57:48.7133141Z None
+2026-03-29T15:57:48.7133255Z 
+2026-03-29T15:57:48.7133367Z console_run returned -1
+2026-03-29T15:57:48.7136092Z Shutting down odroid-c2
+2026-03-29T15:57:49.1040260Z 
+2026-03-29T15:57:52.5141044Z Command exited with non-zero status 255
+2026-03-29T15:57:52.5142075Z 0.04user 0.03system 15:28.01elapsed 0%CPU (0avgtext+0avgdata 8288maxresident)k
+2026-03-29T15:57:52.5142821Z 0inputs+8outputs (0major+7221minor)pagefaults 0swaps
+2026-03-29T15:57:52.5144200Z [31;1m>>> command failed, aborting.[0m
+2026-03-29T15:57:52.5145048Z [33m+++ mq.sh sem -signal odroidc2 -k seL4/seL4-HW-23707963085-hw-run-19[0m
+2026-03-29T15:57:56.9473932Z [1m-----------[ end test ODROID_C2_verification_MCS_clang_64 ]-----------[0m
+2026-03-29T15:57:56.9474765Z ##[endgroup]
+2026-03-29T15:57:56.9475124Z [31;1mODROID_C2_verification_MCS_clang_64 FAILED[0m
+2026-03-29T15:57:56.9475362Z 
+2026-03-29T15:57:56.9475492Z Successful tests: [0m
+2026-03-29T15:57:56.9475642Z 
+2026-03-29T15:57:56.9476776Z [31;1mFAILED tests: ODROID_C2_debug_clang_64, ODROID_C2_debug_MCS_clang_64, ODROID_C2_release_clang_64, ODROID_C2_release_MCS_clang_64, ODROID_C2_verification_clang_64, ODROID_C2_verification_MCS_clang_64[0m
+2026-03-29T15:57:56.9612932Z ##[error]Action sel4test-hw-run failed.
+2026-03-29T15:57:56.9733187Z Post job cleanup.
+2026-03-29T15:57:57.0806402Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/post-steps.sh
+2026-03-29T15:57:57.0858432Z ##[group]Releasing mq lock
+2026-03-29T15:57:57.0928332Z Agent pid 4419
+2026-03-29T15:57:57.2386151Z mq.sh sem -cancel odroidc2 -k seL4/seL4-HW-23707963085-hw-run-19
+2026-03-29T15:58:00.0212840Z mq.sh sem -signal odroidc2 -k seL4/seL4-HW-23707963085-hw-run-19
+2026-03-29T15:58:03.8868454Z Attempting to unlock system odroidc2 with the wrong key!
+2026-03-29T15:58:03.8967740Z ##[endgroup]
+2026-03-29T15:58:03.9124254Z Post job cleanup.
+2026-03-29T15:58:04.0080728Z [command]/usr/bin/git version
+2026-03-29T15:58:04.0117648Z git version 2.53.0
+2026-03-29T15:58:04.0169394Z Temporarily overriding HOME='/home/runner/work/_temp/664abdac-9126-4c8e-a329-f0f047f7c018' before making global git config changes
+2026-03-29T15:58:04.0170814Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-29T15:58:04.0175514Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/seL4/seL4/machine_queue
+2026-03-29T15:58:04.0214634Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-29T15:58:04.0244114Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-29T15:58:04.0463709Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-29T15:58:04.0483716Z http.https://github.com/.extraheader
+2026-03-29T15:58:04.0496371Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-03-29T15:58:04.0528103Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-29T15:58:04.0746514Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-29T15:58:04.0775635Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-29T15:58:04.1107514Z Cleaning up orphan processes
+2026-03-29T15:58:04.1400401Z Terminate orphan process: pid (2399) (ssh)
+2026-03-29T15:58:04.1499454Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/download-artifact@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

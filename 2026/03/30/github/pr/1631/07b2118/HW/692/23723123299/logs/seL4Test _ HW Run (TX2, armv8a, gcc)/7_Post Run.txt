@@ -1,0 +1,8 @@
+﻿2026-03-30T03:24:28.3614586Z Post job cleanup.
+2026-03-30T03:24:28.4769219Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/post-steps.sh
+2026-03-30T03:24:28.4826127Z ##[group]Releasing mq lock
+2026-03-30T03:24:28.4900069Z Agent pid 5858
+2026-03-30T03:24:28.6426583Z mq.sh sem -cancel tx2a -k seL4/seL4-HW-23723123299-hw-run-14
+2026-03-30T03:24:31.5409278Z mq.sh sem -signal tx2a -k seL4/seL4-HW-23723123299-hw-run-14
+2026-03-30T03:24:35.5307260Z Attempting to unlock system tx2a with the wrong key!
+2026-03-30T03:24:35.5402906Z ##[endgroup]

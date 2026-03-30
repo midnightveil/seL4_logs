@@ -1,0 +1,8 @@
+﻿2026-03-30T03:49:18.4124770Z Post job cleanup.
+2026-03-30T03:49:18.5195489Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/post-steps.sh
+2026-03-30T03:49:18.5247161Z ##[group]Releasing mq lock
+2026-03-30T03:49:18.5316924Z Agent pid 5003
+2026-03-30T03:49:18.6704048Z mq.sh sem -cancel imx93b -k seL4/seL4-Deploy-23696206642-hw-run-15
+2026-03-30T03:49:21.0960722Z mq.sh sem -signal imx93b -k seL4/seL4-Deploy-23696206642-hw-run-15
+2026-03-30T03:49:23.7873395Z Attempting to unlock system imx93b that you do not hold
+2026-03-30T03:49:23.7967177Z ##[endgroup]

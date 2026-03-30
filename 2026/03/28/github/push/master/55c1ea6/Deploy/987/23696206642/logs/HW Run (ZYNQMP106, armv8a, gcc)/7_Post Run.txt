@@ -1,0 +1,7 @@
+﻿2026-03-30T03:59:26.9871099Z Post job cleanup.
+2026-03-30T03:59:27.1053026Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/post-steps.sh
+2026-03-30T03:59:27.1131932Z ##[group]Releasing mq lock
+2026-03-30T03:59:27.1184316Z Agent pid 5190
+2026-03-30T03:59:27.3029088Z mq.sh sem -cancel zcu106 -k seL4/seL4-Deploy-23696206642-hw-run-8
+2026-03-30T03:59:31.7361595Z mq.sh sem -signal zcu106 -k seL4/seL4-Deploy-23696206642-hw-run-8
+2026-03-30T03:59:38.9891692Z ##[endgroup]

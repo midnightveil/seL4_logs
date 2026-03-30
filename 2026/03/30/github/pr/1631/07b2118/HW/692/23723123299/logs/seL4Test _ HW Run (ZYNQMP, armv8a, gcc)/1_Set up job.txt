@@ -1,0 +1,33 @@
+﻿2026-03-30T01:40:31.8609478Z Current runner version: '2.333.0'
+2026-03-30T01:40:31.8632001Z ##[group]Runner Image Provisioner
+2026-03-30T01:40:31.8632912Z Hosted Compute Agent
+2026-03-30T01:40:31.8633593Z Version: 20260213.493
+2026-03-30T01:40:31.8634266Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-03-30T01:40:31.8635103Z Build Date: 2026-02-13T00:28:41Z
+2026-03-30T01:40:31.8635871Z Worker ID: {e75cbe77-d678-4147-81e6-830e11983e84}
+2026-03-30T01:40:31.8636619Z Azure Region: westcentralus
+2026-03-30T01:40:31.8637485Z ##[endgroup]
+2026-03-30T01:40:31.8638912Z ##[group]Operating System
+2026-03-30T01:40:31.8639608Z Ubuntu
+2026-03-30T01:40:31.8640250Z 24.04.4
+2026-03-30T01:40:31.8640777Z LTS
+2026-03-30T01:40:31.8641336Z ##[endgroup]
+2026-03-30T01:40:31.8641936Z ##[group]Runner Image
+2026-03-30T01:40:31.8642620Z Image: ubuntu-24.04
+2026-03-30T01:40:31.8643252Z Version: 20260323.65.1
+2026-03-30T01:40:31.8644384Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260323.65/images/ubuntu/Ubuntu2404-Readme.md
+2026-03-30T01:40:31.8646144Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260323.65
+2026-03-30T01:40:31.8647599Z ##[endgroup]
+2026-03-30T01:40:31.8648916Z ##[group]GITHUB_TOKEN Permissions
+2026-03-30T01:40:31.8650777Z Contents: read
+2026-03-30T01:40:31.8651531Z Metadata: read
+2026-03-30T01:40:31.8652149Z ##[endgroup]
+2026-03-30T01:40:31.8654204Z Secret source: Actions
+2026-03-30T01:40:31.8655005Z Prepare workflow directory
+2026-03-30T01:40:31.9035856Z Prepare all required actions
+2026-03-30T01:40:31.9074019Z Getting action download info
+2026-03-30T01:40:32.3315059Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-03-30T01:40:32.4649931Z Download action repository 'actions/download-artifact@v4' (SHA:d3f86a106a0bac45b974a628896c90dbdf5c8093)
+2026-03-30T01:40:33.3861821Z Download action repository 'seL4/ci-actions@master' (SHA:c10638c961b7ab1f619fe004ddd07d2b189ae827)
+2026-03-30T01:40:34.4322529Z Uses: seL4/ci-actions/.github/workflows/sel4test-hw.yml@refs/heads/master (5ffc97f19e2c7d81ad945d0d1b84b1c7c9ce26aa)
+2026-03-30T01:40:34.4329105Z Complete job name: seL4Test / HW Run (ZYNQMP, armv8a, gcc)

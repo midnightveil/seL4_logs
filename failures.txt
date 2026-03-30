@@ -1,0 +1,10 @@
+ZYNQMP_debug_gcc_64
+	path: 2026/03/28/github/manual/20260328T230943/55c1ea6/Deploy/988/23696419519/logs/6_HW Run (ZYNQMP, armv8a, gcc).txt
+	system: zcu102_2
+	kind: output timeout
+	variant: during tests
+ZYNQMP_debug_gcc_64
+	path: 2026/03/28/github/manual/20260328T230943/55c1ea6/Deploy/988/23696419519/logs/HW Run (ZYNQMP, armv8a, gcc)/4_Run.txt
+	system: zcu102_2
+	kind: output timeout
+	variant: during tests

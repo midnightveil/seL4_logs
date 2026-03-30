@@ -5,11 +5,11 @@ vars:
 ci:
   github:
     paths:
-      logs: '{build_prefix}/{wf_name}/{number}/logs/'
+      logs: '{build_prefix}/{wf_name}/{number}/{run_id}/logs/'
     workflows:
       # mainline
       - sel4test-deploy.yml
       # mostly PRs - a lot of the olders will be empty as skipped
-      # - hw-tests.yml
+      - hw-tests.yml
 
-max-days-back: 30
+max-days-back: 1000

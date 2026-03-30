@@ -1,0 +1,1464 @@
+﻿2026-03-28T17:50:27.8999392Z Current runner version: '2.333.0'
+2026-03-28T17:50:27.9025236Z ##[group]Runner Image Provisioner
+2026-03-28T17:50:27.9026130Z Hosted Compute Agent
+2026-03-28T17:50:27.9026872Z Version: 20260213.493
+2026-03-28T17:50:27.9027902Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-03-28T17:50:27.9028684Z Build Date: 2026-02-13T00:28:41Z
+2026-03-28T17:50:27.9029481Z Worker ID: {f4de015f-1ceb-4c6b-b0a4-e084c2ffc9c3}
+2026-03-28T17:50:27.9030224Z Azure Region: westus
+2026-03-28T17:50:27.9030846Z ##[endgroup]
+2026-03-28T17:50:27.9032442Z ##[group]Operating System
+2026-03-28T17:50:27.9033116Z Ubuntu
+2026-03-28T17:50:27.9033763Z 24.04.4
+2026-03-28T17:50:27.9034306Z LTS
+2026-03-28T17:50:27.9034864Z ##[endgroup]
+2026-03-28T17:50:27.9035488Z ##[group]Runner Image
+2026-03-28T17:50:27.9036134Z Image: ubuntu-24.04
+2026-03-28T17:50:27.9036782Z Version: 20260323.65.1
+2026-03-28T17:50:27.9038290Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260323.65/images/ubuntu/Ubuntu2404-Readme.md
+2026-03-28T17:50:27.9039965Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260323.65
+2026-03-28T17:50:27.9040929Z ##[endgroup]
+2026-03-28T17:50:27.9042137Z ##[group]GITHUB_TOKEN Permissions
+2026-03-28T17:50:27.9044086Z Contents: read
+2026-03-28T17:50:27.9044872Z Metadata: read
+2026-03-28T17:50:27.9045462Z ##[endgroup]
+2026-03-28T17:50:27.9048076Z Secret source: Actions
+2026-03-28T17:50:27.9048960Z Prepare workflow directory
+2026-03-28T17:50:27.9396237Z Prepare all required actions
+2026-03-28T17:50:27.9437197Z Getting action download info
+2026-03-28T17:50:28.4493288Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-03-28T17:50:28.5843038Z Download action repository 'actions/download-artifact@v4' (SHA:d3f86a106a0bac45b974a628896c90dbdf5c8093)
+2026-03-28T17:50:29.2194429Z Download action repository 'seL4/ci-actions@master' (SHA:5ffc97f19e2c7d81ad945d0d1b84b1c7c9ce26aa)
+2026-03-28T17:50:29.8672953Z Uses: seL4/ci-actions/.github/workflows/sel4test-hw.yml@refs/heads/master (5ffc97f19e2c7d81ad945d0d1b84b1c7c9ce26aa)
+2026-03-28T17:50:29.8677515Z Complete job name: seL4Test / HW Run (SABRE, armv7a, clang)
+2026-03-28T17:50:29.9393348Z ##[group]Run actions/checkout@v4
+2026-03-28T17:50:29.9394085Z with:
+2026-03-28T17:50:29.9394401Z   repository: seL4/machine_queue
+2026-03-28T17:50:29.9394755Z   path: machine_queue
+2026-03-28T17:50:29.9395258Z   token: ***
+2026-03-28T17:50:29.9395551Z   ssh-strict: true
+2026-03-28T17:50:29.9395859Z   ssh-user: git
+2026-03-28T17:50:29.9396163Z   persist-credentials: true
+2026-03-28T17:50:29.9396489Z   clean: true
+2026-03-28T17:50:29.9396810Z   sparse-checkout-cone-mode: true
+2026-03-28T17:50:29.9397171Z   fetch-depth: 1
+2026-03-28T17:50:29.9397473Z   fetch-tags: false
+2026-03-28T17:50:29.9398072Z   show-progress: true
+2026-03-28T17:50:29.9398374Z   lfs: false
+2026-03-28T17:50:29.9398651Z   submodules: false
+2026-03-28T17:50:29.9398961Z   set-safe-directory: true
+2026-03-28T17:50:29.9399600Z ##[endgroup]
+2026-03-28T17:50:30.0479676Z Syncing repository: seL4/machine_queue
+2026-03-28T17:50:30.0481614Z ##[group]Getting Git version info
+2026-03-28T17:50:30.0482292Z Working directory is '/home/runner/work/seL4/seL4/machine_queue'
+2026-03-28T17:50:30.0483118Z [command]/usr/bin/git version
+2026-03-28T17:50:30.0530326Z git version 2.53.0
+2026-03-28T17:50:30.0556027Z ##[endgroup]
+2026-03-28T17:50:30.0570294Z Temporarily overriding HOME='/home/runner/work/_temp/ef43d2a1-e37d-4010-8f03-55afcafd546a' before making global git config changes
+2026-03-28T17:50:30.0571541Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-28T17:50:30.0575979Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/seL4/seL4/machine_queue
+2026-03-28T17:50:30.0609139Z ##[group]Initializing the repository
+2026-03-28T17:50:30.0615899Z [command]/usr/bin/git init /home/runner/work/seL4/seL4/machine_queue
+2026-03-28T17:50:30.0732271Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-03-28T17:50:30.0734475Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-03-28T17:50:30.0735692Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-03-28T17:50:30.0736430Z hint: call:
+2026-03-28T17:50:30.0736827Z hint:
+2026-03-28T17:50:30.0737382Z hint: 	git config --global init.defaultBranch <name>
+2026-03-28T17:50:30.0738228Z hint:
+2026-03-28T17:50:30.0738995Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-03-28T17:50:30.0740336Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-03-28T17:50:30.0741113Z hint:
+2026-03-28T17:50:30.0741540Z hint: 	git branch -m <name>
+2026-03-28T17:50:30.0742066Z hint:
+2026-03-28T17:50:30.0742705Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-03-28T17:50:30.0743736Z Initialized empty Git repository in /home/runner/work/seL4/seL4/machine_queue/.git/
+2026-03-28T17:50:30.0745859Z [command]/usr/bin/git remote add origin https://github.com/seL4/machine_queue
+2026-03-28T17:50:30.0776072Z ##[endgroup]
+2026-03-28T17:50:30.0776729Z ##[group]Disabling automatic garbage collection
+2026-03-28T17:50:30.0780887Z [command]/usr/bin/git config --local gc.auto 0
+2026-03-28T17:50:30.0811471Z ##[endgroup]
+2026-03-28T17:50:30.0812577Z ##[group]Setting up auth
+2026-03-28T17:50:30.0818432Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-28T17:50:30.0848417Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-28T17:50:30.1132840Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-28T17:50:30.1163188Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-28T17:50:30.1391178Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-28T17:50:30.1420872Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-28T17:50:30.1640336Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-03-28T17:50:30.1673015Z ##[endgroup]
+2026-03-28T17:50:30.1673811Z ##[group]Determining the default branch
+2026-03-28T17:50:30.1676479Z Retrieving the default branch name
+2026-03-28T17:50:30.5084622Z Default branch 'master'
+2026-03-28T17:50:30.5089419Z ##[endgroup]
+2026-03-28T17:50:30.5092185Z ##[group]Fetching the repository
+2026-03-28T17:50:30.5094926Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/master:refs/remotes/origin/master
+2026-03-28T17:50:31.0526043Z From https://github.com/seL4/machine_queue
+2026-03-28T17:50:31.0552921Z  * [new branch]      master     -> origin/master
+2026-03-28T17:50:31.0554430Z ##[endgroup]
+2026-03-28T17:50:31.0555018Z ##[group]Determining the checkout info
+2026-03-28T17:50:31.0555733Z ##[endgroup]
+2026-03-28T17:50:31.0560933Z [command]/usr/bin/git sparse-checkout disable
+2026-03-28T17:50:31.0602050Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-03-28T17:50:31.0629784Z ##[group]Checking out the ref
+2026-03-28T17:50:31.0633986Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2026-03-28T17:50:31.0709732Z Reset branch 'master'
+2026-03-28T17:50:31.0713096Z branch 'master' set up to track 'origin/master'.
+2026-03-28T17:50:31.0719888Z ##[endgroup]
+2026-03-28T17:50:31.0756440Z [command]/usr/bin/git log -1 --format=%H
+2026-03-28T17:50:31.0778403Z f0835aa54749667d30c9143e0fd3353e9367f2dd
+2026-03-28T17:50:31.1086922Z ##[group]Run actions/download-artifact@v4
+2026-03-28T17:50:31.1087318Z with:
+2026-03-28T17:50:31.1087998Z   name: images-sel4test-armv7a-clang
+2026-03-28T17:50:31.1088351Z   merge-multiple: false
+2026-03-28T17:50:31.1088646Z   repository: seL4/seL4
+2026-03-28T17:50:31.1088924Z   run-id: 23684167886
+2026-03-28T17:50:31.1089194Z ##[endgroup]
+2026-03-28T17:50:31.3128845Z Downloading single artifact
+2026-03-28T17:50:31.6107308Z Preparing to download the following artifacts:
+2026-03-28T17:50:31.6109068Z - images-sel4test-armv7a-clang (ID: 6158338279, Size: 45330766, Expected Digest: sha256:35d8827f9215219f20df30f73ebf2ce2131b569b1f35e2938bb223548ee6a270)
+2026-03-28T17:50:31.8232303Z Redirecting to blob download url: https://productionresultssa3.blob.core.windows.net/actions-results/dfd7bc71-c2db-403a-8035-e53580c03873/workflow-job-run-4dd167c4-ac62-5ac5-b8d9-df400465bd6b/artifacts/7655c76844bb67c8c02557a77662458dedf10764e28ec1be518219a903ddc5a8.zip
+2026-03-28T17:50:31.8234952Z Starting download of artifact to: /home/runner/work/seL4/seL4
+2026-03-28T17:50:32.2276041Z (node:2272) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-03-28T17:50:32.2278537Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-03-28T17:50:35.1506571Z SHA256 digest of downloaded artifact is 35d8827f9215219f20df30f73ebf2ce2131b569b1f35e2938bb223548ee6a270
+2026-03-28T17:50:35.1508027Z Artifact download completed successfully.
+2026-03-28T17:50:35.1508651Z Total of 1 artifact(s) downloaded
+2026-03-28T17:50:35.1514615Z Download artifact has finished successfully
+2026-03-28T17:50:35.1680308Z ##[group]Run seL4/ci-actions/sel4test-hw-run@master
+2026-03-28T17:50:35.1680657Z with:
+2026-03-28T17:50:35.1680858Z   platform: SABRE
+2026-03-28T17:50:35.1681078Z   compiler: clang
+2026-03-28T17:50:35.1681296Z   index: $33
+2026-03-28T17:50:35.1681510Z   action_name: sel4test-hw-run
+2026-03-28T17:50:35.1681761Z env:
+2026-03-28T17:50:35.1683585Z   HW_SSH: ***
+
+2026-03-28T17:50:35.1683829Z ##[endgroup]
+2026-03-28T17:50:35.2781063Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/steps.sh
+2026-03-28T17:50:35.2835251Z ##[group]Setting up
+2026-03-28T17:50:35.3047220Z Agent pid 2303
+2026-03-28T17:50:35.3219107Z Cloning into 'seL4_libs'...
+2026-03-28T17:50:36.7326512Z Reading package lists...
+2026-03-28T17:50:36.9370611Z Building dependency tree...
+2026-03-28T17:50:36.9382593Z Reading state information...
+2026-03-28T17:50:37.1450809Z libffi-dev is already the newest version (3.4.6-1build1).
+2026-03-28T17:50:37.1451639Z libffi-dev set to manually installed.
+2026-03-28T17:50:37.1452357Z 0 upgraded, 0 newly installed, 0 to remove and 24 not upgraded.
+2026-03-28T17:50:40.7275001Z Collecting junitparser==3.*
+2026-03-28T17:50:40.7611759Z   Downloading junitparser-3.2.0-py2.py3-none-any.whl.metadata (9.0 kB)
+2026-03-28T17:50:40.7920693Z Collecting sel4-deps
+2026-03-28T17:50:40.7949624Z   Downloading sel4_deps-0.7.0-py3-none-any.whl.metadata (1.1 kB)
+2026-03-28T17:50:40.8056611Z Requirement already satisfied: six in /usr/lib/python3/dist-packages (from sel4-deps) (1.16.0)
+2026-03-28T17:50:40.8213397Z Collecting future (from sel4-deps)
+2026-03-28T17:50:40.8236024Z   Downloading future-1.0.0-py3-none-any.whl.metadata (4.0 kB)
+2026-03-28T17:50:40.8278324Z Requirement already satisfied: jinja2 in /usr/lib/python3/dist-packages (from sel4-deps) (3.1.2)
+2026-03-28T17:50:41.0455609Z Collecting lxml (from sel4-deps)
+2026-03-28T17:50:41.0482655Z   Downloading lxml-6.0.2-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.6 kB)
+2026-03-28T17:50:41.0625779Z Collecting ply (from sel4-deps)
+2026-03-28T17:50:41.0658449Z   Downloading ply-3.11-py2.py3-none-any.whl.metadata (844 bytes)
+2026-03-28T17:50:41.1536682Z Collecting psutil (from sel4-deps)
+2026-03-28T17:50:41.1564051Z   Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+2026-03-28T17:50:41.1741991Z Collecting bs4 (from sel4-deps)
+2026-03-28T17:50:41.1764304Z   Downloading bs4-0.0.2-py2.py3-none-any.whl.metadata (411 bytes)
+2026-03-28T17:50:41.1914634Z Collecting pyelftools (from sel4-deps)
+2026-03-28T17:50:41.1977525Z   Downloading pyelftools-0.32-py3-none-any.whl.metadata (372 bytes)
+2026-03-28T17:50:41.2231186Z Collecting sh (from sel4-deps)
+2026-03-28T17:50:41.2260184Z   Downloading sh-2.2.2-py3-none-any.whl.metadata (3.7 kB)
+2026-03-28T17:50:41.2303684Z Requirement already satisfied: pexpect in /usr/lib/python3/dist-packages (from sel4-deps) (4.9.0)
+2026-03-28T17:50:41.2314096Z Requirement already satisfied: pyyaml>=5.1 in /usr/lib/python3/dist-packages (from sel4-deps) (6.0.1)
+2026-03-28T17:50:41.2323847Z Requirement already satisfied: jsonschema in /usr/lib/python3/dist-packages (from sel4-deps) (4.10.3)
+2026-03-28T17:50:41.2438565Z Collecting pyfdt (from sel4-deps)
+2026-03-28T17:50:41.2466801Z   Downloading pyfdt-0.3.tar.gz (9.1 kB)
+2026-03-28T17:50:41.2581543Z   Preparing metadata (setup.py): started
+2026-03-28T17:50:41.4522270Z   Preparing metadata (setup.py): finished with status 'done'
+2026-03-28T17:50:41.4718543Z Collecting cmake-format==0.6.13 (from sel4-deps)
+2026-03-28T17:50:41.4747496Z   Downloading cmake_format-0.6.13-py3-none-any.whl.metadata (23 kB)
+2026-03-28T17:50:41.4920551Z Collecting guardonce (from sel4-deps)
+2026-03-28T17:50:41.4950654Z   Downloading guardonce-2.4.0-py2.py3-none-any.whl.metadata (3.4 kB)
+2026-03-28T17:50:41.5193890Z Collecting autopep8==2.3.2 (from sel4-deps)
+2026-03-28T17:50:41.5219321Z   Downloading autopep8-2.3.2-py2.py3-none-any.whl.metadata (16 kB)
+2026-03-28T17:50:41.5437488Z Collecting libarchive-c (from sel4-deps)
+2026-03-28T17:50:41.5466116Z   Downloading libarchive_c-5.3-py3-none-any.whl.metadata (5.8 kB)
+2026-03-28T17:50:41.5700345Z Collecting pycodestyle>=2.12.0 (from autopep8==2.3.2->sel4-deps)
+2026-03-28T17:50:41.5724384Z   Downloading pycodestyle-2.14.0-py2.py3-none-any.whl.metadata (4.5 kB)
+2026-03-28T17:50:41.5907917Z Collecting cmakelang>=0.6.13 (from cmake-format==0.6.13->sel4-deps)
+2026-03-28T17:50:41.5938893Z   Downloading cmakelang-0.6.13-py3-none-any.whl.metadata (23 kB)
+2026-03-28T17:50:41.6207026Z Collecting beautifulsoup4 (from bs4->sel4-deps)
+2026-03-28T17:50:41.6229963Z   Downloading beautifulsoup4-4.14.3-py3-none-any.whl.metadata (3.8 kB)
+2026-03-28T17:50:41.6441085Z Requirement already satisfied: attrs>=17.4.0 in /usr/lib/python3/dist-packages (from jsonschema->sel4-deps) (23.2.0)
+2026-03-28T17:50:41.6456682Z Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,>=0.14.0 in /usr/lib/python3/dist-packages (from jsonschema->sel4-deps) (0.20.0)
+2026-03-28T17:50:41.7521052Z Collecting soupsieve>=1.6.1 (from beautifulsoup4->bs4->sel4-deps)
+2026-03-28T17:50:41.7574751Z   Downloading soupsieve-2.8.3-py3-none-any.whl.metadata (4.6 kB)
+2026-03-28T17:50:41.7621478Z Requirement already satisfied: typing-extensions>=4.0.0 in /usr/lib/python3/dist-packages (from beautifulsoup4->bs4->sel4-deps) (4.10.0)
+2026-03-28T17:50:41.7692840Z Downloading junitparser-3.2.0-py2.py3-none-any.whl (13 kB)
+2026-03-28T17:50:41.7747600Z Downloading sel4_deps-0.7.0-py3-none-any.whl (1.4 kB)
+2026-03-28T17:50:41.7792139Z Downloading autopep8-2.3.2-py2.py3-none-any.whl (45 kB)
+2026-03-28T17:50:41.7840147Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.8/45.8 kB 14.4 MB/s eta 0:00:00
+2026-03-28T17:50:41.7860731Z Downloading cmake_format-0.6.13-py3-none-any.whl (19 kB)
+2026-03-28T17:50:41.7904514Z Downloading bs4-0.0.2-py2.py3-none-any.whl (1.2 kB)
+2026-03-28T17:50:41.7946671Z Downloading future-1.0.0-py3-none-any.whl (491 kB)
+2026-03-28T17:50:41.8020408Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 491.3/491.3 kB 86.5 MB/s eta 0:00:00
+2026-03-28T17:50:41.8049533Z Downloading guardonce-2.4.0-py2.py3-none-any.whl (15 kB)
+2026-03-28T17:50:41.8101026Z Downloading libarchive_c-5.3-py3-none-any.whl (17 kB)
+2026-03-28T17:50:41.8147138Z Downloading lxml-6.0.2-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.3 MB)
+2026-03-28T17:50:41.8519200Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 148.2 MB/s eta 0:00:00
+2026-03-28T17:50:41.8540936Z Downloading ply-3.11-py2.py3-none-any.whl (49 kB)
+2026-03-28T17:50:41.8578667Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.6/49.6 kB 18.5 MB/s eta 0:00:00
+2026-03-28T17:50:41.8602593Z Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+2026-03-28T17:50:41.8665602Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.6/155.6 kB 31.2 MB/s eta 0:00:00
+2026-03-28T17:50:41.8699317Z Downloading pyelftools-0.32-py3-none-any.whl (188 kB)
+2026-03-28T17:50:41.8747350Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.5/188.5 kB 57.7 MB/s eta 0:00:00
+2026-03-28T17:50:41.8768345Z Downloading sh-2.2.2-py3-none-any.whl (38 kB)
+2026-03-28T17:50:41.8826065Z Downloading cmakelang-0.6.13-py3-none-any.whl (159 kB)
+2026-03-28T17:50:41.8874311Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 159.8/159.8 kB 51.6 MB/s eta 0:00:00
+2026-03-28T17:50:41.8896754Z Downloading pycodestyle-2.14.0-py2.py3-none-any.whl (31 kB)
+2026-03-28T17:50:41.8944705Z Downloading beautifulsoup4-4.14.3-py3-none-any.whl (107 kB)
+2026-03-28T17:50:41.8990578Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.7/107.7 kB 35.4 MB/s eta 0:00:00
+2026-03-28T17:50:41.9013401Z Downloading soupsieve-2.8.3-py3-none-any.whl (37 kB)
+2026-03-28T17:50:41.9253232Z Building wheels for collected packages: pyfdt
+2026-03-28T17:50:41.9258329Z   Building wheel for pyfdt (setup.py): started
+2026-03-28T17:50:42.2592515Z   Building wheel for pyfdt (setup.py): finished with status 'done'
+2026-03-28T17:50:42.2597092Z   Created wheel for pyfdt: filename=pyfdt-0.3-py3-none-any.whl size=10969 sha256=8d3a077d60b96c2a1013b4a4ce0ecd9bcc948e00d29ce733f2ff7c2e2f773bee
+2026-03-28T17:50:42.2599027Z   Stored in directory: /home/runner/.cache/pip/wheels/d9/8e/2a/cff33f3accb8eaa34608e68786db1ec323a5f6bce8d724d90a
+2026-03-28T17:50:42.2614139Z Successfully built pyfdt
+2026-03-28T17:50:42.5555493Z Installing collected packages: pyfdt, pyelftools, ply, libarchive-c, junitparser, guardonce, soupsieve, sh, pycodestyle, psutil, lxml, future, cmakelang, cmake-format, beautifulsoup4, autopep8, bs4, sel4-deps
+2026-03-28T17:50:43.4886326Z Successfully installed autopep8-2.3.2 beautifulsoup4-4.14.3 bs4-0.0.2 cmake-format-0.6.13 cmakelang-0.6.13 future-1.0.0 guardonce-2.4.0 junitparser-3.2.0 libarchive-c-5.3 lxml-6.0.2 ply-3.11 psutil-7.2.2 pycodestyle-2.14.0 pyelftools-0.32 pyfdt-0.3 sel4-deps-0.7.0 sh-2.2.2 soupsieve-2.8.3
+2026-03-28T17:50:43.6086095Z ##[endgroup]
+2026-03-28T17:50:43.7530106Z 
+2026-03-28T17:50:43.7535624Z ##[group]SABRE_debug_clang_32
+2026-03-28T17:50:43.7536647Z [1m-----------[ start test SABRE_debug_clang_32 ]-----------[0m
+2026-03-28T17:50:43.7537837Z [33m+++ tar xvzf ../SABRE_debug_clang_32-images.tar.gz[0m
+2026-03-28T17:50:43.7561039Z images/
+2026-03-28T17:50:43.7561943Z images/sel4test-driver-image-arm-imx6
+2026-03-28T17:50:43.7777568Z [33m+++ mq.sh sem -info sabre[0m
+2026-03-28T17:51:07.3533022Z Lock for sabre currently free
+2026-03-28T17:51:07.3534122Z [33m+++ time mq.sh sem -wait sabre -k seL4/seL4-HW-23684167886-hw-run-33 -T 1800[0m
+2026-03-28T17:51:45.5633050Z 0.01user 0.02system 0:38.19elapsed 0%CPU (0avgtext+0avgdata 8240maxresident)k
+2026-03-28T17:51:45.5633910Z 0inputs+0outputs (1major+4211minor)pagefaults 0swaps
+2026-03-28T17:51:45.5635365Z [33m+++ time mq.sh run -c </testsuite> -s sabre -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-23684167886-hw-run-33 -f images/sel4test-driver-image-arm-imx6[0m
+2026-03-28T17:51:55.6931275Z Lock acquired, we are allowed to run
+2026-03-28T17:52:02.4988245Z pxelinux=False
+2026-03-28T17:52:02.4989154Z copied '/tmp/tmp.o2nmPhh2GO' -> '/tftpboot/sabre/sel4-image'
+2026-03-28T17:52:02.6451070Z removed '/tmp/tmp.o2nmPhh2GO'
+2026-03-28T17:52:02.6451682Z co
+2026-03-28T17:52:02.6451884Z ^Eco
+2026-03-28T17:52:02.7917681Z [Enter `^Ec?' for help]
+2026-03-28T17:52:03.3134704Z [connecting...up]
+2026-03-28T17:52:03.3135214Z Rebooting sabre and loading image: /tmp/tmp.o2nmPhh2GO
+2026-03-28T17:52:09.4271184Z   
+2026-03-28T17:52:09.4271384Z 
+2026-03-28T17:52:09.4271389Z 
+2026-03-28T17:52:09.4271960Z U-Boot 2013.04-dirty (Jul 21 2013 - 23:42:37)
+2026-03-28T17:52:09.4272221Z 
+2026-03-28T17:52:09.4272225Z 
+2026-03-28T17:52:09.4272346Z CPU:   Freescale i.MX6Q rev1.2 at 792 MHz
+2026-03-28T17:52:09.4272580Z 
+2026-03-28T17:52:09.4272677Z Reset cause: POR
+2026-03-28T17:52:09.4272818Z 
+2026-03-28T17:52:09.4272918Z Board: MX6Q-Sabre Lite
+2026-03-28T17:52:09.4273081Z 
+2026-03-28T17:52:09.4273168Z DRAM:  1 GiB
+2026-03-28T17:52:09.5738203Z 
+2026-03-28T17:52:09.5738877Z MMC:   FSL_SDHC: 0, FSL_SDHC: 1
+2026-03-28T17:52:09.5739234Z 
+2026-03-28T17:52:09.5739538Z SF: Detected SST25VF016B with page size 4 KiB, total 2 MiB
+2026-03-28T17:52:09.5739900Z 
+2026-03-28T17:52:09.5740032Z No panel detected: default to HDMI
+2026-03-28T17:52:09.5740362Z 
+2026-03-28T17:52:09.5740504Z unsupported panel HDMI
+2026-03-28T17:52:09.5740746Z 
+2026-03-28T17:52:09.5740897Z In:    serial
+2026-03-28T17:52:09.5741106Z 
+2026-03-28T17:52:09.5741270Z Out:   serial
+2026-03-28T17:52:09.5741474Z 
+2026-03-28T17:52:09.5741654Z Err:   serial
+2026-03-28T17:52:09.5741859Z 
+2026-03-28T17:52:09.5742014Z Net:   using phy at 6
+2026-03-28T17:52:09.5742256Z 
+2026-03-28T17:52:09.5742396Z FEC [PRIME]
+2026-03-28T17:52:09.5742664Z 
+2026-03-28T17:52:09.5742839Z Hit any key to stop autoboot: 10
+2026-03-28T17:52:09.7205124Z  0
+2026-03-28T17:52:09.7205352Z 
+2026-03-28T17:52:09.7205814Z ERTOS MX6QSABRELITE U-Boot > setenv autoload no && dhcp && tftpboot 0x30000000 sabre/sel4-image
+2026-03-28T17:52:09.7206672Z setenv autoload no && dhcp && tftpboot 0x30000000 sabre/sel4-image
+2026-03-28T17:52:09.7207081Z 
+2026-03-28T17:52:11.9743858Z FEC Waiting for PHY auto negotiation to complete..... done
+2026-03-28T17:52:12.1208286Z 
+2026-03-28T17:52:15.0729291Z BOOTP broadcast 1
+2026-03-28T17:52:15.0729539Z 
+2026-03-28T17:52:15.0729663Z BOOTP broadcast 2
+2026-03-28T17:52:15.0729852Z 
+2026-03-28T17:52:15.0730007Z DHCP client bound to address 172.16.1.86
+2026-03-28T17:52:15.2194396Z 
+2026-03-28T17:52:15.2195412Z Using FEC device
+2026-03-28T17:52:15.2195757Z 
+2026-03-28T17:52:15.2196064Z TFTP from server 172.16.0.2; our IP address is 172.16.1.86
+2026-03-28T17:52:15.2196396Z 
+2026-03-28T17:52:15.2196527Z Filename 'sabre/sel4-image'.
+2026-03-28T17:52:15.2196739Z 
+2026-03-28T17:52:15.2196847Z Load address: 0x30000000
+2026-03-28T17:52:15.2197034Z 
+2026-03-28T17:52:15.3659742Z Loading: *#################################################################
+2026-03-28T17:52:15.3660174Z 
+2026-03-28T17:52:15.5123387Z 	 #################################################################
+2026-03-28T17:52:15.5123923Z 
+2026-03-28T17:52:15.6587671Z 	 #################################################################
+2026-03-28T17:52:15.6588465Z 
+2026-03-28T17:52:15.8052304Z 	 ######################################################
+2026-03-28T17:52:15.8052735Z 
+2026-03-28T17:52:15.8052888Z 	 7.1 MiB/s
+2026-03-28T17:52:15.8053093Z 
+2026-03-28T17:52:15.8053211Z done
+2026-03-28T17:52:15.8053374Z 
+2026-03-28T17:52:15.8053540Z Bytes transferred = 3647052 (37a64c hex)
+2026-03-28T17:52:15.8053869Z 
+2026-03-28T17:52:15.8054061Z ERTOS MX6QSABRELITE U-Boot > bootelf
+2026-03-28T17:52:15.8054506Z bootelf
+2026-03-28T17:52:15.8054690Z 
+2026-03-28T17:52:15.8054823Z ## Starting application at 0x104b5000 ...
+2026-03-28T17:52:15.8055071Z 
+2026-03-28T17:52:15.8055075Z 
+2026-03-28T17:52:15.8055288Z ELF-loader started on CPU: ARM Ltd. Cortex-A9 r2p10
+2026-03-28T17:52:15.8055669Z   paddr=[104b5000..1081d04b]
+2026-03-28T17:52:15.8055977Z No DTB passed in from boot loader.
+2026-03-28T17:52:15.8056351Z Looking for DTB in CPIO archive...found at 104fa52c.
+2026-03-28T17:52:15.9516673Z Loaded DTB from 104fa52c.
+2026-03-28T17:52:15.9517148Z    paddr=[10044000..1004efff]
+2026-03-28T17:52:15.9517775Z ELF-loading image 'kernel' to 10000000
+2026-03-28T17:52:15.9518188Z   paddr=[10000000..10043fff]
+2026-03-28T17:52:15.9518467Z   vaddr=[e0000000..e0043fff]
+2026-03-28T17:52:15.9518721Z   virt_entry=e0000000
+2026-03-28T17:52:16.0983363Z ELF-loading image 'rootserver' to 1004f000
+2026-03-28T17:52:16.0984005Z   paddr=[1004f000..10494fff]
+2026-03-28T17:52:16.0984657Z   vaddr=[10000..455fff]
+2026-03-28T17:52:16.0984954Z   virt_entry=200fc
+2026-03-28T17:52:18.5911547Z Enabling MMU and jumping to entry point...
+2026-03-28T17:52:18.5911888Z 
+2026-03-28T17:52:18.5912047Z DIDRv: 3, armv 70, coproc baseline only? no.
+2026-03-28T17:52:18.5912524Z CPU is in secure mode. Enabling debugging in secure user mode.
+2026-03-28T17:52:18.5912955Z Bootstrapping kernel
+2026-03-28T17:52:18.7376009Z available phys memory regions: 1
+2026-03-28T17:52:18.7376618Z   [10000000..2ff00000)
+2026-03-28T17:52:18.7376974Z reserved virt address space regions: 4
+2026-03-28T17:52:18.7377378Z   [e0000000..e0044000)
+2026-03-28T17:52:18.7378077Z   [e0044000..e004e2f1)
+2026-03-28T17:52:18.7378334Z   [e004f000..e0495000)
+2026-03-28T17:52:18.7378579Z   [ff000000..ff100000)
+2026-03-28T17:52:18.7378868Z Booting all finished, dropped to user space
+2026-03-28T17:52:18.7379245Z Caught cap fault in send phase at address 0
+2026-03-28T17:52:18.7379587Z while trying to handle:
+2026-03-28T17:52:18.7379938Z vm fault on data at address 0xdf7fe000 with status 0x805
+2026-03-28T17:52:18.7380403Z in thread 0xffef7400 "sel4test-driver" at address 0x90948
+2026-03-28T17:52:18.7380780Z With stack:
+2026-03-28T17:52:18.7381003Z 0x343d10: 0x343da0
+2026-03-28T17:52:18.7381247Z 0x343d14: 0x41c68
+2026-03-28T17:52:18.7381481Z 0x343d18: 0xf
+2026-03-28T17:52:18.7381710Z 0x343d1c: 0x1
+2026-03-28T17:52:18.7381937Z 0x343d20: 0x343d54
+2026-03-28T17:52:18.7382170Z 0x343d24: 0x343d50
+2026-03-28T17:52:18.7382399Z 0x343d28: 0x1
+2026-03-28T17:52:18.7382615Z 0x343d2c: 0x0
+2026-03-28T17:52:18.7383205Z 0x343d30: 0x20
+2026-03-28T17:52:18.7383440Z 0x343d34: 0xdf7fe000
+2026-03-28T17:52:18.7383685Z 0x343d38: 0x4b4
+2026-03-28T17:52:18.7383915Z 0x343d3c: 0x3
+2026-03-28T17:52:18.7384132Z 0x343d40: 0x320004
+2026-03-28T17:52:18.7384361Z 0x343d44: 0x2cd50
+2026-03-28T17:52:18.7384588Z 0x343d48: 0x2
+2026-03-28T17:52:18.7384815Z 0x343d4c: 0xf
+2026-03-28T18:07:15.8158195Z 
+2026-03-28T18:07:15.8158878Z [[Timeout]]
+2026-03-28T18:07:15.8159181Z None
+2026-03-28T18:07:15.9624683Z 
+2026-03-28T18:07:15.9625348Z console_run returned -1
+2026-03-28T18:07:15.9625685Z Shutting down sabre
+2026-03-28T18:07:16.3479800Z 
+2026-03-28T18:07:18.9810584Z Command exited with non-zero status 255
+2026-03-28T18:07:18.9811620Z 0.03user 0.04system 15:33.41elapsed 0%CPU (0avgtext+0avgdata 8280maxresident)k
+2026-03-28T18:07:18.9812194Z 272inputs+8outputs (1major+7230minor)pagefaults 0swaps
+2026-03-28T18:07:18.9814030Z [31;1m>>> command failed, aborting.[0m
+2026-03-28T18:07:18.9814856Z [33m+++ mq.sh sem -signal sabre -k seL4/seL4-HW-23684167886-hw-run-33[0m
+2026-03-28T18:07:28.8031084Z [1m-----------[ end test SABRE_debug_clang_32 ]-----------[0m
+2026-03-28T18:07:28.8032153Z ##[endgroup]
+2026-03-28T18:07:28.8032760Z [31;1mSABRE_debug_clang_32 FAILED[0m
+2026-03-28T18:07:28.8033077Z 
+2026-03-28T18:07:28.8033535Z ##[group]SABRE_debug_MCS_clang_32
+2026-03-28T18:07:28.8034732Z [1m-----------[ start test SABRE_debug_MCS_clang_32 ]-----------[0m
+2026-03-28T18:07:28.8040691Z [33m+++ tar xvzf ../SABRE_debug_MCS_clang_32-images.tar.gz[0m
+2026-03-28T18:07:28.8068967Z images/
+2026-03-28T18:07:28.8069850Z images/sel4test-driver-image-arm-imx6
+2026-03-28T18:07:28.8295962Z [33m+++ mq.sh sem -info sabre[0m
+2026-03-28T18:08:01.7108945Z Lock for sabre currently free
+2026-03-28T18:08:01.7110294Z [33m+++ time mq.sh sem -wait sabre -k seL4/seL4-HW-23684167886-hw-run-33 -T 1800[0m
+2026-03-28T18:08:10.1741696Z 0.02user 0.01system 0:08.46elapsed 0%CPU (0avgtext+0avgdata 8268maxresident)k
+2026-03-28T18:08:10.1742552Z 0inputs+0outputs (0major+4219minor)pagefaults 0swaps
+2026-03-28T18:08:10.1744248Z [33m+++ time mq.sh run -c </testsuite> -s sabre -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-23684167886-hw-run-33 -f images/sel4test-driver-image-arm-imx6[0m
+2026-03-28T18:08:18.3803112Z Lock acquired, we are allowed to run
+2026-03-28T18:08:24.7347187Z pxelinux=False
+2026-03-28T18:08:24.7347884Z copied '/tmp/tmp.oPES7WbOcs' -> '/tftpboot/sabre/sel4-image'
+2026-03-28T18:08:24.8816851Z removed '/tmp/tmp.oPES7WbOcs'
+2026-03-28T18:08:24.8818112Z co
+2026-03-28T18:08:24.8818326Z ^Eco
+2026-03-28T18:08:25.0280650Z [Enter `^Ec?' for help]
+2026-03-28T18:08:25.3552806Z [connecting...up]
+2026-03-28T18:08:25.3553348Z Rebooting sabre and loading image: /tmp/tmp.oPES7WbOcs
+2026-03-28T18:08:31.5742285Z   
+2026-03-28T18:08:31.5742512Z 
+2026-03-28T18:08:31.5742517Z 
+2026-03-28T18:08:31.5742699Z U-Boot 2013.04-dirty (Jul 21 2013 - 23:42:37)
+2026-03-28T18:08:31.5742965Z 
+2026-03-28T18:08:31.5742969Z 
+2026-03-28T18:08:31.5743105Z CPU:   Freescale i.MX6Q rev1.2 at 792 MHz
+2026-03-28T18:08:31.5743381Z 
+2026-03-28T18:08:31.5743485Z Reset cause: POR
+2026-03-28T18:08:31.5743640Z 
+2026-03-28T18:08:31.5743747Z Board: MX6Q-Sabre Lite
+2026-03-28T18:08:31.5743911Z 
+2026-03-28T18:08:31.5744009Z DRAM:  1 GiB
+2026-03-28T18:08:31.7206490Z 
+2026-03-28T18:08:31.7206971Z MMC:   FSL_SDHC: 0, FSL_SDHC: 1
+2026-03-28T18:08:31.7207357Z 
+2026-03-28T18:08:31.7208086Z SF: Detected SST25VF016B with page size 4 KiB, total 2 MiB
+2026-03-28T18:08:31.7208473Z 
+2026-03-28T18:08:31.7208597Z No panel detected: default to HDMI
+2026-03-28T18:08:31.7208818Z 
+2026-03-28T18:08:31.7208929Z unsupported panel HDMI
+2026-03-28T18:08:31.7209131Z 
+2026-03-28T18:08:31.7209233Z In:    serial
+2026-03-28T18:08:31.7209375Z 
+2026-03-28T18:08:31.7209472Z Out:   serial
+2026-03-28T18:08:31.7209607Z 
+2026-03-28T18:08:31.7209708Z Err:   serial
+2026-03-28T18:08:31.7209842Z 
+2026-03-28T18:08:31.7209949Z Net:   using phy at 6
+2026-03-28T18:08:31.7210109Z 
+2026-03-28T18:08:31.7210209Z FEC [PRIME]
+2026-03-28T18:08:31.7210343Z 
+2026-03-28T18:08:31.7210853Z Hit any key to stop autoboot: 10
+2026-03-28T18:08:31.8675012Z  0
+2026-03-28T18:08:31.8675217Z 
+2026-03-28T18:08:31.8675635Z ERTOS MX6QSABRELITE U-Boot > setenv autoload no && dhcp && tftpboot 0x30000000 sabre/sel4-image
+2026-03-28T18:08:31.8676373Z setenv autoload no && dhcp && tftpboot 0x30000000 sabre/sel4-image
+2026-03-28T18:08:31.8676727Z 
+2026-03-28T18:08:35.7918883Z FEC Waiting for PHY auto negotiation to complete........ done
+2026-03-28T18:08:35.9388556Z 
+2026-03-28T18:08:35.9389205Z BOOTP broadcast 1
+2026-03-28T18:08:38.8921965Z 
+2026-03-28T18:08:38.8922552Z BOOTP broadcast 2
+2026-03-28T18:08:38.8922818Z 
+2026-03-28T18:08:38.8922986Z DHCP client bound to address 172.16.1.86
+2026-03-28T18:08:39.0387901Z 
+2026-03-28T18:08:39.0388428Z Using FEC device
+2026-03-28T18:08:39.0388767Z 
+2026-03-28T18:08:39.0388995Z TFTP from server 172.16.0.2; our IP address is 172.16.1.86
+2026-03-28T18:08:39.0389320Z 
+2026-03-28T18:08:39.0389449Z Filename 'sabre/sel4-image'.
+2026-03-28T18:08:39.0389650Z 
+2026-03-28T18:08:39.0389794Z Load address: 0x30000000
+2026-03-28T18:08:39.0389979Z 
+2026-03-28T18:08:39.1853426Z Loading: *#################################################################
+2026-03-28T18:08:39.1853820Z 
+2026-03-28T18:08:39.3321878Z 	 #################################################################
+2026-03-28T18:08:39.3322202Z 
+2026-03-28T18:08:39.4787476Z 	 #################################################################
+2026-03-28T18:08:39.4788311Z 
+2026-03-28T18:08:39.4788484Z 	 #################################################################
+2026-03-28T18:08:39.4788784Z 
+2026-03-28T18:08:39.4788899Z 	 9.3 MiB/s
+2026-03-28T18:08:39.4789058Z 
+2026-03-28T18:08:39.4789165Z done
+2026-03-28T18:08:39.4789315Z 
+2026-03-28T18:08:39.4789459Z Bytes transferred = 3802700 (3a064c hex)
+2026-03-28T18:08:39.4789731Z 
+2026-03-28T18:08:39.4789874Z ERTOS MX6QSABRELITE U-Boot > bootelf
+2026-03-28T18:08:39.4790231Z bootelf
+2026-03-28T18:08:39.6252495Z 
+2026-03-28T18:08:39.6253178Z ## Starting application at 0x104e1000 ...
+2026-03-28T18:08:39.6253621Z 
+2026-03-28T18:08:39.6253634Z 
+2026-03-28T18:08:39.6253859Z ELF-loader started on CPU: ARM Ltd. Cortex-A9 r2p10
+2026-03-28T18:08:39.6254347Z   paddr=[104e1000..1087104b]
+2026-03-28T18:08:39.6254735Z No DTB passed in from boot loader.
+2026-03-28T18:08:39.6255113Z Looking for DTB in CPIO archive...found at 10530d2c.
+2026-03-28T18:08:39.6255492Z Loaded DTB from 10530d2c.
+2026-03-28T18:08:39.6255784Z    paddr=[10050000..1005afff]
+2026-03-28T18:08:39.6256429Z ELF-loading image 'kernel' to 10000000
+2026-03-28T18:08:39.6256748Z   paddr=[10000000..1004ffff]
+2026-03-28T18:08:39.6257035Z   vaddr=[e0000000..e004ffff]
+2026-03-28T18:08:39.6257309Z   virt_entry=e0000000
+2026-03-28T18:08:39.7768387Z ELF-loading image 'rootserver' to 1005b000
+2026-03-28T18:08:39.7768857Z   paddr=[1005b000..104c0fff]
+2026-03-28T18:08:39.7769140Z   vaddr=[10000..475fff]
+2026-03-28T18:08:39.7769385Z   virt_entry=208d0
+2026-03-28T18:08:42.4750358Z Enabling MMU and jumping to entry point...
+2026-03-28T18:08:42.4750991Z 
+2026-03-28T18:08:42.4751247Z DIDRv: 3, armv 70, coproc baseline only? no.
+2026-03-28T18:08:42.4751816Z CPU is in secure mode. Enabling debugging in secure user mode.
+2026-03-28T18:08:42.4752341Z Bootstrapping kernel
+2026-03-28T18:08:42.6218222Z available phys memory regions: 1
+2026-03-28T18:08:42.6218935Z   [10000000..2ff00000)
+2026-03-28T18:08:42.6219319Z reserved virt address space regions: 4
+2026-03-28T18:08:42.6219750Z   [e0000000..e0050000)
+2026-03-28T18:08:42.6220088Z   [e0050000..e005a381)
+2026-03-28T18:08:42.6220391Z   [e005b000..e04c1000)
+2026-03-28T18:08:42.6220696Z   [ff000000..ff100000)
+2026-03-28T18:08:42.6221045Z Booting all finished, dropped to user space
+2026-03-28T18:08:42.6221537Z Found thread has no fault handler while trying to handle:
+2026-03-28T18:08:42.6222000Z vm fault on data at address 0xdf7fe000 with status 0x805
+2026-03-28T18:08:42.6222458Z in thread 0xffef7400 "sel4test-driver" at address 0x91db0
+2026-03-28T18:08:42.6222833Z With stack:
+2026-03-28T18:08:42.6223467Z 0x363d10: 0x363da0
+2026-03-28T18:08:42.6223729Z 0x363d14: 0x42ec0
+2026-03-28T18:08:42.6223964Z 0x363d18: 0xf
+2026-03-28T18:08:42.6224186Z 0x363d1c: 0x1
+2026-03-28T18:08:42.6224412Z 0x363d20: 0x363d54
+2026-03-28T18:08:42.6224642Z 0x363d24: 0x363d50
+2026-03-28T18:08:42.6224872Z 0x363d28: 0x1
+2026-03-28T18:08:42.6225091Z 0x363d2c: 0x0
+2026-03-28T18:08:42.6225316Z 0x363d30: 0x20
+2026-03-28T18:08:42.6225543Z 0x363d34: 0xdf7fe000
+2026-03-28T18:08:42.6225789Z 0x363d38: 0x4da
+2026-03-28T18:08:42.6226019Z 0x363d3c: 0x3
+2026-03-28T18:08:42.6226238Z 0x363d40: 0x340004
+2026-03-28T18:08:42.6226469Z 0x363d44: 0x2d5d4
+2026-03-28T18:08:42.6226696Z 0x363d48: 0x2
+2026-03-28T18:08:42.6226919Z 0x363d4c: 0xf
+2026-03-28T18:23:39.6139210Z 
+2026-03-28T18:23:39.6139924Z [[Timeout]]
+2026-03-28T18:23:39.6140442Z None
+2026-03-28T18:23:39.7603959Z 
+2026-03-28T18:23:39.7604440Z console_run returned -1
+2026-03-28T18:23:39.7604800Z Shutting down sabre
+2026-03-28T18:23:40.0881280Z 
+2026-03-28T18:23:43.0741146Z Command exited with non-zero status 255
+2026-03-28T18:23:43.0742496Z 0.03user 0.04system 15:32.89elapsed 0%CPU (0avgtext+0avgdata 8236maxresident)k
+2026-03-28T18:23:43.0743405Z 0inputs+8outputs (0major+7197minor)pagefaults 0swaps
+2026-03-28T18:23:43.0744493Z [31;1m>>> command failed, aborting.[0m
+2026-03-28T18:23:43.0745572Z [33m+++ mq.sh sem -signal sabre -k seL4/seL4-HW-23684167886-hw-run-33[0m
+2026-03-28T18:23:55.5282333Z [1m-----------[ end test SABRE_debug_MCS_clang_32 ]-----------[0m
+2026-03-28T18:23:55.5283564Z ##[endgroup]
+2026-03-28T18:23:55.5284055Z [31;1mSABRE_debug_MCS_clang_32 FAILED[0m
+2026-03-28T18:23:55.5284426Z 
+2026-03-28T18:23:55.5286582Z ##[group]SABRE_debug_SMP_clang_32
+2026-03-28T18:23:55.5287097Z [1m-----------[ start test SABRE_debug_SMP_clang_32 ]-----------[0m
+2026-03-28T18:23:55.5292695Z [33m+++ tar xvzf ../SABRE_debug_SMP_clang_32-images.tar.gz[0m
+2026-03-28T18:23:55.5320133Z images/
+2026-03-28T18:23:55.5320920Z images/sel4test-driver-image-arm-imx6
+2026-03-28T18:23:55.5538934Z [33m+++ mq.sh sem -info sabre[0m
+2026-03-28T18:24:00.5540514Z Lock for sabre currently free
+2026-03-28T18:24:00.5541669Z [33m+++ time mq.sh sem -wait sabre -k seL4/seL4-HW-23684167886-hw-run-33 -T 1800[0m
+2026-03-28T18:24:03.3701457Z 0.02user 0.01system 0:02.81elapsed 1%CPU (0avgtext+0avgdata 8320maxresident)k
+2026-03-28T18:24:03.3702411Z 0inputs+0outputs (0major+4230minor)pagefaults 0swaps
+2026-03-28T18:24:03.3703654Z [33m+++ time mq.sh run -c </testsuite> -s sabre -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-23684167886-hw-run-33 -f images/sel4test-driver-image-arm-imx6[0m
+2026-03-28T18:24:05.6170392Z Lock acquired, we are allowed to run
+2026-03-28T18:24:10.4091535Z pxelinux=False
+2026-03-28T18:24:10.4092253Z copied '/tmp/tmp.r0JrNE2oGP' -> '/tftpboot/sabre/sel4-image'
+2026-03-28T18:24:10.5869837Z removed '/tmp/tmp.r0JrNE2oGP'
+2026-03-28T18:24:10.7336418Z co
+2026-03-28T18:24:10.7336762Z ^Eco
+2026-03-28T18:24:10.8806375Z [Enter `^Ec?' for help]
+2026-03-28T18:24:11.1874959Z [connecting...up]
+2026-03-28T18:24:11.1875630Z Rebooting sabre and loading image: /tmp/tmp.r0JrNE2oGP
+2026-03-28T18:24:17.3692552Z   
+2026-03-28T18:24:17.3692865Z 
+2026-03-28T18:24:17.3692871Z 
+2026-03-28T18:24:17.3693093Z U-Boot 2013.04-dirty (Jul 21 2013 - 23:42:37)
+2026-03-28T18:24:17.3693463Z 
+2026-03-28T18:24:17.3693467Z 
+2026-03-28T18:24:17.3693645Z CPU:   Freescale i.MX6Q rev1.2 at 792 MHz
+2026-03-28T18:24:17.3693975Z 
+2026-03-28T18:24:17.3694126Z Reset cause: POR
+2026-03-28T18:24:17.3694402Z 
+2026-03-28T18:24:17.3694551Z Board: MX6Q-Sabre Lite
+2026-03-28T18:24:17.3694777Z 
+2026-03-28T18:24:17.3694920Z DRAM:  1 GiB
+2026-03-28T18:24:17.5159639Z 
+2026-03-28T18:24:17.5160136Z MMC:   FSL_SDHC: 0, FSL_SDHC: 1
+2026-03-28T18:24:17.5160500Z 
+2026-03-28T18:24:17.5160704Z SF: Detected SST25VF016B with page size 4 KiB, total 2 MiB
+2026-03-28T18:24:17.5161021Z 
+2026-03-28T18:24:17.5161190Z No panel detected: default to HDMI
+2026-03-28T18:24:17.5161482Z 
+2026-03-28T18:24:17.5161637Z unsupported panel HDMI
+2026-03-28T18:24:17.5161872Z 
+2026-03-28T18:24:17.5164113Z In:    serial
+2026-03-28T18:24:17.5164322Z 
+2026-03-28T18:24:17.5164421Z Out:   serial
+2026-03-28T18:24:17.5164567Z 
+2026-03-28T18:24:17.5164663Z Err:   serial
+2026-03-28T18:24:17.5164793Z 
+2026-03-28T18:24:17.5164902Z Net:   using phy at 6
+2026-03-28T18:24:17.5165072Z 
+2026-03-28T18:24:17.5165167Z FEC [PRIME]
+2026-03-28T18:24:17.5165302Z 
+2026-03-28T18:24:17.5165424Z Hit any key to stop autoboot: 10
+2026-03-28T18:24:17.6625949Z  0
+2026-03-28T18:24:17.6626255Z 
+2026-03-28T18:24:17.6626713Z ERTOS MX6QSABRELITE U-Boot > setenv autoload no && dhcp && tftpboot 0x30000000 sabre/sel4-image
+2026-03-28T18:24:17.6627918Z setenv autoload no && dhcp && tftpboot 0x30000000 sabre/sel4-image
+2026-03-28T18:24:17.6628342Z 
+2026-03-28T18:24:19.8961299Z FEC Waiting for PHY auto negotiation to complete..... done
+2026-03-28T18:24:20.0429388Z 
+2026-03-28T18:24:20.0429789Z BOOTP broadcast 1
+2026-03-28T18:24:22.9987523Z 
+2026-03-28T18:24:22.9988465Z BOOTP broadcast 2
+2026-03-28T18:24:22.9988678Z 
+2026-03-28T18:24:22.9988834Z DHCP client bound to address 172.16.1.86
+2026-03-28T18:24:23.1454453Z 
+2026-03-28T18:24:23.1454914Z Using FEC device
+2026-03-28T18:24:23.1455160Z 
+2026-03-28T18:24:23.1455390Z TFTP from server 172.16.0.2; our IP address is 172.16.1.86
+2026-03-28T18:24:23.1455704Z 
+2026-03-28T18:24:23.1455823Z Filename 'sabre/sel4-image'.
+2026-03-28T18:24:23.1456021Z 
+2026-03-28T18:24:23.1456129Z Load address: 0x30000000
+2026-03-28T18:24:23.1456300Z 
+2026-03-28T18:24:23.2921146Z Loading: *#################################################################
+2026-03-28T18:24:23.2921525Z 
+2026-03-28T18:24:23.5850114Z 	 #################################################################
+2026-03-28T18:24:23.5850489Z 
+2026-03-28T18:24:23.5850650Z 	 #################################################################
+2026-03-28T18:24:23.5850952Z 
+2026-03-28T18:24:23.7316794Z 	 #######################################################
+2026-03-28T18:24:23.7317161Z 
+2026-03-28T18:24:23.7317263Z 	 7.3 MiB/s
+2026-03-28T18:24:23.7317399Z 
+2026-03-28T18:24:23.7317816Z done
+2026-03-28T18:24:23.7317952Z 
+2026-03-28T18:24:23.7318078Z Bytes transferred = 3659256 (37d5f8 hex)
+2026-03-28T18:24:23.7318322Z 
+2026-03-28T18:24:23.7318438Z ERTOS MX6QSABRELITE U-Boot > bootelf
+2026-03-28T18:24:23.7318764Z bootelf
+2026-03-28T18:24:23.7318881Z 
+2026-03-28T18:24:23.7319009Z ## Starting application at 0x104c1000 ...
+2026-03-28T18:24:23.8782981Z 
+2026-03-28T18:24:23.8783256Z 
+2026-03-28T18:24:23.8784523Z ELF-loader started on CPU: ARM Ltd. Cortex-A9 r2p10
+2026-03-28T18:24:23.8785055Z   paddr=[104c1000..1083504f]
+2026-03-28T18:24:23.8785441Z No DTB passed in from boot loader.
+2026-03-28T18:24:23.8785910Z Looking for DTB in CPIO archive...found at 1050b62c.
+2026-03-28T18:24:23.8786380Z Loaded DTB from 1050b62c.
+2026-03-28T18:24:23.8786733Z    paddr=[10050000..1005afff]
+2026-03-28T18:24:23.8787122Z ELF-loading image 'kernel' to 10000000
+2026-03-28T18:24:23.8787514Z   paddr=[10000000..1004ffff]
+2026-03-28T18:24:23.8788145Z   vaddr=[e0000000..e004ffff]
+2026-03-28T18:24:23.8788503Z   virt_entry=e0000000
+2026-03-28T18:24:24.0249479Z ELF-loading image 'rootserver' to 1005b000
+2026-03-28T18:24:24.0250067Z   paddr=[1005b000..104a0fff]
+2026-03-28T18:24:24.0250476Z   vaddr=[10000..455fff]
+2026-03-28T18:24:24.0250862Z   virt_entry=200fc
+2026-03-28T18:24:26.5433229Z Boot cpu id = 0x0, index=0
+2026-03-28T18:24:26.5433668Z Core 1 is up with logic id 1
+2026-03-28T18:24:26.5434024Z Core 2 is up with logic id 2
+2026-03-28T18:24:26.5434403Z Core 3 is up with logic id 3
+2026-03-28T18:24:26.5434773Z Enabling MMU and jumping to entry point...
+2026-03-28T18:24:26.5435080Z 
+2026-03-28T18:24:26.6900343Z DIDRv: 3, armv 70, coproc baseline only? no.
+2026-03-28T18:24:26.6901025Z CPU is in secure mode. Enabling debugging in secure user mode.
+2026-03-28T18:24:26.6901451Z Bootstrapping kernel
+2026-03-28T18:24:26.6901740Z available phys memory regions: 1
+2026-03-28T18:24:26.6902052Z   [10000000..2ff00000)
+2026-03-28T18:24:26.6902328Z reserved virt address space regions: 4
+2026-03-28T18:24:26.6903057Z   [e0000000..e0050000)
+2026-03-28T18:24:26.6903314Z   [e0050000..e005a2f1)
+2026-03-28T18:24:26.6903558Z   [e005b000..e04a1000)
+2026-03-28T18:24:26.6903801Z   [ff000000..ff100000)
+2026-03-28T18:39:23.8009732Z 
+2026-03-28T18:39:23.8012748Z [[Timeout]]
+2026-03-28T18:39:23.8013052Z None
+2026-03-28T18:39:23.9474084Z 
+2026-03-28T18:39:23.9474670Z console_run returned -1
+2026-03-28T18:39:23.9474976Z Shutting down sabre
+2026-03-28T18:39:24.2754628Z 
+2026-03-28T18:39:28.6390142Z Command exited with non-zero status 255
+2026-03-28T18:39:28.6391506Z 0.02user 0.04system 15:25.26elapsed 0%CPU (0avgtext+0avgdata 8288maxresident)k
+2026-03-28T18:39:28.6392322Z 0inputs+8outputs (0major+7213minor)pagefaults 0swaps
+2026-03-28T18:39:28.6393653Z [31;1m>>> command failed, aborting.[0m
+2026-03-28T18:39:28.6394394Z [33m+++ mq.sh sem -signal sabre -k seL4/seL4-HW-23684167886-hw-run-33[0m
+2026-03-28T18:39:34.9790433Z [1m-----------[ end test SABRE_debug_SMP_clang_32 ]-----------[0m
+2026-03-28T18:39:34.9791582Z ##[endgroup]
+2026-03-28T18:39:34.9792077Z [31;1mSABRE_debug_SMP_clang_32 FAILED[0m
+2026-03-28T18:39:34.9792425Z 
+2026-03-28T18:39:34.9792858Z ##[group]SABRE_release_clang_32
+2026-03-28T18:39:34.9793524Z [1m-----------[ start test SABRE_release_clang_32 ]-----------[0m
+2026-03-28T18:39:34.9799750Z [33m+++ tar xvzf ../SABRE_release_clang_32-images.tar.gz[0m
+2026-03-28T18:39:34.9827153Z images/
+2026-03-28T18:39:34.9828080Z images/sel4test-driver-image-arm-imx6
+2026-03-28T18:39:34.9908298Z [33m+++ mq.sh sem -info sabre[0m
+2026-03-28T18:39:40.2741474Z Lock for sabre currently free
+2026-03-28T18:39:40.2742621Z [33m+++ time mq.sh sem -wait sabre -k seL4/seL4-HW-23684167886-hw-run-33 -T 1800[0m
+2026-03-28T18:39:44.6544908Z 0.01user 0.02system 0:04.37elapsed 0%CPU (0avgtext+0avgdata 8284maxresident)k
+2026-03-28T18:39:44.6546186Z 0inputs+0outputs (0major+4214minor)pagefaults 0swaps
+2026-03-28T18:39:44.6547504Z [33m+++ time mq.sh run -c </testsuite> -s sabre -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-23684167886-hw-run-33 -f images/sel4test-driver-image-arm-imx6[0m
+2026-03-28T18:39:47.8350563Z Lock acquired, we are allowed to run
+2026-03-28T18:39:52.0389923Z pxelinux=False
+2026-03-28T18:39:52.0390358Z copied '/tmp/tmp.Gr3qglufkp' -> '/tftpboot/sabre/sel4-image'
+2026-03-28T18:39:52.0390811Z removed '/tmp/tmp.Gr3qglufkp'
+2026-03-28T18:39:52.1854997Z co
+2026-03-28T18:39:52.1855330Z ^Eco
+2026-03-28T18:39:52.3319537Z [Enter `^Ec?' for help]
+2026-03-28T18:39:52.8052447Z [connecting...up]
+2026-03-28T18:39:52.8052938Z Rebooting sabre and loading image: /tmp/tmp.Gr3qglufkp
+2026-03-28T18:39:58.8621445Z   
+2026-03-28T18:39:58.8621652Z 
+2026-03-28T18:39:58.8621657Z 
+2026-03-28T18:39:58.8621842Z U-Boot 2013.04-dirty (Jul 21 2013 - 23:42:37)
+2026-03-28T18:39:58.8622138Z 
+2026-03-28T18:39:58.8622143Z 
+2026-03-28T18:39:58.8622290Z CPU:   Freescale i.MX6Q rev1.2 at 792 MHz
+2026-03-28T18:39:58.8622551Z 
+2026-03-28T18:39:58.8622663Z Reset cause: POR
+2026-03-28T18:39:58.8622823Z 
+2026-03-28T18:39:58.8622927Z Board: MX6Q-Sabre Lite
+2026-03-28T18:39:58.8623134Z 
+2026-03-28T18:39:58.8623235Z DRAM:  1 GiB
+2026-03-28T18:39:59.0087504Z 
+2026-03-28T18:39:59.0088263Z MMC:   FSL_SDHC: 0, FSL_SDHC: 1
+2026-03-28T18:39:59.0088669Z 
+2026-03-28T18:39:59.0088932Z SF: Detected SST25VF016B with page size 4 KiB, total 2 MiB
+2026-03-28T18:39:59.0089346Z 
+2026-03-28T18:39:59.0089522Z No panel detected: default to HDMI
+2026-03-28T18:39:59.0089824Z 
+2026-03-28T18:39:59.0089988Z unsupported panel HDMI
+2026-03-28T18:39:59.0090250Z 
+2026-03-28T18:39:59.0090374Z In:    serial
+2026-03-28T18:39:59.0090577Z 
+2026-03-28T18:39:59.0090685Z Out:   serial
+2026-03-28T18:39:59.0090824Z 
+2026-03-28T18:39:59.0090927Z Err:   serial
+2026-03-28T18:39:59.0091067Z 
+2026-03-28T18:39:59.0091175Z Net:   using phy at 6
+2026-03-28T18:39:59.0091354Z 
+2026-03-28T18:39:59.0091458Z FEC [PRIME]
+2026-03-28T18:39:59.0091595Z 
+2026-03-28T18:39:59.0091722Z Hit any key to stop autoboot: 10
+2026-03-28T18:39:59.1552521Z  0
+2026-03-28T18:39:59.1552720Z 
+2026-03-28T18:39:59.1553577Z ERTOS MX6QSABRELITE U-Boot > setenv autoload no && dhcp && tftpboot 0x30000000 sabre/sel4-image
+2026-03-28T18:39:59.1554326Z setenv autoload no && dhcp && tftpboot 0x30000000 sabre/sel4-image
+2026-03-28T18:39:59.1554695Z 
+2026-03-28T18:40:01.4199307Z FEC Waiting for PHY auto negotiation to complete..... done
+2026-03-28T18:40:01.5665904Z 
+2026-03-28T18:40:01.5666371Z BOOTP broadcast 1
+2026-03-28T18:40:04.5128622Z 
+2026-03-28T18:40:04.5129122Z BOOTP broadcast 2
+2026-03-28T18:40:04.6595824Z 
+2026-03-28T18:40:04.6596523Z DHCP client bound to address 172.16.1.86
+2026-03-28T18:40:04.6597083Z 
+2026-03-28T18:40:04.6597239Z Using FEC device
+2026-03-28T18:40:04.6597454Z 
+2026-03-28T18:40:04.6597900Z TFTP from server 172.16.0.2; our IP address is 172.16.1.86
+2026-03-28T18:40:04.6598240Z 
+2026-03-28T18:40:04.6598376Z Filename 'sabre/sel4-image'.
+2026-03-28T18:40:04.6598586Z 
+2026-03-28T18:40:04.6598708Z Load address: 0x30000000
+2026-03-28T18:40:04.6598896Z 
+2026-03-28T18:40:04.8063135Z Loading: *#################################################################
+2026-03-28T18:40:04.8063711Z 
+2026-03-28T18:40:04.8063893Z 	 ############
+2026-03-28T18:40:04.8064141Z 
+2026-03-28T18:40:04.8064301Z 	 8.1 MiB/s
+2026-03-28T18:40:04.8064521Z 
+2026-03-28T18:40:04.8064665Z done
+2026-03-28T18:40:04.8064886Z 
+2026-03-28T18:40:04.8065096Z Bytes transferred = 1119744 (111600 hex)
+2026-03-28T18:40:04.8065517Z 
+2026-03-28T18:40:04.8065720Z ERTOS MX6QSABRELITE U-Boot > bootelf
+2026-03-28T18:40:04.9528928Z bootelf
+2026-03-28T18:40:04.9529291Z 
+2026-03-28T18:40:04.9529588Z ## Starting application at 0x10271000 ...
+2026-03-28T18:40:04.9530073Z 
+2026-03-28T18:40:04.9530079Z 
+2026-03-28T18:40:04.9530322Z ELF-loader started on CPU: ARM Ltd. Cortex-A9 r2p10
+2026-03-28T18:40:04.9530843Z   paddr=[10271000..1038d047]
+2026-03-28T18:40:04.9531253Z No DTB passed in from boot loader.
+2026-03-28T18:40:04.9531756Z Looking for DTB in CPIO archive...found at 102a188c.
+2026-03-28T18:40:04.9532267Z Loaded DTB from 102a188c.
+2026-03-28T18:40:04.9532654Z    paddr=[10030000..1003afff]
+2026-03-28T18:40:04.9533084Z ELF-loading image 'kernel' to 10000000
+2026-03-28T18:40:04.9533474Z   paddr=[10000000..1002ffff]
+2026-03-28T18:40:04.9533775Z   vaddr=[e0000000..e002ffff]
+2026-03-28T18:40:04.9534079Z   virt_entry=e0000000
+2026-03-28T18:40:04.9534388Z ELF-loading image 'rootserver' to 1003b000
+2026-03-28T18:40:04.9534759Z   paddr=[1003b000..10250fff]
+2026-03-28T18:40:04.9535058Z   vaddr=[10000..225fff]
+2026-03-28T18:40:04.9535741Z   virt_entry=153f8
+2026-03-28T18:40:05.0998505Z Enabling MMU and jumping to entry point...
+2026-03-28T18:40:05.0998906Z 
+2026-03-28T18:55:04.8432729Z 
+2026-03-28T18:55:04.8433253Z [[Timeout]]
+2026-03-28T18:55:04.8433634Z None
+2026-03-28T18:55:04.9898781Z 
+2026-03-28T18:55:04.9899265Z console_run returned -1
+2026-03-28T18:55:04.9899695Z Shutting down sabre
+2026-03-28T18:55:05.3343448Z 
+2026-03-28T18:55:07.7673085Z Command exited with non-zero status 255
+2026-03-28T18:55:07.7674485Z 0.04user 0.03system 15:23.11elapsed 0%CPU (0avgtext+0avgdata 8256maxresident)k
+2026-03-28T18:55:07.7675308Z 0inputs+8outputs (0major+7200minor)pagefaults 0swaps
+2026-03-28T18:55:07.7676188Z [31;1m>>> command failed, aborting.[0m
+2026-03-28T18:55:07.7677044Z [33m+++ mq.sh sem -signal sabre -k seL4/seL4-HW-23684167886-hw-run-33[0m
+2026-03-28T18:55:12.2691931Z [1m-----------[ end test SABRE_release_clang_32 ]-----------[0m
+2026-03-28T18:55:12.2693074Z ##[endgroup]
+2026-03-28T18:55:12.2693523Z [31;1mSABRE_release_clang_32 FAILED[0m
+2026-03-28T18:55:12.2693868Z 
+2026-03-28T18:55:12.2694336Z ##[group]SABRE_release_MCS_clang_32
+2026-03-28T18:55:12.2695090Z [1m-----------[ start test SABRE_release_MCS_clang_32 ]-----------[0m
+2026-03-28T18:55:12.2697474Z [33m+++ tar xvzf ../SABRE_release_MCS_clang_32-images.tar.gz[0m
+2026-03-28T18:55:12.2724492Z images/
+2026-03-28T18:55:12.2725523Z images/sel4test-driver-image-arm-imx6
+2026-03-28T18:55:12.2813296Z [33m+++ mq.sh sem -info sabre[0m
+2026-03-28T18:55:16.7049772Z Lock for sabre currently free
+2026-03-28T18:55:16.7051649Z [33m+++ time mq.sh sem -wait sabre -k seL4/seL4-HW-23684167886-hw-run-33 -T 1800[0m
+2026-03-28T18:55:20.8342557Z 0.01user 0.02system 0:04.12elapsed 0%CPU (0avgtext+0avgdata 8260maxresident)k
+2026-03-28T18:55:20.8343258Z 0inputs+0outputs (0major+4201minor)pagefaults 0swaps
+2026-03-28T18:55:20.8345881Z [33m+++ time mq.sh run -c </testsuite> -s sabre -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-23684167886-hw-run-33 -f images/sel4test-driver-image-arm-imx6[0m
+2026-03-28T18:55:24.6990806Z Lock acquired, we are allowed to run
+2026-03-28T18:55:31.3642894Z pxelinux=False
+2026-03-28T18:55:31.3643370Z copied '/tmp/tmp.86plmZXmk1' -> '/tftpboot/sabre/sel4-image'
+2026-03-28T18:55:31.5818010Z removed '/tmp/tmp.86plmZXmk1'
+2026-03-28T18:55:31.7283837Z co
+2026-03-28T18:55:31.7284133Z ^Eco
+2026-03-28T18:55:31.8751818Z [Enter `^Ec?' for help]
+2026-03-28T18:55:32.1966757Z [connecting...up]
+2026-03-28T18:55:32.3434231Z Rebooting sabre and loading image: /tmp/tmp.86plmZXmk1
+2026-03-28T18:55:38.4772206Z   
+2026-03-28T18:55:38.4772444Z 
+2026-03-28T18:55:38.4772476Z 
+2026-03-28T18:55:38.4772674Z U-Boot 2013.04-dirty (Jul 21 2013 - 23:42:37)
+2026-03-28T18:55:38.4773006Z 
+2026-03-28T18:55:38.4773010Z 
+2026-03-28T18:55:38.4773177Z CPU:   Freescale i.MX6Q rev1.2 at 792 MHz
+2026-03-28T18:55:38.4773479Z 
+2026-03-28T18:55:38.4773611Z Reset cause: POR
+2026-03-28T18:55:38.4773808Z 
+2026-03-28T18:55:38.4773935Z Board: MX6Q-Sabre Lite
+2026-03-28T18:55:38.4774148Z 
+2026-03-28T18:55:38.4774280Z DRAM:  1 GiB
+2026-03-28T18:55:38.6236259Z 
+2026-03-28T18:55:38.6236791Z MMC:   FSL_SDHC: 0, FSL_SDHC: 1
+2026-03-28T18:55:38.6237225Z 
+2026-03-28T18:55:38.6237890Z SF: Detected SST25VF016B with page size 4 KiB, total 2 MiB
+2026-03-28T18:55:38.6238442Z 
+2026-03-28T18:55:38.6238660Z No panel detected: default to HDMI
+2026-03-28T18:55:38.6238975Z 
+2026-03-28T18:55:38.6239104Z unsupported panel HDMI
+2026-03-28T18:55:38.6239306Z 
+2026-03-28T18:55:38.6239404Z In:    serial
+2026-03-28T18:55:38.6239561Z 
+2026-03-28T18:55:38.6239663Z Out:   serial
+2026-03-28T18:55:38.6239825Z 
+2026-03-28T18:55:38.6239953Z Err:   serial
+2026-03-28T18:55:38.6240094Z 
+2026-03-28T18:55:38.6240202Z Net:   using phy at 6
+2026-03-28T18:55:38.6240392Z 
+2026-03-28T18:55:38.6240497Z FEC [PRIME]
+2026-03-28T18:55:38.6240632Z 
+2026-03-28T18:55:38.6240761Z Hit any key to stop autoboot: 10
+2026-03-28T18:55:38.6241275Z  0
+2026-03-28T18:55:38.6241407Z 
+2026-03-28T18:55:38.7707367Z ERTOS MX6QSABRELITE U-Boot > setenv autoload no && dhcp && tftpboot 0x30000000 sabre/sel4-image
+2026-03-28T18:55:38.7708908Z setenv autoload no && dhcp && tftpboot 0x30000000 sabre/sel4-image
+2026-03-28T18:55:38.7709274Z 
+2026-03-28T18:55:41.0931772Z FEC Waiting for PHY auto negotiation to complete..... done
+2026-03-28T18:55:41.2395766Z 
+2026-03-28T18:55:41.2396199Z BOOTP broadcast 1
+2026-03-28T18:55:44.1934934Z 
+2026-03-28T18:55:44.1935502Z BOOTP broadcast 2
+2026-03-28T18:55:44.3401320Z 
+2026-03-28T18:55:44.3401948Z DHCP client bound to address 172.16.1.86
+2026-03-28T18:55:44.3402464Z 
+2026-03-28T18:55:44.3402608Z Using FEC device
+2026-03-28T18:55:44.3402834Z 
+2026-03-28T18:55:44.3403083Z TFTP from server 172.16.0.2; our IP address is 172.16.1.86
+2026-03-28T18:55:44.3403462Z 
+2026-03-28T18:55:44.3403606Z Filename 'sabre/sel4-image'.
+2026-03-28T18:55:44.3403847Z 
+2026-03-28T18:55:44.3403979Z Load address: 0x30000000
+2026-03-28T18:55:44.3404187Z 
+2026-03-28T18:55:44.4870775Z Loading: *#################################################################
+2026-03-28T18:55:44.4872080Z 
+2026-03-28T18:55:44.4872245Z 	 ###################
+2026-03-28T18:55:44.4872462Z 
+2026-03-28T18:55:44.4872603Z 	 8.5 MiB/s
+2026-03-28T18:55:44.4872777Z 
+2026-03-28T18:55:44.4872896Z done
+2026-03-28T18:55:44.4873065Z 
+2026-03-28T18:55:44.4873242Z Bytes transferred = 1227776 (12bc00 hex)
+2026-03-28T18:55:44.4873573Z 
+2026-03-28T18:55:44.6336298Z ERTOS MX6QSABRELITE U-Boot > bootelf
+2026-03-28T18:55:44.6337036Z bootelf
+2026-03-28T18:55:44.6337286Z 
+2026-03-28T18:55:44.6337476Z ## Starting application at 0x10279000 ...
+2026-03-28T18:55:44.6338034Z 
+2026-03-28T18:55:44.6338486Z 
+2026-03-28T18:55:44.6338715Z ELF-loader started on CPU: ARM Ltd. Cortex-A9 r2p10
+2026-03-28T18:55:44.6339197Z   paddr=[10279000..103a9047]
+2026-03-28T18:55:44.6339583Z No DTB passed in from boot loader.
+2026-03-28T18:55:44.6340051Z Looking for DTB in CPIO archive...found at 102b088c.
+2026-03-28T18:55:44.6340518Z Loaded DTB from 102b088c.
+2026-03-28T18:55:44.6340869Z    paddr=[10038000..10042fff]
+2026-03-28T18:55:44.6341245Z ELF-loading image 'kernel' to 10000000
+2026-03-28T18:55:44.6341656Z   paddr=[10000000..10037fff]
+2026-03-28T18:55:44.6342002Z   vaddr=[e0000000..e0037fff]
+2026-03-28T18:55:44.6342346Z   virt_entry=e0000000
+2026-03-28T18:55:44.6342702Z ELF-loading image 'rootserver' to 10043000
+2026-03-28T18:55:44.6343041Z   paddr=[10043000..10258fff]
+2026-03-28T18:55:44.6343315Z   vaddr=[10000..225fff]
+2026-03-28T18:55:44.6343567Z   virt_entry=15868
+2026-03-28T18:55:44.7799691Z Enabling MMU and jumping to entry point...
+2026-03-28T18:55:44.7800189Z 
+2026-03-28T19:10:44.6616227Z 
+2026-03-28T19:10:44.6616863Z [[Timeout]]
+2026-03-28T19:10:44.6617158Z None
+2026-03-28T19:10:44.8082546Z 
+2026-03-28T19:10:44.8083396Z console_run returned -1
+2026-03-28T19:10:44.8083886Z Shutting down sabre
+2026-03-28T19:10:45.1106865Z 
+2026-03-28T19:10:47.4571649Z Command exited with non-zero status 255
+2026-03-28T19:10:47.4572717Z 0.03user 0.03system 15:26.62elapsed 0%CPU (0avgtext+0avgdata 8280maxresident)k
+2026-03-28T19:10:47.4573484Z 0inputs+8outputs (0major+7221minor)pagefaults 0swaps
+2026-03-28T19:10:47.4575315Z [31;1m>>> command failed, aborting.[0m
+2026-03-28T19:10:47.4576060Z [33m+++ mq.sh sem -signal sabre -k seL4/seL4-HW-23684167886-hw-run-33[0m
+2026-03-28T19:10:51.1641015Z [1m-----------[ end test SABRE_release_MCS_clang_32 ]-----------[0m
+2026-03-28T19:10:51.1642081Z ##[endgroup]
+2026-03-28T19:10:51.1642405Z [31;1mSABRE_release_MCS_clang_32 FAILED[0m
+2026-03-28T19:10:51.1642664Z 
+2026-03-28T19:10:51.1642994Z ##[group]SABRE_release_SMP_clang_32
+2026-03-28T19:10:51.1643517Z [1m-----------[ start test SABRE_release_SMP_clang_32 ]-----------[0m
+2026-03-28T19:10:51.1646128Z [33m+++ tar xvzf ../SABRE_release_SMP_clang_32-images.tar.gz[0m
+2026-03-28T19:10:51.1673219Z images/
+2026-03-28T19:10:51.1673765Z images/sel4test-driver-image-arm-imx6
+2026-03-28T19:10:51.1758767Z [33m+++ mq.sh sem -info sabre[0m
+2026-03-28T19:10:54.7690711Z Lock for sabre currently free
+2026-03-28T19:10:54.7691781Z [33m+++ time mq.sh sem -wait sabre -k seL4/seL4-HW-23684167886-hw-run-33 -T 1800[0m
+2026-03-28T19:10:59.4404452Z 0.01user 0.02system 0:04.67elapsed 0%CPU (0avgtext+0avgdata 8340maxresident)k
+2026-03-28T19:10:59.4405370Z 0inputs+0outputs (1major+4200minor)pagefaults 0swaps
+2026-03-28T19:10:59.4407076Z [33m+++ time mq.sh run -c </testsuite> -s sabre -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-23684167886-hw-run-33 -f images/sel4test-driver-image-arm-imx6[0m
+2026-03-28T19:11:03.3943477Z Lock acquired, we are allowed to run
+2026-03-28T19:11:08.2918042Z pxelinux=False
+2026-03-28T19:11:08.2918860Z copied '/tmp/tmp.PT465xAHG1' -> '/tftpboot/sabre/sel4-image'
+2026-03-28T19:11:08.4385045Z removed '/tmp/tmp.PT465xAHG1'
+2026-03-28T19:11:08.4385707Z co
+2026-03-28T19:11:08.4385925Z ^Eco
+2026-03-28T19:11:08.5855117Z [Enter `^Ec?' for help]
+2026-03-28T19:11:08.9596623Z [connecting...up]
+2026-03-28T19:11:08.9597108Z Rebooting sabre and loading image: /tmp/tmp.PT465xAHG1
+2026-03-28T19:11:15.1955615Z   
+2026-03-28T19:11:15.1955843Z 
+2026-03-28T19:11:15.1955850Z 
+2026-03-28T19:11:15.1956085Z U-Boot 2013.04-dirty (Jul 21 2013 - 23:42:37)
+2026-03-28T19:11:15.1956410Z 
+2026-03-28T19:11:15.1956414Z 
+2026-03-28T19:11:15.1956576Z CPU:   Freescale i.MX6Q rev1.2 at 792 MHz
+2026-03-28T19:11:15.1956874Z 
+2026-03-28T19:11:15.1956994Z Reset cause: POR
+2026-03-28T19:11:15.1957180Z 
+2026-03-28T19:11:15.1957311Z Board: MX6Q-Sabre Lite
+2026-03-28T19:11:15.1957512Z 
+2026-03-28T19:11:15.1957906Z DRAM:  1 GiB
+2026-03-28T19:11:15.3420683Z 
+2026-03-28T19:11:15.3421266Z MMC:   FSL_SDHC: 0, FSL_SDHC: 1
+2026-03-28T19:11:15.3421502Z 
+2026-03-28T19:11:15.3422130Z SF: Detected SST25VF016B with page size 4 KiB, total 2 MiB
+2026-03-28T19:11:15.3422395Z 
+2026-03-28T19:11:15.3422516Z No panel detected: default to HDMI
+2026-03-28T19:11:15.3422712Z 
+2026-03-28T19:11:15.3422808Z unsupported panel HDMI
+2026-03-28T19:11:15.3422968Z 
+2026-03-28T19:11:15.3423050Z In:    serial
+2026-03-28T19:11:15.3423168Z 
+2026-03-28T19:11:15.3423263Z Out:   serial
+2026-03-28T19:11:15.3423380Z 
+2026-03-28T19:11:15.3423455Z Err:   serial
+2026-03-28T19:11:15.3423577Z 
+2026-03-28T19:11:15.3423666Z Net:   using phy at 6
+2026-03-28T19:11:15.3423798Z 
+2026-03-28T19:11:15.3423881Z FEC [PRIME]
+2026-03-28T19:11:15.3423989Z 
+2026-03-28T19:11:15.3424117Z Hit any key to stop autoboot: 10
+2026-03-28T19:11:15.4893671Z  0
+2026-03-28T19:11:15.4893903Z 
+2026-03-28T19:11:15.4894360Z ERTOS MX6QSABRELITE U-Boot > setenv autoload no && dhcp && tftpboot 0x30000000 sabre/sel4-image
+2026-03-28T19:11:15.4895233Z setenv autoload no && dhcp && tftpboot 0x30000000 sabre/sel4-image
+2026-03-28T19:11:15.4895655Z 
+2026-03-28T19:11:17.6876157Z FEC Waiting for PHY auto negotiation to complete..... done
+2026-03-28T19:11:17.8342887Z 
+2026-03-28T19:11:17.8343344Z BOOTP broadcast 1
+2026-03-28T19:11:20.7887732Z 
+2026-03-28T19:11:20.7899409Z BOOTP broadcast 2
+2026-03-28T19:11:20.7899697Z 
+2026-03-28T19:11:20.7899887Z DHCP client bound to address 172.16.1.86
+2026-03-28T19:11:20.9353971Z 
+2026-03-28T19:11:20.9354411Z Using FEC device
+2026-03-28T19:11:20.9354661Z 
+2026-03-28T19:11:20.9354935Z TFTP from server 172.16.0.2; our IP address is 172.16.1.86
+2026-03-28T19:11:20.9355318Z 
+2026-03-28T19:11:20.9355463Z Filename 'sabre/sel4-image'.
+2026-03-28T19:11:20.9355713Z 
+2026-03-28T19:11:20.9355857Z Load address: 0x30000000
+2026-03-28T19:11:20.9356072Z 
+2026-03-28T19:11:21.0822163Z Loading: *#################################################################
+2026-03-28T19:11:21.0822542Z 
+2026-03-28T19:11:21.0822650Z 	 ################
+2026-03-28T19:11:21.0822821Z 
+2026-03-28T19:11:21.0822925Z 	 8.8 MiB/s
+2026-03-28T19:11:21.0823066Z 
+2026-03-28T19:11:21.0823203Z done
+2026-03-28T19:11:21.0823342Z 
+2026-03-28T19:11:21.0823472Z Bytes transferred = 1184972 (1214cc hex)
+2026-03-28T19:11:21.0823726Z 
+2026-03-28T19:11:21.2290199Z ERTOS MX6QSABRELITE U-Boot > bootelf
+2026-03-28T19:11:21.2290827Z bootelf
+2026-03-28T19:11:21.2291005Z 
+2026-03-28T19:11:21.2291168Z ## Starting application at 0x1027d000 ...
+2026-03-28T19:11:21.2291463Z 
+2026-03-28T19:11:21.2291468Z 
+2026-03-28T19:11:21.2292143Z ELF-loader started on CPU: ARM Ltd. Cortex-A9 r2p10
+2026-03-28T19:11:21.2292596Z   paddr=[1027d000..103a504b]
+2026-03-28T19:11:21.2292956Z No DTB passed in from boot loader.
+2026-03-28T19:11:21.2293414Z Looking for DTB in CPIO archive...found at 102b15ec.
+2026-03-28T19:11:21.2293844Z Loaded DTB from 102b15ec.
+2026-03-28T19:11:21.2294119Z    paddr=[1003c000..10046fff]
+2026-03-28T19:11:21.2294419Z ELF-loading image 'kernel' to 10000000
+2026-03-28T19:11:21.2294738Z   paddr=[10000000..1003bfff]
+2026-03-28T19:11:21.2295030Z   vaddr=[e0000000..e003bfff]
+2026-03-28T19:11:21.2295317Z   virt_entry=e0000000
+2026-03-28T19:11:21.2295601Z ELF-loading image 'rootserver' to 10047000
+2026-03-28T19:11:21.2295937Z   paddr=[10047000..1025cfff]
+2026-03-28T19:11:21.2296209Z   vaddr=[10000..225fff]
+2026-03-28T19:11:21.2296465Z   virt_entry=153f8
+2026-03-28T19:11:21.3755325Z Boot cpu id = 0x0, index=0
+2026-03-28T19:11:21.3755725Z Core 1 is up with logic id 1
+2026-03-28T19:11:21.3756097Z Core 2 is up with logic id 2
+2026-03-28T19:11:21.3756452Z Core 3 is up with logic id 3
+2026-03-28T19:11:21.3756775Z Enabling MMU and jumping to entry point...
+2026-03-28T19:11:21.3757024Z 
+2026-03-28T19:26:21.1305475Z 
+2026-03-28T19:26:21.1306004Z [[Timeout]]
+2026-03-28T19:26:21.1306300Z None
+2026-03-28T19:26:21.2772091Z 
+2026-03-28T19:26:21.2772717Z console_run returned -1
+2026-03-28T19:26:21.2773108Z Shutting down sabre
+2026-03-28T19:26:21.6253077Z 
+2026-03-28T19:26:23.9499840Z Command exited with non-zero status 255
+2026-03-28T19:26:23.9501227Z 0.03user 0.03system 15:24.50elapsed 0%CPU (0avgtext+0avgdata 8300maxresident)k
+2026-03-28T19:26:23.9501820Z 0inputs+8outputs (0major+7218minor)pagefaults 0swaps
+2026-03-28T19:26:23.9503367Z [31;1m>>> command failed, aborting.[0m
+2026-03-28T19:26:23.9504128Z [33m+++ mq.sh sem -signal sabre -k seL4/seL4-HW-23684167886-hw-run-33[0m
+2026-03-28T19:26:27.7961353Z [1m-----------[ end test SABRE_release_SMP_clang_32 ]-----------[0m
+2026-03-28T19:26:27.7962582Z ##[endgroup]
+2026-03-28T19:26:27.7963093Z [31;1mSABRE_release_SMP_clang_32 FAILED[0m
+2026-03-28T19:26:27.7963384Z 
+2026-03-28T19:26:27.7965582Z ##[group]SABRE_verification_clang_32
+2026-03-28T19:26:27.7966301Z [1m-----------[ start test SABRE_verification_clang_32 ]-----------[0m
+2026-03-28T19:26:27.7967077Z [33m+++ tar xvzf ../SABRE_verification_clang_32-images.tar.gz[0m
+2026-03-28T19:26:27.7994652Z images/
+2026-03-28T19:26:27.7995694Z images/sel4test-driver-image-arm-imx6
+2026-03-28T19:26:27.8199970Z [33m+++ mq.sh sem -info sabre[0m
+2026-03-28T19:26:31.2990682Z Lock for sabre currently free
+2026-03-28T19:26:31.2991842Z [33m+++ time mq.sh sem -wait sabre -k seL4/seL4-HW-23684167886-hw-run-33 -T 1800[0m
+2026-03-28T19:26:34.7992900Z 0.02user 0.01system 0:03.49elapsed 1%CPU (0avgtext+0avgdata 8272maxresident)k
+2026-03-28T19:26:34.7993780Z 0inputs+0outputs (0major+4223minor)pagefaults 0swaps
+2026-03-28T19:26:34.7995502Z [33m+++ time mq.sh run -c </testsuite> -s sabre -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-23684167886-hw-run-33 -f images/sel4test-driver-image-arm-imx6[0m
+2026-03-28T19:26:37.1441951Z Lock acquired, we are allowed to run
+2026-03-28T19:26:42.5989000Z pxelinux=False
+2026-03-28T19:26:42.5989512Z copied '/tmp/tmp.DfcZkPwfAg' -> '/tftpboot/sabre/sel4-image'
+2026-03-28T19:26:42.7455119Z removed '/tmp/tmp.DfcZkPwfAg'
+2026-03-28T19:26:42.7455646Z co
+2026-03-28T19:26:42.7455847Z ^Eco
+2026-03-28T19:26:42.8919384Z [Enter `^Ec?' for help]
+2026-03-28T19:26:43.4178149Z [connecting...up]
+2026-03-28T19:26:43.4179051Z Rebooting sabre and loading image: /tmp/tmp.DfcZkPwfAg
+2026-03-28T19:26:49.4721988Z   
+2026-03-28T19:26:49.4722200Z 
+2026-03-28T19:26:49.4722205Z 
+2026-03-28T19:26:49.4722365Z U-Boot 2013.04-dirty (Jul 21 2013 - 23:42:37)
+2026-03-28T19:26:49.4722617Z 
+2026-03-28T19:26:49.4722620Z 
+2026-03-28T19:26:49.4722748Z CPU:   Freescale i.MX6Q rev1.2 at 792 MHz
+2026-03-28T19:26:49.4722975Z 
+2026-03-28T19:26:49.4723068Z Reset cause: POR
+2026-03-28T19:26:49.4723212Z 
+2026-03-28T19:26:49.4723315Z Board: MX6Q-Sabre Lite
+2026-03-28T19:26:49.4723942Z 
+2026-03-28T19:26:49.4724035Z DRAM:  1 GiB
+2026-03-28T19:26:49.6187347Z 
+2026-03-28T19:26:49.6187799Z MMC:   FSL_SDHC: 0, FSL_SDHC: 1
+2026-03-28T19:26:49.6188286Z 
+2026-03-28T19:26:49.6188485Z SF: Detected SST25VF016B with page size 4 KiB, total 2 MiB
+2026-03-28T19:26:49.6188909Z 
+2026-03-28T19:26:49.6189020Z No panel detected: default to HDMI
+2026-03-28T19:26:49.6189230Z 
+2026-03-28T19:26:49.6189340Z unsupported panel HDMI
+2026-03-28T19:26:49.6189500Z 
+2026-03-28T19:26:49.6189615Z In:    serial
+2026-03-28T19:26:49.6189756Z 
+2026-03-28T19:26:49.6189852Z Out:   serial
+2026-03-28T19:26:49.6190000Z 
+2026-03-28T19:26:49.6190089Z Err:   serial
+2026-03-28T19:26:49.6190211Z 
+2026-03-28T19:26:49.6190313Z Net:   using phy at 6
+2026-03-28T19:26:49.6190468Z 
+2026-03-28T19:26:49.6190555Z FEC [PRIME]
+2026-03-28T19:26:49.6190678Z 
+2026-03-28T19:26:49.6190786Z Hit any key to stop autoboot: 10
+2026-03-28T19:26:49.7654122Z  0
+2026-03-28T19:26:49.7654326Z 
+2026-03-28T19:26:49.7654708Z ERTOS MX6QSABRELITE U-Boot > setenv autoload no && dhcp && tftpboot 0x30000000 sabre/sel4-image
+2026-03-28T19:26:49.7655456Z setenv autoload no && dhcp && tftpboot 0x30000000 sabre/sel4-image
+2026-03-28T19:26:49.7655784Z 
+2026-03-28T19:26:51.9209617Z FEC Waiting for PHY auto negotiation to complete..... done
+2026-03-28T19:26:52.0674131Z 
+2026-03-28T19:26:52.0674422Z BOOTP broadcast 1
+2026-03-28T19:26:55.0267713Z 
+2026-03-28T19:26:55.0268423Z BOOTP broadcast 2
+2026-03-28T19:26:55.0268816Z 
+2026-03-28T19:26:55.0268949Z DHCP client bound to address 172.16.1.86
+2026-03-28T19:26:55.1735094Z 
+2026-03-28T19:26:55.1736220Z Using FEC device
+2026-03-28T19:26:55.1736484Z 
+2026-03-28T19:26:55.1736732Z TFTP from server 172.16.0.2; our IP address is 172.16.1.86
+2026-03-28T19:26:55.1737119Z 
+2026-03-28T19:26:55.1737266Z Filename 'sabre/sel4-image'.
+2026-03-28T19:26:55.1737506Z 
+2026-03-28T19:26:55.1737994Z Load address: 0x30000000
+2026-03-28T19:26:55.1738220Z 
+2026-03-28T19:26:55.4666855Z Loading: *#################################################################
+2026-03-28T19:26:55.4667221Z 
+2026-03-28T19:26:55.4667365Z 	 #################################################################
+2026-03-28T19:26:55.4668000Z 
+2026-03-28T19:26:55.6133523Z 	 #################################################################
+2026-03-28T19:26:55.6134063Z 
+2026-03-28T19:26:55.6134199Z 	 ########################################
+2026-03-28T19:26:55.6134488Z 
+2026-03-28T19:26:55.6134614Z 	 7.9 MiB/s
+2026-03-28T19:26:55.6134784Z 
+2026-03-28T19:26:55.6134876Z done
+2026-03-28T19:26:55.6134998Z 
+2026-03-28T19:26:55.6135140Z Bytes transferred = 3447884 (349c4c hex)
+2026-03-28T19:26:55.6135373Z 
+2026-03-28T19:26:55.6135494Z ERTOS MX6QSABRELITE U-Boot > bootelf
+2026-03-28T19:26:55.7597855Z bootelf
+2026-03-28T19:26:55.7598313Z 
+2026-03-28T19:26:55.7598474Z ## Starting application at 0x10491000 ...
+2026-03-28T19:26:55.7598806Z 
+2026-03-28T19:26:55.7598810Z 
+2026-03-28T19:26:55.7598999Z ELF-loader started on CPU: ARM Ltd. Cortex-A9 r2p10
+2026-03-28T19:26:55.7599394Z   paddr=[10491000..107cd04b]
+2026-03-28T19:26:55.7599722Z No DTB passed in from boot loader.
+2026-03-28T19:26:55.7600102Z Looking for DTB in CPIO archive...found at 104c152c.
+2026-03-28T19:26:55.7600487Z Loaded DTB from 104c152c.
+2026-03-28T19:26:55.7600763Z    paddr=[10030000..1003afff]
+2026-03-28T19:26:55.7601068Z ELF-loading image 'kernel' to 10000000
+2026-03-28T19:26:55.7601392Z   paddr=[10000000..1002ffff]
+2026-03-28T19:26:55.7601671Z   vaddr=[e0000000..e002ffff]
+2026-03-28T19:26:55.7601943Z   virt_entry=e0000000
+2026-03-28T19:26:55.9065286Z ELF-loading image 'rootserver' to 1003b000
+2026-03-28T19:26:55.9065724Z   paddr=[1003b000..10470fff]
+2026-03-28T19:26:55.9066017Z   vaddr=[10000..445fff]
+2026-03-28T19:26:55.9066285Z   virt_entry=1f8f0
+2026-03-28T19:26:58.3773027Z Enabling MMU and jumping to entry point...
+2026-03-28T19:26:58.3773379Z 
+2026-03-28T19:41:55.6865640Z 
+2026-03-28T19:41:55.6866312Z [[Timeout]]
+2026-03-28T19:41:55.6866604Z None
+2026-03-28T19:41:55.8333560Z 
+2026-03-28T19:41:55.8334260Z console_run returned -1
+2026-03-28T19:41:55.8336951Z Shutting down sabre
+2026-03-28T19:41:56.2056650Z 
+2026-03-28T19:41:58.8912196Z Command exited with non-zero status 255
+2026-03-28T19:41:58.8912939Z 0.03user 0.03system 15:24.09elapsed 0%CPU (0avgtext+0avgdata 8264maxresident)k
+2026-03-28T19:41:58.8913767Z 0inputs+8outputs (1major+7189minor)pagefaults 0swaps
+2026-03-28T19:41:58.8914995Z [31;1m>>> command failed, aborting.[0m
+2026-03-28T19:41:58.8915919Z [33m+++ mq.sh sem -signal sabre -k seL4/seL4-HW-23684167886-hw-run-33[0m
+2026-03-28T19:42:02.2035242Z [1m-----------[ end test SABRE_verification_clang_32 ]-----------[0m
+2026-03-28T19:42:02.2038442Z ##[endgroup]
+2026-03-28T19:42:02.2038962Z [31;1mSABRE_verification_clang_32 FAILED[0m
+2026-03-28T19:42:02.2039389Z 
+2026-03-28T19:42:02.2039970Z ##[group]SABRE_verification_MCS_clang_32
+2026-03-28T19:42:02.2040877Z [1m-----------[ start test SABRE_verification_MCS_clang_32 ]-----------[0m
+2026-03-28T19:42:02.2047035Z [33m+++ tar xvzf ../SABRE_verification_MCS_clang_32-images.tar.gz[0m
+2026-03-28T19:42:02.2073650Z images/
+2026-03-28T19:42:02.2074046Z images/sel4test-driver-image-arm-imx6
+2026-03-28T19:42:02.2293124Z [33m+++ mq.sh sem -info sabre[0m
+2026-03-28T19:42:05.6231202Z Lock for sabre currently free
+2026-03-28T19:42:05.6232343Z [33m+++ time mq.sh sem -wait sabre -k seL4/seL4-HW-23684167886-hw-run-33 -T 1800[0m
+2026-03-28T19:42:08.7343560Z 0.02user 0.01system 0:03.10elapsed 1%CPU (0avgtext+0avgdata 8292maxresident)k
+2026-03-28T19:42:08.7344447Z 0inputs+0outputs (0major+4205minor)pagefaults 0swaps
+2026-03-28T19:42:08.7346727Z [33m+++ time mq.sh run -c </testsuite> -s sabre -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-23684167886-hw-run-33 -f images/sel4test-driver-image-arm-imx6[0m
+2026-03-28T19:42:11.0269998Z Lock acquired, we are allowed to run
+2026-03-28T19:42:15.6890191Z pxelinux=False
+2026-03-28T19:42:15.6890631Z copied '/tmp/tmp.tpOYfAPNbd' -> '/tftpboot/sabre/sel4-image'
+2026-03-28T19:42:15.8355797Z removed '/tmp/tmp.tpOYfAPNbd'
+2026-03-28T19:42:15.8356434Z co
+2026-03-28T19:42:15.8356654Z ^Eco
+2026-03-28T19:42:15.9821935Z [Enter `^Ec?' for help]
+2026-03-28T19:42:16.3643675Z [connecting...up]
+2026-03-28T19:42:16.5109539Z Rebooting sabre and loading image: /tmp/tmp.tpOYfAPNbd
+2026-03-28T19:42:22.5552379Z   
+2026-03-28T19:42:22.5552598Z 
+2026-03-28T19:42:22.5552616Z 
+2026-03-28T19:42:22.5552824Z U-Boot 2013.04-dirty (Jul 21 2013 - 23:42:37)
+2026-03-28T19:42:22.5553147Z 
+2026-03-28T19:42:22.5553152Z 
+2026-03-28T19:42:22.5553327Z CPU:   Freescale i.MX6Q rev1.2 at 792 MHz
+2026-03-28T19:42:22.5553628Z 
+2026-03-28T19:42:22.5553778Z Reset cause: POR
+2026-03-28T19:42:22.5553970Z 
+2026-03-28T19:42:22.5554101Z Board: MX6Q-Sabre Lite
+2026-03-28T19:42:22.5554304Z 
+2026-03-28T19:42:22.5554426Z DRAM:  1 GiB
+2026-03-28T19:42:22.7020130Z 
+2026-03-28T19:42:22.7020704Z MMC:   FSL_SDHC: 0, FSL_SDHC: 1
+2026-03-28T19:42:22.7021128Z 
+2026-03-28T19:42:22.7021431Z SF: Detected SST25VF016B with page size 4 KiB, total 2 MiB
+2026-03-28T19:42:22.7021748Z 
+2026-03-28T19:42:22.7021868Z No panel detected: default to HDMI
+2026-03-28T19:42:22.7022130Z 
+2026-03-28T19:42:22.7022249Z unsupported panel HDMI
+2026-03-28T19:42:22.7022428Z 
+2026-03-28T19:42:22.7022527Z In:    serial
+2026-03-28T19:42:22.7022669Z 
+2026-03-28T19:42:22.7022761Z Out:   serial
+2026-03-28T19:42:22.7022896Z 
+2026-03-28T19:42:22.7023010Z Err:   serial
+2026-03-28T19:42:22.7023144Z 
+2026-03-28T19:42:22.7023249Z Net:   using phy at 6
+2026-03-28T19:42:22.7023415Z 
+2026-03-28T19:42:22.7023509Z FEC [PRIME]
+2026-03-28T19:42:22.7023640Z 
+2026-03-28T19:42:22.7023759Z Hit any key to stop autoboot: 10
+2026-03-28T19:42:22.8487935Z  0
+2026-03-28T19:42:22.8488176Z 
+2026-03-28T19:42:22.8488615Z ERTOS MX6QSABRELITE U-Boot > setenv autoload no && dhcp && tftpboot 0x30000000 sabre/sel4-image
+2026-03-28T19:42:22.8489422Z setenv autoload no && dhcp && tftpboot 0x30000000 sabre/sel4-image
+2026-03-28T19:42:22.8489806Z 
+2026-03-28T19:42:25.0045417Z FEC Waiting for PHY auto negotiation to complete..... done
+2026-03-28T19:42:25.1512298Z 
+2026-03-28T19:42:25.1513169Z BOOTP broadcast 1
+2026-03-28T19:42:28.1128170Z 
+2026-03-28T19:42:28.1128741Z BOOTP broadcast 2
+2026-03-28T19:42:28.1129082Z 
+2026-03-28T19:42:28.1129332Z DHCP client bound to address 172.16.1.86
+2026-03-28T19:42:28.2594229Z 
+2026-03-28T19:42:28.2594761Z Using FEC device
+2026-03-28T19:42:28.2595044Z 
+2026-03-28T19:42:28.2595307Z TFTP from server 172.16.0.2; our IP address is 172.16.1.86
+2026-03-28T19:42:28.2595616Z 
+2026-03-28T19:42:28.2595743Z Filename 'sabre/sel4-image'.
+2026-03-28T19:42:28.2595963Z 
+2026-03-28T19:42:28.2596072Z Load address: 0x30000000
+2026-03-28T19:42:28.2596306Z 
+2026-03-28T19:42:28.4061106Z Loading: *#################################################################
+2026-03-28T19:42:28.4061495Z 
+2026-03-28T19:42:28.5528832Z 	 #################################################################
+2026-03-28T19:42:28.5529278Z 
+2026-03-28T19:42:28.6997369Z 	 #################################################################
+2026-03-28T19:42:28.6998202Z 
+2026-03-28T19:42:28.6998396Z 	 ####################################################
+2026-03-28T19:42:28.6998725Z 
+2026-03-28T19:42:28.6998852Z 	 8.6 MiB/s
+2026-03-28T19:42:28.6999018Z 
+2026-03-28T19:42:28.6999132Z done
+2026-03-28T19:42:28.6999280Z 
+2026-03-28T19:42:28.6999434Z Bytes transferred = 3620428 (373e4c hex)
+2026-03-28T19:42:28.6999712Z 
+2026-03-28T19:42:28.6999858Z ERTOS MX6QSABRELITE U-Boot > bootelf
+2026-03-28T19:42:28.7000234Z bootelf
+2026-03-28T19:42:28.8461560Z 
+2026-03-28T19:42:28.8462310Z ## Starting application at 0x104b5000 ...
+2026-03-28T19:42:28.8462768Z 
+2026-03-28T19:42:28.8463358Z 
+2026-03-28T19:42:28.8463800Z ELF-loader started on CPU: ARM Ltd. Cortex-A9 r2p10
+2026-03-28T19:42:28.8464511Z   paddr=[104b5000..1081504b]
+2026-03-28T19:42:28.8464928Z No DTB passed in from boot loader.
+2026-03-28T19:42:28.8465447Z Looking for DTB in CPIO archive...found at 104ec12c.
+2026-03-28T19:42:28.8465964Z Loaded DTB from 104ec12c.
+2026-03-28T19:42:28.8466342Z    paddr=[10034000..1003efff]
+2026-03-28T19:42:28.8466748Z ELF-loading image 'kernel' to 10000000
+2026-03-28T19:42:28.8467154Z   paddr=[10000000..10033fff]
+2026-03-28T19:42:28.8467459Z   vaddr=[e0000000..e0033fff]
+2026-03-28T19:42:28.8468126Z   virt_entry=e0000000
+2026-03-28T19:42:28.9927736Z ELF-loading image 'rootserver' to 1003f000
+2026-03-28T19:42:28.9928752Z   paddr=[1003f000..10494fff]
+2026-03-28T19:42:28.9929144Z   vaddr=[10000..465fff]
+2026-03-28T19:42:28.9929492Z   virt_entry=200c4
+2026-03-28T19:42:31.5253427Z Enabling MMU and jumping to entry point...
+2026-03-28T19:42:31.5253761Z 
+2026-03-28T19:57:28.8185655Z 
+2026-03-28T19:57:28.9653782Z [[Timeout]]
+2026-03-28T19:57:28.9654100Z None
+2026-03-28T19:57:28.9654249Z 
+2026-03-28T19:57:28.9654387Z console_run returned -1
+2026-03-28T19:57:28.9654732Z Shutting down sabre
+2026-03-28T19:57:29.3242485Z 
+2026-03-28T19:57:31.6501666Z Command exited with non-zero status 255
+2026-03-28T19:57:31.6502430Z 0.03user 0.04system 15:22.91elapsed 0%CPU (0avgtext+0avgdata 8252maxresident)k
+2026-03-28T19:57:31.6503168Z 0inputs+8outputs (0major+7232minor)pagefaults 0swaps
+2026-03-28T19:57:31.6504852Z [31;1m>>> command failed, aborting.[0m
+2026-03-28T19:57:31.6505688Z [33m+++ mq.sh sem -signal sabre -k seL4/seL4-HW-23684167886-hw-run-33[0m
+2026-03-28T19:57:35.0470395Z [1m-----------[ end test SABRE_verification_MCS_clang_32 ]-----------[0m
+2026-03-28T19:57:35.0471581Z ##[endgroup]
+2026-03-28T19:57:35.0472106Z [31;1mSABRE_verification_MCS_clang_32 FAILED[0m
+2026-03-28T19:57:35.0472520Z 
+2026-03-28T19:57:35.0474763Z ##[group]SABRE_verification_SMP_clang_32
+2026-03-28T19:57:35.0475620Z [1m-----------[ start test SABRE_verification_SMP_clang_32 ]-----------[0m
+2026-03-28T19:57:35.0481802Z [33m+++ tar xvzf ../SABRE_verification_SMP_clang_32-images.tar.gz[0m
+2026-03-28T19:57:35.0509152Z images/
+2026-03-28T19:57:35.0510245Z images/sel4test-driver-image-arm-imx6
+2026-03-28T19:57:35.0721728Z [33m+++ mq.sh sem -info sabre[0m
+2026-03-28T19:57:37.7462229Z Lock for sabre currently free
+2026-03-28T19:57:37.7463324Z [33m+++ time mq.sh sem -wait sabre -k seL4/seL4-HW-23684167886-hw-run-33 -T 1800[0m
+2026-03-28T19:57:40.5684653Z 0.02user 0.01system 0:02.82elapsed 1%CPU (0avgtext+0avgdata 8252maxresident)k
+2026-03-28T19:57:40.5685554Z 0inputs+0outputs (0major+4214minor)pagefaults 0swaps
+2026-03-28T19:57:40.5687374Z [33m+++ time mq.sh run -c </testsuite> -s sabre -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-23684167886-hw-run-33 -f images/sel4test-driver-image-arm-imx6[0m
+2026-03-28T19:57:42.7872789Z Lock acquired, we are allowed to run
+2026-03-28T19:57:47.3541300Z pxelinux=False
+2026-03-28T19:57:47.3542057Z copied '/tmp/tmp.eOb5WDFyzq' -> '/tftpboot/sabre/sel4-image'
+2026-03-28T19:57:47.5010480Z removed '/tmp/tmp.eOb5WDFyzq'
+2026-03-28T19:57:47.5011197Z co
+2026-03-28T19:57:47.5011412Z ^Eco
+2026-03-28T19:57:47.6478830Z [Enter `^Ec?' for help]
+2026-03-28T19:57:48.0342048Z [connecting...up]
+2026-03-28T19:57:48.1813896Z Rebooting sabre and loading image: /tmp/tmp.eOb5WDFyzq
+2026-03-28T19:57:54.2658425Z   
+2026-03-28T19:57:54.2658623Z 
+2026-03-28T19:57:54.2658652Z 
+2026-03-28T19:57:54.2658816Z U-Boot 2013.04-dirty (Jul 21 2013 - 23:42:37)
+2026-03-28T19:57:54.2659087Z 
+2026-03-28T19:57:54.2659091Z 
+2026-03-28T19:57:54.2659224Z CPU:   Freescale i.MX6Q rev1.2 at 792 MHz
+2026-03-28T19:57:54.2659464Z 
+2026-03-28T19:57:54.2659568Z Reset cause: POR
+2026-03-28T19:57:54.2659722Z 
+2026-03-28T19:57:54.2659824Z Board: MX6Q-Sabre Lite
+2026-03-28T19:57:54.2659994Z 
+2026-03-28T19:57:54.2660095Z DRAM:  1 GiB
+2026-03-28T19:57:54.4123791Z 
+2026-03-28T19:57:54.4124439Z MMC:   FSL_SDHC: 0, FSL_SDHC: 1
+2026-03-28T19:57:54.4124822Z 
+2026-03-28T19:57:54.4125670Z SF: Detected SST25VF016B with page size 4 KiB, total 2 MiB
+2026-03-28T19:57:54.4126241Z 
+2026-03-28T19:57:54.4126459Z No panel detected: default to HDMI
+2026-03-28T19:57:54.4126808Z 
+2026-03-28T19:57:54.4126939Z unsupported panel HDMI
+2026-03-28T19:57:54.4127142Z 
+2026-03-28T19:57:54.4127269Z In:    serial
+2026-03-28T19:57:54.4127437Z 
+2026-03-28T19:57:54.4127876Z Out:   serial
+2026-03-28T19:57:54.4128155Z 
+2026-03-28T19:57:54.4128345Z Err:   serial
+2026-03-28T19:57:54.4128496Z 
+2026-03-28T19:57:54.4128620Z Net:   using phy at 6
+2026-03-28T19:57:54.4128815Z 
+2026-03-28T19:57:54.4128926Z FEC [PRIME]
+2026-03-28T19:57:54.4129084Z 
+2026-03-28T19:57:54.4129220Z Hit any key to stop autoboot: 10
+2026-03-28T19:57:54.5590579Z  0
+2026-03-28T19:57:54.5590899Z 
+2026-03-28T19:57:54.5591592Z ERTOS MX6QSABRELITE U-Boot > setenv autoload no && dhcp && tftpboot 0x30000000 sabre/sel4-image
+2026-03-28T19:57:54.5592550Z setenv autoload no && dhcp && tftpboot 0x30000000 sabre/sel4-image
+2026-03-28T19:57:54.5592989Z 
+2026-03-28T19:57:56.8496186Z FEC Waiting for PHY auto negotiation to complete..... done
+2026-03-28T19:57:56.9962053Z 
+2026-03-28T19:57:56.9962728Z BOOTP broadcast 1
+2026-03-28T19:57:59.9490123Z 
+2026-03-28T19:57:59.9490775Z BOOTP broadcast 2
+2026-03-28T19:57:59.9491112Z 
+2026-03-28T19:57:59.9491371Z DHCP client bound to address 172.16.1.86
+2026-03-28T19:58:00.0958515Z 
+2026-03-28T19:58:00.0959022Z Using FEC device
+2026-03-28T19:58:00.0959405Z 
+2026-03-28T19:58:00.0959761Z TFTP from server 172.16.0.2; our IP address is 172.16.1.86
+2026-03-28T19:58:00.0960206Z 
+2026-03-28T19:58:00.0960357Z Filename 'sabre/sel4-image'.
+2026-03-28T19:58:00.0960596Z 
+2026-03-28T19:58:00.0960730Z Load address: 0x30000000
+2026-03-28T19:58:00.0960951Z 
+2026-03-28T19:58:00.2428198Z Loading: *#################################################################
+2026-03-28T19:58:00.2428646Z 
+2026-03-28T19:58:00.3892456Z 	 #################################################################
+2026-03-28T19:58:00.3892899Z 
+2026-03-28T19:58:00.5359204Z 	 #################################################################
+2026-03-28T19:58:00.5359861Z 
+2026-03-28T19:58:00.5360127Z 	 #############################################
+2026-03-28T19:58:00.5360580Z 
+2026-03-28T19:58:00.5360796Z 	 8.2 MiB/s
+2026-03-28T19:58:00.5361052Z 
+2026-03-28T19:58:00.5361223Z done
+2026-03-28T19:58:00.5361415Z 
+2026-03-28T19:58:00.5361578Z Bytes transferred = 3518968 (35b1f8 hex)
+2026-03-28T19:58:00.5362260Z 
+2026-03-28T19:58:00.5362412Z ERTOS MX6QSABRELITE U-Boot > bootelf
+2026-03-28T19:58:00.6829571Z bootelf
+2026-03-28T19:58:00.6829879Z 
+2026-03-28T19:58:00.6830128Z ## Starting application at 0x1049d000 ...
+2026-03-28T19:58:00.6830606Z 
+2026-03-28T19:58:00.6830618Z 
+2026-03-28T19:58:00.6830908Z ELF-loader started on CPU: ARM Ltd. Cortex-A9 r2p10
+2026-03-28T19:58:00.6831402Z   paddr=[1049d000..107e504f]
+2026-03-28T19:58:00.6831790Z No DTB passed in from boot loader.
+2026-03-28T19:58:00.6832253Z Looking for DTB in CPIO archive...found at 104d0a2c.
+2026-03-28T19:58:00.6832743Z Loaded DTB from 104d0a2c.
+2026-03-28T19:58:00.6833092Z    paddr=[1003c000..10046fff]
+2026-03-28T19:58:00.6833466Z ELF-loading image 'kernel' to 10000000
+2026-03-28T19:58:00.6833863Z   paddr=[10000000..1003bfff]
+2026-03-28T19:58:00.6834213Z   vaddr=[e0000000..e003bfff]
+2026-03-28T19:58:00.6834549Z   virt_entry=e0000000
+2026-03-28T19:58:00.8296525Z ELF-loading image 'rootserver' to 10047000
+2026-03-28T19:58:00.8297276Z   paddr=[10047000..1047cfff]
+2026-03-28T19:58:00.8297984Z   vaddr=[10000..445fff]
+2026-03-28T19:58:00.8298314Z   virt_entry=1f8f0
+2026-03-28T19:58:03.2968548Z Boot cpu id = 0x0, index=0
+2026-03-28T19:58:03.2969120Z Core 1 is up with logic id 1
+2026-03-28T19:58:03.2969467Z Core 2 is up with logic id 2
+2026-03-28T19:58:03.2969782Z Core 3 is up with logic id 3
+2026-03-28T19:58:03.2970120Z Enabling MMU and jumping to entry point...
+2026-03-28T19:58:03.2970390Z 
+2026-03-28T20:13:00.6059091Z 
+2026-03-28T20:13:00.6059579Z [[Timeout]]
+2026-03-28T20:13:00.6060083Z None
+2026-03-28T20:13:00.7526014Z 
+2026-03-28T20:13:00.7526603Z console_run returned -1
+2026-03-28T20:13:00.7527069Z Shutting down sabre
+2026-03-28T20:13:01.1258941Z 
+2026-03-28T20:13:03.6028767Z Command exited with non-zero status 255
+2026-03-28T20:13:03.6029453Z 0.03user 0.03system 15:23.03elapsed 0%CPU (0avgtext+0avgdata 8280maxresident)k
+2026-03-28T20:13:03.6030017Z 0inputs+8outputs (0major+7204minor)pagefaults 0swaps
+2026-03-28T20:13:03.6031411Z [31;1m>>> command failed, aborting.[0m
+2026-03-28T20:13:03.6032006Z [33m+++ mq.sh sem -signal sabre -k seL4/seL4-HW-23684167886-hw-run-33[0m
+2026-03-28T20:13:06.7969343Z [1m-----------[ end test SABRE_verification_SMP_clang_32 ]-----------[0m
+2026-03-28T20:13:06.7970462Z ##[endgroup]
+2026-03-28T20:13:06.7970921Z [31;1mSABRE_verification_SMP_clang_32 FAILED[0m
+2026-03-28T20:13:06.7971264Z 
+2026-03-28T20:13:06.7971445Z Successful tests: [0m
+2026-03-28T20:13:06.7971663Z 
+2026-03-28T20:13:06.7973345Z [31;1mFAILED tests: SABRE_debug_clang_32, SABRE_debug_MCS_clang_32, SABRE_debug_SMP_clang_32, SABRE_release_clang_32, SABRE_release_MCS_clang_32, SABRE_release_SMP_clang_32, SABRE_verification_clang_32, SABRE_verification_MCS_clang_32, SABRE_verification_SMP_clang_32[0m
+2026-03-28T20:13:06.8109489Z ##[error]Action sel4test-hw-run failed.
+2026-03-28T20:13:06.8221654Z Post job cleanup.
+2026-03-28T20:13:06.9329282Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/post-steps.sh
+2026-03-28T20:13:06.9382931Z ##[group]Releasing mq lock
+2026-03-28T20:13:06.9454079Z Agent pid 4844
+2026-03-28T20:13:07.0875031Z mq.sh sem -cancel sabre -k seL4/seL4-HW-23684167886-hw-run-33
+2026-03-28T20:13:09.4311737Z mq.sh sem -signal sabre -k seL4/seL4-HW-23684167886-hw-run-33
+2026-03-28T20:13:11.8450875Z Attempting to unlock system sabre that you do not hold
+2026-03-28T20:13:11.8550280Z ##[endgroup]
+2026-03-28T20:13:11.8709485Z Post job cleanup.
+2026-03-28T20:13:11.9658688Z [command]/usr/bin/git version
+2026-03-28T20:13:11.9694908Z git version 2.53.0
+2026-03-28T20:13:11.9753283Z Temporarily overriding HOME='/home/runner/work/_temp/6b64b725-869d-4176-b9b0-522832210609' before making global git config changes
+2026-03-28T20:13:11.9754430Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-28T20:13:11.9761334Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/seL4/seL4/machine_queue
+2026-03-28T20:13:11.9799478Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-28T20:13:11.9834656Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-28T20:13:12.0057334Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-28T20:13:12.0078141Z http.https://github.com/.extraheader
+2026-03-28T20:13:12.0090968Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-03-28T20:13:12.0122342Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-28T20:13:12.0341410Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-28T20:13:12.0371673Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-28T20:13:12.0713327Z Cleaning up orphan processes
+2026-03-28T20:13:12.0958574Z Terminate orphan process: pid (2377) (ssh)
+2026-03-28T20:13:12.1145922Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/download-artifact@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

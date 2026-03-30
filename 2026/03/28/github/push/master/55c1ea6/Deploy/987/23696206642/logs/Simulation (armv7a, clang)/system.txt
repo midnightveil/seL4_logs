@@ -1,0 +1,8 @@
+2026-03-28T22:56:55.7590000Z Evaluating sim.if
+2026-03-28T22:56:55.7590000Z Evaluating: success()
+2026-03-28T22:56:55.7590000Z Result: true
+2026-03-28T22:56:55.7620000Z Requested labels: ubuntu-latest
+2026-03-28T22:56:55.7620000Z Job defined at: seL4/seL4/.github/workflows/sel4test-deploy.yml@refs/heads/master
+2026-03-28T22:56:55.7620000Z Waiting for a runner to pick up this job...
+2026-03-28T22:56:56.0180000Z Job is about to start running on the hosted runner: GitHub Actions 1000078314
+2026-03-28T22:56:56.0180000Z Job is waiting for a hosted runner to come online.

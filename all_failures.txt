@@ -1,0 +1,40 @@
+TX2_release_SMP_hyp_MCS_gcc_64
+	path: 2026/03/28/github/manual/20260328T230943/55c1ea6/Deploy/988/23696419519/logs/5_HW Run (TX2, armv8a, gcc).txt
+	system: tx2a
+	kind: boot failure
+	variant: PHY negotiation failure
+TX2_release_SMP_hyp_MCS_gcc_64
+	path: 2026/03/28/github/manual/20260328T230943/55c1ea6/Deploy/988/23696419519/logs/HW Run (TX2, armv8a, gcc)/4_Run.txt
+	system: tx2a
+	kind: boot failure
+	variant: PHY negotiation failure
+TX2_release_SMP_hyp_MCS_gcc_64
+	path: 2026/03/24/github/push/master/27a52dd/Deploy/985/logs/1_HW Run (TX2, armv8a, gcc).txt
+	system: tx2a
+	kind: boot failure
+	variant: PHY negotiation failure
+TX2_release_SMP_hyp_MCS_gcc_64
+	path: 2026/03/24/github/manual/20260324T040402/27a52dd/Deploy/986/logs/1_HW Run (TX2, armv8a, gcc).txt
+	system: tx2a
+	kind: boot failure
+	variant: PHY negotiation failure
+ZYNQMP_debug_clang_32
+	path: 2026/03/28/github/manual/20260328T230943/55c1ea6/Deploy/988/23696419519/logs/3_HW Run (ZYNQMP, armv8a, clang).txt
+	system: zcu102_2
+	kind: boot failure
+	variant: no console output boot timeout
+ZYNQMP_debug_clang_32
+	path: 2026/03/28/github/manual/20260328T230943/55c1ea6/Deploy/988/23696419519/logs/HW Run (ZYNQMP, armv8a, clang)/4_Run.txt
+	system: zcu102_2
+	kind: boot failure
+	variant: no console output boot timeout
+ZYNQMP_debug_gcc_64
+	path: 2026/03/28/github/manual/20260328T230943/55c1ea6/Deploy/988/23696419519/logs/6_HW Run (ZYNQMP, armv8a, gcc).txt
+	system: zcu102_2
+	kind: output timeout
+	variant: during tests
+ZYNQMP_debug_gcc_64
+	path: 2026/03/28/github/manual/20260328T230943/55c1ea6/Deploy/988/23696419519/logs/HW Run (ZYNQMP, armv8a, gcc)/4_Run.txt
+	system: zcu102_2
+	kind: output timeout
+	variant: during tests

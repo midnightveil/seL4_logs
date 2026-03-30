@@ -21,6 +21,7 @@ all_runs: list[Run] = []
 
 for root, dirs, files in os.walk("2026"):
     for file in files:
+        if "github/pr" in root: continue
         if "HW Run" in root or "HW Run" in file:
             if ".txt" in file:
                 fpath = os.path.join(root, file)
@@ -34,11 +35,13 @@ for root, dirs, files in os.walk("2026"):
                 for group in by_group:
                     if "---------[ start test" not in group:
                         continue
+                    elif 'TypeError: can only concatenate str' in group:
+                        continue
 
                     _, system_str = group.split("+++ mq.sh sem -info ", maxsplit=1)
                     mq_system, _ = system_str.split("\x1b", maxsplit=1)
 
-                    assert group.count("-----------[ end test ") == 1
+                    assert group.count("-----------[ end test ") == 1, str(group)
                     # ignore anything after end test
                     group, test_str = group.split("-----------[ end test ")
                     test, _ = test_str.split(" ]-----------")
@@ -133,6 +136,12 @@ for root, dirs, files in os.walk("2026"):
                                 elif "u-boot=>" in pre_timeout_lines_str:
                                     kind = "boot failure"
                                     variant = "undetected (uboot console)"
+                                elif "Waiting for PHY auto negotiation to complete" in pre_timeout_lines_str:
+                                    kind = "boot failure"
+                                    variant = "PHY negotiation failure"
+                                elif "[[Boot timeout]]" in pre_timeout_lines_str:
+                                    kind = "boot failure"
+                                    variant = "no console output boot timeout"
 
                         if kind is None:
                             print()

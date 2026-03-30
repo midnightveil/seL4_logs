@@ -1,0 +1,46 @@
+﻿2026-03-30T03:31:45.1259353Z Current runner version: '2.333.0'
+2026-03-30T03:31:45.1286195Z ##[group]Runner Image Provisioner
+2026-03-30T03:31:45.1287133Z Hosted Compute Agent
+2026-03-30T03:31:45.1287820Z Version: 20260213.493
+2026-03-30T03:31:45.1288484Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-03-30T03:31:45.1289211Z Build Date: 2026-02-13T00:28:41Z
+2026-03-30T03:31:45.1289982Z Worker ID: {1512be44-9b42-426c-8fe2-1292e8eb8fa9}
+2026-03-30T03:31:45.1290743Z Azure Region: eastus
+2026-03-30T03:31:45.1291455Z ##[endgroup]
+2026-03-30T03:31:45.1293622Z ##[group]Operating System
+2026-03-30T03:31:45.1294292Z Ubuntu
+2026-03-30T03:31:45.1294955Z 24.04.4
+2026-03-30T03:31:45.1295564Z LTS
+2026-03-30T03:31:45.1296119Z ##[endgroup]
+2026-03-30T03:31:45.1296704Z ##[group]Runner Image
+2026-03-30T03:31:45.1297941Z Image: ubuntu-24.04
+2026-03-30T03:31:45.1298548Z Version: 20260323.65.1
+2026-03-30T03:31:45.1299730Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260323.65/images/ubuntu/Ubuntu2404-Readme.md
+2026-03-30T03:31:45.1301539Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260323.65
+2026-03-30T03:31:45.1302914Z ##[endgroup]
+2026-03-30T03:31:45.1305949Z ##[group]GITHUB_TOKEN Permissions
+2026-03-30T03:31:45.1308514Z Actions: write
+2026-03-30T03:31:45.1309163Z ArtifactMetadata: write
+2026-03-30T03:31:45.1309852Z Attestations: write
+2026-03-30T03:31:45.1310492Z Checks: write
+2026-03-30T03:31:45.1311107Z Contents: write
+2026-03-30T03:31:45.1311697Z Deployments: write
+2026-03-30T03:31:45.1312277Z Discussions: write
+2026-03-30T03:31:45.1313299Z Issues: write
+2026-03-30T03:31:45.1313870Z Metadata: read
+2026-03-30T03:31:45.1314532Z Models: read
+2026-03-30T03:31:45.1315106Z Packages: write
+2026-03-30T03:31:45.1315668Z Pages: write
+2026-03-30T03:31:45.1316416Z PullRequests: write
+2026-03-30T03:31:45.1317018Z RepositoryProjects: write
+2026-03-30T03:31:45.1317669Z SecurityEvents: write
+2026-03-30T03:31:45.1318346Z Statuses: write
+2026-03-30T03:31:45.1318928Z ##[endgroup]
+2026-03-30T03:31:45.1321308Z Secret source: Actions
+2026-03-30T03:31:45.1322143Z Prepare workflow directory
+2026-03-30T03:31:45.1666581Z Prepare all required actions
+2026-03-30T03:31:45.1706984Z Getting action download info
+2026-03-30T03:31:45.4955736Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-03-30T03:31:45.6389716Z Download action repository 'actions/download-artifact@v4' (SHA:d3f86a106a0bac45b974a628896c90dbdf5c8093)
+2026-03-30T03:31:45.8751803Z Download action repository 'seL4/ci-actions@master' (SHA:c10638c961b7ab1f619fe004ddd07d2b189ae827)
+2026-03-30T03:31:46.2779343Z Complete job name: HW Run (TX2, armv8a, gcc)

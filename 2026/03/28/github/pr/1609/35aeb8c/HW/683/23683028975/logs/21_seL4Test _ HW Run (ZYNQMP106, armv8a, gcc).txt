@@ -1,0 +1,643 @@
+﻿2026-03-28T11:19:20.6336845Z Current runner version: '2.333.0'
+2026-03-28T11:19:20.6359907Z ##[group]Runner Image Provisioner
+2026-03-28T11:19:20.6360872Z Hosted Compute Agent
+2026-03-28T11:19:20.6361711Z Version: 20260213.493
+2026-03-28T11:19:20.6362860Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-03-28T11:19:20.6363768Z Build Date: 2026-02-13T00:28:41Z
+2026-03-28T11:19:20.6364568Z Worker ID: {6efd6df0-8697-490b-8d67-5e1c2a5fc14d}
+2026-03-28T11:19:20.6365392Z Azure Region: westus
+2026-03-28T11:19:20.6366149Z ##[endgroup]
+2026-03-28T11:19:20.6367768Z ##[group]Operating System
+2026-03-28T11:19:20.6368583Z Ubuntu
+2026-03-28T11:19:20.6369201Z 24.04.4
+2026-03-28T11:19:20.6369799Z LTS
+2026-03-28T11:19:20.6370478Z ##[endgroup]
+2026-03-28T11:19:20.6371163Z ##[group]Runner Image
+2026-03-28T11:19:20.6372198Z Image: ubuntu-24.04
+2026-03-28T11:19:20.6372921Z Version: 20260323.65.1
+2026-03-28T11:19:20.6374354Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260323.65/images/ubuntu/Ubuntu2404-Readme.md
+2026-03-28T11:19:20.6376022Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260323.65
+2026-03-28T11:19:20.6377102Z ##[endgroup]
+2026-03-28T11:19:20.6378333Z ##[group]GITHUB_TOKEN Permissions
+2026-03-28T11:19:20.6380368Z Contents: read
+2026-03-28T11:19:20.6381125Z Metadata: read
+2026-03-28T11:19:20.6382032Z ##[endgroup]
+2026-03-28T11:19:20.6384244Z Secret source: Actions
+2026-03-28T11:19:20.6385102Z Prepare workflow directory
+2026-03-28T11:19:20.6712274Z Prepare all required actions
+2026-03-28T11:19:20.6752523Z Getting action download info
+2026-03-28T11:19:21.1435763Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-03-28T11:19:21.2708117Z Download action repository 'actions/download-artifact@v4' (SHA:d3f86a106a0bac45b974a628896c90dbdf5c8093)
+2026-03-28T11:19:21.9791972Z Download action repository 'seL4/ci-actions@master' (SHA:5ffc97f19e2c7d81ad945d0d1b84b1c7c9ce26aa)
+2026-03-28T11:19:22.7428756Z Uses: seL4/ci-actions/.github/workflows/sel4test-hw.yml@refs/heads/master (5ffc97f19e2c7d81ad945d0d1b84b1c7c9ce26aa)
+2026-03-28T11:19:22.7438648Z Complete job name: seL4Test / HW Run (ZYNQMP106, armv8a, gcc)
+2026-03-28T11:19:22.9046944Z ##[group]Run actions/checkout@v4
+2026-03-28T11:19:22.9049168Z with:
+2026-03-28T11:19:22.9050184Z   repository: seL4/machine_queue
+2026-03-28T11:19:22.9051295Z   path: machine_queue
+2026-03-28T11:19:22.9053231Z   token: ***
+2026-03-28T11:19:22.9054242Z   ssh-strict: true
+2026-03-28T11:19:22.9055187Z   ssh-user: git
+2026-03-28T11:19:22.9056165Z   persist-credentials: true
+2026-03-28T11:19:22.9057200Z   clean: true
+2026-03-28T11:19:22.9058153Z   sparse-checkout-cone-mode: true
+2026-03-28T11:19:22.9059289Z   fetch-depth: 1
+2026-03-28T11:19:22.9060199Z   fetch-tags: false
+2026-03-28T11:19:22.9061124Z   show-progress: true
+2026-03-28T11:19:22.9062739Z   lfs: false
+2026-03-28T11:19:22.9063842Z   submodules: false
+2026-03-28T11:19:22.9064812Z   set-safe-directory: true
+2026-03-28T11:19:22.9066825Z ##[endgroup]
+2026-03-28T11:19:23.0701634Z Syncing repository: seL4/machine_queue
+2026-03-28T11:19:23.0707678Z ##[group]Getting Git version info
+2026-03-28T11:19:23.0710049Z Working directory is '/home/runner/work/seL4/seL4/machine_queue'
+2026-03-28T11:19:23.0714021Z [command]/usr/bin/git version
+2026-03-28T11:19:23.0715463Z git version 2.53.0
+2026-03-28T11:19:23.0750092Z ##[endgroup]
+2026-03-28T11:19:23.0770101Z Temporarily overriding HOME='/home/runner/work/_temp/7428197f-ee96-44fa-bd0d-cff9f8cc5f54' before making global git config changes
+2026-03-28T11:19:23.0774021Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-28T11:19:23.0780024Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/seL4/seL4/machine_queue
+2026-03-28T11:19:23.0830361Z ##[group]Initializing the repository
+2026-03-28T11:19:23.0838595Z [command]/usr/bin/git init /home/runner/work/seL4/seL4/machine_queue
+2026-03-28T11:19:23.0965633Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-03-28T11:19:23.0969430Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-03-28T11:19:23.0972529Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-03-28T11:19:23.0975176Z hint: call:
+2026-03-28T11:19:23.0976197Z hint:
+2026-03-28T11:19:23.0977460Z hint: 	git config --global init.defaultBranch <name>
+2026-03-28T11:19:23.0979123Z hint:
+2026-03-28T11:19:23.0980910Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-03-28T11:19:23.0983619Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-03-28T11:19:23.0985373Z hint:
+2026-03-28T11:19:23.0986671Z hint: 	git branch -m <name>
+2026-03-28T11:19:23.0987814Z hint:
+2026-03-28T11:19:23.0989287Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-03-28T11:19:23.0991594Z Initialized empty Git repository in /home/runner/work/seL4/seL4/machine_queue/.git/
+2026-03-28T11:19:23.0996246Z [command]/usr/bin/git remote add origin https://github.com/seL4/machine_queue
+2026-03-28T11:19:23.1025613Z ##[endgroup]
+2026-03-28T11:19:23.1027705Z ##[group]Disabling automatic garbage collection
+2026-03-28T11:19:23.1032845Z [command]/usr/bin/git config --local gc.auto 0
+2026-03-28T11:19:23.1079912Z ##[endgroup]
+2026-03-28T11:19:23.1082320Z ##[group]Setting up auth
+2026-03-28T11:19:23.1088723Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-28T11:19:23.1129554Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-28T11:19:23.1536538Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-28T11:19:23.1587959Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-28T11:19:23.1913131Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-28T11:19:23.1980005Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-28T11:19:23.2259238Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-03-28T11:19:23.2292736Z ##[endgroup]
+2026-03-28T11:19:23.2295601Z ##[group]Determining the default branch
+2026-03-28T11:19:23.2297758Z Retrieving the default branch name
+2026-03-28T11:19:23.6110677Z Default branch 'master'
+2026-03-28T11:19:23.6117028Z ##[endgroup]
+2026-03-28T11:19:23.6119027Z ##[group]Fetching the repository
+2026-03-28T11:19:23.6121051Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/master:refs/remotes/origin/master
+2026-03-28T11:19:24.1484707Z From https://github.com/seL4/machine_queue
+2026-03-28T11:19:24.1485241Z  * [new branch]      master     -> origin/master
+2026-03-28T11:19:24.1511025Z ##[endgroup]
+2026-03-28T11:19:24.1511585Z ##[group]Determining the checkout info
+2026-03-28T11:19:24.1513866Z ##[endgroup]
+2026-03-28T11:19:24.1519775Z [command]/usr/bin/git sparse-checkout disable
+2026-03-28T11:19:24.1556610Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-03-28T11:19:24.1584033Z ##[group]Checking out the ref
+2026-03-28T11:19:24.1589446Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2026-03-28T11:19:24.1664313Z Reset branch 'master'
+2026-03-28T11:19:24.1667238Z branch 'master' set up to track 'origin/master'.
+2026-03-28T11:19:24.1673223Z ##[endgroup]
+2026-03-28T11:19:24.1708715Z [command]/usr/bin/git log -1 --format=%H
+2026-03-28T11:19:24.1730730Z f0835aa54749667d30c9143e0fd3353e9367f2dd
+2026-03-28T11:19:24.1947748Z ##[group]Run actions/download-artifact@v4
+2026-03-28T11:19:24.1948135Z with:
+2026-03-28T11:19:24.1948590Z   name: images-sel4test-armv8a-gcc
+2026-03-28T11:19:24.1948921Z   merge-multiple: false
+2026-03-28T11:19:24.1949208Z   repository: seL4/seL4
+2026-03-28T11:19:24.1949488Z   run-id: 23683028975
+2026-03-28T11:19:24.1949749Z ##[endgroup]
+2026-03-28T11:19:24.3937148Z Downloading single artifact
+2026-03-28T11:19:24.7148003Z Preparing to download the following artifacts:
+2026-03-28T11:19:24.7149373Z - images-sel4test-armv8a-gcc (ID: 6158187477, Size: 216179886, Expected Digest: sha256:63aa432bf24afd44a4efe33345c572e92d56b5d14b62de535ec2ec2104b90400)
+2026-03-28T11:19:24.9098217Z Redirecting to blob download url: https://productionresultssa12.blob.core.windows.net/actions-results/67943b6a-35be-482f-9f9f-0b154c4e5a22/workflow-job-run-2d7a5933-9baa-54b7-a8b9-d6409fee7cf1/artifacts/40d7667480bee49ba94bbbf98125a53068e714439285f32d313ac09137c9331f.zip
+2026-03-28T11:19:24.9100520Z Starting download of artifact to: /home/runner/work/seL4/seL4
+2026-03-28T11:19:25.2324637Z (node:2299) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-03-28T11:19:25.2326181Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-03-28T11:19:33.9357538Z SHA256 digest of downloaded artifact is 63aa432bf24afd44a4efe33345c572e92d56b5d14b62de535ec2ec2104b90400
+2026-03-28T11:19:33.9358541Z Artifact download completed successfully.
+2026-03-28T11:19:33.9359050Z Total of 1 artifact(s) downloaded
+2026-03-28T11:19:33.9365438Z Download artifact has finished successfully
+2026-03-28T11:19:33.9536439Z ##[group]Run seL4/ci-actions/sel4test-hw-run@master
+2026-03-28T11:19:33.9536790Z with:
+2026-03-28T11:19:33.9536998Z   platform: ZYNQMP106
+2026-03-28T11:19:33.9537224Z   compiler: gcc
+2026-03-28T11:19:33.9537460Z   index: $12
+2026-03-28T11:19:33.9537692Z   action_name: sel4test-hw-run
+2026-03-28T11:19:33.9537940Z env:
+2026-03-28T11:19:33.9539704Z   HW_SSH: ***
+
+2026-03-28T11:19:33.9539922Z ##[endgroup]
+2026-03-28T11:19:34.0591583Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/steps.sh
+2026-03-28T11:19:34.0642886Z ##[group]Setting up
+2026-03-28T11:19:34.0919025Z Agent pid 2333
+2026-03-28T11:19:34.1287701Z Cloning into 'seL4_libs'...
+2026-03-28T11:19:38.0849507Z Reading package lists...
+2026-03-28T11:19:38.2788820Z Building dependency tree...
+2026-03-28T11:19:38.2857330Z Reading state information...
+2026-03-28T11:19:38.5411944Z libffi-dev is already the newest version (3.4.6-1build1).
+2026-03-28T11:19:38.5412991Z libffi-dev set to manually installed.
+2026-03-28T11:19:38.5413708Z 0 upgraded, 0 newly installed, 0 to remove and 24 not upgraded.
+2026-03-28T11:19:39.6771839Z Collecting junitparser==3.*
+2026-03-28T11:19:39.7109865Z   Downloading junitparser-3.2.0-py2.py3-none-any.whl.metadata (9.0 kB)
+2026-03-28T11:19:39.7375856Z Collecting sel4-deps
+2026-03-28T11:19:39.7406647Z   Downloading sel4_deps-0.7.0-py3-none-any.whl.metadata (1.1 kB)
+2026-03-28T11:19:39.7511269Z Requirement already satisfied: six in /usr/lib/python3/dist-packages (from sel4-deps) (1.16.0)
+2026-03-28T11:19:39.7662177Z Collecting future (from sel4-deps)
+2026-03-28T11:19:39.7689094Z   Downloading future-1.0.0-py3-none-any.whl.metadata (4.0 kB)
+2026-03-28T11:19:39.7738025Z Requirement already satisfied: jinja2 in /usr/lib/python3/dist-packages (from sel4-deps) (3.1.2)
+2026-03-28T11:19:39.9867066Z Collecting lxml (from sel4-deps)
+2026-03-28T11:19:39.9895357Z   Downloading lxml-6.0.2-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.6 kB)
+2026-03-28T11:19:40.0037235Z Collecting ply (from sel4-deps)
+2026-03-28T11:19:40.0061488Z   Downloading ply-3.11-py2.py3-none-any.whl.metadata (844 bytes)
+2026-03-28T11:19:40.0943432Z Collecting psutil (from sel4-deps)
+2026-03-28T11:19:40.0971007Z   Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+2026-03-28T11:19:40.1128256Z Collecting bs4 (from sel4-deps)
+2026-03-28T11:19:40.1157703Z   Downloading bs4-0.0.2-py2.py3-none-any.whl.metadata (411 bytes)
+2026-03-28T11:19:40.1307434Z Collecting pyelftools (from sel4-deps)
+2026-03-28T11:19:40.1330923Z   Downloading pyelftools-0.32-py3-none-any.whl.metadata (372 bytes)
+2026-03-28T11:19:40.1541924Z Collecting sh (from sel4-deps)
+2026-03-28T11:19:40.1571916Z   Downloading sh-2.2.2-py3-none-any.whl.metadata (3.7 kB)
+2026-03-28T11:19:40.1611988Z Requirement already satisfied: pexpect in /usr/lib/python3/dist-packages (from sel4-deps) (4.9.0)
+2026-03-28T11:19:40.1622177Z Requirement already satisfied: pyyaml>=5.1 in /usr/lib/python3/dist-packages (from sel4-deps) (6.0.1)
+2026-03-28T11:19:40.1629959Z Requirement already satisfied: jsonschema in /usr/lib/python3/dist-packages (from sel4-deps) (4.10.3)
+2026-03-28T11:19:40.1733603Z Collecting pyfdt (from sel4-deps)
+2026-03-28T11:19:40.1767302Z   Downloading pyfdt-0.3.tar.gz (9.1 kB)
+2026-03-28T11:19:40.1887315Z   Preparing metadata (setup.py): started
+2026-03-28T11:19:40.3790149Z   Preparing metadata (setup.py): finished with status 'done'
+2026-03-28T11:19:40.3949968Z Collecting cmake-format==0.6.13 (from sel4-deps)
+2026-03-28T11:19:40.3986619Z   Downloading cmake_format-0.6.13-py3-none-any.whl.metadata (23 kB)
+2026-03-28T11:19:40.4146097Z Collecting guardonce (from sel4-deps)
+2026-03-28T11:19:40.4179605Z   Downloading guardonce-2.4.0-py2.py3-none-any.whl.metadata (3.4 kB)
+2026-03-28T11:19:40.4404276Z Collecting autopep8==2.3.2 (from sel4-deps)
+2026-03-28T11:19:40.4428282Z   Downloading autopep8-2.3.2-py2.py3-none-any.whl.metadata (16 kB)
+2026-03-28T11:19:40.4599298Z Collecting libarchive-c (from sel4-deps)
+2026-03-28T11:19:40.4632236Z   Downloading libarchive_c-5.3-py3-none-any.whl.metadata (5.8 kB)
+2026-03-28T11:19:40.4857332Z Collecting pycodestyle>=2.12.0 (from autopep8==2.3.2->sel4-deps)
+2026-03-28T11:19:40.4881595Z   Downloading pycodestyle-2.14.0-py2.py3-none-any.whl.metadata (4.5 kB)
+2026-03-28T11:19:40.5048646Z Collecting cmakelang>=0.6.13 (from cmake-format==0.6.13->sel4-deps)
+2026-03-28T11:19:40.5079736Z   Downloading cmakelang-0.6.13-py3-none-any.whl.metadata (23 kB)
+2026-03-28T11:19:40.5345205Z Collecting beautifulsoup4 (from bs4->sel4-deps)
+2026-03-28T11:19:40.5368769Z   Downloading beautifulsoup4-4.14.3-py3-none-any.whl.metadata (3.8 kB)
+2026-03-28T11:19:40.5581953Z Requirement already satisfied: attrs>=17.4.0 in /usr/lib/python3/dist-packages (from jsonschema->sel4-deps) (23.2.0)
+2026-03-28T11:19:40.5597915Z Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,>=0.14.0 in /usr/lib/python3/dist-packages (from jsonschema->sel4-deps) (0.20.0)
+2026-03-28T11:19:40.6642351Z Collecting soupsieve>=1.6.1 (from beautifulsoup4->bs4->sel4-deps)
+2026-03-28T11:19:40.6665953Z   Downloading soupsieve-2.8.3-py3-none-any.whl.metadata (4.6 kB)
+2026-03-28T11:19:40.6706923Z Requirement already satisfied: typing-extensions>=4.0.0 in /usr/lib/python3/dist-packages (from beautifulsoup4->bs4->sel4-deps) (4.10.0)
+2026-03-28T11:19:40.6785529Z Downloading junitparser-3.2.0-py2.py3-none-any.whl (13 kB)
+2026-03-28T11:19:40.6838303Z Downloading sel4_deps-0.7.0-py3-none-any.whl (1.4 kB)
+2026-03-28T11:19:40.6882139Z Downloading autopep8-2.3.2-py2.py3-none-any.whl (45 kB)
+2026-03-28T11:19:40.6927599Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.8/45.8 kB 16.4 MB/s eta 0:00:00
+2026-03-28T11:19:40.6960189Z Downloading cmake_format-0.6.13-py3-none-any.whl (19 kB)
+2026-03-28T11:19:40.7009275Z Downloading bs4-0.0.2-py2.py3-none-any.whl (1.2 kB)
+2026-03-28T11:19:40.7055592Z Downloading future-1.0.0-py3-none-any.whl (491 kB)
+2026-03-28T11:19:40.7149379Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 491.3/491.3 kB 62.6 MB/s eta 0:00:00
+2026-03-28T11:19:40.7182303Z Downloading guardonce-2.4.0-py2.py3-none-any.whl (15 kB)
+2026-03-28T11:19:40.7234500Z Downloading libarchive_c-5.3-py3-none-any.whl (17 kB)
+2026-03-28T11:19:40.7282870Z Downloading lxml-6.0.2-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.3 MB)
+2026-03-28T11:19:40.7578500Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 189.5 MB/s eta 0:00:00
+2026-03-28T11:19:40.7602156Z Downloading ply-3.11-py2.py3-none-any.whl (49 kB)
+2026-03-28T11:19:40.7652916Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.6/49.6 kB 17.3 MB/s eta 0:00:00
+2026-03-28T11:19:40.7670275Z Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+2026-03-28T11:19:40.7723117Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.6/155.6 kB 42.2 MB/s eta 0:00:00
+2026-03-28T11:19:40.7746561Z Downloading pyelftools-0.32-py3-none-any.whl (188 kB)
+2026-03-28T11:19:40.7796353Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.5/188.5 kB 53.5 MB/s eta 0:00:00
+2026-03-28T11:19:40.7821036Z Downloading sh-2.2.2-py3-none-any.whl (38 kB)
+2026-03-28T11:19:40.7876346Z Downloading cmakelang-0.6.13-py3-none-any.whl (159 kB)
+2026-03-28T11:19:40.7923487Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 159.8/159.8 kB 51.0 MB/s eta 0:00:00
+2026-03-28T11:19:40.7949263Z Downloading pycodestyle-2.14.0-py2.py3-none-any.whl (31 kB)
+2026-03-28T11:19:40.7993828Z Downloading beautifulsoup4-4.14.3-py3-none-any.whl (107 kB)
+2026-03-28T11:19:40.8034107Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.7/107.7 kB 40.2 MB/s eta 0:00:00
+2026-03-28T11:19:40.8056706Z Downloading soupsieve-2.8.3-py3-none-any.whl (37 kB)
+2026-03-28T11:19:40.8294685Z Building wheels for collected packages: pyfdt
+2026-03-28T11:19:40.8299632Z   Building wheel for pyfdt (setup.py): started
+2026-03-28T11:19:41.1961082Z   Building wheel for pyfdt (setup.py): finished with status 'done'
+2026-03-28T11:19:41.1965519Z   Created wheel for pyfdt: filename=pyfdt-0.3-py3-none-any.whl size=10969 sha256=34f49bf160d9c0c00b507d5e457fe04c51fec5ae5e467631f720b9cc423234fb
+2026-03-28T11:19:41.1966993Z   Stored in directory: /home/runner/.cache/pip/wheels/d9/8e/2a/cff33f3accb8eaa34608e68786db1ec323a5f6bce8d724d90a
+2026-03-28T11:19:41.1982297Z Successfully built pyfdt
+2026-03-28T11:19:41.4808359Z Installing collected packages: pyfdt, pyelftools, ply, libarchive-c, junitparser, guardonce, soupsieve, sh, pycodestyle, psutil, lxml, future, cmakelang, cmake-format, beautifulsoup4, autopep8, bs4, sel4-deps
+2026-03-28T11:19:42.3972691Z Successfully installed autopep8-2.3.2 beautifulsoup4-4.14.3 bs4-0.0.2 cmake-format-0.6.13 cmakelang-0.6.13 future-1.0.0 guardonce-2.4.0 junitparser-3.2.0 libarchive-c-5.3 lxml-6.0.2 ply-3.11 psutil-7.2.2 pycodestyle-2.14.0 pyelftools-0.32 pyfdt-0.3 sel4-deps-0.7.0 sh-2.2.2 soupsieve-2.8.3
+2026-03-28T11:19:42.4853388Z ##[endgroup]
+2026-03-28T11:19:42.6314084Z 
+2026-03-28T11:19:42.6316036Z ##[group]ZYNQMP106_debug_gcc_32
+2026-03-28T11:19:42.6316837Z [1m-----------[ start test ZYNQMP106_debug_gcc_32 ]-----------[0m
+2026-03-28T11:19:42.6317339Z [33m+++ tar xvzf ../ZYNQMP106_debug_gcc_32-images.tar.gz[0m
+2026-03-28T11:19:42.6342919Z images/
+2026-03-28T11:19:42.6343543Z images/sel4test-driver-image-arm-zynqmp
+2026-03-28T11:19:42.6562304Z [33m+++ mq.sh sem -info zcu106[0m
+2026-03-28T11:20:16.1893322Z Lock for zcu106 currently free
+2026-03-28T11:20:16.1894207Z [33m+++ time mq.sh sem -wait zcu106 -k seL4/seL4-HW-23683028975-hw-run-12 -T 1800[0m
+2026-03-28T11:37:39.2788203Z 0.02user 0.03system 17:23.08elapsed 0%CPU (0avgtext+0avgdata 8332maxresident)k
+2026-03-28T11:37:39.2789196Z 0inputs+0outputs (0major+5479minor)pagefaults 0swaps
+2026-03-28T11:37:39.2791048Z [33m+++ time mq.sh run -c </testsuite> -s zcu106 -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-23683028975-hw-run-12 -f images/sel4test-driver-image-arm-zynqmp[0m
+2026-03-28T11:37:41.6836717Z Lock acquired, we are allowed to run
+2026-03-28T11:37:46.3347283Z pxelinux=False
+2026-03-28T11:37:46.3348259Z copied '/tmp/tmp.s98giRpywt' -> '/tftpboot/zcu106/sel4-image'
+2026-03-28T11:37:46.5902705Z removed '/tmp/tmp.s98giRpywt'
+2026-03-28T11:37:46.7372913Z co
+2026-03-28T11:37:46.7373339Z ^Eco
+2026-03-28T11:37:46.8842981Z [Enter `^Ec?' for help]
+2026-03-28T11:37:47.1176097Z [up]
+2026-03-28T11:37:47.2648662Z Rebooting zcu106 and loading image: /tmp/tmp.s98giRpywt
+2026-03-28T11:37:53.5349270Z  Xilinx Zynq MP First Stage Boot Loader
+2026-03-28T11:37:53.5349733Z 
+2026-03-28T11:37:53.5350328Z Release 2021.1   Jun  6 2021  -  07:07:32
+2026-03-28T11:37:53.7350585Z NOTICE:  ATF running on XCZU7EG/EV/silicon v4/RTL5.1 at 0xfffea000
+2026-03-28T11:37:53.8822580Z NOTICE:  BL31: v2.4(release):v1.1-7609-g851523ea2
+2026-03-28T11:37:53.8823404Z NOTICE:  BL31: Built : 08:27:07, Apr 28 2021
+2026-03-28T11:37:54.9939117Z 
+2026-03-28T11:37:54.9939240Z 
+2026-03-28T11:37:54.9939849Z U-Boot 2021.01 (Jun 01 2021 - 11:54:06 +0000)
+2026-03-28T11:37:54.9940438Z 
+2026-03-28T11:37:54.9940681Z Model: ZynqMP ZCU106 RevA
+2026-03-28T11:37:54.9941169Z Board: Xilinx ZynqMP
+2026-03-28T11:37:55.1934262Z DRAM:  4 GiB
+2026-03-28T11:37:55.3404403Z PMUFW:	v1.1
+2026-03-28T11:37:55.3404929Z EL Level:	EL2
+2026-03-28T11:37:55.3405434Z Chip ID:	zu7e
+2026-03-28T11:37:55.3405820Z NAND:  0 MiB
+2026-03-28T11:37:55.3406138Z MMC:   mmc@ff170000: 0
+2026-03-28T11:37:55.4875902Z Loading Environment from FAT... OK
+2026-03-28T11:37:55.4876654Z In:    serial
+2026-03-28T11:37:55.4877148Z Out:   serial
+2026-03-28T11:37:55.4877554Z Err:   serial
+2026-03-28T11:37:55.4877860Z Net:
+2026-03-28T11:37:55.4878333Z ZYNQ GEM: ff0e0000, mdio bus ff0e0000, phyaddr 12, interface rgmii-id
+2026-03-28T11:37:55.4878961Z eth0: ethernet@ff0e0000
+2026-03-28T11:37:55.4879370Z Hit any key to stop autoboot:  2
+2026-03-28T11:37:55.4879983Z  0
+2026-03-28T11:37:55.6347700Z ZynqMP> dhcp 0x10000000
+2026-03-28T11:37:55.6348366Z dhcp 0x10000000
+2026-03-28T11:37:58.0275183Z ethernet@ff0e0000 Waiting for PHY auto negotiation to complete..... done
+2026-03-28T11:37:58.0276004Z BOOTP broadcast 1
+2026-03-28T11:37:58.2770517Z BOOTP broadcast 2
+2026-03-28T11:37:58.7786171Z BOOTP broadcast 3
+2026-03-28T11:37:59.8262737Z BOOTP broadcast 4
+2026-03-28T11:38:01.7829198Z BOOTP broadcast 5
+2026-03-28T11:38:01.8261385Z DHCP client bound to address 172.16.1.68 (3760 ms)
+2026-03-28T11:38:01.8261873Z Using ethernet@ff0e0000 device
+2026-03-28T11:38:01.8262566Z TFTP from server 172.16.0.2; our IP address is 172.16.1.68
+2026-03-28T11:38:01.8263005Z Filename '/zcu106/sel4-image'.
+2026-03-28T11:38:01.8263349Z Load address: 0x10000000
+2026-03-28T11:38:01.9164153Z Loading: *#################################################################
+2026-03-28T11:38:02.0182401Z 	 #################################################################
+2026-03-28T11:38:02.1442849Z 	 #################################################################
+2026-03-28T11:38:02.2238960Z 	 #############################
+2026-03-28T11:38:02.2239454Z 	 8.6 MiB/s
+2026-03-28T11:38:02.2239795Z done
+2026-03-28T11:38:02.2240160Z Bytes transferred = 3285800 (322328 hex)
+2026-03-28T11:38:02.2240726Z ZynqMP> bootelf 0x10000000
+2026-03-28T11:38:02.2241162Z bootelf 0x10000000
+2026-03-28T11:38:02.3711419Z ## Starting application at 0x08000000 ...
+2026-03-28T11:38:02.3711992Z 
+2026-03-28T11:38:02.3712234Z ELF-loader started on CPU: ARM Ltd. Cortex-A53 r0p4
+2026-03-28T11:38:02.3712696Z   paddr=[8000000..8309047]
+2026-03-28T11:38:02.3713047Z No DTB passed in from boot loader.
+2026-03-28T11:38:02.3713477Z Looking for DTB in CPIO archive...found at 803f298.
+2026-03-28T11:38:02.3713947Z Loaded DTB from 803f298.
+2026-03-28T11:38:02.3714270Z    paddr=[3c000..40fff]
+2026-03-28T11:38:02.3714614Z ELF-loading image 'kernel' to 0
+2026-03-28T11:38:02.3714961Z   paddr=[0..3bfff]
+2026-03-28T11:38:02.3715253Z   vaddr=[e0000000..e003bfff]
+2026-03-28T11:38:02.3715580Z   virt_entry=e0000000
+2026-03-28T11:38:02.5188045Z ELF-loading image 'rootserver' to 41000
+2026-03-28T11:38:02.5188498Z   paddr=[41000..436fff]
+2026-03-28T11:38:02.5188810Z   vaddr=[10000..405fff]
+2026-03-28T11:38:02.5189113Z   virt_entry=1d75c
+2026-03-28T11:38:04.7423013Z Enabling MMU and jumping to entry point...
+2026-03-28T11:38:04.7423450Z 
+2026-03-28T11:38:04.8892597Z Warning:  gpt_cntfrq 99990008, expected 100000000
+2026-03-28T11:38:04.8893711Z Bootstrapping kernel
+2026-03-28T11:38:04.8894087Z available phys memory regions: 1
+2026-03-28T11:38:04.8894454Z   [0..80000000)
+2026-03-28T11:38:04.8894777Z reserved virt address space regions: 4
+2026-03-28T11:38:04.8895178Z   [e0000000..e003c000)
+2026-03-28T11:38:04.8895853Z   [e003c000..e0040bf5)
+2026-03-28T11:38:04.8896159Z   [e0041000..e0437000)
+2026-03-28T11:38:04.8896454Z   [ff000000..ff100000)
+2026-03-28T11:38:04.8896870Z Booting all finished, dropped to user space
+2026-03-28T11:38:04.8897354Z Caught cap fault in send phase at address 0
+2026-03-28T11:38:04.8897768Z while trying to handle:
+2026-03-28T11:38:04.8898162Z vm fault on data at address 0xdf7fe000 with status 0x805
+2026-03-28T11:38:04.8898700Z in thread 0xffeef200 "sel4test-driver" at address 0x75fd8
+2026-03-28T11:38:04.8899150Z With stack:
+2026-03-28T11:38:04.8899423Z 0x2f3da0: 0xf
+2026-03-28T11:38:04.8899688Z 0x2f3da4: 0x1
+2026-03-28T11:38:04.8899957Z 0x2f3da8: 0x2f3db8
+2026-03-28T11:38:04.8900238Z 0x2f3dac: 0x2f3dd8
+2026-03-28T11:38:04.8900513Z 0x2f3db0: 0x1000
+2026-03-28T11:38:04.8900786Z 0x2f3db4: 0x2d0028
+2026-03-28T11:38:04.8901068Z 0x2f3db8: 0x45e
+2026-03-28T11:38:04.8901342Z 0x2f3dbc: 0x2d1d90
+2026-03-28T11:38:04.8901611Z 0x2f3dc0: 0xa
+2026-03-28T11:38:04.8902111Z 0x2f3dc4: 0xa
+2026-03-28T11:38:04.8902383Z 0x2f3dc8: 0x2
+2026-03-28T11:38:04.8902642Z 0x2f3dcc: 0x0
+2026-03-28T11:38:04.8902904Z 0x2f3dd0: 0x0
+2026-03-28T11:38:04.8903164Z 0x2f3dd4: 0x45d
+2026-03-28T11:38:04.8903429Z 0x2f3dd8: 0x1
+2026-03-28T11:38:04.8903689Z 0x2f3ddc: 0x45f
+2026-03-28T11:53:02.3355903Z 
+2026-03-28T11:53:02.3356599Z [[Timeout]]
+2026-03-28T11:53:02.3357100Z None
+2026-03-28T11:53:02.4824376Z 
+2026-03-28T11:53:02.4824752Z console_run returned -1
+2026-03-28T11:53:02.4825326Z Shutting down zcu106
+2026-03-28T11:53:03.0667344Z 
+2026-03-28T11:53:05.3889852Z Command exited with non-zero status 255
+2026-03-28T11:53:05.3890660Z 0.02user 0.04system 15:26.10elapsed 0%CPU (0avgtext+0avgdata 8300maxresident)k
+2026-03-28T11:53:05.3891484Z 272inputs+8outputs (1major+7185minor)pagefaults 0swaps
+2026-03-28T11:53:05.3892575Z [31;1m>>> command failed, aborting.[0m
+2026-03-28T11:53:05.3893167Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-HW-23683028975-hw-run-12[0m
+2026-03-28T11:53:19.7137742Z [1m-----------[ end test ZYNQMP106_debug_gcc_32 ]-----------[0m
+2026-03-28T11:53:19.7138597Z ##[endgroup]
+2026-03-28T11:53:19.7138932Z [31;1mZYNQMP106_debug_gcc_32 FAILED[0m
+2026-03-28T11:53:19.7139161Z 
+2026-03-28T11:53:19.7139461Z ##[group]ZYNQMP106_debug_gcc_64
+2026-03-28T11:53:19.7139908Z [1m-----------[ start test ZYNQMP106_debug_gcc_64 ]-----------[0m
+2026-03-28T11:53:19.7145331Z [33m+++ tar xvzf ../ZYNQMP106_debug_gcc_64-images.tar.gz[0m
+2026-03-28T11:53:19.7169866Z images/
+2026-03-28T11:53:19.7170289Z images/sel4test-driver-image-arm-zynqmp
+2026-03-28T11:53:19.7375661Z [33m+++ mq.sh sem -info zcu106[0m
+2026-03-28T11:53:25.1197577Z Lock for zcu106 held by sel4_ci since 2026-03-28 22:53:20.092882067 +1100, timeout 1800 with key 'seL4/seL4-HW-23683028975-hw-run-13'
+2026-03-28T11:53:25.1199276Z [33m+++ time mq.sh sem -wait zcu106 -k seL4/seL4-HW-23683028975-hw-run-12 -T 1800[0m
+2026-03-28T11:54:39.7154228Z 0.02user 0.02system 1:14.59elapsed 0%CPU (0avgtext+0avgdata 8280maxresident)k
+2026-03-28T11:54:39.7156203Z 0inputs+0outputs (1major+5519minor)pagefaults 0swaps
+2026-03-28T11:54:39.7158033Z [33m+++ time mq.sh run -c </testsuite> -s zcu106 -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-23683028975-hw-run-12 -f images/sel4test-driver-image-arm-zynqmp[0m
+2026-03-28T11:54:44.6599182Z Lock acquired, we are allowed to run
+2026-03-28T11:54:49.9167634Z pxelinux=False
+2026-03-28T11:54:49.9168347Z copied '/tmp/tmp.wUz1tLpBh5' -> '/tftpboot/zcu106/sel4-image'
+2026-03-28T11:54:50.0636939Z removed '/tmp/tmp.wUz1tLpBh5'
+2026-03-28T11:54:50.0637920Z co
+2026-03-28T11:54:50.0638171Z ^Eco
+2026-03-28T11:54:50.2105937Z [Enter `^Ec?' for help]
+2026-03-28T11:54:50.5045979Z [up]
+2026-03-28T11:54:50.5046741Z Rebooting zcu106 and loading image: /tmp/tmp.wUz1tLpBh5
+2026-03-28T11:54:56.9352575Z  Xilinx Zynq MP First Stage Boot Loader
+2026-03-28T11:54:56.9353111Z 
+2026-03-28T11:54:56.9353335Z Release 2021.1   Jun  6 2021  -  07:07:32
+2026-03-28T11:54:57.1351313Z NOTICE:  ATF running on XCZU7EG/EV/silicon v4/RTL5.1 at 0xfffea000
+2026-03-28T11:54:57.2820824Z NOTICE:  BL31: v2.4(release):v1.1-7609-g851523ea2
+2026-03-28T11:54:57.2822188Z NOTICE:  BL31: Built : 08:27:07, Apr 28 2021
+2026-03-28T11:54:58.3944174Z 
+2026-03-28T11:54:58.3944189Z 
+2026-03-28T11:54:58.3944752Z U-Boot 2021.01 (Jun 01 2021 - 11:54:06 +0000)
+2026-03-28T11:54:58.3945082Z 
+2026-03-28T11:54:58.3945213Z Model: ZynqMP ZCU106 RevA
+2026-03-28T11:54:58.3945564Z Board: Xilinx ZynqMP
+2026-03-28T11:54:58.5919712Z DRAM:  4 GiB
+2026-03-28T11:54:58.7389111Z PMUFW:	v1.1
+2026-03-28T11:54:58.7389778Z EL Level:	EL2
+2026-03-28T11:54:58.7390421Z Chip ID:	zu7e
+2026-03-28T11:54:58.7390927Z NAND:  0 MiB
+2026-03-28T11:54:58.7391248Z MMC:   mmc@ff170000: 0
+2026-03-28T11:54:58.8864040Z Loading Environment from FAT... OK
+2026-03-28T11:54:58.8864489Z In:    serial
+2026-03-28T11:54:58.8864783Z Out:   serial
+2026-03-28T11:54:58.8865073Z Err:   serial
+2026-03-28T11:54:58.8865345Z Net:
+2026-03-28T11:54:58.8865772Z ZYNQ GEM: ff0e0000, mdio bus ff0e0000, phyaddr 12, interface rgmii-id
+2026-03-28T11:54:58.8866353Z eth0: ethernet@ff0e0000
+2026-03-28T11:54:58.8866699Z Hit any key to stop autoboot:  2
+2026-03-28T11:54:59.0335503Z  0
+2026-03-28T11:54:59.0335891Z ZynqMP> dhcp 0x10000000
+2026-03-28T11:54:59.0336290Z dhcp 0x10000000
+2026-03-28T11:55:01.3269474Z ethernet@ff0e0000 Waiting for PHY auto negotiation to complete..... done
+2026-03-28T11:55:01.3270054Z BOOTP broadcast 1
+2026-03-28T11:55:01.5794411Z BOOTP broadcast 2
+2026-03-28T11:55:02.0773016Z BOOTP broadcast 3
+2026-03-28T11:55:03.0790820Z BOOTP broadcast 4
+2026-03-28T11:55:05.0867472Z BOOTP broadcast 5
+2026-03-28T11:55:05.1304044Z DHCP client bound to address 172.16.1.68 (3761 ms)
+2026-03-28T11:55:05.1304666Z Using ethernet@ff0e0000 device
+2026-03-28T11:55:05.1305210Z TFTP from server 172.16.0.2; our IP address is 172.16.1.68
+2026-03-28T11:55:05.1305793Z Filename '/zcu106/sel4-image'.
+2026-03-28T11:55:05.1306224Z Load address: 0x10000000
+2026-03-28T11:55:05.2156321Z Loading: *#################################################################
+2026-03-28T11:55:05.3153178Z 	 #################################################################
+2026-03-28T11:55:05.4083309Z 	 #################################################################
+2026-03-28T11:55:05.5275908Z 	 ##############################
+2026-03-28T11:55:05.5276595Z 	 9.2 MiB/s
+2026-03-28T11:55:05.5276910Z done
+2026-03-28T11:55:05.5277242Z Bytes transferred = 3299552 (3258e0 hex)
+2026-03-28T11:55:05.5277730Z ZynqMP> bootelf 0x10000000
+2026-03-28T11:55:05.5278142Z bootelf 0x10000000
+2026-03-28T11:55:05.5278563Z ## Starting application at 0x00668000 ...
+2026-03-28T11:55:05.5278917Z 
+2026-03-28T11:55:05.5279135Z ELF-loader started on CPU: ARM Ltd. Cortex-A53 r0p4
+2026-03-28T11:55:05.5279629Z   paddr=[668000..97608f]
+2026-03-28T11:55:05.5280020Z No DTB passed in from boot loader.
+2026-03-28T11:55:05.5280500Z Looking for DTB in CPIO archive...found at 6a62d0.
+2026-03-28T11:55:05.5280993Z Loaded DTB from 6a62d0.
+2026-03-28T11:55:05.5281346Z    paddr=[23d000..241fff]
+2026-03-28T11:55:05.5281951Z ELF-loading image 'kernel' to 0
+2026-03-28T11:55:05.5282365Z   paddr=[0..23cfff]
+2026-03-28T11:55:05.5282733Z   vaddr=[ffffff8000000000..ffffff800023cfff]
+2026-03-28T11:55:05.5283192Z   virt_entry=ffffff8000000000
+2026-03-28T11:55:05.6281922Z ELF-loading image 'rootserver' to 242000
+2026-03-28T11:55:05.6282907Z   paddr=[242000..647fff]
+2026-03-28T11:55:05.6283388Z   vaddr=[400000..805fff]
+2026-03-28T11:55:05.6283763Z   virt_entry=40e548
+2026-03-28T11:55:05.6284143Z Enabling MMU and jumping to entry point...
+2026-03-28T11:55:05.6284473Z 
+2026-03-28T11:55:05.6284675Z Warning:  gpt_cntfrq 99990008, expected 100000000
+2026-03-28T11:55:05.6285183Z Bootstrapping kernel
+2026-03-28T11:55:05.6285548Z available phys memory regions: 2
+2026-03-28T11:55:05.6285934Z   [0..80000000)
+2026-03-28T11:55:05.6286236Z   [800000000..880000000)
+2026-03-28T11:55:05.6286613Z reserved virt address space regions: 3
+2026-03-28T11:55:05.6287065Z   [ffffff8000000000..ffffff800023d000)
+2026-03-28T11:55:05.6287501Z   [ffffff800023d000..ffffff8000241c21)
+2026-03-28T11:55:05.6288215Z   [ffffff8000242000..ffffff8000648000)
+2026-03-28T11:55:05.6288670Z Booting all finished, dropped to user space
+2026-03-28T11:55:05.6289162Z Caught cap fault in send phase at address 0
+2026-03-28T11:55:05.6289615Z while trying to handle:
+2026-03-28T11:55:05.6290104Z vm fault on data at address 0x7f0000000000 with status 0x92000047
+2026-03-28T11:55:05.6290665Z in thread 0xffffff887ffd1400 "sel4test-driver" at address 0x462998
+2026-03-28T11:55:05.6291114Z With stack:
+2026-03-28T11:55:05.6291355Z 0x6f3a00: 0x6f3b50
+2026-03-28T11:55:05.6291613Z 0x6f3a08: 0x42e914
+2026-03-28T11:55:05.6292040Z 0x6f3a10: 0x6f3d30
+2026-03-28T11:55:05.6292291Z 0x6f3a18: 0x6d0008
+2026-03-28T11:55:05.6292532Z 0x6f3a20: 0x3
+2026-03-28T11:55:05.6292778Z 0x6f3a28: 0x42e430
+2026-03-28T11:55:05.6293020Z 0x6f3a30: 0x6f3b98
+2026-03-28T11:55:05.6293270Z 0x6f3a38: 0x6f3af8
+2026-03-28T11:55:05.6293517Z 0x6f3a40: 0x100000001
+2026-03-28T11:55:05.6293780Z 0x6f3a48: 0xf
+2026-03-28T11:55:05.6747748Z 0x6f3a50: 0x1000
+2026-03-28T11:55:05.6748149Z 0x6f3a58: 0x6d0050
+2026-03-28T11:55:05.6748456Z 0x6f3a60: 0x3
+2026-03-28T11:55:05.6748750Z 0x6f3a68: 0x47a
+2026-03-28T11:55:05.6749210Z 0x6f3a70: 0x6d47b0
+2026-03-28T11:55:05.6749683Z 0x6f3a78: 0x7
+2026-03-28T12:10:05.6497946Z 
+2026-03-28T12:10:05.6498340Z [[Timeout]]
+2026-03-28T12:10:05.6498674Z None
+2026-03-28T12:10:05.7967870Z 
+2026-03-28T12:10:05.7968126Z console_run returned -1
+2026-03-28T12:10:05.7968505Z Shutting down zcu106
+2026-03-28T12:10:06.3350810Z 
+2026-03-28T12:10:08.6598940Z Command exited with non-zero status 255
+2026-03-28T12:10:08.6600018Z 0.03user 0.03system 15:28.94elapsed 0%CPU (0avgtext+0avgdata 8284maxresident)k
+2026-03-28T12:10:08.6600786Z 0inputs+8outputs (0major+7189minor)pagefaults 0swaps
+2026-03-28T12:10:08.6601631Z [31;1m>>> command failed, aborting.[0m
+2026-03-28T12:10:08.6602540Z [33m+++ mq.sh sem -signal zcu106 -k seL4/seL4-HW-23683028975-hw-run-12[0m
+2026-03-28T12:10:11.8457701Z [1m-----------[ end test ZYNQMP106_debug_gcc_64 ]-----------[0m
+2026-03-28T12:10:11.8460419Z ##[endgroup]
+2026-03-28T12:10:11.8460943Z [31;1mZYNQMP106_debug_gcc_64 FAILED[0m
+2026-03-28T12:10:11.8461310Z 
+2026-03-28T12:10:11.8462039Z ##[group]ZYNQMP106_debug_MCS_gcc_32
+2026-03-28T12:10:11.8462805Z [1m-----------[ start test ZYNQMP106_debug_MCS_gcc_32 ]-----------[0m
+2026-03-28T12:10:11.8467083Z [33m+++ tar xvzf ../ZYNQMP106_debug_MCS_gcc_32-images.tar.gz[0m
+2026-03-28T12:10:11.8494335Z images/
+2026-03-28T12:10:11.8494844Z images/sel4test-driver-image-arm-zynqmp
+2026-03-28T12:10:11.8706711Z [33m+++ mq.sh sem -info zcu106[0m
+2026-03-28T12:10:14.5318886Z Lock for zcu106 currently free
+2026-03-28T12:10:14.5320171Z [33m+++ time mq.sh sem -wait zcu106 -k seL4/seL4-HW-23683028975-hw-run-12 -T 1800[0m
+2026-03-28T12:25:54.8042515Z 0.01user 0.03system 15:40.27elapsed 0%CPU (0avgtext+0avgdata 8324maxresident)k
+2026-03-28T12:25:54.8043218Z 0inputs+0outputs (0major+5514minor)pagefaults 0swaps
+2026-03-28T12:25:54.8045036Z [33m+++ time mq.sh run -c </testsuite> -s zcu106 -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-23683028975-hw-run-12 -f images/sel4test-driver-image-arm-zynqmp[0m
+2026-03-28T12:25:57.3657974Z Lock acquired, we are allowed to run
+2026-03-28T12:26:01.8140178Z pxelinux=False
+2026-03-28T12:26:01.8140967Z copied '/tmp/tmp.wGGx0EpY4z' -> '/tftpboot/zcu106/sel4-image'
+2026-03-28T12:26:01.9610676Z removed '/tmp/tmp.wGGx0EpY4z'
+2026-03-28T12:26:02.1082960Z co
+2026-03-28T12:26:02.1083536Z ^Eco
+2026-03-28T12:26:02.1084095Z [Enter `^Ec?' for help]
+2026-03-28T12:26:02.4313237Z [up]
+2026-03-28T12:26:02.5784921Z Rebooting zcu106 and loading image: /tmp/tmp.wGGx0EpY4z
+2026-03-28T12:26:09.0809529Z  Xilinx Zynq MP First Stage Boot Loader
+2026-03-28T12:26:09.0809993Z 
+2026-03-28T12:26:09.0810213Z Release 2021.1   Jun  6 2021  -  07:07:32
+2026-03-28T12:26:09.2860404Z NOTICE:  ATF running on XCZU7EG/EV/silicon v4/RTL5.1 at 0xfffea000
+2026-03-28T12:26:09.4330221Z NOTICE:  BL31: v2.4(release):v1.1-7609-g851523ea2
+2026-03-28T12:26:09.4330874Z NOTICE:  BL31: Built : 08:27:07, Apr 28 2021
+2026-03-28T12:26:10.5437617Z 
+2026-03-28T12:26:10.5437703Z 
+2026-03-28T12:26:10.5438106Z U-Boot 2021.01 (Jun 01 2021 - 11:54:06 +0000)
+2026-03-28T12:26:10.5438417Z 
+2026-03-28T12:26:10.5438551Z Model: ZynqMP ZCU106 RevA
+2026-03-28T12:26:10.5438903Z Board: Xilinx ZynqMP
+2026-03-28T12:26:10.7429091Z DRAM:  4 GiB
+2026-03-28T12:26:10.8900501Z PMUFW:	v1.1
+2026-03-28T12:26:10.8900838Z EL Level:	EL2
+2026-03-28T12:26:10.8901158Z Chip ID:	zu7e
+2026-03-28T12:26:10.8901472Z NAND:  0 MiB
+2026-03-28T12:26:10.8902152Z MMC:   mmc@ff170000: 0
+2026-03-28T12:26:11.0370088Z Loading Environment from FAT... OK
+2026-03-28T12:26:11.0370665Z In:    serial
+2026-03-28T12:26:11.0370943Z Out:   serial
+2026-03-28T12:26:11.0371205Z Err:   serial
+2026-03-28T12:26:11.0371448Z Net:
+2026-03-28T12:26:11.0372105Z ZYNQ GEM: ff0e0000, mdio bus ff0e0000, phyaddr 12, interface rgmii-id
+2026-03-28T12:26:11.0372650Z eth0: ethernet@ff0e0000
+2026-03-28T12:26:11.0372980Z Hit any key to stop autoboot:  2
+2026-03-28T12:26:11.0373515Z  0
+2026-03-28T12:26:11.1859264Z ZynqMP> dhcp 0x10000000
+2026-03-28T12:26:11.1859858Z dhcp 0x10000000
+2026-03-28T12:26:13.5759157Z ethernet@ff0e0000 Waiting for PHY auto negotiation to complete..... done
+2026-03-28T12:26:13.5759950Z BOOTP broadcast 1
+2026-03-28T12:26:13.8304015Z BOOTP broadcast 2
+2026-03-28T12:26:14.3269458Z BOOTP broadcast 3
+2026-03-28T12:26:15.3281936Z BOOTP broadcast 4
+2026-03-28T12:26:17.3330088Z BOOTP broadcast 5
+2026-03-28T12:26:17.3802539Z DHCP client bound to address 172.16.1.68 (3761 ms)
+2026-03-28T12:26:17.3803241Z Using ethernet@ff0e0000 device
+2026-03-28T12:26:17.3804358Z TFTP from server 172.16.0.2; our IP address is 172.16.1.68
+2026-03-28T12:26:17.3805101Z Filename '/zcu106/sel4-image'.
+2026-03-28T12:26:17.3805615Z Load address: 0x10000000
+2026-03-28T12:26:17.4701266Z Loading: *#################################################################
+2026-03-28T12:26:17.5790784Z 	 #################################################################
+2026-03-28T12:26:17.6881785Z 	 #################################################################
+2026-03-28T12:26:17.7739213Z 	 #########################################
+2026-03-28T12:26:17.7739757Z 	 8.9 MiB/s
+2026-03-28T12:26:17.7740046Z done
+2026-03-28T12:26:17.7740358Z Bytes transferred = 3460392 (34cd28 hex)
+2026-03-28T12:26:17.7740806Z ZynqMP> bootelf 0x10000000
+2026-03-28T12:26:17.7741179Z bootelf 0x10000000
+2026-03-28T12:26:17.9210576Z ## Starting application at 0x08000000 ...
+2026-03-28T12:26:17.9211153Z 
+2026-03-28T12:26:17.9211425Z ELF-loader started on CPU: ARM Ltd. Cortex-A53 r0p4
+2026-03-28T12:26:17.9212199Z   paddr=[8000000..8335047]
+2026-03-28T12:26:17.9212614Z No DTB passed in from boot loader.
+2026-03-28T12:26:17.9213138Z Looking for DTB in CPIO archive...found at 8047e9c.
+2026-03-28T12:26:17.9213669Z Loaded DTB from 8047e9c.
+2026-03-28T12:26:17.9214053Z    paddr=[44000..48fff]
+2026-03-28T12:26:17.9214451Z ELF-loading image 'kernel' to 0
+2026-03-28T12:26:17.9214876Z   paddr=[0..43fff]
+2026-03-28T12:26:17.9215230Z   vaddr=[e0000000..e0043fff]
+2026-03-28T12:26:17.9215633Z   virt_entry=e0000000
+2026-03-28T12:26:18.0680487Z ELF-loading image 'rootserver' to 49000
+2026-03-28T12:26:18.0681057Z   paddr=[49000..45efff]
+2026-03-28T12:26:18.0681477Z   vaddr=[10000..425fff]
+2026-03-28T12:26:18.0682257Z   virt_entry=1dc80
+2026-03-28T12:26:20.7966570Z Enabling MMU and jumping to entry point...
+2026-03-28T12:26:20.7967026Z 
+2026-03-28T12:26:20.9437185Z Warning:  gpt_cntfrq 99990008, expected 100000000
+2026-03-28T12:26:20.9437875Z Bootstrapping kernel
+2026-03-28T12:26:20.9438335Z available phys memory regions: 1
+2026-03-28T12:26:20.9438880Z   [0..80000000)
+2026-03-28T12:26:20.9439296Z reserved virt address space regions: 4
+2026-03-28T12:26:20.9439816Z   [e0000000..e0044000)
+2026-03-28T12:26:20.9440204Z   [e0044000..e0048bf5)
+2026-03-28T12:26:20.9440588Z   [e0049000..e045f000)
+2026-03-28T12:26:20.9440979Z   [ff000000..ff100000)
+2026-03-28T12:26:20.9441424Z Booting all finished, dropped to user space
+2026-03-28T12:26:20.9442447Z Found thread has no fault handler while trying to handle:
+2026-03-28T12:26:20.9444025Z vm fault on data at address 0xdf7fe000 with status 0x805
+2026-03-28T12:26:20.9444623Z in thread 0xffeef200 "sel4test-driver" at address 0x76f00
+2026-03-28T12:26:20.9445116Z With stack:
+2026-03-28T12:26:20.9445404Z 0x313da0: 0xf
+2026-03-28T12:26:20.9445699Z 0x313da4: 0x1
+2026-03-28T12:26:20.9445988Z 0x313da8: 0x313db8
+2026-03-28T12:26:20.9446304Z 0x313dac: 0x313dd8
+2026-03-28T12:26:20.9446605Z 0x313db0: 0x1000
+2026-03-28T12:26:20.9446916Z 0x313db4: 0x2f0028
+2026-03-28T12:26:20.9447216Z 0x313db8: 0x481
+2026-03-28T12:26:20.9447522Z 0x313dbc: 0x2f23c8
+2026-03-28T12:26:20.9447848Z 0x313dc0: 0xc
+2026-03-28T12:26:20.9448134Z 0x313dc4: 0xa
+2026-03-28T12:26:20.9448422Z 0x313dc8: 0x2
+2026-03-28T12:26:20.9448706Z 0x313dcc: 0x0
+2026-03-28T12:26:20.9448997Z 0x313dd0: 0x0
+2026-03-28T12:26:20.9449293Z 0x313dd4: 0x480
+2026-03-28T12:26:20.9449595Z 0x313dd8: 0x1
+2026-03-28T12:26:20.9449894Z 0x313ddc: 0x482
+2026-03-28T12:28:28.7053266Z ##[error]The operation was canceled.
+2026-03-28T12:28:28.7112231Z Post job cleanup.
+2026-03-28T12:28:28.8172513Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/post-steps.sh
+2026-03-28T12:28:28.8223511Z ##[group]Releasing mq lock
+2026-03-28T12:28:28.8291630Z Agent pid 3394
+2026-03-28T12:28:28.9678808Z mq.sh sem -cancel zcu106 -k seL4/seL4-HW-23683028975-hw-run-12
+2026-03-28T12:28:37.0270713Z mq.sh sem -signal zcu106 -k seL4/seL4-HW-23683028975-hw-run-12
+2026-03-28T12:29:11.8936642Z ##[endgroup]
+2026-03-28T12:29:11.9097811Z Post job cleanup.
+2026-03-28T12:29:12.0020765Z [command]/usr/bin/git version
+2026-03-28T12:29:12.0057766Z git version 2.53.0
+2026-03-28T12:29:12.0101189Z Temporarily overriding HOME='/home/runner/work/_temp/be9c9e11-7606-430f-a963-383ec9b13b33' before making global git config changes
+2026-03-28T12:29:12.0102812Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-28T12:29:12.0114918Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/seL4/seL4/machine_queue
+2026-03-28T12:29:12.0152450Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-28T12:29:12.0184938Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-28T12:29:12.0406620Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-28T12:29:12.0428614Z http.https://github.com/.extraheader
+2026-03-28T12:29:12.0441647Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-03-28T12:29:12.0473220Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-28T12:29:12.0697386Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-28T12:29:12.0730713Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-28T12:29:12.1083087Z Cleaning up orphan processes
+2026-03-28T12:29:12.1298853Z Terminate orphan process: pid (2326) (steps.sh)
+2026-03-28T12:29:12.1376024Z Terminate orphan process: pid (2327) (hw-steps.sh)
+2026-03-28T12:29:12.1449536Z Terminate orphan process: pid (2385) (python3)
+2026-03-28T12:29:12.1511683Z Terminate orphan process: pid (2402) (ssh)
+2026-03-28T12:29:12.1650216Z Terminate orphan process: pid (3330) (time)
+2026-03-28T12:29:12.1712693Z Terminate orphan process: pid (3331) (mq.sh)
+2026-03-28T12:29:12.1738592Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/download-artifact@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

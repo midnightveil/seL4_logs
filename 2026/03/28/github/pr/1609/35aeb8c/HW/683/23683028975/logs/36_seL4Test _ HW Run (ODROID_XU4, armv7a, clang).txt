@@ -1,0 +1,899 @@
+﻿2026-03-28T11:19:18.6601036Z Current runner version: '2.333.0'
+2026-03-28T11:19:18.6625735Z ##[group]Runner Image Provisioner
+2026-03-28T11:19:18.6627236Z Hosted Compute Agent
+2026-03-28T11:19:18.6628357Z Version: 20260213.493
+2026-03-28T11:19:18.6629917Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-03-28T11:19:18.6631283Z Build Date: 2026-02-13T00:28:41Z
+2026-03-28T11:19:18.6632587Z Worker ID: {6fc81edb-4998-4c6d-a501-816704c55256}
+2026-03-28T11:19:18.6634127Z Azure Region: eastus
+2026-03-28T11:19:18.6635210Z ##[endgroup]
+2026-03-28T11:19:18.6637569Z ##[group]Operating System
+2026-03-28T11:19:18.6638569Z Ubuntu
+2026-03-28T11:19:18.6639700Z 24.04.4
+2026-03-28T11:19:18.6640773Z LTS
+2026-03-28T11:19:18.6641728Z ##[endgroup]
+2026-03-28T11:19:18.6642552Z ##[group]Runner Image
+2026-03-28T11:19:18.6643212Z Image: ubuntu-24.04
+2026-03-28T11:19:18.6643808Z Version: 20260323.65.1
+2026-03-28T11:19:18.6645257Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260323.65/images/ubuntu/Ubuntu2404-Readme.md
+2026-03-28T11:19:18.6646879Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260323.65
+2026-03-28T11:19:18.6647870Z ##[endgroup]
+2026-03-28T11:19:18.6649323Z ##[group]GITHUB_TOKEN Permissions
+2026-03-28T11:19:18.6651513Z Contents: read
+2026-03-28T11:19:18.6652258Z Metadata: read
+2026-03-28T11:19:18.6652859Z ##[endgroup]
+2026-03-28T11:19:18.6654928Z Secret source: Actions
+2026-03-28T11:19:18.6655805Z Prepare workflow directory
+2026-03-28T11:19:18.7042210Z Prepare all required actions
+2026-03-28T11:19:18.7079951Z Getting action download info
+2026-03-28T11:19:18.9806352Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-03-28T11:19:19.1028417Z Download action repository 'actions/download-artifact@v4' (SHA:d3f86a106a0bac45b974a628896c90dbdf5c8093)
+2026-03-28T11:19:19.3200579Z Download action repository 'seL4/ci-actions@master' (SHA:5ffc97f19e2c7d81ad945d0d1b84b1c7c9ce26aa)
+2026-03-28T11:19:19.6541713Z Uses: seL4/ci-actions/.github/workflows/sel4test-hw.yml@refs/heads/master (5ffc97f19e2c7d81ad945d0d1b84b1c7c9ce26aa)
+2026-03-28T11:19:19.6546835Z Complete job name: seL4Test / HW Run (ODROID_XU4, armv7a, clang)
+2026-03-28T11:19:19.7272174Z ##[group]Run actions/checkout@v4
+2026-03-28T11:19:19.7273219Z with:
+2026-03-28T11:19:19.7273680Z   repository: seL4/machine_queue
+2026-03-28T11:19:19.7274212Z   path: machine_queue
+2026-03-28T11:19:19.7274863Z   token: ***
+2026-03-28T11:19:19.7275299Z   ssh-strict: true
+2026-03-28T11:19:19.7275749Z   ssh-user: git
+2026-03-28T11:19:19.7276198Z   persist-credentials: true
+2026-03-28T11:19:19.7276681Z   clean: true
+2026-03-28T11:19:19.7277137Z   sparse-checkout-cone-mode: true
+2026-03-28T11:19:19.7277659Z   fetch-depth: 1
+2026-03-28T11:19:19.7278097Z   fetch-tags: false
+2026-03-28T11:19:19.7278562Z   show-progress: true
+2026-03-28T11:19:19.7279241Z   lfs: false
+2026-03-28T11:19:19.7279678Z   submodules: false
+2026-03-28T11:19:19.7280179Z   set-safe-directory: true
+2026-03-28T11:19:19.7280952Z ##[endgroup]
+2026-03-28T11:19:19.8363241Z Syncing repository: seL4/machine_queue
+2026-03-28T11:19:19.8365290Z ##[group]Getting Git version info
+2026-03-28T11:19:19.8366178Z Working directory is '/home/runner/work/seL4/seL4/machine_queue'
+2026-03-28T11:19:19.8367334Z [command]/usr/bin/git version
+2026-03-28T11:19:19.8409717Z git version 2.53.0
+2026-03-28T11:19:19.8436426Z ##[endgroup]
+2026-03-28T11:19:19.8450369Z Temporarily overriding HOME='/home/runner/work/_temp/8fe767ec-b682-401e-8e1b-27ad64913fec' before making global git config changes
+2026-03-28T11:19:19.8452423Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-28T11:19:19.8455818Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/seL4/seL4/machine_queue
+2026-03-28T11:19:19.8486437Z ##[group]Initializing the repository
+2026-03-28T11:19:19.8491600Z [command]/usr/bin/git init /home/runner/work/seL4/seL4/machine_queue
+2026-03-28T11:19:19.8587130Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-03-28T11:19:19.8589276Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-03-28T11:19:19.8590390Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-03-28T11:19:19.8591424Z hint: call:
+2026-03-28T11:19:19.8591858Z hint:
+2026-03-28T11:19:19.8592415Z hint: 	git config --global init.defaultBranch <name>
+2026-03-28T11:19:19.8593073Z hint:
+2026-03-28T11:19:19.8593833Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-03-28T11:19:19.8595271Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-03-28T11:19:19.8596072Z hint:
+2026-03-28T11:19:19.8596503Z hint: 	git branch -m <name>
+2026-03-28T11:19:19.8597017Z hint:
+2026-03-28T11:19:19.8597646Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-03-28T11:19:19.8599153Z Initialized empty Git repository in /home/runner/work/seL4/seL4/machine_queue/.git/
+2026-03-28T11:19:19.8601151Z [command]/usr/bin/git remote add origin https://github.com/seL4/machine_queue
+2026-03-28T11:19:19.8630191Z ##[endgroup]
+2026-03-28T11:19:19.8631472Z ##[group]Disabling automatic garbage collection
+2026-03-28T11:19:19.8634122Z [command]/usr/bin/git config --local gc.auto 0
+2026-03-28T11:19:19.8662348Z ##[endgroup]
+2026-03-28T11:19:19.8663525Z ##[group]Setting up auth
+2026-03-28T11:19:19.8668539Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-28T11:19:19.8697129Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-28T11:19:19.8985019Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-28T11:19:19.9014826Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-28T11:19:19.9240987Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-28T11:19:19.9270808Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-28T11:19:19.9489736Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-03-28T11:19:19.9523500Z ##[endgroup]
+2026-03-28T11:19:19.9524301Z ##[group]Determining the default branch
+2026-03-28T11:19:19.9527180Z Retrieving the default branch name
+2026-03-28T11:19:20.1602586Z Default branch 'master'
+2026-03-28T11:19:20.1604893Z ##[endgroup]
+2026-03-28T11:19:20.1606797Z ##[group]Fetching the repository
+2026-03-28T11:19:20.1610916Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/master:refs/remotes/origin/master
+2026-03-28T11:19:20.3994287Z From https://github.com/seL4/machine_queue
+2026-03-28T11:19:20.3996168Z  * [new branch]      master     -> origin/master
+2026-03-28T11:19:20.4022965Z ##[endgroup]
+2026-03-28T11:19:20.4024567Z ##[group]Determining the checkout info
+2026-03-28T11:19:20.4026086Z ##[endgroup]
+2026-03-28T11:19:20.4028523Z [command]/usr/bin/git sparse-checkout disable
+2026-03-28T11:19:20.4065061Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-03-28T11:19:20.4094660Z ##[group]Checking out the ref
+2026-03-28T11:19:20.4097807Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2026-03-28T11:19:20.4170411Z Reset branch 'master'
+2026-03-28T11:19:20.4173174Z branch 'master' set up to track 'origin/master'.
+2026-03-28T11:19:20.4180050Z ##[endgroup]
+2026-03-28T11:19:20.4212235Z [command]/usr/bin/git log -1 --format=%H
+2026-03-28T11:19:20.4234971Z f0835aa54749667d30c9143e0fd3353e9367f2dd
+2026-03-28T11:19:20.4624571Z ##[group]Run actions/download-artifact@v4
+2026-03-28T11:19:20.4625789Z with:
+2026-03-28T11:19:20.4626838Z   name: images-sel4test-armv7a-clang
+2026-03-28T11:19:20.4627980Z   merge-multiple: false
+2026-03-28T11:19:20.4628916Z   repository: seL4/seL4
+2026-03-28T11:19:20.4630115Z   run-id: 23683028975
+2026-03-28T11:19:20.4630964Z ##[endgroup]
+2026-03-28T11:19:20.6579823Z Downloading single artifact
+2026-03-28T11:19:20.7542553Z Preparing to download the following artifacts:
+2026-03-28T11:19:20.7547423Z - images-sel4test-armv7a-clang (ID: 6158017164, Size: 45330456, Expected Digest: sha256:fcabd37ffe4c79c6c7f9d1e3f7928249558cf90dcce71b862866767666515d45)
+2026-03-28T11:19:20.8044372Z Redirecting to blob download url: https://productionresultssa12.blob.core.windows.net/actions-results/67943b6a-35be-482f-9f9f-0b154c4e5a22/workflow-job-run-fa4830dc-7b2e-5d85-a4e6-c2efc339144b/artifacts/7655c76844bb67c8c02557a77662458dedf10764e28ec1be518219a903ddc5a8.zip
+2026-03-28T11:19:20.8051798Z Starting download of artifact to: /home/runner/work/seL4/seL4
+2026-03-28T11:19:20.8732006Z (node:2200) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-03-28T11:19:20.8735955Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-03-28T11:19:21.6032030Z SHA256 digest of downloaded artifact is fcabd37ffe4c79c6c7f9d1e3f7928249558cf90dcce71b862866767666515d45
+2026-03-28T11:19:21.6033262Z Artifact download completed successfully.
+2026-03-28T11:19:21.6033926Z Total of 1 artifact(s) downloaded
+2026-03-28T11:19:21.6038832Z Download artifact has finished successfully
+2026-03-28T11:19:21.6217510Z ##[group]Run seL4/ci-actions/sel4test-hw-run@master
+2026-03-28T11:19:21.6217927Z with:
+2026-03-28T11:19:21.6218186Z   platform: ODROID_XU4
+2026-03-28T11:19:21.6218470Z   compiler: clang
+2026-03-28T11:19:21.6218735Z   index: $1
+2026-03-28T11:19:21.6219207Z   action_name: sel4test-hw-run
+2026-03-28T11:19:21.6219515Z env:
+2026-03-28T11:19:21.6221556Z   HW_SSH: ***
+
+2026-03-28T11:19:21.6221832Z ##[endgroup]
+2026-03-28T11:19:21.7306224Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/steps.sh
+2026-03-28T11:19:21.7357219Z ##[group]Setting up
+2026-03-28T11:19:21.7718071Z Agent pid 2231
+2026-03-28T11:19:21.8466443Z Cloning into 'seL4_libs'...
+2026-03-28T11:19:22.8346861Z Reading package lists...
+2026-03-28T11:19:23.0272650Z Building dependency tree...
+2026-03-28T11:19:23.0283642Z Reading state information...
+2026-03-28T11:19:23.2168042Z libffi-dev is already the newest version (3.4.6-1build1).
+2026-03-28T11:19:23.2170536Z libffi-dev set to manually installed.
+2026-03-28T11:19:23.2171203Z 0 upgraded, 0 newly installed, 0 to remove and 24 not upgraded.
+2026-03-28T11:19:24.9048630Z Collecting junitparser==3.*
+2026-03-28T11:19:24.9432144Z   Downloading junitparser-3.2.0-py2.py3-none-any.whl.metadata (9.0 kB)
+2026-03-28T11:19:24.9778513Z Collecting sel4-deps
+2026-03-28T11:19:24.9830290Z   Downloading sel4_deps-0.7.0-py3-none-any.whl.metadata (1.1 kB)
+2026-03-28T11:19:24.9945824Z Requirement already satisfied: six in /usr/lib/python3/dist-packages (from sel4-deps) (1.16.0)
+2026-03-28T11:19:25.0103878Z Collecting future (from sel4-deps)
+2026-03-28T11:19:25.0139893Z   Downloading future-1.0.0-py3-none-any.whl.metadata (4.0 kB)
+2026-03-28T11:19:25.0185574Z Requirement already satisfied: jinja2 in /usr/lib/python3/dist-packages (from sel4-deps) (3.1.2)
+2026-03-28T11:19:25.2290803Z Collecting lxml (from sel4-deps)
+2026-03-28T11:19:25.2326158Z   Downloading lxml-6.0.2-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.6 kB)
+2026-03-28T11:19:25.2523697Z Collecting ply (from sel4-deps)
+2026-03-28T11:19:25.2557746Z   Downloading ply-3.11-py2.py3-none-any.whl.metadata (844 bytes)
+2026-03-28T11:19:25.3455398Z Collecting psutil (from sel4-deps)
+2026-03-28T11:19:25.3495846Z   Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+2026-03-28T11:19:25.3662693Z Collecting bs4 (from sel4-deps)
+2026-03-28T11:19:25.3697121Z   Downloading bs4-0.0.2-py2.py3-none-any.whl.metadata (411 bytes)
+2026-03-28T11:19:25.3863104Z Collecting pyelftools (from sel4-deps)
+2026-03-28T11:19:25.3896757Z   Downloading pyelftools-0.32-py3-none-any.whl.metadata (372 bytes)
+2026-03-28T11:19:25.4143793Z Collecting sh (from sel4-deps)
+2026-03-28T11:19:25.4189429Z   Downloading sh-2.2.2-py3-none-any.whl.metadata (3.7 kB)
+2026-03-28T11:19:25.4231547Z Requirement already satisfied: pexpect in /usr/lib/python3/dist-packages (from sel4-deps) (4.9.0)
+2026-03-28T11:19:25.4241527Z Requirement already satisfied: pyyaml>=5.1 in /usr/lib/python3/dist-packages (from sel4-deps) (6.0.1)
+2026-03-28T11:19:25.4250648Z Requirement already satisfied: jsonschema in /usr/lib/python3/dist-packages (from sel4-deps) (4.10.3)
+2026-03-28T11:19:25.4373739Z Collecting pyfdt (from sel4-deps)
+2026-03-28T11:19:25.4447764Z   Downloading pyfdt-0.3.tar.gz (9.1 kB)
+2026-03-28T11:19:25.4538431Z   Preparing metadata (setup.py): started
+2026-03-28T11:19:25.6391287Z   Preparing metadata (setup.py): finished with status 'done'
+2026-03-28T11:19:25.6571858Z Collecting cmake-format==0.6.13 (from sel4-deps)
+2026-03-28T11:19:25.6617913Z   Downloading cmake_format-0.6.13-py3-none-any.whl.metadata (23 kB)
+2026-03-28T11:19:25.6786993Z Collecting guardonce (from sel4-deps)
+2026-03-28T11:19:25.6825105Z   Downloading guardonce-2.4.0-py2.py3-none-any.whl.metadata (3.4 kB)
+2026-03-28T11:19:25.7055372Z Collecting autopep8==2.3.2 (from sel4-deps)
+2026-03-28T11:19:25.7088254Z   Downloading autopep8-2.3.2-py2.py3-none-any.whl.metadata (16 kB)
+2026-03-28T11:19:25.7267682Z Collecting libarchive-c (from sel4-deps)
+2026-03-28T11:19:25.7306552Z   Downloading libarchive_c-5.3-py3-none-any.whl.metadata (5.8 kB)
+2026-03-28T11:19:25.7536665Z Collecting pycodestyle>=2.12.0 (from autopep8==2.3.2->sel4-deps)
+2026-03-28T11:19:25.7570691Z   Downloading pycodestyle-2.14.0-py2.py3-none-any.whl.metadata (4.5 kB)
+2026-03-28T11:19:25.7742843Z Collecting cmakelang>=0.6.13 (from cmake-format==0.6.13->sel4-deps)
+2026-03-28T11:19:25.7783786Z   Downloading cmakelang-0.6.13-py3-none-any.whl.metadata (23 kB)
+2026-03-28T11:19:25.8053584Z Collecting beautifulsoup4 (from bs4->sel4-deps)
+2026-03-28T11:19:25.8092787Z   Downloading beautifulsoup4-4.14.3-py3-none-any.whl.metadata (3.8 kB)
+2026-03-28T11:19:25.8306308Z Requirement already satisfied: attrs>=17.4.0 in /usr/lib/python3/dist-packages (from jsonschema->sel4-deps) (23.2.0)
+2026-03-28T11:19:25.8322946Z Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,>=0.14.0 in /usr/lib/python3/dist-packages (from jsonschema->sel4-deps) (0.20.0)
+2026-03-28T11:19:25.9390266Z Collecting soupsieve>=1.6.1 (from beautifulsoup4->bs4->sel4-deps)
+2026-03-28T11:19:25.9424555Z   Downloading soupsieve-2.8.3-py3-none-any.whl.metadata (4.6 kB)
+2026-03-28T11:19:25.9468718Z Requirement already satisfied: typing-extensions>=4.0.0 in /usr/lib/python3/dist-packages (from beautifulsoup4->bs4->sel4-deps) (4.10.0)
+2026-03-28T11:19:25.9556847Z Downloading junitparser-3.2.0-py2.py3-none-any.whl (13 kB)
+2026-03-28T11:19:25.9619174Z Downloading sel4_deps-0.7.0-py3-none-any.whl (1.4 kB)
+2026-03-28T11:19:25.9679136Z Downloading autopep8-2.3.2-py2.py3-none-any.whl (45 kB)
+2026-03-28T11:19:25.9728053Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.8/45.8 kB 13.7 MB/s eta 0:00:00
+2026-03-28T11:19:25.9787633Z Downloading cmake_format-0.6.13-py3-none-any.whl (19 kB)
+2026-03-28T11:19:25.9845272Z Downloading bs4-0.0.2-py2.py3-none-any.whl (1.2 kB)
+2026-03-28T11:19:25.9897181Z Downloading future-1.0.0-py3-none-any.whl (491 kB)
+2026-03-28T11:19:26.0004579Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 491.3/491.3 kB 54.0 MB/s eta 0:00:00
+2026-03-28T11:19:26.0045175Z Downloading guardonce-2.4.0-py2.py3-none-any.whl (15 kB)
+2026-03-28T11:19:26.0110334Z Downloading libarchive_c-5.3-py3-none-any.whl (17 kB)
+2026-03-28T11:19:26.0165247Z Downloading lxml-6.0.2-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.3 MB)
+2026-03-28T11:19:26.0616178Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 121.5 MB/s eta 0:00:00
+2026-03-28T11:19:26.0648023Z Downloading ply-3.11-py2.py3-none-any.whl (49 kB)
+2026-03-28T11:19:26.0689648Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.6/49.6 kB 16.3 MB/s eta 0:00:00
+2026-03-28T11:19:26.0727006Z Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+2026-03-28T11:19:26.0777936Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.6/155.6 kB 42.5 MB/s eta 0:00:00
+2026-03-28T11:19:26.0811490Z Downloading pyelftools-0.32-py3-none-any.whl (188 kB)
+2026-03-28T11:19:26.0861033Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.5/188.5 kB 55.1 MB/s eta 0:00:00
+2026-03-28T11:19:26.0905524Z Downloading sh-2.2.2-py3-none-any.whl (38 kB)
+2026-03-28T11:19:26.1017643Z Downloading cmakelang-0.6.13-py3-none-any.whl (159 kB)
+2026-03-28T11:19:26.1067704Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 159.8/159.8 kB 46.3 MB/s eta 0:00:00
+2026-03-28T11:19:26.1098555Z Downloading pycodestyle-2.14.0-py2.py3-none-any.whl (31 kB)
+2026-03-28T11:19:26.1159846Z Downloading beautifulsoup4-4.14.3-py3-none-any.whl (107 kB)
+2026-03-28T11:19:26.1203439Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.7/107.7 kB 35.8 MB/s eta 0:00:00
+2026-03-28T11:19:26.1233832Z Downloading soupsieve-2.8.3-py3-none-any.whl (37 kB)
+2026-03-28T11:19:26.1474604Z Building wheels for collected packages: pyfdt
+2026-03-28T11:19:26.1480130Z   Building wheel for pyfdt (setup.py): started
+2026-03-28T11:19:26.5013752Z   Building wheel for pyfdt (setup.py): finished with status 'done'
+2026-03-28T11:19:26.5017264Z   Created wheel for pyfdt: filename=pyfdt-0.3-py3-none-any.whl size=10969 sha256=bd53ddf054f625a06636f929a1237f80c636f234b76df9781f47091ccc429cfa
+2026-03-28T11:19:26.5019279Z   Stored in directory: /home/runner/.cache/pip/wheels/d9/8e/2a/cff33f3accb8eaa34608e68786db1ec323a5f6bce8d724d90a
+2026-03-28T11:19:26.5033412Z Successfully built pyfdt
+2026-03-28T11:19:26.7978201Z Installing collected packages: pyfdt, pyelftools, ply, libarchive-c, junitparser, guardonce, soupsieve, sh, pycodestyle, psutil, lxml, future, cmakelang, cmake-format, beautifulsoup4, autopep8, bs4, sel4-deps
+2026-03-28T11:19:27.7345869Z Successfully installed autopep8-2.3.2 beautifulsoup4-4.14.3 bs4-0.0.2 cmake-format-0.6.13 cmakelang-0.6.13 future-1.0.0 guardonce-2.4.0 junitparser-3.2.0 libarchive-c-5.3 lxml-6.0.2 ply-3.11 psutil-7.2.2 pycodestyle-2.14.0 pyelftools-0.32 pyfdt-0.3 sel4-deps-0.7.0 sh-2.2.2 soupsieve-2.8.3
+2026-03-28T11:19:27.8223672Z ##[endgroup]
+2026-03-28T11:19:27.9648739Z 
+2026-03-28T11:19:27.9650780Z ##[group]ODROID_XU4_debug_clang_32
+2026-03-28T11:19:27.9651924Z [1m-----------[ start test ODROID_XU4_debug_clang_32 ]-----------[0m
+2026-03-28T11:19:27.9653002Z [33m+++ tar xvzf ../ODROID_XU4_debug_clang_32-images.tar.gz[0m
+2026-03-28T11:19:27.9679491Z images/
+2026-03-28T11:19:27.9680525Z images/sel4test-driver-image-arm-exynos5
+2026-03-28T11:19:27.9917257Z [33m+++ mq.sh sem -info odroidxu4_2[0m
+2026-03-28T11:19:48.3845817Z Lock for odroidxu4_2 currently free
+2026-03-28T11:19:48.3846728Z [33m+++ time mq.sh sem -wait odroidxu4_2 -k seL4/seL4-HW-23683028975-hw-run-1 -T 1800[0m
+2026-03-28T11:36:24.6862180Z 0.02user 0.02system 16:36.28elapsed 0%CPU (0avgtext+0avgdata 8272maxresident)k
+2026-03-28T11:36:24.6863031Z 0inputs+0outputs (1major+5481minor)pagefaults 0swaps
+2026-03-28T11:36:24.6864563Z [33m+++ time mq.sh run -c </testsuite> -s odroidxu4_2 -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-23683028975-hw-run-1 -f images/sel4test-driver-image-arm-exynos5[0m
+2026-03-28T11:36:28.8064616Z Lock acquired, we are allowed to run
+2026-03-28T11:36:38.3369438Z pxelinux=False
+2026-03-28T11:36:38.3372765Z copied '/tmp/tmp.AL0UtwhtXt' -> '/tftpboot/odroidxu4_2/sel4-image'
+2026-03-28T11:36:38.3373391Z removed '/tmp/tmp.AL0UtwhtXt'
+2026-03-28T11:36:38.5376776Z co
+2026-03-28T11:36:38.5377091Z ^Eco
+2026-03-28T11:36:38.5377346Z [Enter `^Ec?' for help]
+2026-03-28T11:36:38.9393122Z [connecting...up]
+2026-03-28T11:36:38.9393528Z Rebooting odroidxu4_2 and loading image: /tmp/tmp.AL0UtwhtXt
+2026-03-28T11:36:47.9287526Z  
+2026-03-28T11:36:47.9288147Z 
+2026-03-28T11:36:47.9288520Z U-Boot 2017.05-00005-ga917f39c3a (Dec 13 2019 - 06:44:32 -0300) for ODROID-XU4
+2026-03-28T11:36:47.9289336Z 
+2026-03-28T11:36:47.9289452Z CPU:   Exynos5422 @ 800 MHz
+2026-03-28T11:36:47.9289769Z Model: Odroid XU4 based on EXYNOS5422
+2026-03-28T11:36:48.1294637Z Board: Odroid XU4 based on EXYNOS5422
+2026-03-28T11:36:48.1295033Z Type:  xu4
+2026-03-28T11:36:48.1295262Z DRAM:  2 GiB
+2026-03-28T11:36:48.3304445Z MMC:   EXYNOS DWMMC: 0, EXYNOS DWMMC: 1
+2026-03-28T11:36:48.3304941Z MMC Device 0 (eMMC): 14.6 GiB
+2026-03-28T11:36:48.3305372Z Info eMMC rst_n_func status = enabled
+2026-03-28T11:36:48.3305820Z Card did not respond to voltage select!
+2026-03-28T11:36:48.3306240Z mmc_init: -95, time 11
+2026-03-28T11:36:48.5429495Z In:    serial
+2026-03-28T11:36:48.5430243Z Out:   serial
+2026-03-28T11:36:48.5430644Z Err:   serial
+2026-03-28T11:36:48.7436456Z Net:   No ethernet found.
+2026-03-28T11:36:53.4235192Z Press quickly 'Enter' twice to stop autoboot:  5  4  3  2  1  0
+2026-03-28T11:36:53.4235852Z starting USB...
+2026-03-28T11:36:53.6241493Z USB0:   USB EHCI 1.00
+2026-03-28T11:36:53.8250615Z USB1:   Register 2000140 NbrPorts 2
+2026-03-28T11:36:53.8251031Z Starting the controller
+2026-03-28T11:36:53.8251319Z USB XHCI 1.00
+2026-03-28T11:36:54.0256949Z USB2:   Register 2000140 NbrPorts 2
+2026-03-28T11:36:54.0257454Z Starting the controller
+2026-03-28T11:36:54.0257801Z USB XHCI 1.00
+2026-03-28T11:36:54.9635980Z scanning bus 0 for devices... 1 USB Device(s) found
+2026-03-28T11:36:56.4272771Z scanning bus 1 for devices... 2 USB Device(s) found
+2026-03-28T11:36:57.4983365Z scanning bus 2 for devices... 2 USB Device(s) found
+2026-03-28T11:36:57.4984094Z        scanning usb for storage devices... 0 Storage Device(s) found
+2026-03-28T11:36:57.6990376Z        scanning usb for ethernet devices... 1 Ethernet Device(s) found
+2026-03-28T11:37:01.1937238Z Waiting for Ethernet connection... done.
+2026-03-28T11:37:01.1937582Z BOOTP broadcast 1
+2026-03-28T11:37:02.7452306Z BOOTP broadcast 2
+2026-03-28T11:37:04.9738168Z   
+2026-03-28T11:37:04.9738382Z 
+2026-03-28T11:37:04.9738704Z U-Boot 2017.05-00005-ga917f39c3a (Dec 13 2019 - 06:44:32 -0300) for ODROID-XU4
+2026-03-28T11:37:04.9739490Z 
+2026-03-28T11:37:04.9739610Z CPU:   Exynos5422 @ 800 MHz
+2026-03-28T11:37:04.9739953Z Model: Odroid XU4 based on EXYNOS5422
+2026-03-28T11:37:05.1745249Z Board: Odroid XU4 based on EXYNOS5422
+2026-03-28T11:37:05.1745675Z Type:  xu4
+2026-03-28T11:37:05.1745915Z DRAM:  2 GiB
+2026-03-28T11:37:05.3752356Z MMC:   EXYNOS DWMMC: 0, EXYNOS DWMMC: 1
+2026-03-28T11:37:05.3752911Z MMC Device 0 (eMMC): 14.6 GiB
+2026-03-28T11:37:05.3753346Z Info eMMC rst_n_func status = enabled
+2026-03-28T11:37:05.3753813Z Card did not respond to voltage select!
+2026-03-28T11:37:05.3754260Z mmc_init: -95, time 12
+2026-03-28T11:37:05.5845150Z In:    serial
+2026-03-28T11:37:05.5845521Z Out:   serial
+2026-03-28T11:37:05.5845790Z Err:   serial
+2026-03-28T11:37:05.7855042Z Net:   No ethernet found.
+2026-03-28T11:37:10.6557348Z Press quickly 'Enter' twice to stop autoboot:  5  4  3  2  1  0
+2026-03-28T11:37:10.6557897Z starting USB...
+2026-03-28T11:37:10.6558146Z USB0:   USB EHCI 1.00
+2026-03-28T11:37:10.8564459Z USB1:   Register 2000140 NbrPorts 2
+2026-03-28T11:37:10.8564947Z Starting the controller
+2026-03-28T11:37:10.8565282Z USB XHCI 1.00
+2026-03-28T11:37:11.0571389Z USB2:   Register 2000140 NbrPorts 2
+2026-03-28T11:37:11.0571859Z Starting the controller
+2026-03-28T11:37:11.0572179Z USB XHCI 1.00
+2026-03-28T11:37:11.9950745Z scanning bus 0 for devices... 1 USB Device(s) found
+2026-03-28T11:37:13.4154218Z scanning bus 1 for devices... 2 USB Device(s) found
+2026-03-28T11:37:14.4945717Z scanning bus 2 for devices... 2 USB Device(s) found
+2026-03-28T11:37:14.4946301Z        scanning usb for storage devices... 0 Storage Device(s) found
+2026-03-28T11:37:14.6953906Z        scanning usb for ethernet devices... 1 Ethernet Device(s) found
+2026-03-28T11:37:18.2359962Z Waiting for Ethernet connection... done.
+2026-03-28T11:37:18.2360887Z BOOTP broadcast 1
+2026-03-28T11:37:19.5756558Z BOOTP broadcast 2
+2026-03-28T11:37:21.6645779Z BOOTP broadcast 3
+2026-03-28T11:37:21.8651877Z DHCP client bound to address 172.16.1.77 (3585 ms)
+2026-03-28T11:37:21.8652437Z Using r8152#0 device
+2026-03-28T11:37:21.8652857Z TFTP from server 172.16.0.2; our IP address is 172.16.1.77
+2026-03-28T11:37:21.8653360Z Filename '/xu4-2/sel4-image'.
+2026-03-28T11:37:21.8653734Z Load address: 0x50000000
+2026-03-28T11:37:22.2669334Z Loading: *#################################################################
+2026-03-28T11:37:22.6681502Z 	 #################################################################
+2026-03-28T11:37:23.2027441Z 	 #################################################################
+2026-03-28T11:37:23.4035217Z 	 #######################################################
+2026-03-28T11:37:23.4035797Z 	 2.3 MiB/s
+2026-03-28T11:37:23.4036069Z done
+2026-03-28T11:37:23.4036365Z Bytes transferred = 3663424 (37e640 hex)
+2026-03-28T11:37:23.4036835Z CACHE: Misaligned operation at range [604b9000, 604b9034]
+2026-03-28T11:37:23.4037319Z CACHE: Misaligned operation at range [604ba000, 604c48b0]
+2026-03-28T11:37:23.4037777Z CACHE: Misaligned operation at range [604c48b0, 60811a30]
+2026-03-28T11:37:23.4038230Z CACHE: Misaligned operation at range [60811a30, 60811a38]
+2026-03-28T11:37:23.4038667Z CACHE: Misaligned operation at range [60811a40, 60811af0]
+2026-03-28T11:37:23.4039400Z CACHE: Misaligned operation at range [60811af0, 60811b28]
+2026-03-28T11:37:23.4039857Z CACHE: Misaligned operation at range [60814000, 60821048]
+2026-03-28T11:37:23.4040624Z ## Starting application at 0x604b9000 ...
+2026-03-28T11:37:23.4040880Z 
+2026-03-28T11:37:23.4040984Z Switching CPU...
+2026-03-28T11:37:23.6041896Z 
+2026-03-28T11:37:23.6042502Z ELF-loader started on CPU: ARM Ltd. Cortex-A15 r2p3
+2026-03-28T11:37:23.6043100Z   paddr=[604b9000..60821047]
+2026-03-28T11:37:23.6043421Z No DTB passed in from boot loader.
+2026-03-28T11:37:23.6043778Z Looking for DTB in CPIO archive...found at 604fdbe0.
+2026-03-28T11:37:23.6044184Z Loaded DTB from 604fdbe0.
+2026-03-28T11:37:23.6044451Z    paddr=[60044000..60052fff]
+2026-03-28T11:37:23.6044742Z ELF-loading image 'kernel' to 60000000
+2026-03-28T11:37:23.6045045Z   paddr=[60000000..60043fff]
+2026-03-28T11:37:23.6045306Z   vaddr=[e0000000..e0043fff]
+2026-03-28T11:37:23.6045562Z   virt_entry=e0000000
+2026-03-28T11:37:23.8048376Z ELF-loading image 'rootserver' to 60053000
+2026-03-28T11:37:23.8048867Z   paddr=[60053000..60498fff]
+2026-03-28T11:37:23.8049484Z   vaddr=[10000..455fff]
+2026-03-28T11:37:23.8049815Z   virt_entry=20104
+2026-03-28T11:37:26.1369816Z Enabling MMU and jumping to entry point...
+2026-03-28T11:37:26.1370277Z 
+2026-03-28T11:37:26.3379435Z DIDRv: 5, armv 71, coproc baseline only? no.
+2026-03-28T11:37:26.3380011Z Bootstrapping kernel
+2026-03-28T11:37:26.3380406Z available phys memory regions: 1
+2026-03-28T11:37:26.3380810Z   [60000000..7f000000)
+2026-03-28T11:37:26.3381195Z reserved virt address space regions: 4
+2026-03-28T11:37:26.3381632Z   [e0000000..e0044000)
+2026-03-28T11:37:26.3382000Z   [e0044000..e0052472)
+2026-03-28T11:37:26.3382259Z   [e0053000..e0499000)
+2026-03-28T11:37:26.3382477Z   [ff000000..ff100000)
+2026-03-28T11:37:26.3382718Z Booting all finished, dropped to user space
+2026-03-28T11:37:26.3383024Z Caught cap fault in send phase at address 0
+2026-03-28T11:37:26.3383303Z while trying to handle:
+2026-03-28T11:37:26.3383586Z vm fault on data at address 0xdf7fe000 with status 0x805
+2026-03-28T11:37:26.3383957Z in thread 0xfeff7400 "sel4test-driver" at address 0x8f3ac
+2026-03-28T11:37:26.3384263Z With stack:
+2026-03-28T11:37:26.3384463Z 0x343d08: 0x343d98
+2026-03-28T11:37:26.3384658Z 0x343d0c: 0x41b84
+2026-03-28T11:37:26.3384847Z 0x343d10: 0xf
+2026-03-28T11:37:26.3385027Z 0x343d14: 0x1
+2026-03-28T11:37:26.3385207Z 0x343d18: 0x343d4c
+2026-03-28T11:37:26.3385394Z 0x343d1c: 0x343d48
+2026-03-28T11:37:26.3385620Z 0x343d20: 0x0
+2026-03-28T11:37:26.3385801Z 0x343d24: 0x4c3
+2026-03-28T11:37:26.3385983Z 0x343d28: 0x1
+2026-03-28T11:37:26.3386495Z 0x343d2c: 0xdf7fe000
+2026-03-28T11:37:26.3386695Z 0x343d30: 0x4c5
+2026-03-28T11:37:26.3386879Z 0x343d34: 0x3
+2026-03-28T11:37:26.3387055Z 0x343d38: 0x320004
+2026-03-28T11:37:26.3387240Z 0x343d3c: 0x343d48
+2026-03-28T11:37:26.3387431Z 0x343d40: 0x343da8
+2026-03-28T11:37:26.3387615Z 0x343d44: 0xf
+2026-03-28T11:37:34.2289291Z   
+2026-03-28T11:37:34.2289577Z 
+2026-03-28T11:37:34.2290038Z U-Boot 2017.05-00005-ga917f39c3a (Dec 13 2019 - 06:44:32 -0300) for ODROID-XU4
+2026-03-28T11:37:34.2290524Z 
+2026-03-28T11:37:34.2290657Z CPU:   Exynos5422 @ 800 MHz
+2026-03-28T11:37:34.2291077Z Model: Odroid XU4 based on EXYNOS5422
+2026-03-28T11:37:34.2291495Z Board: Odroid XU4 based on EXYNOS5422
+2026-03-28T11:37:34.2291874Z Type:  xu4
+2026-03-28T11:37:34.6309005Z DRAM:  2 GiB
+2026-03-28T11:37:34.6309628Z MMC:   EXYNOS DWMMC: 0, EXYNOS DWMMC: 1
+2026-03-28T11:37:34.6310043Z MMC Device 0 (eMMC): 14.6 GiB
+2026-03-28T11:37:34.6310363Z Info eMMC rst_n_func status = enabled
+2026-03-28T11:37:34.6310733Z Card did not respond to voltage select!
+2026-03-28T11:37:34.6311093Z mmc_init: -95, time 11
+2026-03-28T11:37:34.8317208Z In:    serial
+2026-03-28T11:37:34.8317562Z Out:   serial
+2026-03-28T11:37:34.8317783Z Err:   serial
+2026-03-28T11:37:35.0326528Z Net:   No ethernet found.
+2026-03-28T11:37:39.6805410Z Press quickly 'Enter' twice to stop autoboot:  5  4  3  2  1  0
+2026-03-28T11:37:39.8816399Z starting USB...
+2026-03-28T11:37:39.8816810Z USB0:   USB EHCI 1.00
+2026-03-28T11:37:40.0825952Z USB1:   Register 2000140 NbrPorts 2
+2026-03-28T11:37:40.0826381Z Starting the controller
+2026-03-28T11:37:40.0827071Z USB XHCI 1.00
+2026-03-28T11:37:40.2835553Z USB2:   Register 2000140 NbrPorts 2
+2026-03-28T11:37:40.2836023Z Starting the controller
+2026-03-28T11:37:40.2836323Z USB XHCI 1.00
+2026-03-28T11:37:41.2273792Z scanning bus 0 for devices... 1 USB Device(s) found
+2026-03-28T11:37:42.6466023Z scanning bus 1 for devices... 2 USB Device(s) found
+2026-03-28T11:37:43.7305773Z scanning bus 2 for devices... 2 USB Device(s) found
+2026-03-28T11:37:43.7306519Z        scanning usb for storage devices... 0 Storage Device(s) found
+2026-03-28T11:37:43.9312739Z        scanning usb for ethernet devices... 1 Ethernet Device(s) found
+2026-03-28T11:37:46.9880729Z Waiting for Ethernet connection... done.
+2026-03-28T11:37:46.9881135Z BOOTP broadcast 1
+2026-03-28T11:37:49.0481931Z BOOTP broadcast 2
+2026-03-28T11:37:51.1280761Z BOOTP broadcast 3
+2026-03-28T11:37:51.3288785Z DHCP client bound to address 172.16.1.77 (4323 ms)
+2026-03-28T11:37:51.3289600Z Using r8152#0 device
+2026-03-28T11:37:51.3290034Z TFTP from server 172.16.0.2; our IP address is 172.16.1.77
+2026-03-28T11:37:51.3290557Z Filename '/xu4-2/sel4-image'.
+2026-03-28T11:37:51.3290915Z Load address: 0x50000000
+2026-03-28T11:37:51.7303114Z Loading: *#################################################################
+2026-03-28T11:37:52.3327374Z 	 #################################################################
+2026-03-28T11:37:52.5335724Z 	 #################################################################
+2026-03-28T11:37:52.9352100Z 	 #######################################################
+2026-03-28T11:37:52.9352554Z 	 2.1 MiB/s
+2026-03-28T11:37:52.9352849Z done
+2026-03-28T11:37:52.9353153Z Bytes transferred = 3663424 (37e640 hex)
+2026-03-28T11:37:52.9353680Z CACHE: Misaligned operation at range [604b9000, 604b9034]
+2026-03-28T11:37:52.9354283Z CACHE: Misaligned operation at range [604ba000, 604c48b0]
+2026-03-28T11:37:52.9354945Z CACHE: Misaligned operation at range [604c48b0, 60811a30]
+2026-03-28T11:37:52.9355398Z CACHE: Misaligned operation at range [60811a30, 60811a38]
+2026-03-28T11:37:52.9355798Z CACHE: Misaligned operation at range [60811a40, 60811af0]
+2026-03-28T11:37:52.9356179Z CACHE: Misaligned operation at range [60811af0, 60811b28]
+2026-03-28T11:37:52.9356565Z CACHE: Misaligned operation at range [60814000, 60821048]
+2026-03-28T11:37:52.9356893Z ## Starting application at 0x604b9000 ...
+2026-03-28T11:37:53.1359408Z 
+2026-03-28T11:37:53.1362547Z Switching CPU...
+2026-03-28T11:37:53.1363377Z 
+2026-03-28T11:37:53.1363689Z ELF-loader started on CPU: ARM Ltd. Cortex-A15 r2p3
+2026-03-28T11:37:53.1364347Z   paddr=[604b9000..60821047]
+2026-03-28T11:37:53.1364859Z No DTB passed in from boot loader.
+2026-03-28T11:37:53.1365536Z Looking for DTB in CPIO archive...found at 604fdbe0.
+2026-03-28T11:37:53.1366209Z Loaded DTB from 604fdbe0.
+2026-03-28T11:37:53.1366687Z    paddr=[60044000..60052fff]
+2026-03-28T11:37:53.1367106Z ELF-loading image 'kernel' to 60000000
+2026-03-28T11:37:53.1367560Z   paddr=[60000000..60043fff]
+2026-03-28T11:37:53.1367840Z   vaddr=[e0000000..e0043fff]
+2026-03-28T11:37:53.1368128Z   virt_entry=e0000000
+2026-03-28T11:37:53.3369550Z ELF-loading image 'rootserver' to 60053000
+2026-03-28T11:37:53.3370113Z   paddr=[60053000..60498fff]
+2026-03-28T11:37:53.3370403Z   vaddr=[10000..455fff]
+2026-03-28T11:37:53.3370662Z   virt_entry=20104
+2026-03-28T11:37:55.6781236Z Enabling MMU and jumping to entry point...
+2026-03-28T11:37:55.6781665Z 
+2026-03-28T11:37:55.8789270Z DIDRv: 5, armv 71, coproc baseline only? no.
+2026-03-28T11:37:55.8790206Z Bootstrapping kernel
+2026-03-28T11:37:55.8790563Z available phys memory regions: 1
+2026-03-28T11:37:55.8790869Z   [60000000..7f000000)
+2026-03-28T11:37:55.8791147Z reserved virt address space regions: 4
+2026-03-28T11:37:55.8791464Z   [e0000000..e0044000)
+2026-03-28T11:37:55.8791715Z   [e0044000..e0052472)
+2026-03-28T11:37:55.8791956Z   [e0053000..e0499000)
+2026-03-28T11:37:55.8792192Z   [ff000000..ff100000)
+2026-03-28T11:37:55.8792478Z Booting all finished, dropped to user space
+2026-03-28T11:37:55.8793208Z Caught cap fault in send phase at address 0
+2026-03-28T11:37:55.8793576Z while trying to handle:
+2026-03-28T11:37:55.8793910Z vm fault on data at address 0xdf7fe000 with status 0x805
+2026-03-28T11:37:55.8794364Z in thread 0xfeff7400 "sel4test-driver" at address 0x8f3ac
+2026-03-28T11:37:55.8794746Z With stack:
+2026-03-28T11:37:55.8794966Z 0x343d08: 0x343d98
+2026-03-28T11:37:55.8795225Z 0x343d0c: 0x41b84
+2026-03-28T11:37:55.8795456Z 0x343d10: 0xf
+2026-03-28T11:37:55.8795685Z 0x343d14: 0x1
+2026-03-28T11:37:55.8795900Z 0x343d18: 0x343d4c
+2026-03-28T11:37:55.8796130Z 0x343d1c: 0x343d48
+2026-03-28T11:37:55.8796359Z 0x343d20: 0x0
+2026-03-28T11:37:55.8796573Z 0x343d24: 0x4c3
+2026-03-28T11:37:55.8796796Z 0x343d28: 0x1
+2026-03-28T11:37:55.8797018Z 0x343d2c: 0xdf7fe000
+2026-03-28T11:37:55.8797262Z 0x343d30: 0x4c5
+2026-03-28T11:37:55.8797481Z 0x343d34: 0x3
+2026-03-28T11:37:55.8797699Z 0x343d38: 0x320004
+2026-03-28T11:37:55.8797929Z 0x343d3c: 0x343d48
+2026-03-28T11:37:55.8798160Z 0x343d40: 0x343da8
+2026-03-28T11:37:55.8798384Z 0x343d44: 0xf
+2026-03-28T11:51:47.3550677Z 
+2026-03-28T11:51:47.3551166Z [[Timeout]]
+2026-03-28T11:51:47.3551392Z None
+2026-03-28T11:51:47.5557839Z 
+2026-03-28T11:51:47.5558193Z console_run returned -1
+2026-03-28T11:51:47.5558696Z Shutting down odroidxu4_2
+2026-03-28T11:51:47.8456507Z 
+2026-03-28T11:51:50.9843568Z Command exited with non-zero status 255
+2026-03-28T11:51:50.9844864Z 0.03user 0.04system 15:26.29elapsed 0%CPU (0avgtext+0avgdata 8260maxresident)k
+2026-03-28T11:51:50.9845814Z 272inputs+16outputs (2major+7247minor)pagefaults 0swaps
+2026-03-28T11:51:50.9846912Z [31;1m>>> command failed, aborting.[0m
+2026-03-28T11:51:50.9848033Z [33m+++ mq.sh sem -signal odroidxu4_2 -k seL4/seL4-HW-23683028975-hw-run-1[0m
+2026-03-28T11:51:55.1982437Z [1m-----------[ end test ODROID_XU4_debug_clang_32 ]-----------[0m
+2026-03-28T11:51:55.1983754Z ##[endgroup]
+2026-03-28T11:51:55.1984260Z [31;1mODROID_XU4_debug_clang_32 FAILED[0m
+2026-03-28T11:51:55.1984606Z 
+2026-03-28T11:51:55.1985081Z ##[group]ODROID_XU4_debug_MCS_clang_32
+2026-03-28T11:51:55.1985948Z [1m-----------[ start test ODROID_XU4_debug_MCS_clang_32 ]-----------[0m
+2026-03-28T11:51:55.1993548Z [33m+++ tar xvzf ../ODROID_XU4_debug_MCS_clang_32-images.tar.gz[0m
+2026-03-28T11:51:55.2019957Z images/
+2026-03-28T11:51:55.2020614Z images/sel4test-driver-image-arm-exynos5
+2026-03-28T11:51:55.2261982Z [33m+++ mq.sh sem -info odroidxu4_2[0m
+2026-03-28T11:51:58.9214596Z Lock for odroidxu4_2 currently free
+2026-03-28T11:51:58.9216113Z [33m+++ time mq.sh sem -wait odroidxu4_2 -k seL4/seL4-HW-23683028975-hw-run-1 -T 1800[0m
+2026-03-28T12:07:32.5340108Z 0.02user 0.03system 15:33.61elapsed 0%CPU (0avgtext+0avgdata 8264maxresident)k
+2026-03-28T12:07:32.5341020Z 0inputs+0outputs (1major+5484minor)pagefaults 0swaps
+2026-03-28T12:07:32.5342447Z [33m+++ time mq.sh run -c </testsuite> -s odroidxu4_2 -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-23683028975-hw-run-1 -f images/sel4test-driver-image-arm-exynos5[0m
+2026-03-28T12:07:35.7864284Z Lock acquired, we are allowed to run
+2026-03-28T12:07:42.0393150Z pxelinux=False
+2026-03-28T12:07:42.0393613Z copied '/tmp/tmp.KDO3z8UvOw' -> '/tftpboot/odroidxu4_2/sel4-image'
+2026-03-28T12:07:42.0394011Z removed '/tmp/tmp.KDO3z8UvOw'
+2026-03-28T12:07:42.2400584Z co
+2026-03-28T12:07:42.2400883Z ^Eco
+2026-03-28T12:07:42.2401132Z [Enter `^Ec?' for help]
+2026-03-28T12:07:42.6411805Z [connecting...up]
+2026-03-28T12:07:42.6412226Z Rebooting odroidxu4_2 and loading image: /tmp/tmp.KDO3z8UvOw
+2026-03-28T12:07:51.6315447Z  
+2026-03-28T12:07:51.6315666Z 
+2026-03-28T12:07:51.6315995Z U-Boot 2017.05-00005-ga917f39c3a (Dec 13 2019 - 06:44:32 -0300) for ODROID-XU4
+2026-03-28T12:07:51.6316403Z 
+2026-03-28T12:07:51.6316521Z CPU:   Exynos5422 @ 800 MHz
+2026-03-28T12:07:51.6316855Z Model: Odroid XU4 based on EXYNOS5422
+2026-03-28T12:07:51.8324080Z Board: Odroid XU4 based on EXYNOS5422
+2026-03-28T12:07:51.8324632Z Type:  xu4
+2026-03-28T12:07:51.8324878Z DRAM:  2 GiB
+2026-03-28T12:07:52.0335012Z MMC:   EXYNOS DWMMC: 0, EXYNOS DWMMC: 1
+2026-03-28T12:07:52.0336056Z MMC Device 0 (eMMC): 14.6 GiB
+2026-03-28T12:07:52.0336384Z Info eMMC rst_n_func status = enabled
+2026-03-28T12:07:52.0336709Z Card did not respond to voltage select!
+2026-03-28T12:07:52.0337027Z mmc_init: -95, time 12
+2026-03-28T12:07:52.2387929Z In:    serial
+2026-03-28T12:07:52.2388235Z Out:   serial
+2026-03-28T12:07:52.2388491Z Err:   serial
+2026-03-28T12:07:52.4396756Z Net:   No ethernet found.
+2026-03-28T12:07:57.1100081Z Press quickly 'Enter' twice to stop autoboot:  5  4  3  2  1  0
+2026-03-28T12:07:57.3109881Z starting USB...
+2026-03-28T12:07:57.3110166Z USB0:   USB EHCI 1.00
+2026-03-28T12:07:57.5118326Z USB1:   Register 2000140 NbrPorts 2
+2026-03-28T12:07:57.5118741Z Starting the controller
+2026-03-28T12:07:57.5119267Z USB XHCI 1.00
+2026-03-28T12:07:57.7126826Z USB2:   Register 2000140 NbrPorts 2
+2026-03-28T12:07:57.7127235Z Starting the controller
+2026-03-28T12:07:57.7127494Z USB XHCI 1.00
+2026-03-28T12:07:58.6608318Z scanning bus 0 for devices... 1 USB Device(s) found
+2026-03-28T12:08:00.0792630Z scanning bus 1 for devices... 2 USB Device(s) found
+2026-03-28T12:08:01.1589493Z scanning bus 2 for devices... 2 USB Device(s) found
+2026-03-28T12:08:01.1590076Z        scanning usb for storage devices... 0 Storage Device(s) found
+2026-03-28T12:08:01.3598153Z        scanning usb for ethernet devices... 1 Ethernet Device(s) found
+2026-03-28T12:08:04.4192498Z Waiting for Ethernet connection... done.
+2026-03-28T12:08:04.4192974Z BOOTP broadcast 1
+2026-03-28T12:08:06.3207460Z BOOTP broadcast 2
+2026-03-28T12:08:07.6681622Z BOOTP broadcast 3
+2026-03-28T12:08:07.6682133Z DHCP client bound to address 172.16.1.77 (3391 ms)
+2026-03-28T12:08:07.8691740Z Using r8152#0 device
+2026-03-28T12:08:07.8692207Z TFTP from server 172.16.0.2; our IP address is 172.16.1.77
+2026-03-28T12:08:07.8692672Z Filename '/xu4-2/sel4-image'.
+2026-03-28T12:08:07.8693012Z Load address: 0x50000000
+2026-03-28T12:08:08.2709645Z Loading: *#################################################################
+2026-03-28T12:08:08.6726775Z 	 #################################################################
+2026-03-28T12:08:09.2753615Z 	 #################################################################
+2026-03-28T12:08:09.4761223Z 	 #################################################################
+2026-03-28T12:08:09.4761788Z 	 #
+2026-03-28T12:08:09.4762031Z 	 2 MiB/s
+2026-03-28T12:08:09.4762282Z done
+2026-03-28T12:08:09.4762561Z Bytes transferred = 3823168 (3a5640 hex)
+2026-03-28T12:08:09.6770456Z CACHE: Misaligned operation at range [604e5000, 604e5034]
+2026-03-28T12:08:09.6771084Z CACHE: Misaligned operation at range [604e6000, 604f08b0]
+2026-03-28T12:08:09.6771625Z CACHE: Misaligned operation at range [604f08b0, 60868a30]
+2026-03-28T12:08:09.6772112Z CACHE: Misaligned operation at range [60868a30, 60868a38]
+2026-03-28T12:08:09.6772514Z CACHE: Misaligned operation at range [60868a40, 60868af0]
+2026-03-28T12:08:09.6772918Z CACHE: Misaligned operation at range [60868af0, 60868b28]
+2026-03-28T12:08:09.6773352Z CACHE: Misaligned operation at range [6086c000, 60879048]
+2026-03-28T12:08:09.6773725Z ## Starting application at 0x604e5000 ...
+2026-03-28T12:08:09.6773947Z 
+2026-03-28T12:08:09.6774043Z Switching CPU...
+2026-03-28T12:08:09.6774182Z 
+2026-03-28T12:08:09.6774338Z ELF-loader started on CPU: ARM Ltd. Cortex-A15 r2p3
+2026-03-28T12:08:09.6774687Z   paddr=[604e5000..60879047]
+2026-03-28T12:08:09.6774967Z No DTB passed in from boot loader.
+2026-03-28T12:08:09.6775315Z Looking for DTB in CPIO archive...found at 605343e0.
+2026-03-28T12:08:09.8778373Z Loaded DTB from 605343e0.
+2026-03-28T12:08:09.8778909Z    paddr=[60050000..6005efff]
+2026-03-28T12:08:09.8779513Z ELF-loading image 'kernel' to 60000000
+2026-03-28T12:08:09.8779912Z   paddr=[60000000..6004ffff]
+2026-03-28T12:08:09.8780210Z   vaddr=[e0000000..e004ffff]
+2026-03-28T12:08:09.8780489Z   virt_entry=e0000000
+2026-03-28T12:08:10.0791537Z ELF-loading image 'rootserver' to 6005f000
+2026-03-28T12:08:10.0792177Z   paddr=[6005f000..604c4fff]
+2026-03-28T12:08:10.0792498Z   vaddr=[10000..475fff]
+2026-03-28T12:08:10.0793354Z   virt_entry=208d8
+2026-03-28T12:08:12.4640255Z Enabling MMU and jumping to entry point...
+2026-03-28T12:08:12.4640565Z 
+2026-03-28T12:08:12.6650915Z DIDRv: 5, armv 71, coproc baseline only? no.
+2026-03-28T12:08:12.6651526Z Bootstrapping kernel
+2026-03-28T12:08:12.6651861Z available phys memory regions: 1
+2026-03-28T12:08:12.6652209Z   [60000000..7f000000)
+2026-03-28T12:08:12.6652547Z reserved virt address space regions: 4
+2026-03-28T12:08:12.6652948Z   [e0000000..e0050000)
+2026-03-28T12:08:12.6653236Z   [e0050000..e005e472)
+2026-03-28T12:08:12.6653521Z   [e005f000..e04c5000)
+2026-03-28T12:08:12.6653799Z   [ff000000..ff100000)
+2026-03-28T12:08:12.6654120Z Booting all finished, dropped to user space
+2026-03-28T12:08:12.6654607Z Found thread has no fault handler while trying to handle:
+2026-03-28T12:08:12.6655133Z vm fault on data at address 0xdf7fe000 with status 0x805
+2026-03-28T12:08:12.6655650Z in thread 0xfeff7400 "sel4test-driver" at address 0x9080c
+2026-03-28T12:08:12.6656088Z With stack:
+2026-03-28T12:08:12.6656355Z 0x363d08: 0x363d98
+2026-03-28T12:08:12.6656624Z 0x363d0c: 0x42ddc
+2026-03-28T12:08:12.6656907Z 0x363d10: 0xf
+2026-03-28T12:08:12.6657164Z 0x363d14: 0x1
+2026-03-28T12:08:12.6657413Z 0x363d18: 0x363d4c
+2026-03-28T12:08:12.6657678Z 0x363d1c: 0x363d48
+2026-03-28T12:08:12.6657941Z 0x363d20: 0x0
+2026-03-28T12:08:12.6658194Z 0x363d24: 0x4e6
+2026-03-28T12:08:12.6658421Z 0x363d28: 0x1
+2026-03-28T12:08:12.6658630Z 0x363d2c: 0xdf7fe000
+2026-03-28T12:08:12.6658853Z 0x363d30: 0x4e8
+2026-03-28T12:08:12.6659301Z 0x363d34: 0x3
+2026-03-28T12:08:12.6659511Z 0x363d38: 0x340004
+2026-03-28T12:08:12.6659731Z 0x363d3c: 0x363d48
+2026-03-28T12:08:12.6659940Z 0x363d40: 0x363da8
+2026-03-28T12:08:12.6660147Z 0x363d44: 0xf
+2026-03-28T12:08:42.9890548Z   
+2026-03-28T12:08:42.9890754Z 
+2026-03-28T12:08:42.9891034Z U-Boot 2017.05-00005-ga917f39c3a (Dec 13 2019 - 06:44:32 -0300) for ODROID-XU4
+2026-03-28T12:08:42.9891408Z 
+2026-03-28T12:08:42.9891513Z CPU:   Exynos5422 @ 800 MHz
+2026-03-28T12:08:42.9891861Z Model: Odroid XU4 based on EXYNOS5422
+2026-03-28T12:08:43.1898243Z Board: Odroid XU4 based on EXYNOS5422
+2026-03-28T12:08:43.1898636Z Type:  xu4
+2026-03-28T12:08:43.1898849Z DRAM:  2 GiB
+2026-03-28T12:08:43.3904611Z MMC:   EXYNOS DWMMC: 0, EXYNOS DWMMC: 1
+2026-03-28T12:08:43.3905046Z MMC Device 0 (eMMC): 14.6 GiB
+2026-03-28T12:08:43.3905383Z Info eMMC rst_n_func status = enabled
+2026-03-28T12:08:43.3905752Z Card did not respond to voltage select!
+2026-03-28T12:08:43.3906665Z mmc_init: -95, time 12
+2026-03-28T12:08:43.6031130Z In:    serial
+2026-03-28T12:08:43.6031447Z Out:   serial
+2026-03-28T12:08:43.6031692Z Err:   serial
+2026-03-28T12:08:43.8037122Z Net:   No ethernet found.
+2026-03-28T12:08:48.4830708Z Press quickly 'Enter' twice to stop autoboot:  5  4  3  2  1  0
+2026-03-28T12:08:48.4831495Z starting USB...
+2026-03-28T12:08:48.6841458Z USB0:   USB EHCI 1.00
+2026-03-28T12:08:48.8850228Z USB1:   Register 2000140 NbrPorts 2
+2026-03-28T12:08:48.8850667Z Starting the controller
+2026-03-28T12:08:48.8850982Z USB XHCI 1.00
+2026-03-28T12:08:49.0858503Z USB2:   Register 2000140 NbrPorts 2
+2026-03-28T12:08:49.0859546Z Starting the controller
+2026-03-28T12:08:49.0860011Z USB XHCI 1.00
+2026-03-28T12:08:50.0230723Z scanning bus 0 for devices... 1 USB Device(s) found
+2026-03-28T12:08:51.4447257Z scanning bus 1 for devices... 2 USB Device(s) found
+2026-03-28T12:08:52.5162675Z scanning bus 2 for devices... 2 USB Device(s) found
+2026-03-28T12:08:52.5163358Z        scanning usb for storage devices... 0 Storage Device(s) found
+2026-03-28T12:08:52.7170713Z        scanning usb for ethernet devices... 1 Ethernet Device(s) found
+2026-03-28T12:08:55.7805939Z Waiting for Ethernet connection... done.
+2026-03-28T12:08:55.7806457Z BOOTP broadcast 1
+2026-03-28T12:08:58.6039289Z BOOTP broadcast 2
+2026-03-28T12:08:59.5613674Z BOOTP broadcast 3
+2026-03-28T12:08:59.5614122Z DHCP client bound to address 172.16.1.77 (3949 ms)
+2026-03-28T12:08:59.7619735Z Using r8152#0 device
+2026-03-28T12:08:59.7620575Z TFTP from server 172.16.0.2; our IP address is 172.16.1.77
+2026-03-28T12:08:59.7621048Z Filename '/xu4-2/sel4-image'.
+2026-03-28T12:08:59.7621415Z Load address: 0x50000000
+2026-03-28T12:09:00.1636909Z Loading: *#################################################################
+2026-03-28T12:09:00.5655264Z 	 #################################################################
+2026-03-28T12:09:00.9670741Z 	 #################################################################
+2026-03-28T12:09:01.3687951Z 	 #################################################################
+2026-03-28T12:09:01.3688398Z 	 #
+2026-03-28T12:09:01.3688628Z 	 2.3 MiB/s
+2026-03-28T12:09:01.3688867Z done
+2026-03-28T12:09:01.3689526Z Bytes transferred = 3823168 (3a5640 hex)
+2026-03-28T12:09:01.3689988Z CACHE: Misaligned operation at range [604e5000, 604e5034]
+2026-03-28T12:09:01.3690492Z CACHE: Misaligned operation at range [604e6000, 604f08b0]
+2026-03-28T12:09:01.3690976Z CACHE: Misaligned operation at range [604f08b0, 60868a30]
+2026-03-28T12:09:01.3691478Z CACHE: Misaligned operation at range [60868a30, 60868a38]
+2026-03-28T12:09:01.3691947Z CACHE: Misaligned operation at range [60868a40, 60868af0]
+2026-03-28T12:09:01.3692441Z CACHE: Misaligned operation at range [60868af0, 60868b28]
+2026-03-28T12:09:01.3692911Z CACHE: Misaligned operation at range [6086c000, 60879048]
+2026-03-28T12:09:01.3693337Z ## Starting application at 0x604e5000 ...
+2026-03-28T12:09:01.3693591Z 
+2026-03-28T12:09:01.3693701Z Switching CPU...
+2026-03-28T12:09:01.5694945Z 
+2026-03-28T12:09:01.5695728Z ELF-loader started on CPU: ARM Ltd. Cortex-A15 r2p3
+2026-03-28T12:09:01.5696593Z   paddr=[604e5000..60879047]
+2026-03-28T12:09:01.5697257Z No DTB passed in from boot loader.
+2026-03-28T12:09:01.5697797Z Looking for DTB in CPIO archive...found at 605343e0.
+2026-03-28T12:09:01.5698310Z Loaded DTB from 605343e0.
+2026-03-28T12:09:01.5698688Z    paddr=[60050000..6005efff]
+2026-03-28T12:09:01.5699388Z ELF-loading image 'kernel' to 60000000
+2026-03-28T12:09:01.5699786Z   paddr=[60000000..6004ffff]
+2026-03-28T12:09:01.5700118Z   vaddr=[e0000000..e004ffff]
+2026-03-28T12:09:01.5700435Z   virt_entry=e0000000
+2026-03-28T12:09:01.7703651Z ELF-loading image 'rootserver' to 6005f000
+2026-03-28T12:09:01.7704229Z   paddr=[6005f000..604c4fff]
+2026-03-28T12:09:01.7704574Z   vaddr=[10000..475fff]
+2026-03-28T12:09:01.7704858Z   virt_entry=208d8
+2026-03-28T12:09:04.1944926Z Enabling MMU and jumping to entry point...
+2026-03-28T12:09:04.1945364Z 
+2026-03-28T12:09:04.3953408Z DIDRv: 5, armv 71, coproc baseline only? no.
+2026-03-28T12:09:04.3953878Z Bootstrapping kernel
+2026-03-28T12:09:04.3954183Z available phys memory regions: 1
+2026-03-28T12:09:04.3954511Z   [60000000..7f000000)
+2026-03-28T12:09:04.3954806Z reserved virt address space regions: 4
+2026-03-28T12:09:04.3955136Z   [e0000000..e0050000)
+2026-03-28T12:09:04.3955391Z   [e0050000..e005e472)
+2026-03-28T12:09:04.3955637Z   [e005f000..e04c5000)
+2026-03-28T12:09:04.3955883Z   [ff000000..ff100000)
+2026-03-28T12:09:04.3956176Z Booting all finished, dropped to user space
+2026-03-28T12:09:04.3956654Z Found thread has no fault handler while trying to handle:
+2026-03-28T12:09:04.3957135Z vm fault on data at address 0xdf7fe000 with status 0x805
+2026-03-28T12:09:04.3957602Z in thread 0xfeff7400 "sel4test-driver" at address 0x9080c
+2026-03-28T12:09:04.3957994Z With stack:
+2026-03-28T12:09:04.3958232Z 0x363d08: 0x363d98
+2026-03-28T12:09:04.3958475Z 0x363d0c: 0x42ddc
+2026-03-28T12:09:04.3958715Z 0x363d10: 0xf
+2026-03-28T12:09:04.3959278Z 0x363d14: 0x1
+2026-03-28T12:09:04.3959537Z 0x363d18: 0x363d4c
+2026-03-28T12:09:04.3959783Z 0x363d1c: 0x363d48
+2026-03-28T12:09:04.3960028Z 0x363d20: 0x0
+2026-03-28T12:09:04.3960257Z 0x363d24: 0x4e6
+2026-03-28T12:09:04.3960487Z 0x363d28: 0x1
+2026-03-28T12:09:04.3960719Z 0x363d2c: 0xdf7fe000
+2026-03-28T12:09:04.3960967Z 0x363d30: 0x4e8
+2026-03-28T12:09:04.3961193Z 0x363d34: 0x3
+2026-03-28T12:09:04.3961413Z 0x363d38: 0x340004
+2026-03-28T12:09:04.3961690Z 0x363d3c: 0x363d48
+2026-03-28T12:09:04.3961973Z 0x363d40: 0x363da8
+2026-03-28T12:09:04.3962181Z 0x363d44: 0xf
+2026-03-28T12:09:20.6107136Z   
+2026-03-28T12:09:20.6107437Z 
+2026-03-28T12:09:20.6107849Z U-Boot 2017.05-00005-ga917f39c3a (Dec 13 2019 - 06:44:32 -0300) for ODROID-XU4
+2026-03-28T12:09:20.6108414Z 
+2026-03-28T12:09:20.6108588Z CPU:   Exynos5422 @ 800 MHz
+2026-03-28T12:09:20.6109335Z Model: Odroid XU4 based on EXYNOS5422
+2026-03-28T12:09:20.8112910Z Board: Odroid XU4 based on EXYNOS5422
+2026-03-28T12:09:20.8113561Z Type:  xu4
+2026-03-28T12:09:20.8116104Z DRAM:  2 GiB
+2026-03-28T12:09:21.0121649Z MMC:   EXYNOS DWMMC: 0, EXYNOS DWMMC: 1
+2026-03-28T12:09:21.0122145Z MMC Device 0 (eMMC): 14.6 GiB
+2026-03-28T12:09:21.0122495Z Info eMMC rst_n_func status = enabled
+2026-03-28T12:09:21.0122899Z Card did not respond to voltage select!
+2026-03-28T12:09:21.0123259Z mmc_init: -95, time 11
+2026-03-28T12:09:21.2161607Z In:    serial
+2026-03-28T12:09:21.2161986Z Out:   serial
+2026-03-28T12:09:21.2162299Z Err:   serial
+2026-03-28T12:09:21.4170172Z Net:   No ethernet found.
+2026-03-28T12:09:26.0808577Z Press quickly 'Enter' twice to stop autoboot:  5  4  3  2  1  0
+2026-03-28T12:09:26.0809343Z starting USB...
+2026-03-28T12:09:26.2819633Z USB0:   USB EHCI 1.00
+2026-03-28T12:09:26.4832028Z USB1:   Register 2000140 NbrPorts 2
+2026-03-28T12:09:26.4832541Z Starting the controller
+2026-03-28T12:09:26.4832879Z USB XHCI 1.00
+2026-03-28T12:09:26.6842301Z USB2:   Register 2000140 NbrPorts 2
+2026-03-28T12:09:26.6842702Z Starting the controller
+2026-03-28T12:09:26.6843008Z USB XHCI 1.00
+2026-03-28T12:09:27.6372463Z scanning bus 0 for devices... 1 USB Device(s) found
+2026-03-28T12:09:29.0600026Z scanning bus 1 for devices... 2 USB Device(s) found
+2026-03-28T12:09:30.1330187Z scanning bus 2 for devices... 2 USB Device(s) found
+2026-03-28T12:09:30.1330830Z        scanning usb for storage devices... 0 Storage Device(s) found
+2026-03-28T12:09:30.3337955Z        scanning usb for ethernet devices... 1 Ethernet Device(s) found
+2026-03-28T12:09:33.3961526Z Waiting for Ethernet connection... done.
+2026-03-28T12:09:33.3961957Z BOOTP broadcast 1
+2026-03-28T12:09:36.3184883Z BOOTP broadcast 2
+2026-03-28T12:09:38.3968216Z BOOTP broadcast 3
+2026-03-28T12:09:38.3968781Z DHCP client bound to address 172.16.1.77 (5218 ms)
+2026-03-28T12:09:38.5975826Z Using r8152#0 device
+2026-03-28T12:09:38.5976317Z TFTP from server 172.16.0.2; our IP address is 172.16.1.77
+2026-03-28T12:09:38.5976830Z Filename '/xu4-2/sel4-image'.
+2026-03-28T12:09:38.5977210Z Load address: 0x50000000
+2026-03-28T12:09:39.2003657Z Loading: *#################################################################
+2026-03-28T12:09:39.6021307Z 	 #################################################################
+2026-03-28T12:09:40.0039483Z 	 #################################################################
+2026-03-28T12:09:40.4054034Z 	 #################################################################
+2026-03-28T12:09:40.4054506Z 	 #
+2026-03-28T12:09:40.4054721Z 	 2 MiB/s
+2026-03-28T12:09:40.4054948Z done
+2026-03-28T12:09:40.4055191Z Bytes transferred = 3823168 (3a5640 hex)
+2026-03-28T12:09:40.4055662Z CACHE: Misaligned operation at range [604e5000, 604e5034]
+2026-03-28T12:09:40.4056152Z CACHE: Misaligned operation at range [604e6000, 604f08b0]
+2026-03-28T12:09:40.4056606Z CACHE: Misaligned operation at range [604f08b0, 60868a30]
+2026-03-28T12:09:40.4057059Z CACHE: Misaligned operation at range [60868a30, 60868a38]
+2026-03-28T12:09:40.4057519Z CACHE: Misaligned operation at range [60868a40, 60868af0]
+2026-03-28T12:09:40.4058024Z CACHE: Misaligned operation at range [60868af0, 60868b28]
+2026-03-28T12:09:40.4058483Z CACHE: Misaligned operation at range [6086c000, 60879048]
+2026-03-28T12:09:40.4058890Z ## Starting application at 0x604e5000 ...
+2026-03-28T12:09:40.6060188Z 
+2026-03-28T12:09:40.6060634Z Switching CPU...
+2026-03-28T12:09:40.6060875Z 
+2026-03-28T12:09:40.6061091Z ELF-loader started on CPU: ARM Ltd. Cortex-A15 r2p3
+2026-03-28T12:09:40.6061597Z   paddr=[604e5000..60879047]
+2026-03-28T12:09:40.6061973Z No DTB passed in from boot loader.
+2026-03-28T12:09:40.6062880Z Looking for DTB in CPIO archive...found at 605343e0.
+2026-03-28T12:09:40.6063362Z Loaded DTB from 605343e0.
+2026-03-28T12:09:40.6063678Z    paddr=[60050000..6005efff]
+2026-03-28T12:09:40.6063986Z ELF-loading image 'kernel' to 60000000
+2026-03-28T12:09:40.6064313Z   paddr=[60000000..6004ffff]
+2026-03-28T12:09:40.6064591Z   vaddr=[e0000000..e004ffff]
+2026-03-28T12:09:40.6064863Z   virt_entry=e0000000
+2026-03-28T12:09:40.8069508Z ELF-loading image 'rootserver' to 6005f000
+2026-03-28T12:09:40.8070448Z   paddr=[6005f000..604c4fff]
+2026-03-28T12:09:40.8070766Z   vaddr=[10000..475fff]
+2026-03-28T12:09:40.8071052Z   virt_entry=208d8
+2026-03-28T12:09:43.2779462Z Enabling MMU and jumping to entry point...
+2026-03-28T12:09:43.2779997Z 
+2026-03-28T12:09:43.2780247Z DIDRv: 5, armv 71, coproc baseline only? no.
+2026-03-28T12:09:43.2780639Z Bootstrapping kernel
+2026-03-28T12:09:43.2780967Z available phys memory regions: 1
+2026-03-28T12:09:43.2781281Z   [60000000..7f000000)
+2026-03-28T12:09:43.2781567Z reserved virt address space regions: 4
+2026-03-28T12:09:43.2781928Z   [e0000000..e0050000)
+2026-03-28T12:09:43.4791507Z   [e0050000..e005e472)
+2026-03-28T12:09:43.4792119Z   [e005f000..e04c5000)
+2026-03-28T12:09:43.4792453Z   [ff000000..ff100000)
+2026-03-28T12:09:43.4792819Z Booting all finished, dropped to user space
+2026-03-28T12:09:43.4793365Z Found thread has no fault handler while trying to handle:
+2026-03-28T12:09:43.4793944Z vm fault on data at address 0xdf7fe000 with status 0x805
+2026-03-28T12:09:43.4794528Z in thread 0xfeff7400 "sel4test-driver" at address 0x9080c
+2026-03-28T12:09:43.4794995Z With stack:
+2026-03-28T12:09:43.4795267Z 0x363d08: 0x363d98
+2026-03-28T12:09:43.4795556Z 0x363d0c: 0x42ddc
+2026-03-28T12:09:43.4795843Z 0x363d10: 0xf
+2026-03-28T12:09:43.4796117Z 0x363d14: 0x1
+2026-03-28T12:09:43.4796386Z 0x363d18: 0x363d4c
+2026-03-28T12:09:43.4796670Z 0x363d1c: 0x363d48
+2026-03-28T12:09:43.4796956Z 0x363d20: 0x0
+2026-03-28T12:09:43.4797222Z 0x363d24: 0x4e6
+2026-03-28T12:09:43.4797499Z 0x363d28: 0x1
+2026-03-28T12:09:43.4797760Z 0x363d2c: 0xdf7fe000
+2026-03-28T12:09:43.4798008Z 0x363d30: 0x4e8
+2026-03-28T12:09:43.4798231Z 0x363d34: 0x3
+2026-03-28T12:09:43.4798448Z 0x363d38: 0x340004
+2026-03-28T12:09:43.4798682Z 0x363d3c: 0x363d48
+2026-03-28T12:09:43.4798905Z 0x363d40: 0x363da8
+2026-03-28T12:09:43.4799338Z 0x363d44: 0xf
+2026-03-28T12:22:51.0947768Z 
+2026-03-28T12:22:51.0948178Z [[Timeout]]
+2026-03-28T12:22:51.0948583Z None
+2026-03-28T12:22:51.2959203Z 
+2026-03-28T12:22:51.2959884Z console_run returned -1
+2026-03-28T12:22:51.2960447Z Shutting down odroidxu4_2
+2026-03-28T12:22:51.5755469Z 
+2026-03-28T12:22:54.7154364Z Command exited with non-zero status 255
+2026-03-28T12:22:54.7155262Z 0.03user 0.03system 15:22.18elapsed 0%CPU (0avgtext+0avgdata 8284maxresident)k
+2026-03-28T12:22:54.7155999Z 0inputs+24outputs (1major+7218minor)pagefaults 0swaps
+2026-03-28T12:22:54.7157987Z [31;1m>>> command failed, aborting.[0m
+2026-03-28T12:22:54.7158739Z [33m+++ mq.sh sem -signal odroidxu4_2 -k seL4/seL4-HW-23683028975-hw-run-1[0m
+2026-03-28T12:22:59.0961609Z [1m-----------[ end test ODROID_XU4_debug_MCS_clang_32 ]-----------[0m
+2026-03-28T12:22:59.0962803Z ##[endgroup]
+2026-03-28T12:22:59.0963321Z [31;1mODROID_XU4_debug_MCS_clang_32 FAILED[0m
+2026-03-28T12:22:59.0963715Z 
+2026-03-28T12:22:59.0965946Z ##[group]ODROID_XU4_debug_hyp_clang_32
+2026-03-28T12:22:59.0966788Z [1m-----------[ start test ODROID_XU4_debug_hyp_clang_32 ]-----------[0m
+2026-03-28T12:22:59.0973097Z [33m+++ tar xvzf ../ODROID_XU4_debug_hyp_clang_32-images.tar.gz[0m
+2026-03-28T12:22:59.0999917Z images/
+2026-03-28T12:22:59.1000263Z images/sel4test-driver-image-arm-exynos5
+2026-03-28T12:22:59.1217850Z [33m+++ mq.sh sem -info odroidxu4_2[0m
+2026-03-28T12:23:03.3434326Z Lock for odroidxu4_2 held by sel4_ci since 2026-03-28 23:23:00.929384416 +1100, timeout 1800 with key 'seL4/seL4-HW-23683028975-hw-run-0'
+2026-03-28T12:23:03.3436099Z [33m+++ time mq.sh sem -wait odroidxu4_2 -k seL4/seL4-HW-23683028975-hw-run-1 -T 1800[0m
+2026-03-28T12:28:28.3113314Z ##[error]The operation was canceled.
+2026-03-28T12:28:28.3173720Z Post job cleanup.
+2026-03-28T12:28:28.4259783Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/post-steps.sh
+2026-03-28T12:28:28.4312213Z ##[group]Releasing mq lock
+2026-03-28T12:28:28.4382980Z Agent pid 3951
+2026-03-28T12:28:28.5982325Z mq.sh sem -cancel odroidxu4_2 -k seL4/seL4-HW-23683028975-hw-run-1
+2026-03-28T12:28:43.5302640Z mq.sh sem -signal odroidxu4_2 -k seL4/seL4-HW-23683028975-hw-run-1
+2026-03-28T12:29:21.8562379Z Attempting to unlock system odroidxu4_2 with the wrong key!
+2026-03-28T12:29:21.8657427Z ##[endgroup]
+2026-03-28T12:29:21.8810983Z Post job cleanup.
+2026-03-28T12:29:21.9774053Z [command]/usr/bin/git version
+2026-03-28T12:29:21.9812518Z git version 2.53.0
+2026-03-28T12:29:21.9863520Z Temporarily overriding HOME='/home/runner/work/_temp/b3caa195-ee1a-45f9-aa7e-cc977889bfb8' before making global git config changes
+2026-03-28T12:29:21.9864500Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-28T12:29:21.9869171Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/seL4/seL4/machine_queue
+2026-03-28T12:29:21.9905979Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-28T12:29:21.9938564Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-28T12:29:22.0157333Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-28T12:29:22.0178848Z http.https://github.com/.extraheader
+2026-03-28T12:29:22.0191082Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-03-28T12:29:22.0220580Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-28T12:29:22.0434066Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-28T12:29:22.0463027Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-28T12:29:22.0793903Z Cleaning up orphan processes
+2026-03-28T12:29:22.1018688Z Terminate orphan process: pid (2302) (ssh)
+2026-03-28T12:29:22.1197154Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/download-artifact@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
