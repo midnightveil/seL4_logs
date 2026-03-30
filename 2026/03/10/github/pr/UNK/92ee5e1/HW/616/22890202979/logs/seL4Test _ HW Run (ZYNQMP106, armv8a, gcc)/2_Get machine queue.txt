@@ -1,0 +1,76 @@
+﻿2026-03-23T23:55:39.1077888Z ##[group]Run actions/checkout@v4
+2026-03-23T23:55:39.1079589Z with:
+2026-03-23T23:55:39.1080509Z   repository: seL4/machine_queue
+2026-03-23T23:55:39.1081757Z   path: machine_queue
+2026-03-23T23:55:39.1082986Z   token: ***
+2026-03-23T23:55:39.1083859Z   ssh-strict: true
+2026-03-23T23:55:39.1084756Z   ssh-user: git
+2026-03-23T23:55:39.1085662Z   persist-credentials: true
+2026-03-23T23:55:39.1086678Z   clean: true
+2026-03-23T23:55:39.1087588Z   sparse-checkout-cone-mode: true
+2026-03-23T23:55:39.1088704Z   fetch-depth: 1
+2026-03-23T23:55:39.1089586Z   fetch-tags: false
+2026-03-23T23:55:39.1090511Z   show-progress: true
+2026-03-23T23:55:39.1091547Z   lfs: false
+2026-03-23T23:55:39.1092404Z   submodules: false
+2026-03-23T23:55:39.1093327Z   set-safe-directory: true
+2026-03-23T23:55:39.1094635Z ##[endgroup]
+2026-03-23T23:55:39.2192088Z Syncing repository: seL4/machine_queue
+2026-03-23T23:55:39.2194900Z ##[group]Getting Git version info
+2026-03-23T23:55:39.2196457Z Working directory is '/home/runner/work/seL4/seL4/machine_queue'
+2026-03-23T23:55:39.2200085Z [command]/usr/bin/git version
+2026-03-23T23:55:39.2274999Z git version 2.53.0
+2026-03-23T23:55:39.2301120Z ##[endgroup]
+2026-03-23T23:55:39.2314839Z Temporarily overriding HOME='/home/runner/work/_temp/fb33b3e6-0fa6-4075-8d32-b97e736fde6a' before making global git config changes
+2026-03-23T23:55:39.2317892Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-23T23:55:39.2321071Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/seL4/seL4/machine_queue
+2026-03-23T23:55:39.2362796Z ##[group]Initializing the repository
+2026-03-23T23:55:39.2369134Z [command]/usr/bin/git init /home/runner/work/seL4/seL4/machine_queue
+2026-03-23T23:55:39.2507281Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-03-23T23:55:39.2509671Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-03-23T23:55:39.2512224Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-03-23T23:55:39.2514366Z hint: call:
+2026-03-23T23:55:39.2515200Z hint:
+2026-03-23T23:55:39.2516364Z hint: 	git config --global init.defaultBranch <name>
+2026-03-23T23:55:39.2517886Z hint:
+2026-03-23T23:55:39.2519130Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-03-23T23:55:39.2521356Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-03-23T23:55:39.2523300Z hint:
+2026-03-23T23:55:39.2524193Z hint: 	git branch -m <name>
+2026-03-23T23:55:39.2525181Z hint:
+2026-03-23T23:55:39.2526483Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-03-23T23:55:39.2528828Z Initialized empty Git repository in /home/runner/work/seL4/seL4/machine_queue/.git/
+2026-03-23T23:55:39.2532369Z [command]/usr/bin/git remote add origin https://github.com/seL4/machine_queue
+2026-03-23T23:55:39.2564186Z ##[endgroup]
+2026-03-23T23:55:39.2565791Z ##[group]Disabling automatic garbage collection
+2026-03-23T23:55:39.2567827Z [command]/usr/bin/git config --local gc.auto 0
+2026-03-23T23:55:39.2598925Z ##[endgroup]
+2026-03-23T23:55:39.2600411Z ##[group]Setting up auth
+2026-03-23T23:55:39.2605571Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-23T23:55:39.2640449Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-23T23:55:39.3066912Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-23T23:55:39.3105706Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-23T23:55:39.3367751Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-23T23:55:39.3412444Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-23T23:55:39.3653305Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-03-23T23:55:39.3691068Z ##[endgroup]
+2026-03-23T23:55:39.3692694Z ##[group]Determining the default branch
+2026-03-23T23:55:39.3694518Z Retrieving the default branch name
+2026-03-23T23:55:39.6337645Z Default branch 'master'
+2026-03-23T23:55:39.6341088Z ##[endgroup]
+2026-03-23T23:55:39.6343711Z ##[group]Fetching the repository
+2026-03-23T23:55:39.6348054Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/master:refs/remotes/origin/master
+2026-03-23T23:55:39.9822469Z From https://github.com/seL4/machine_queue
+2026-03-23T23:55:39.9825931Z  * [new branch]      master     -> origin/master
+2026-03-23T23:55:39.9857746Z ##[endgroup]
+2026-03-23T23:55:39.9859666Z ##[group]Determining the checkout info
+2026-03-23T23:55:39.9862225Z ##[endgroup]
+2026-03-23T23:55:39.9863720Z [command]/usr/bin/git sparse-checkout disable
+2026-03-23T23:55:39.9908259Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-03-23T23:55:39.9938143Z ##[group]Checking out the ref
+2026-03-23T23:55:39.9941868Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2026-03-23T23:55:40.0021680Z Reset branch 'master'
+2026-03-23T23:55:40.0025288Z branch 'master' set up to track 'origin/master'.
+2026-03-23T23:55:40.0032937Z ##[endgroup]
+2026-03-23T23:55:40.0069852Z [command]/usr/bin/git log -1 --format=%H
+2026-03-23T23:55:40.0094747Z f0835aa54749667d30c9143e0fd3353e9367f2dd

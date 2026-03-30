@@ -1,0 +1,18 @@
+﻿2026-03-23T23:55:41.0677316Z ##[group]Run actions/download-artifact@v4
+2026-03-23T23:55:41.0677721Z with:
+2026-03-23T23:55:41.0678325Z   name: images-sel4test-armv8a-clang
+2026-03-23T23:55:41.0678671Z   merge-multiple: false
+2026-03-23T23:55:41.0678959Z   repository: seL4/seL4
+2026-03-23T23:55:41.0679230Z   run-id: 22890202979
+2026-03-23T23:55:41.0679496Z ##[endgroup]
+2026-03-23T23:55:41.2662177Z Downloading single artifact
+2026-03-23T23:55:41.5375119Z Preparing to download the following artifacts:
+2026-03-23T23:55:41.5376523Z - images-sel4test-armv8a-clang (ID: 5844743768, Size: 203183256, Expected Digest: sha256:41159d84f3ebde4db5d0264e0858ee9523103e915b5ba7f7aae2332f681a4036)
+2026-03-23T23:55:41.6982041Z Redirecting to blob download url: https://productionresultssa11.blob.core.windows.net/actions-results/b5b92d6f-ed56-4b45-9f45-ee94f16c96e7/workflow-job-run-eb8dd1f9-160f-5256-addc-51ff1dc2a26d/artifacts/75ad69d55a0d6b2fd77eb6a5da6fe6e3c703272e6945cb812e783578507f8883.zip
+2026-03-23T23:55:41.6986339Z Starting download of artifact to: /home/runner/work/seL4/seL4
+2026-03-23T23:55:41.9715824Z (node:2388) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-03-23T23:55:41.9717166Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-03-23T23:55:48.0497440Z SHA256 digest of downloaded artifact is 41159d84f3ebde4db5d0264e0858ee9523103e915b5ba7f7aae2332f681a4036
+2026-03-23T23:55:48.0498759Z Artifact download completed successfully.
+2026-03-23T23:55:48.0499298Z Total of 1 artifact(s) downloaded
+2026-03-23T23:55:48.0508456Z Download artifact has finished successfully

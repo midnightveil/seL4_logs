@@ -1,0 +1,67 @@
+﻿2026-02-19T00:59:53.2652950Z Current runner version: '2.331.0'
+2026-02-19T00:59:53.2676818Z ##[group]Runner Image Provisioner
+2026-02-19T00:59:53.2677606Z Hosted Compute Agent
+2026-02-19T00:59:53.2678092Z Version: 20260123.484
+2026-02-19T00:59:53.2678727Z Commit: 6bd6555ca37d84114959e1c76d2c01448ff61c5d
+2026-02-19T00:59:53.2679332Z Build Date: 2026-01-23T19:41:17Z
+2026-02-19T00:59:53.2679945Z Worker ID: {69e19cee-2388-4441-a684-db834d5291f7}
+2026-02-19T00:59:53.2680607Z Azure Region: westus3
+2026-02-19T00:59:53.2681104Z ##[endgroup]
+2026-02-19T00:59:53.2682406Z ##[group]Operating System
+2026-02-19T00:59:53.2682937Z Ubuntu
+2026-02-19T00:59:53.2683377Z 24.04.3
+2026-02-19T00:59:53.2683763Z LTS
+2026-02-19T00:59:53.2684190Z ##[endgroup]
+2026-02-19T00:59:53.2684653Z ##[group]Runner Image
+2026-02-19T00:59:53.2685144Z Image: ubuntu-24.04
+2026-02-19T00:59:53.2685638Z Version: 20260209.23.1
+2026-02-19T00:59:53.2686868Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260209.23/images/ubuntu/Ubuntu2404-Readme.md
+2026-02-19T00:59:53.2688147Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260209.23
+2026-02-19T00:59:53.2688982Z ##[endgroup]
+2026-02-19T00:59:53.2689860Z ##[group]GITHUB_TOKEN Permissions
+2026-02-19T00:59:53.2691742Z Contents: read
+2026-02-19T00:59:53.2692177Z Metadata: read
+2026-02-19T00:59:53.2692610Z ##[endgroup]
+2026-02-19T00:59:53.2694642Z Secret source: Actions
+2026-02-19T00:59:53.2695257Z Prepare workflow directory
+2026-02-19T00:59:53.3010660Z Prepare all required actions
+2026-02-19T00:59:53.3052417Z Getting action download info
+2026-02-19T00:59:53.7014383Z Download action repository 'seL4/ci-actions@master' (SHA:1c8b98c7672f50982aabf5c6b340f5613c49f5c1)
+2026-02-19T00:59:56.0984468Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-02-19T00:59:56.2617307Z Uses: seL4/ci-actions/.github/workflows/sel4test-hw.yml@refs/heads/master (1c8b98c7672f50982aabf5c6b340f5613c49f5c1)
+2026-02-19T00:59:56.2621734Z Complete job name: seL4Test / HW Build (rv64imac, gcc)
+2026-02-19T00:59:56.3022104Z ##[group]Pull down action image 'sel4/sel4test-hw:latest'
+2026-02-19T00:59:56.3062567Z ##[command]/usr/bin/docker pull sel4/sel4test-hw:latest
+2026-02-19T00:59:57.0826413Z latest: Pulling from sel4/sel4test-hw
+2026-02-19T00:59:57.3832244Z e1f16b66c2e8: Pulling fs layer
+2026-02-19T00:59:57.3833112Z c7366d3a227f: Pulling fs layer
+2026-02-19T00:59:57.3833544Z 0d20a8c1dfe8: Pulling fs layer
+2026-02-19T00:59:57.3833937Z 802e123ea12b: Pulling fs layer
+2026-02-19T00:59:57.3834973Z 21b851b6be97: Pulling fs layer
+2026-02-19T00:59:57.3835405Z 4f4fb700ef54: Pulling fs layer
+2026-02-19T00:59:57.3835714Z 81bbb994e30e: Pulling fs layer
+2026-02-19T00:59:57.3836113Z 5a593f7f7759: Pulling fs layer
+2026-02-19T00:59:57.3836418Z 95fe3dc9ff39: Pulling fs layer
+2026-02-19T00:59:57.3836743Z 7b4f4f95f6cf: Pulling fs layer
+2026-02-19T00:59:57.3836996Z b9035a8e6143: Pulling fs layer
+2026-02-19T00:59:57.3837278Z 4f4fb700ef54: Pulling fs layer
+2026-02-19T00:59:57.3837562Z ed954593d56e: Pulling fs layer
+2026-02-19T00:59:57.3837883Z 4f4fb700ef54: Pulling fs layer
+2026-02-19T00:59:57.3933391Z 4f4fb700ef54: Already exists
+2026-02-19T00:59:57.5964659Z 21b851b6be97: Download complete
+2026-02-19T00:59:57.6954241Z 5a593f7f7759: Download complete
+2026-02-19T00:59:57.6956267Z 81bbb994e30e: Download complete
+2026-02-19T00:59:57.6963283Z 7b4f4f95f6cf: Download complete
+2026-02-19T00:59:57.6967003Z b9035a8e6143: Download complete
+2026-02-19T00:59:57.6971214Z ed954593d56e: Download complete
+2026-02-19T00:59:57.7943061Z 38c0ad769083: Download complete
+2026-02-19T00:59:57.8943824Z 802e123ea12b: Download complete
+2026-02-19T00:59:57.9939086Z e1f16b66c2e8: Download complete
+2026-02-19T00:59:58.1935387Z c7366d3a227f: Download complete
+2026-02-19T00:59:58.2947213Z 95fe3dc9ff39: Download complete
+2026-02-19T00:59:58.7997539Z e1f16b66c2e8: Pull complete
+2026-02-19T00:59:58.8989395Z 7b4f4f95f6cf: Pull complete
+2026-02-19T01:00:00.5988954Z 95fe3dc9ff39: Pull complete
+2026-02-19T01:00:07.7940926Z 0d20a8c1dfe8: Download complete
+2026-02-19T01:00:08.3072526Z ##[error]The operation was canceled.
+2026-02-19T01:00:08.3157733Z Cleaning up orphan processes

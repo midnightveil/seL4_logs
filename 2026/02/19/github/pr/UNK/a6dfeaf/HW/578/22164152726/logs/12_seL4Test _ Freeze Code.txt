@@ -1,0 +1,93 @@
+﻿2026-02-19T00:59:32.3523425Z Current runner version: '2.331.0'
+2026-02-19T00:59:32.3548864Z ##[group]Runner Image Provisioner
+2026-02-19T00:59:32.3549665Z Hosted Compute Agent
+2026-02-19T00:59:32.3550289Z Version: 20260123.484
+2026-02-19T00:59:32.3550847Z Commit: 6bd6555ca37d84114959e1c76d2c01448ff61c5d
+2026-02-19T00:59:32.3551635Z Build Date: 2026-01-23T19:41:17Z
+2026-02-19T00:59:32.3552276Z Worker ID: {26640979-5820-4673-b35b-8ad8cb76b1c7}
+2026-02-19T00:59:32.3552974Z Azure Region: northcentralus
+2026-02-19T00:59:32.3553649Z ##[endgroup]
+2026-02-19T00:59:32.3555323Z ##[group]Operating System
+2026-02-19T00:59:32.3555944Z Ubuntu
+2026-02-19T00:59:32.3556495Z 24.04.3
+2026-02-19T00:59:32.3556976Z LTS
+2026-02-19T00:59:32.3557416Z ##[endgroup]
+2026-02-19T00:59:32.3557996Z ##[group]Runner Image
+2026-02-19T00:59:32.3558516Z Image: ubuntu-24.04
+2026-02-19T00:59:32.3559083Z Version: 20260209.23.1
+2026-02-19T00:59:32.3560295Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260209.23/images/ubuntu/Ubuntu2404-Readme.md
+2026-02-19T00:59:32.3561755Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260209.23
+2026-02-19T00:59:32.3562747Z ##[endgroup]
+2026-02-19T00:59:32.3563807Z ##[group]GITHUB_TOKEN Permissions
+2026-02-19T00:59:32.3565994Z Contents: read
+2026-02-19T00:59:32.3566587Z Metadata: read
+2026-02-19T00:59:32.3567075Z ##[endgroup]
+2026-02-19T00:59:32.3569417Z Secret source: Actions
+2026-02-19T00:59:32.3570210Z Prepare workflow directory
+2026-02-19T00:59:32.4024563Z Prepare all required actions
+2026-02-19T00:59:32.4078686Z Getting action download info
+2026-02-19T00:59:32.6840534Z Download action repository 'seL4/ci-actions@master' (SHA:1c8b98c7672f50982aabf5c6b340f5613c49f5c1)
+2026-02-19T00:59:37.7759290Z Uses: seL4/ci-actions/.github/workflows/sel4test-hw.yml@refs/heads/master (1c8b98c7672f50982aabf5c6b340f5613c49f5c1)
+2026-02-19T00:59:37.7764233Z Complete job name: seL4Test / Freeze Code
+2026-02-19T00:59:37.8526363Z ##[group]Run seL4/ci-actions/repo-checkout@master
+2026-02-19T00:59:37.8527074Z with:
+2026-02-19T00:59:37.8527323Z   manifest_repo: sel4test-manifest
+2026-02-19T00:59:37.8527653Z   manifest: master.xml
+2026-02-19T00:59:37.8527923Z   sha: a6dfeafaff886e2759c23117088768d7feb14221
+2026-02-19T00:59:37.8528243Z   action_name: repo-checkout
+2026-02-19T00:59:37.8528674Z ##[endgroup]
+2026-02-19T00:59:37.9547029Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../repo-checkout/steps.sh
+2026-02-19T00:59:37.9590843Z ##[group]Setting up
+2026-02-19T00:59:37.9643955Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2026-02-19T00:59:37.9649516Z                                  Dload  Upload   Total   Spent    Left  Speed
+2026-02-19T00:59:37.9649851Z 
+2026-02-19T00:59:37.9991451Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2026-02-19T00:59:37.9993282Z 100 44950  100 44950    0     0  1253k      0 --:--:-- --:--:-- --:--:-- 1291k
+2026-02-19T00:59:39.4762299Z Defaulting to user installation because normal site-packages is not writeable
+2026-02-19T00:59:40.5975812Z Collecting PyGithub
+2026-02-19T00:59:40.6649729Z   Downloading pygithub-2.8.1-py3-none-any.whl.metadata (3.9 kB)
+2026-02-19T00:59:40.7005615Z Collecting pynacl>=1.4.0 (from PyGithub)
+2026-02-19T00:59:40.7152112Z   Downloading pynacl-1.6.2-cp38-abi3-manylinux_2_34_x86_64.whl.metadata (10.0 kB)
+2026-02-19T00:59:40.7212338Z Requirement already satisfied: requests>=2.14.0 in /usr/lib/python3/dist-packages (from PyGithub) (2.31.0)
+2026-02-19T00:59:40.7231363Z Requirement already satisfied: pyjwt>=2.4.0 in /usr/lib/python3/dist-packages (from pyjwt[crypto]>=2.4.0->PyGithub) (2.7.0)
+2026-02-19T00:59:40.7254254Z Requirement already satisfied: typing-extensions>=4.5.0 in /usr/lib/python3/dist-packages (from PyGithub) (4.10.0)
+2026-02-19T00:59:40.7268408Z Requirement already satisfied: urllib3>=1.26.0 in /usr/lib/python3/dist-packages (from PyGithub) (2.0.7)
+2026-02-19T00:59:40.7464441Z Requirement already satisfied: cryptography>=3.4.0 in /usr/lib/python3/dist-packages (from pyjwt[crypto]>=2.4.0->PyGithub) (41.0.7)
+2026-02-19T00:59:40.8755957Z Collecting cffi>=2.0.0 (from pynacl>=1.4.0->PyGithub)
+2026-02-19T00:59:40.8919776Z   Downloading cffi-2.0.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+2026-02-19T00:59:40.9373689Z Collecting pycparser (from cffi>=2.0.0->pynacl>=1.4.0->PyGithub)
+2026-02-19T00:59:40.9522726Z   Downloading pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+2026-02-19T00:59:40.9849132Z Downloading pygithub-2.8.1-py3-none-any.whl (432 kB)
+2026-02-19T00:59:41.0877491Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 432.7/432.7 kB 4.2 MB/s eta 0:00:00
+2026-02-19T00:59:41.1024121Z Downloading pynacl-1.6.2-cp38-abi3-manylinux_2_34_x86_64.whl (1.4 MB)
+2026-02-19T00:59:41.1641952Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 23.4 MB/s eta 0:00:00
+2026-02-19T00:59:41.1786458Z Downloading cffi-2.0.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (219 kB)
+2026-02-19T00:59:41.1883403Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 219.6/219.6 kB 26.7 MB/s eta 0:00:00
+2026-02-19T00:59:41.2025419Z Downloading pycparser-3.0-py3-none-any.whl (48 kB)
+2026-02-19T00:59:41.2065083Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.2/48.2 kB 17.3 MB/s eta 0:00:00
+2026-02-19T00:59:41.4996827Z Installing collected packages: pycparser, cffi, pynacl, PyGithub
+2026-02-19T00:59:41.9115907Z Successfully installed PyGithub-2.8.1 cffi-2.0.0 pycparser-3.0 pynacl-1.6.2
+2026-02-19T00:59:41.9739573Z ##[endgroup]
+2026-02-19T00:59:41.9856974Z ##[group]Repo checkout
+2026-02-19T00:59:41.9857570Z Starting repo checkout on branch master with manifest master.xml:
+2026-02-19T00:59:44.5830970Z 
+2026-02-19T00:59:44.5831774Z repo has been initialized in /home/runner/work/seL4/seL4
+2026-02-19T00:59:46.8561901Z repo sync has finished successfully.
+2026-02-19T00:59:47.1275944Z Fetching a6dfeafaff886e2759c23117088768d7feb14221 from github.com/seL4/seL4.git
+2026-02-19T00:59:48.7516673Z Manifest summary:
+2026-02-19T00:59:48.7517194Z -----------------
+2026-02-19T00:59:48.7517775Z  sel4test-manifest: 672e65ac Updating default.xml                           (origin/master)
+2026-02-19T00:59:48.7518521Z               seL4: a6dfeafa config: Reorder config evaluation              
+2026-02-19T00:59:48.7519204Z           musllibc: b0005f86 cmake: Fix export internal headers             (seL4/sel4)
+2026-02-19T00:59:48.7519962Z          seL4_libs: 9bdf9e0d trivial: fix whitespace                        (seL4/master)
+2026-02-19T00:59:48.7520882Z sel4_projects_libs: 0e06bebf Bump minimum CMake version                     (seL4/master)
+2026-02-19T00:59:48.7521918Z        sel4runtime: 86489cf6 github: use central CI workflows               (seL4/master)
+2026-02-19T00:59:48.7522941Z           sel4test: 0bbb0c6b Fix RPi4 failing sel4test in Release mode      (seL4/master)
+2026-02-19T00:59:48.7523978Z          util_libs: c8f9ea7c star64: improve comments in timer driver       (seL4/master)
+2026-02-19T00:59:48.7525252Z             nanopb: 1466e6f9 Publishing nanopb-0.4.3                        (tags/0.4.3)
+2026-02-19T00:59:48.7526042Z            opensbi: 234ed8e4 include: Bump-up version to 0.9                (tags/v0.9^0)
+2026-02-19T00:59:48.7526938Z         seL4_tools: fbfc6397 Add support for rock3b                         (seL4/master)
+2026-02-19T00:59:48.7562437Z ##[endgroup]
+2026-02-19T00:59:49.0085941Z Evaluate and set job outputs
+2026-02-19T00:59:49.0098554Z Set output 'xml'
+2026-02-19T00:59:49.0100299Z Cleaning up orphan processes

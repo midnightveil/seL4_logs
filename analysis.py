@@ -19,7 +19,7 @@ class Run(TypedDict):
 
 all_runs: list[Run] = []
 
-for root, dirs, files in os.walk("2026"):
+for root, dirs, files in itertools.chain(os.walk("2025"), os.walk("2026")):
     for file in files:
         if "github/pr" in root: continue
         if "HW Run" in root or "HW Run" in file:

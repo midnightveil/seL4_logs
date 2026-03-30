@@ -12,4 +12,4 @@ ci:
       # mostly PRs - a lot of the olders will be empty as skipped
       - hw-tests.yml
 
-max-days-back: 1000
+max-days-back: 90

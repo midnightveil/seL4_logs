@@ -1,0 +1,7 @@
+2026-03-12T01:29:35.0360000Z Evaluating sel4test.if
+2026-03-12T01:29:35.0360000Z Evaluating: success()
+2026-03-12T01:29:35.0360000Z Result: true
+2026-03-12T01:29:35.0360000Z Evaluating sel4test.code.if
+2026-03-12T01:29:35.0360000Z Evaluating: (success() && (((github.event_name == 'pull_request_target') && ((contains(github.event.pull_request.labels.*.name, 'hw-build') || contains(github.event.pull_request.labels.*.name, 'hw-test') || (github.event.label.name == 'hw-build') || (github.event.label.name == 'hw-test'))))))
+2026-03-12T01:29:35.0360000Z Expanded: (true && (('pull_request_target' == 'pull_request_target') && (contains(Array, 'hw-build') || contains(Array, 'hw-test') || (null == 'hw-build') || (null == 'hw-test'))))
+2026-03-12T01:29:35.0360000Z Result: false

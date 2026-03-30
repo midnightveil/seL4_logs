@@ -1,0 +1,6 @@
+2026-02-20T00:45:49.4750000Z Evaluating sel4test.if
+2026-02-20T00:45:49.4750000Z Evaluating: success()
+2026-02-20T00:45:49.4750000Z Result: true
+2026-02-20T00:45:49.4750000Z Evaluating sel4test.hw-build.if
+2026-02-20T00:45:49.4750000Z Evaluating: success()
+2026-02-20T00:45:49.4750000Z Result: false

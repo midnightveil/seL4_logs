@@ -1,0 +1,774 @@
+﻿2026-03-23T23:55:42.0789360Z ##[group]Run seL4/ci-actions/sel4test-hw-run@master
+2026-03-23T23:55:42.0789755Z with:
+2026-03-23T23:55:42.0789963Z   platform: ZYNQMP
+2026-03-23T23:55:42.0790193Z   compiler: gcc
+2026-03-23T23:55:42.0790415Z   index: $6
+2026-03-23T23:55:42.0790632Z   action_name: sel4test-hw-run
+2026-03-23T23:55:42.0790885Z env:
+2026-03-23T23:55:42.0792804Z   HW_SSH: ***
+
+2026-03-23T23:55:42.0793037Z ##[endgroup]
+2026-03-23T23:55:42.1967547Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/steps.sh
+2026-03-23T23:55:42.2026007Z ##[group]Setting up
+2026-03-23T23:55:42.2176462Z Agent pid 2347
+2026-03-23T23:55:42.2420229Z Cloning into 'seL4_libs'...
+2026-03-23T23:55:43.4905421Z Reading package lists...
+2026-03-23T23:55:43.6990762Z Building dependency tree...
+2026-03-23T23:55:43.7004918Z Reading state information...
+2026-03-23T23:55:43.9181775Z libffi-dev is already the newest version (3.4.6-1build1).
+2026-03-23T23:55:43.9182548Z libffi-dev set to manually installed.
+2026-03-23T23:55:43.9183186Z 0 upgraded, 0 newly installed, 0 to remove and 30 not upgraded.
+2026-03-23T23:55:46.2200528Z Collecting junitparser==3.*
+2026-03-23T23:55:46.2637197Z   Downloading junitparser-3.2.0-py2.py3-none-any.whl.metadata (9.0 kB)
+2026-03-23T23:55:46.2936948Z Collecting sel4-deps
+2026-03-23T23:55:46.3025914Z   Downloading sel4_deps-0.7.0-py3-none-any.whl.metadata (1.1 kB)
+2026-03-23T23:55:46.3131802Z Requirement already satisfied: six in /usr/lib/python3/dist-packages (from sel4-deps) (1.16.0)
+2026-03-23T23:55:46.3296062Z Collecting future (from sel4-deps)
+2026-03-23T23:55:46.3373212Z   Downloading future-1.0.0-py3-none-any.whl.metadata (4.0 kB)
+2026-03-23T23:55:46.3417097Z Requirement already satisfied: jinja2 in /usr/lib/python3/dist-packages (from sel4-deps) (3.1.2)
+2026-03-23T23:55:46.5562561Z Collecting lxml (from sel4-deps)
+2026-03-23T23:55:46.5606500Z   Downloading lxml-6.0.2-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.6 kB)
+2026-03-23T23:55:46.5773640Z Collecting ply (from sel4-deps)
+2026-03-23T23:55:46.5810915Z   Downloading ply-3.11-py2.py3-none-any.whl.metadata (844 bytes)
+2026-03-23T23:55:46.6714440Z Collecting psutil (from sel4-deps)
+2026-03-23T23:55:46.6757282Z   Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+2026-03-23T23:55:46.6935727Z Collecting bs4 (from sel4-deps)
+2026-03-23T23:55:46.6976353Z   Downloading bs4-0.0.2-py2.py3-none-any.whl.metadata (411 bytes)
+2026-03-23T23:55:46.7459124Z Collecting pyelftools (from sel4-deps)
+2026-03-23T23:55:46.7500188Z   Downloading pyelftools-0.32-py3-none-any.whl.metadata (372 bytes)
+2026-03-23T23:55:46.7735318Z Collecting sh (from sel4-deps)
+2026-03-23T23:55:46.7777042Z   Downloading sh-2.2.2-py3-none-any.whl.metadata (3.7 kB)
+2026-03-23T23:55:46.7816623Z Requirement already satisfied: pexpect in /usr/lib/python3/dist-packages (from sel4-deps) (4.9.0)
+2026-03-23T23:55:46.7825990Z Requirement already satisfied: pyyaml>=5.1 in /usr/lib/python3/dist-packages (from sel4-deps) (6.0.1)
+2026-03-23T23:55:46.7834533Z Requirement already satisfied: jsonschema in /usr/lib/python3/dist-packages (from sel4-deps) (4.10.3)
+2026-03-23T23:55:46.7971151Z Collecting pyfdt (from sel4-deps)
+2026-03-23T23:55:46.8043255Z   Downloading pyfdt-0.3.tar.gz (9.1 kB)
+2026-03-23T23:55:46.8101059Z   Preparing metadata (setup.py): started
+2026-03-23T23:55:47.0375919Z   Preparing metadata (setup.py): finished with status 'done'
+2026-03-23T23:55:47.0563765Z Collecting cmake-format==0.6.13 (from sel4-deps)
+2026-03-23T23:55:47.0621221Z   Downloading cmake_format-0.6.13-py3-none-any.whl.metadata (23 kB)
+2026-03-23T23:55:47.0806784Z Collecting guardonce (from sel4-deps)
+2026-03-23T23:55:47.0863347Z   Downloading guardonce-2.4.0-py2.py3-none-any.whl.metadata (3.4 kB)
+2026-03-23T23:55:47.1096885Z Collecting autopep8==2.3.2 (from sel4-deps)
+2026-03-23T23:55:47.1201768Z   Downloading autopep8-2.3.2-py2.py3-none-any.whl.metadata (16 kB)
+2026-03-23T23:55:47.1417220Z Collecting libarchive-c (from sel4-deps)
+2026-03-23T23:55:47.1477462Z   Downloading libarchive_c-5.3-py3-none-any.whl.metadata (5.8 kB)
+2026-03-23T23:55:47.1721814Z Collecting pycodestyle>=2.12.0 (from autopep8==2.3.2->sel4-deps)
+2026-03-23T23:55:47.1765553Z   Downloading pycodestyle-2.14.0-py2.py3-none-any.whl.metadata (4.5 kB)
+2026-03-23T23:55:47.1982973Z Collecting cmakelang>=0.6.13 (from cmake-format==0.6.13->sel4-deps)
+2026-03-23T23:55:47.2044731Z   Downloading cmakelang-0.6.13-py3-none-any.whl.metadata (23 kB)
+2026-03-23T23:55:47.2336316Z Collecting beautifulsoup4 (from bs4->sel4-deps)
+2026-03-23T23:55:47.2374655Z   Downloading beautifulsoup4-4.14.3-py3-none-any.whl.metadata (3.8 kB)
+2026-03-23T23:55:47.2589965Z Requirement already satisfied: attrs>=17.4.0 in /usr/lib/python3/dist-packages (from jsonschema->sel4-deps) (23.2.0)
+2026-03-23T23:55:47.2606550Z Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,>=0.14.0 in /usr/lib/python3/dist-packages (from jsonschema->sel4-deps) (0.20.0)
+2026-03-23T23:55:47.3686057Z Collecting soupsieve>=1.6.1 (from beautifulsoup4->bs4->sel4-deps)
+2026-03-23T23:55:47.3759383Z   Downloading soupsieve-2.8.3-py3-none-any.whl.metadata (4.6 kB)
+2026-03-23T23:55:47.3802708Z Requirement already satisfied: typing-extensions>=4.0.0 in /usr/lib/python3/dist-packages (from beautifulsoup4->bs4->sel4-deps) (4.10.0)
+2026-03-23T23:55:47.3904809Z Downloading junitparser-3.2.0-py2.py3-none-any.whl (13 kB)
+2026-03-23T23:55:47.4016685Z Downloading sel4_deps-0.7.0-py3-none-any.whl (1.4 kB)
+2026-03-23T23:55:47.4089616Z Downloading autopep8-2.3.2-py2.py3-none-any.whl (45 kB)
+2026-03-23T23:55:47.4136045Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.8/45.8 kB 16.0 MB/s eta 0:00:00
+2026-03-23T23:55:47.4203966Z Downloading cmake_format-0.6.13-py3-none-any.whl (19 kB)
+2026-03-23T23:55:47.4275186Z Downloading bs4-0.0.2-py2.py3-none-any.whl (1.2 kB)
+2026-03-23T23:55:47.4336057Z Downloading future-1.0.0-py3-none-any.whl (491 kB)
+2026-03-23T23:55:47.4424017Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 491.3/491.3 kB 70.3 MB/s eta 0:00:00
+2026-03-23T23:55:47.4507440Z Downloading guardonce-2.4.0-py2.py3-none-any.whl (15 kB)
+2026-03-23T23:55:47.4599981Z Downloading libarchive_c-5.3-py3-none-any.whl (17 kB)
+2026-03-23T23:55:47.4674865Z Downloading lxml-6.0.2-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.3 MB)
+2026-03-23T23:55:47.5030389Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 156.0 MB/s eta 0:00:00
+2026-03-23T23:55:47.5074308Z Downloading ply-3.11-py2.py3-none-any.whl (49 kB)
+2026-03-23T23:55:47.5114657Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.6/49.6 kB 16.9 MB/s eta 0:00:00
+2026-03-23T23:55:47.5181086Z Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+2026-03-23T23:55:47.5235969Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.6/155.6 kB 38.2 MB/s eta 0:00:00
+2026-03-23T23:55:47.5315765Z Downloading pyelftools-0.32-py3-none-any.whl (188 kB)
+2026-03-23T23:55:47.5364679Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.5/188.5 kB 56.0 MB/s eta 0:00:00
+2026-03-23T23:55:47.5423509Z Downloading sh-2.2.2-py3-none-any.whl (38 kB)
+2026-03-23T23:55:47.5509632Z Downloading cmakelang-0.6.13-py3-none-any.whl (159 kB)
+2026-03-23T23:55:47.5556854Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 159.8/159.8 kB 51.5 MB/s eta 0:00:00
+2026-03-23T23:55:47.5598618Z Downloading pycodestyle-2.14.0-py2.py3-none-any.whl (31 kB)
+2026-03-23T23:55:47.5662902Z Downloading beautifulsoup4-4.14.3-py3-none-any.whl (107 kB)
+2026-03-23T23:55:47.5705434Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.7/107.7 kB 37.8 MB/s eta 0:00:00
+2026-03-23T23:55:47.5743089Z Downloading soupsieve-2.8.3-py3-none-any.whl (37 kB)
+2026-03-23T23:55:47.6020047Z Building wheels for collected packages: pyfdt
+2026-03-23T23:55:47.6024968Z   Building wheel for pyfdt (setup.py): started
+2026-03-23T23:55:48.7228102Z   Building wheel for pyfdt (setup.py): finished with status 'done'
+2026-03-23T23:55:48.7231108Z   Created wheel for pyfdt: filename=pyfdt-0.3-py3-none-any.whl size=10969 sha256=950acabecab5b503aeab6a8ee3d2eb62ded4406105a39a4fdd599ba202d1226a
+2026-03-23T23:55:48.7233396Z   Stored in directory: /home/runner/.cache/pip/wheels/d9/8e/2a/cff33f3accb8eaa34608e68786db1ec323a5f6bce8d724d90a
+2026-03-23T23:55:48.7247943Z Successfully built pyfdt
+2026-03-23T23:55:49.5867194Z Installing collected packages: pyfdt, pyelftools, ply, libarchive-c, junitparser, guardonce, soupsieve, sh, pycodestyle, psutil, lxml, future, cmakelang, cmake-format, beautifulsoup4, autopep8, bs4, sel4-deps
+2026-03-23T23:55:50.5802098Z Successfully installed autopep8-2.3.2 beautifulsoup4-4.14.3 bs4-0.0.2 cmake-format-0.6.13 cmakelang-0.6.13 future-1.0.0 guardonce-2.4.0 junitparser-3.2.0 libarchive-c-5.3 lxml-6.0.2 ply-3.11 psutil-7.2.2 pycodestyle-2.14.0 pyelftools-0.32 pyfdt-0.3 sel4-deps-0.7.0 sh-2.2.2 soupsieve-2.8.3
+2026-03-23T23:55:50.6928122Z ##[endgroup]
+2026-03-23T23:55:50.8383070Z 
+2026-03-23T23:55:50.8384477Z ##[group]ZYNQMP_debug_gcc_32
+2026-03-23T23:55:50.8385411Z [1m-----------[ start test ZYNQMP_debug_gcc_32 ]-----------[0m
+2026-03-23T23:55:50.8386507Z [33m+++ tar xvzf ../ZYNQMP_debug_gcc_32-images.tar.gz[0m
+2026-03-23T23:55:50.8415617Z images/
+2026-03-23T23:55:50.8416570Z images/sel4test-driver-image-arm-zynqmp
+2026-03-23T23:55:50.8619315Z [33m+++ mq.sh sem -info zcu102_2[0m
+2026-03-23T23:56:32.6045998Z Lock for zcu102_2 currently free
+2026-03-23T23:56:32.6047473Z [33m+++ time mq.sh sem -wait zcu102_2 -k seL4/seL4-HW-22890202979-hw-run-6 -T 1800[0m
+2026-03-24T00:13:26.9565415Z 0.02user 0.03system 16:54.34elapsed 0%CPU (0avgtext+0avgdata 8276maxresident)k
+2026-03-24T00:13:26.9567331Z 0inputs+0outputs (0major+5471minor)pagefaults 0swaps
+2026-03-24T00:13:26.9569529Z [33m+++ time mq.sh run -c </testsuite> -s zcu102_2 -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-22890202979-hw-run-6 -f images/sel4test-driver-image-arm-zynqmp[0m
+2026-03-24T00:13:29.8449866Z Lock acquired, we are allowed to run
+2026-03-24T00:13:36.3036269Z pxelinux=False
+2026-03-24T00:13:36.3036776Z copied '/tmp/tmp.zoBzyuq3e3' -> '/tftpboot/zcu102_2/local-kernel'
+2026-03-24T00:13:36.5048310Z removed '/tmp/tmp.zoBzyuq3e3'
+2026-03-24T00:13:36.5049372Z '/tftpboot/zcu102_2/zynqmp-zcu102-rev1.0.dtb' -> '/tftpboot/zcu102_2/local-dtb'
+2026-03-24T00:13:36.5050093Z co
+2026-03-24T00:13:36.5050303Z ^Eco
+2026-03-24T00:13:36.7066378Z [Enter `^Ec?' for help]
+2026-03-24T00:13:36.9416402Z [up]
+2026-03-24T00:13:37.1431440Z Rebooting zcu102_2 and loading image: /tmp/tmp.zoBzyuq3e3
+2026-03-24T00:13:39.6947702Z Xilinx Zynq MP First Stage Boot Loader
+2026-03-24T00:13:39.6948029Z 
+2026-03-24T00:13:39.6948151Z Release 2019.1   Jun 19 2020  -  15:32:52
+2026-03-24T00:13:39.8961322Z NOTICE:  ATF running on XCZU9EG/silicon v4/RTL5.1 at 0xfffea000
+2026-03-24T00:13:39.8961872Z NOTICE:  BL31: v2.2(release):xilinx-v2020.1
+2026-03-24T00:13:39.8962249Z NOTICE:  BL31: Built : 00:11:21, Jun 26 2020
+2026-03-24T00:13:42.4938523Z 
+2026-03-24T00:13:42.4938587Z 
+2026-03-24T00:13:42.4939361Z U-Boot 2020.01-00023-g19ddc9fa86-dirty (Jun 26 2020 - 12:43:23 +1000)
+2026-03-24T00:13:42.4939948Z 
+2026-03-24T00:13:42.4940189Z Model: ZynqMP ZCU102 Rev1.0
+2026-03-24T00:13:42.4940624Z Board: Xilinx ZynqMP
+2026-03-24T00:13:42.8618685Z DRAM:  4 GiB
+2026-03-24T00:13:43.0631079Z PMUFW:	v1.1
+2026-03-24T00:13:43.0631578Z EL Level:	EL2
+2026-03-24T00:13:43.0631981Z Chip ID:	zu9eg
+2026-03-24T00:13:43.0632370Z NAND:  0 MiB
+2026-03-24T00:13:43.0632781Z MMC:   mmc@ff170000: 0
+2026-03-24T00:13:43.0633305Z In:    serial@ff000000
+2026-03-24T00:13:43.0633812Z Out:   serial@ff000000
+2026-03-24T00:13:43.0634265Z Err:   serial@ff000000
+2026-03-24T00:13:43.0634752Z Bootmode: LVL_SHFT_SD_MODE1
+2026-03-24T00:13:43.0635280Z Reset reason:	EXTERNAL
+2026-03-24T00:13:43.0635692Z Net:
+2026-03-24T00:13:43.0636604Z ZYNQ GEM: ff0e0000, mdio bus ff0e0000, phyaddr 12, interface rgmii-id
+2026-03-24T00:13:43.0637231Z 
+2026-03-24T00:13:43.0637517Z Warning: ethernet@ff0e0000 using MAC address from ROM
+2026-03-24T00:13:43.0638143Z eth0: ethernet@ff0e0000
+2026-03-24T00:13:43.2644239Z Hit any key to stop autoboot:  2
+2026-03-24T00:13:43.2644963Z  0
+2026-03-24T00:13:43.2645584Z ZynqMP> dhcp ${pxefile_addr_r}
+2026-03-24T00:13:43.2645868Z dhcp ${pxefile_addr_r}
+2026-03-24T00:14:03.1143531Z ethernet@ff0e0000 Waiting for PHY auto negotiation to complete........................................
+2026-03-24T00:14:03.1144668Z [[Boot timeout]]
+2026-03-24T00:14:03.1145156Z None
+2026-03-24T00:14:03.1145622Z 2 tries remaining..
+2026-03-24T00:14:03.1146583Z Rebooting zcu102_2 and loading image: /tmp/tmp.zoBzyuq3e3
+2026-03-24T00:14:25.8344204Z ..............................................
+2026-03-24T00:14:25.8344689Z [[Boot timeout]]
+2026-03-24T00:14:25.8344952Z None
+2026-03-24T00:14:25.8345190Z 1 tries remaining..
+2026-03-24T00:14:25.8345569Z Rebooting zcu102_2 and loading image: /tmp/tmp.zoBzyuq3e3
+2026-03-24T00:14:48.3450254Z .............................................
+2026-03-24T00:14:48.3450853Z [[Boot timeout]]
+2026-03-24T00:14:48.3451206Z None
+2026-03-24T00:14:48.3451532Z 0 tries remaining..
+2026-03-24T00:29:48.2546733Z .......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+2026-03-24T00:29:48.2555477Z [[Timeout]]
+2026-03-24T00:29:48.2555697Z None
+2026-03-24T00:29:48.4552435Z 
+2026-03-24T00:29:48.4552939Z console_run returned -1
+2026-03-24T00:29:48.4553381Z Shutting down zcu102_2
+2026-03-24T00:29:48.8999825Z 
+2026-03-24T00:29:52.1737474Z Command exited with non-zero status 255
+2026-03-24T00:29:52.1738547Z 0.03user 0.04system 16:25.21elapsed 0%CPU (0avgtext+0avgdata 8188maxresident)k
+2026-03-24T00:29:52.1739326Z 272inputs+8outputs (1major+7202minor)pagefaults 0swaps
+2026-03-24T00:29:52.1740322Z [31;1m>>> command failed, aborting.[0m
+2026-03-24T00:29:52.1741151Z [33m+++ mq.sh sem -signal zcu102_2 -k seL4/seL4-HW-22890202979-hw-run-6[0m
+2026-03-24T00:29:56.6212315Z [1m-----------[ end test ZYNQMP_debug_gcc_32 ]-----------[0m
+2026-03-24T00:29:56.6213529Z ##[endgroup]
+2026-03-24T00:29:56.6213887Z [31;1mZYNQMP_debug_gcc_32 FAILED[0m
+2026-03-24T00:29:56.6214214Z 
+2026-03-24T00:29:56.6214588Z ##[group]ZYNQMP_debug_gcc_64
+2026-03-24T00:29:56.6215046Z [1m-----------[ start test ZYNQMP_debug_gcc_64 ]-----------[0m
+2026-03-24T00:29:56.6220702Z [33m+++ tar xvzf ../ZYNQMP_debug_gcc_64-images.tar.gz[0m
+2026-03-24T00:29:56.6248845Z images/
+2026-03-24T00:29:56.6249544Z images/sel4test-driver-image-arm-zynqmp
+2026-03-24T00:29:56.6461419Z [33m+++ mq.sh sem -info zcu102_2[0m
+2026-03-24T00:30:00.1215469Z Lock for zcu102_2 currently free
+2026-03-24T00:30:00.1217029Z [33m+++ time mq.sh sem -wait zcu102_2 -k seL4/seL4-HW-22890202979-hw-run-6 -T 1800[0m
+2026-03-24T00:46:45.9253855Z 0.02user 0.03system 16:45.80elapsed 0%CPU (0avgtext+0avgdata 8196maxresident)k
+2026-03-24T00:46:45.9255508Z 0inputs+0outputs (1major+5487minor)pagefaults 0swaps
+2026-03-24T00:46:45.9272663Z [33m+++ time mq.sh run -c </testsuite> -s zcu102_2 -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-22890202979-hw-run-6 -f images/sel4test-driver-image-arm-zynqmp[0m
+2026-03-24T00:46:48.8256021Z Lock acquired, we are allowed to run
+2026-03-24T00:46:54.9765698Z pxelinux=False
+2026-03-24T00:46:54.9766563Z copied '/tmp/tmp.HoVfdO2MfB' -> '/tftpboot/zcu102_2/local-kernel'
+2026-03-24T00:46:55.1781043Z removed '/tmp/tmp.HoVfdO2MfB'
+2026-03-24T00:46:55.1781808Z '/tftpboot/zcu102_2/zynqmp-zcu102-rev1.0.dtb' -> '/tftpboot/zcu102_2/local-dtb'
+2026-03-24T00:46:55.3795412Z co
+2026-03-24T00:46:55.3795742Z ^Eco
+2026-03-24T00:46:55.3796042Z [Enter `^Ec?' for help]
+2026-03-24T00:46:55.7824611Z [up]
+2026-03-24T00:46:55.7825339Z Rebooting zcu102_2 and loading image: /tmp/tmp.HoVfdO2MfB
+2026-03-24T00:46:58.4379690Z Xilinx Zynq MP First Stage Boot Loader
+2026-03-24T00:46:58.4380084Z 
+2026-03-24T00:46:58.4380242Z Release 2019.1   Jun 19 2020  -  15:32:52
+2026-03-24T00:46:58.6394189Z NOTICE:  ATF running on XCZU9EG/silicon v4/RTL5.1 at 0xfffea000
+2026-03-24T00:46:58.6394879Z NOTICE:  BL31: v2.2(release):xilinx-v2020.1
+2026-03-24T00:46:58.6395355Z NOTICE:  BL31: Built : 00:11:21, Jun 26 2020
+2026-03-24T00:47:01.2410373Z 
+2026-03-24T00:47:01.2410513Z 
+2026-03-24T00:47:01.2411046Z U-Boot 2020.01-00023-g19ddc9fa86-dirty (Jun 26 2020 - 12:43:23 +1000)
+2026-03-24T00:47:01.2411431Z 
+2026-03-24T00:47:01.2411548Z Model: ZynqMP ZCU102 Rev1.0
+2026-03-24T00:47:01.2411846Z Board: Xilinx ZynqMP
+2026-03-24T00:47:01.6084518Z DRAM:  4 GiB
+2026-03-24T00:47:01.8098913Z PMUFW:	v1.1
+2026-03-24T00:47:01.8099411Z EL Level:	EL2
+2026-03-24T00:47:01.8099691Z Chip ID:	zu9eg
+2026-03-24T00:47:01.8099941Z NAND:  0 MiB
+2026-03-24T00:47:01.8100183Z MMC:   mmc@ff170000: 0
+2026-03-24T00:47:01.8100454Z In:    serial@ff000000
+2026-03-24T00:47:01.8100715Z Out:   serial@ff000000
+2026-03-24T00:47:01.8100979Z Err:   serial@ff000000
+2026-03-24T00:47:01.8101242Z Bootmode: LVL_SHFT_SD_MODE1
+2026-03-24T00:47:01.8101527Z Reset reason:	EXTERNAL
+2026-03-24T00:47:01.8101780Z Net:
+2026-03-24T00:47:01.8102531Z ZYNQ GEM: ff0e0000, mdio bus ff0e0000, phyaddr 12, interface rgmii-id
+2026-03-24T00:47:01.8102894Z 
+2026-03-24T00:47:01.8103058Z Warning: ethernet@ff0e0000 using MAC address from ROM
+2026-03-24T00:47:01.8103446Z eth0: ethernet@ff0e0000
+2026-03-24T00:47:02.0113570Z Hit any key to stop autoboot:  2
+2026-03-24T00:47:02.0114199Z  0
+2026-03-24T00:47:02.0114438Z ZynqMP> dhcp ${pxefile_addr_r}
+2026-03-24T00:47:02.0114765Z dhcp ${pxefile_addr_r}
+2026-03-24T00:47:21.8600076Z ethernet@ff0e0000 Waiting for PHY auto negotiation to complete........................................
+2026-03-24T00:47:21.8601052Z [[Boot timeout]]
+2026-03-24T00:47:21.8601382Z None
+2026-03-24T00:47:21.8601671Z 2 tries remaining..
+2026-03-24T00:47:21.8602134Z Rebooting zcu102_2 and loading image: /tmp/tmp.HoVfdO2MfB
+2026-03-24T00:47:44.5823367Z ..............................................
+2026-03-24T00:47:44.5823836Z [[Boot timeout]]
+2026-03-24T00:47:44.5824117Z None
+2026-03-24T00:47:44.5824366Z 1 tries remaining..
+2026-03-24T00:47:44.5824796Z Rebooting zcu102_2 and loading image: /tmp/tmp.HoVfdO2MfB
+2026-03-24T00:48:07.0913390Z .............................................
+2026-03-24T00:48:07.0913845Z [[Boot timeout]]
+2026-03-24T00:48:07.0914139Z None
+2026-03-24T00:48:07.0914437Z 0 tries remaining..
+2026-03-24T01:03:07.0289813Z .........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+2026-03-24T01:03:07.0295462Z [[Timeout]]
+2026-03-24T01:03:07.2299046Z None
+2026-03-24T01:03:07.2299312Z 
+2026-03-24T01:03:07.2299444Z console_run returned -1
+2026-03-24T01:03:07.2299771Z Shutting down zcu102_2
+2026-03-24T01:03:07.7721176Z 
+2026-03-24T01:03:11.1496706Z Command exited with non-zero status 255
+2026-03-24T01:03:11.1497572Z 0.02user 0.05system 16:25.22elapsed 0%CPU (0avgtext+0avgdata 8276maxresident)k
+2026-03-24T01:03:11.1498216Z 0inputs+8outputs (0major+7192minor)pagefaults 0swaps
+2026-03-24T01:03:11.1500222Z [31;1m>>> command failed, aborting.[0m
+2026-03-24T01:03:11.1501253Z [33m+++ mq.sh sem -signal zcu102_2 -k seL4/seL4-HW-22890202979-hw-run-6[0m
+2026-03-24T01:03:15.7511139Z [1m-----------[ end test ZYNQMP_debug_gcc_64 ]-----------[0m
+2026-03-24T01:03:15.7512530Z ##[endgroup]
+2026-03-24T01:03:15.7513115Z [31;1mZYNQMP_debug_gcc_64 FAILED[0m
+2026-03-24T01:03:15.7513553Z 
+2026-03-24T01:03:15.7514133Z ##[group]ZYNQMP_debug_MCS_gcc_64
+2026-03-24T01:03:15.7515410Z [1m-----------[ start test ZYNQMP_debug_MCS_gcc_64 ]-----------[0m
+2026-03-24T01:03:15.7519762Z [33m+++ tar xvzf ../ZYNQMP_debug_MCS_gcc_64-images.tar.gz[0m
+2026-03-24T01:03:15.7548575Z images/
+2026-03-24T01:03:15.7549335Z images/sel4test-driver-image-arm-zynqmp
+2026-03-24T01:03:15.7788172Z [33m+++ mq.sh sem -info zcu102_2[0m
+2026-03-24T01:03:19.2987897Z Lock for zcu102_2 currently free
+2026-03-24T01:03:19.2989211Z [33m+++ time mq.sh sem -wait zcu102_2 -k seL4/seL4-HW-22890202979-hw-run-6 -T 1800[0m
+2026-03-24T01:19:56.1635482Z 0.03user 0.02system 16:36.86elapsed 0%CPU (0avgtext+0avgdata 8204maxresident)k
+2026-03-24T01:19:56.1636624Z 0inputs+0outputs (0major+5464minor)pagefaults 0swaps
+2026-03-24T01:19:56.1638297Z [33m+++ time mq.sh run -c </testsuite> -s zcu102_2 -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-22890202979-hw-run-6 -f images/sel4test-driver-image-arm-zynqmp[0m
+2026-03-24T01:19:59.0168365Z Lock acquired, we are allowed to run
+2026-03-24T01:20:05.1917445Z pxelinux=False
+2026-03-24T01:20:05.1938263Z copied '/tmp/tmp.fia6snqxQe' -> '/tftpboot/zcu102_2/local-kernel'
+2026-03-24T01:20:05.3931932Z removed '/tmp/tmp.fia6snqxQe'
+2026-03-24T01:20:05.3932758Z '/tftpboot/zcu102_2/zynqmp-zcu102-rev1.0.dtb' -> '/tftpboot/zcu102_2/local-dtb'
+2026-03-24T01:20:05.3933645Z co
+2026-03-24T01:20:05.3933922Z ^Eco
+2026-03-24T01:20:05.5960288Z [Enter `^Ec?' for help]
+2026-03-24T01:20:05.7971656Z [up]
+2026-03-24T01:20:05.7972214Z Rebooting zcu102_2 and loading image: /tmp/tmp.fia6snqxQe
+2026-03-24T01:20:08.5395248Z Xilinx Zynq MP First Stage Boot Loader
+2026-03-24T01:20:08.5395662Z 
+2026-03-24T01:20:08.5396473Z Release 2019.1   Jun 19 2020  -  15:32:52
+2026-03-24T01:20:08.7408788Z NOTICE:  ATF running on XCZU9EG/silicon v4/RTL5.1 at 0xfffea000
+2026-03-24T01:20:08.7409474Z NOTICE:  BL31: v2.2(release):xilinx-v2020.1
+2026-03-24T01:20:08.7409946Z NOTICE:  BL31: Built : 00:11:21, Jun 26 2020
+2026-03-24T01:20:11.3434169Z 
+2026-03-24T01:20:11.3434245Z 
+2026-03-24T01:20:11.3434834Z U-Boot 2020.01-00023-g19ddc9fa86-dirty (Jun 26 2020 - 12:43:23 +1000)
+2026-03-24T01:20:11.3435355Z 
+2026-03-24T01:20:11.3435502Z Model: ZynqMP ZCU102 Rev1.0
+2026-03-24T01:20:11.3435897Z Board: Xilinx ZynqMP
+2026-03-24T01:20:11.7111375Z DRAM:  4 GiB
+2026-03-24T01:20:11.9125124Z PMUFW:	v1.1
+2026-03-24T01:20:11.9125505Z EL Level:	EL2
+2026-03-24T01:20:11.9125812Z Chip ID:	zu9eg
+2026-03-24T01:20:11.9126362Z NAND:  0 MiB
+2026-03-24T01:20:11.9126667Z MMC:   mmc@ff170000: 0
+2026-03-24T01:20:11.9127005Z In:    serial@ff000000
+2026-03-24T01:20:11.9127332Z Out:   serial@ff000000
+2026-03-24T01:20:11.9127672Z Err:   serial@ff000000
+2026-03-24T01:20:11.9128029Z Bootmode: LVL_SHFT_SD_MODE1
+2026-03-24T01:20:11.9128382Z Reset reason:	EXTERNAL
+2026-03-24T01:20:11.9128691Z Net:
+2026-03-24T01:20:11.9129133Z ZYNQ GEM: ff0e0000, mdio bus ff0e0000, phyaddr 12, interface rgmii-id
+2026-03-24T01:20:11.9129583Z 
+2026-03-24T01:20:11.9129784Z Warning: ethernet@ff0e0000 using MAC address from ROM
+2026-03-24T01:20:11.9130265Z eth0: ethernet@ff0e0000
+2026-03-24T01:20:12.1137858Z Hit any key to stop autoboot:  2
+2026-03-24T01:20:12.1138508Z  0
+2026-03-24T01:20:12.1138776Z ZynqMP> dhcp ${pxefile_addr_r}
+2026-03-24T01:20:12.1139108Z dhcp ${pxefile_addr_r}
+2026-03-24T01:20:31.9634815Z ethernet@ff0e0000 Waiting for PHY auto negotiation to complete........................................
+2026-03-24T01:20:31.9635760Z [[Boot timeout]]
+2026-03-24T01:20:31.9636291Z None
+2026-03-24T01:20:31.9636583Z 2 tries remaining..
+2026-03-24T01:20:31.9637067Z Rebooting zcu102_2 and loading image: /tmp/tmp.fia6snqxQe
+2026-03-24T01:20:54.6857901Z ..............................................
+2026-03-24T01:20:54.6858499Z [[Boot timeout]]
+2026-03-24T01:20:54.6858829Z None
+2026-03-24T01:20:54.6859121Z 1 tries remaining..
+2026-03-24T01:20:54.6859592Z Rebooting zcu102_2 and loading image: /tmp/tmp.fia6snqxQe
+2026-03-24T01:21:17.2010597Z .............................................
+2026-03-24T01:21:17.2011172Z [[Boot timeout]]
+2026-03-24T01:21:17.2011493Z None
+2026-03-24T01:21:17.2012325Z 0 tries remaining..
+2026-03-24T01:36:17.1074021Z .......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+2026-03-24T01:36:17.1079792Z [[Timeout]]
+2026-03-24T01:36:17.1080022Z None
+2026-03-24T01:36:17.3080894Z 
+2026-03-24T01:36:17.3081202Z console_run returned -1
+2026-03-24T01:36:17.3081782Z Shutting down zcu102_2
+2026-03-24T01:36:17.7937326Z 
+2026-03-24T01:36:20.9302425Z Command exited with non-zero status 255
+2026-03-24T01:36:20.9303211Z 0.03user 0.04system 16:24.76elapsed 0%CPU (0avgtext+0avgdata 8244maxresident)k
+2026-03-24T01:36:20.9304030Z 0inputs+8outputs (0major+7212minor)pagefaults 0swaps
+2026-03-24T01:36:20.9304966Z [31;1m>>> command failed, aborting.[0m
+2026-03-24T01:36:20.9305849Z [33m+++ mq.sh sem -signal zcu102_2 -k seL4/seL4-HW-22890202979-hw-run-6[0m
+2026-03-24T01:36:25.1184520Z [1m-----------[ end test ZYNQMP_debug_MCS_gcc_64 ]-----------[0m
+2026-03-24T01:36:25.1187401Z ##[endgroup]
+2026-03-24T01:36:25.1187945Z [31;1mZYNQMP_debug_MCS_gcc_64 FAILED[0m
+2026-03-24T01:36:25.1188317Z 
+2026-03-24T01:36:25.1188767Z ##[group]ZYNQMP_debug_hyp_gcc_64
+2026-03-24T01:36:25.1189448Z [1m-----------[ start test ZYNQMP_debug_hyp_gcc_64 ]-----------[0m
+2026-03-24T01:36:25.1194651Z [33m+++ tar xvzf ../ZYNQMP_debug_hyp_gcc_64-images.tar.gz[0m
+2026-03-24T01:36:25.1221074Z images/
+2026-03-24T01:36:25.1221511Z images/sel4test-driver-image-arm-zynqmp
+2026-03-24T01:36:25.1450598Z [33m+++ mq.sh sem -info zcu102_2[0m
+2026-03-24T01:36:29.7814510Z Lock for zcu102_2 held by sel4_ci since 2026-03-24 12:36:26.038174507 +1100, timeout 1800 with key 'seL4/seL4-HW-22890202979-hw-run-7'
+2026-03-24T01:36:29.7816540Z [33m+++ time mq.sh sem -wait zcu102_2 -k seL4/seL4-HW-22890202979-hw-run-6 -T 1800[0m
+2026-03-24T01:52:58.7787090Z 0.02user 0.02system 16:28.99elapsed 0%CPU (0avgtext+0avgdata 8200maxresident)k
+2026-03-24T01:52:58.7788143Z 0inputs+0outputs (0major+5505minor)pagefaults 0swaps
+2026-03-24T01:52:58.7790071Z [33m+++ time mq.sh run -c </testsuite> -s zcu102_2 -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-22890202979-hw-run-6 -f images/sel4test-driver-image-arm-zynqmp[0m
+2026-03-24T01:53:01.5557755Z Lock acquired, we are allowed to run
+2026-03-24T01:53:09.1466657Z pxelinux=False
+2026-03-24T01:53:09.1467320Z copied '/tmp/tmp.V0Beqpf1Pr' -> '/tftpboot/zcu102_2/local-kernel'
+2026-03-24T01:53:09.1468468Z removed '/tmp/tmp.V0Beqpf1Pr'
+2026-03-24T01:53:09.3478035Z '/tftpboot/zcu102_2/zynqmp-zcu102-rev1.0.dtb' -> '/tftpboot/zcu102_2/local-dtb'
+2026-03-24T01:53:09.3478869Z co
+2026-03-24T01:53:09.3479087Z ^Eco
+2026-03-24T01:53:09.5493008Z [Enter `^Ec?' for help]
+2026-03-24T01:53:09.7509957Z [up]
+2026-03-24T01:53:09.7525018Z Rebooting zcu102_2 and loading image: /tmp/tmp.V0Beqpf1Pr
+2026-03-24T01:53:12.4929380Z Xilinx Zynq MP First Stage Boot Loader
+2026-03-24T01:53:12.4929838Z 
+2026-03-24T01:53:12.4930047Z Release 2019.1   Jun 19 2020  -  15:32:52
+2026-03-24T01:53:12.6940625Z NOTICE:  ATF running on XCZU9EG/silicon v4/RTL5.1 at 0xfffea000
+2026-03-24T01:53:12.6941400Z NOTICE:  BL31: v2.2(release):xilinx-v2020.1
+2026-03-24T01:53:12.6941985Z NOTICE:  BL31: Built : 00:11:21, Jun 26 2020
+2026-03-24T01:53:15.2975148Z 
+2026-03-24T01:53:15.2975213Z 
+2026-03-24T01:53:15.2975853Z U-Boot 2020.01-00023-g19ddc9fa86-dirty (Jun 26 2020 - 12:43:23 +1000)
+2026-03-24T01:53:15.2976481Z 
+2026-03-24T01:53:15.2976610Z Model: ZynqMP ZCU102 Rev1.0
+2026-03-24T01:53:15.2976966Z Board: Xilinx ZynqMP
+2026-03-24T01:53:15.6630603Z DRAM:  4 GiB
+2026-03-24T01:53:15.8642341Z PMUFW:	v1.1
+2026-03-24T01:53:15.8642899Z EL Level:	EL2
+2026-03-24T01:53:15.8643226Z Chip ID:	zu9eg
+2026-03-24T01:53:15.8643550Z NAND:  0 MiB
+2026-03-24T01:53:15.8643860Z MMC:   mmc@ff170000: 0
+2026-03-24T01:53:15.8644215Z In:    serial@ff000000
+2026-03-24T01:53:15.8644566Z Out:   serial@ff000000
+2026-03-24T01:53:15.8644910Z Err:   serial@ff000000
+2026-03-24T01:53:15.8645266Z Bootmode: LVL_SHFT_SD_MODE1
+2026-03-24T01:53:15.8645648Z Reset reason:	EXTERNAL
+2026-03-24T01:53:15.8648539Z Net:
+2026-03-24T01:53:15.8648911Z ZYNQ GEM: ff0e0000, mdio bus ff0e0000, phyaddr 12, interface rgmii-id
+2026-03-24T01:53:15.8649290Z 
+2026-03-24T01:53:15.8649482Z Warning: ethernet@ff0e0000 using MAC address from ROM
+2026-03-24T01:53:15.8649897Z eth0: ethernet@ff0e0000
+2026-03-24T01:53:16.0656032Z Hit any key to stop autoboot:  2
+2026-03-24T01:53:16.0657057Z  0
+2026-03-24T01:53:16.0657381Z ZynqMP> dhcp ${pxefile_addr_r}
+2026-03-24T01:53:16.0657839Z dhcp ${pxefile_addr_r}
+2026-03-24T01:53:35.9156912Z ethernet@ff0e0000 Waiting for PHY auto negotiation to complete........................................
+2026-03-24T01:53:35.9157862Z [[Boot timeout]]
+2026-03-24T01:53:35.9158180Z None
+2026-03-24T01:53:35.9158472Z 2 tries remaining..
+2026-03-24T01:53:35.9158938Z Rebooting zcu102_2 and loading image: /tmp/tmp.V0Beqpf1Pr
+2026-03-24T01:53:58.6384964Z ..............................................
+2026-03-24T01:53:58.6385589Z [[Boot timeout]]
+2026-03-24T01:53:58.6385876Z None
+2026-03-24T01:53:58.6386545Z 1 tries remaining..
+2026-03-24T01:53:58.6387022Z Rebooting zcu102_2 and loading image: /tmp/tmp.V0Beqpf1Pr
+2026-03-24T01:54:21.1490178Z .............................................
+2026-03-24T01:54:21.1490768Z [[Boot timeout]]
+2026-03-24T01:54:21.1491098Z None
+2026-03-24T01:54:21.1491340Z 0 tries remaining..
+2026-03-24T02:09:21.1203959Z .......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+2026-03-24T02:09:21.1211136Z [[Timeout]]
+2026-03-24T02:09:21.1211342Z None
+2026-03-24T02:09:21.3243991Z 
+2026-03-24T02:09:21.3244582Z console_run returned -1
+2026-03-24T02:09:21.3245010Z Shutting down zcu102_2
+2026-03-24T02:09:21.8121310Z 
+2026-03-24T02:09:25.0021115Z Command exited with non-zero status 255
+2026-03-24T02:09:25.0021982Z 0.03user 0.04system 16:26.22elapsed 0%CPU (0avgtext+0avgdata 8208maxresident)k
+2026-03-24T02:09:25.0022745Z 0inputs+8outputs (0major+7217minor)pagefaults 0swaps
+2026-03-24T02:09:25.0024486Z [31;1m>>> command failed, aborting.[0m
+2026-03-24T02:09:25.0025371Z [33m+++ mq.sh sem -signal zcu102_2 -k seL4/seL4-HW-22890202979-hw-run-6[0m
+2026-03-24T02:09:30.1020631Z [1m-----------[ end test ZYNQMP_debug_hyp_gcc_64 ]-----------[0m
+2026-03-24T02:09:30.1021844Z ##[endgroup]
+2026-03-24T02:09:30.1022322Z [31;1mZYNQMP_debug_hyp_gcc_64 FAILED[0m
+2026-03-24T02:09:30.1022696Z 
+2026-03-24T02:09:30.1023493Z ##[group]ZYNQMP_debug_hyp_MCS_gcc_64
+2026-03-24T02:09:30.1024191Z [1m-----------[ start test ZYNQMP_debug_hyp_MCS_gcc_64 ]-----------[0m
+2026-03-24T02:09:30.1030972Z [33m+++ tar xvzf ../ZYNQMP_debug_hyp_MCS_gcc_64-images.tar.gz[0m
+2026-03-24T02:09:30.1059654Z images/
+2026-03-24T02:09:30.1060054Z images/sel4test-driver-image-arm-zynqmp
+2026-03-24T02:09:30.1286618Z [33m+++ mq.sh sem -info zcu102_2[0m
+2026-03-24T02:09:33.7191833Z Lock for zcu102_2 currently free
+2026-03-24T02:09:33.7193191Z [33m+++ time mq.sh sem -wait zcu102_2 -k seL4/seL4-HW-22890202979-hw-run-6 -T 1800[0m
+2026-03-24T02:26:03.4794189Z 0.03user 0.02system 16:29.75elapsed 0%CPU (0avgtext+0avgdata 8276maxresident)k
+2026-03-24T02:26:03.4795052Z 0inputs+0outputs (0major+5497minor)pagefaults 0swaps
+2026-03-24T02:26:03.4797127Z [33m+++ time mq.sh run -c </testsuite> -s zcu102_2 -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-22890202979-hw-run-6 -f images/sel4test-driver-image-arm-zynqmp[0m
+2026-03-24T02:26:06.2940177Z Lock acquired, we are allowed to run
+2026-03-24T02:26:12.6070281Z pxelinux=False
+2026-03-24T02:26:12.6071225Z copied '/tmp/tmp.8TCLn3Ncz4' -> '/tftpboot/zcu102_2/local-kernel'
+2026-03-24T02:26:12.8084516Z removed '/tmp/tmp.8TCLn3Ncz4'
+2026-03-24T02:26:12.8085175Z '/tftpboot/zcu102_2/zynqmp-zcu102-rev1.0.dtb' -> '/tftpboot/zcu102_2/local-dtb'
+2026-03-24T02:26:13.0101117Z co
+2026-03-24T02:26:13.0101441Z ^Eco
+2026-03-24T02:26:13.0101711Z [Enter `^Ec?' for help]
+2026-03-24T02:26:13.4132253Z [up]
+2026-03-24T02:26:13.4132873Z Rebooting zcu102_2 and loading image: /tmp/tmp.8TCLn3Ncz4
+2026-03-24T02:26:16.0974262Z Xilinx Zynq MP First Stage Boot Loader
+2026-03-24T02:26:16.0974652Z 
+2026-03-24T02:26:16.0974812Z Release 2019.1   Jun 19 2020  -  15:32:52
+2026-03-24T02:26:16.2991637Z NOTICE:  ATF running on XCZU9EG/silicon v4/RTL5.1 at 0xfffea000
+2026-03-24T02:26:16.2992154Z NOTICE:  BL31: v2.2(release):xilinx-v2020.1
+2026-03-24T02:26:16.2992530Z NOTICE:  BL31: Built : 00:11:21, Jun 26 2020
+2026-03-24T02:26:18.9002198Z 
+2026-03-24T02:26:18.9002294Z 
+2026-03-24T02:26:18.9002918Z U-Boot 2020.01-00023-g19ddc9fa86-dirty (Jun 26 2020 - 12:43:23 +1000)
+2026-03-24T02:26:18.9003376Z 
+2026-03-24T02:26:18.9003519Z Model: ZynqMP ZCU102 Rev1.0
+2026-03-24T02:26:18.9012186Z Board: Xilinx ZynqMP
+2026-03-24T02:26:19.2676753Z DRAM:  4 GiB
+2026-03-24T02:26:19.4691927Z PMUFW:	v1.1
+2026-03-24T02:26:19.4692475Z EL Level:	EL2
+2026-03-24T02:26:19.4693229Z Chip ID:	zu9eg
+2026-03-24T02:26:19.4693552Z NAND:  0 MiB
+2026-03-24T02:26:19.4693862Z MMC:   mmc@ff170000: 0
+2026-03-24T02:26:19.4694225Z In:    serial@ff000000
+2026-03-24T02:26:19.4694582Z Out:   serial@ff000000
+2026-03-24T02:26:19.4694930Z Err:   serial@ff000000
+2026-03-24T02:26:19.4695284Z Bootmode: LVL_SHFT_SD_MODE1
+2026-03-24T02:26:19.4695677Z Reset reason:	EXTERNAL
+2026-03-24T02:26:19.4696019Z Net:
+2026-03-24T02:26:19.4696755Z ZYNQ GEM: ff0e0000, mdio bus ff0e0000, phyaddr 12, interface rgmii-id
+2026-03-24T02:26:19.4697239Z 
+2026-03-24T02:26:19.4697461Z Warning: ethernet@ff0e0000 using MAC address from ROM
+2026-03-24T02:26:19.4697994Z eth0: ethernet@ff0e0000
+2026-03-24T02:26:19.6709580Z Hit any key to stop autoboot:  2
+2026-03-24T02:26:19.6710236Z  0
+2026-03-24T02:26:19.6710497Z ZynqMP> dhcp ${pxefile_addr_r}
+2026-03-24T02:26:19.6710829Z dhcp ${pxefile_addr_r}
+2026-03-24T02:26:39.5199372Z ethernet@ff0e0000 Waiting for PHY auto negotiation to complete........................................
+2026-03-24T02:26:39.7214256Z [[Boot timeout]]
+2026-03-24T02:26:39.7214791Z None
+2026-03-24T02:26:39.7215096Z 2 tries remaining..
+2026-03-24T02:26:39.7215565Z Rebooting zcu102_2 and loading image: /tmp/tmp.8TCLn3Ncz4
+2026-03-24T02:27:02.2440160Z ..............................................
+2026-03-24T02:27:02.2440699Z [[Boot timeout]]
+2026-03-24T02:27:02.2441017Z None
+2026-03-24T02:27:02.2441312Z 1 tries remaining..
+2026-03-24T02:27:02.2441769Z Rebooting zcu102_2 and loading image: /tmp/tmp.8TCLn3Ncz4
+2026-03-24T02:27:24.7537020Z .............................................
+2026-03-24T02:27:24.7537617Z [[Boot timeout]]
+2026-03-24T02:27:24.7538419Z None
+2026-03-24T02:27:24.7538749Z 0 tries remaining..
+2026-03-24T02:42:24.7151139Z ..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+2026-03-24T02:42:24.7156524Z [[Timeout]]
+2026-03-24T02:42:24.7156752Z None
+2026-03-24T02:42:24.9125701Z 
+2026-03-24T02:42:24.9126517Z console_run returned -1
+2026-03-24T02:42:24.9127143Z Shutting down zcu102_2
+2026-03-24T02:42:25.4587703Z 
+2026-03-24T02:42:28.8313793Z Command exited with non-zero status 255
+2026-03-24T02:42:28.8315028Z 0.04user 0.03system 16:25.35elapsed 0%CPU (0avgtext+0avgdata 8232maxresident)k
+2026-03-24T02:42:28.8315752Z 0inputs+8outputs (1major+7236minor)pagefaults 0swaps
+2026-03-24T02:42:28.8317845Z [31;1m>>> command failed, aborting.[0m
+2026-03-24T02:42:28.8318722Z [33m+++ mq.sh sem -signal zcu102_2 -k seL4/seL4-HW-22890202979-hw-run-6[0m
+2026-03-24T02:42:33.2153307Z [1m-----------[ end test ZYNQMP_debug_hyp_MCS_gcc_64 ]-----------[0m
+2026-03-24T02:42:33.2154566Z ##[endgroup]
+2026-03-24T02:42:33.2155093Z [31;1mZYNQMP_debug_hyp_MCS_gcc_64 FAILED[0m
+2026-03-24T02:42:33.2155425Z 
+2026-03-24T02:42:33.2155853Z ##[group]ZYNQMP_debug_SMP_gcc_64
+2026-03-24T02:42:33.2156820Z [1m-----------[ start test ZYNQMP_debug_SMP_gcc_64 ]-----------[0m
+2026-03-24T02:42:33.2165086Z [33m+++ tar xvzf ../ZYNQMP_debug_SMP_gcc_64-images.tar.gz[0m
+2026-03-24T02:42:33.2191103Z images/
+2026-03-24T02:42:33.2191737Z images/sel4test-driver-image-arm-zynqmp
+2026-03-24T02:42:33.2399962Z [33m+++ mq.sh sem -info zcu102_2[0m
+2026-03-24T02:42:37.8823362Z Lock for zcu102_2 held by sel4_ci since 2026-03-24 13:42:33.458003056 +1100, timeout 1800 with key 'seL4/seL4-HW-22890202979-hw-run-7'
+2026-03-24T02:42:37.8825277Z [33m+++ time mq.sh sem -wait zcu102_2 -k seL4/seL4-HW-22890202979-hw-run-6 -T 1800[0m
+2026-03-24T02:59:07.5625676Z 0.02user 0.03system 16:29.67elapsed 0%CPU (0avgtext+0avgdata 8304maxresident)k
+2026-03-24T02:59:07.5626884Z 0inputs+0outputs (0major+5497minor)pagefaults 0swaps
+2026-03-24T02:59:07.5628758Z [33m+++ time mq.sh run -c </testsuite> -s zcu102_2 -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-22890202979-hw-run-6 -f images/sel4test-driver-image-arm-zynqmp[0m
+2026-03-24T02:59:10.7186704Z Lock acquired, we are allowed to run
+2026-03-24T02:59:16.7936757Z pxelinux=False
+2026-03-24T02:59:16.7937586Z copied '/tmp/tmp.XGodD6pOam' -> '/tftpboot/zcu102_2/local-kernel'
+2026-03-24T02:59:17.1157357Z removed '/tmp/tmp.XGodD6pOam'
+2026-03-24T02:59:17.3142107Z '/tftpboot/zcu102_2/zynqmp-zcu102-rev1.0.dtb' -> '/tftpboot/zcu102_2/local-dtb'
+2026-03-24T02:59:17.3143511Z co
+2026-03-24T02:59:17.3143775Z ^Eco
+2026-03-24T02:59:17.5127582Z [Enter `^Ec?' for help]
+2026-03-24T02:59:17.7203248Z [up]
+2026-03-24T02:59:17.9189319Z Rebooting zcu102_2 and loading image: /tmp/tmp.XGodD6pOam
+2026-03-24T02:59:20.5759736Z Xilinx Zynq MP First Stage Boot Loader
+2026-03-24T02:59:20.5760227Z 
+2026-03-24T02:59:20.5760451Z Release 2019.1   Jun 19 2020  -  15:32:52
+2026-03-24T02:59:20.7744031Z NOTICE:  ATF running on XCZU9EG/silicon v4/RTL5.1 at 0xfffea000
+2026-03-24T02:59:20.7744986Z NOTICE:  BL31: v2.2(release):xilinx-v2020.1
+2026-03-24T02:59:20.7745456Z NOTICE:  BL31: Built : 00:11:21, Jun 26 2020
+2026-03-24T02:59:23.3805825Z 
+2026-03-24T02:59:23.3805893Z 
+2026-03-24T02:59:23.3806941Z U-Boot 2020.01-00023-g19ddc9fa86-dirty (Jun 26 2020 - 12:43:23 +1000)
+2026-03-24T02:59:23.3807734Z 
+2026-03-24T02:59:23.3807908Z Model: ZynqMP ZCU102 Rev1.0
+2026-03-24T02:59:23.3808305Z Board: Xilinx ZynqMP
+2026-03-24T02:59:23.7469652Z DRAM:  4 GiB
+2026-03-24T02:59:23.9453958Z PMUFW:	v1.1
+2026-03-24T02:59:23.9456859Z EL Level:	EL2
+2026-03-24T02:59:23.9457184Z Chip ID:	zu9eg
+2026-03-24T02:59:23.9457490Z NAND:  0 MiB
+2026-03-24T02:59:23.9457779Z MMC:   mmc@ff170000: 0
+2026-03-24T02:59:23.9458112Z In:    serial@ff000000
+2026-03-24T02:59:23.9458434Z Out:   serial@ff000000
+2026-03-24T02:59:23.9458758Z Err:   serial@ff000000
+2026-03-24T02:59:23.9466316Z Bootmode: LVL_SHFT_SD_MODE1
+2026-03-24T02:59:23.9466782Z Reset reason:	EXTERNAL
+2026-03-24T02:59:23.9467155Z Net:
+2026-03-24T02:59:23.9467535Z ZYNQ GEM: ff0e0000, mdio bus ff0e0000, phyaddr 12, interface rgmii-id
+2026-03-24T02:59:23.9467894Z 
+2026-03-24T02:59:23.9468060Z Warning: ethernet@ff0e0000 using MAC address from ROM
+2026-03-24T02:59:23.9468447Z eth0: ethernet@ff0e0000
+2026-03-24T02:59:24.1436391Z Hit any key to stop autoboot:  2
+2026-03-24T02:59:24.1437241Z  0
+2026-03-24T02:59:24.1437498Z ZynqMP> dhcp ${pxefile_addr_r}
+2026-03-24T02:59:24.1437787Z dhcp ${pxefile_addr_r}
+2026-03-24T02:59:43.9997669Z ethernet@ff0e0000 Waiting for PHY auto negotiation to complete........................................
+2026-03-24T02:59:43.9998687Z [[Boot timeout]]
+2026-03-24T02:59:43.9998985Z None
+2026-03-24T02:59:43.9999264Z 2 tries remaining..
+2026-03-24T02:59:43.9999623Z Rebooting zcu102_2 and loading image: /tmp/tmp.XGodD6pOam
+2026-03-24T03:00:06.7188300Z ..............................................
+2026-03-24T03:00:06.7189535Z [[Boot timeout]]
+2026-03-24T03:00:06.7190039Z None
+2026-03-24T03:00:06.7190519Z 1 tries remaining..
+2026-03-24T03:00:06.7191271Z Rebooting zcu102_2 and loading image: /tmp/tmp.XGodD6pOam
+2026-03-24T03:00:29.2281385Z .............................................
+2026-03-24T03:00:29.2282128Z [[Boot timeout]]
+2026-03-24T03:00:29.2282554Z None
+2026-03-24T03:00:29.2282810Z 0 tries remaining..
+2026-03-24T03:15:29.1636941Z .......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+2026-03-24T03:15:29.1643010Z [[Timeout]]
+2026-03-24T03:15:29.1643254Z None
+2026-03-24T03:15:29.3610268Z 
+2026-03-24T03:15:29.3610593Z console_run returned -1
+2026-03-24T03:15:29.3611226Z Shutting down zcu102_2
+2026-03-24T03:15:29.8443530Z 
+2026-03-24T03:15:32.9562701Z Command exited with non-zero status 255
+2026-03-24T03:15:32.9563905Z 0.02user 0.05system 16:25.39elapsed 0%CPU (0avgtext+0avgdata 8292maxresident)k
+2026-03-24T03:15:32.9564682Z 0inputs+8outputs (0major+7188minor)pagefaults 0swaps
+2026-03-24T03:15:32.9567417Z [31;1m>>> command failed, aborting.[0m
+2026-03-24T03:15:32.9568217Z [33m+++ mq.sh sem -signal zcu102_2 -k seL4/seL4-HW-22890202979-hw-run-6[0m
+2026-03-24T03:15:37.7728312Z [1m-----------[ end test ZYNQMP_debug_SMP_gcc_64 ]-----------[0m
+2026-03-24T03:15:37.7729635Z ##[endgroup]
+2026-03-24T03:15:37.7730177Z [31;1mZYNQMP_debug_SMP_gcc_64 FAILED[0m
+2026-03-24T03:15:37.7730612Z 
+2026-03-24T03:15:37.7732751Z ##[group]ZYNQMP_debug_SMP_MCS_gcc_64
+2026-03-24T03:15:37.7733663Z [1m-----------[ start test ZYNQMP_debug_SMP_MCS_gcc_64 ]-----------[0m
+2026-03-24T03:15:37.7739262Z [33m+++ tar xvzf ../ZYNQMP_debug_SMP_MCS_gcc_64-images.tar.gz[0m
+2026-03-24T03:15:37.7766831Z images/
+2026-03-24T03:15:37.7767360Z images/sel4test-driver-image-arm-zynqmp
+2026-03-24T03:15:37.7987920Z [33m+++ mq.sh sem -info zcu102_2[0m
+2026-03-24T03:15:43.8571312Z Lock for zcu102_2 held by sel4_ci since 2026-03-24 14:15:39.662231260 +1100, timeout 1800 with key 'seL4/seL4-HW-22890202979-hw-run-7'
+2026-03-24T03:15:43.8572870Z [33m+++ time mq.sh sem -wait zcu102_2 -k seL4/seL4-HW-22890202979-hw-run-6 -T 1800[0m
+2026-03-24T03:48:53.4177726Z 0.02user 0.02system 33:09.55elapsed 0%CPU (0avgtext+0avgdata 8300maxresident)k
+2026-03-24T03:48:53.4178569Z 0inputs+0outputs (0major+5462minor)pagefaults 0swaps
+2026-03-24T03:48:53.4180387Z [33m+++ time mq.sh run -c </testsuite> -s zcu102_2 -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-22890202979-hw-run-6 -f images/sel4test-driver-image-arm-zynqmp[0m
+2026-03-24T03:48:56.4393912Z Lock acquired, we are allowed to run
+2026-03-24T03:49:03.9932318Z pxelinux=False
+2026-03-24T03:49:03.9933247Z copied '/tmp/tmp.SnucJGX3ck' -> '/tftpboot/zcu102_2/local-kernel'
+2026-03-24T03:49:04.1913271Z removed '/tmp/tmp.SnucJGX3ck'
+2026-03-24T03:49:04.1914325Z '/tftpboot/zcu102_2/zynqmp-zcu102-rev1.0.dtb' -> '/tftpboot/zcu102_2/local-dtb'
+2026-03-24T03:49:04.1915176Z co
+2026-03-24T03:49:04.1915470Z ^Eco
+2026-03-24T03:49:04.3893509Z [Enter `^Ec?' for help]
+2026-03-24T03:49:04.5954861Z [up]
+2026-03-24T03:49:04.7937197Z Rebooting zcu102_2 and loading image: /tmp/tmp.SnucJGX3ck
+2026-03-24T03:49:07.3914630Z Xilinx Zynq MP First Stage Boot Loader
+2026-03-24T03:49:07.3915186Z 
+2026-03-24T03:49:07.3915431Z Release 2019.1   Jun 19 2020  -  15:32:52
+2026-03-24T03:49:07.5896814Z NOTICE:  ATF running on XCZU9EG/silicon v4/RTL5.1 at 0xfffea000
+2026-03-24T03:49:07.5897824Z NOTICE:  BL31: v2.2(release):xilinx-v2020.1
+2026-03-24T03:49:07.5898337Z NOTICE:  BL31: Built : 00:11:21, Jun 26 2020
+2026-03-24T03:49:10.1953639Z 
+2026-03-24T03:49:10.1953853Z 
+2026-03-24T03:49:10.1954525Z U-Boot 2020.01-00023-g19ddc9fa86-dirty (Jun 26 2020 - 12:43:23 +1000)
+2026-03-24T03:49:10.1955104Z 
+2026-03-24T03:49:10.1955226Z Model: ZynqMP ZCU102 Rev1.0
+2026-03-24T03:49:10.1955526Z Board: Xilinx ZynqMP
+2026-03-24T03:49:10.5635806Z DRAM:  4 GiB
+2026-03-24T03:49:10.7614370Z PMUFW:	v1.1
+2026-03-24T03:49:10.7614758Z EL Level:	EL2
+2026-03-24T03:49:10.7615390Z Chip ID:	zu9eg
+2026-03-24T03:49:10.7615644Z NAND:  0 MiB
+2026-03-24T03:49:10.7615879Z MMC:   mmc@ff170000: 0
+2026-03-24T03:49:10.7616352Z In:    serial@ff000000
+2026-03-24T03:49:10.7616613Z Out:   serial@ff000000
+2026-03-24T03:49:10.7616873Z Err:   serial@ff000000
+2026-03-24T03:49:10.7617134Z Bootmode: LVL_SHFT_SD_MODE1
+2026-03-24T03:49:10.7617420Z Reset reason:	EXTERNAL
+2026-03-24T03:49:10.7617681Z Net:
+2026-03-24T03:49:10.7618024Z ZYNQ GEM: ff0e0000, mdio bus ff0e0000, phyaddr 12, interface rgmii-id
+2026-03-24T03:49:10.7618382Z 
+2026-03-24T03:49:10.7618548Z Warning: ethernet@ff0e0000 using MAC address from ROM
+2026-03-24T03:49:10.7618937Z eth0: ethernet@ff0e0000
+2026-03-24T03:49:10.9598264Z Hit any key to stop autoboot:  2
+2026-03-24T03:49:10.9598873Z  0
+2026-03-24T03:49:10.9599111Z ZynqMP> dhcp ${pxefile_addr_r}
+2026-03-24T03:49:10.9599419Z dhcp ${pxefile_addr_r}
+2026-03-24T03:49:30.8131836Z ethernet@ff0e0000 Waiting for PHY auto negotiation to complete........................................
+2026-03-24T03:49:30.8132693Z [[Boot timeout]]
+2026-03-24T03:49:31.0114292Z None
+2026-03-24T03:49:31.0114792Z 2 tries remaining..
+2026-03-24T03:49:31.0115420Z Rebooting zcu102_2 and loading image: /tmp/tmp.SnucJGX3ck
+2026-03-24T03:49:53.5336496Z ..............................................
+2026-03-24T03:49:53.5336960Z [[Boot timeout]]
+2026-03-24T03:49:53.5337199Z None
+2026-03-24T03:49:53.5337453Z 1 tries remaining..
+2026-03-24T03:49:53.5337812Z Rebooting zcu102_2 and loading image: /tmp/tmp.SnucJGX3ck
+2026-03-24T03:50:16.0447401Z .............................................
+2026-03-24T03:50:16.0447946Z [[Boot timeout]]
+2026-03-24T03:50:16.0448267Z None
+2026-03-24T03:50:16.0448556Z 0 tries remaining..
+2026-03-24T04:05:15.9560453Z .......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+2026-03-24T04:05:15.9567539Z [[Timeout]]
+2026-03-24T04:05:15.9567766Z None
+2026-03-24T04:05:16.1600545Z 
+2026-03-24T04:05:16.1601051Z console_run returned -1
+2026-03-24T04:05:16.1601442Z Shutting down zcu102_2
+2026-03-24T04:05:16.6229192Z 
+2026-03-24T04:05:20.0217356Z Command exited with non-zero status 255
+2026-03-24T04:05:20.0218451Z 0.03user 0.04system 16:26.60elapsed 0%CPU (0avgtext+0avgdata 8188maxresident)k
+2026-03-24T04:05:20.0219231Z 0inputs+8outputs (0major+7230minor)pagefaults 0swaps
+2026-03-24T04:05:20.0221037Z [31;1m>>> command failed, aborting.[0m
+2026-03-24T04:05:20.0221980Z [33m+++ mq.sh sem -signal zcu102_2 -k seL4/seL4-HW-22890202979-hw-run-6[0m
+2026-03-24T04:05:24.2180276Z [1m-----------[ end test ZYNQMP_debug_SMP_MCS_gcc_64 ]-----------[0m
+2026-03-24T04:05:24.2183716Z ##[endgroup]
+2026-03-24T04:05:24.2184312Z [31;1mZYNQMP_debug_SMP_MCS_gcc_64 FAILED[0m
+2026-03-24T04:05:24.2184751Z 
+2026-03-24T04:05:24.2185321Z ##[group]ZYNQMP_debug_SMP_hyp_gcc_64
+2026-03-24T04:05:24.2186452Z [1m-----------[ start test ZYNQMP_debug_SMP_hyp_gcc_64 ]-----------[0m
+2026-03-24T04:05:24.2191736Z [33m+++ tar xvzf ../ZYNQMP_debug_SMP_hyp_gcc_64-images.tar.gz[0m
+2026-03-24T04:05:24.2221297Z images/
+2026-03-24T04:05:24.2221876Z images/sel4test-driver-image-arm-zynqmp
+2026-03-24T04:05:24.2433452Z [33m+++ mq.sh sem -info zcu102_2[0m
+2026-03-24T04:05:28.6361561Z Lock for zcu102_2 held by sel4_ci since 2026-03-24 15:05:25.449975291 +1100, timeout 1800 with key 'seL4/seL4-HW-22890202979-hw-run-7'
+2026-03-24T04:05:28.6363184Z [33m+++ time mq.sh sem -wait zcu102_2 -k seL4/seL4-HW-22890202979-hw-run-6 -T 1800[0m
+2026-03-24T04:21:58.4484228Z 0.02user 0.03system 16:29.81elapsed 0%CPU (0avgtext+0avgdata 8224maxresident)k
+2026-03-24T04:21:58.4485084Z 0inputs+0outputs (1major+5516minor)pagefaults 0swaps
+2026-03-24T04:21:58.4487375Z [33m+++ time mq.sh run -c </testsuite> -s zcu102_2 -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-22890202979-hw-run-6 -f images/sel4test-driver-image-arm-zynqmp[0m
+2026-03-24T04:22:01.7618878Z Lock acquired, we are allowed to run
+2026-03-24T04:22:08.4625831Z pxelinux=False
+2026-03-24T04:22:08.4626786Z copied '/tmp/tmp.7ibADoMoHV' -> '/tftpboot/zcu102_2/local-kernel'
+2026-03-24T04:22:08.4627318Z removed '/tmp/tmp.7ibADoMoHV'
+2026-03-24T04:22:08.6672892Z '/tftpboot/zcu102_2/zynqmp-zcu102-rev1.0.dtb' -> '/tftpboot/zcu102_2/local-dtb'
+2026-03-24T04:22:08.6674637Z co
+2026-03-24T04:22:08.6675063Z ^Eco
+2026-03-24T04:22:08.8717637Z [Enter `^Ec?' for help]
+2026-03-24T04:22:09.0761844Z [up]
+2026-03-24T04:22:09.0762690Z Rebooting zcu102_2 and loading image: /tmp/tmp.7ibADoMoHV
+2026-03-24T04:22:11.8097643Z Xilinx Zynq MP First Stage Boot Loader
+2026-03-24T04:22:11.8098197Z 
+2026-03-24T04:22:11.8098406Z Release 2019.1   Jun 19 2020  -  15:32:52
+2026-03-24T04:22:12.0144056Z NOTICE:  ATF running on XCZU9EG/silicon v4/RTL5.1 at 0xfffea000
+2026-03-24T04:22:12.0145032Z NOTICE:  BL31: v2.2(release):xilinx-v2020.1
+2026-03-24T04:22:12.0146010Z NOTICE:  BL31: Built : 00:11:21, Jun 26 2020
+2026-03-24T04:22:14.6103456Z 
+2026-03-24T04:22:14.6103521Z 
+2026-03-24T04:22:14.6104356Z U-Boot 2020.01-00023-g19ddc9fa86-dirty (Jun 26 2020 - 12:43:23 +1000)
+2026-03-24T04:22:14.6105206Z 
+2026-03-24T04:22:14.6105361Z Model: ZynqMP ZCU102 Rev1.0
+2026-03-24T04:22:14.6105758Z Board: Xilinx ZynqMP
+2026-03-24T04:22:14.9777619Z DRAM:  4 GiB
+2026-03-24T04:22:15.1824863Z PMUFW:	v1.1
+2026-03-24T04:22:15.1825472Z EL Level:	EL2
+2026-03-24T04:22:15.1825969Z Chip ID:	zu9eg
+2026-03-24T04:22:15.1826703Z NAND:  0 MiB
+2026-03-24T04:22:15.1827021Z MMC:   mmc@ff170000: 0
+2026-03-24T04:22:15.1827415Z In:    serial@ff000000
+2026-03-24T04:22:15.1827768Z Out:   serial@ff000000
+2026-03-24T04:22:15.1828103Z Err:   serial@ff000000
+2026-03-24T04:22:15.1828451Z Bootmode: LVL_SHFT_SD_MODE1
+2026-03-24T04:22:15.1828851Z Reset reason:	EXTERNAL
+2026-03-24T04:22:15.1829184Z Net:
+2026-03-24T04:22:15.1829648Z ZYNQ GEM: ff0e0000, mdio bus ff0e0000, phyaddr 12, interface rgmii-id
+2026-03-24T04:22:15.1830152Z 
+2026-03-24T04:22:15.1830374Z Warning: ethernet@ff0e0000 using MAC address from ROM
+2026-03-24T04:22:15.1830904Z eth0: ethernet@ff0e0000
+2026-03-24T04:22:15.3870294Z Hit any key to stop autoboot:  2
+2026-03-24T04:22:15.3871221Z  0
+2026-03-24T04:22:15.3871727Z ZynqMP> dhcp ${pxefile_addr_r}
+2026-03-24T04:22:15.3872294Z dhcp ${pxefile_addr_r}
+2026-03-24T04:22:35.2331489Z ethernet@ff0e0000 Waiting for PHY auto negotiation to complete........................................
+2026-03-24T04:22:35.2332455Z [[Boot timeout]]
+2026-03-24T04:22:35.2332735Z None
+2026-03-24T04:22:35.2333468Z 2 tries remaining..
+2026-03-24T04:22:35.2333868Z Rebooting zcu102_2 and loading image: /tmp/tmp.7ibADoMoHV
+2026-03-24T04:22:57.9579075Z ..............................................
+2026-03-24T04:22:57.9579961Z [[Boot timeout]]
+2026-03-24T04:22:57.9580352Z None
+2026-03-24T04:22:57.9580646Z 1 tries remaining..
+2026-03-24T04:22:57.9581104Z Rebooting zcu102_2 and loading image: /tmp/tmp.7ibADoMoHV
+2026-03-24T04:23:20.4690582Z .............................................
+2026-03-24T04:23:20.4691137Z [[Boot timeout]]
+2026-03-24T04:23:20.4691461Z None
+2026-03-24T04:23:20.4691762Z 0 tries remaining..
+2026-03-24T04:38:20.4257979Z .......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+2026-03-24T04:38:20.4266635Z [[Timeout]]
+2026-03-24T04:38:20.6297302Z None
+2026-03-24T04:38:20.6297732Z 
+2026-03-24T04:38:20.6298010Z console_run returned -1
+2026-03-24T04:38:20.6298569Z Shutting down zcu102_2
+2026-03-24T04:38:21.1842484Z 
+2026-03-24T04:38:24.7519969Z Command exited with non-zero status 255
+2026-03-24T04:38:24.7520609Z 0.04user 0.04system 16:26.30elapsed 0%CPU (0avgtext+0avgdata 8208maxresident)k
+2026-03-24T04:38:24.7521399Z 0inputs+8outputs (0major+7215minor)pagefaults 0swaps
+2026-03-24T04:38:24.7522306Z [31;1m>>> command failed, aborting.[0m
+2026-03-24T04:38:24.7522902Z [33m+++ mq.sh sem -signal zcu102_2 -k seL4/seL4-HW-22890202979-hw-run-6[0m
+2026-03-24T04:38:31.5197793Z [1m-----------[ end test ZYNQMP_debug_SMP_hyp_gcc_64 ]-----------[0m
+2026-03-24T04:38:31.5201190Z ##[endgroup]
+2026-03-24T04:38:31.5201834Z [31;1mZYNQMP_debug_SMP_hyp_gcc_64 FAILED[0m
+2026-03-24T04:38:31.5202646Z 
+2026-03-24T04:38:31.5203273Z ##[group]ZYNQMP_debug_SMP_hyp_MCS_gcc_64
+2026-03-24T04:38:31.5204223Z [1m-----------[ start test ZYNQMP_debug_SMP_hyp_MCS_gcc_64 ]-----------[0m
+2026-03-24T04:38:31.5210212Z [33m+++ tar xvzf ../ZYNQMP_debug_SMP_hyp_MCS_gcc_64-images.tar.gz[0m
+2026-03-24T04:38:31.5238379Z images/
+2026-03-24T04:38:31.5238943Z images/sel4test-driver-image-arm-zynqmp
+2026-03-24T04:38:31.5461817Z [33m+++ mq.sh sem -info zcu102_2[0m
+2026-03-24T04:38:41.8246681Z Lock for zcu102_2 held by sel4_ci since 2026-03-24 15:38:33.003608449 +1100, timeout 1800 with key 'seL4/seL4-Deploy-23471210398-hw-run-3'
+2026-03-24T04:38:41.8248471Z [33m+++ time mq.sh sem -wait zcu102_2 -k seL4/seL4-HW-22890202979-hw-run-6 -T 1800[0m
+2026-03-24T05:55:36.6454357Z ##[error]The operation was canceled.

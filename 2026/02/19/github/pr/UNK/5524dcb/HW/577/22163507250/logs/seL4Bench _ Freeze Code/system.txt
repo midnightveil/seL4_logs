@@ -1,0 +1,7 @@
+2026-02-19T00:33:06.5040000Z Evaluating sel4bench.if
+2026-02-19T00:33:06.5040000Z Evaluating: success()
+2026-02-19T00:33:06.5040000Z Result: true
+2026-02-19T00:33:06.5040000Z Evaluating sel4bench.code.if
+2026-02-19T00:33:06.5040000Z Evaluating: (success() && (((github.event_name == 'pull_request_target') && ((((contains(github.event.pull_request.labels.*.name, 'hw-bench') || (github.event.label.name == 'hw-bench'))) || inputs.always_build)))))
+2026-02-19T00:33:06.5040000Z Expanded: (true && (('pull_request_target' == 'pull_request_target') && ((contains(Array, 'hw-bench') || (null == 'hw-bench')) || false)))
+2026-02-19T00:33:06.5040000Z Result: false

@@ -1,0 +1,15 @@
+2026-03-12T00:20:40.5190000Z Evaluating sel4test.if
+2026-03-12T00:20:40.5190000Z Evaluating: success()
+2026-03-12T00:20:40.5190000Z Result: true
+2026-03-12T00:20:40.5190000Z Evaluating sel4test.code.if
+2026-03-12T00:20:40.5190000Z Evaluating: (success() && (((github.event_name == 'pull_request_target') && ((contains(github.event.pull_request.labels.*.name, 'hw-build') || contains(github.event.pull_request.labels.*.name, 'hw-test') || (github.event.label.name == 'hw-build') || (github.event.label.name == 'hw-test'))))))
+2026-03-12T00:20:40.5190000Z Expanded: (true && (('pull_request_target' == 'pull_request_target') && (contains(Array, 'hw-build') || contains(github.event.pull_request.labels.*.name, 'hw-test') || (github.event.label.name == 'hw-build') || (github.event.label.name == 'hw-test'))))
+2026-03-12T00:20:40.5190000Z Result: true
+2026-03-12T00:20:40.5210000Z Requested labels: ubuntu-latest
+2026-03-12T00:20:40.5210000Z Job defined at: seL4/ci-actions/.github/workflows/sel4test-hw.yml@refs/heads/master
+2026-03-12T00:20:40.5210000Z Reusable workflow chain:
+2026-03-12T00:20:40.5210000Z seL4/seL4/.github/workflows/hw-tests.yml@refs/heads/master (d40bad3a9a46a0bd00ffcd066e047a1adac67f86)
+2026-03-12T00:20:40.5210000Z -> seL4/ci-actions/.github/workflows/sel4test-hw.yml@refs/heads/master (1c8b98c7672f50982aabf5c6b340f5613c49f5c1)
+2026-03-12T00:20:40.5210000Z Waiting for a runner to pick up this job...
+2026-03-12T00:22:02.1320000Z Job is waiting for a hosted runner to come online.
+2026-03-12T00:22:02.1360000Z Job is about to start running on the hosted runner: GitHub Actions 1000071332

@@ -1,0 +1,7 @@
+2026-03-03T13:14:24.2090000Z Evaluating sel4bench.if
+2026-03-03T13:14:24.2090000Z Evaluating: success()
+2026-03-03T13:14:24.2090000Z Result: true
+2026-03-03T13:14:24.2090000Z Evaluating sel4bench.hw-run.if
+2026-03-03T13:14:24.2090000Z Evaluating: (success() && (((github.repository_owner == 'seL4') && (github.event_name == 'pull_request_target') && ((contains(github.event.pull_request.labels.*.name, 'hw-bench') || (github.event.label.name == 'hw-bench'))))))
+2026-03-03T13:14:24.2090000Z Expanded: (false && ((github.repository_owner == 'seL4') && (github.event_name == 'pull_request_target') && (contains(github.event.pull_request.labels.*.name, 'hw-bench') || (github.event.label.name == 'hw-bench'))))
+2026-03-03T13:14:24.2090000Z Result: false

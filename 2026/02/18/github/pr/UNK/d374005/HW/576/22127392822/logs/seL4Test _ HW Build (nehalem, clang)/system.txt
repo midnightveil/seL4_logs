@@ -1,0 +1,14 @@
+2026-02-18T05:07:26.5790000Z Requested labels: ubuntu-latest
+2026-02-18T05:07:26.5790000Z Job defined at: seL4/ci-actions/.github/workflows/sel4test-hw.yml@refs/heads/master
+2026-02-18T05:07:26.5790000Z Reusable workflow chain:
+2026-02-18T05:07:26.5790000Z seL4/seL4/.github/workflows/hw-tests.yml@refs/heads/master (56b42cf87edc8554b09032cef270467ba07520eb)
+2026-02-18T05:07:26.5790000Z -> seL4/ci-actions/.github/workflows/sel4test-hw.yml@refs/heads/master (1c8b98c7672f50982aabf5c6b340f5613c49f5c1)
+2026-02-18T05:07:26.5790000Z Waiting for a runner to pick up this job...
+2026-02-18T05:07:26.5930000Z Job is about to start running on the hosted runner: GitHub Actions 1000065678
+2026-02-18T05:07:26.5750000Z Evaluating sel4test.if
+2026-02-18T05:07:26.5750000Z Evaluating: success()
+2026-02-18T05:07:26.5750000Z Result: true
+2026-02-18T05:07:26.5750000Z Evaluating sel4test.hw-build.if
+2026-02-18T05:07:26.5750000Z Evaluating: success()
+2026-02-18T05:07:26.5750000Z Result: true
+2026-02-18T05:07:26.5930000Z Job is waiting for a hosted runner to come online.

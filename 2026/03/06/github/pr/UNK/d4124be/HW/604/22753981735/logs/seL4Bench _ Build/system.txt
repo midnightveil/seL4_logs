@@ -1,0 +1,6 @@
+2026-03-06T07:40:57.4900000Z Evaluating sel4bench.if
+2026-03-06T07:40:57.4900000Z Evaluating: success()
+2026-03-06T07:40:57.4900000Z Result: true
+2026-03-06T07:40:57.4900000Z Evaluating sel4bench.build.if
+2026-03-06T07:40:57.4900000Z Evaluating: success()
+2026-03-06T07:40:57.4900000Z Result: false

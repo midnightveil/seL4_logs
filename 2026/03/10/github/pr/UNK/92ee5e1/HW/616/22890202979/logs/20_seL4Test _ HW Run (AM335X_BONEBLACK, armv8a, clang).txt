@@ -1,0 +1,1214 @@
+﻿2026-03-23T23:55:36.8919576Z Current runner version: '2.332.0'
+2026-03-23T23:55:36.8944653Z ##[group]Runner Image Provisioner
+2026-03-23T23:55:36.8945804Z Hosted Compute Agent
+2026-03-23T23:55:36.8946434Z Version: 20260213.493
+2026-03-23T23:55:36.8947082Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-03-23T23:55:36.8947914Z Build Date: 2026-02-13T00:28:41Z
+2026-03-23T23:55:36.8948609Z Worker ID: {fc3203f2-d8a6-4227-b78a-b3a6ed17b65a}
+2026-03-23T23:55:36.8949309Z Azure Region: eastus
+2026-03-23T23:55:36.8950008Z ##[endgroup]
+2026-03-23T23:55:36.8951467Z ##[group]Operating System
+2026-03-23T23:55:36.8952603Z Ubuntu
+2026-03-23T23:55:36.8953149Z 24.04.3
+2026-03-23T23:55:36.8953650Z LTS
+2026-03-23T23:55:36.8954249Z ##[endgroup]
+2026-03-23T23:55:36.8954872Z ##[group]Runner Image
+2026-03-23T23:55:36.8955565Z Image: ubuntu-24.04
+2026-03-23T23:55:36.8956155Z Version: 20260309.50.1
+2026-03-23T23:55:36.8957480Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260309.50/images/ubuntu/Ubuntu2404-Readme.md
+2026-03-23T23:55:36.8959158Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260309.50
+2026-03-23T23:55:36.8960325Z ##[endgroup]
+2026-03-23T23:55:36.8961466Z ##[group]GITHUB_TOKEN Permissions
+2026-03-23T23:55:36.8964006Z Contents: read
+2026-03-23T23:55:36.8964640Z Metadata: read
+2026-03-23T23:55:36.8965363Z ##[endgroup]
+2026-03-23T23:55:36.8967518Z Secret source: Actions
+2026-03-23T23:55:36.8968537Z Prepare workflow directory
+2026-03-23T23:55:36.9291640Z Prepare all required actions
+2026-03-23T23:55:36.9328376Z Getting action download info
+2026-03-23T23:55:37.2696360Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-03-23T23:55:37.3991518Z Download action repository 'actions/download-artifact@v4' (SHA:d3f86a106a0bac45b974a628896c90dbdf5c8093)
+2026-03-23T23:55:37.6509348Z Download action repository 'seL4/ci-actions@master' (SHA:5ffc97f19e2c7d81ad945d0d1b84b1c7c9ce26aa)
+2026-03-23T23:55:38.0436672Z Uses: seL4/ci-actions/.github/workflows/sel4test-hw.yml@refs/heads/master (1c8b98c7672f50982aabf5c6b340f5613c49f5c1)
+2026-03-23T23:55:38.0442144Z Complete job name: seL4Test / HW Run (AM335X_BONEBLACK, armv8a, clang)
+2026-03-23T23:55:38.1188611Z ##[group]Run actions/checkout@v4
+2026-03-23T23:55:38.1189550Z with:
+2026-03-23T23:55:38.1190094Z   repository: seL4/machine_queue
+2026-03-23T23:55:38.1190673Z   path: machine_queue
+2026-03-23T23:55:38.1191375Z   token: ***
+2026-03-23T23:55:38.1192038Z   ssh-strict: true
+2026-03-23T23:55:38.1192529Z   ssh-user: git
+2026-03-23T23:55:38.1193016Z   persist-credentials: true
+2026-03-23T23:55:38.1193546Z   clean: true
+2026-03-23T23:55:38.1194040Z   sparse-checkout-cone-mode: true
+2026-03-23T23:55:38.1194602Z   fetch-depth: 1
+2026-03-23T23:55:38.1195073Z   fetch-tags: false
+2026-03-23T23:55:38.1195558Z   show-progress: true
+2026-03-23T23:55:38.1196054Z   lfs: false
+2026-03-23T23:55:38.1196511Z   submodules: false
+2026-03-23T23:55:38.1197015Z   set-safe-directory: true
+2026-03-23T23:55:38.1197799Z ##[endgroup]
+2026-03-23T23:55:38.2284961Z Syncing repository: seL4/machine_queue
+2026-03-23T23:55:38.2287019Z ##[group]Getting Git version info
+2026-03-23T23:55:38.2287953Z Working directory is '/home/runner/work/seL4/seL4/machine_queue'
+2026-03-23T23:55:38.2289110Z [command]/usr/bin/git version
+2026-03-23T23:55:38.2369157Z git version 2.53.0
+2026-03-23T23:55:38.2394847Z ##[endgroup]
+2026-03-23T23:55:38.2407777Z Temporarily overriding HOME='/home/runner/work/_temp/70ca8757-a39d-4b42-b99b-2ee56e41cf67' before making global git config changes
+2026-03-23T23:55:38.2410222Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-23T23:55:38.2412654Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/seL4/seL4/machine_queue
+2026-03-23T23:55:38.2449253Z ##[group]Initializing the repository
+2026-03-23T23:55:38.2454214Z [command]/usr/bin/git init /home/runner/work/seL4/seL4/machine_queue
+2026-03-23T23:55:38.2567508Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-03-23T23:55:38.2569698Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-03-23T23:55:38.2571663Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-03-23T23:55:38.2573527Z hint: call:
+2026-03-23T23:55:38.2574339Z hint:
+2026-03-23T23:55:38.2575142Z hint: 	git config --global init.defaultBranch <name>
+2026-03-23T23:55:38.2575895Z hint:
+2026-03-23T23:55:38.2576618Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-03-23T23:55:38.2577803Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-03-23T23:55:38.2578970Z hint:
+2026-03-23T23:55:38.2579504Z hint: 	git branch -m <name>
+2026-03-23T23:55:38.2580065Z hint:
+2026-03-23T23:55:38.2580737Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-03-23T23:55:38.2582082Z Initialized empty Git repository in /home/runner/work/seL4/seL4/machine_queue/.git/
+2026-03-23T23:55:38.2584751Z [command]/usr/bin/git remote add origin https://github.com/seL4/machine_queue
+2026-03-23T23:55:38.2618604Z ##[endgroup]
+2026-03-23T23:55:38.2619525Z ##[group]Disabling automatic garbage collection
+2026-03-23T23:55:38.2624739Z [command]/usr/bin/git config --local gc.auto 0
+2026-03-23T23:55:38.2655669Z ##[endgroup]
+2026-03-23T23:55:38.2657222Z ##[group]Setting up auth
+2026-03-23T23:55:38.2663006Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-23T23:55:38.2694771Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-23T23:55:38.3046247Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-23T23:55:38.3078743Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-23T23:55:38.3309002Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-23T23:55:38.3350541Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-23T23:55:38.3585551Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-03-23T23:55:38.3620729Z ##[endgroup]
+2026-03-23T23:55:38.3622297Z ##[group]Determining the default branch
+2026-03-23T23:55:38.3624395Z Retrieving the default branch name
+2026-03-23T23:55:38.5800673Z Default branch 'master'
+2026-03-23T23:55:38.5803373Z ##[endgroup]
+2026-03-23T23:55:38.5807050Z ##[group]Fetching the repository
+2026-03-23T23:55:38.5812059Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/master:refs/remotes/origin/master
+2026-03-23T23:55:38.8436016Z From https://github.com/seL4/machine_queue
+2026-03-23T23:55:38.8439097Z  * [new branch]      master     -> origin/master
+2026-03-23T23:55:38.8472822Z ##[endgroup]
+2026-03-23T23:55:38.8474339Z ##[group]Determining the checkout info
+2026-03-23T23:55:38.8475916Z ##[endgroup]
+2026-03-23T23:55:38.8480509Z [command]/usr/bin/git sparse-checkout disable
+2026-03-23T23:55:38.8527813Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-03-23T23:55:38.8558288Z ##[group]Checking out the ref
+2026-03-23T23:55:38.8562663Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2026-03-23T23:55:38.8645163Z Reset branch 'master'
+2026-03-23T23:55:38.8648462Z branch 'master' set up to track 'origin/master'.
+2026-03-23T23:55:38.8698823Z ##[endgroup]
+2026-03-23T23:55:38.8704018Z [command]/usr/bin/git log -1 --format=%H
+2026-03-23T23:55:38.8730815Z f0835aa54749667d30c9143e0fd3353e9367f2dd
+2026-03-23T23:55:38.9153771Z ##[group]Run actions/download-artifact@v4
+2026-03-23T23:55:38.9155046Z with:
+2026-03-23T23:55:38.9156142Z   name: images-sel4test-armv8a-clang
+2026-03-23T23:55:38.9157357Z   merge-multiple: false
+2026-03-23T23:55:38.9158400Z   repository: seL4/seL4
+2026-03-23T23:55:38.9159404Z   run-id: 22890202979
+2026-03-23T23:55:38.9160415Z ##[endgroup]
+2026-03-23T23:55:39.1312857Z Downloading single artifact
+2026-03-23T23:55:39.2282739Z Preparing to download the following artifacts:
+2026-03-23T23:55:39.2287785Z - images-sel4test-armv8a-clang (ID: 5844743768, Size: 203183256, Expected Digest: sha256:41159d84f3ebde4db5d0264e0858ee9523103e915b5ba7f7aae2332f681a4036)
+2026-03-23T23:55:39.2895607Z Redirecting to blob download url: https://productionresultssa11.blob.core.windows.net/actions-results/b5b92d6f-ed56-4b45-9f45-ee94f16c96e7/workflow-job-run-eb8dd1f9-160f-5256-addc-51ff1dc2a26d/artifacts/75ad69d55a0d6b2fd77eb6a5da6fe6e3c703272e6945cb812e783578507f8883.zip
+2026-03-23T23:55:39.2901983Z Starting download of artifact to: /home/runner/work/seL4/seL4
+2026-03-23T23:55:39.3700052Z (node:2318) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-03-23T23:55:39.3707426Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-03-23T23:55:42.0265783Z SHA256 digest of downloaded artifact is 41159d84f3ebde4db5d0264e0858ee9523103e915b5ba7f7aae2332f681a4036
+2026-03-23T23:55:42.0267020Z Artifact download completed successfully.
+2026-03-23T23:55:42.0272083Z Total of 1 artifact(s) downloaded
+2026-03-23T23:55:42.0272888Z Download artifact has finished successfully
+2026-03-23T23:55:42.0468742Z ##[group]Run seL4/ci-actions/sel4test-hw-run@master
+2026-03-23T23:55:42.0469153Z with:
+2026-03-23T23:55:42.0469419Z   platform: AM335X_BONEBLACK
+2026-03-23T23:55:42.0469738Z   compiler: clang
+2026-03-23T23:55:42.0470000Z   index: $13
+2026-03-23T23:55:42.0470277Z   action_name: sel4test-hw-run
+2026-03-23T23:55:42.0470576Z env:
+2026-03-23T23:55:42.0472841Z   HW_SSH: ***
+
+2026-03-23T23:55:42.0473155Z ##[endgroup]
+2026-03-23T23:55:42.1583405Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/steps.sh
+2026-03-23T23:55:42.1637353Z ##[group]Setting up
+2026-03-23T23:55:42.1781486Z Agent pid 2350
+2026-03-23T23:55:42.2006240Z Cloning into 'seL4_libs'...
+2026-03-23T23:55:45.2426259Z Reading package lists...
+2026-03-23T23:55:45.4146776Z Building dependency tree...
+2026-03-23T23:55:45.4163146Z Reading state information...
+2026-03-23T23:55:45.5923434Z libffi-dev is already the newest version (3.4.6-1build1).
+2026-03-23T23:55:45.5924760Z libffi-dev set to manually installed.
+2026-03-23T23:55:45.5927122Z 0 upgraded, 0 newly installed, 0 to remove and 30 not upgraded.
+2026-03-23T23:55:49.2707105Z Collecting junitparser==3.*
+2026-03-23T23:55:49.3097049Z   Downloading junitparser-3.2.0-py2.py3-none-any.whl.metadata (9.0 kB)
+2026-03-23T23:55:49.3389258Z Collecting sel4-deps
+2026-03-23T23:55:49.3437048Z   Downloading sel4_deps-0.7.0-py3-none-any.whl.metadata (1.1 kB)
+2026-03-23T23:55:49.3540502Z Requirement already satisfied: six in /usr/lib/python3/dist-packages (from sel4-deps) (1.16.0)
+2026-03-23T23:55:49.3704890Z Collecting future (from sel4-deps)
+2026-03-23T23:55:49.3745806Z   Downloading future-1.0.0-py3-none-any.whl.metadata (4.0 kB)
+2026-03-23T23:55:49.3798844Z Requirement already satisfied: jinja2 in /usr/lib/python3/dist-packages (from sel4-deps) (3.1.2)
+2026-03-23T23:55:49.5916444Z Collecting lxml (from sel4-deps)
+2026-03-23T23:55:49.5956449Z   Downloading lxml-6.0.2-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.6 kB)
+2026-03-23T23:55:49.6105948Z Collecting ply (from sel4-deps)
+2026-03-23T23:55:49.6142587Z   Downloading ply-3.11-py2.py3-none-any.whl.metadata (844 bytes)
+2026-03-23T23:55:49.7003941Z Collecting psutil (from sel4-deps)
+2026-03-23T23:55:49.7036993Z   Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+2026-03-23T23:55:49.7282826Z Collecting bs4 (from sel4-deps)
+2026-03-23T23:55:49.7317560Z   Downloading bs4-0.0.2-py2.py3-none-any.whl.metadata (411 bytes)
+2026-03-23T23:55:49.7544017Z Collecting pyelftools (from sel4-deps)
+2026-03-23T23:55:49.7581727Z   Downloading pyelftools-0.32-py3-none-any.whl.metadata (372 bytes)
+2026-03-23T23:55:49.7797907Z Collecting sh (from sel4-deps)
+2026-03-23T23:55:49.7839531Z   Downloading sh-2.2.2-py3-none-any.whl.metadata (3.7 kB)
+2026-03-23T23:55:49.7878770Z Requirement already satisfied: pexpect in /usr/lib/python3/dist-packages (from sel4-deps) (4.9.0)
+2026-03-23T23:55:49.7888796Z Requirement already satisfied: pyyaml>=5.1 in /usr/lib/python3/dist-packages (from sel4-deps) (6.0.1)
+2026-03-23T23:55:49.7897195Z Requirement already satisfied: jsonschema in /usr/lib/python3/dist-packages (from sel4-deps) (4.10.3)
+2026-03-23T23:55:49.8033316Z Collecting pyfdt (from sel4-deps)
+2026-03-23T23:55:49.8093219Z   Downloading pyfdt-0.3.tar.gz (9.1 kB)
+2026-03-23T23:55:49.8150200Z   Preparing metadata (setup.py): started
+2026-03-23T23:55:50.0390215Z   Preparing metadata (setup.py): finished with status 'done'
+2026-03-23T23:55:50.0568434Z Collecting cmake-format==0.6.13 (from sel4-deps)
+2026-03-23T23:55:50.0622238Z   Downloading cmake_format-0.6.13-py3-none-any.whl.metadata (23 kB)
+2026-03-23T23:55:50.0796859Z Collecting guardonce (from sel4-deps)
+2026-03-23T23:55:50.0848511Z   Downloading guardonce-2.4.0-py2.py3-none-any.whl.metadata (3.4 kB)
+2026-03-23T23:55:50.1075221Z Collecting autopep8==2.3.2 (from sel4-deps)
+2026-03-23T23:55:50.1108837Z   Downloading autopep8-2.3.2-py2.py3-none-any.whl.metadata (16 kB)
+2026-03-23T23:55:50.1292967Z Collecting libarchive-c (from sel4-deps)
+2026-03-23T23:55:50.1337213Z   Downloading libarchive_c-5.3-py3-none-any.whl.metadata (5.8 kB)
+2026-03-23T23:55:50.1572585Z Collecting pycodestyle>=2.12.0 (from autopep8==2.3.2->sel4-deps)
+2026-03-23T23:55:50.1605145Z   Downloading pycodestyle-2.14.0-py2.py3-none-any.whl.metadata (4.5 kB)
+2026-03-23T23:55:50.1793355Z Collecting cmakelang>=0.6.13 (from cmake-format==0.6.13->sel4-deps)
+2026-03-23T23:55:50.1839220Z   Downloading cmakelang-0.6.13-py3-none-any.whl.metadata (23 kB)
+2026-03-23T23:55:50.2100166Z Collecting beautifulsoup4 (from bs4->sel4-deps)
+2026-03-23T23:55:50.2134743Z   Downloading beautifulsoup4-4.14.3-py3-none-any.whl.metadata (3.8 kB)
+2026-03-23T23:55:50.2364904Z Requirement already satisfied: attrs>=17.4.0 in /usr/lib/python3/dist-packages (from jsonschema->sel4-deps) (23.2.0)
+2026-03-23T23:55:50.2380493Z Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,>=0.14.0 in /usr/lib/python3/dist-packages (from jsonschema->sel4-deps) (0.20.0)
+2026-03-23T23:55:50.3428848Z Collecting soupsieve>=1.6.1 (from beautifulsoup4->bs4->sel4-deps)
+2026-03-23T23:55:50.3466382Z   Downloading soupsieve-2.8.3-py3-none-any.whl.metadata (4.6 kB)
+2026-03-23T23:55:50.3506623Z Requirement already satisfied: typing-extensions>=4.0.0 in /usr/lib/python3/dist-packages (from beautifulsoup4->bs4->sel4-deps) (4.10.0)
+2026-03-23T23:55:50.3588786Z Downloading junitparser-3.2.0-py2.py3-none-any.whl (13 kB)
+2026-03-23T23:55:50.3656092Z Downloading sel4_deps-0.7.0-py3-none-any.whl (1.4 kB)
+2026-03-23T23:55:50.3709641Z Downloading autopep8-2.3.2-py2.py3-none-any.whl (45 kB)
+2026-03-23T23:55:50.3753463Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.8/45.8 kB 17.2 MB/s eta 0:00:00
+2026-03-23T23:55:50.3815338Z Downloading cmake_format-0.6.13-py3-none-any.whl (19 kB)
+2026-03-23T23:55:50.3869672Z Downloading bs4-0.0.2-py2.py3-none-any.whl (1.2 kB)
+2026-03-23T23:55:50.3923294Z Downloading future-1.0.0-py3-none-any.whl (491 kB)
+2026-03-23T23:55:50.3994282Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 491.3/491.3 kB 90.7 MB/s eta 0:00:00
+2026-03-23T23:55:50.4036598Z Downloading guardonce-2.4.0-py2.py3-none-any.whl (15 kB)
+2026-03-23T23:55:50.4103133Z Downloading libarchive_c-5.3-py3-none-any.whl (17 kB)
+2026-03-23T23:55:50.4161285Z Downloading lxml-6.0.2-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.3 MB)
+2026-03-23T23:55:50.4478633Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 174.7 MB/s eta 0:00:00
+2026-03-23T23:55:50.4515574Z Downloading ply-3.11-py2.py3-none-any.whl (49 kB)
+2026-03-23T23:55:50.4554067Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.6/49.6 kB 18.6 MB/s eta 0:00:00
+2026-03-23T23:55:50.4585310Z Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+2026-03-23T23:55:50.4630024Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.6/155.6 kB 52.4 MB/s eta 0:00:00
+2026-03-23T23:55:50.4661941Z Downloading pyelftools-0.32-py3-none-any.whl (188 kB)
+2026-03-23T23:55:50.4708173Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.5/188.5 kB 59.0 MB/s eta 0:00:00
+2026-03-23T23:55:50.4757664Z Downloading sh-2.2.2-py3-none-any.whl (38 kB)
+2026-03-23T23:55:50.4833382Z Downloading cmakelang-0.6.13-py3-none-any.whl (159 kB)
+2026-03-23T23:55:50.4880676Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 159.8/159.8 kB 51.8 MB/s eta 0:00:00
+2026-03-23T23:55:50.4912482Z Downloading pycodestyle-2.14.0-py2.py3-none-any.whl (31 kB)
+2026-03-23T23:55:50.4965658Z Downloading beautifulsoup4-4.14.3-py3-none-any.whl (107 kB)
+2026-03-23T23:55:50.5007742Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.7/107.7 kB 37.6 MB/s eta 0:00:00
+2026-03-23T23:55:50.5037758Z Downloading soupsieve-2.8.3-py3-none-any.whl (37 kB)
+2026-03-23T23:55:50.5348521Z Building wheels for collected packages: pyfdt
+2026-03-23T23:55:50.5354119Z   Building wheel for pyfdt (setup.py): started
+2026-03-23T23:55:50.8467647Z   Building wheel for pyfdt (setup.py): finished with status 'done'
+2026-03-23T23:55:50.8471004Z   Created wheel for pyfdt: filename=pyfdt-0.3-py3-none-any.whl size=10969 sha256=4545171374e1d2efb35a40e8d02f45d3ab49d88a307ab7adf8dac097b26d6098
+2026-03-23T23:55:50.8472923Z   Stored in directory: /home/runner/.cache/pip/wheels/d9/8e/2a/cff33f3accb8eaa34608e68786db1ec323a5f6bce8d724d90a
+2026-03-23T23:55:50.8486993Z Successfully built pyfdt
+2026-03-23T23:55:51.1407078Z Installing collected packages: pyfdt, pyelftools, ply, libarchive-c, junitparser, guardonce, soupsieve, sh, pycodestyle, psutil, lxml, future, cmakelang, cmake-format, beautifulsoup4, autopep8, bs4, sel4-deps
+2026-03-23T23:55:52.0867057Z Successfully installed autopep8-2.3.2 beautifulsoup4-4.14.3 bs4-0.0.2 cmake-format-0.6.13 cmakelang-0.6.13 future-1.0.0 guardonce-2.4.0 junitparser-3.2.0 libarchive-c-5.3 lxml-6.0.2 ply-3.11 psutil-7.2.2 pycodestyle-2.14.0 pyelftools-0.32 pyfdt-0.3 sel4-deps-0.7.0 sh-2.2.2 soupsieve-2.8.3
+2026-03-23T23:55:52.1822731Z ##[endgroup]
+2026-03-23T23:55:52.3268634Z 
+2026-03-23T23:55:52.3270034Z ##[group]AM335X_BONEBLACK_debug_clang_32
+2026-03-23T23:55:52.3271551Z [1m-----------[ start test AM335X_BONEBLACK_debug_clang_32 ]-----------[0m
+2026-03-23T23:55:52.3273317Z [33m+++ tar xvzf ../AM335X_BONEBLACK_debug_clang_32-images.tar.gz[0m
+2026-03-23T23:55:52.3304599Z images/
+2026-03-23T23:55:52.3306823Z images/sel4test-driver-image-arm-am335x
+2026-03-23T23:55:52.3526144Z [33m+++ mq.sh sem -info bboneblack[0m
+2026-03-23T23:56:14.3679674Z Lock for bboneblack currently free
+2026-03-23T23:56:14.3681129Z [33m+++ time mq.sh sem -wait bboneblack -k seL4/seL4-HW-22890202979-hw-run-13 -T 1800[0m
+2026-03-24T00:12:43.2206273Z 0.02user 0.03system 16:28.85elapsed 0%CPU (0avgtext+0avgdata 8200maxresident)k
+2026-03-24T00:12:43.2207072Z 0inputs+0outputs (0major+5516minor)pagefaults 0swaps
+2026-03-24T00:12:43.2209182Z [33m+++ time mq.sh run -c </testsuite> -s bboneblack -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-22890202979-hw-run-13 -f images/sel4test-driver-image-arm-am335x[0m
+2026-03-24T00:12:50.4289678Z Lock acquired, we are allowed to run
+2026-03-24T00:12:59.6028020Z pxelinux=False
+2026-03-24T00:12:59.6028871Z copied '/tmp/tmp.Pch1wO1rW7' -> '/tftpboot/bboneblack/sel4-image'
+2026-03-24T00:12:59.6029558Z removed '/tmp/tmp.Pch1wO1rW7'
+2026-03-24T00:12:59.6030382Z co
+2026-03-24T00:12:59.6030808Z ^Eco
+2026-03-24T00:12:59.8038155Z [Enter `^Ec?' for help]
+2026-03-24T00:13:00.3565639Z [connecting...up]
+2026-03-24T00:13:00.3566385Z Rebooting bboneblack and loading image: /tmp/tmp.Pch1wO1rW7
+2026-03-24T00:13:12.3779093Z  
+2026-03-24T00:13:12.3780843Z U-Boot SPL 2015.10-00001-g143c9ee (Nov 06 2015 - 15:27:19)
+2026-03-24T00:13:12.5855047Z bad magic
+2026-03-24T00:13:12.7865100Z 
+2026-03-24T00:13:12.7865114Z 
+2026-03-24T00:13:12.7865122Z 
+2026-03-24T00:13:12.7865995Z U-Boot 2015.10-00001-g143c9ee (Nov 06 2015 - 15:27:19 -0600), Build: jenkins-github_Bootloader-Builder-274
+2026-03-24T00:13:12.7866622Z 
+2026-03-24T00:13:12.7866647Z 
+2026-03-24T00:13:12.7866776Z        Watchdog enabled
+2026-03-24T00:13:12.7866997Z 
+2026-03-24T00:13:12.7867117Z I2C:   ready
+2026-03-24T00:13:12.7867281Z 
+2026-03-24T00:13:12.7867432Z DRAM:  512 MiB
+2026-03-24T00:13:12.7867608Z 
+2026-03-24T00:13:12.7867770Z Reset Source: Power-on reset has occurred.
+2026-03-24T00:13:12.7868073Z 
+2026-03-24T00:13:12.7868220Z MMC:   OMAP SD/MMC: 0, OMAP SD/MMC: 1
+2026-03-24T00:13:12.7868512Z 
+2026-03-24T00:13:12.7868649Z Using default environment
+2026-03-24T00:13:12.7868868Z 
+2026-03-24T00:13:12.9877792Z 
+2026-03-24T00:13:12.9878179Z Net:   <ethaddr> not set. Validating first E-fuse MAC
+2026-03-24T00:13:12.9878685Z 
+2026-03-24T00:13:12.9878802Z cpsw
+2026-03-24T00:13:12.9878955Z 
+2026-03-24T00:13:12.9879110Z Hit any key to stop autoboot:  1
+2026-03-24T00:13:12.9879661Z  0
+2026-03-24T00:13:12.9879829Z 
+2026-03-24T00:13:14.3879483Z => setenv autoload no && dhcp && tftpboot 0x83000000 bboneblack/sel4-image
+2026-03-24T00:13:14.5892478Z setenv autoload no && dhcp && tftpboot 0x83000000 bboneblack/sel4-image
+2026-03-24T00:13:14.5893011Z 
+2026-03-24T00:13:14.5893286Z cpsw Waiting for PHY auto negotiation to complete. done
+2026-03-24T00:13:14.5894095Z 
+2026-03-24T00:13:14.5894321Z link up on port 0, speed 100, full duplex
+2026-03-24T00:13:14.5894621Z 
+2026-03-24T00:13:14.5894763Z BOOTP broadcast 1
+2026-03-24T00:13:14.7903112Z 
+2026-03-24T00:13:14.7903342Z BOOTP broadcast 2
+2026-03-24T00:13:15.2454177Z 
+2026-03-24T00:13:15.2454918Z BOOTP broadcast 3
+2026-03-24T00:13:16.2446697Z 
+2026-03-24T00:13:16.2447118Z BOOTP broadcast 4
+2026-03-24T00:13:18.2449394Z 
+2026-03-24T00:13:18.2449775Z BOOTP broadcast 5
+2026-03-24T00:13:20.2425788Z 
+2026-03-24T00:13:20.2426148Z BOOTP broadcast 6
+2026-03-24T00:13:20.2426400Z 
+2026-03-24T00:13:20.2426600Z DHCP client bound to address 172.16.1.137 (5765 ms)
+2026-03-24T00:13:20.4436139Z 
+2026-03-24T00:13:20.4436469Z link up on port 0, speed 100, full duplex
+2026-03-24T00:13:20.4436963Z 
+2026-03-24T00:13:20.4437207Z Using cpsw device
+2026-03-24T00:13:20.4437571Z 
+2026-03-24T00:13:20.4438008Z TFTP from server 172.16.0.2; our IP address is 172.16.1.137
+2026-03-24T00:13:20.4438652Z 
+2026-03-24T00:13:20.4438882Z Filename 'bboneblack/sel4-image'.
+2026-03-24T00:13:20.4439202Z 
+2026-03-24T00:13:20.4439362Z Load address: 0x83000000
+2026-03-24T00:13:20.4439619Z 
+2026-03-24T00:13:20.6449223Z Loading: *#################################################################
+2026-03-24T00:13:20.6449690Z 
+2026-03-24T00:13:20.8461036Z 	 #################################################################
+2026-03-24T00:13:20.8461480Z 
+2026-03-24T00:13:21.2375519Z 	 #################################################################
+2026-03-24T00:13:21.2375986Z 
+2026-03-24T00:13:21.4388136Z 	 ###################################
+2026-03-24T00:13:21.4388665Z 
+2026-03-24T00:13:21.4388864Z 	 3.2 MiB/s
+2026-03-24T00:13:21.4389150Z 
+2026-03-24T00:13:21.4389341Z done
+2026-03-24T00:13:21.4412043Z 
+2026-03-24T00:13:21.4412251Z Bytes transferred = 3362852 (335024 hex)
+2026-03-24T00:13:21.4412611Z 
+2026-03-24T00:13:22.7858718Z => bootm
+2026-03-24T00:13:22.9868899Z bootm
+2026-03-24T00:13:22.9869256Z 
+2026-03-24T00:13:22.9869574Z ## Booting kernel from Legacy Image at 83000000 ...
+2026-03-24T00:13:22.9869976Z 
+2026-03-24T00:13:22.9870119Z    Image Name:
+2026-03-24T00:13:22.9870329Z 
+2026-03-24T00:13:22.9870489Z    Created:      2026-03-10   7:01:20 UTC
+2026-03-24T00:13:22.9870810Z 
+2026-03-24T00:13:22.9871048Z    Image Type:   ARM Linux Kernel Image (uncompressed)
+2026-03-24T00:13:22.9871453Z 
+2026-03-24T00:13:22.9871618Z    Data Size:    3362788 Bytes = 3.2 MiB
+2026-03-24T00:13:22.9872518Z 
+2026-03-24T00:13:22.9872674Z    Load Address: 8048f000
+2026-03-24T00:13:22.9872934Z 
+2026-03-24T00:13:22.9873092Z    Entry Point:  8048f000
+2026-03-24T00:13:22.9873337Z 
+2026-03-24T00:13:22.9873500Z    Verifying Checksum ... OK
+2026-03-24T00:13:22.9873774Z 
+2026-03-24T00:13:22.9873930Z    Loading Kernel Image ... OK
+2026-03-24T00:13:22.9874207Z 
+2026-03-24T00:13:22.9874212Z 
+2026-03-24T00:13:22.9874359Z Starting kernel ...
+2026-03-24T00:13:22.9874579Z 
+2026-03-24T00:13:22.9874584Z 
+2026-03-24T00:13:22.9874588Z 
+2026-03-24T00:13:22.9874860Z ELF-loader started on CPU: ARM Ltd. Cortex-A8 r3p2
+2026-03-24T00:13:22.9875401Z   paddr=[8048f000..807d1047]
+2026-03-24T00:13:22.9875730Z No DTB passed in from boot loader.
+2026-03-24T00:13:22.9876129Z Looking for DTB in CPIO archive...found at 804cfd1c.
+2026-03-24T00:13:23.1882064Z Loaded DTB from 804cfd1c.
+2026-03-24T00:13:23.1882501Z    paddr=[80040000..80048fff]
+2026-03-24T00:13:23.1882929Z ELF-loading image 'kernel' to 80000000
+2026-03-24T00:13:23.1883370Z   paddr=[80000000..8003ffff]
+2026-03-24T00:13:23.1883786Z   vaddr=[e0000000..e003ffff]
+2026-03-24T00:13:23.1884153Z   virt_entry=e0000000
+2026-03-24T00:13:23.4048770Z ELF-loading image 'rootserver' to 80049000
+2026-03-24T00:13:23.4049275Z   paddr=[80049000..8046efff]
+2026-03-24T00:13:23.4049663Z   vaddr=[10000..435fff]
+2026-03-24T00:13:23.4050012Z   virt_entry=1fe30
+2026-03-24T00:13:29.0374279Z Enabling MMU and jumping to entry point...
+2026-03-24T00:13:29.0374638Z 
+2026-03-24T00:13:29.2386306Z Bootstrapping kernel
+2026-03-24T00:13:29.2387033Z available phys memory regions: 1
+2026-03-24T00:13:29.2388114Z   [80000000..a0000000)
+2026-03-24T00:13:29.2388478Z reserved virt address space regions: 4
+2026-03-24T00:13:29.2389027Z   [e0000000..e0040000)
+2026-03-24T00:13:29.2389415Z   [e0040000..e0048905)
+2026-03-24T00:13:29.2389720Z   [e0049000..e046f000)
+2026-03-24T00:13:29.2390010Z   [ff000000..ff100000)
+2026-03-24T00:13:29.2390347Z Booting all finished, dropped to user space
+2026-03-24T00:13:29.2390792Z Caught cap fault in send phase at address 0
+2026-03-24T00:13:29.2391213Z while trying to handle:
+2026-03-24T00:13:29.2391611Z vm fault on data at address 0xdf7fe000 with status 0x805
+2026-03-24T00:13:29.2392564Z in thread 0xffef7200 "sel4test-driver" at address 0x8b000
+2026-03-24T00:13:29.2393019Z With stack:
+2026-03-24T00:13:29.2393258Z 0x323d18: 0x323da8
+2026-03-24T00:13:29.2393468Z 0x323d1c: 0x418ac
+2026-03-24T00:13:29.2393670Z 0x323d20: 0xf
+2026-03-24T00:13:29.2393867Z 0x323d24: 0x1
+2026-03-24T00:13:29.2394052Z 0x323d28: 0x323d5c
+2026-03-24T00:13:29.2394245Z 0x323d2c: 0x323d58
+2026-03-24T00:13:29.2394453Z 0x323d30: 0x20
+2026-03-24T00:13:29.2394646Z 0x323d34: 0x2
+2026-03-24T00:13:29.2394834Z 0x323d38: 0x0
+2026-03-24T00:13:29.2395031Z 0x323d3c: 0xdf7fe000
+2026-03-24T00:13:29.2395244Z 0x323d40: 0x49d
+2026-03-24T00:13:29.2395440Z 0x323d44: 0x3
+2026-03-24T00:13:29.2395628Z 0x323d48: 0x300004
+2026-03-24T00:13:29.2395822Z 0x323d4c: 0x0
+2026-03-24T00:13:29.2396005Z 0x323d50: 0x0
+2026-03-24T00:13:29.2396190Z 0x323d54: 0xf
+2026-03-24T00:28:22.9067716Z 
+2026-03-24T00:28:22.9068115Z [[Timeout]]
+2026-03-24T00:28:22.9068453Z None
+2026-03-24T00:28:23.1079318Z 
+2026-03-24T00:28:23.1083532Z console_run returned -1
+2026-03-24T00:28:23.1083836Z Shutting down bboneblack
+2026-03-24T00:28:23.3716991Z 
+2026-03-24T00:28:26.6408235Z Command exited with non-zero status 255
+2026-03-24T00:28:26.6409438Z 0.03user 0.04system 15:43.41elapsed 0%CPU (0avgtext+0avgdata 8272maxresident)k
+2026-03-24T00:28:26.6410302Z 272inputs+8outputs (1major+7191minor)pagefaults 0swaps
+2026-03-24T00:28:26.6412107Z [31;1m>>> command failed, aborting.[0m
+2026-03-24T00:28:26.6412986Z [33m+++ mq.sh sem -signal bboneblack -k seL4/seL4-HW-22890202979-hw-run-13[0m
+2026-03-24T00:28:39.1735214Z [1m-----------[ end test AM335X_BONEBLACK_debug_clang_32 ]-----------[0m
+2026-03-24T00:28:39.1736325Z ##[endgroup]
+2026-03-24T00:28:39.1736677Z [31;1mAM335X_BONEBLACK_debug_clang_32 FAILED[0m
+2026-03-24T00:28:39.1736944Z 
+2026-03-24T00:28:39.1737275Z ##[group]AM335X_BONEBLACK_debug_MCS_clang_32
+2026-03-24T00:28:39.1738212Z [1m-----------[ start test AM335X_BONEBLACK_debug_MCS_clang_32 ]-----------[0m
+2026-03-24T00:28:39.1744885Z [33m+++ tar xvzf ../AM335X_BONEBLACK_debug_MCS_clang_32-images.tar.gz[0m
+2026-03-24T00:28:39.1773841Z images/
+2026-03-24T00:28:39.1774238Z images/sel4test-driver-image-arm-am335x
+2026-03-24T00:28:39.1984517Z [33m+++ mq.sh sem -info bboneblack[0m
+2026-03-24T00:28:48.1239345Z Lock for bboneblack currently free
+2026-03-24T00:28:48.1240619Z [33m+++ time mq.sh sem -wait bboneblack -k seL4/seL4-HW-22890202979-hw-run-13 -T 1800[0m
+2026-03-24T00:44:33.1416265Z 0.02user 0.03system 15:45.01elapsed 0%CPU (0avgtext+0avgdata 8188maxresident)k
+2026-03-24T00:44:33.1417051Z 0inputs+0outputs (0major+5487minor)pagefaults 0swaps
+2026-03-24T00:44:33.1418769Z [33m+++ time mq.sh run -c </testsuite> -s bboneblack -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-22890202979-hw-run-13 -f images/sel4test-driver-image-arm-am335x[0m
+2026-03-24T00:44:36.1600619Z Lock acquired, we are allowed to run
+2026-03-24T00:44:42.4770318Z pxelinux=False
+2026-03-24T00:44:42.4771129Z copied '/tmp/tmp.TO5QExq0S0' -> '/tftpboot/bboneblack/sel4-image'
+2026-03-24T00:44:42.6784117Z removed '/tmp/tmp.TO5QExq0S0'
+2026-03-24T00:44:42.6784958Z co
+2026-03-24T00:44:42.6785357Z ^Eco
+2026-03-24T00:44:42.8795353Z [Enter `^Ec?' for help]
+2026-03-24T00:44:43.1732261Z [connecting...up]
+2026-03-24T00:44:43.3743819Z Rebooting bboneblack and loading image: /tmp/tmp.TO5QExq0S0
+2026-03-24T00:44:55.4109729Z  
+2026-03-24T00:44:55.4110447Z U-Boot SPL 2015.10-00001-g143c9ee (Nov 06 2015 - 15:27:19)
+2026-03-24T00:44:55.6135641Z bad magic
+2026-03-24T00:44:55.8145956Z 
+2026-03-24T00:44:55.8146058Z 
+2026-03-24T00:44:55.8146065Z 
+2026-03-24T00:44:55.8146852Z U-Boot 2015.10-00001-g143c9ee (Nov 06 2015 - 15:27:19 -0600), Build: jenkins-github_Bootloader-Builder-274
+2026-03-24T00:44:55.8147724Z 
+2026-03-24T00:44:55.8147729Z 
+2026-03-24T00:44:55.8147850Z        Watchdog enabled
+2026-03-24T00:44:55.8148044Z 
+2026-03-24T00:44:55.8148164Z I2C:   ready
+2026-03-24T00:44:55.8148314Z 
+2026-03-24T00:44:55.8148420Z DRAM:  512 MiB
+2026-03-24T00:44:55.8148567Z 
+2026-03-24T00:44:55.8148720Z Reset Source: Power-on reset has occurred.
+2026-03-24T00:44:55.8148994Z 
+2026-03-24T00:44:55.8149120Z MMC:   OMAP SD/MMC: 0, OMAP SD/MMC: 1
+2026-03-24T00:44:55.8149358Z 
+2026-03-24T00:44:55.8149479Z Using default environment
+2026-03-24T00:44:55.8149667Z 
+2026-03-24T00:44:56.0156750Z 
+2026-03-24T00:44:56.0157411Z Net:   <ethaddr> not set. Validating first E-fuse MAC
+2026-03-24T00:44:56.0157988Z 
+2026-03-24T00:44:56.0158173Z cpsw
+2026-03-24T00:44:56.0158419Z 
+2026-03-24T00:44:56.0158651Z Hit any key to stop autoboot:  1
+2026-03-24T00:44:56.0159245Z  0
+2026-03-24T00:44:56.0159368Z 
+2026-03-24T00:44:57.4150468Z => setenv autoload no && dhcp && tftpboot 0x83000000 bboneblack/sel4-image
+2026-03-24T00:44:57.6159689Z setenv autoload no && dhcp && tftpboot 0x83000000 bboneblack/sel4-image
+2026-03-24T00:44:57.6160266Z 
+2026-03-24T00:44:57.6160542Z cpsw Waiting for PHY auto negotiation to complete. done
+2026-03-24T00:44:57.6160849Z 
+2026-03-24T00:44:57.6160967Z link up on port 0, speed 100, full duplex
+2026-03-24T00:44:57.6161187Z 
+2026-03-24T00:44:57.6161285Z BOOTP broadcast 1
+2026-03-24T00:44:57.8168341Z 
+2026-03-24T00:44:57.8176744Z BOOTP broadcast 2
+2026-03-24T00:44:58.2640850Z 
+2026-03-24T00:44:58.2641373Z BOOTP broadcast 3
+2026-03-24T00:44:59.2646929Z 
+2026-03-24T00:44:59.2647567Z BOOTP broadcast 4
+2026-03-24T00:45:01.2639072Z 
+2026-03-24T00:45:03.2654664Z BOOTP broadcast 5
+2026-03-24T00:45:03.2655040Z 
+2026-03-24T00:45:03.2655259Z BOOTP broadcast 6
+2026-03-24T00:45:03.4667122Z 
+2026-03-24T00:45:03.4667758Z DHCP client bound to address 172.16.1.137 (5766 ms)
+2026-03-24T00:45:03.4668406Z 
+2026-03-24T00:45:03.4668710Z link up on port 0, speed 100, full duplex
+2026-03-24T00:45:03.4669081Z 
+2026-03-24T00:45:03.4669209Z Using cpsw device
+2026-03-24T00:45:03.4669379Z 
+2026-03-24T00:45:03.4669576Z TFTP from server 172.16.0.2; our IP address is 172.16.1.137
+2026-03-24T00:45:03.4670299Z 
+2026-03-24T00:45:03.4670428Z Filename 'bboneblack/sel4-image'.
+2026-03-24T00:45:03.4670661Z 
+2026-03-24T00:45:03.4670778Z Load address: 0x83000000
+2026-03-24T00:45:03.4670970Z 
+2026-03-24T00:45:03.6684122Z Loading: *#################################################################
+2026-03-24T00:45:03.6684698Z 
+2026-03-24T00:45:04.0710089Z 	 #################################################################
+2026-03-24T00:45:04.0710641Z 
+2026-03-24T00:45:04.2725868Z 	 #################################################################
+2026-03-24T00:45:04.2726342Z 
+2026-03-24T00:45:04.4737860Z 	 ###############################################
+2026-03-24T00:45:04.4738453Z 
+2026-03-24T00:45:04.4738613Z 	 3.1 MiB/s
+2026-03-24T00:45:04.4738798Z 
+2026-03-24T00:45:04.4738941Z done
+2026-03-24T00:45:04.4739073Z 
+2026-03-24T00:45:04.4739178Z Bytes transferred = 3537956 (35fc24 hex)
+2026-03-24T00:45:04.4739386Z 
+2026-03-24T00:45:05.8964203Z => bootm
+2026-03-24T00:45:06.0977050Z bootm
+2026-03-24T00:45:06.0977370Z 
+2026-03-24T00:45:06.0977727Z ## Booting kernel from Legacy Image at 83000000 ...
+2026-03-24T00:45:06.0978285Z 
+2026-03-24T00:45:06.0978498Z    Image Name:
+2026-03-24T00:45:06.0978792Z 
+2026-03-24T00:45:06.0978924Z    Created:      2026-03-10   7:01:36 UTC
+2026-03-24T00:45:06.0979181Z 
+2026-03-24T00:45:06.0979380Z    Image Type:   ARM Linux Kernel Image (uncompressed)
+2026-03-24T00:45:06.0979671Z 
+2026-03-24T00:45:06.0979797Z    Data Size:    3537892 Bytes = 3.4 MiB
+2026-03-24T00:45:06.0980037Z 
+2026-03-24T00:45:06.0980148Z    Load Address: 804b7000
+2026-03-24T00:45:06.0980339Z 
+2026-03-24T00:45:06.0980813Z    Entry Point:  804b7000
+2026-03-24T00:45:06.0981008Z 
+2026-03-24T00:45:06.0981134Z    Verifying Checksum ... OK
+2026-03-24T00:45:06.0981344Z 
+2026-03-24T00:45:06.0981463Z    Loading Kernel Image ... OK
+2026-03-24T00:45:06.0981678Z 
+2026-03-24T00:45:06.0981701Z 
+2026-03-24T00:45:06.0982044Z Starting kernel ...
+2026-03-24T00:45:06.0982224Z 
+2026-03-24T00:45:06.0982227Z 
+2026-03-24T00:45:06.0982231Z 
+2026-03-24T00:45:06.0982409Z ELF-loader started on CPU: ARM Ltd. Cortex-A8 r3p2
+2026-03-24T00:45:06.0982817Z   paddr=[804b7000..80825047]
+2026-03-24T00:45:06.0983134Z No DTB passed in from boot loader.
+2026-03-24T00:45:06.0983532Z Looking for DTB in CPIO archive...found at 8050251c.
+2026-03-24T00:45:06.2987630Z Loaded DTB from 8050251c.
+2026-03-24T00:45:06.2988269Z    paddr=[80048000..80050fff]
+2026-03-24T00:45:06.2988875Z ELF-loading image 'kernel' to 80000000
+2026-03-24T00:45:06.2989340Z   paddr=[80000000..80047fff]
+2026-03-24T00:45:06.2989696Z   vaddr=[e0000000..e0047fff]
+2026-03-24T00:45:06.2990062Z   virt_entry=e0000000
+2026-03-24T00:45:06.5841413Z ELF-loading image 'rootserver' to 80051000
+2026-03-24T00:45:06.5842258Z   paddr=[80051000..80496fff]
+2026-03-24T00:45:06.5842636Z   vaddr=[10000..455fff]
+2026-03-24T00:45:06.5842962Z   virt_entry=20604
+2026-03-24T00:45:12.4262461Z Enabling MMU and jumping to entry point...
+2026-03-24T00:45:12.4263017Z 
+2026-03-24T00:45:12.6273931Z Bootstrapping kernel
+2026-03-24T00:45:12.6274650Z available phys memory regions: 1
+2026-03-24T00:45:12.6275306Z   [80000000..a0000000)
+2026-03-24T00:45:12.6275828Z reserved virt address space regions: 4
+2026-03-24T00:45:12.6276267Z   [e0000000..e0048000)
+2026-03-24T00:45:12.6276599Z   [e0048000..e0050905)
+2026-03-24T00:45:12.6276920Z   [e0051000..e0497000)
+2026-03-24T00:45:12.6277247Z   [ff000000..ff100000)
+2026-03-24T00:45:12.6277625Z Booting all finished, dropped to user space
+2026-03-24T00:45:12.6278190Z Found thread has no fault handler while trying to handle:
+2026-03-24T00:45:12.6278823Z vm fault on data at address 0xdf7fe000 with status 0x805
+2026-03-24T00:45:12.6279430Z in thread 0xffef7200 "sel4test-driver" at address 0x8c460
+2026-03-24T00:45:12.6279935Z With stack:
+2026-03-24T00:45:12.6280232Z 0x343d18: 0x343da8
+2026-03-24T00:45:12.6280557Z 0x343d1c: 0x42b04
+2026-03-24T00:45:12.6280870Z 0x343d20: 0xf
+2026-03-24T00:45:12.6281165Z 0x343d24: 0x1
+2026-03-24T00:45:12.6281469Z 0x343d28: 0x343d5c
+2026-03-24T00:45:12.6281723Z 0x343d2c: 0x343d58
+2026-03-24T00:45:12.6282508Z 0x343d30: 0x20
+2026-03-24T00:45:12.6282709Z 0x343d34: 0x2
+2026-03-24T00:45:12.6282913Z 0x343d38: 0x0
+2026-03-24T00:45:12.6283106Z 0x343d3c: 0xdf7fe000
+2026-03-24T00:45:12.6283318Z 0x343d40: 0x4c2
+2026-03-24T00:45:12.6283522Z 0x343d44: 0x3
+2026-03-24T00:45:12.6283714Z 0x343d48: 0x320004
+2026-03-24T00:45:12.6283911Z 0x343d4c: 0x0
+2026-03-24T00:45:12.6284097Z 0x343d50: 0x0
+2026-03-24T00:45:12.6284283Z 0x343d54: 0xf
+2026-03-24T01:00:06.0131685Z 
+2026-03-24T01:00:06.0132517Z [[Timeout]]
+2026-03-24T01:00:06.0133028Z None
+2026-03-24T01:00:06.2146272Z 
+2026-03-24T01:00:06.2146882Z console_run returned -1
+2026-03-24T01:00:06.2147510Z Shutting down bboneblack
+2026-03-24T01:00:06.4994778Z 
+2026-03-24T01:00:09.8378796Z Command exited with non-zero status 255
+2026-03-24T01:00:09.8380557Z 0.02user 0.04system 15:36.69elapsed 0%CPU (0avgtext+0avgdata 8244maxresident)k
+2026-03-24T01:00:09.8383416Z 0inputs+8outputs (0major+7177minor)pagefaults 0swaps
+2026-03-24T01:00:09.8384290Z [31;1m>>> command failed, aborting.[0m
+2026-03-24T01:00:09.8385133Z [33m+++ mq.sh sem -signal bboneblack -k seL4/seL4-HW-22890202979-hw-run-13[0m
+2026-03-24T01:00:14.8502611Z [1m-----------[ end test AM335X_BONEBLACK_debug_MCS_clang_32 ]-----------[0m
+2026-03-24T01:00:14.8503758Z ##[endgroup]
+2026-03-24T01:00:14.8504124Z [31;1mAM335X_BONEBLACK_debug_MCS_clang_32 FAILED[0m
+2026-03-24T01:00:14.8504406Z 
+2026-03-24T01:00:14.8504733Z ##[group]AM335X_BONEBLACK_release_clang_32
+2026-03-24T01:00:14.8505234Z [1m-----------[ start test AM335X_BONEBLACK_release_clang_32 ]-----------[0m
+2026-03-24T01:00:14.8512189Z [33m+++ tar xvzf ../AM335X_BONEBLACK_release_clang_32-images.tar.gz[0m
+2026-03-24T01:00:14.8540678Z images/
+2026-03-24T01:00:14.8541068Z images/sel4test-driver-image-arm-am335x
+2026-03-24T01:00:14.8622658Z [33m+++ mq.sh sem -info bboneblack[0m
+2026-03-24T01:00:18.4912351Z Lock for bboneblack currently free
+2026-03-24T01:00:18.4913326Z [33m+++ time mq.sh sem -wait bboneblack -k seL4/seL4-HW-22890202979-hw-run-13 -T 1800[0m
+2026-03-24T01:00:22.1132152Z 0.02user 0.02system 0:03.62elapsed 1%CPU (0avgtext+0avgdata 8272maxresident)k
+2026-03-24T01:00:22.1132736Z 0inputs+0outputs (0major+4206minor)pagefaults 0swaps
+2026-03-24T01:00:22.1134439Z [33m+++ time mq.sh run -c </testsuite> -s bboneblack -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-22890202979-hw-run-13 -f images/sel4test-driver-image-arm-am335x[0m
+2026-03-24T01:00:24.8782290Z Lock acquired, we are allowed to run
+2026-03-24T01:00:30.4658930Z pxelinux=False
+2026-03-24T01:00:30.4659469Z copied '/tmp/tmp.grG85VaYKq' -> '/tftpboot/bboneblack/sel4-image'
+2026-03-24T01:00:30.4659984Z removed '/tmp/tmp.grG85VaYKq'
+2026-03-24T01:00:30.6672865Z co
+2026-03-24T01:00:30.6673458Z ^Eco
+2026-03-24T01:00:30.6673977Z [Enter `^Ec?' for help]
+2026-03-24T01:00:31.0696931Z [connecting...up]
+2026-03-24T01:00:31.0697732Z Rebooting bboneblack and loading image: /tmp/tmp.grG85VaYKq
+2026-03-24T01:00:43.2473123Z  
+2026-03-24T01:00:43.2473588Z U-Boot SPL 2015.10-00001-g143c9ee (Nov 06 2015 - 15:27:19)
+2026-03-24T01:00:43.4486306Z bad magic
+2026-03-24T01:00:43.6497929Z 
+2026-03-24T01:00:43.6497941Z 
+2026-03-24T01:00:43.6497949Z 
+2026-03-24T01:00:43.6498615Z U-Boot 2015.10-00001-g143c9ee (Nov 06 2015 - 15:27:19 -0600), Build: jenkins-github_Bootloader-Builder-274
+2026-03-24T01:00:43.6499195Z 
+2026-03-24T01:00:43.6499201Z 
+2026-03-24T01:00:43.6499323Z        Watchdog enabled
+2026-03-24T01:00:43.6499547Z 
+2026-03-24T01:00:43.6499662Z I2C:   ready
+2026-03-24T01:00:43.6499818Z 
+2026-03-24T01:00:43.6499941Z DRAM:  512 MiB
+2026-03-24T01:00:43.6500104Z 
+2026-03-24T01:00:43.6500285Z Reset Source: Power-on reset has occurred.
+2026-03-24T01:00:43.6500568Z 
+2026-03-24T01:00:43.6500711Z MMC:   OMAP SD/MMC: 0, OMAP SD/MMC: 1
+2026-03-24T01:00:43.6500957Z 
+2026-03-24T01:00:43.6501086Z Using default environment
+2026-03-24T01:00:43.6501290Z 
+2026-03-24T01:00:43.8509520Z 
+2026-03-24T01:00:43.8509984Z Net:   <ethaddr> not set. Validating first E-fuse MAC
+2026-03-24T01:00:43.8510552Z 
+2026-03-24T01:00:43.8511020Z cpsw
+2026-03-24T01:00:43.8511174Z 
+2026-03-24T01:00:43.8511321Z Hit any key to stop autoboot:  1
+2026-03-24T01:00:43.8512148Z  0
+2026-03-24T01:00:43.8512313Z 
+2026-03-24T01:00:45.2403297Z => setenv autoload no && dhcp && tftpboot 0x83000000 bboneblack/sel4-image
+2026-03-24T01:00:45.4413193Z setenv autoload no && dhcp && tftpboot 0x83000000 bboneblack/sel4-image
+2026-03-24T01:00:45.4413805Z 
+2026-03-24T01:00:45.4414104Z cpsw Waiting for PHY auto negotiation to complete. done
+2026-03-24T01:00:45.4414573Z 
+2026-03-24T01:00:45.4414774Z link up on port 0, speed 100, full duplex
+2026-03-24T01:00:45.4415199Z 
+2026-03-24T01:00:45.4415361Z BOOTP broadcast 1
+2026-03-24T01:00:45.6420353Z 
+2026-03-24T01:00:45.6420580Z BOOTP broadcast 2
+2026-03-24T01:00:46.0903276Z 
+2026-03-24T01:00:46.0903731Z BOOTP broadcast 3
+2026-03-24T01:00:47.0884595Z 
+2026-03-24T01:00:47.0884954Z BOOTP broadcast 4
+2026-03-24T01:00:49.0891648Z 
+2026-03-24T01:00:49.0892382Z BOOTP broadcast 5
+2026-03-24T01:00:51.0889557Z 
+2026-03-24T01:00:51.0889990Z BOOTP broadcast 6
+2026-03-24T01:00:51.2901001Z 
+2026-03-24T01:00:51.2901528Z DHCP client bound to address 172.16.1.137 (5769 ms)
+2026-03-24T01:00:51.2902516Z 
+2026-03-24T01:00:51.2902847Z link up on port 0, speed 100, full duplex
+2026-03-24T01:00:51.2903473Z 
+2026-03-24T01:00:51.2903730Z Using cpsw device
+2026-03-24T01:00:51.2904167Z 
+2026-03-24T01:00:51.2904564Z TFTP from server 172.16.0.2; our IP address is 172.16.1.137
+2026-03-24T01:00:51.2905041Z 
+2026-03-24T01:00:51.2905229Z Filename 'bboneblack/sel4-image'.
+2026-03-24T01:00:51.2905562Z 
+2026-03-24T01:00:51.2908646Z Load address: 0x83000000
+2026-03-24T01:00:51.2908996Z 
+2026-03-24T01:00:51.4915937Z Loading: *#################################################################
+2026-03-24T01:00:51.4916686Z 
+2026-03-24T01:00:51.4916904Z 	 #######
+2026-03-24T01:00:51.4917214Z 
+2026-03-24T01:00:51.4917360Z 	 3 MiB/s
+2026-03-24T01:00:51.4917549Z 
+2026-03-24T01:00:51.4917690Z done
+2026-03-24T01:00:51.4917868Z 
+2026-03-24T01:00:51.4918040Z Bytes transferred = 1050340 (1006e4 hex)
+2026-03-24T01:00:51.4918396Z 
+2026-03-24T01:00:52.9589658Z => bootm
+2026-03-24T01:00:53.1602371Z bootm
+2026-03-24T01:00:53.1602685Z 
+2026-03-24T01:00:53.1603034Z ## Booting kernel from Legacy Image at 83000000 ...
+2026-03-24T01:00:53.1603621Z 
+2026-03-24T01:00:53.1603827Z    Image Name:
+2026-03-24T01:00:53.1604128Z 
+2026-03-24T01:00:53.1604360Z    Created:      2026-03-10   7:01:54 UTC
+2026-03-24T01:00:53.1604828Z 
+2026-03-24T01:00:53.1605066Z    Image Type:   ARM Linux Kernel Image (uncompressed)
+2026-03-24T01:00:53.1605348Z 
+2026-03-24T01:00:53.1605532Z    Data Size:    1050276 Bytes = 1 MiB
+2026-03-24T01:00:53.1605762Z 
+2026-03-24T01:00:53.1605867Z    Load Address: 8025b000
+2026-03-24T01:00:53.1606038Z 
+2026-03-24T01:00:53.1606144Z    Entry Point:  8025b000
+2026-03-24T01:00:53.1606313Z 
+2026-03-24T01:00:53.1606422Z    Verifying Checksum ... OK
+2026-03-24T01:00:53.1606610Z 
+2026-03-24T01:00:53.1606721Z    Loading Kernel Image ... OK
+2026-03-24T01:00:53.1606905Z 
+2026-03-24T01:00:53.1606920Z 
+2026-03-24T01:00:53.1607022Z Starting kernel ...
+2026-03-24T01:00:53.1607175Z 
+2026-03-24T01:00:53.1607178Z 
+2026-03-24T01:00:53.1607182Z 
+2026-03-24T01:00:53.1607334Z ELF-loader started on CPU: ARM Ltd. Cortex-A8 r3p2
+2026-03-24T01:00:53.1607706Z   paddr=[8025b000..80369047]
+2026-03-24T01:00:53.1607994Z No DTB passed in from boot loader.
+2026-03-24T01:00:53.1608360Z Looking for DTB in CPIO archive...found at 802893dc.
+2026-03-24T01:00:53.1608741Z Loaded DTB from 802893dc.
+2026-03-24T01:00:53.1609014Z    paddr=[8002c000..80034fff]
+2026-03-24T01:00:53.1609315Z ELF-loading image 'kernel' to 80000000
+2026-03-24T01:00:53.1609631Z   paddr=[80000000..8002bfff]
+2026-03-24T01:00:53.1609910Z   vaddr=[e0000000..e002bfff]
+2026-03-24T01:00:53.1610180Z   virt_entry=e0000000
+2026-03-24T01:00:53.1610462Z ELF-loading image 'rootserver' to 80035000
+2026-03-24T01:00:53.1610800Z   paddr=[80035000..8023afff]
+2026-03-24T01:00:53.1611075Z   vaddr=[10000..215fff]
+2026-03-24T01:00:53.1611329Z   virt_entry=15378
+2026-03-24T01:00:53.4797160Z Enabling MMU and jumping to entry point...
+2026-03-24T01:00:53.4797758Z 
+2026-03-24T01:15:53.0464982Z 
+2026-03-24T01:15:53.0465568Z [[Timeout]]
+2026-03-24T01:15:53.0466074Z None
+2026-03-24T01:15:53.2474822Z 
+2026-03-24T01:15:53.2475423Z console_run returned -1
+2026-03-24T01:15:53.2476135Z Shutting down bboneblack
+2026-03-24T01:15:53.5216849Z 
+2026-03-24T01:15:56.8558831Z Command exited with non-zero status 255
+2026-03-24T01:15:56.8559908Z 0.03user 0.03system 15:34.74elapsed 0%CPU (0avgtext+0avgdata 8196maxresident)k
+2026-03-24T01:15:56.8560703Z 0inputs+8outputs (0major+7208minor)pagefaults 0swaps
+2026-03-24T01:15:56.8562182Z [31;1m>>> command failed, aborting.[0m
+2026-03-24T01:15:56.8563125Z [33m+++ mq.sh sem -signal bboneblack -k seL4/seL4-HW-22890202979-hw-run-13[0m
+2026-03-24T01:16:01.3856616Z [1m-----------[ end test AM335X_BONEBLACK_release_clang_32 ]-----------[0m
+2026-03-24T01:16:01.3857736Z ##[endgroup]
+2026-03-24T01:16:01.3858129Z [31;1mAM335X_BONEBLACK_release_clang_32 FAILED[0m
+2026-03-24T01:16:01.3858458Z 
+2026-03-24T01:16:01.3858819Z ##[group]AM335X_BONEBLACK_release_MCS_clang_32
+2026-03-24T01:16:01.3859424Z [1m-----------[ start test AM335X_BONEBLACK_release_MCS_clang_32 ]-----------[0m
+2026-03-24T01:16:01.3861415Z [33m+++ tar xvzf ../AM335X_BONEBLACK_release_MCS_clang_32-images.tar.gz[0m
+2026-03-24T01:16:01.3890079Z images/
+2026-03-24T01:16:01.3890696Z images/sel4test-driver-image-arm-am335x
+2026-03-24T01:16:01.3972129Z [33m+++ mq.sh sem -info bboneblack[0m
+2026-03-24T01:16:05.2520750Z Lock for bboneblack currently free
+2026-03-24T01:16:05.2522638Z [33m+++ time mq.sh sem -wait bboneblack -k seL4/seL4-HW-22890202979-hw-run-13 -T 1800[0m
+2026-03-24T01:31:46.3732643Z 0.02user 0.03system 15:41.11elapsed 0%CPU (0avgtext+0avgdata 8192maxresident)k
+2026-03-24T01:31:46.3733348Z 0inputs+0outputs (0major+5509minor)pagefaults 0swaps
+2026-03-24T01:31:46.3735289Z [33m+++ time mq.sh run -c </testsuite> -s bboneblack -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-22890202979-hw-run-13 -f images/sel4test-driver-image-arm-am335x[0m
+2026-03-24T01:31:49.2995608Z Lock acquired, we are allowed to run
+2026-03-24T01:31:55.2434982Z pxelinux=False
+2026-03-24T01:31:55.2435807Z copied '/tmp/tmp.RYLzAqK6c6' -> '/tftpboot/bboneblack/sel4-image'
+2026-03-24T01:31:55.4469600Z removed '/tmp/tmp.RYLzAqK6c6'
+2026-03-24T01:31:55.4470427Z co
+2026-03-24T01:31:55.4470827Z ^Eco
+2026-03-24T01:31:55.4471153Z [Enter `^Ec?' for help]
+2026-03-24T01:31:55.8836705Z [connecting...up]
+2026-03-24T01:31:55.8837467Z Rebooting bboneblack and loading image: /tmp/tmp.RYLzAqK6c6
+2026-03-24T01:32:08.0777988Z  
+2026-03-24T01:32:08.0778471Z U-Boot SPL 2015.10-00001-g143c9ee (Nov 06 2015 - 15:27:19)
+2026-03-24T01:32:08.2812868Z bad magic
+2026-03-24T01:32:08.4851012Z 
+2026-03-24T01:32:08.4851166Z 
+2026-03-24T01:32:08.4851175Z 
+2026-03-24T01:32:08.4852117Z U-Boot 2015.10-00001-g143c9ee (Nov 06 2015 - 15:27:19 -0600), Build: jenkins-github_Bootloader-Builder-274
+2026-03-24T01:32:08.4852936Z 
+2026-03-24T01:32:08.4852944Z 
+2026-03-24T01:32:08.4853182Z        Watchdog enabled
+2026-03-24T01:32:08.4853468Z 
+2026-03-24T01:32:08.4853626Z I2C:   ready
+2026-03-24T01:32:08.4853851Z 
+2026-03-24T01:32:08.4854016Z DRAM:  512 MiB
+2026-03-24T01:32:08.4854277Z 
+2026-03-24T01:32:08.4854472Z Reset Source: Power-on reset has occurred.
+2026-03-24T01:32:08.4854760Z 
+2026-03-24T01:32:08.4854901Z MMC:   OMAP SD/MMC: 0, OMAP SD/MMC: 1
+2026-03-24T01:32:08.4855146Z 
+2026-03-24T01:32:08.4855276Z Using default environment
+2026-03-24T01:32:08.4855479Z 
+2026-03-24T01:32:08.6888941Z 
+2026-03-24T01:32:08.6892028Z Net:   <ethaddr> not set. Validating first E-fuse MAC
+2026-03-24T01:32:08.6892526Z 
+2026-03-24T01:32:08.6892647Z cpsw
+2026-03-24T01:32:08.6892807Z 
+2026-03-24T01:32:08.6892946Z Hit any key to stop autoboot:  1
+2026-03-24T01:32:08.6893482Z  0
+2026-03-24T01:32:08.6893598Z 
+2026-03-24T01:32:10.1001428Z => setenv autoload no && dhcp && tftpboot 0x83000000 bboneblack/sel4-image
+2026-03-24T01:32:10.3036290Z setenv autoload no && dhcp && tftpboot 0x83000000 bboneblack/sel4-image
+2026-03-24T01:32:10.3037351Z 
+2026-03-24T01:32:10.3037663Z cpsw Waiting for PHY auto negotiation to complete. done
+2026-03-24T01:32:10.3038171Z 
+2026-03-24T01:32:10.3038397Z link up on port 0, speed 100, full duplex
+2026-03-24T01:32:10.3038807Z 
+2026-03-24T01:32:10.3038980Z BOOTP broadcast 1
+2026-03-24T01:32:10.5072125Z 
+2026-03-24T01:32:10.5072541Z BOOTP broadcast 2
+2026-03-24T01:32:10.9292800Z 
+2026-03-24T01:32:10.9293363Z BOOTP broadcast 3
+2026-03-24T01:32:11.9298567Z 
+2026-03-24T01:32:11.9299079Z BOOTP broadcast 4
+2026-03-24T01:32:13.9346764Z 
+2026-03-24T01:32:13.9347360Z BOOTP broadcast 5
+2026-03-24T01:32:13.9347638Z 
+2026-03-24T01:32:13.9347847Z DHCP client bound to address 172.16.1.137 (3766 ms)
+2026-03-24T01:32:14.1384660Z 
+2026-03-24T01:32:14.1385560Z link up on port 0, speed 100, full duplex
+2026-03-24T01:32:14.1386209Z 
+2026-03-24T01:32:14.1386459Z Using cpsw device
+2026-03-24T01:32:14.1386737Z 
+2026-03-24T01:32:14.1387020Z TFTP from server 172.16.0.2; our IP address is 172.16.1.137
+2026-03-24T01:32:14.1387501Z 
+2026-03-24T01:32:14.1387676Z Filename 'bboneblack/sel4-image'.
+2026-03-24T01:32:14.1388003Z 
+2026-03-24T01:32:14.1388159Z Load address: 0x83000000
+2026-03-24T01:32:14.1388413Z 
+2026-03-24T01:32:14.3421231Z Loading: *#################################################################
+2026-03-24T01:32:14.3421732Z 
+2026-03-24T01:32:14.3422078Z 	 ############
+2026-03-24T01:32:14.3422316Z 
+2026-03-24T01:32:14.3422465Z 	 3.1 MiB/s
+2026-03-24T01:32:14.3422668Z 
+2026-03-24T01:32:14.3422813Z done
+2026-03-24T01:32:14.3423013Z 
+2026-03-24T01:32:14.3423605Z Bytes transferred = 1129188 (113ae4 hex)
+2026-03-24T01:32:14.3423967Z 
+2026-03-24T01:32:15.8308408Z => bootm
+2026-03-24T01:32:16.0343797Z bootm
+2026-03-24T01:32:16.0344091Z 
+2026-03-24T01:32:16.0344438Z ## Booting kernel from Legacy Image at 83000000 ...
+2026-03-24T01:32:16.0344943Z 
+2026-03-24T01:32:16.0345115Z    Image Name:
+2026-03-24T01:32:16.0345374Z 
+2026-03-24T01:32:16.0345775Z    Created:      2026-03-10   7:02:10 UTC
+2026-03-24T01:32:16.0346350Z 
+2026-03-24T01:32:16.0346822Z    Image Type:   ARM Linux Kernel Image (uncompressed)
+2026-03-24T01:32:16.0347333Z 
+2026-03-24T01:32:16.0347582Z    Data Size:    1129124 Bytes = 1.1 MiB
+2026-03-24T01:32:16.0347958Z 
+2026-03-24T01:32:16.0348101Z    Load Address: 80273000
+2026-03-24T01:32:16.0348398Z 
+2026-03-24T01:32:16.0348599Z    Entry Point:  80273000
+2026-03-24T01:32:16.0348970Z 
+2026-03-24T01:32:16.0349208Z    Verifying Checksum ... OK
+2026-03-24T01:32:16.0349603Z 
+2026-03-24T01:32:16.0349834Z    Loading Kernel Image ... OK
+2026-03-24T01:32:16.0350234Z 
+2026-03-24T01:32:16.0350266Z 
+2026-03-24T01:32:16.0350474Z Starting kernel ...
+2026-03-24T01:32:16.0350762Z 
+2026-03-24T01:32:16.0350767Z 
+2026-03-24T01:32:16.0350772Z 
+2026-03-24T01:32:16.0350993Z ELF-loader started on CPU: ARM Ltd. Cortex-A8 r3p2
+2026-03-24T01:32:16.0351497Z   paddr=[80273000..80395047]
+2026-03-24T01:32:16.0351982Z No DTB passed in from boot loader.
+2026-03-24T01:32:16.0352441Z Looking for DTB in CPIO archive...found at 802a83dc.
+2026-03-24T01:32:16.0352821Z Loaded DTB from 802a83dc.
+2026-03-24T01:32:16.0353090Z    paddr=[80034000..8003cfff]
+2026-03-24T01:32:16.0353392Z ELF-loading image 'kernel' to 80000000
+2026-03-24T01:32:16.0353712Z   paddr=[80000000..80033fff]
+2026-03-24T01:32:16.0353988Z   vaddr=[e0000000..e0033fff]
+2026-03-24T01:32:16.0354259Z   virt_entry=e0000000
+2026-03-24T01:32:16.0354547Z ELF-loading image 'rootserver' to 8003d000
+2026-03-24T01:32:16.0354876Z   paddr=[8003d000..80252fff]
+2026-03-24T01:32:16.0355141Z   vaddr=[10000..225fff]
+2026-03-24T01:32:16.0355400Z   virt_entry=157e8
+2026-03-24T01:32:16.3803321Z Enabling MMU and jumping to entry point...
+2026-03-24T01:32:16.3803840Z 
+2026-03-24T01:47:15.8631972Z 
+2026-03-24T01:47:15.8632590Z [[Timeout]]
+2026-03-24T01:47:15.8633074Z None
+2026-03-24T01:47:16.0667890Z 
+2026-03-24T01:47:16.0668421Z console_run returned -1
+2026-03-24T01:47:16.0669129Z Shutting down bboneblack
+2026-03-24T01:47:16.3549669Z 
+2026-03-24T01:47:19.5364553Z Command exited with non-zero status 255
+2026-03-24T01:47:19.5366069Z 0.03user 0.04system 15:33.16elapsed 0%CPU (0avgtext+0avgdata 8196maxresident)k
+2026-03-24T01:47:19.5366871Z 0inputs+8outputs (0major+7180minor)pagefaults 0swaps
+2026-03-24T01:47:19.5368056Z [31;1m>>> command failed, aborting.[0m
+2026-03-24T01:47:19.5369018Z [33m+++ mq.sh sem -signal bboneblack -k seL4/seL4-HW-22890202979-hw-run-13[0m
+2026-03-24T01:47:24.7225645Z [1m-----------[ end test AM335X_BONEBLACK_release_MCS_clang_32 ]-----------[0m
+2026-03-24T01:47:24.7226915Z ##[endgroup]
+2026-03-24T01:47:24.7227533Z [31;1mAM335X_BONEBLACK_release_MCS_clang_32 FAILED[0m
+2026-03-24T01:47:24.7227971Z 
+2026-03-24T01:47:24.7228491Z ##[group]AM335X_BONEBLACK_verification_clang_32
+2026-03-24T01:47:24.7229383Z [1m-----------[ start test AM335X_BONEBLACK_verification_clang_32 ]-----------[0m
+2026-03-24T01:47:24.7230786Z [33m+++ tar xvzf ../AM335X_BONEBLACK_verification_clang_32-images.tar.gz[0m
+2026-03-24T01:47:24.7259805Z images/
+2026-03-24T01:47:24.7260193Z images/sel4test-driver-image-arm-am335x
+2026-03-24T01:47:24.7454023Z [33m+++ mq.sh sem -info bboneblack[0m
+2026-03-24T01:47:28.3164897Z Lock for bboneblack currently free
+2026-03-24T01:47:28.3166081Z [33m+++ time mq.sh sem -wait bboneblack -k seL4/seL4-HW-22890202979-hw-run-13 -T 1800[0m
+2026-03-24T02:03:09.6281071Z 0.02user 0.03system 15:41.31elapsed 0%CPU (0avgtext+0avgdata 8288maxresident)k
+2026-03-24T02:03:09.6282037Z 0inputs+0outputs (1major+5469minor)pagefaults 0swaps
+2026-03-24T02:03:09.6285105Z [33m+++ time mq.sh run -c </testsuite> -s bboneblack -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-22890202979-hw-run-13 -f images/sel4test-driver-image-arm-am335x[0m
+2026-03-24T02:03:12.6385545Z Lock acquired, we are allowed to run
+2026-03-24T02:03:19.1432349Z pxelinux=False
+2026-03-24T02:03:19.1433178Z copied '/tmp/tmp.Wc3N8iNXfA' -> '/tftpboot/bboneblack/sel4-image'
+2026-03-24T02:03:19.1433874Z removed '/tmp/tmp.Wc3N8iNXfA'
+2026-03-24T02:03:19.3466690Z co
+2026-03-24T02:03:19.3467208Z ^Eco
+2026-03-24T02:03:19.3467704Z [Enter `^Ec?' for help]
+2026-03-24T02:03:19.7535987Z [connecting...up]
+2026-03-24T02:03:19.7536464Z Rebooting bboneblack and loading image: /tmp/tmp.Wc3N8iNXfA
+2026-03-24T02:03:31.8901283Z  
+2026-03-24T02:03:31.8904341Z U-Boot SPL 2015.10-00001-g143c9ee (Nov 06 2015 - 15:27:19)
+2026-03-24T02:03:32.0999009Z bad magic
+2026-03-24T02:03:32.3033263Z 
+2026-03-24T02:03:32.3033276Z 
+2026-03-24T02:03:32.3033284Z 
+2026-03-24T02:03:32.3034086Z U-Boot 2015.10-00001-g143c9ee (Nov 06 2015 - 15:27:19 -0600), Build: jenkins-github_Bootloader-Builder-274
+2026-03-24T02:03:32.3034746Z 
+2026-03-24T02:03:32.3034781Z 
+2026-03-24T02:03:32.3034924Z        Watchdog enabled
+2026-03-24T02:03:32.3035153Z 
+2026-03-24T02:03:32.3035314Z I2C:   ready
+2026-03-24T02:03:32.3035505Z 
+2026-03-24T02:03:32.3035633Z DRAM:  512 MiB
+2026-03-24T02:03:32.3035813Z 
+2026-03-24T02:03:32.3035998Z Reset Source: Power-on reset has occurred.
+2026-03-24T02:03:32.3036325Z 
+2026-03-24T02:03:32.3036478Z MMC:   OMAP SD/MMC: 0, OMAP SD/MMC: 1
+2026-03-24T02:03:32.3036779Z 
+2026-03-24T02:03:32.3036924Z Using default environment
+2026-03-24T02:03:32.3037156Z 
+2026-03-24T02:03:32.5065518Z 
+2026-03-24T02:03:32.5066143Z Net:   <ethaddr> not set. Validating first E-fuse MAC
+2026-03-24T02:03:32.5066582Z 
+2026-03-24T02:03:32.5066716Z cpsw
+2026-03-24T02:03:32.5066892Z 
+2026-03-24T02:03:32.5067057Z Hit any key to stop autoboot:  1
+2026-03-24T02:03:32.5067533Z  0
+2026-03-24T02:03:32.5067649Z 
+2026-03-24T02:03:33.8977051Z => setenv autoload no && dhcp && tftpboot 0x83000000 bboneblack/sel4-image
+2026-03-24T02:03:34.1013227Z setenv autoload no && dhcp && tftpboot 0x83000000 bboneblack/sel4-image
+2026-03-24T02:03:34.1013705Z 
+2026-03-24T02:03:34.1013936Z cpsw Waiting for PHY auto negotiation to complete. done
+2026-03-24T02:03:34.1014296Z 
+2026-03-24T02:03:34.1014455Z link up on port 0, speed 100, full duplex
+2026-03-24T02:03:34.1014746Z 
+2026-03-24T02:03:34.1014873Z BOOTP broadcast 1
+2026-03-24T02:03:34.3048772Z 
+2026-03-24T02:03:34.3049366Z BOOTP broadcast 2
+2026-03-24T02:03:34.7169637Z 
+2026-03-24T02:03:34.7170166Z BOOTP broadcast 3
+2026-03-24T02:03:35.7276819Z 
+2026-03-24T02:03:35.7277268Z BOOTP broadcast 4
+2026-03-24T02:03:37.7280319Z 
+2026-03-24T02:03:37.7280754Z BOOTP broadcast 5
+2026-03-24T02:03:37.9313973Z 
+2026-03-24T02:03:37.9314444Z DHCP client bound to address 172.16.1.137 (3766 ms)
+2026-03-24T02:03:37.9314999Z 
+2026-03-24T02:03:37.9315257Z link up on port 0, speed 100, full duplex
+2026-03-24T02:03:37.9315726Z 
+2026-03-24T02:03:37.9315924Z Using cpsw device
+2026-03-24T02:03:37.9316226Z 
+2026-03-24T02:03:37.9316548Z TFTP from server 172.16.0.2; our IP address is 172.16.1.137
+2026-03-24T02:03:37.9316922Z 
+2026-03-24T02:03:37.9317072Z Filename 'bboneblack/sel4-image'.
+2026-03-24T02:03:37.9317328Z 
+2026-03-24T02:03:37.9317475Z Load address: 0x83000000
+2026-03-24T02:03:37.9317689Z 
+2026-03-24T02:03:38.1349381Z Loading: *#################################################################
+2026-03-24T02:03:38.1349752Z 
+2026-03-24T02:03:38.5418324Z 	 #################################################################
+2026-03-24T02:03:38.5418743Z 
+2026-03-24T02:03:38.7452126Z 	 #################################################################
+2026-03-24T02:03:38.7452478Z 
+2026-03-24T02:03:38.9485428Z 	 #############################
+2026-03-24T02:03:38.9485750Z 
+2026-03-24T02:03:38.9485889Z 	 3.1 MiB/s
+2026-03-24T02:03:38.9486088Z 
+2026-03-24T02:03:38.9486221Z done
+2026-03-24T02:03:38.9486406Z 
+2026-03-24T02:03:38.9486583Z Bytes transferred = 3278372 (320624 hex)
+2026-03-24T02:03:38.9486921Z 
+2026-03-24T02:03:40.2687249Z => bootm
+2026-03-24T02:03:40.4721214Z bootm
+2026-03-24T02:03:40.4721525Z 
+2026-03-24T02:03:40.4721963Z ## Booting kernel from Legacy Image at 83000000 ...
+2026-03-24T02:03:40.4722318Z 
+2026-03-24T02:03:40.4722444Z    Image Name:
+2026-03-24T02:03:40.4722629Z 
+2026-03-24T02:03:40.4722794Z    Created:      2026-03-10   7:02:24 UTC
+2026-03-24T02:03:40.4723072Z 
+2026-03-24T02:03:40.4723286Z    Image Type:   ARM Linux Kernel Image (uncompressed)
+2026-03-24T02:03:40.4723646Z 
+2026-03-24T02:03:40.4723783Z    Data Size:    3278308 Bytes = 3.1 MiB
+2026-03-24T02:03:40.4724065Z 
+2026-03-24T02:03:40.4724196Z    Load Address: 8047b000
+2026-03-24T02:03:40.4724408Z 
+2026-03-24T02:03:40.4724538Z    Entry Point:  8047b000
+2026-03-24T02:03:40.4724750Z 
+2026-03-24T02:03:40.4724884Z    Verifying Checksum ... OK
+2026-03-24T02:03:40.4725118Z 
+2026-03-24T02:03:40.4725255Z    Loading Kernel Image ... OK
+2026-03-24T02:03:40.4725492Z 
+2026-03-24T02:03:40.4725496Z 
+2026-03-24T02:03:40.4725629Z Starting kernel ...
+2026-03-24T02:03:40.4725788Z 
+2026-03-24T02:03:40.4725798Z 
+2026-03-24T02:03:40.4725802Z 
+2026-03-24T02:03:40.4725957Z ELF-loader started on CPU: ARM Ltd. Cortex-A8 r3p2
+2026-03-24T02:03:40.4726347Z   paddr=[8047b000..807a9047]
+2026-03-24T02:03:40.4726637Z No DTB passed in from boot loader.
+2026-03-24T02:03:40.4727001Z Looking for DTB in CPIO archive...found at 804ab11c.
+2026-03-24T02:03:40.6758397Z Loaded DTB from 804ab11c.
+2026-03-24T02:03:40.6758801Z    paddr=[8002c000..80034fff]
+2026-03-24T02:03:40.6759235Z ELF-loading image 'kernel' to 80000000
+2026-03-24T02:03:40.6759645Z   paddr=[80000000..8002bfff]
+2026-03-24T02:03:40.6759940Z   vaddr=[e0000000..e002bfff]
+2026-03-24T02:03:40.6760224Z   virt_entry=e0000000
+2026-03-24T02:03:40.8793692Z ELF-loading image 'rootserver' to 80035000
+2026-03-24T02:03:40.8794215Z   paddr=[80035000..8045afff]
+2026-03-24T02:03:40.8794564Z   vaddr=[10000..435fff]
+2026-03-24T02:03:40.8794859Z   virt_entry=1f624
+2026-03-24T02:03:46.3643297Z Enabling MMU and jumping to entry point...
+2026-03-24T02:03:46.3643707Z 
+2026-03-24T02:18:40.3957796Z 
+2026-03-24T02:18:40.3958184Z [[Timeout]]
+2026-03-24T02:18:40.3958512Z None
+2026-03-24T02:18:40.5990801Z 
+2026-03-24T02:18:40.5991184Z console_run returned -1
+2026-03-24T02:18:40.5991593Z Shutting down bboneblack
+2026-03-24T02:18:40.8836285Z 
+2026-03-24T02:18:44.0713657Z Command exited with non-zero status 255
+2026-03-24T02:18:44.0715021Z 0.04user 0.03system 15:34.44elapsed 0%CPU (0avgtext+0avgdata 8216maxresident)k
+2026-03-24T02:18:44.0716232Z 0inputs+8outputs (0major+7189minor)pagefaults 0swaps
+2026-03-24T02:18:44.0717519Z [31;1m>>> command failed, aborting.[0m
+2026-03-24T02:18:44.0718401Z [33m+++ mq.sh sem -signal bboneblack -k seL4/seL4-HW-22890202979-hw-run-13[0m
+2026-03-24T02:18:48.3981249Z [1m-----------[ end test AM335X_BONEBLACK_verification_clang_32 ]-----------[0m
+2026-03-24T02:18:48.3982371Z ##[endgroup]
+2026-03-24T02:18:48.3982753Z [31;1mAM335X_BONEBLACK_verification_clang_32 FAILED[0m
+2026-03-24T02:18:48.3983032Z 
+2026-03-24T02:18:48.3983412Z ##[group]AM335X_BONEBLACK_verification_MCS_clang_32
+2026-03-24T02:18:48.3984013Z [1m-----------[ start test AM335X_BONEBLACK_verification_MCS_clang_32 ]-----------[0m
+2026-03-24T02:18:48.3990970Z [33m+++ tar xvzf ../AM335X_BONEBLACK_verification_MCS_clang_32-images.tar.gz[0m
+2026-03-24T02:18:48.4019528Z images/
+2026-03-24T02:18:48.4020147Z images/sel4test-driver-image-arm-am335x
+2026-03-24T02:18:48.4224908Z [33m+++ mq.sh sem -info bboneblack[0m
+2026-03-24T02:18:53.6933359Z Lock for bboneblack held by sel4_ci since 2026-03-24 13:18:50.900175855 +1100, timeout 1800 with key 'seL4/seL4-HW-22890202979-hw-run-12'
+2026-03-24T02:18:53.6934676Z [33m+++ time mq.sh sem -wait bboneblack -k seL4/seL4-HW-22890202979-hw-run-13 -T 1800[0m
+2026-03-24T02:34:50.9016346Z 0.02user 0.03system 15:57.20elapsed 0%CPU (0avgtext+0avgdata 8168maxresident)k
+2026-03-24T02:34:50.9017187Z 0inputs+0outputs (1major+5481minor)pagefaults 0swaps
+2026-03-24T02:34:50.9018717Z [33m+++ time mq.sh run -c </testsuite> -s bboneblack -d 900 -t -1 -w 8 -l results.xml -n -k seL4/seL4-HW-22890202979-hw-run-13 -f images/sel4test-driver-image-arm-am335x[0m
+2026-03-24T02:34:54.1105295Z Lock acquired, we are allowed to run
+2026-03-24T02:35:00.6673331Z pxelinux=False
+2026-03-24T02:35:00.6673771Z copied '/tmp/tmp.XpSJHLoVjx' -> '/tftpboot/bboneblack/sel4-image'
+2026-03-24T02:35:00.8786941Z removed '/tmp/tmp.XpSJHLoVjx'
+2026-03-24T02:35:01.0825648Z co
+2026-03-24T02:35:01.0825966Z ^Eco
+2026-03-24T02:35:01.0826277Z [Enter `^Ec?' for help]
+2026-03-24T02:35:01.4891276Z [connecting...up]
+2026-03-24T02:35:01.4891983Z Rebooting bboneblack and loading image: /tmp/tmp.XpSJHLoVjx
+2026-03-24T02:35:13.6840575Z  
+2026-03-24T02:35:13.6841107Z U-Boot SPL 2015.10-00001-g143c9ee (Nov 06 2015 - 15:27:19)
+2026-03-24T02:35:13.8875267Z bad magic
+2026-03-24T02:35:14.0909659Z 
+2026-03-24T02:35:14.0909675Z 
+2026-03-24T02:35:14.0909683Z 
+2026-03-24T02:35:14.0910522Z U-Boot 2015.10-00001-g143c9ee (Nov 06 2015 - 15:27:19 -0600), Build: jenkins-github_Bootloader-Builder-274
+2026-03-24T02:35:14.0911193Z 
+2026-03-24T02:35:14.0911230Z 
+2026-03-24T02:35:14.0911374Z        Watchdog enabled
+2026-03-24T02:35:14.0911600Z 
+2026-03-24T02:35:14.0911724Z I2C:   ready
+2026-03-24T02:35:14.0912235Z 
+2026-03-24T02:35:14.0912385Z DRAM:  512 MiB
+2026-03-24T02:35:14.0912569Z 
+2026-03-24T02:35:14.0912752Z Reset Source: Power-on reset has occurred.
+2026-03-24T02:35:14.0913092Z 
+2026-03-24T02:35:14.0913245Z MMC:   OMAP SD/MMC: 0, OMAP SD/MMC: 1
+2026-03-24T02:35:14.0913547Z 
+2026-03-24T02:35:14.0913693Z Using default environment
+2026-03-24T02:35:14.0913931Z 
+2026-03-24T02:35:14.2942443Z 
+2026-03-24T02:35:14.2942761Z Net:   <ethaddr> not set. Validating first E-fuse MAC
+2026-03-24T02:35:14.2943085Z 
+2026-03-24T02:35:14.2943187Z cpsw
+2026-03-24T02:35:14.2943324Z 
+2026-03-24T02:35:14.2943448Z Hit any key to stop autoboot:  1
+2026-03-24T02:35:14.2943957Z  0
+2026-03-24T02:35:14.2944086Z 
+2026-03-24T02:35:15.7066495Z => setenv autoload no && dhcp && tftpboot 0x83000000 bboneblack/sel4-image
+2026-03-24T02:35:15.9099882Z setenv autoload no && dhcp && tftpboot 0x83000000 bboneblack/sel4-image
+2026-03-24T02:35:15.9100394Z 
+2026-03-24T02:35:15.9100640Z cpsw Waiting for PHY auto negotiation to complete. done
+2026-03-24T02:35:15.9101048Z 
+2026-03-24T02:35:15.9101229Z link up on port 0, speed 100, full duplex
+2026-03-24T02:35:15.9101544Z 
+2026-03-24T02:35:15.9101682Z BOOTP broadcast 1
+2026-03-24T02:35:16.1136349Z 
+2026-03-24T02:35:16.1136698Z BOOTP broadcast 2
+2026-03-24T02:35:16.5368274Z 
+2026-03-24T02:35:16.5368597Z BOOTP broadcast 3
+2026-03-24T02:35:17.5359848Z 
+2026-03-24T02:35:17.5360411Z BOOTP broadcast 4
+2026-03-24T02:35:19.5373989Z 
+2026-03-24T02:35:19.5374564Z BOOTP broadcast 5
+2026-03-24T02:35:19.5374849Z 
+2026-03-24T02:35:19.5375063Z DHCP client bound to address 172.16.1.137 (3766 ms)
+2026-03-24T02:35:19.7408441Z 
+2026-03-24T02:35:19.7408974Z link up on port 0, speed 100, full duplex
+2026-03-24T02:35:19.7409341Z 
+2026-03-24T02:35:19.7409477Z Using cpsw device
+2026-03-24T02:35:19.7409692Z 
+2026-03-24T02:35:19.7409965Z TFTP from server 172.16.0.2; our IP address is 172.16.1.137
+2026-03-24T02:35:19.7410374Z 
+2026-03-24T02:35:19.7410542Z Filename 'bboneblack/sel4-image'.
+2026-03-24T02:35:20.1477393Z 
+2026-03-24T02:35:20.1477814Z Load address: 0x83000000
+2026-03-24T02:35:20.1478087Z 
+2026-03-24T02:35:20.1478547Z Loading: *#################################################################
+2026-03-24T02:35:20.1478948Z 
+2026-03-24T02:35:20.3508242Z 	 #################################################################
+2026-03-24T02:35:20.3508727Z 
+2026-03-24T02:35:20.5542860Z 	 #################################################################
+2026-03-24T02:35:20.5543383Z 
+2026-03-24T02:35:20.7576729Z 	 ########################################
+2026-03-24T02:35:20.7577233Z 
+2026-03-24T02:35:20.7577398Z 	 3.3 MiB/s
+2026-03-24T02:35:20.7577618Z 
+2026-03-24T02:35:20.7577771Z done
+2026-03-24T02:35:20.7577968Z 
+2026-03-24T02:35:20.7578162Z Bytes transferred = 3439652 (347c24 hex)
+2026-03-24T02:35:20.7578545Z 
+2026-03-24T02:35:22.0771393Z => bootm
+2026-03-24T02:35:22.2804557Z bootm
+2026-03-24T02:35:22.2804733Z 
+2026-03-24T02:35:22.2804939Z ## Booting kernel from Legacy Image at 83000000 ...
+2026-03-24T02:35:22.2805243Z 
+2026-03-24T02:35:22.2805347Z    Image Name:
+2026-03-24T02:35:22.2805505Z 
+2026-03-24T02:35:22.2805629Z    Created:      2026-03-10   7:02:40 UTC
+2026-03-24T02:35:22.2805869Z 
+2026-03-24T02:35:22.2806061Z    Image Type:   ARM Linux Kernel Image (uncompressed)
+2026-03-24T02:35:22.2806378Z 
+2026-03-24T02:35:22.2806499Z    Data Size:    3439588 Bytes = 3.3 MiB
+2026-03-24T02:35:22.2806741Z 
+2026-03-24T02:35:22.2806854Z    Load Address: 804a3000
+2026-03-24T02:35:22.2807048Z 
+2026-03-24T02:35:22.2807158Z    Entry Point:  804a3000
+2026-03-24T02:35:22.2807345Z 
+2026-03-24T02:35:22.2807461Z    Verifying Checksum ... OK
+2026-03-24T02:35:22.2807666Z 
+2026-03-24T02:35:22.2807789Z    Loading Kernel Image ... OK
+2026-03-24T02:35:22.2807997Z 
+2026-03-24T02:35:22.2808000Z 
+2026-03-24T02:35:22.2808105Z Starting kernel ...
+2026-03-24T02:35:22.2808271Z 
+2026-03-24T02:35:22.4838682Z 
+2026-03-24T02:35:22.4839094Z 
+2026-03-24T02:35:22.4839511Z ELF-loader started on CPU: ARM Ltd. Cortex-A8 r3p2
+2026-03-24T02:35:22.4840066Z   paddr=[804a3000..807f9047]
+2026-03-24T02:35:22.4840482Z No DTB passed in from boot loader.
+2026-03-24T02:35:22.4840991Z Looking for DTB in CPIO archive...found at 804da11c.
+2026-03-24T02:35:22.4841497Z Loaded DTB from 804da11c.
+2026-03-24T02:35:22.4842097Z    paddr=[80034000..8003cfff]
+2026-03-24T02:35:22.4842520Z ELF-loading image 'kernel' to 80000000
+2026-03-24T02:35:22.4842957Z   paddr=[80000000..80033fff]
+2026-03-24T02:35:22.4843315Z   vaddr=[e0000000..e0033fff]
+2026-03-24T02:35:22.4843604Z   virt_entry=e0000000
+2026-03-24T02:35:22.6874351Z ELF-loading image 'rootserver' to 8003d000
+2026-03-24T02:35:22.6874828Z   paddr=[8003d000..80482fff]
+2026-03-24T02:35:22.6875191Z   vaddr=[10000..455fff]
+2026-03-24T02:35:22.6875515Z   virt_entry=1fdf8
+2026-03-24T02:35:28.4776903Z Enabling MMU and jumping to entry point...
+2026-03-24T02:35:28.4777255Z 
+2026-03-24T02:50:22.1698849Z 
+2026-03-24T02:50:22.1699356Z [[Timeout]]
+2026-03-24T02:50:22.3709904Z None
+2026-03-24T02:50:22.3710214Z 
+2026-03-24T02:50:22.3710444Z console_run returned -1
+2026-03-24T02:50:22.3711021Z Shutting down bboneblack
+2026-03-24T02:50:22.6681201Z 
+2026-03-24T02:50:26.2621728Z Command exited with non-zero status 255
+2026-03-24T02:50:26.2622997Z 0.03user 0.04system 15:35.35elapsed 0%CPU (0avgtext+0avgdata 8192maxresident)k
+2026-03-24T02:50:26.2623962Z 0inputs+8outputs (0major+7200minor)pagefaults 0swaps
+2026-03-24T02:50:26.2625671Z [31;1m>>> command failed, aborting.[0m
+2026-03-24T02:50:26.2626552Z [33m+++ mq.sh sem -signal bboneblack -k seL4/seL4-HW-22890202979-hw-run-13[0m
+2026-03-24T02:50:30.6260938Z [1m-----------[ end test AM335X_BONEBLACK_verification_MCS_clang_32 ]-----------[0m
+2026-03-24T02:50:30.6262117Z ##[endgroup]
+2026-03-24T02:50:30.6262513Z [31;1mAM335X_BONEBLACK_verification_MCS_clang_32 FAILED[0m
+2026-03-24T02:50:30.6262795Z 
+2026-03-24T02:50:30.6262927Z Successful tests: [0m
+2026-03-24T02:50:30.6263119Z 
+2026-03-24T02:50:30.6264132Z [31;1mFAILED tests: AM335X_BONEBLACK_debug_clang_32, AM335X_BONEBLACK_debug_MCS_clang_32, AM335X_BONEBLACK_release_clang_32, AM335X_BONEBLACK_release_MCS_clang_32, AM335X_BONEBLACK_verification_clang_32, AM335X_BONEBLACK_verification_MCS_clang_32[0m
+2026-03-24T02:50:30.6399664Z ##[error]Action sel4test-hw-run failed.
+2026-03-24T02:50:30.6521448Z Post job cleanup.
+2026-03-24T02:50:30.7821045Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../sel4test-hw-run/post-steps.sh
+2026-03-24T02:50:30.7885945Z ##[group]Releasing mq lock
+2026-03-24T02:50:30.7966094Z Agent pid 4516
+2026-03-24T02:50:30.9385839Z mq.sh sem -cancel bboneblack -k seL4/seL4-HW-22890202979-hw-run-13
+2026-03-24T02:50:33.8961032Z mq.sh sem -signal bboneblack -k seL4/seL4-HW-22890202979-hw-run-13
+2026-03-24T02:50:37.1141962Z Attempting to unlock system bboneblack that you do not hold
+2026-03-24T02:50:37.1236565Z ##[endgroup]
+2026-03-24T02:50:37.1396009Z Post job cleanup.
+2026-03-24T02:50:37.2339616Z [command]/usr/bin/git version
+2026-03-24T02:50:37.2378411Z git version 2.53.0
+2026-03-24T02:50:37.2428754Z Temporarily overriding HOME='/home/runner/work/_temp/10d8429d-c932-4718-abd0-1aea97123970' before making global git config changes
+2026-03-24T02:50:37.2430207Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-24T02:50:37.2434098Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/seL4/seL4/machine_queue
+2026-03-24T02:50:37.2469215Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-24T02:50:37.2502045Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-24T02:50:37.2741664Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-24T02:50:37.2763827Z http.https://github.com/.extraheader
+2026-03-24T02:50:37.2777521Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-03-24T02:50:37.2810133Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-24T02:50:37.3041373Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-24T02:50:37.3073410Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-24T02:50:37.3426761Z Cleaning up orphan processes
+2026-03-24T02:50:37.3733952Z Terminate orphan process: pid (2423) (ssh)
+2026-03-24T02:50:37.3836223Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/download-artifact@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

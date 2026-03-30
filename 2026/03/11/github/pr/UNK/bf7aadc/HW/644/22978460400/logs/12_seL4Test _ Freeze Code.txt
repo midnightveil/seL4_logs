@@ -1,0 +1,94 @@
+﻿2026-03-11T23:02:43.0015756Z Current runner version: '2.332.0'
+2026-03-11T23:02:43.0040178Z ##[group]Runner Image Provisioner
+2026-03-11T23:02:43.0041326Z Hosted Compute Agent
+2026-03-11T23:02:43.0042052Z Version: 20260213.493
+2026-03-11T23:02:43.0042678Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-03-11T23:02:43.0043344Z Build Date: 2026-02-13T00:28:41Z
+2026-03-11T23:02:43.0044086Z Worker ID: {cd319a38-ccb2-47c4-abee-4350780b4d6b}
+2026-03-11T23:02:43.0044811Z Azure Region: westcentralus
+2026-03-11T23:02:43.0045343Z ##[endgroup]
+2026-03-11T23:02:43.0046875Z ##[group]Operating System
+2026-03-11T23:02:43.0047448Z Ubuntu
+2026-03-11T23:02:43.0047914Z 24.04.3
+2026-03-11T23:02:43.0048368Z LTS
+2026-03-11T23:02:43.0048879Z ##[endgroup]
+2026-03-11T23:02:43.0049333Z ##[group]Runner Image
+2026-03-11T23:02:43.0049916Z Image: ubuntu-24.04
+2026-03-11T23:02:43.0050444Z Version: 20260302.42.1
+2026-03-11T23:02:43.0051973Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260302.42/images/ubuntu/Ubuntu2404-Readme.md
+2026-03-11T23:02:43.0053644Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260302.42
+2026-03-11T23:02:43.0054551Z ##[endgroup]
+2026-03-11T23:02:43.0055575Z ##[group]GITHUB_TOKEN Permissions
+2026-03-11T23:02:43.0057370Z Contents: read
+2026-03-11T23:02:43.0057863Z Metadata: read
+2026-03-11T23:02:43.0058509Z ##[endgroup]
+2026-03-11T23:02:43.0060446Z Secret source: Actions
+2026-03-11T23:02:43.0061483Z Prepare workflow directory
+2026-03-11T23:02:43.0405890Z Prepare all required actions
+2026-03-11T23:02:43.0445113Z Getting action download info
+2026-03-11T23:02:43.4326865Z Download action repository 'seL4/ci-actions@master' (SHA:1c8b98c7672f50982aabf5c6b340f5613c49f5c1)
+2026-03-11T23:02:46.2756979Z Uses: seL4/ci-actions/.github/workflows/sel4test-hw.yml@refs/heads/master (1c8b98c7672f50982aabf5c6b340f5613c49f5c1)
+2026-03-11T23:02:46.2761759Z Complete job name: seL4Test / Freeze Code
+2026-03-11T23:02:46.3557419Z ##[group]Run seL4/ci-actions/repo-checkout@master
+2026-03-11T23:02:46.3558172Z with:
+2026-03-11T23:02:46.3558421Z   manifest_repo: sel4test-manifest
+2026-03-11T23:02:46.3558712Z   manifest: master.xml
+2026-03-11T23:02:46.3558994Z   sha: bf7aadc3314e402ec7f3f99e54bb5336fa12b03c
+2026-03-11T23:02:46.3559320Z   action_name: repo-checkout
+2026-03-11T23:02:46.3559756Z ##[endgroup]
+2026-03-11T23:02:46.4587180Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../repo-checkout/steps.sh
+2026-03-11T23:02:46.4633282Z ##[group]Setting up
+2026-03-11T23:02:46.4687854Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2026-03-11T23:02:46.4689111Z                                  Dload  Upload   Total   Spent    Left  Speed
+2026-03-11T23:02:46.4689944Z 
+2026-03-11T23:02:46.5327889Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2026-03-11T23:02:46.5330336Z 100 44950  100 44950    0     0   684k      0 --:--:-- --:--:-- --:--:--  685k
+2026-03-11T23:02:47.5205367Z Defaulting to user installation because normal site-packages is not writeable
+2026-03-11T23:02:48.5803492Z Collecting PyGithub
+2026-03-11T23:02:48.6780753Z   Downloading pygithub-2.8.1-py3-none-any.whl.metadata (3.9 kB)
+2026-03-11T23:02:48.7345723Z Collecting pynacl>=1.4.0 (from PyGithub)
+2026-03-11T23:02:48.7535087Z   Downloading pynacl-1.6.2-cp38-abi3-manylinux_2_34_x86_64.whl.metadata (10.0 kB)
+2026-03-11T23:02:48.7597182Z Requirement already satisfied: requests>=2.14.0 in /usr/lib/python3/dist-packages (from PyGithub) (2.31.0)
+2026-03-11T23:02:48.7615363Z Requirement already satisfied: pyjwt>=2.4.0 in /usr/lib/python3/dist-packages (from pyjwt[crypto]>=2.4.0->PyGithub) (2.7.0)
+2026-03-11T23:02:48.7636132Z Requirement already satisfied: typing-extensions>=4.5.0 in /usr/lib/python3/dist-packages (from PyGithub) (4.10.0)
+2026-03-11T23:02:48.7650961Z Requirement already satisfied: urllib3>=1.26.0 in /usr/lib/python3/dist-packages (from PyGithub) (2.0.7)
+2026-03-11T23:02:48.7853899Z Requirement already satisfied: cryptography>=3.4.0 in /usr/lib/python3/dist-packages (from pyjwt[crypto]>=2.4.0->PyGithub) (41.0.7)
+2026-03-11T23:02:48.9586178Z Collecting cffi>=2.0.0 (from pynacl>=1.4.0->PyGithub)
+2026-03-11T23:02:48.9785752Z   Downloading cffi-2.0.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+2026-03-11T23:02:49.0244286Z Collecting pycparser (from cffi>=2.0.0->pynacl>=1.4.0->PyGithub)
+2026-03-11T23:02:49.0431637Z   Downloading pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+2026-03-11T23:02:49.0796412Z Downloading pygithub-2.8.1-py3-none-any.whl (432 kB)
+2026-03-11T23:02:49.1416965Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 432.7/432.7 kB 7.3 MB/s eta 0:00:00
+2026-03-11T23:02:49.1604909Z Downloading pynacl-1.6.2-cp38-abi3-manylinux_2_34_x86_64.whl (1.4 MB)
+2026-03-11T23:02:49.2029496Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 34.5 MB/s eta 0:00:00
+2026-03-11T23:02:49.2218160Z Downloading cffi-2.0.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (219 kB)
+2026-03-11T23:02:49.2271899Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 219.6/219.6 kB 61.4 MB/s eta 0:00:00
+2026-03-11T23:02:49.2461899Z Downloading pycparser-3.0-py3-none-any.whl (48 kB)
+2026-03-11T23:02:49.2506169Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.2/48.2 kB 14.8 MB/s eta 0:00:00
+2026-03-11T23:02:49.5467460Z Installing collected packages: pycparser, cffi, pynacl, PyGithub
+2026-03-11T23:02:49.9765910Z Successfully installed PyGithub-2.8.1 cffi-2.0.0 pycparser-3.0 pynacl-1.6.2
+2026-03-11T23:02:50.0438722Z ##[endgroup]
+2026-03-11T23:02:50.0439287Z ##[group]Repo checkout
+2026-03-11T23:02:50.0752633Z Starting repo checkout on branch master with manifest master.xml:
+2026-03-11T23:02:52.4561199Z 
+2026-03-11T23:02:52.4562213Z repo has been initialized in /home/runner/work/seL4/seL4
+2026-03-11T23:02:55.8111343Z repo sync has finished successfully.
+2026-03-11T23:02:56.0858845Z Fetching bf7aadc3314e402ec7f3f99e54bb5336fa12b03c from github.com/seL4/seL4.git
+2026-03-11T23:02:58.0234119Z Manifest summary:
+2026-03-11T23:02:58.0234559Z -----------------
+2026-03-11T23:02:58.0235176Z  sel4test-manifest: 03c5d090 Updating default.xml                           (origin/master)
+2026-03-11T23:02:58.0236009Z               seL4: bf7aadc3 Merge branch 'master' into kent/548            
+2026-03-11T23:02:58.0236765Z           musllibc: b0005f86 cmake: Fix export internal headers             (seL4/sel4)
+2026-03-11T23:02:58.0237598Z          seL4_libs: 9bdf9e0d trivial: fix whitespace                        (seL4/master)
+2026-03-11T23:02:58.0238477Z sel4_projects_libs: 0e06bebf Bump minimum CMake version                     (seL4/master)
+2026-03-11T23:02:58.0239430Z        sel4runtime: 86489cf6 github: use central CI workflows               (seL4/master)
+2026-03-11T23:02:58.0240351Z           sel4test: 0bbb0c6b Fix RPi4 failing sel4test in Release mode      (seL4/master)
+2026-03-11T23:02:58.0241631Z          util_libs: c8f9ea7c star64: improve comments in timer driver       (seL4/master)
+2026-03-11T23:02:58.0242563Z             nanopb: 1466e6f9 Publishing nanopb-0.4.3                        (tags/0.4.3)
+2026-03-11T23:02:58.0243481Z            opensbi: 234ed8e4 include: Bump-up version to 0.9                (tags/v0.9^0)
+2026-03-11T23:02:58.0244418Z         seL4_tools: 21d3f19e cmake style update                             (seL4/master)
+2026-03-11T23:02:58.0280727Z ##[endgroup]
+2026-03-11T23:02:58.2849296Z Evaluate and set job outputs
+2026-03-11T23:02:58.2862062Z Set output 'xml'
+2026-03-11T23:02:58.2863794Z Cleaning up orphan processes
+2026-03-11T23:02:58.3152545Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: seL4/ci-actions/repo-checkout@master. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

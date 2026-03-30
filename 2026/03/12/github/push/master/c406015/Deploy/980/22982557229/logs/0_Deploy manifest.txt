@@ -1,0 +1,168 @@
+﻿2026-03-12T09:52:06.5164131Z Current runner version: '2.332.0'
+2026-03-12T09:52:06.5204037Z ##[group]Runner Image Provisioner
+2026-03-12T09:52:06.5206081Z Hosted Compute Agent
+2026-03-12T09:52:06.5207703Z Version: 20260213.493
+2026-03-12T09:52:06.5209473Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-03-12T09:52:06.5211451Z Build Date: 2026-02-13T00:28:41Z
+2026-03-12T09:52:06.5213261Z Worker ID: {5ccb9473-6e2f-42a6-ad73-37ded457bbac}
+2026-03-12T09:52:06.5215018Z Azure Region: eastus2
+2026-03-12T09:52:06.5216927Z ##[endgroup]
+2026-03-12T09:52:06.5220246Z ##[group]Operating System
+2026-03-12T09:52:06.5221943Z Ubuntu
+2026-03-12T09:52:06.5223470Z 22.04.5
+2026-03-12T09:52:06.5225045Z LTS
+2026-03-12T09:52:06.5226715Z ##[endgroup]
+2026-03-12T09:52:06.5228526Z ##[group]Runner Image
+2026-03-12T09:52:06.5230400Z Image: ubuntu-22.04
+2026-03-12T09:52:06.5232162Z Version: 20260309.57.1
+2026-03-12T09:52:06.5235216Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20260309.57/images/ubuntu/Ubuntu2204-Readme.md
+2026-03-12T09:52:06.5239126Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20260309.57
+2026-03-12T09:52:06.5241567Z ##[endgroup]
+2026-03-12T09:52:06.5248371Z ##[group]GITHUB_TOKEN Permissions
+2026-03-12T09:52:06.5252603Z Actions: write
+2026-03-12T09:52:06.5254369Z ArtifactMetadata: write
+2026-03-12T09:52:06.5256141Z Attestations: write
+2026-03-12T09:52:06.5257688Z Checks: write
+2026-03-12T09:52:06.5259660Z Contents: write
+2026-03-12T09:52:06.5261372Z Deployments: write
+2026-03-12T09:52:06.5262856Z Discussions: write
+2026-03-12T09:52:06.5264435Z Issues: write
+2026-03-12T09:52:06.5265916Z Metadata: read
+2026-03-12T09:52:06.5267366Z Models: read
+2026-03-12T09:52:06.5269123Z Packages: write
+2026-03-12T09:52:06.5270739Z Pages: write
+2026-03-12T09:52:06.5272382Z PullRequests: write
+2026-03-12T09:52:06.5274049Z RepositoryProjects: write
+2026-03-12T09:52:06.5275920Z SecurityEvents: write
+2026-03-12T09:52:06.5277696Z Statuses: write
+2026-03-12T09:52:06.5279508Z ##[endgroup]
+2026-03-12T09:52:06.5283231Z Secret source: Actions
+2026-03-12T09:52:06.5285829Z Prepare workflow directory
+2026-03-12T09:52:06.5752925Z Prepare all required actions
+2026-03-12T09:52:06.5808231Z Getting action download info
+2026-03-12T09:52:06.8251909Z Download action repository 'seL4/ci-actions@master' (SHA:1bf69541b442d5841dba4dfd8ebb2e98c19876ec)
+2026-03-12T09:52:12.7273604Z Complete job name: Deploy manifest
+2026-03-12T09:52:12.7957249Z ##[group]Run seL4/ci-actions/manifest-deploy@master
+2026-03-12T09:52:12.7958298Z with:
+2026-03-12T09:52:12.7965207Z   xml: <?xml version="1.0" encoding="UTF-8"?>%0A<manifest>%0A  <remote name="nanopb" fetch="https://github.com/nanopb"/>%0A  <remote name="opensbi" fetch="https://github.com/riscv"/>%0A  <remote name="seL4" fetch="."/>%0A  <remote name="sel4proj" fetch="../sel4proj"/>%0A  %0A  <default remote="seL4" revision="master"/>%0A  %0A  <project name="musllibc.git" path="projects/musllibc" revision="b0005f86fecbd6d0257b15363a5b013446914265" dest-branch="sel4"/>%0A  <project name="nanopb" path="tools/nanopb" remote="nanopb" revision="1466e6f953835b191a7f5acf0c06c941d4cd33d9" dest-branch="refs/tags/0.4.3"/>%0A  <project name="opensbi" path="tools/opensbi" remote="opensbi" revision="234ed8e427f4d92903123199f6590d144e0d9351" dest-branch="refs/tags/v0.9"/>%0A  <project name="seL4.git" path="kernel" revision="c406015c389decc4559fd44cb69604ddd24a0ddb" dest-branch="master"/>%0A  <project name="seL4_libs.git" path="projects/seL4_libs" revision="9bdf9e0d197c8724504313ab080666b40ce75649" dest-branch="master"/>%0A  <project name="seL4_tools.git" path="tools/seL4" revision="21d3f19e3311345bd47e0a15023e41abe80ff3b9" dest-branch="master">%0A    <linkfile src="cmake-tool/init-build.sh" dest="init-build.sh"/>%0A    <linkfile src="cmake-tool/griddle" dest="griddle"/>%0A  </project>%0A  <project name="sel4_projects_libs" path="projects/sel4_projects_libs" revision="0e06bebf4a3f0c21317c6877e0079f637e021562" dest-branch="master"/>%0A  <project name="sel4runtime.git" path="projects/sel4runtime" revision="86489cf6efab9f314964e79468c036e9035394c7" dest-branch="master"/>%0A  <project name="sel4test.git" path="projects/sel4test" revision="0bbb0c6be4e98df98a04b045f98c5a9d272295b2" dest-branch="master">%0A    <linkfile src="easy-settings.cmake" dest="easy-settings.cmake"/>%0A  </project>%0A  <project name="util_libs.git" path="projects/util_libs" revision="c8f9ea7c0ea390e3d82049de4125fe553a76ed1e" dest-branch="master"/>%0A</manifest>%0A
+2026-03-12T09:52:12.7972878Z   manifest_repo: sel4test-manifest
+2026-03-12T09:52:12.7973319Z   action_name: manifest-deploy
+2026-03-12T09:52:12.7974211Z env:
+2026-03-12T09:52:12.7986151Z   GH_SSH: ***
+2026-03-12T09:52:12.7986564Z ##[endgroup]
+2026-03-12T09:52:12.8980598Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../manifest-deploy/steps.sh
+2026-03-12T09:52:12.9020702Z ##[group]Setting up
+2026-03-12T09:52:12.9021521Z Installing 'repo'
+2026-03-12T09:52:12.9076570Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2026-03-12T09:52:12.9079102Z                                  Dload  Upload   Total   Spent    Left  Speed
+2026-03-12T09:52:12.9079784Z 
+2026-03-12T09:52:12.9669998Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2026-03-12T09:52:12.9671777Z 100 44950  100 44950    0     0   736k      0 --:--:-- --:--:-- --:--:--  744k
+2026-03-12T09:52:12.9703158Z Setting up ssh
+2026-03-12T09:52:13.0014781Z Agent pid 1992
+2026-03-12T09:52:13.0304097Z Fetching seL4_release repo
+2026-03-12T09:52:13.2283660Z Cloning into 'seL4_release'...
+2026-03-12T09:52:14.0974399Z Installing python dependencies
+2026-03-12T09:52:17.2626971Z Requirement already satisfied: PyYAML in /usr/lib/python3/dist-packages (from -r /home/runner/work/seL4/seL4/seL4_release/requirements.txt (line 1)) (5.4.1)
+2026-03-12T09:52:17.3403504Z Collecting sh
+2026-03-12T09:52:17.3903906Z   Downloading sh-2.2.2-py3-none-any.whl (38 kB)
+2026-03-12T09:52:17.4016402Z Requirement already satisfied: requests in /usr/lib/python3/dist-packages (from -r /home/runner/work/seL4/seL4/seL4_release/requirements.txt (line 3)) (2.25.1)
+2026-03-12T09:52:17.4019885Z Requirement already satisfied: packaging in /usr/lib/python3/dist-packages (from -r /home/runner/work/seL4/seL4/seL4_release/requirements.txt (line 4)) (21.3)
+2026-03-12T09:52:17.8855901Z Collecting lxml
+2026-03-12T09:52:17.8932846Z   Downloading lxml-6.0.2-cp310-cp310-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.3 MB)
+2026-03-12T09:52:18.1015859Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 25.7 MB/s eta 0:00:00
+2026-03-12T09:52:18.1579719Z Collecting gitpython
+2026-03-12T09:52:18.1649044Z   Downloading gitpython-3.1.46-py3-none-any.whl (208 kB)
+2026-03-12T09:52:18.1716638Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 208.6/208.6 KB 51.1 MB/s eta 0:00:00
+2026-03-12T09:52:18.1740612Z Requirement already satisfied: jinja2 in /usr/lib/python3/dist-packages (from -r /home/runner/work/seL4/seL4/seL4_release/requirements.txt (line 7)) (3.0.3)
+2026-03-12T09:52:18.2176755Z Collecting gitdb<5,>=4.0.1
+2026-03-12T09:52:18.2246671Z   Downloading gitdb-4.0.12-py3-none-any.whl (62 kB)
+2026-03-12T09:52:18.2287298Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.8/62.8 KB 25.9 MB/s eta 0:00:00
+2026-03-12T09:52:18.2527694Z Collecting smmap<6,>=3.0.1
+2026-03-12T09:52:18.2600440Z   Downloading smmap-5.0.3-py3-none-any.whl (24 kB)
+2026-03-12T09:52:18.5209402Z Installing collected packages: smmap, sh, lxml, gitdb, gitpython
+2026-03-12T09:52:18.7806970Z Successfully installed gitdb-4.0.12 gitpython-3.1.46 lxml-6.0.2 sh-2.2.2 smmap-5.0.3
+2026-03-12T09:52:18.8455050Z Install doxygen
+2026-03-12T09:52:31.4846629Z Selecting previously unselected package libxapian30:amd64.
+2026-03-12T09:52:31.6610306Z (Reading database ... 
+2026-03-12T09:52:31.6610912Z (Reading database ... 5%
+2026-03-12T09:52:31.6611455Z (Reading database ... 10%
+2026-03-12T09:52:31.6611993Z (Reading database ... 15%
+2026-03-12T09:52:31.6612512Z (Reading database ... 20%
+2026-03-12T09:52:31.6613035Z (Reading database ... 25%
+2026-03-12T09:52:31.6613580Z (Reading database ... 30%
+2026-03-12T09:52:31.6615000Z (Reading database ... 35%
+2026-03-12T09:52:31.6615786Z (Reading database ... 40%
+2026-03-12T09:52:31.6616425Z (Reading database ... 45%
+2026-03-12T09:52:31.6617060Z (Reading database ... 50%
+2026-03-12T09:52:32.2527114Z (Reading database ... 55%
+2026-03-12T09:52:32.8110668Z (Reading database ... 60%
+2026-03-12T09:52:33.3660550Z (Reading database ... 65%
+2026-03-12T09:52:34.0103214Z (Reading database ... 70%
+2026-03-12T09:52:35.4538483Z (Reading database ... 75%
+2026-03-12T09:52:36.7231921Z (Reading database ... 80%
+2026-03-12T09:52:38.1176784Z (Reading database ... 85%
+2026-03-12T09:52:39.4295269Z (Reading database ... 90%
+2026-03-12T09:52:40.7079154Z (Reading database ... 95%
+2026-03-12T09:52:40.7079986Z (Reading database ... 100%
+2026-03-12T09:52:40.7080681Z (Reading database ... 267857 files and directories currently installed.)
+2026-03-12T09:52:40.7140638Z Preparing to unpack .../libxapian30_1.4.18-4_amd64.deb ...
+2026-03-12T09:52:40.7174986Z Unpacking libxapian30:amd64 (1.4.18-4) ...
+2026-03-12T09:52:40.7566083Z Selecting previously unselected package doxygen.
+2026-03-12T09:52:40.7731028Z Preparing to unpack .../doxygen_1.9.1-2ubuntu2_amd64.deb ...
+2026-03-12T09:52:40.7744151Z Unpacking doxygen (1.9.1-2ubuntu2) ...
+2026-03-12T09:52:41.0039877Z Setting up libxapian30:amd64 (1.4.18-4) ...
+2026-03-12T09:52:41.0075636Z Setting up doxygen (1.9.1-2ubuntu2) ...
+2026-03-12T09:52:41.0112359Z Processing triggers for man-db (2.10.2-1) ...
+2026-03-12T09:52:41.0138658Z Not building database; man-db/auto-update is not 'true'.
+2026-03-12T09:52:41.0154932Z Processing triggers for libc-bin (2.35-0ubuntu3.12) ...
+2026-03-12T09:52:43.4234747Z 
+2026-03-12T09:52:43.4235521Z Running kernel seems to be up-to-date.
+2026-03-12T09:52:43.4236245Z 
+2026-03-12T09:52:43.4236597Z No services need to be restarted.
+2026-03-12T09:52:43.4237063Z 
+2026-03-12T09:52:43.4237338Z No containers need to be restarted.
+2026-03-12T09:52:43.4237777Z 
+2026-03-12T09:52:43.4238387Z No user sessions are running outdated binaries.
+2026-03-12T09:52:43.4239034Z 
+2026-03-12T09:52:43.4239630Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+2026-03-12T09:52:44.8372812Z ##[endgroup]
+2026-03-12T09:52:44.8375320Z ##[group]Repo checkout
+2026-03-12T09:52:44.8471912Z Starting repo checkout on branch master with manifest master.xml:
+2026-03-12T09:52:46.8899392Z 
+2026-03-12T09:52:46.8900358Z repo has been initialized in /home/runner/work/seL4/seL4
+2026-03-12T09:52:46.9051786Z Using supplied manifest XML
+2026-03-12T09:52:47.4096372Z repo: reusing existing repo client checkout in /home/runner/work/seL4/seL4
+2026-03-12T09:52:47.4096971Z 
+2026-03-12T09:52:47.4097270Z repo has been initialized in /home/runner/work/seL4/seL4
+2026-03-12T09:52:51.7290334Z repo sync has finished successfully.
+2026-03-12T09:52:52.0181034Z Manifest summary:
+2026-03-12T09:52:52.0181736Z -----------------
+2026-03-12T09:52:52.0182686Z  sel4test-manifest: 03c5d090 Updating default.xml                           (origin/master)
+2026-03-12T09:52:52.0184036Z               seL4: c406015c cmake: remove default flags added to the com.. (seL4/master)
+2026-03-12T09:52:52.0185298Z           musllibc: b0005f86 cmake: Fix export internal headers             (seL4/sel4)
+2026-03-12T09:52:52.0186686Z          seL4_libs: 9bdf9e0d trivial: fix whitespace                        (seL4/master)
+2026-03-12T09:52:52.0188277Z sel4_projects_libs: 0e06bebf Bump minimum CMake version                     (seL4/master)
+2026-03-12T09:52:52.0189637Z        sel4runtime: 86489cf6 github: use central CI workflows               (seL4/master)
+2026-03-12T09:52:52.0190931Z           sel4test: 0bbb0c6b Fix RPi4 failing sel4test in Release mode      (seL4/master)
+2026-03-12T09:52:52.0192094Z          util_libs: c8f9ea7c star64: improve comments in timer driver       (seL4/master)
+2026-03-12T09:52:52.0193288Z             nanopb: 1466e6f9 Publishing nanopb-0.4.3                        (tags/0.4.3)
+2026-03-12T09:52:52.0194377Z            opensbi: 234ed8e4 include: Bump-up version to 0.9                (tags/v0.9^0)
+2026-03-12T09:52:52.0195870Z         seL4_tools: 21d3f19e cmake style update                             (seL4/master)
+2026-03-12T09:52:52.0221826Z ##[endgroup]
+2026-03-12T09:52:52.0222772Z ##[group]Deploy
+2026-03-12T09:52:52.1983759Z [2026-03-12 09:52:52,197] ts_release.utils : <INFO> checking dependencies.
+2026-03-12T09:52:52.2074648Z [2026-03-12 09:52:52,207] ts_release.utils : <INFO> checking dependencies....Done!
+2026-03-12T09:52:52.2075727Z [2026-03-12 09:52:52,207] ts_release.utils : <INFO> checking dependencies.
+2026-03-12T09:52:56.5163016Z [2026-03-12 09:52:56,515] ts_release.utils : <INFO> checking dependencies....Done!
+2026-03-12T09:52:56.5689243Z [2026-03-12 09:52:56,568] ts_release.nightly : <INFO> {'added': [], 'removed': [], 'missing': [], 'changed': [(<project.Project object at 0x7f7f445622f0>, <project.Project object at 0x7f7f44563370>), (<project.Project object at 0x7f7f445610f0>, <project.Project object at 0x7f7f44563730>)], 'unreachable': []}
+2026-03-12T09:52:56.5690797Z [2026-03-12 09:52:56,568] ts_release.nightly : <INFO> Manifest is stale
+2026-03-12T09:52:56.5907601Z [2026-03-12 09:52:56,590] ts_release.config : <INFO> Finding repo for manifest: sel4test-manifest, master
+2026-03-12T09:52:56.5908947Z [2026-03-12 09:52:56,590] ts_release.config : <INFO> Found versioned repo for: sel4test-manifest, master
+2026-03-12T09:52:56.5909814Z [2026-03-12 09:52:56,590] ts_release.nightly : <INFO> Project sel4test-manifest has versioned repos: [('seL4', 'master')]
+2026-03-12T09:52:56.5910514Z [2026-03-12 09:52:56,590] ts_release.nightly : <INFO> Found seL4.git
+2026-03-12T09:52:56.5990153Z [2026-03-12 09:52:56,598] ts_release.nightly : <INFO> [False]
+2026-03-12T09:52:57.2619382Z [2026-03-12 09:52:57,261] ts_release.utils : <INFO> Push summary: 03c5d09..8d70daf
+2026-03-12T09:52:57.2619925Z 
+2026-03-12T09:52:57.2877462Z ##[endgroup]
+2026-03-12T09:52:57.3082246Z Cleaning up orphan processes
