@@ -1,0 +1,105 @@
+﻿2026-04-07T10:56:24.3174044Z Current runner version: '2.333.1'
+2026-04-07T10:56:24.3205770Z ##[group]Runner Image Provisioner
+2026-04-07T10:56:24.3206970Z Hosted Compute Agent
+2026-04-07T10:56:24.3207968Z Version: 20260213.493
+2026-04-07T10:56:24.3208990Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-04-07T10:56:24.3210039Z Build Date: 2026-02-13T00:28:41Z
+2026-04-07T10:56:24.3211273Z Worker ID: {372d74f8-7772-487f-a9c6-ef3362a9dfa9}
+2026-04-07T10:56:24.3212649Z Azure Region: eastus2
+2026-04-07T10:56:24.3213600Z ##[endgroup]
+2026-04-07T10:56:24.3216008Z ##[group]Operating System
+2026-04-07T10:56:24.3216922Z Ubuntu
+2026-04-07T10:56:24.3217672Z 24.04.4
+2026-04-07T10:56:24.3218574Z LTS
+2026-04-07T10:56:24.3219356Z ##[endgroup]
+2026-04-07T10:56:24.3220194Z ##[group]Runner Image
+2026-04-07T10:56:24.3221218Z Image: ubuntu-24.04
+2026-04-07T10:56:24.3222317Z Version: 20260329.72.1
+2026-04-07T10:56:24.3224342Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260329.72/images/ubuntu/Ubuntu2404-Readme.md
+2026-04-07T10:56:24.3226822Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260329.72
+2026-04-07T10:56:24.3228433Z ##[endgroup]
+2026-04-07T10:56:24.3233389Z ##[group]GITHUB_TOKEN Permissions
+2026-04-07T10:56:24.3236460Z Actions: write
+2026-04-07T10:56:24.3237433Z ArtifactMetadata: write
+2026-04-07T10:56:24.3238437Z Attestations: write
+2026-04-07T10:56:24.3239315Z Checks: write
+2026-04-07T10:56:24.3240275Z Contents: write
+2026-04-07T10:56:24.3241172Z Deployments: write
+2026-04-07T10:56:24.3242328Z Discussions: write
+2026-04-07T10:56:24.3243248Z Issues: write
+2026-04-07T10:56:24.3244091Z Metadata: read
+2026-04-07T10:56:24.3245005Z Models: read
+2026-04-07T10:56:24.3245882Z Packages: write
+2026-04-07T10:56:24.3246847Z Pages: write
+2026-04-07T10:56:24.3247748Z PullRequests: write
+2026-04-07T10:56:24.3248718Z RepositoryProjects: write
+2026-04-07T10:56:24.3249913Z SecurityEvents: write
+2026-04-07T10:56:24.3250816Z Statuses: write
+2026-04-07T10:56:24.3251903Z ##[endgroup]
+2026-04-07T10:56:24.3254704Z Secret source: Actions
+2026-04-07T10:56:24.3256174Z Prepare workflow directory
+2026-04-07T10:56:24.3718861Z Prepare all required actions
+2026-04-07T10:56:24.3775963Z Getting action download info
+2026-04-07T10:56:24.6765969Z Download action repository 'seL4/ci-actions@master' (SHA:9f2fb212b3fe58292eba18b3014fcabaee95cd38)
+2026-04-07T10:56:25.1832233Z Complete job name: Freeze Code
+2026-04-07T10:56:25.2574675Z ##[group]Run seL4/ci-actions/repo-checkout@master
+2026-04-07T10:56:25.2575619Z with:
+2026-04-07T10:56:25.2576035Z   manifest_repo: sel4test-manifest
+2026-04-07T10:56:25.2576538Z   manifest: master.xml
+2026-04-07T10:56:25.2576997Z   action_name: repo-checkout
+2026-04-07T10:56:25.2577637Z ##[endgroup]
+2026-04-07T10:56:25.3909698Z [command]/home/runner/work/_actions/seL4/ci-actions/master/js/../repo-checkout/steps.sh
+2026-04-07T10:56:25.3958030Z ##[group]Setting up
+2026-04-07T10:56:25.4027846Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2026-04-07T10:56:25.4028891Z                                  Dload  Upload   Total   Spent    Left  Speed
+2026-04-07T10:56:25.4029329Z 
+2026-04-07T10:56:25.4529521Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2026-04-07T10:56:25.4531296Z 100 44950  100 44950    0     0   861k      0 --:--:-- --:--:-- --:--:--  877k
+2026-04-07T10:56:25.9397554Z Defaulting to user installation because normal site-packages is not writeable
+2026-04-07T10:56:26.3517661Z Collecting PyGithub
+2026-04-07T10:56:26.4099022Z   Downloading pygithub-2.9.0-py3-none-any.whl.metadata (3.9 kB)
+2026-04-07T10:56:26.4515966Z Collecting pynacl>=1.4.0 (from PyGithub)
+2026-04-07T10:56:26.4592365Z   Downloading pynacl-1.6.2-cp38-abi3-manylinux_2_34_x86_64.whl.metadata (10.0 kB)
+2026-04-07T10:56:26.4656450Z Requirement already satisfied: requests>=2.14.0 in /usr/lib/python3/dist-packages (from PyGithub) (2.31.0)
+2026-04-07T10:56:26.4678194Z Requirement already satisfied: pyjwt>=2.4.0 in /usr/lib/python3/dist-packages (from pyjwt[crypto]>=2.4.0->PyGithub) (2.7.0)
+2026-04-07T10:56:26.4702490Z Requirement already satisfied: typing-extensions>=4.5.0 in /usr/lib/python3/dist-packages (from PyGithub) (4.10.0)
+2026-04-07T10:56:26.4715468Z Requirement already satisfied: urllib3>=1.26.0 in /usr/lib/python3/dist-packages (from PyGithub) (2.0.7)
+2026-04-07T10:56:26.4916601Z Requirement already satisfied: cryptography>=3.4.0 in /usr/lib/python3/dist-packages (from pyjwt[crypto]>=2.4.0->PyGithub) (41.0.7)
+2026-04-07T10:56:26.6243636Z Collecting cffi>=2.0.0 (from pynacl>=1.4.0->PyGithub)
+2026-04-07T10:56:26.6318332Z   Downloading cffi-2.0.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+2026-04-07T10:56:26.6673116Z Collecting pycparser (from cffi>=2.0.0->pynacl>=1.4.0->PyGithub)
+2026-04-07T10:56:26.6747505Z   Downloading pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+2026-04-07T10:56:26.7053586Z Downloading pygithub-2.9.0-py3-none-any.whl (449 kB)
+2026-04-07T10:56:26.7345771Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 449.7/449.7 kB 16.9 MB/s eta 0:00:00
+2026-04-07T10:56:26.7416056Z Downloading pynacl-1.6.2-cp38-abi3-manylinux_2_34_x86_64.whl (1.4 MB)
+2026-04-07T10:56:26.7675304Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 58.8 MB/s eta 0:00:00
+2026-04-07T10:56:26.7753378Z Downloading cffi-2.0.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (219 kB)
+2026-04-07T10:56:26.7804914Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 219.6/219.6 kB 66.1 MB/s eta 0:00:00
+2026-04-07T10:56:26.7877218Z Downloading pycparser-3.0-py3-none-any.whl (48 kB)
+2026-04-07T10:56:26.7918874Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.2/48.2 kB 16.4 MB/s eta 0:00:00
+2026-04-07T10:56:27.0755360Z Installing collected packages: pycparser, cffi, pynacl, PyGithub
+2026-04-07T10:56:27.5139012Z Successfully installed PyGithub-2.9.0 cffi-2.0.0 pycparser-3.0 pynacl-1.6.2
+2026-04-07T10:56:27.5867806Z ##[endgroup]
+2026-04-07T10:56:27.5873389Z ##[group]Repo checkout
+2026-04-07T10:56:27.6003354Z Starting repo checkout on branch master with manifest master.xml:
+2026-04-07T10:56:29.3352827Z 
+2026-04-07T10:56:29.3353407Z repo has been initialized in /home/runner/work/seL4/seL4
+2026-04-07T10:56:31.0735726Z repo sync has finished successfully.
+2026-04-07T10:56:31.3465970Z Fetching d3a0f5f7b967afadcb419a1c8bb1d364ccf39d35 from github.com/seL4/seL4.git
+2026-04-07T10:56:31.8078943Z Manifest summary:
+2026-04-07T10:56:31.8080057Z -----------------
+2026-04-07T10:56:31.8080548Z  sel4test-manifest: b62aa811 Updating default.xml                           (origin/master)
+2026-04-07T10:56:31.8081142Z               seL4: d3a0f5f7 github: update artifact path                   (seL4/master)
+2026-04-07T10:56:31.8082167Z           musllibc: b0005f86 cmake: Fix export internal headers             (seL4/sel4)
+2026-04-07T10:56:31.8082826Z          seL4_libs: 4ce71fca Fix runtime error                              (seL4/master)
+2026-04-07T10:56:31.8083386Z sel4_projects_libs: 0e06bebf Bump minimum CMake version                     (seL4/master)
+2026-04-07T10:56:31.8083961Z        sel4runtime: 86489cf6 github: use central CI workflows               (seL4/master)
+2026-04-07T10:56:31.8084461Z           sel4test: 6979c403 trivial: new cmake style                       (seL4/master)
+2026-04-07T10:56:31.8084956Z          util_libs: c8f9ea7c star64: improve comments in timer driver       (seL4/master)
+2026-04-07T10:56:31.8085528Z             nanopb: cad3c18e Releasing 0.4.9.1 bugfix release               (tags/0.4.9.1)
+2026-04-07T10:56:31.8086078Z            opensbi: 234ed8e4 include: Bump-up version to 0.9                (tags/v0.9^0)
+2026-04-07T10:56:31.8086765Z         seL4_tools: 03454f90 trivial: new cmake style                       (seL4/master)
+2026-04-07T10:56:31.8127886Z ##[endgroup]
+2026-04-07T10:56:32.0685403Z Evaluate and set job outputs
+2026-04-07T10:56:32.0724883Z Set output 'xml'
+2026-04-07T10:56:32.0726469Z Cleaning up orphan processes

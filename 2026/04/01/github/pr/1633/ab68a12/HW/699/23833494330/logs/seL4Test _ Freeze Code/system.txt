@@ -1,0 +1,15 @@
+2026-04-01T05:27:57.9970000Z Requested labels: ubuntu-latest
+2026-04-01T05:27:57.9970000Z Job defined at: seL4/ci-actions/.github/workflows/sel4test-hw.yml@refs/heads/master
+2026-04-01T05:27:57.9970000Z Reusable workflow chain:
+2026-04-01T05:27:57.9970000Z seL4/seL4/.github/workflows/hw-tests.yml@refs/heads/master (3f590a6027eadd3ae8352d044f06746bcc8980df)
+2026-04-01T05:27:57.9970000Z -> seL4/ci-actions/.github/workflows/sel4test-hw.yml@refs/heads/master (c10638c961b7ab1f619fe004ddd07d2b189ae827)
+2026-04-01T05:27:57.9970000Z Waiting for a runner to pick up this job...
+2026-04-01T05:27:57.9950000Z Evaluating sel4test.if
+2026-04-01T05:27:57.9950000Z Evaluating: success()
+2026-04-01T05:27:57.9950000Z Result: true
+2026-04-01T05:27:57.9950000Z Evaluating sel4test.code.if
+2026-04-01T05:27:57.9950000Z Evaluating: (success() && (((github.event_name == 'pull_request_target') && ((contains(github.event.pull_request.labels.*.name, 'hw-build') || contains(github.event.pull_request.labels.*.name, 'hw-test') || (github.event.label.name == 'hw-build') || (github.event.label.name == 'hw-test'))))))
+2026-04-01T05:27:57.9950000Z Expanded: (true && (('pull_request_target' == 'pull_request_target') && (contains(Array, 'hw-build') || contains(Array, 'hw-test') || (github.event.label.name == 'hw-build') || (github.event.label.name == 'hw-test'))))
+2026-04-01T05:27:57.9950000Z Result: true
+2026-04-01T05:27:58.4320000Z Job is about to start running on the hosted runner: GitHub Actions 1000081902
+2026-04-01T05:27:58.4330000Z Job is waiting for a hosted runner to come online.

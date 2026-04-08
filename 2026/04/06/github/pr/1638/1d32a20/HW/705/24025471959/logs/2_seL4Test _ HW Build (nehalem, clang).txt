@@ -1,0 +1,84 @@
+﻿2026-04-06T08:50:41.3097331Z Current runner version: '2.333.1'
+2026-04-06T08:50:41.3132235Z ##[group]Runner Image Provisioner
+2026-04-06T08:50:41.3133928Z Hosted Compute Agent
+2026-04-06T08:50:41.3134820Z Version: 20260213.493
+2026-04-06T08:50:41.3135816Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-04-06T08:50:41.3137068Z Build Date: 2026-02-13T00:28:41Z
+2026-04-06T08:50:41.3138281Z Worker ID: {d6f780db-80c7-420a-8544-fbaf0d3e4eda}
+2026-04-06T08:50:41.3139456Z Azure Region: eastus2
+2026-04-06T08:50:41.3140544Z ##[endgroup]
+2026-04-06T08:50:41.3143184Z ##[group]Operating System
+2026-04-06T08:50:41.3144195Z Ubuntu
+2026-04-06T08:50:41.3145109Z 24.04.4
+2026-04-06T08:50:41.3145887Z LTS
+2026-04-06T08:50:41.3146732Z ##[endgroup]
+2026-04-06T08:50:41.3147518Z ##[group]Runner Image
+2026-04-06T08:50:41.3148417Z Image: ubuntu-24.04
+2026-04-06T08:50:41.3149180Z Version: 20260329.72.1
+2026-04-06T08:50:41.3151371Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260329.72/images/ubuntu/Ubuntu2404-Readme.md
+2026-04-06T08:50:41.3154441Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260329.72
+2026-04-06T08:50:41.3156104Z ##[endgroup]
+2026-04-06T08:50:41.3157862Z ##[group]GITHUB_TOKEN Permissions
+2026-04-06T08:50:41.3160398Z Contents: read
+2026-04-06T08:50:41.3161285Z Metadata: read
+2026-04-06T08:50:41.3162218Z ##[endgroup]
+2026-04-06T08:50:41.3165594Z Secret source: Actions
+2026-04-06T08:50:41.3167186Z Prepare workflow directory
+2026-04-06T08:50:41.3657586Z Prepare all required actions
+2026-04-06T08:50:41.3716045Z Getting action download info
+2026-04-06T08:50:41.6554123Z Download action repository 'seL4/ci-actions@master' (SHA:90a56770733d6efb7fae97ee666918c2ee3b10a6)
+2026-04-06T08:50:42.0249138Z Download action repository 'actions/upload-artifact@v7' (SHA:bbbca2ddaa5d8feaa63e36b76fdaad77386f024f)
+2026-04-06T08:50:42.1806074Z Uses: seL4/ci-actions/.github/workflows/sel4test-hw.yml@refs/heads/master (90a56770733d6efb7fae97ee666918c2ee3b10a6)
+2026-04-06T08:50:42.1810854Z Complete job name: seL4Test / HW Build (nehalem, clang)
+2026-04-06T08:50:42.2313981Z ##[group]Pull down action image 'sel4/sel4test-hw:latest'
+2026-04-06T08:50:42.2398258Z ##[command]/usr/bin/docker pull sel4/sel4test-hw:latest
+2026-04-06T08:50:42.5717009Z latest: Pulling from sel4/sel4test-hw
+2026-04-06T08:50:42.7136801Z e1f16b66c2e8: Pulling fs layer
+2026-04-06T08:50:42.7137716Z 7b4f4f95f6cf: Pulling fs layer
+2026-04-06T08:50:42.7138323Z 95fe3dc9ff39: Pulling fs layer
+2026-04-06T08:50:42.7139308Z 4f4fb700ef54: Pulling fs layer
+2026-04-06T08:50:42.7140254Z 0d20a8c1dfe8: Pulling fs layer
+2026-04-06T08:50:42.7141164Z 8fd4470a3055: Pulling fs layer
+2026-04-06T08:50:42.7142070Z 8a0cdeb8bafa: Pulling fs layer
+2026-04-06T08:50:42.7143314Z 33818dcc1fd4: Pulling fs layer
+2026-04-06T08:50:42.7144041Z 7d105bdca890: Pulling fs layer
+2026-04-06T08:50:42.7144593Z b3d848eca5a5: Pulling fs layer
+2026-04-06T08:50:42.7145132Z f6c0665e69c4: Pulling fs layer
+2026-04-06T08:50:42.7145670Z 47932921ff2f: Pulling fs layer
+2026-04-06T08:50:42.7146258Z 4f4fb700ef54: Waiting
+2026-04-06T08:50:42.7146796Z 0d20a8c1dfe8: Waiting
+2026-04-06T08:50:42.7147262Z 8fd4470a3055: Waiting
+2026-04-06T08:50:42.7147731Z 47932921ff2f: Waiting
+2026-04-06T08:50:42.7148212Z b3d848eca5a5: Waiting
+2026-04-06T08:50:42.7148691Z f6c0665e69c4: Waiting
+2026-04-06T08:50:42.7149179Z 8a0cdeb8bafa: Waiting
+2026-04-06T08:50:42.7149641Z 7d105bdca890: Waiting
+2026-04-06T08:50:42.7150103Z 33818dcc1fd4: Waiting
+2026-04-06T08:50:42.7954594Z 7b4f4f95f6cf: Download complete
+2026-04-06T08:50:42.8674309Z 4f4fb700ef54: Verifying Checksum
+2026-04-06T08:50:42.8678683Z 4f4fb700ef54: Download complete
+2026-04-06T08:50:42.9226145Z e1f16b66c2e8: Verifying Checksum
+2026-04-06T08:50:42.9228675Z e1f16b66c2e8: Download complete
+2026-04-06T08:50:43.0889863Z 95fe3dc9ff39: Verifying Checksum
+2026-04-06T08:50:43.0891510Z 95fe3dc9ff39: Download complete
+2026-04-06T08:50:43.2924831Z 8a0cdeb8bafa: Verifying Checksum
+2026-04-06T08:50:43.2933060Z 8a0cdeb8bafa: Download complete
+2026-04-06T08:50:43.3860702Z 33818dcc1fd4: Verifying Checksum
+2026-04-06T08:50:43.3863564Z 33818dcc1fd4: Download complete
+2026-04-06T08:50:43.4761521Z 7d105bdca890: Download complete
+2026-04-06T08:50:43.5610585Z b3d848eca5a5: Verifying Checksum
+2026-04-06T08:50:43.5616390Z b3d848eca5a5: Download complete
+2026-04-06T08:50:43.6529045Z f6c0665e69c4: Verifying Checksum
+2026-04-06T08:50:43.6533560Z f6c0665e69c4: Download complete
+2026-04-06T08:50:43.7379782Z 47932921ff2f: Verifying Checksum
+2026-04-06T08:50:43.7385247Z 47932921ff2f: Download complete
+2026-04-06T08:50:44.2806912Z 8fd4470a3055: Verifying Checksum
+2026-04-06T08:50:44.2809093Z 8fd4470a3055: Download complete
+2026-04-06T08:50:44.6795588Z e1f16b66c2e8: Pull complete
+2026-04-06T08:50:45.9475710Z 7b4f4f95f6cf: Pull complete
+2026-04-06T08:50:48.3116565Z 0d20a8c1dfe8: Verifying Checksum
+2026-04-06T08:50:48.3118765Z 0d20a8c1dfe8: Download complete
+2026-04-06T08:50:51.8379890Z 95fe3dc9ff39: Pull complete
+2026-04-06T08:50:51.8496444Z 4f4fb700ef54: Pull complete
+2026-04-06T08:51:14.0570248Z ##[error]The operation was canceled.
+2026-04-06T08:51:14.0661419Z Cleaning up orphan processes

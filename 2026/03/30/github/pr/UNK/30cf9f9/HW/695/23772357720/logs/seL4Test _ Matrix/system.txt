@@ -1,0 +1,6 @@
+2026-03-30T23:16:34.2590000Z Evaluating sel4test.if
+2026-03-30T23:16:34.2590000Z Evaluating: success()
+2026-03-30T23:16:34.2590000Z Result: true
+2026-03-30T23:16:34.2590000Z Evaluating sel4test.the_matrix.if
+2026-03-30T23:16:34.2590000Z Evaluating: success()
+2026-03-30T23:16:34.2590000Z Result: false

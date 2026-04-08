@@ -523,6 +523,11 @@ IMX93_debug_SMP_hyp_gcc_64
 	system: imx93a
 	kind: output timeout
 	variant: after printing addr space regions
+HIFIVE_P550_debug_gcc_64
+	path: 2026/04/07/github/push/master/d3a0f5f/Deploy/994/24077799757/logs/7_HW Run (HIFIVE_P550, rv64imac, gcc).txt
+	system: p550a
+	kind: output timeout
+	variant: during tests
 TX2_verification_hyp_MCS_gcc_64
 	path: 2025/06/01/github/manual/20250601T095536/b7d67a9/Deploy/877/logs/38_HW Run (TX2, armv8a, gcc).txt
 	system: tx2a

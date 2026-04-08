@@ -1,0 +1,7 @@
+2026-03-30T23:07:34.2580000Z Evaluating sel4test.if
+2026-03-30T23:07:34.2580000Z Evaluating: success()
+2026-03-30T23:07:34.2580000Z Result: true
+2026-03-30T23:07:34.2580000Z Evaluating sel4test.hw-run.if
+2026-03-30T23:07:34.2580000Z Evaluating: (success() && (((github.repository_owner == 'seL4') && (((github.event_name == 'pull_request_target') && ((contains(github.event.pull_request.labels.*.name, 'hw-test') || (github.event.label.name == 'hw-test'))))))))
+2026-03-30T23:07:34.2580000Z Expanded: (false && ((github.repository_owner == 'seL4') && ((github.event_name == 'pull_request_target') && (contains(github.event.pull_request.labels.*.name, 'hw-test') || (github.event.label.name == 'hw-test')))))
+2026-03-30T23:07:34.2580000Z Result: false
